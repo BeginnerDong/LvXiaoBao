@@ -1,0 +1,84 @@
+.top{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	border-bottom: 1px solid gray;
+}
+.top-left{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	background: white;
+}
+.top-left span{
+	font-size: 20px;
+	font-weight: 800;
+}
+.discount{
+	width: 95%;
+	height: 300rpx;
+	border: 1px dashed #A1A1A1;
+	margin-left: 3%;
+	margin-top: 5%;
+}
+.discount-bg{
+	width: 98%;
+	height: 320rpx;
+}
+.discount-bg image{
+	width: 98%;
+	height: 300rpx;
+}
+.discount-left{
+	width: 33%;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top:20%;
+	left: 2%;
+}
+.discount-left span{
+	display: inline-block;
+	font-size: 30px;
+	color: white;
+}
+.discount-right{
+	width: 60%;
+	position: absolute;
+	top: 15%;
+	left: 40%;
+}
+.discount-img{
+	width: 100%;
+	height: 40px;
+	margin-left: 10%;
+}
+.discount-img image{
+	width: 20px;
+	height: 20px;
+	margin-top: 11%;
+	border: 1px dashed #A1A1A1;
+}
+.discount-name{
+	margin-left: 3%;
+	font-size: 20px;
+	font-weight: 800;
+	white-space: nowrap;
+}
+.discount-content{
+	display: flex;
+	justify-content: center;
+}
+.discount-title{
+	white-space: nowrap;
+	font-size: 18px;
+	font-family: 'PingFang-SC-Medium';
+	color: #A1A1A1;
+	margin-top: 3%;
+}
+.discount-data{
+	font-size: 16px;
+	color: #A1A1A1;
+	margin-top: 5%;
+}

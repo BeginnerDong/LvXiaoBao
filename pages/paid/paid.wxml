@@ -1,0 +1,38 @@
+<view>
+	<view class="paid">
+		<view class="pid">
+			<view class="paid-img">
+				<image src="../../image/paid.png"></image>
+			</view>
+			<view class="paid-title">待支付</view>
+			<view class="paid-price">￥6380.00</view>
+		</view>
+		<view class="paid-name">网红新宣泰国旅游</view>
+		<view class="paid-con">
+			<view class="con">05月29日</view>
+			<view class="con" style="color: #A1A1A1;opacity: 0.6;">4成人  1儿童</view>
+			<view class="con" style="text-align: right;">06月08日</view>
+		</view>
+		<view class="mou">
+			<view class="mou-title">周三出发</view>
+			<view class="mou-title" style="text-align: right;">周六返回</view>
+		</view>
+	</view>
+	<view class="paid-btn">立即支付</view>
+	
+	<view class="payment">
+		<view class="pid1">
+			<view class="paid-img">
+				<image src="../../image/paid.png"></image>
+			</view>
+			<view class="paid-title">订单支付成功</view>
+			<view class="paid-price1">￥6380.00</view>
+		</view>
+			<view class="payment1">
+			<view class="view">查看订单</view>
+			<view class="home">返回首页</view>
+		</view>
+	</view>
+
+	
+</view>

@@ -1,0 +1,9 @@
+<view>
+	<view class="electro">
+	<image src="../../image/el.png"></image>
+	</view>
+	<view class="electrol">
+		<image src="../../image/electr.png"></image>
+	</view>
+</view>
+

@@ -1,0 +1,128 @@
+page{
+	background: #F4F3F3;
+}
+.month{
+	width:90%;
+	padding:0 5%;
+	height:150rpx;
+	background: #fff;
+	
+}
+.month-item{
+	font-size:20px;
+	font-family:PingFang-SC-Bold;
+	font-weight:500;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	width:23%
+}
+
+.title-line{
+	width:16px;
+	height:3px;
+	background:rgba(255,209,1,1);
+	border-radius:2px;
+	position: absolute;
+	bottom:5rpx;
+	z-index:-1
+}
+.calendar{
+	width:90%;
+	padding:0 5%;
+	background: #fff;
+}
+.week{
+	width:100%;
+}
+.days{
+	width:100%;
+	flex-wrap:wrap;
+	
+}
+.week-item{
+	font-size:14px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(161,161,161,1);
+	width:18%;
+	text-align: center;
+	height:80rpx;
+	line-height: 80rpx;
+}
+.days-item{
+	width:14.28%;
+	height:90rpx;
+	border-radius:8px;
+	color: #A1A1A1;
+	text-align: center;
+	font-size:14px
+}
+.days-item-active{
+	background:rgba(255,209,1,1);
+	color:rgba(50,50,50,1);
+	font-weight: 700;
+}
+.days-price{
+	font-size:12px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(236,101,50,1);
+}
+.days-price-active{
+	color:rgba(50,50,50,1);
+	font-weight: 700;
+}
+.calendar-bottom{
+	width:100%;
+	height:100rpx;
+	text-align: center;
+	font-size: 16px;
+	color: #A1A1A1;
+	line-height: 100rpx;
+	border-top: 1px solid #e7e7e7;
+	background:#fff;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	border-radius:0px 0px 12px 12px;
+}
+.calendar-bottom span{
+	
+	font-size: 18px;
+	color: #EC6532;
+}
+.calendar-button{
+	width:100%;
+	height:120rpx;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+}
+.calendar-button-item{
+	width: 50%;
+}
+.calendar-button-item-left{
+	width: 80%;
+	margin: 0 auto;
+	height:36px;
+	background:rgba(242,242,242,1);
+	border-radius:16px;
+	font-size:17px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(161,161,161,1);
+	line-height:36px;
+	text-align: center;
+}
+.calendar-button-item-right{
+	width: 80%;
+	margin: 0 auto;
+	height:36px;
+	background:rgba(255,209,1,1);
+	border-radius:16px;
+	font-size:17px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	line-height:36px;
+	text-align: center;
+}

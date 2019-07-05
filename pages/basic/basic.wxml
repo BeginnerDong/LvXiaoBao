@@ -1,0 +1,202 @@
+<view>
+	<!-- <view class="top">
+		<view class="basic">基本信息</view>
+		<view class="travel">出游信息</view>
+	</view>
+	<view class="basici">
+		<view class="basic-name">
+			<view class="name">姓名</view>
+			<view class="title">赵凯旋</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">姓名备注</view>
+			<view class="title">赵凯旋</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">客户级别</view>
+			<view class="title-con">
+				<view class="con">一级客户</view>
+				<view class="con-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">手机备注</view>
+			<view class="title">17782526431</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">备用手机</view>
+			<view class="title">-</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">性别</view>
+			<view class="title-con">
+				<view class="con">男</view>
+				<view class="con-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">出生日期</view>
+			<view class="title">1992-06-18</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">年龄</view>
+			<view class="title">28</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">区域</view>
+			<view class="title-con">
+				<view class="con">陕西省西安市雁塔区</view>
+				<view class="con-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">详细地址</view>
+			<view class="title">丈八东路</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">标签</view>
+			<view class="title-btn">
+					<view class="btn-left"><span>到店咨询</span></view>
+					<view class="btn-left"><span>VIP客户</span></view>
+					<view class="btn-left"><span>夫妻</span></view>
+					<view class="con-img">
+						<image src="../../image/right.png"></image>
+					</view>
+			</view>
+		</view>
+		<view class="basic-name">
+			<view class="namea"><span>优质客户</span></view>
+		</view>
+		<view class="basic-btn">
+			<view class="basi-name">+添加新标签</view>
+		</view>
+		</view>
+	<view class="type">
+		<view class="type-name">证件信息</view>
+		<view class="basic-name">
+			<view class="name">证件类型</view>
+			<view class="title-con">
+				<view class="con">身份证</view>
+				<view class="con-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">证件号码</view>
+			<view class="title">2365656556566548754587</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">有效期至</view>
+			<view class="title">2030-12-31</view>
+		</view>
+		<view class="photo">
+			<view class="phpto-text">照片</view>
+			<view class="photo-img">
+				<image src="../../image/caram.png"></image>
+			</view>
+		</view>
+		<view class="basic-btn">
+			<view class="basi-name">+添加新标签</view>
+		</view>
+	</view> -->
+	<!-- <view class="btn">
+		<span>保存</span>
+	</view> -->
+	<view class="travela">
+		<view class="tarcel-top">
+			<view class="top-left">
+				<view class="num">6</view>
+				<view class="rich">目的地个数</view>
+			</view>
+			<view class="top-left">
+				<view class="num">￥29586</view>
+				<view class="rich">累计消费</view>
+			</view>
+		</view>
+		<view class="tra">
+			<view class="tra-name">游客足迹</view>
+			<view class="tra-con">
+				<view class="tracon">
+					<view class="number">Jun.9</view>
+					<view class="numb">2015</view>
+				</view>
+				<view class="tra-title">
+					<view class="title-name">
+						<view class="title-img">
+							<image src="../../image/posi.png"></image>
+						</view>
+						<view class="titl">中国  北京</view>
+					</view>
+					<view class="trap">北京我来了~~~~~~~~</view>
+				</view>
+			</view>
+			<view class="tra-con">
+				<view class="tracon" style="opacity: 0.7;">
+					<view class="number">Jun.9</view>
+					<view class="numb">2015</view>
+				</view>
+				<view class="tra-title">
+					<view class="title-name">
+						<view class="title-img">
+							<image src="../../image/posi.png"></image>
+						</view>
+						<view class="titl">中国  北京</view>
+					</view>
+					<view class="trap">北京我来了~~~~~~~~</view>
+				</view>
+			</view>
+			<view class="tra-con">
+				<view class="tracon">
+					<view class="number">Jun.9</view>
+					<view class="numb">2015</view>
+				</view>
+				<view class="tra-title">
+					<view class="title-name">
+						<view class="title-img">
+							<image src="../../image/posi.png"></image>
+						</view>
+						<view class="titl">中国  北京</view>
+					</view>
+					<view class="trap">北京我来了~~~~~~~~</view>
+				</view>
+			</view>
+			<view class="tra-con">
+				<view class="tracon" style="opacity: 0.7;">
+					<view class="number">Jun.9</view>
+					<view class="numb">2015</view>
+				</view>
+				<view class="tra-title">
+					<view class="title-name">
+						<view class="title-img">
+							<image src="../../image/posi.png"></image>
+						</view>
+						<view class="titl">中国  北京</view>
+					</view>
+					<view class="trap">北京我来了~~~~~~~~</view>
+				</view>
+			</view>
+		</view>
+		<view class="tra-bottom">
+			<view class="bott">
+				<view class="bott-img">
+					<image src="../../image/lose.png"></image>
+				</view>
+				<view class="bott-titl">查失信</view>
+			</view>
+			<view class="bott">
+				<view class="bott-img">
+					<image src="../../image/drafts.png"></image>
+				</view>
+				<view class="bott-titl">加黑名单</view>
+			</view>
+			<view class="bott-btn"><span>保存</span></view>
+		</view>
+	</view>
+</view>

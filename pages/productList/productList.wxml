@@ -1,0 +1,36 @@
+<view class="product" bindtap="intoPath" data-path="/pages/productDetail/productDetail">
+		<view class="product-left">
+			<image src="../../image/img1.jpg"></image>
+		</view>
+		<view class="product-right">
+			<view class="product-id">[产品id：]4584 6544 4546</view>
+			<view class="product-title avoidOverflow2">海南三亚5日4晚半自助游(5钻)海南三亚+南山文化旅游...</view>
+			<view class="product-description avoidOverflow">1晚起住·海量【机票+酒店】随心...</view>
+			<view class="product-bottom">
+				<view style="width:50%">
+					<view class="product-tip">双飞</view>
+				</view>
+				<view class="product-price">
+					<span>¥1460/</span>人起
+				</view>
+			</view>
+		</view>
+</view>
+<view class="product" bindtap="intoPath" data-path="/pages/productDetail/productDetail">
+		<view class="product-left">
+			<image src="../../image/img1.jpg"></image>
+		</view>
+		<view class="product-right">
+			<view class="product-id">[产品id：]4584 6544 4546</view>
+			<view class="product-title avoidOverflow2">海南三亚5日4晚半自助游(5钻)海南三亚+南山文化旅游...</view>
+			<view class="product-description avoidOverflow">1晚起住·海量【机票+酒店】随心...</view>
+			<view class="product-bottom">
+				<view style="width:50%">
+					<view class="product-tip">双飞</view>
+				</view>
+				<view class="product-price">
+					<span>¥1460/</span>人起
+				</view>
+			</view>
+		</view>
+</view>

@@ -1,0 +1,32 @@
+<view>
+	<view class="top">
+		<view class="top-left">
+			<span>可用优惠券</span>
+		</view>
+		<view class="top-left">
+			<span>不可用优惠券</span>
+		</view>
+	</view>
+	<view class="discount">
+		<view class="discount-bg">
+			<image src="../../image/bg.png"></image>
+		</view>
+		<view class="discount-left">
+			<span>￥100</span>
+		</view>	
+		<view class="discount-right">
+			<view class="discount-name">领袖华夏</view>
+			<view class="discount-content">
+				<view class="discount-title">
+					<span>适用平台：陕西中旅</span>
+				</view>
+				<view class="discount-img">
+					<image src="../../image/complete.png"/>
+				</view>
+			</view>
+			<view class="discount-data">有效期：2019-07-30</view>
+		</view>
+	</view>
+	
+	
+</view>

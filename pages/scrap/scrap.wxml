@@ -1,0 +1,6 @@
+<view>
+	<view class="scrap">
+		<textarea placeholder="系统将自动黏贴剪贴板信息到此输入框,点击保存自动识别"></textarea>
+		<view class="scrap-btn">保存</view>
+	</view>
+</view>

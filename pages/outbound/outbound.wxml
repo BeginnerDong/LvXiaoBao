@@ -1,0 +1,62 @@
+<view>
+	<view class="outbound">
+		<view class="peo-name">
+			<view class="peo-con">*中文姓名</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="请与证件姓名一致"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*英文姓</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="请与证件姓名一致,如:YIFEL"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*英文名</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="请与证件姓名一致,如:YIFEL"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*证件类型</view>
+			<view class="peo-content">
+				<view class="card">
+					<input type="text" placeholder="请选择证件类型"/>
+				</view>
+				<view class="card-img"><image src="../../image/形状%202%20拷贝%204.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*证件号码</view>
+			<view class="peo-content">
+				<view class="card">
+					<input type="text" placeholder="请与证件号码一致"/>
+				</view>
+				<view class="card-img"><image src="../../image/圆角矩形%201%20拷贝.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*性别</view>
+			<view class="peo-content">
+				<view class="card">
+					<input type="text" placeholder="请选择性别"/>
+				</view>
+				<view class="card-img"><image src="../../image/形状%202%20拷贝%204.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*出生日期</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="请与证件保持一致"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*手机号名</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="请填写手机号"/>
+			</view>
+		</view>
+		<view class="outbound-btn">保存</view>
+	</view>
+</view>

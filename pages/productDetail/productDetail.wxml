@@ -1,0 +1,206 @@
+<view style="width:100%;height:100%">
+	<view class="banner-box">
+		<swiper indicator-dots="{{indicatorDots}}" style="width:100%;height:100%" autoplay="{{autoplay}}" duration="{{duration}}"
+		 circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}">
+			<block class="swipera" wx:for="{{bannerImg}}">
+				<swiper-item>
+					<image src="{{item}}" style="width:100%;height:100%"></image>
+					<view class="banner-start">西安出发</view>
+					<view class="banner-num">1/2</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="product-info">
+		<view class="product-info-top">
+			<view class="product-info-price">
+				<view class="product-price">市场价：<span class="money">¥1460/</span><span class="person">人起</span></view>
+				<view class="phone">
+					<image src="../../image/detail-icon3.png"></image>
+				</view>
+			</view>
+			<view class="product-id">[产品ID：] 4567 7887 4521</view>
+			<view class="product-name">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机票浮潜</view>
+		</view>
+		<view class="product-info-bottom">
+			<view class="starand">产品标准</view>
+			<view class="starand-item">
+				<image src="../../image/detail-icon2.png"></image>
+				<view class="text">品质</view>
+			</view>
+			<view class="starand-item">
+				<image src="../../image/detail-icon2.png"></image>
+				<view class="text">纯玩</view>
+			</view>
+			<view class="starand-item">
+				<image src="../../image/detail-icon2.png"></image>
+				<view class="text">推荐</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="product-explain">
+		<view class="product-info-bottom">
+			<view class="title">
+				产品标准
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom">
+			<view class="starand">出发地：</view>
+			<view style="display: flex;flex-wrap: wrap;width:70%">
+				<view class="explain-info">北京</view>
+				<view class="explain-info">天津</view>
+				<view class="explain-info">北京</view>
+				<view class="explain-info">天津</view>
+				<view class="explain-info">北京</view>
+				<view class="explain-info">天津</view>
+				<view class="explain-info">北京</view>
+				<view class="explain-info">天津</view>
+			</view>
+
+		</view>
+		<view class="product-info-bottom">
+			<view class="starand">目的地：</view>
+			<view class="explain-info">曼谷普吉岛</view>
+		</view>
+		<view class="product-info-bottom">
+			<view class="starand">行程天数：</view>
+			<view class="explain-info">6天5晚</view>
+		</view>
+		<view class="product-info-bottom">
+			<view class="starand">交通方式：</view>
+			<view class="explain-info">去程飞机 返程飞机</view>
+		</view>
+		<view class="product-info-bottom">
+			<view class="starand">是否含购物：</view>
+			<view class="explain-info">含购物</view>
+		</view>
+	</view>
+	<view class="select-group">
+		<view class="product-info-bottom">
+			<view class="title">
+				选择团期
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="start-level start-level-active">三星</view>
+			<view class="start-level">四星</view>
+			<view class="start-level">五星</view>
+		</view>
+		<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx">
+			<view class="group-item">
+				<view class="group-date">06-08</view>
+				<view class="group-price">¥1740</view>
+			</view>
+			<view class="group-item">
+				<view class="group-date">06-08</view>
+				<view class="group-price">¥1740</view>
+			</view>
+			<view class="group-item">
+				<view class="group-date">06-08</view>
+				<view class="group-price">¥1740</view>
+			</view>
+			<view class="group-item">
+				<view class="group-date">06-08</view>
+				<view class="group-price">¥1740</view>
+			</view>
+			<view style="width:1px;height:88rpx;background: #E7E7E7;"></view>
+			<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte">
+				<span style="width:28px">更多团期</span>
+			</view>
+		</view>
+	</view>
+	<view class="product-special">
+		<view class="product-info-bottom">
+			<view class="title">
+				行程特色
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="star-img flex">
+				<image src="../../image/detail-icon4.png"></image>
+			</view>
+			<view class="special-info">
+				[暑假放价] 双人下单减400元，免落地签签证费，送happy电话卡！
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="star-img flex">
+				<image src="../../image/detail-icon4.png"></image>
+			</view>
+			<view class="special-info">
+				[网红打卡] 宝蓝谷水上市场+天堂湾+猴子滩+大小PP岛+帝王岛
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="star-img flex">
+				<image src="../../image/detail-icon4.png"></image>
+			</view>
+			<view class="special-info">
+				[饕餮盛宴] 中式风味餐+泰式火锅+日式料理+霸
+				王龙虾面+王大福海鲜餐厅
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="star-img flex">
+				<image src="../../image/detail-icon4.png"></image>
+			</view>
+			<view class="special-info">
+				[超值馈赠] 高尔夫挥杆体验+浮潜+泰式按摩精油
+				SPA双体验+超多特色！
+			</view>
+		</view>
+	</view>
+	<view class="fee-explain">
+		<view class="product-info-bottom">
+			<view class="title">
+				费用说明
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+			<view style="font-weight:700 ;">费用不含</view>
+			<view>旅游护照、签证等相关出行证件办理费用。
+			</view>
+			<view>内陆段交通。</view>
+			<view>当地机场至酒店的往返接送服务。</view>
+			<view>所在地到出发地的往返交通费用。</view>
+			<view>因交通延阻、战争、政变、罢工、天气、飞机机器故
+				障、航班取消或更改时间等不可抗力原因所引致的额
+				外费用。</view>
+		</view>
+		<view class="product-info-bottom" style="text-align: center;">
+			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+		</view>
+	</view>
+	<view class="fee-explain">
+		<view class="product-info-bottom">
+			<view class="title">
+				预订须知
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+			<view>安全常识: 出游安全提示和出游常识</view>
+			<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
+			</view>
+			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
+
+		</view>
+		<view class="product-info-bottom" style="text-align: center;">
+			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+		</view>
+	</view>
+	
+	<view style="width:100%;height:120rpx"></view>
+	<button style="position: fixed;bottom: 0;border-radius:0;z-index:888;">咨询电话</button>
+	
+	
+	
+	
+	
+	
+</view>

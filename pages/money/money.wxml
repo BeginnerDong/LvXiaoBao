@@ -1,0 +1,82 @@
+<view>
+	<view class="balance">
+		<view class="bala-top">
+			<view class="bala-name">钱包余额</view>
+			<view class="bala-img">
+				<image src="../../image/visa.png"></image>
+			</view>
+		</view>
+		<view class="bala-cen">9968.30</view>
+		<view class="bala-bottom">
+			<view class="bott-left">
+				<view class="bott-img">
+					<image src="../../image/gan.png"></image>
+				</view>
+				<view class="bott-con">充值金额不支持提现</view>
+			</view>
+			<view class="bott-right">
+				<view class="right-con">交易记录</view>
+				<view class="right-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="recharge">
+		<view class="chan-top" bindtap="intoPath" data-path="/pages/vouchar/vouchar">
+			<view class="chan-title">充值</view>
+			<view class="chan-img">
+				<image src="../../image/right.png"></image>
+			</view>
+		</view>
+		<view class="chan-top" bindtap="intoPath" data-path="/pages/vouchar/vouchar">
+			<view class="chan-title">提现</view>
+			<view class="chan-img">
+				<image src="../../image/right.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="statist">
+		<view class="ststist-title">充值统计</view>
+		<view class="stat-name">
+			<view class="name">
+				<view class="name-img">
+					<image src="../../image/icon3.png"></image>
+				</view>
+				<view class="name-title">
+					<view class="name-con">总充值</view>
+					<view class="name-conter">1596.00</view>
+				</view>
+			</view>
+			<view class="name">
+				<view class="name-img">
+					<image src="../../image/icon4.png"></image>
+				</view>
+				<view class="name-title">
+					<view class="name-con">已支出</view>
+					<view class="name-conter">3258.00</view>
+				</view>
+			</view>
+		</view>
+		<view class="stat-name">
+			<view class="name">
+				<view class="name-img">
+					<image src="../../image/icon2.png"></image>
+				</view>
+				<view class="name-title">
+					<view class="name-con">余额</view>
+					<view class="name-conter">968.00</view>
+				</view>
+			</view>
+			<view class="name">
+				<view class="name-img">
+					<image src="../../image/icon1.png"></image>
+				</view>
+				<view class="name-title">
+					<view class="name-con">未确认</view>
+					<view class="name-conter">386.00</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

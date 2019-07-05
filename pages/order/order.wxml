@@ -1,0 +1,169 @@
+<view>
+	<view class="nav-top flex-align">
+		<view class="nav-top-item nav-top-item-active">全部
+			<view class="title-line"></view>
+		</view>
+		<view class="nav-top-item">未确认</view>
+		<view class="nav-top-item">已确认</view>
+		<view class="nav-top-item">已取消</view>
+		<view class="nav-top-item flex-all" >
+			<view>筛选</view>
+			<view class="flex-all">
+				<image src="../../image/peer-icon1.png"></image>
+			</view>	
+		</view>
+	</view>
+	<view class="order">
+		<view class="order-name" >
+			<view class="orde">
+				<view class="order-title">
+					<image src="../../image/1.png"></image>
+				</view>
+				<view class="orde-name">领袖华夏|陕西西安</view>
+				<view class="order-ri">已取消</view>
+			</view>
+			<view class="order-con">
+				<view class="con-le">氙灯多地出发|暑假 马来西亚仙本那沙巴/吉隆坡7天5晚自由行 卡帕撒马布岛</view>
+				<view class="con-righ">￥1740</view>
+			</view>
+			<view class="order-con1">
+				<view class="con-left">团期:05/28(天)~06/05(三)</view>
+				<view class="con-right">
+					<span style="color: #000000;background: #FFD101;">无保险</span>
+					<span style="color: white;background: #EC6532;opacity: 0.8;">无合同</span>
+				</view>
+			</view>
+			<view class="order-con1">
+				<view class="con-left">人数:5人(3大2小)</view>
+			</view>
+			<view class="conbtn">
+				<view class="con-btn"><span>确认件</span></view>
+				<view class="con-btn"><span>签署合同</span></view>
+				<view class="con-btn"><span>购买保险</span></view>
+				<view class="con-btn"><span>支付</span></view>
+			</view>
+			
+		</view>
+	</view>
+	<view class="order">
+		<view class="order-name" >
+			<view class="orde">
+				<view class="order-title">
+					<image src="../../image/1.png"></image>
+				</view>
+				<view class="orde-name">陕西中旅|陕西·西安</view>
+				<view class="order-ri">已取消</view>
+			</view>
+			<view class="order-con">
+				<view class="con-le">氙灯多地出发|暑假 马来西亚仙本那沙巴/吉隆坡7天5晚自由行 卡帕撒马布岛</view>
+				<view class="con-righ">￥2180</view>
+			</view>
+			<view class="order-con1">
+				<view class="con-left">团期:05/28(天)~06/05(三)</view>
+				<view class="con-right">
+					<span style="color: #000000;background: #FFD101;">已退保</span>
+					<span style="color: white;background: #EC6532;opacity: 0.8;">已作废</span>
+				</view>
+			</view>
+			<view class="order-con1">
+				<view class="con-left">人数:5人(3大2小)</view>
+			</view>
+			<view class="conbtn">
+				<view class="con-btn"><span>确认件</span></view>
+				<view class="con-btn"><span>签署合同</span></view>
+				<view class="con-btn"><span>购买保险</span></view>
+				<view class="con-btn"><span>支付</span></view>
+			</view>
+		</view>
+	</view>
+	<view class="order">
+		<view class="order-name" >
+			<view class="orde">
+				<view class="order-title">
+					<image src="../../image/1.png"></image>
+				</view>
+				<view class="orde-name">陕西青旅|陕西西安</view>
+				<view class="order-ri">已取消</view>
+			</view>
+			<view class="order-con">
+				<view class="con-le">氙灯多地出发|暑假 马来西亚仙本那沙巴/吉隆坡7天5晚自由行 卡帕撒马布岛</view>
+				<view class="con-righ">￥3890</view>
+			</view>
+			<view class="order-con1">
+				<view class="con-left">团期:05/28(天)~06/05(三)</view>
+				<view class="con-right">
+					<span style="color: #000000;background: #FFD101;">无保险</span>
+					<span style="color: white;background: #EC6532;opacity: 0.8;">无合同</span>
+				</view>
+			</view>
+			<view class="order-con1">
+				<view class="con-left">人数:5人(3大2小)</view>
+			</view>
+			<view class="conbtn">
+				<view class="con-btn"><span>确认件</span></view>
+				<view class="con-btn"><span>签署合同</span></view>
+				<view class="con-btn"><span>购买保险</span></view>
+				<view class="con-btn"><span>支付</span></view>
+			</view>
+		</view>
+	</view>
+	<view class="bg">	</view>
+	<view class="state">
+		<view class="state-name">
+			<view class="state-title">支付状态</view>
+			<view class="state-btn">
+				<span style="color: #EC6532;background: none;">未支付</span>
+				<span>支付中</span>
+				<span>已支付</span>
+				<span>已取消</span>
+			</view>
+		</view>
+		<view class="state-name">
+			<view class="state-title">业务状态</view>
+			<view class="state-btn">
+				<span style="color: #EC6532;background: none;">未确认</span>
+				<span>确认中</span>
+				<span>已确认</span>
+				<span>已取消</span>
+			</view>
+		</view>
+		<view class="state-name">
+			<view class="state-title">游客信息</view>
+			<view class="state-btn">
+				<input type="text" placeholder="半自助"/>
+			</view>
+		</view>
+		<view class="state-name" style="height: 140px;">
+			<view class="state-title">金额</view>
+			<view class="state-btn1">
+				<view class="state-top">
+					<view class="top-left">最低金额</view>-
+					<view class="top-left">最高金额</view>
+				</view>
+				<view class="state-top1">
+					<view class="top-left1" style="text-align: right;"><span>￥200以上</span></view>
+					<view class="top-left1" style="text-align: center;"><span>￥1000以上</span></view>
+					<view class="top-left1" style="text-align: left;"><span>￥5000以上</span></view>
+				</view>
+			</view>
+		</view>
+		<view class="state-name">
+			<view class="state-title">游客信息</view>
+			<view class="state-btn">
+				<input type="text" placeholder="半自助"/>
+			</view>
+		</view>
+		<view class="state-btn">
+			<view class="btn-left"><span>重置</span></view>
+			<view class="btn-right"><span>确认</span></view>
+		</view>
+	</view>
+	<view class="none">
+		<view class="none-img">
+			<image src="../../image/paid.png"></image>
+		</view>
+		<view class="mnone-con">您还没有订单记录！</view>
+	</view>
+</view>
+
+ 

@@ -1,0 +1,28 @@
+<view>
+	<view class="login">
+		<view class="login-name">登录</view>
+	</view>
+	<view class="login-title">
+		<view class="login-top">
+			<view class="login-logo">logo</view>
+			<view class="logo-con">
+				<view class="con">你好!</view>
+				<view class="con-name">欢迎来到旅小宝</view>
+			</view>
+		</view>
+		<view class="login-cneter">
+			<view class="cen-top">手机号</view>
+			<view class="cen-inp">
+				<input type="text" placeholder="请输入手机号码" />
+			</view>
+		</view>
+		<view class="login-cneter">
+			<view class="cen-top">密码</view>
+			<view class="cen-inp">
+				<input type="text" placeholder="请输入手机号码" />
+			</view>
+		</view>
+		<view class="login-btn"><span>登录</span></view>
+	</view>
+	<view class="pwd"><span bindtap="intoPath" data-path="/pages/pwd/pwd">忘记密码</span></view>
+</view>

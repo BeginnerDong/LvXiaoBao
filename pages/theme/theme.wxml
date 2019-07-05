@@ -1,0 +1,31 @@
+<view>
+	<view class="title">
+		<view class="top">
+			<view class="top-img">
+				<image src="../../image/111%20(3).png"></image>
+			</view>
+			<view class="top-name">暖阳</view>
+		</view>
+		<view class="top">
+			<view class="top-img">
+				<image src="../../image/111%20(4).png"></image>
+			</view>
+			<view class="top-name">印象</view>
+		</view>
+	</view>
+	<view class="title">
+	<view class="top">
+		<view class="top-img">
+			<image src="../../image/111%20(2).png"></image>
+		</view>
+		<view class="top-name">星空</view>
+	</view>
+	<view class="top">
+		<view class="top-img">
+			<image src="../../image/111%20(1).png"></image>
+		</view>
+		<view class="top-name">系统</view>
+	</view>
+	</view>
+	<view class="btn"><span>更换主题</span></view>
+</view>

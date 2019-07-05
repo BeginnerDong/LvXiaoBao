@@ -1,0 +1,116 @@
+.top{
+	width: 100%;
+	height: 300px;
+	background: #FFC900;
+	display: flex;
+}
+.top-img{
+	width: 70%;
+	height: 200px;
+	text-align: right;
+	margin-top: 10px;
+}
+.top-img image{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.top-imgs{
+	width: 25%;
+	height: 200px;
+	margin-left: 5%;
+	margin-top: 10px;
+}
+.top-imgs image{
+	width: 80px;
+	height: 80px;
+	border: 1px dashed #000000;
+}
+.center{
+	width: 90%;
+	height: 130px;
+	border-radius: 10px;
+	margin-left: 5%;
+	position: absolute;
+	top: 20%;
+	background: white;
+	text-align: center;
+	padding-top: 5%;
+}
+.center-name{
+	color: #323232;
+	font-size: 16pt;
+	font-weight: 600;
+}
+.center-names{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	margin-top: 10px;
+}
+.name-img{
+	width: 40%;
+	height: 50px;
+	text-align: right;
+}
+.name-img image{
+	width: 20px;
+	height: 20px;
+	border: 1px dashed #000000;
+}
+.name{
+	width: 50%;
+	height: 50px;
+	text-align: left;
+}
+.people{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	margin-top: 10px;
+}
+.peo-name{
+	width: 70%;
+	height: 40px;
+	line-height: 40px;
+	color: #585858;
+	font-size: 16px;
+	padding-left: 4%;
+}
+.peo-con{
+	width: 30%;
+	color: #323232;
+	font-size: 16px;
+	line-height: 40px;
+}
+.peo-namea{
+	width: 50%;
+	height: 40px;
+	line-height: 40px;
+	color: #585858;
+	font-size: 16px;
+	padding-left: 4%;
+}
+.peo-cona{
+	width: 50%;
+	color: #323232;
+	font-size: 16px;
+	line-height: 40px;
+}
+.btn{
+	width: 100%;
+	height: 40px;
+	margin-top: 20px;
+}
+.btn span{
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	color: white;
+	background: #FF7B57;
+	margin-left: 16%;
+	text-align: center;
+	border-radius: 30px;
+
+}

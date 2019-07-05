@@ -1,0 +1,99 @@
+<view style="background: #A1A1A1;width: 100%;height: 100%;"> 
+	<view class="tourist">
+		<view class="saler flex-align">
+			<view class="left">
+				<image src="../../image/complete.png"></image>
+			</view>
+			<view class="middle">
+					<view class="font16 color1 bold-font">刘建超(成人)</view>
+					<view class="card">身份证：6231524799235826</view>
+					<view class="card">手机号码：17782526431</view>
+			</view>
+			<view class="right flex-justify">
+				<view class="phone">
+					<image src="../../image/write.png"></image>
+				</view>
+				<view class="phone">
+					<image src="../../image/delete.png"></image>
+				</view>
+			</view>	
+		</view>
+		<view class="saler flex-align">
+			<view class="left">
+				<image src="../../image/complete%20拷贝.png"></image>
+			</view>
+			<view class="middle">
+					<view class="font16 color1 bold-font">李丽萍(成人)</view>
+					<view class="card">身份证：6231524799235826</view>
+					<view class="card">手机号码：17782526431</view>
+			</view>
+			<view class="right flex-justify">
+				<view class="phone">
+					<image src="../../image/write.png"></image>
+				</view>
+				<view class="phone">
+					<image src="../../image/delete.png"></image>
+				</view>
+			</view>	
+		</view>
+		<view class="saler flex-align">
+			<view class="left">
+				<image src="../../image/complete%20拷贝.png"></image>
+			</view>
+			<view class="middle">
+					<view class="font16 color1 bold-font">张怡(成人)</view>
+					<view class="card">身份证：6231524799235826</view>
+					<view class="card">手机号码：17782526431</view>
+			</view>
+			<view class="right flex-justify">
+				<view class="phone">
+					<image src="../../image/write.png"></image>
+				</view>
+				<view class="phone">
+					<image src="../../image/delete.png"></image>
+				</view>
+			</view>	
+		</view>
+	</view>
+	<!-- <view class="bottom">
+		<view class="bottom-left">
+			<view class="bott">
+				<view class="left-img">
+					<image src="../../image/圆角矩形%201.png"></image>
+				</view>
+				<view class="left-cn">手动添加</view>
+			</view>
+			<view class="bott">
+				<view class="left-img">
+					<image src="../../image/圆角矩形%203.png"></image>
+				</view>
+				<view class="left-cn">剪贴板添加</view>
+			</view>
+			<view class="bott">
+				<view class="left-img">
+					<image src="../../image/blacklist.png"></image>
+				</view>
+				<view class="left-cn">客户添加</view>
+			</view>
+		</view>
+		<view class="bott-btn">确定并返回</view>
+	</view> -->
+	<view class="visi">
+		
+	</view>
+	<view class="visitors">
+		<view class="visi-name">添加游客</view>
+		<view class="visi-name1">
+			<view class="visi-titlw">国内模式</view>
+			<view class="visi-img">
+				<image src="../../image/complete.png"></image>
+			</view>
+		</view>
+		<view class="visi-name1">
+			<view class="visi-titlw">出境模式</view>
+			<view class="visi-img">
+				<image src="../../image/complete%20拷贝.png"></image>
+			</view>
+		</view>
+	</view>
+</view>

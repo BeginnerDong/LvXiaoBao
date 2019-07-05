@@ -1,0 +1,285 @@
+.top{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	border-bottom: 1px solid gray;
+}
+.basic{
+	width: 50%;
+	height: 50px;
+	line-height: 50px;
+	color: #323232;
+	font-size: 16px;
+	text-align: center;
+}
+.travel{
+	width: 50%;
+	height: 50px;
+	line-height: 50px;
+	color: #323232;
+	font-size: 16px;
+	text-align: center;
+}
+.basici{
+	width: 100%;
+	height: 500px;
+}
+.basic-name{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	display: flex;
+	border-bottom: 1px solid gray;
+}
+.name{
+	width: 50%;
+	color: #585858;
+	font-size: 16px;
+	padding-left: 3%;
+}
+.title{
+	width: 50%;
+	margin-right: 5%;
+	text-align: right;
+	color: #323232;
+	font-size: 16px;
+	font-weight: 600;
+}
+.title-con{
+	width: 50%;
+	height: 40px;
+	display: flex;
+}
+.con{
+	width: 90%;
+	text-align: right;
+	color: #323232;
+	font-size: 16px;
+	font-weight: 600;
+}
+.con-img{
+	width: 10%;
+	margin-right: 5%;
+}
+.con-img image{
+	width: 20px;
+	height: 20px;
+}
+.title-btn{
+	width: 50%;
+	display: flex;
+}
+.btn-left{
+	width: 30%;
+}
+.btn-left span{
+	width: 50px;
+	height: 20px;
+	display: inline-block;
+	background: #FFD101;
+	color: #262628;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	font-size: 10px;
+}
+.namea{
+	width: 100%;
+	height: 40px;
+}
+.namea{
+	width: 50px;
+	height: 20px;
+	display: inline-block;
+	background: #FFD101;
+	color: #262628;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	font-size: 10px;
+	margin-left: 5%;
+	margin-top: 2%;
+}
+.basic-btn{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+}
+.basi-name{
+	color: #585858;
+	font-size: 13pt;
+}
+.type{
+	width: 100%;
+	height: 300px;
+	margin-top: 30px;
+}
+.type-name{
+	width: 100%;
+	height: 30px;
+	padding-left: 3%;
+	color: #323232;
+	font-size: 16pt;
+}
+.photo{
+	width: 100%;
+	height: 120px;
+	display: flex;
+}
+.phpto-text{
+	width: 30%;
+	height: 60px;
+	color: #323232;
+	line-height: 60px;
+	font-size: 16pt;
+}
+.photo-img{
+	width: 100px;
+	height: 100px;
+	background: #F4F3F3;
+	text-align: center;
+	line-height: 100px;
+}
+.photo-img image{
+	width: 20px;
+	height: 20px;
+}
+.btn{
+	width: 100%;
+	height: 40px;
+	margin-top: 20px;
+}
+.btn span{
+	width: 300px;
+	height: 40px;
+	text-align: center;
+	display: inline-block;
+	line-height: 40px;
+	color: white;
+	background: #FF7B57;
+	margin-left: 15%;
+	border-radius: 30px;
+}
+.travel{
+	width: 100%;
+	height: 100%;
+}
+.tarcel-top{
+	width: 90%;
+	height: 100px;
+	background: #FFC900;
+	display: flex;
+	border-radius: 20px;
+	margin-left: 5%;
+}
+.top-left{
+	width: 50%;
+	height: 100px;
+	text-align: center;
+	margin-top: 4%;
+}
+.num{
+	color: #323232;
+	font-size: 24px;
+	font-weight: 800;
+}
+.rich{
+	color: #323232;
+	font-size: 14px;
+}
+.tra{
+	width: 100%;
+	height: 500px;
+	margin-top: 20px;
+}
+.tra-name{
+	width: 100%;
+	height: 40px;
+	color: #323232;
+	font-size: 16px;
+	padding-left: 5%;
+}
+.tra-con{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	
+}
+.tracon{
+	width: 100px;
+	height: 100px;
+	background: #FFE000;
+	text-align: center;
+}
+.number{
+	padding-top: 30px;
+}
+.tra-title{
+	width: 60%;
+}
+.title-name{
+	width: 100%;
+	display: flex;
+}
+.title-img{
+	width: 15%;
+	margin-left: 3%;
+}
+.title-img image{
+	width: 20px;
+	height: 20px;
+}
+.titl{
+	color: #323232;
+	font-size: 15px;
+	font-weight: 600;
+}
+.trap{
+	color: #A1A1A1;
+	font-size: 14px;
+	margin-left: 3%;
+}
+.tra-bottom{
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	bottom: 0;
+	background: #E7E7E7;
+	display: flex;
+}
+.bott{
+	width: 20%;
+	height: 60px;
+}
+.bott-titl{
+	width: 100%;
+	text-align: center;
+	color: #323232;
+	font-size: 12px
+}
+.bott-img{
+	width: 100%;
+	text-align: center;
+	height: 30px;
+	padding-top: 5%;
+}
+.bott-img image{
+	width: 20px;
+	height: 20px;
+}
+.bott-btn{
+	width: 60%;
+	height: 60px;
+}
+.bott-btn span{
+	width: 200px;
+	height: 40px;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 20px;
+	background: #FF7B57;
+	display: inline-block;
+	margin-left: 4%;
+	margin-top: 4%;
+}

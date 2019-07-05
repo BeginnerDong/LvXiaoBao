@@ -1,0 +1,57 @@
+.record{
+	width: 100%;
+	height: 50px;
+	display: flex;
+}
+.record-name{
+	width: 20%;
+	margin-top: 10px;
+	height: 40px;
+	line-height: 40px;
+	volume: #323232;
+	font-size: 16pt;
+	padding-left: 3%;
+}
+.reco{
+	width: 100%;
+	height: 50px;
+	background: #D5D5D5;
+	display: flex;
+	margin-top: 10px;
+	line-height: 50px;
+	padding-left: 3%;
+}
+.reco-left{
+	width: 75%;
+	height: 50px;
+	color: #585858;
+	font-size: 15px;
+}
+.reco-right{
+	width: 25%;
+	height: 50px;
+	color: #585858;
+	font-size: 15px;
+	margin-right: 5%;
+}
+.recor{
+	width: 100%;
+	height: 55px;
+	padding-top: 2%;
+	/* line-height: 50px; */
+	padding-left: 3%;
+	background: #FFFFFF;
+	border-bottom: 1px solid #DBDBDB;
+	display: flex;
+}
+.reco-left{
+	width: 80%;
+}
+.left-namea{
+	font-size: 10pt;
+	margin-top: 5px;
+	color: #A1A1A1;
+}
+.recor-right{
+	width: 20%;
+}

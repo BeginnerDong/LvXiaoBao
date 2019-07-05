@@ -1,0 +1,180 @@
+.top {
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid gray;
+	background: rgb(248, 247, 244);
+}
+
+.search {
+	width: 100%;
+	padding: 20rpx 0;
+}
+
+.search input {
+	width: 85%;
+	background: #F4F3F3;
+	border-radius: 40rpx;
+	height: 80rpx;
+	padding: 0 20rpx;
+	position: relative;
+	margin: 0 auto;
+	font-size: 14px;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(192, 192, 192, 1);
+}
+
+.searchBtn {
+	width: 100rpx;
+	height: 80rpx;
+	background:white;
+	border-radius: 0px 20px 20px 0px;
+	position: absolute;
+	right: 4.5%;
+	top: 20rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.searchBtn image {
+	width: 40rpx;
+	height: 40rpx;
+}
+.client{
+	width: 100%;
+	height: 70px;
+	display: flex;
+}
+.client-name{
+	width: 90%;
+	color: #323232;
+	opacity: 1;
+	font-weight: 600;
+	font-size: 16pt;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 3%;
+}
+.client-img{
+	width: 10%;
+	height: 40px;
+	line-height: 40px;
+}
+.client-img image{
+	width: 20px;
+	height: 20px;
+}
+.client-name{
+	width: 100%;
+	height: 40px;
+	background: #D5D5D5;
+}
+.cli-title{
+	width: 100%;
+	color: #323232;
+	font-size: 16px;
+	height: 50px;
+	/* line-height: 40px; */
+	padding-left: 3%;
+	line-height: 20px;
+	border-bottom: 1px solid gray;
+}
+.title{
+	color: #323232;
+	opacity: 1;
+	font-weight: 600;
+	font-size: 16px;
+}
+.title span{
+	color: #C5C5C5;
+	font-weight: 100;
+	margin-left: 3%;
+}
+.title label{
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	border-radius: 30px;
+	color: white;
+	background: #FFA586;
+	font-size: 10px;
+	text-align: center;
+	line-height: 20px;
+	margin-left: 2%;
+}
+.mobile{
+	color: #A1A1A1;
+	opacity: 1;
+	font-size: 13px;
+}
+.cli-right{
+	width: 30%;
+	height: 50px;
+	border-bottom: 1px solid gray;
+}
+.right-img{
+	width: 10%;
+}
+.right-img image{
+	width: 20px;
+	height: 20px;
+}
+.right-titl{
+	color: #A1A1A1;
+	opacity: 1;
+	font-size: 13px;
+}
+.add{
+	position: fixed;
+	top: 90%;
+	left: 80%;
+}
+.add image{
+	width: 70px;
+	height: 50px;	
+}
+.bg{
+	width: 100%;
+	height: 80%;
+	background: #000000;
+	opacity: 0.6;
+	position: fixed;
+	bottom: 20%;
+}
+.dd{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	background: #E7E7E7;
+	position: fixed;
+	bottom: 0;
+}
+.dd-con{
+	width: 30%;
+	height: 20%;
+	margin-top: 10px;
+	text-align: center;
+}
+.dd-name{
+	width: 70px;
+	height: 70px;
+	background: #FFD101;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 70px;
+	margin-left: 25%;
+}
+.dd-name image{
+	width: 20px;
+	height: 20px;
+}
+.dd-title{
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	color: #323232;
+	opacity: 0.6;
+	margin-top: 20px;
+	font-size: 12px;
+}

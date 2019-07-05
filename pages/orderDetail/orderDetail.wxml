@@ -1,0 +1,210 @@
+<view>
+	<view class="detail">
+		<view class="detaill-name">
+			<view class="detail-title">待支付</view>
+			<view class="detail-con1">订单资源比较紧缺，请尽快完成付款，以免影响行程。</view>
+		</view>
+		<view class="detail-message">
+			<view class="detail-mess">订单信息</view>
+			<view class="deail-num">￥6380.00</view>
+			<view class="detail-con">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机飘浮潜</view>
+			<view class="paid-con">
+				<view class="con">05月29日</view>
+				<view class="con" style="color: #A1A1A1;opacity: 0.6;">4成人  1儿童</view>
+				<view class="con" style="text-align: right;">06月08日</view>
+			</view>
+			<view class="mou">
+				<view class="mou-title">周三出发</view>
+				<view class="mou-title" style="text-align: right;">周六返回</view>
+			</view>
+		</view>
+		<view class="people">
+			<view class="detail-mess">订单信息</view>
+			<view class="people-name">
+				<view class="peo-titl">姓名</view>
+				<view class="peo-title">张佳怡</view>
+			</view>
+			<view class="people-name">
+				<view class="peo-titl">手机号</view>
+				<view class="peo-title">17782526431</view>
+			</view>
+			<view class="people-name">
+				<view class="peo-titl">门店地址</view>
+				<view class="peo-title">西安中国国际旅行社</view>
+			</view>
+			<view class="people-name">
+				<view class="peo-titl">门店地址</view>
+				<view class="peo-title">长安街区</view>
+			</view>
+		</view>
+		<view class="list">
+			<view class="list-title">
+				<view class="list-left">游客名单</view>
+				<view class="list-img1">
+					<image src="../../image/down.png"></image>
+				</view>
+			</view>
+			<view class="list-name">
+				<view class="name-left">
+					<view class="name">
+						<view class="name-name">游客1</view>
+						<view class="name-con">李正峰(成人)</view>
+					</view>
+					<view class="name-card">身份证:62284819562456</view>
+				</view>
+				<view class="name-img">
+					<view class="list-img">
+						<image src="../../image/addi.png"></image>
+					</view>
+					<view class="list-img">
+						<image src="../../image/delete.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="list-name">
+				<view class="name-left">
+					<view class="name">
+						<view class="name-name">游客2</view>
+						<view class="name-con">张佳怡(成人)</view>
+					</view>
+					<view class="name-card">身份证:62284819562456</view>
+				</view>
+				<view class="name-img">
+					<view class="list-img">
+						<image src="../../image/addi.png"></image>
+					</view>
+					<view class="list-img">
+						<image src="../../image/delete.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="insurance">
+			<view class="list-title">
+				<view class="list-left">保险</view>
+				<view class="list-img1">
+					<image src="../../image/down.png"></image>
+				</view>
+			</view>
+			<view class="steel">
+				<view class="steel-name">江泰保险</view>
+				<view class="steel-con">
+					<view class="peo-titl">保险名称</view>
+					<view class="peo-title">2017年度江泰</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">保险期限</view>
+					<view class="peo-title">2019-05-29</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">被保人</view>
+					<view class="peo-title1">
+						<view class="st">10人</view>
+						<view class="st-to"><span>查看</span></view>
+					</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">保险状态</view>
+					<view class="peo-title">已提交</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">保单号</view>
+					<view class="peo-title1">
+						<view class="st">EC20190529CDE</view>
+						<view class="st-to"><span>查看</span></view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="contrat">
+			<view class="list-title">
+				<view class="list-left">电子合同</view>
+				<view class="list-img1">
+					<image src="../../image/down.png"></image>
+				</view>
+			</view>
+			<view class="steel">
+				<view class="steel-name">12301</view>
+				<view class="steel-con">
+					<view class="peo-titl">合同类型</view>
+					<view class="peo-title">陆居民境内旅游合同</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">合同编号</view>
+					<view class="peo-title1">
+						<view class="st">EC20190529CDE</view>
+						<view class="st-to"><span>查看</span></view>
+						<view class="st-to"><span style="background: #FD8B05;">发送</span></view>
+					</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">合同金额</view>
+					<view class="peo-title1">
+						<view class="st">6840.00元</view>
+						<view class="st-to"><span>查看</span></view>
+					</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">游客代表</view>
+					<view class="peo-title">已提交</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">游客信息</view>
+					<view class="peo-title1">
+						<view class="st">10人</view>
+						<view class="st-to"><span>查看</span></view>
+					</view>
+				</view>
+				<view class="steel-con">
+					<view class="peo-titl">合同状态</view>
+					<view class="peo-title">已提交</view>
+				</view>
+			</view>
+		</view>
+		 <view class="order-btn">
+			<view class="can"><span>取消订单</span></view>
+			<view class="can1"><span>立即支付</span></view>
+		</view> 
+	</view>
+	<!-- <view class="bg"></view>
+	<view class="payment">
+		<view class="detail-mess">订单信息</view>
+		<view class="pay">
+			<view class="pay-name">￥1000</view>
+			<view class="pay-data">
+				<view class="pay-title">2019-05-10</view>
+				<view class="pay-title1">第1期</view>
+			</view>
+			<view class="prepaid" style="color: #FF0000;">已支付</view>
+			<view class="pay-img">
+				<image src="../../image/quanjiao.png"></image>
+			</view>
+		</view>
+		<view class="pay">
+			<view class="pay-name">￥1000</view>
+			<view class="pay-data">
+				<view class="pay-title">2019-06-10</view>
+				<view class="pay-title1">第2期</view>
+			</view>
+			<view class="prepaid">未支付</view>
+			<view class="pay-img">
+				<image src="../../image/complete.png"></image>
+			</view>
+		</view>
+		<view class="pay">
+			<view class="pay-name">￥1000</view>
+			<view class="pay-data">
+				<view class="pay-title">2019-07-10</view>
+				<view class="pay-title1">第3期</view>
+			</view>
+			<view class="prepaid">未支付</view>
+			<view class="pay-img">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+		<view class="order-btn">
+			<view class="can"><span>取消订单</span></view>
+			<view class="can1"><span>立即支付</span></view>
+		</view>
+	</view> -->
+</view>

@@ -1,0 +1,20 @@
+<view>
+	<view class="set" bindtap="intoPath" data-path="/pages/theme/theme">
+		<view class="set-name">系统主题</view>
+		<view class="set-img">
+			<image src="../../image/right.png"></image>
+		</view>
+	</view>
+	<view class="set"  bindtap="intoPath" data-path="/pages/area/area">
+		<view class="set-name">供应商区域</view>
+		<view class="set-img">
+			<image src="../../image/right.png"></image>
+		</view>
+	</view>
+	<view class="set" bindtap="intoPath" data-path="/pages/signature/signature">
+		<view class="set-name">业务签章</view>
+		<view class="set-img">
+			<image src="../../image/right.png"></image>
+		</view>
+	</view>
+</view>

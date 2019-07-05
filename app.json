@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/productList/productList",
+    "pages/peer/peer",
+    "pages/salers/salers",
+    "pages/productDetail/productDetail",
+    "pages/datail/datail",
+    "pages/shopping/shopping",
+    "pages/productListPlate/productListPlate",
+    "pages/schedule/schedule",
+    "pages/discount/discount",
+    "pages/search/search",
+    "pages/dateSlecte/dateSlecte",
+    "pages/eduit/eduit",
+    "pages/tourist/tourist",
+    "pages/outbound/outbound",
+    "pages/scrap/scrap",
+    "pages/sign/sign",
+    "pages/insurance/insurance",
+    "pages/infomation/infomation",
+    "pages/jounery/jounery",
+    "pages/paid/paid",
+    "pages/electro/electro",
+    "pages/orderDetail/orderDetail",
+    "pages/order/order",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/pwd/pwd",
+    "pages/mine/mine",
+    "pages/vt/vt",
+    "pages/money/money",
+    "pages/vouchar/vouchar",
+    "pages/record/record",
+    "pages/collect/collect",
+    "pages/client/client",
+    "pages/basic/basic",
+    "pages/customer/customer",
+    "pages/labels/labels",
+    "pages/area/area",
+    "pages/theme/theme",
+    "pages/promote/promote",
+    "pages/product/product",
+    "pages/stores/stores",
+    "pages/angents/agents",
+    "pages/feedback/feedback",
+    "pages/set/set",
+    "pages/signature/signature",
+    "pages/certification/certification"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFD101",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,151 @@
+.tourist{
+	width: 100%;
+	height: 400px;
+	padding-top: 2%;
+	z-index: 111;
+}
+.saler{
+	width:87%;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	border-radius:12px;
+	height:160rpx;
+	margin-top: 24px;
+	padding: 1%;
+}
+.phone{
+	width:40px;
+	height:40px;
+	background:rgba(244,243,243,1);
+	border-radius:50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.phone image{
+	width:40rpx;
+	height:40rpx;
+}
+.left{
+	width: 13%;
+}
+.left image{
+	width: 20pt;
+	height:20pt;
+}
+.middle{
+	width:60%
+}
+.middle image{
+	width:24rpx;
+	height:24rpx
+}
+.right{
+	width:27%
+}
+.phoneCall{
+	width: 100%;
+	height:100%;
+	position: fixed;
+	top:0;
+	background:rgba(0,0,0,1);
+	opacity:0.6;
+	z-index:9999
+}
+.card{
+	width:100%;
+	font-size: 14px;
+	color: #A1A1A1;
+	margin-top: 4%;
+}
+.bottom{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	border: 1px dashed #323232;
+}
+.bottom-left{
+	width: 60%;
+	height: 50px;
+	display: flex;
+	
+}
+.bott{
+	width: 30%;
+	text-align: center;
+}
+.left-img{
+	width: 100%;
+	height: 20px;
+}
+.left-img image{
+	width: 20px;
+	height: 20px;
+}
+.left-cn{
+	font-size: 12px;
+	color: #323232;
+	margin-top: 1%;
+}
+.bott-btn{
+	width: 40%;
+	height: 50px;
+	color: white;
+	background: #FF582B;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 30px;
+	font-size: 17px;
+}
+.visi{
+	width: 100%;
+	height: 80%;
+	position: fixed;
+	bottom:20%;
+	background: #000000;
+	opacity: 0.6;
+	z-index: 222;
+}
+.visitors{
+	width: 100%;
+	height: 20%;
+	position: fixed;
+	bottom:0%;
+	background: #E7E7E7;
+}
+.visi-name{
+	width: 100%;
+	height: 42px;
+	font-size: 16px;
+	color: #323232;
+	padding: 0 3%;
+	line-height: 40px;
+	border-bottom: 1px solid white;
+}
+.visi-name1{
+	width: 100%;
+	height: 45px;
+	display: flex;
+	line-height: 45px;
+	justify-content: center;
+	border-bottom: 1px solid white;
+}
+.visi-titlw{
+	width: 50%;
+	height: 50px;
+	font-size: 16px;
+	color: #323232;
+	padding: 0 3%;
+}
+.visi-img{
+	width: 50%;
+	height: 50px;
+	text-align: center;
+}
+.visi-img image{
+	width: 20px;
+	height: 20px;
+}

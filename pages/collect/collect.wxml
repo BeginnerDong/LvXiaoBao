@@ -1,0 +1,178 @@
+<view>
+	<view class="collect">
+		<view class="coll-name">同行</view>
+		<view class="coll-name">产品</view>
+	</view>
+<!-- <view class="peer">
+		<view class="peer-top flex">
+			<view style="width:80%">
+				<view class="flex-align">
+					<view class="color1 font18 bold-font">陕西国旅</view>
+					<view class="color2 font12 bold-font" style="margin-left: 16rpx;">陕西·西安</view>
+				</view>
+				<view class="font15 color1" style="margin-top:16rpx;">陕西西安国际旅行有限公司</view>
+			</view>	
+			<view style="width:20%" class="flex-all" bindtap="intoPath" data-path="/pages/salers/salers">
+				<view class="phone">
+					<image src="../../image/detail-icon3.png"></image>
+				</view>
+			</view>		
+		</view>
+		<view class="peer-middle">
+			<view class="flex-align" style="margin-top: 14rpx;">
+				<view class="zhuying font14 color1 bold-font">主营业务</view>
+				<view class="font14 color1">国内批发，境外专线</view>
+			</view>
+			<view class="font14 color1" style="margin-top: 16rpx;">海南专线/北京专线/桂林专线/华东专线/普吉专线/巴黎专线/泰国专线/日韩专线/欧洲专线...</view>
+		</view>
+		<view class="peer-bottom flex-align">
+			<view class="peer-bottom-item flex-all">
+				<view class="flex-all ">
+					<image src="../../image/peer-icon2.png" />
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">100件</view>
+			</view>
+			<view class="peer-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon3.png" />
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">100</view>
+			</view>
+			<view class="peer-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon4.png" />
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">100</view>
+			</view>
+		</view>
+	</view>
+	
+	<view class="peer">
+		<view class="peer-top flex" >
+			<view style="width:80%" bindtap="intoPath" data-path="/pages/productListPlate/productListPlate" >
+				<view class="flex-align">
+					<view class="color1 font18 bold-font">领秀华夏</view>
+					<view class="color2 font12 bold-font" style="margin-left: 16rpx;">陕西·西安</view>
+					<view class="flex-all qian" style="margin-left: 26rpx;">
+						<image src="../../image/peer-icon6.png"></image>
+					</view>
+				</view>
+				<view class="font15 color1" style="margin-top:16rpx;">陕西领秀华夏旅行社有限公司</view>
+			</view>	
+			<view style="width:20%" class="flex-all" bindtap="intoPath" data-path="/pages/salers/salers">
+				<view class="phone">
+					<image src="../../image/detail-icon3.png"></image>
+				</view>
+			</view>		
+		</view>
+		<view class="peer-middle">
+			<view class="flex-align" style="margin-top: 14rpx;">
+				<view class="zhuying font14 color1 bold-font">主营业务</view>
+				<view class="font14 color1">国内批发</view>
+			</view>
+			<view class="font14 color1" style="margin-top: 16rpx;">海南专线/北京专线/桂林专线/华东专线/普吉专线/巴黎专线/泰国专线</view>
+		</view>
+		<view class="peer-bottom flex-align">
+			<view class="peer-bottom-item flex-all">
+				<view class="flex-all ">
+					<image src="../../image/peer-icon2.png" />
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">100件</view>
+			</view>
+			<view class="peer-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon3.png" />
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">100</view>
+			</view>
+			<view class="peer-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon4.png" />
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">100</view>
+			</view>
+		</view>
+	</view> -->
+	<view class="plate">
+			<view class="plate-top flex">
+				<view style="width:100%">
+					<view class="flex-align">
+						<view class="color1 font12">[产品ID:]4567 7887 4521</view>
+					</view>
+					<view class="font14 color1 bold-font" style="margin-top:16rpx;">马来西亚沙巴旅游5-7天酒店机票专车接送亲子蜜月自由行送旅拍</view>
+				</view>			
+			</view>
+			<view class="plate-middle">
+				<view class="flex-align" style="margin-top: 14rpx;">
+					<view class="product flex">
+						<view class="product-img">
+							<image src="../../image/1.png"></image>
+						</view>
+						<view class="zhuying font14 color1">领袖华夏</view>
+						<view class="font14 color1 city">陕西·西安</view>
+					</view>
+					<view class="product-right">
+						<span class="font12">出发城市:西安</span>
+					</view>
+				</view>
+			<view class="plate-bottom flex-align">
+				<view class="plate-bottom-item flex-all">
+					<view class="font13 color2" style="margin-left: 18rpx;"><span>￥2580/</span>人起</view>
+				</view>
+				<view class="plate-bottom-item flex-all">
+					<view class="flex-all">
+						<image src="../../image/peer-icon3.png" />
+					</view>
+					<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+				</view>
+				<view class="plate-bottom-item flex-all">
+					<view class="flex-all">
+						<image src="../../image/peer-icon4.png" />
+					</view>
+					<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="plate">
+			<view class="plate-top flex">
+				<view style="width:100%">
+					<view class="flex-align">
+						<view class="color1 font12">[产品ID:]4567 7887 4521</view>
+					</view>
+					<view class="font14 color1 bold-font" style="margin-top:16rpx;">马来西亚沙巴旅游5-7天酒店机票专车接送亲子蜜月自由行送旅拍</view>
+				</view>			
+			</view>
+			<view class="plate-middle">
+				<view class="flex-align" style="margin-top: 14rpx;">
+					<view class="product flex">
+						<view class="product-img">
+							<image src="../../image/1.png"></image>
+						</view>
+						<view class="zhuying font14 color1">领袖华夏</view>
+						<view class="font14 color1 city">陕西·西安</view>
+					</view>
+					<view class="product-right">
+						<span class="font12">出发城市:西安</span>
+					</view>
+				</view>
+			<view class="plate-bottom flex-align">
+				<view class="plate-bottom-item flex-all">
+					<view class="font13 color2" style="margin-left: 18rpx;"><span>￥2580/</span>人起</view>
+				</view>
+				<view class="plate-bottom-item flex-all">
+					<view class="flex-all">
+						<image src="../../image/peer-icon3.png" />
+					</view>
+					<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+				</view>
+				<view class="plate-bottom-item flex-all">
+					<view class="flex-all">
+						<image src="../../image/peer-icon4.png" />
+					</view>
+					<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

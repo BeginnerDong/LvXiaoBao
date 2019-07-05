@@ -1,0 +1,326 @@
+.detail{
+	width: 100%;
+	height: 100%;
+}
+.detaill-name{
+	height: 70px;
+	background: #FFCA00;
+	margin-top: 3%;
+	padding-top: 2%;
+}
+.detail-title{
+	color: #323232;
+	font-size: 20px;
+	padding-left: 3%;
+}
+.detail-con1{
+	color: #323232;
+	font-size: 10pt;
+	padding-left: 3%;
+}
+.detail-message{
+	height: 250px;
+	width: 380px;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	background: #F2F2F2;
+	margin: 5%;
+}
+.detail-mess{
+	width: 100%;
+	height: 50px;
+	color: #323232;
+	background: #F2F2F2;
+	font-size: 16pt;
+	line-height: 50px;
+	padding-left: 2%;
+	border-bottom: 1px solid #FFFFFF;
+}
+.deail-num{
+	height: 40px;
+	color: #EC6532;
+	margin-top: 5%;
+	padding-left: 2%;
+	font-size: 14pt;
+}
+.detail-con{
+	color: #323232;
+	height: 70px;
+	font-size: 16pt;
+}
+.paid-con{
+	width: 100%;
+	height: 30px;
+	display: flex;
+	padding-left: 3%;
+}
+.con{
+	width: 30%;
+	height: 30px;
+	color: #585858;
+	font-size: 15px;
+}
+.mou{
+	width: 100%;
+	height: 40px;
+	display: flex;
+}
+.mou-title{
+	width: 50%;
+	height: 40px;
+	padding-left: 3%;
+	color: #A1A1A1;
+	font-size: 13px;
+	color: #A1A1A1;
+	opacity: 0.6;
+}
+.people{
+	height: 250px;
+	width: 380px;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	background: #F2F2F2;
+	margin: 5%;
+}
+.people-name{
+	width: 100%;
+	height: 50px;
+	display: flex;
+}
+.peo-titl{
+	width: 50%;
+	height: 50px;
+	color: #585858;
+	font-size: 14pt;
+	padding-left: 3%;
+}
+.peo-title{
+	width: 50%;
+	height: 50px;
+	color: #323232;
+	font-size: 14pt;
+	text-align: right;
+	margin-right: 5%;
+}
+.list{
+	height: 200px;
+	width: 380px;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	background: #F2F2F2;
+	margin: 5%;
+}
+.list-title{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	padding-top: 3%;
+}
+.list-left{
+	width: 90%;
+	padding-left: 3%;
+	color: #323232;
+	opacity: 1;
+	font-size: 15pt;
+}
+.list-img1{
+	width: 10%;
+}
+.list-img1 image{
+	width: 20px;
+	height: 20px;
+}
+.list-name{
+	width: 100%;
+	height: 70px;
+	display: flex;
+}
+.name-left{
+	width: 80%;
+	height: 50px;
+}
+.name{
+	width: 80%;
+	height: 30px;
+	display: flex;
+	padding-left: 3%;
+}
+.name-name{
+	width: 50px;
+	height: 30px;
+	border-radius: 30px;
+	background: #FFCA00;
+	color: #323232;
+	text-align: center;
+	line-height: 30px;
+	font-size: 11px;
+}
+.name-con{
+	margin-left: 4%;
+	color: #323232;
+	font-size: 14px;
+	margin-top: 2%;
+}
+.name-card{
+	color: #585858;
+	font-size: 13px;
+	padding-left: 3%;
+}
+.name-img{
+	width: 20%;
+	display: flex;
+}
+.list-img{
+	width: 50%;
+}
+.list-img image{
+	width: 20px;
+	height: 20px;
+}
+.insurance{
+	height: 350px;
+	width: 380px;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	background: #F2F2F2;
+	margin: 5%;	
+}
+.steel{
+	width: 100%;
+	height: 300px;
+}
+.steel-name{
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #EC6532;
+	line-height: 30px;
+}
+.steel-con{
+	width: 100%;
+	height: 50px;
+	display: flex;
+}
+.peo-title1{
+	width: 100%;
+	height: 40px;
+	display: flex;
+}
+.st{
+	width: 60%;
+	height: 40px;
+	text-align: center;
+	color: #323232;
+	font-size: 15px;
+	line-height: 40px;
+}
+.st-to{
+	width: 40%;
+	height: 40px;
+	text-align: center;
+}
+.st-to span{
+	width: 50px;
+	height: 30px;
+	background: #FF582B;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	font-size: 11px;
+	border-radius: 20px;
+}
+.contrat{
+	height: 400px;
+	width: 380px;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	background: #F2F2F2;
+	margin: 5%;	
+}
+.order-btn{
+	width: 100%;
+	height: 40px;
+	display: flex;
+}
+.can{
+	width: 45%;
+	height: 40px;
+	margin-left: 5%;
+}
+.can span{
+	width: 140px;
+	height: 40px;
+	border-radius: 30px;
+	text-align: center;
+	line-height: 40px;
+	display: inline-block;
+	background: #F2F2F2;
+	font-size: 17px;
+}
+.can1{
+	width: 45%;
+	height: 40px;
+}
+.can1 span{
+	width: 180px;
+	height: 40px;
+	border-radius: 30px;
+	text-align: center;
+	line-height: 40px;
+	display: inline-block;
+	background: #FF582B;
+	color: white;
+	font-size: 17px;
+}
+.bg{
+	width: 100%;
+	height: 62%;
+	position: fixed;
+	bottom: 38%;
+	background: #000000;
+	opacity: 0.6;
+}
+.payment{
+	width: 100%;
+	height: 42%;
+	position: fixed;
+	bottom: 0;
+	background: #F5F5F5;
+}
+.pay{
+	width: 100%;
+	height: 60px;
+	display: flex;
+}
+.pay-name{
+	width: 20%;
+	color: #EC6532;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.pay-data{
+	width: 40%;
+	height: 50px;
+	color: #323232;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 2%;
+}
+.prepaid{
+	width: 20%;
+	height: 50px;
+	color: #A1A1A1;
+	font-size:14px ;
+	line-height: 50px;
+}
+.pay-img{
+	width: 10%;
+	height: 50px;
+	text-align: center;
+}
+.pay-img image{
+	width: 20px;
+	height: 20px;
+}
+.pay-title1{
+	color: #585858;
+	font-size: 12px;
+}

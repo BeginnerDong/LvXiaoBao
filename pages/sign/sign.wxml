@@ -1,0 +1,335 @@
+<view>
+	<view class="sign">
+		<view class="sign-name">签署合同</view>
+		<view class="sign-sign">
+			<view class="sign-title">电子合同</view>
+			<view class="sign-con">
+				<view class="con">111111111</view>
+				<view class="con-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="sign-sign">
+			<view class="sign-title">合同类型</view>
+			<view class="sign-con">
+				<view class="con">1111111111</view>
+				<view class="con-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="info">
+		<view class="sign-name">游客信息</view>
+		<view class="peo-name">
+			<view class="peo-con">游客类别</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="选择游客类别"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*游客代表</view>
+			<view class="peo-content">
+				<input type="text" placeholder="请填写游客代表的姓名"/>
+			</view>
+		</view>
+		<view class="peo-name">
+		<view class="peo-con">*手机</view>
+		<view class="peo-content">
+			<input type="text" placeholder="用于接收电子合同"/>
+		</view>
+	</view>
+	<view class="peo-name">
+		<view class="peo-con">*身份证号</view>
+		<view class="peo-content">
+			<input type="text" placeholder="填写身份证号"/>
+		</view>
+	</view>
+	<view class="peo-name">
+		<view class="peo-con">邮箱</view>
+		<view class="peo-content">
+			<input type="text" placeholder="填写邮箱信息"/>
+		</view>
+	</view>
+	<view class="peo-name">
+		<view class="peo-con">选择游客</view>
+		<view class="peo-content1">
+			<view class="card">
+				<input type="text" placeholder="选择签署合同游客"/>
+			</view>
+			<view class="card-img"><image src="../../image/right.png"></image></view>
+		</view>
+	</view>
+	</view>
+	<view class="product">
+		<view class="sign-name">产品信息</view>
+		<view class="peo-name">
+			<view class="peo-con">*产品名称</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="填写产品名称"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*出发日期</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="选择出发日期"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*结束日期</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="选择结束日期"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="sign-left">共计</view>
+			<view class="sign-span">
+				<view class="sign-img" style="margin-top: 5px;">
+					<image src="../../image/sort.png"></image>
+				</view>
+				<view class="sign-cent"><span>2</span></view>
+				<view class="sign-img" style="margin-top: 5px;">
+					<image src="../../image/add1.png"></image>
+				</view>
+			</view>
+			<view class="sign-right">天</view>
+		</view>
+		<view class="peo-name">
+			<view class="sign-left">住宿</view>
+			<view class="sign-span">
+				<view class="sign-img" style="margin-top: 5px;">
+					<image src="../../image/sort.png"></image>
+				</view>
+				<view class="sign-cent"><span>2</span></view>
+				<view class="sign-img" style="margin-top: 5px;">
+					<image src="../../image/add1.png"></image>
+				</view>
+			</view>
+			<view class="sign-right">晚</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">行程信息</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="行程信息"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+	</view>
+	<view class="travel">
+		<view class="sign-name">旅游费用</view>
+		<view class="peo-name">
+			<view class="peo-con">*成人</view>
+			<view class="sign-content">元/人</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*儿童</view>
+			<view class="sign-content">元/人</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">导游服务费</view>
+			<view class="sign-content">元/人</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">单房差</view>
+			<view class="sign-content">元/人</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*支付时间</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="选择支付时间"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*支付方式</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="选择支付方式"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*合计</view>
+			<view class="sign-content">元</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">支付说明</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="填写支付说明"/>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="costs">
+		<view class="sign-name">旅游费用</view>
+		<view class="peo-name">
+			<view class="peo-con">*购买保险方式</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="选择购买保险方式"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">保险产品名称</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="填写保险产品名称"/>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="agglo">
+		<view class="sign-name">成团不成团约定</view>
+		<view class="peo-name">
+			<view class="sign-left">*成团人数</view>
+			<view class="sign-span">
+				<view class="sign-img" style="margin-top: 5px;">
+					<image src="../../image/sort.png"></image>
+				</view>
+				<view class="sign-cent"><span>2</span></view>
+				<view class="sign-img" style="margin-top: 5px;">
+					<image src="../../image/add1.png"></image>
+				</view>
+			</view>
+			<view class="sign-right">天</view>
+		</view>
+		<view class="agglo-title">
+			<view class="agglo-img">
+				<image src="../../image/about.png"></image>
+			</view>
+			<view class="agglo-con">如不能成团，安那种方式解决</view>
+		</view>
+		<view class="agglo-agg">
+			<view class="agglo-one">
+				<view class="agg-con">1.委托第三方旅行社</view>
+				<view class="agg-img">
+					<image src="../../image/complete.png"></image>
+				</view>
+			</view>
+			<view class="peo-name">
+				<view class="peo-con">旅行社名称</view>
+				<view class="peo-content1">
+					<view class="card">
+						<input type="text" placeholder="填写委托第三方旅行社名称"/>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con1">2.延期出团</view>
+			<view class="sign-content1">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con1">3.改签其他线路出团</view>
+			<view class="sign-content1">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con1">解除合同</view>
+			<view class="sign-content1">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="group">
+		<view class="sign-name">拼团约定</view>
+		<view class="agglo-one" style="border-bottom: 1px solid #E7E7E7;">
+			<view class="agg-con1">*游客是否同意拼团</view>
+			<view class="agg-img">
+				<image src="../../image/complete.png"></image>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">*拼团至</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="填写拼团其他旅行社名称"/>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="dispute">
+		<view class="sign-name">争议解决方式</view>
+		<view class="agglo-one" style="border-bottom: 1px solid #E7E7E7;">
+			<view class="agg-con1">*请求仲裁委员会仲裁</view>
+			<view class="agg-img">
+				<image src="../../image/complete.png"></image>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">仲裁委员会</view>
+			<view class="peo-content1">
+				<view class="card">
+					<input type="text" placeholder="填写仲裁委员会"/>
+				</view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con1">依法向人民法院发起起诉</view>
+			<view class="sign-content1">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="rest">
+		<view class="sign-name">其他事项</view>
+		<view class="peo-name">
+			<view class="peo-con3">其他约定事项</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con3">自愿购物活动补充协议</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con3">自愿付费项目补充协议</view>
+			<view class="card-img"><image src="../../image/right.png"></image></view>
+		</view>
+	</view>
+	<view class="pact">
+		<view class="sign-name">合同附件</view>
+		<view class="part-img">
+			<view class="part-ti">
+				<image src="../../image/caram.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="botom">
+		<view class="speci-left">
+			<view class="special">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
+			<view class="special">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
+		</view>
+		<view class="spaci-btn">
+			<view class="speci1" style="border-right: 1px solid white;" bindtap="intoPath" data-path="/pages/electro/electro">
+				<view>保存并预览</view>
+			</view>
+			<view class="speci1" bindtap="intoPath" data-path="/pages/orderDetail/orderDetail">
+				<view>提交订单</view>
+			</view>
+		</view>
+	</view>
+</view>

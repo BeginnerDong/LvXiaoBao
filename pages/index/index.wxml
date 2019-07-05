@@ -1,0 +1,237 @@
+<view>
+	<view class="top">
+		<view class="search">
+			<input placeholder="热门目的地" />
+			<view class="searchBtn" bindtap="intoPath" data-path="/pages/search/search">
+				<image src="../../image/index-icon2.png" />
+			</view>
+		</view>
+		<view class="agency">
+
+		</view>
+	</view>
+	<view class="menu">
+		<view class="menu_item">
+			<view style="text-align: center;">
+				<view class="menu_item_image">
+					<image src="../../image/index-icon8.png" />
+				</view>
+				<span class="menu_title">国内游</span>
+			</view>
+		</view>
+		<view class="menu_item">
+			<view style="text-align: center;">
+				<view class="menu_item_image">
+					<image src="../../image/index-icon9.png" />
+				</view>
+				<span class="menu_title">出境游</span>
+			</view>
+		</view>
+		<view class="menu_item">
+			<view style="text-align: center;">
+				<view class="menu_item_image">
+					<image src="../../image/index-icon10.png" />
+				</view>
+				<span class="menu_title">周边游</span>
+			</view>
+		</view>
+		<view class="menu_item">
+			<view style="text-align: center;">
+				<view class="menu_item_image">
+					<image src="../../image/index-icon19.png" />
+				</view>
+				<span class="menu_title">一日游</span>
+			</view>
+		</view>
+	</view>
+	<view class="shop">
+		<view class="title">门店推荐
+			<view class="title-line"></view>
+		</view>
+		<view class="main">
+			<view class="main-left">
+				<image src="../../image/theme.png"></image>
+			</view>
+			<view class="main-right">
+				<view class="main-right-top">
+					<view class="main-right-top-left">
+						<image src="../../image/theme.png"></image>
+					</view>
+					<view class="main-right-top-right">
+						<image src="../../image/theme.png"></image>
+					</view>
+				</view>
+				<view class="main-right-bottom">
+					<image src="../../image/theme.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="theme">
+		<view class="title">主题推荐
+			<view class="title-line"></view>
+		</view>
+		<view class="theme-line" style="margin-top: 30rpx;">
+			<view class="theme-item-one" style="border-radius:12px 0 0 0;" bindtap="intoPath" data-path="/pages/productList/productList">
+				<view class="theme-item-left">
+					<view class="theme-title">海岛</view>
+					<view class="theme-description">品质海岛</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="../../image/index-icon11.png"></image>
+				</view>
+			</view>
+			<view class="theme-item-one">
+				<view class="theme-item-left">
+					<view class="theme-title">自由行</view>
+					<view class="theme-description">出行新体验</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="../../image/index-icon12.png"></image>
+				</view>
+			</view>
+			<view class="theme-item-one" style="border-radius:0  12px 0 0;">
+				<view class="theme-item-left">
+					<view class="theme-title">亲子同行</view>
+					<view class="theme-description">温馨陪伴</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="../../image/index-icon13.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="theme-line">
+			<view class="theme-item-two">
+				<view class="theme-item-left">
+					<view class="theme-title">蜜月度假</view>
+					<view class="theme-description">自然亲密接触</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="../../image/index-icon14.png"></image>
+				</view>
+			</view>
+			<view class="theme-item-two">
+				<view class="theme-item-left">
+					<view class="theme-title">水世界</view>
+					<view class="theme-description">清凉好去处</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="../../image/index-icon15.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="theme-line">
+			<view class="theme-item-two" style="border-radius:0 0  0 12px;">
+				<view class="theme-item-left">
+					<view class="theme-title">周边热门</view>
+					<view class="theme-description">发现好玩周边</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="../../image/index-icon13.png"></image>
+				</view>
+			</view>
+
+			<view class="theme-item-two" style="border-radius:0 0  12px 0;">
+				<view class="theme-item-left">
+					<view class="theme-title">一日游</view>
+					<view class="theme-description">周末好去处</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="../../image/index-icon13.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="size">
+		<view class="title">分类推荐
+			<view class="title-line"></view>
+		</view>
+		<view class="size-main">
+			<view class="tab">
+				<view class="tab-item active">
+					国内游
+				</view>
+				<view class="tab-item">
+					出境游
+				</view>
+				<view class="tab-item">
+					周边游
+				</view>
+				<view class="tab-item">
+					一日游
+				</view>
+			</view>
+			<view class="choose">
+				<view class="choose-item">
+					三亚
+				</view>
+				<view class="choose-item">
+					厦门
+				</view>
+				<view class="choose-item">
+					西安
+				</view>
+				<view class="choose-item">
+					西双版纳
+				</view>
+				<view class="choose-item">
+					丽江大理
+				</view>
+				<view class="choose-item">
+					北京
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="product" bindtap="intoPath" data-path="/pages/productDetail/productDetail">
+		<view class="product-left">
+			<image src="../../image/img1.jpg"></image>
+		</view>
+		<view class="product-right">
+			<view class="product-id">[产品id：]4584 6544 4546</view>
+			<view class="product-title avoidOverflow2">海南三亚5日4晚半自助游(5钻)海南三亚+南山文化旅游...</view>
+			<view class="product-description avoidOverflow">1晚起住·海量【机票+酒店】随心...</view>
+			<view class="product-bottom">
+				<view style="width:50%">
+					<view class="product-tip">双飞</view>
+				</view>
+				<view class="product-price">
+					<span>¥1460/</span>人起
+				</view>
+			</view>
+		</view>
+	</view>
+	<view style="width:100%;height:130rpx"></view>
+	<view class="navbar">
+		<view class="navbar_item">
+			<view class="nav_img">
+				<image src="../../image/index-icon3.png"></image>
+			</view>
+			<view class="text this-text">微店</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/peer/peer">
+			<view class="nav_img">
+				<image src="../../image/index-icon4.png"></image>
+			</view>
+			<view class="text">同行</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
+			<view class="nav_img">
+				<image src="../../image/index-icon6.png"></image>
+			</view>
+			<view class="text">首页</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/user/user">
+			<view class="nav_img">
+				<image src="../../image/index-icon5.png" ></image>
+			</view>
+			<view class="text">订单</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/user/user">
+			<view class="nav_img">
+				<image src="../../image/index-icon7.png" ></image>
+			</view>
+			<view class="text">我的</view>
+		</view>
+	</view>
+</view>

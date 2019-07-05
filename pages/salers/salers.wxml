@@ -1,0 +1,51 @@
+<view>
+	<view class="top">
+		<view class="search">
+			<input placeholder="关键字搜索 如：赵学刚 海南专线" />
+			<view class="searchBtn">
+				<image src="../../image/search.png" />
+			</view>
+		</view>
+		
+	</view>
+	<view class="saler flex-align">
+		<view class="left">
+			<image src="../../image/img4.png"></image>
+		</view>
+		<view class="middle">
+			<view class="flex-align"  style="justify-content: space-between;">
+				<view class="font16 color1 bold-font">张丽</view>
+				<view class="flex-align" >
+					<view style="margin-right: 8rpx;">		
+						<image src="../../image/saler.png"></image>
+					</view>
+					<view class="font11 color2">
+						销售经理
+					</view>
+				</view>
+			</view>
+			<view class="font13 color1">桂林专线/华东专线</view>
+		</view>
+		<view class="right flex-justify">
+			<view class="phone">
+				<image src="../../image/detail-icon3.png"></image>
+			</view>
+		</view>	
+	</view>
+<!-- 	<view class="phoneCall" wx:if="is_show">
+		<view class="card">
+			<view style="height:130rpx;text-align: center;border-bottom: 1px solid #E7E7E7;">
+				<view class="font16  color1">是否拨打销售热线？</view>
+				<view class="font16" style="color: #3960F2;">18602929807</view>
+			</view>
+			<view class="flex-align" style="height:120rpx;border-bottom: 1px solid #E7E7E7;">
+				<view class="font14" style="color: #EC6532;">联系不到TA，通知供应商</view>
+				<view class="notice">通知TA</view>
+			</view>
+			<view class="flex">
+				<view class="item font16 color1">取消</view>
+				<view class="item font16" style="color: #EC6532;">拨打</view>
+			</view>
+		</view>
+	</view> -->
+</view>

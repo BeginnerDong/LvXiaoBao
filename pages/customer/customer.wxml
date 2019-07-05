@@ -1,0 +1,119 @@
+<view>
+	<view class="custom">
+		<view class="custom-name">身份信息</view>
+		<view class="peo-name">
+			<view class="peo-con">姓名</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写客户姓名"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">姓名备注</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写客户备注姓名"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">客户级别</view>
+			<view class="peo-content">
+				<view class="card">
+					<input type="text" placeholder="选择客户级别"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">手机</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="选择客户级别"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">备用手机</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写客户备注手机"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">性别</view>
+			<view class="peo-content">
+				<view class="card">
+					<input type="text" placeholder="选择性别"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">出生日期</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="选择出生日期"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">年龄</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写客户年龄"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">区域</view>
+			<view class="peo-content">
+				<view class="card">
+					<input type="text" placeholder="选择客户区域"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">详细地址</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="请与证件保持一致"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">标签</view>
+			<view class="peo-content">
+				<view class="card">
+					<input type="text" placeholder="请与证件保持一致"/>
+				</view>
+				<view class="card-img"><image src="../../image/right.png"></image></view>
+			</view>
+		</view>
+		<view class="cust">+添加新标签</view>
+	</view>
+	<view class="type">
+		<view class="type-name">证件信息</view>
+		<view class="basic-name">
+			<view class="name">证件类型</view>
+			<view class="title-con">
+				<view class="con">
+					<input type="text" placeholder="身份证"/>
+				</view>
+				<view class="card-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">证件号码</view>
+			<view class="title">
+				<input type="text" placeholder="填写证件号码"/>
+			</view>
+		</view>
+		<view class="basic-name">
+			<view class="name">有效期至</view>
+			<view class="title">
+				<input type="text" placeholder="选择有效日期"/>
+			</view>
+		</view>
+		<view class="photo">
+			<view class="phpto-text">照片</view>
+			<view class="photo-img">
+				<image src="../../image/caram.png"></image>
+			</view>
+		</view>
+		<view class="basic-btn">
+			<view class="basi-name">保存</view>
+		</view>
+	</view>
+</view>

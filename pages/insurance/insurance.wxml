@@ -1,0 +1,163 @@
+<view>
+	<view class="insurance">
+		<view class="schedule">
+			<view class="detail-id">[产品ID：] 4567 7887 4521</view>
+			<view class="detail-name">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机票浮潜</view>
+		</view>
+		<view class="schedata">
+			<view class="shedu">
+				<view class="she-data">出团日期</view>
+				<view class="she-date1">2019-05-08</view>
+			</view>
+			<view class="shedu">
+				<view class="she-data">出行人数</view>
+				<view class="she-date">
+						<view class="count">成人x2;</view>
+						<view class="count">成人x2;</view>
+						<view class="count">成人x2;</view>
+				</view>
+			</view>
+			<view class="shedu">
+				<view class="she-data">保险</view>
+				<view class="she-date">
+					<view class="count1">江泰保险</view>
+					<view class="she-img">
+						<image src="../../image/right.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="detail">
+				<view class="detail-title">由于保险费用是根据游客年龄，行程天数实时计算保险费用，需要先选择需要购买保险的游客。</view>
+				<view class="detail-img">
+					<image src="../../image/close.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="tourist">
+			<view class="shedu">
+				<view class="she-data">游客</view>
+				<view class="she-date">
+						<view class="count">2成人;</view>
+						<view class="count">2老;</view>
+						<view class="count">1儿童1;</view>
+						<view class="count" style="margin-right: 30px;"><span style='color: #EC6532;'>5</span>/5</view>
+				</view>
+			</view>
+			<view class="card">
+				<view class="card-name">刘建超</view>
+				<view class="card-id">
+					<view class="card-id1">身份证:623001199201183562</view>
+					<view class="card-img">
+						<image src="../../image/delete.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="card">
+				<view class="card-name">刘建超</view>
+				<view class="card-id">
+					<view class="card-id1">身份证:623001199201183562</view>
+					<view class="card-img">
+						<image src="../../image/delete.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="add"><span>+立即添加</span></view>
+			<view class="more">
+				<view class="more-title">收起</view>
+				<view class="more-img">
+					<image src="../../image/up.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="steel">
+		<view class="steel-title">
+			<view class="steel-left">
+				<view class="steel-name">2019年度江泰平安行</view>
+				<view class="steel-con">境内保险</view>
+			</view>
+			<view class="steel-cent"><span>￥--/</span>份</view>
+			<view class="steel-right">
+				<image src="../../image/complete.png"></image>
+			</view>
+		</view>
+		<view class="steel-title">
+			<view class="steel-left">
+				<view class="steel-name">2019年度江泰平安行</view>
+				<view class="steel-con">境内保险</view>
+			</view>
+			<view class="steel-cent"><span>￥--/</span>份</view>
+			<view class="steel-right">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+		<view class="steel-title">
+			<view class="steel-left">
+				<view class="steel-name">2019年度江泰平安行</view>
+				<view class="steel-con">境内保险</view>
+			</view>
+			<view class="steel-cent"><span>￥--/</span>份</view>
+			<view class="steel-right">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+		<view class="more">
+			<view class="more-title">更多保险</view>
+			<view class="more-img">
+				<image src="../../image/down.png"></image>
+			</view>
+		</view>
+	</view>
+	 <view class="botom">
+		<view class="speci-left">
+			<view class="special">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
+			<view class="special">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
+		</view>
+		<view class="spaci-btn">
+			<view class="speci1" style="border-right: 1px solid white;" bindtap="intoPath" data-path="/pages/paid/paid">
+				<view>跳过</view>
+				<view>确认订单</view>
+			</view>
+			<view class="speci1" bindtap="intoPath" data-path="/pages/sign/sign">
+				<view>下一步</view>
+				<view>签署合同</view>
+			</view>
+		</view>
+	</view>
+	</view>
+	<!-- <view class="company"></view>
+	<view class="com-name">
+		<view class="com-title">保险公司</view>
+		<view class="com-title1" style="font-size: 14pt;color:#A1A1A1 ;">江泰保险</view>
+		<view class="com-title1">新华保险</view>
+		<view class="com-title1" style="font-size: 14pt;color:#A1A1A1 ;">新华保险</view>
+		<view class="com-btn">
+			<view class="com-btn1">取消</view>
+			<view class="com-btn1" style="color: #EC6532;font-size: 16pt;">确认</view>
+		</view>
+	</view> -->
+	<!-- <view class="option"></view>
+	<view class="data">
+		<view class="data-top">
+			<view class="data-con">选择日期</view>
+			<view class="data-img">
+				<image src="../../image/close.png"></image>
+			</view>
+		</view>
+		<view class="data-cen">2019年6月{{web_weekArray[0]}}</view>
+		<view class="mou" wx:for="{{web_weekArray}}" wx:key="id">
+			<ul >
+				<li>{{item}} </li>
+			</ul>
+		</view>
+		<view class="date">
+			<ul>
+				<li></li>
+			</ul>
+		</view>
+		<view class="data-cen1">2019年7月</view>
+		<view class="data-btn">
+			<view>清除</view>
+			<view>确认</view>
+		</view>
+	</view> -->
+</view>

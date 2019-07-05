@@ -1,0 +1,20 @@
+<view>
+	<view class="logo">
+		<view class="login">
+			<view class="login-name">找回密码</view>
+		</view>
+		<view class="login-title">
+			<view class="forget">忘记密码</view>
+			<view class="forget-inp">
+				<input type="text" placeholder="请输入手机号码"/>
+			</view>
+			<view class="forget-input">
+				<view class="text"><input type="text" placeholder="请输入验证码"/></view>
+				<view class="gain"><span>获取验证码</span></view>
+			</view>
+		</view>
+		<view class="forget-btn"><span>下一步</span></view>
+	</view>
+	
+</view>
+

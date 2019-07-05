@@ -1,0 +1,116 @@
+page {
+	background: #F4F3F3;
+}
+
+.top {
+	width: 100%;
+	background: #fff;
+}
+
+.search {
+	width: 100%;
+
+	padding: 20rpx 0;
+}
+
+.search input {
+	width: 85%;
+	background: #F4F3F3;
+	border-radius: 40rpx;
+	height: 80rpx;
+	padding: 0 20rpx;
+	position: relative;
+	margin: 0 auto;
+	font-size: 14px;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(192, 192, 192, 1);
+}
+
+.searchBtn {
+	width: 100rpx;
+	height: 80rpx;
+	background: #FFD101;
+	border-radius: 0px 20px 20px 0px;
+	position: absolute;
+	right: 4.5%;
+	top: 20rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 888
+}
+
+.searchBtn image {
+	width: 40rpx;
+	height: 40rpx;
+}
+.saler{
+	width:87%;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	border-radius:12px;
+	height:160rpx;
+	margin-top: 24rpx;
+	padding: 3%;
+}
+.phone{
+	width:40px;
+	height:40px;
+	background:rgba(244,243,243,1);
+	border-radius:50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.phone image{
+	width:40rpx;
+	height:40rpx;
+}
+.left{
+	width: 23%;
+}
+.left image{
+	width: 120rpx;
+	height:120rpx;
+	border-radius:50%
+}
+.middle{
+	width:50%
+}
+.middle image{
+	width:24rpx;
+	height:24rpx
+}
+.right{
+	width:27%
+}
+.phoneCall{
+	width: 100%;
+	height:100%;
+	position: fixed;
+	top:0;
+	background:rgba(0,0,0,1);
+	opacity:0.6;
+	z-index:9999
+}
+.card{
+	position: fixed;
+	width:80%;
+	left:10%;
+	top:35%;
+	height:340rpx;
+	background:rgba(255,255,255,1);
+	border-radius:12px;
+}
+.item{
+	width:50%;
+	height:48px;
+	line-height: 48px;
+	text-align: center;
+}
+.notice{
+	
+}
+

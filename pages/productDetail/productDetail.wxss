@@ -1,0 +1,242 @@
+page{
+	background: #F4F3F3;
+}
+.banner-box{
+	width:100%;
+	height:750rpx
+}
+.banner-start{
+	position: absolute;
+	height:40rpx;
+	background:rgba(50,50,50,1);
+	opacity:0.6;
+	border-radius:10px;
+	line-height: 40rpx;
+	padding: 10rpx;
+	top:680rpx;
+	left:24rpx;
+	font-size:14px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;	
+	color:rgba(255,255,255,1);
+}
+.banner-num{
+	position: absolute;
+	height:40rpx;
+	background:rgba(50,50,50,1);
+	opacity:0.6;
+	border-radius:10px;
+	line-height: 40rpx;
+	padding: 10rpx;
+	top:680rpx;
+	right:24rpx;
+	font-size:14px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;	
+	color:rgba(255,255,255,1);
+}
+.product-info{
+	width:100%;
+	
+	height:400rpx;
+}
+.product-info-top{
+	width:94%;
+	height:300rpx;
+	padding: 0 3%;
+	border-bottom: 1px solid #E7E7E7;
+	background: #fff;
+}
+.product-info-price{
+	height:140rpx;
+	display: flex;
+	align-items: center;
+}
+.product-price{
+	width:90%;
+	font-size:12px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(50,50,50,1);
+	display: flex;
+	align-items: center;
+}
+.money{
+	
+	font-size:20px;
+	font-family:PingFang-SC-Medium;
+	font-weight:Bold;
+	color:#EC6532;
+}
+.person{
+	font-size:14px;
+	font-family:PingFang-SC-Medium;
+	font-weight:Bold;
+	color:#A1A1A1;
+}
+.phone{
+	width:40px;
+	height:40px;
+	background:rgba(244,243,243,1);
+	border-radius:50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.phone image{
+	width:40rpx;
+	height:40rpx;
+}
+.product-id{
+	font-size:14px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(50,50,50,1);
+}
+.product-name{
+	margin-top: 10rpx;
+	font-size:16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+}
+.product-info-bottom{
+	display: flex;
+	align-items: center;
+	height:100rpx;
+	background: #fff;
+	padding: 0 3%;
+	width:94%;
+	border-bottom: 1px solid #E7E7E7;
+}
+.starand{
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(161,161,161,1);
+	width:30%;
+	
+}
+.starand-item{
+	display: flex;
+	align-items: center;
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(50,50,50,1);
+	width:23.3%;
+	
+}
+.starand-item image{
+	width:32rpx;
+	height:32rpx
+}
+.starand-item .text{
+	margin-left: 10rpx;
+}
+.product-explain{
+	margin-top: 24rpx;
+}
+.title{
+	font-size:16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	line-height:23px;
+	position: relative;
+	z-index:1
+}
+.title-line{
+	width:16px;
+	height:3px;
+	background:rgba(255,209,1,1);
+	border-radius:2px;
+	position: absolute;
+	bottom:5rpx;
+	z-index:-1
+}
+.explain-info{
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(50,50,50,1);
+	margin-right: 10rpx;
+}
+.select-group{
+	margin-top: 24rpx;
+}
+.start-level{
+	width:96rpx;
+	height:64rpx;
+	border:1px solid rgba(197, 197, 197, 1);
+	border-radius:4px;
+	line-height: 64rpx;
+	color: #A1A1A1;
+	text-align: center;
+	font-size: 28rpx;
+	margin-right: 24rpx;
+}
+.start-level-active{
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	background:rgba(255,209,1,1);
+	border: none;
+}
+.group-item{
+	width:120rpx;
+	height:88rpx;
+	background:rgba(255,255,255,1);
+	border:1px solid rgba(197, 197, 197, 1);
+	border-radius:8px;
+	text-align: center;
+	margin-right: 20rpx;
+}
+.group-date{
+	font-size:13px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(50,50,50,1);
+	line-height: 45rpx;
+}
+.group-price{
+	font-size:14px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(236,101,50,1);
+}
+.more-group{
+	width:67px;
+	height:44px;
+	background:rgba(255,209,1,1);
+	border-radius:22px 0px 0px 22px;
+	font-size:14px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	float: right;
+	margin-left: 24rpx;
+}
+.product-special{
+	margin-top: 24rpx;
+}
+.star-img{
+	width:10%;
+	height:70%
+}
+.star-img image{
+	width:32rpx;
+	height:32rpx
+}
+.special-info{
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(50,50,50,1);
+}
+.fee-explain{
+	margin-top: 24rpx;
+}
+.all-text view{
+	font-size:15px;
+	color:rgba(50,50,50,1);
+}

@@ -1,0 +1,17 @@
+<view>
+	<view class="sign">
+		<view class="sign-title">业务签章</view>
+		<view class="sign-add">
+			<view class="add">
+				<image src="../../image/add1.png"></image>
+			</view>
+		</view>
+		<view class="sign-name" style="color: #FF582B;">仅支持.png格式，文件大小<!-- <2M，长，宽<200 像素.</2M，长，宽<200> --></view>
+		<view class="sign-name">背景透明签章制作过程参考：</view>
+		<view class="sign-name">1、在一张白纸上盖章/签章</view>
+		<view class="sign-name">2、手机拍照盖章/签章</view>
+		<view class="sign-name">3、传到电脑使用PS，对盖章/签章去掉白色背景</view>
+		<view class="sign-name">4、生成背景透明的PNG格式图片；</view>
+	 <view class="btn"><span>确定</span></view>
+	</view>
+</view>

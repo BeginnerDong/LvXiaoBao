@@ -1,0 +1,54 @@
+<view>
+<view class="top">
+			<view class="search">
+				<input placeholder="关键字搜索 如：陕中旅" />
+				<view class="searchBtn" bindtap="intoPath" data-path="/pages/search/search">
+					<image src="../../image/index-icon2.png" ></image>
+				</view>
+			</view>
+	</view>
+	<view class="agents">B</view>
+	<view class="agents-name">
+		<view class="agents-title">北京丝路国际旅行社有限公司</view>
+		<view class="agent-left">
+			<view class="left-name">周光</view>
+			<view class="left-name">17782526431</view>
+		</view>
+	</view>
+	<view class="agents-name">
+		<view class="agents-title">北京丝路国际旅行社有限公司</view>
+		<view class="agent-left">
+			<view class="left-name">周光</view>
+			<view class="left-name">17782526431</view>
+		</view>
+	</view>
+	<view class="agents-name">
+		<view class="agents-title">北京丝路国际旅行社有限公司</view>
+		<view class="agent-left">
+			<view class="left-name">周光</view>
+			<view class="left-name">17782526431</view>
+		</view>
+	</view>
+	<view class="agents">B</view>
+	<view class="agents-name">
+		<view class="agents-title">北京丝路国际旅行社有限公司</view>
+		<view class="agent-left">
+			<view class="left-name">周光</view>
+			<view class="left-name">17782526431</view>
+		</view>
+	</view>
+	<view class="agents-name">
+		<view class="agents-title">北京丝路国际旅行社有限公司</view>
+		<view class="agent-left">
+			<view class="left-name">周光</view>
+			<view class="left-name">17782526431</view>
+		</view>
+	</view>
+	<view class="agents-name">
+		<view class="agents-title">北京丝路国际旅行社有限公司</view>
+		<view class="agent-left">
+			<view class="left-name">周光</view>
+			<view class="left-name">17782526431</view>
+		</view>
+	</view>
+</view>

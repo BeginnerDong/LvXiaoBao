@@ -1,0 +1,93 @@
+<view style="width: 100%;height: 100%;background: #FF3300;">
+	<view class="top">
+		<view class="top-img">
+			<image src="../../image/promotebg.png"></image>
+		</view>
+		<view class="top-name">
+			<view class="namea">每邀请一位好友</view>
+			<view class="name">立得100元</view>
+		</view>
+	</view>
+	<view class="pro">
+		<view class="roname">
+			<view class="pro-top">
+				<image src="../../image/promote.png"></image>
+			</view>
+			<view class="proti">邀请流程</view>
+		</view>
+		<view class="pro-cen">
+			<view class="cen-img">
+				<image src="../../image/pro.png"></image>
+			</view>
+			<view class="cen-name">
+				<view class="nam">
+					<view class="names">生成我的</view>
+					<view class="names">推广海报</view>
+				</view>
+				<view class="nam">
+					<view class="names">分享好友</view>
+					<view class="names">注册账号</view>
+				</view>
+				<view class="nam">
+					<view class="names">实名认证</view>
+					<view class="names">用户信息</view>
+				</view>
+				<view class="nam">
+					<view class="names">有效期内</view>
+					<view class="names">付费开通</view>
+				</view>
+			</view>
+		</view>
+		<view class="pro-num">
+			<view class="num">邀请码</view>
+			<view class="number">EC5216CD</view>
+		</view>
+		<view class="poster"><span>生成推广海报</span></view>
+	</view>
+	<view class="pro" style="height: 280px;">
+		<view class="roname">
+			<view class="pro-top">
+				<image src="../../image/promote.png"></image>
+			</view>
+			<view class="protis">我的奖励</view>
+		</view>
+		<view class="center">
+			<view class="cent-name">
+				<view class="bgs">100</view>
+				<view class="ngbu">已邀请</view>
+			</view>
+			<view class="cent-name">
+				<view class="bgs">26</view>
+				<view class="ngbu">已成功邀请</view>
+			</view>
+			<view class="cent-name">
+				<view class="bgs">500</view>
+				<view class="ngbu">获得奖励</view>
+			</view>
+		</view>
+		
+		<view class="poster" style="margin-top: 30px;"><span>生成推广海报</span></view>
+	</view>
+	<view  class="builder"></view>
+	<view class="create">
+		<view class="img">
+			<image src="../../image/create.png"></image>
+		</view>
+		<view class="create-name">
+			<view class="vr">邀请码</view>
+			<view class="vr">EC5216CD</view>
+		</view>
+		<view class="close">
+			<image src="../../image/close.png"></image>
+		</view>
+		<view class="save">
+			<view class="save-img">
+				<image src="../../image/sa.png"></image>
+			</view>
+			<view class="save-name">保存</view>
+		</view>
+	</view>
+	
+	
+	
+</view>

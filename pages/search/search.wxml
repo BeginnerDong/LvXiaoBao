@@ -1,0 +1,38 @@
+<view>
+	<view class="top">
+		<view class="search">
+			<input placeholder="热门目的地" />
+			<view class="searchBtn">
+				<image src="../../image/search.png" />
+			</view>
+		</view>
+	</view>
+	
+	<view class="size">
+		<view class="title">热门搜索</view>
+		<view class="size-main">
+			<view class="choose">
+				<view class="choose-item">
+					三亚
+				</view>
+				<view class="choose-item">
+					厦门
+				</view>
+				<view class="choose-item">
+					西安
+				</view>
+				<view class="choose-item">
+					西双版纳
+				</view>
+				<view class="choose-item">
+					丽江大理
+				</view>
+				<view class="choose-item">
+					北京
+				</view>
+			</view>
+		</view>
+	</view>
+	
+	
+</view>

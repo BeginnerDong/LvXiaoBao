@@ -1,0 +1,15 @@
+<view class="all-nav">
+		<view class="nav-top">所有省份</view>
+		<view class="nav-center">
+			<view class="nav-item">河南省</view>
+			<view class="nav-item">四川省</view>
+			<view class="nav-item">陕西省</view>
+		</view>
+		<view class="nav-bott">
+			<view class="nav-item">湖南省</view>
+			<view class="nav-item">湖北省</view>
+		</view>
+		<view class="area-btn">
+			<span>确定</span>
+		</view>
+	</view>

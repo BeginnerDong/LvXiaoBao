@@ -1,0 +1,400 @@
+<view style="width:100%;height:100%;">
+	<view class="banner-box">
+		<swiper indicator-dots="{{indicatorDots}}" style="width:100%;height:100%" autoplay="{{autoplay}}" duration="{{duration}}"
+		 circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}">
+			<block class="swipera" wx:for="{{bannerImg}}">
+				<swiper-item>
+					<image src="{{item}}" style="width:100%;height:100%"></image>
+					<view class="banner-start">
+						<view class="start-title">西安出发</view>|
+						<view class="start-title">26564</view>
+					</view>
+					<view class="banner-num">1/5</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="detail-info">
+		<view class="detail-info-top">
+			<view class="detail-info-price">
+				<view class="detail-price" style="font-size: 10pt;">市场价：<span class="money1" style="text-decoration: line-through;">¥1740/</span><span class="person">人起</span></view>
+				<view class="detail-price" style="font-size:16px;">结算价：<span class="money">¥1740/</span><span class="person">人起</span></view>
+			</view>
+			<view class="detail-id">[产品ID：] 4567 7887 4521</view>
+			<view class="detail-name">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机票浮潜</view>
+		</view>
+	</view>
+	<view class="norm">
+		<view class="norm-title">
+			<view class="norm-name">产品标准</view>
+			<view class="norm-imgs">
+				<view class="norm-img">
+					<image src="../../image/detail-icon2.png"></image>
+					<view class="norm-con">品质</view>
+				</view>
+				<view class="norm-img">
+					<image src="../../image/detail-icon2.png"></image>
+					<view class="norm-con">纯玩</view>
+				</view>
+				<view class="norm-img">
+					<image src="../../image/detail-icon2.png"></image>
+					<view class="norm-con">推荐</view>
+				</view>
+			</view>
+			
+		</view>
+		<view class="norm-title">
+			<view class="norm-name1">行程天数</view>
+			<view class="norm-data1">7天</view>
+		</view>
+		<view class="norm-title">
+			<view class="norm-name1">目的地</view>
+			<view class="norm-data1">泰国、普吉岛</view>
+		</view>
+	</view>
+	<view class="travel">
+		<view class="travel-title">
+			<view class="travel-name1">旅行社</view>
+			<view class="travel-data2">陕西中国旅行社有限责任公司</view>
+		</view>
+			<view class="travel-title">
+				<view class="travel-name1">优惠</view>
+				<view class="tarcel">
+					<view class="discount" style="margin-left: 6%;">立减</view>
+					<view class="dis-con">立减<span>10</span>%</view>
+				</view>
+			</view>
+		    <view class="travel-title">
+				<view class="tarcel1">
+					<view class="discoun1"><span>用券</span></view>
+					
+					 <view class="dis-content">
+						<view class="dis-con">选择优惠券</view>
+						<view class="dis-img">
+							<image src="../../image/right.png" style="width: 20px;height: 20px;"></image>
+						</view> 
+					</view>
+				</view>
+			</view>
+			<view class="travel-title">
+				<view class="tarcel1">
+					<view class="discoun1"><span>送券</span></view>
+					<view class="dis-content4">赠券<span>20</span>元/成人</view>
+				</view>
+			</view>
+	</view>
+	<view class="agent">
+		<view class="travel-title">
+			<view class="travel-name1">旅行社</view>
+			<view class="travel-data2">领秀华夏</view>
+		</view>
+		<view class="travel-title">
+			<view class="travel-name1">销售</view>
+			<view class="travel-data2" style="text-align: center;">姬芮</view>
+			<view class="travel-data2">18245086689</view>
+		</view>
+		<view class="select-group">
+			<view class="product-info-bottom" style="border-bottom: none;">
+				<view class="start-level start-level-active">三星</view>
+				<view class="start-level">四星</view>
+				<view class="start-level">五星</view>
+			</view>
+			<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx">
+				<view class="group-item">
+					<view class="group-date">06-08</view>
+					<view class="group-price">¥1740</view>
+				</view>
+				<view class="group-item">
+					<view class="group-date">06-08</view>
+					<view class="group-price">¥1740</view>
+				</view>
+				<view class="group-item">
+					<view class="group-date">06-08</view>
+					<view class="group-price">¥1740</view>
+				</view>
+				<view class="group-item">
+					<view class="group-date">06-08</view>
+					<view class="group-price">¥1740</view>
+				</view>
+				<view style="width:1px;height:88rpx;background: #E7E7E7;"></view>
+				<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte">
+					<span style="width:28px">更多团期</span>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="people">
+		<view class="norm-title">
+			<view class="norm-name1">出行人数</view>
+			<view class="norm-data2">
+				<view class="people-title">改行程仅余10位</view>
+				<view class="people-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="norm-title">
+			<view class="norm-name1">航班</view>
+			<view class="norm-data2">
+				<view class="people-title">更换航班</view>
+				<view class="people-img">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="product-special">
+		<view class="product-info-bottom">
+			<view class="title">
+				行程特色
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="star-img flex">
+				<image src="../../image/detail-icon4.png"></image>
+			</view>
+			<view class="special-info">
+				[暑假放价] 双人下单减400元，免落地签签证费，送happy电话卡！
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="star-img flex">
+				<image src="../../image/detail-icon4.png"></image>
+			</view>
+			<view class="special-info">
+				[网红打卡] 宝蓝谷水上市场+天堂湾+猴子滩+大小PP岛+帝王岛
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="star-img flex">
+				<image src="../../image/detail-icon4.png"></image>
+			</view>
+			<view class="special-info">
+				[饕餮盛宴] 中式风味餐+泰式火锅+日式料理+霸
+				王龙虾面+王大福海鲜餐厅
+			</view>
+		</view>
+		<view class="product-info-bottom" style="border-bottom: none;">
+			<view class="star-img flex">
+				<image src="../../image/detail-icon4.png"></image>
+			</view>
+			<view class="special-info">
+				[超值馈赠] 高尔夫挥杆体验+浮潜+泰式按摩精油
+				SPA双体验+超多特色！
+			</view>
+		</view>
+		<view class="special-img">
+			<image src="../../image/img3.png"></image>
+		</view>
+	</view>
+	<view class="routing">
+		<view class="product-info-bottom">
+			<view class="title">
+				行程特色
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="plan">
+			<view class="plan-one">第一天：萨瓦迪卡，泰国之旅开始啦 普吉岛</view>
+			<view class="plan-one">
+				<view class="plan-scienic">景点·珊瑚岛-神仙半岛</view>
+				<view class="plan-scienic">前往乘坐快艇前往【珊瑚岛】-(停留约2小时)</view>
+			</view>
+			<view class="plan-three">
+				面积约一平方公里，在印度洋蓝色海水的环绕之中白色的沙滩，迷人的光晕，渐变的海水。这是一个只属于休闲度假的岛屿，七彩的遮阳伞，奔跑的海浪，都邀请你投入大海的怀抱。除此之外，水下美丽的珊瑚礁也在等待你的探索。可以静静地躺在沙滩上享受阳光，也可以感受刺激的**项目
+			</view>
+			<view class="plan-one">住宿·现代泰式套房酒店(高档型)</view>
+			<view class="plan-img">
+				<image src="../../image/scienic1.png"></image>
+			</view>
+			<view class="plan-img">
+				<image src="../../image/scienic2.png"></image>
+			</view>
+		</view>
+		<view class="follow">
+			<view class="plan-one">
+				<view class="plan-scienic">第二天：珊瑚岛+帆船环游珊瑚岛 神仙半岛</view>
+				<view class="plan-scienic">lawai海鲜市场 博森ATV</view>
+			</view>
+			<view class="plan-one">
+				<view class="plan-scienic">景点·甲米府-大小pp岛</view>
+				<view class="plan-scienic">甲米四岛：鸡岛+管子岛+莫岛+波达岛</view>
+			</view>
+			<view class="plan-three">
+				<view class="plan-content">出发抵达码头后乘坐快艇前往著名的甲米四岛：</view>
+				<view class="plan-content">甲米四岛各自都拥有洁白细腻的沙滩清澈透底的海水。您可在出海游玩后将大PP岛和小PP岛海域与甲米四岛海域的【管子岛Tube island】+【莫岛Moh island】三岛通过细腻白沙相连接，形成了浪漫的宽阔白色沙路，每天只有几个小时可以看到，其他时间都被张超的海水淹没</view>
+				<view class="plan-content">您可以在浪漫白沙上自由自在通行于三岛</view>
+			</view>
+			<view class="plan-img">
+				<image src="../../image/scienic3.png"></image>
+			</view>
+			<view class="plan-one">早餐：已含</view>
+			<view class="plan-one">
+				<view class="plan-scienic">早餐：</view>
+				<view class="plan-scienic">午餐</view>
+				<view class="plan-scienic">晚餐</view>
+			</view>
+			<view class="plan-one">
+				<view class="plan-scienic">温馨提示</view>
+				<view class="plan-scienic">注意：</view>
+			</view>
+		</view>
+	<view class="fee-explain1">
+		<view class="product-info-bottom">
+			<view class="title">
+				费用说明
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+			<view style="font-weight:700 ;">费用不含</view>
+			<view>旅游护照、签证等相关出行证件办理费用。</view>
+			<view>内陆段交通。</view>
+			<view>当地机场至酒店的往返接送服务。</view>
+			<view>所在地到出发地的往返交通费用。</view>
+			<view>因交通延阻、战争、政变、罢工、天气、飞机机器故
+				障、航班取消或更改时间等不可抗力原因所引致的额
+				外费用。</view>
+		</view>
+		<view class="product-info-bottom" style="text-align: center;">
+			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+		</view>
+	</view> 
+	 <view class="fee-explain1">
+		<view class="product-info-bottom">
+			<view class="title">
+				预订须知
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+			<view>安全常识: 出游安全提示和出游常识</view>
+			<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
+			</view>
+			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
+	
+		</view>
+		<view class="product-info-bottom" style="text-align: center;">
+			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+		</view>
+	</view> 
+	<view class="fee-explain1">
+		<view class="product-info-bottom">
+			<view class="title">
+				同行须知
+				<view class="title-line"></view>
+			</view>
+		</view>
+		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+			<view>安全常识: 出游安全提示和出游常识</view>
+			<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
+			</view>
+			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
+	
+		</view>
+		<view class="product-info-bottom" style="text-align: center;">
+			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+		</view>
+	</view> 
+	 <view style="width:100%;height:120rpx"></view>
+	<view style="position: fixed;bottom: 0;border-radius:0;z-index:888;" class="bo">
+		<view class="place">
+			<view class="place1">
+				<view class="place-img">
+					<image src="../../image/phone.png"></image>
+				</view>
+				<view class="place-title">客服</view>
+			</view>
+			<view class="place1">
+				<view class="place-img">
+					<image src="../../image/peer-icon4.png"></image>
+				</view>
+				<view class="place-title">收藏</view>
+			</view>
+			<view class="place1">
+				<view class="place-img">
+					<image src="../../image/pic.png"></image>
+				</view>
+				<view class="place-title">海报</view>
+			</view>
+			<view class="place-btn" bindtap="intoPath" data-path="/pages/schedule/schedule">
+				<span>立即预定</span>
+			</view>
+		</view>
+	</view> 
+</view>
+<!-- 选择人数 -->
+<!-- <view class="choose">
+	
+</view>
+<view class="choose1">
+	<view class="cho-title">
+		选择出行人数
+	</view>
+	<view class="cho1">
+		<view class="cho1-left">成人</view>
+		<view class="cho1-left"><span style="color: #EC6532;">￥1740/</span>人</view>
+		<view class="cho1-all">
+			<view class="cho1-subtrat">
+				<image src="../../image/矩形%2020%20拷贝%204.png"></image>
+			</view>
+			<view class="cho1-number"><span>2</span></view>
+			<view class="cho1-subtrat">
+				<image src="../../image/add.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="cho1">
+		<view class="cho1-left">老人</view>
+		<view class="cho1-left"><span style="color: #EC6532;">￥1240/</span>人</view>
+		<view class="cho1-all">
+			<view class="cho1-subtrat">
+				<image src="../../image/矩形%2020%20拷贝%204.png"></image>
+			</view>
+			<view class="cho1-number"><span>2</span></view>
+			<view class="cho1-subtrat">
+				<image src="../../image/add.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="cho1">
+		<view class="cho1-left">儿童(占床)</view>
+		<view class="cho1-left"><span  style="color: #EC6532;">￥638/</span>人</view>
+		<view class="cho1-all">
+			<view class="cho1-subtrat">
+				<image src="../../image/矩形%2020%20拷贝%204.png"></image>
+			</view>
+			<view class="cho1-number"><span>1</span></view>
+			<view class="cho1-subtrat">
+				<image src="../../image/add.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="cho1">
+		<view class="cho1-left">儿童(不占床)</view>
+		<view class="cho1-left"><span  style="color: #EC6532;">￥938/</span>人</view>
+		<view class="cho1-all">
+			<view class="cho1-subtrat">
+				<image src="../../image/矩形%2020%20拷贝%204.png"></image>
+			</view>
+			<view class="cho1-number"><span>1</span></view>
+			<view class="cho1-subtrat">
+				<image src="../../image/add.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="cho1-btn">
+		确定
+	</view>
+</view> -->
+<!-- <view class="posters">
+	
+</view>
+<view class="poster">
+		<image src="../../image/where.png"></image>
+		<view class="poster-icon">
+			<image src="../../image/close.png"></image>
+		</view>
+</view> -->
+</view>

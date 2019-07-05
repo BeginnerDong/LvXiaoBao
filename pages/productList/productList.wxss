@@ -1,0 +1,77 @@
+page{
+	background: #F4F3F3;
+}
+.product{
+	width:700rpx;
+	margin: 0 auto;
+	margin-top: 24rpx;
+	height:290rpx;
+	border-radius:12px;
+	background: #fff;
+	display: flex;
+}
+.product-left{
+	width:40%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.product-right{
+	width:60%;
+	padding: 0 2%;
+}
+.product-left image{
+	width:240rpx;
+	height:240rpx;
+	border-radius:8rpx
+}
+.product-id{
+	font-size:12px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(50,50,50,1);
+	margin-top:35rpx;
+}
+.product-title{
+	font-size:14px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	margin-top: 18rpx;
+}
+.product-description{
+	font-size:12px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(161,161,161,1);
+	margin-top: 20rpx;
+}
+.product-price span{
+	font-size:14px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(236,101,50,1);
+}
+.product-bottom{
+	display: flex;
+	margin-top: 20rpx;
+}
+.product-tip{
+	width:32px;
+	height:16px;
+	border:1px solid rgba(161, 161, 161, 1);
+	border-radius:8px;
+	font-size: 10px;
+	line-height: 16px;
+	color:#A1A1A1;
+	text-align: center;
+}
+.product-price{
+	font-size:12px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:#A1A1A1;
+	width:50%;
+	text-align: right;
+}

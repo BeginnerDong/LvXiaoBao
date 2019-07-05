@@ -1,0 +1,41 @@
+<view>
+	<view class="set">
+		<view class="set-name">请选择反馈类型</view>
+		<view class="set-img">
+			<image src="../../image/right.png"></image>
+		</view>
+	</view>
+	<view class="teax">
+		<textarea placeholder="请写下您对使用本系统的感受,我们将认真听取您的意见."></textarea>
+	</view>
+	<view class="mobile">
+		<view class="mobile-name">手机/邮箱/QQ</view>
+		<view class="mobile-con">(选填)</view>
+	</view>
+	<view class="upload">
+		<view class="mobile-name">上传图片(最多6张)</view>
+		<view class="up-img">
+			<view class="img">
+				<image src="../../image/caram.png"></image>
+			</view>
+			<view class="img">
+				<image src="../../image/caram.png"></image>
+			</view>
+			<view class="img">
+				<image src="../../image/caram.png"></image>
+			</view>
+		</view>
+		<view class="up-img">
+			<view class="img">
+				<image src="../../image/caram.png"></image>
+			</view>
+			<view class="img">
+				<image src="../../image/caram.png"></image>
+			</view>
+			<view class="img">
+				<image src="../../image/caram.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="btn"><span>提交</span></view>
+</view>

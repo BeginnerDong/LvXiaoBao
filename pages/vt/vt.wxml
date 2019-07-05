@@ -1,0 +1,91 @@
+<view>
+	<view class="vt">
+		<view class="vt-left">
+			<view class="left-img">
+				<view class="vt-img">
+					<image src="../../image/green.png"></image>
+				</view>
+				<view class="vt-imga">
+					<image src="../../image/one.png"></image>
+				</view>
+			</view>
+			<view class="vt-title">
+				<view class="vt-name">￥299.00</view>
+				<view class="vt-namea">￥480.00</view>
+			</view>
+		</view>
+		<view class="vt-con">
+			<image src="../../image/quanjiao.png"></image>
+		</view>
+	</view>
+	<view class="vt" style="background: #FF88A6;">
+		<view class="vt-left">
+			<view class="left-img">
+				<view class="vt-img">
+					<image src="../../image/font.png"></image>
+				</view>
+				<view class="vt-imga">
+					<image src="../../image/two.png"></image>
+				</view>
+			</view>
+			
+			<view class="vt-title">
+				<view class="vt-name">￥568.00</view>
+				<view class="vt-namea">￥860.00</view>
+			</view>
+		</view>
+		<view class="vt-con">
+			<image src="../../image/quan.png"></image>
+		</view>
+	</view>
+	<view class="vt" style="background: #34CBFE;">
+		<view class="vt-left">
+			<view class="left-img">
+				<view class="vt-img">
+					<image src="../../image/blue.png"></image>
+				</view>
+				<view class="vt-imga">
+					<image src="../../image/three.png"></image>
+				</view>
+			</view>
+			<view class="vt-title">
+				<view class="vt-name">￥799.00</view>
+				<view class="vt-namea">￥1068.00</view>
+			</view>
+		</view>
+		<view class="vt-con">
+			<image src="../../image/quan.png"></image>
+		</view>
+	</view>
+	<view class="set">
+		<view class="set-name">选择VIP套餐</view>
+		<view class="set-con">
+			<view class="set-img">
+				<image src="../../image/weixin.png"></image>
+			</view>
+			<view class="set-title">微信支付</view>
+			<view class="setimga">
+				<image src="../../image/complete.png"></image>
+			</view>
+		</view>
+		<view class="set-con">
+			<view class="set-img">
+				<image src="../../image/bank.png"></image>
+			</view>
+			<view class="set-title" style="color: #A1A1A1;">银行转账</view>
+			<view class="setimga">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="specli">
+		<view class="set-name">选择VIP套餐</view>
+		<view class="set-names">1、VIP套餐成功购买后，不能退款或装让</view>
+		<view class="set-names">2、开始使用日期从购买当天算起</view>
+	</view>
+	<view class="count">
+		<view class="count-title">总计：</view>
+		<view class="count-con">￥299.00</view>
+		<view class="count-btn" bindtap="intoPath" data-path="/pages/paid/paid">立即支付</view>
+	</view>
+</view>

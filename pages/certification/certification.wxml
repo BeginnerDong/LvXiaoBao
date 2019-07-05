@@ -1,0 +1,37 @@
+<view>
+	<view class="top">
+		<view class="top-img">
+			<image src="../../image/gao.png"></image>
+		</view>
+		<view class="top-imgs">
+			<image src="../../image/gao.png"></image>
+		</view>
+	</view>
+	<view class="center">
+		<view class="center-name">陕西中国旅行社有限责任公司</view>
+		<view class="center-name">西安渭滨路门市部</view>
+		<view class="center-names">
+			<view class="name-img">
+				<image src="../../image/pai.png"></image>
+			</view>
+			<view class="name">已认证</view>
+		</view>
+	</view>
+	<view class="people">
+		<view class="peo-name">负责人:</view>
+		<view class="peo-con">吴春兰</view>
+	</view>
+	<view class="people">
+		<view class="peo-name">手机:</view>
+		<view class="peo-con">17782526431</view>
+	</view>
+	<view class="people">
+		<view class="peo-name">座机:</view>
+		<view class="peo-con">029-89310277</view>
+	</view>
+	<view class="people">
+		<view class="peo-namea">地址:</view>
+		<view class="peo-cona">陕西省西安市莲湖区渭滨路</view>
+	</view>
+	<view class="btn"><span>重新认证</span></view>
+</view>

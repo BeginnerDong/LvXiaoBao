@@ -1,0 +1,44 @@
+<view>
+	<view class="shop">
+		<view class="peo-name">
+			<view class="peo-con">具体时间</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写具体时间"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">购物地点</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写购物地点"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">购物场所</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写购物场所"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">商品信息</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写商品信息"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">停留时间</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写购物时间"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">其他说明</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写其他说明"/>
+			</view>
+		</view>
+		<view class="shop-btn">
+			<view class="off">取消</view>
+			<view class="add">保存</view>
+		</view>
+	</view>
+</view>

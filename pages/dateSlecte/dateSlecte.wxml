@@ -1,0 +1,49 @@
+<view style="width:100%">
+	<view class="month flex-align">
+		<view class="month-item" style="font-weight: 700;">
+			6月
+			<view class="title-line"></view>
+		</view>
+		<view class="month-item">
+			7月
+			
+		</view>
+		<view class="month-item">
+			8月
+			
+		</view>
+		<view class="month-item">
+			9月		
+		</view>
+	</view>
+	<view class="calendar">
+		<view class="week flex-all">
+			<view class="week-item" wx:for="{{week}}">
+				{{item}}
+			</view>
+		</view>
+		<view class="days flex-align">
+			<view class="days-item {{item.days==12?'days-item-active':''}}" wx:for="{{day}}">
+				{{item.days}}
+				<view class="days-price" wx:if="{{item.days==10}}">¥1740</view>
+				<view class="days-price days-price-active" wx:if="{{item.days==12}}">¥1740</view>
+			</view>
+		</view>
+		
+	</view>
+	<view class="calendar-bottom">
+		改行程仅余<span>10</span>位
+	</view>
+	<view class="calendar-button flex-all">
+		<view class="calendar-button-item flex-all">
+			<view class="calendar-button-item-left">
+				取消
+			</view>
+		</view>
+		<view class="calendar-button-item flex-all">
+			<view class="calendar-button-item-right">
+				确认
+			</view>
+		</view>
+	</view>
+</view>
