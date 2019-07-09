@@ -207,11 +207,11 @@ page {
 }
 .state{
 	width: 100%;
-	height: 85%;
+	height: 95%;
 	position: fixed;
-	bottom: 10%;
+	bottom: 6%;
 	z-index: 2222;
-	background: #FFEEF0;
+	background:white;
 }
 .state-name{
 	width: 100%;
@@ -221,10 +221,11 @@ page {
 	width: 100%;
 	height: 30px;
 	color: #323232;
-	font-size: 16pt;
+	font-size: 16px;
 	line-height: 30px;
 	padding-left: 3%;
 	padding-top: 3%;
+	font-weight: bold;
 }
 .state-btn{
 	width: 100%;
@@ -239,11 +240,11 @@ page {
 	text-align: center;
 	line-height: 40px;
 	border-radius: 10px;
-	border: 1px solid #323232;
 	color: #323232;
-	margin-left: 5%;
+	margin-left: 3%;
 	font-size: 14px;
-	background: #C5C5C5;
+	background: #F2F2F2;
+	font-weight: bold;
 }
 .state-btn input{
 	width: 80%;
@@ -251,9 +252,9 @@ page {
 	margin-left: 5%;
 	border: 1px solid #E0E0E0;
 	border-radius: 10px;
-	
+	color: #EC6532;
 }
-.state-btn input[placeholder]{
+.state-btn input[placeholder="半自助"]{
 	padding-left: 3%;
 	font-size: 14px;
 	color: #EC6532;
@@ -298,10 +299,10 @@ page {
 	text-align: center;
 	line-height: 40px;
 	border-radius: 10px;
-	border: 1px solid #323232;
 	color: #323232;
 	font-size: 14px;
-	background: #C5C5C5;
+	background: #F2F2F2;
+	font-weight: bold;
 }
 .state-btn{
 	width: 100%;
@@ -310,34 +311,36 @@ page {
 }
 .btn-left{
 	width: 45%;
-	height: 30px;
+	height: 40px;
 	margin-left: 3%;
 }
 .btn-right{
 	width: 45%;
-	height: 30px;
+	height:40px;
 }
 .btn-right span{
 	width: 150px;
-	height: 35px;
+	height: 40px;
 	border-radius: 30px;
 	border: 1px solid #FFD101;
 	background: #FFD101;
 	color: #323232;
-	line-height: 35px;
+	line-height: 40px;
 	text-align: center;
 	display: inline-block;
 	font-size: 18px;
+	font-weight: 500;
 }
 .btn-left span{
 	width: 150px;
-	height: 30px;
+	height: 40px;
 	border-radius: 30px;
 	border: 1px solid #F2F2F2;
 	background: #F2F2F2;
 	color: #A1A1A1;
-	line-height: 35px;
+	line-height: 40px;
 	text-align: center;
 	display: inline-block;
 	font-size: 18px;
+	font-weight: 500;
 }

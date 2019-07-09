@@ -17,8 +17,8 @@
 	<view class="detail-info">
 		<view class="detail-info-top">
 			<view class="detail-info-price">
-				<view class="detail-price" style="font-size: 10pt;">市场价：<span class="money1" style="text-decoration: line-through;">¥1740/</span><span class="person">人起</span></view>
-				<view class="detail-price" style="font-size:16px;">结算价：<span class="money">¥1740/</span><span class="person">人起</span></view>
+				<view class="detail-price" style="font-size: 10pt;color: #A1A1A1;">市场价：<span class="money1" style="text-decoration: line-through;">¥1740/</span><span class="person">人起</span></view>
+				<view class="detail-price" style="font-size:12px;font-weight: 500;">结算价：<span class="money">¥1740/</span><span class="person">人起</span></view>
 			</view>
 			<view class="detail-id">[产品ID：] 4567 7887 4521</view>
 			<view class="detail-name">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机票浮潜</view>
@@ -54,11 +54,13 @@
 	</view>
 	<view class="travel">
 		<view class="travel-title">
-			<view class="travel-name1">旅行社</view>
+			<view class="travel-name1">旅行社
+			<view class="title-line"></view></view>
 			<view class="travel-data2">陕西中国旅行社有限责任公司</view>
 		</view>
 			<view class="travel-title">
-				<view class="travel-name1">优惠</view>
+				<view class="travel-name1">优惠
+				<view class="title-line"></view></view>
 				<view class="tarcel">
 					<view class="discount" style="margin-left: 6%;">立减</view>
 					<view class="dis-con">立减<span>10</span>%</view>
@@ -85,13 +87,20 @@
 	</view>
 	<view class="agent">
 		<view class="travel-title">
-			<view class="travel-name1">旅行社</view>
+			<view class="travel-name1">旅行社
+			<view class="title-line"></view></view>
 			<view class="travel-data2">领秀华夏</view>
 		</view>
 		<view class="travel-title">
-			<view class="travel-name1">销售</view>
+			<view class="travel-name1">销售
+			<view class="title-line"></view></view>
 			<view class="travel-data2" style="text-align: center;">姬芮</view>
-			<view class="travel-data2">18245086689</view>
+			<view class="travel-data3">
+				<view class="phone-num">18245086689</view>
+				<view class="phone">
+					<image src="../../image/right.png"></image>
+				</view>
+			</view>
 		</view>
 		<view class="select-group">
 			<view class="product-info-bottom" style="border-bottom: none;">
@@ -125,7 +134,8 @@
 	</view>
 	<view class="people">
 		<view class="norm-title">
-			<view class="norm-name1">出行人数</view>
+			<view class="norm-name1">出行人数
+			<view class="title-line"></view></view>
 			<view class="norm-data2">
 				<view class="people-title">改行程仅余10位</view>
 				<view class="people-img">
@@ -134,7 +144,8 @@
 			</view>
 		</view>
 		<view class="norm-title">
-			<view class="norm-name1">航班</view>
+			<view class="norm-name1">航班
+			<view class="title-line"></view></view>
 			<view class="norm-data2">
 				<view class="people-title">更换航班</view>
 				<view class="people-img">
@@ -257,7 +268,7 @@
 				障、航班取消或更改时间等不可抗力原因所引致的额
 				外费用。</view>
 		</view>
-		<view class="product-info-bottom" style="text-align: center;">
+		<view class="product-info-bottom" style="text-align: center;height: 50px;">
 			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
 		</view>
 	</view> 
@@ -275,7 +286,7 @@
 			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
 	
 		</view>
-		<view class="product-info-bottom" style="text-align: center;">
+		<view class="product-info-bottom" style="text-align: center;height: 50px;">
 			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
 		</view>
 	</view> 
@@ -293,7 +304,7 @@
 			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
 	
 		</view>
-		<view class="product-info-bottom" style="text-align: center;">
+		<view class="product-info-bottom" style="text-align: center;height: 50px;">
 			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
 		</view>
 	</view> 
@@ -325,7 +336,7 @@
 	</view> 
 </view>
 <!-- 选择人数 -->
-<!-- <view class="choose">
+ <view class="choose">
 	
 </view>
 <view class="choose1">
@@ -334,60 +345,60 @@
 	</view>
 	<view class="cho1">
 		<view class="cho1-left">成人</view>
-		<view class="cho1-left"><span style="color: #EC6532;">￥1740/</span>人</view>
+		<view class="cho1-left"><span style="color: #EC6532;font-size: 20px;">￥1740/</span>人</view>
 		<view class="cho1-all">
 			<view class="cho1-subtrat">
-				<image src="../../image/矩形%2020%20拷贝%204.png"></image>
+				<image src="../../image/sort.png" style="border: 1px dashed #000000;"></image>
 			</view>
 			<view class="cho1-number"><span>2</span></view>
 			<view class="cho1-subtrat">
-				<image src="../../image/add.png"></image>
+				<image src="../../image/add.png" style="border: 1px dashed #000000;"></image>
 			</view>
 		</view>
 	</view>
 	<view class="cho1">
 		<view class="cho1-left">老人</view>
-		<view class="cho1-left"><span style="color: #EC6532;">￥1240/</span>人</view>
+		<view class="cho1-left"><span style="color: #EC6532;font-size: 20px;">￥1240/</span>人</view>
 		<view class="cho1-all">
 			<view class="cho1-subtrat">
-				<image src="../../image/矩形%2020%20拷贝%204.png"></image>
+				<image src="../../image/sort.png"></image>
 			</view>
 			<view class="cho1-number"><span>2</span></view>
 			<view class="cho1-subtrat">
-				<image src="../../image/add.png"></image>
+				<image src="../../image/block.png"></image>
 			</view>
 		</view>
 	</view>
 	<view class="cho1">
 		<view class="cho1-left">儿童(占床)</view>
-		<view class="cho1-left"><span  style="color: #EC6532;">￥638/</span>人</view>
+		<view class="cho1-left"><span  style="color: #EC6532;font-size: 20px;">￥638/</span>人</view>
 		<view class="cho1-all">
 			<view class="cho1-subtrat">
-				<image src="../../image/矩形%2020%20拷贝%204.png"></image>
+				<image src="../../image/sort.png"></image>
 			</view>
 			<view class="cho1-number"><span>1</span></view>
 			<view class="cho1-subtrat">
-				<image src="../../image/add.png"></image>
+				<image src="../../image/block.png"></image>
 			</view>
 		</view>
 	</view>
 	<view class="cho1">
 		<view class="cho1-left">儿童(不占床)</view>
-		<view class="cho1-left"><span  style="color: #EC6532;">￥938/</span>人</view>
+		<view class="cho1-left"><span  style="color: #EC6532;font-size: 20px;">￥938/</span>人</view>
 		<view class="cho1-all">
 			<view class="cho1-subtrat">
-				<image src="../../image/矩形%2020%20拷贝%204.png"></image>
+				<image src="../../image/sort.png"></image>
 			</view>
 			<view class="cho1-number"><span>1</span></view>
 			<view class="cho1-subtrat">
-				<image src="../../image/add.png"></image>
+				<image src="../../image/block.png"></image>
 			</view>
 		</view>
 	</view>
 	<view class="cho1-btn">
 		确定
 	</view>
-</view> -->
+</view>
 <!-- <view class="posters">
 	
 </view>

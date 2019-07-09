@@ -3,7 +3,7 @@
 			<view class="search">
 				<input placeholder="请输入标签名称" />
 				<view class="searchBtn" bindtap="intoPath" data-path="/pages/search/search">
-					<image src="../../image/index-icon2.png" ></image>
+					<image src="../../image/searchaaa.png" ></image>
 				</view>
 			</view>
 			<view class="label-nav">

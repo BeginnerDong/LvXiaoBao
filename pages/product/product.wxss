@@ -22,7 +22,7 @@ page{
 	padding-left: 10%;
 }
 .pro-img{
-	width: 20%;
+	width: 25%;
 	height: 120;
 	line-height: 70px;
 	text-align: center;
@@ -33,7 +33,7 @@ page{
 	border: 1px dashed #000000;
 }
 .pro-right{
-	width:80%;
+	width:75%;
 	height: 120px;
 	margin-top: 15px;
 	
@@ -47,38 +47,42 @@ page{
 .right-name{
 	width: 100%;
 	color: #323232;
-	font-size: 18px;
+	font-size: 14px;
+	font-weight: bold;
 }
 .mess{
 	width: 90%;
-	height: 500px;
+	height: 600px;
 	background: #FFFFFF;
 	border-radius: 10px;
-	margin-top: 20px;
 	margin-left: 5%;
+	margin-top: 20px;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 }
 .mess-img{
 	width: 100%;
-	height: 30px;
+	height: 70px;
 }
 .mess-img image{
-	width: 100%;
-	height: 20px;
+	width: 90%;
+	height: 45px;
+	margin-top: 20px;
+	margin-left: 5%;
+	border: 1px dashed #000000;
 }
 .mess-name{
 	width: 100%;
 	height: 60px;
 	display: flex;
-	padding-top: 20px;
-	border-bottom: 1px solid #C5C5C5;
+	border-bottom: 1px solid #F4F3F3;
+	margin-top: 20px;
 }
 .nam{
 	width: 10%;
 	padding-left: 3%;
 	color: #A1A1A1;
 	font-size: 16pt;
-	
+	margin-top: 10px;
 }
 .cnter{
 	width: 70%;
@@ -104,4 +108,15 @@ page{
 	color: #ED700B;
 	font-size: 16px;
 	margin-top: 20px;
+	font-weight: bold;
+}
+.name-one{
+	color: #333333;
+	font-size: 14px;
+	font-weight: 500;
+}
+.name-two{
+	color: #333333;
+	font-size: 12px;
+	font-weight: 500;
 }

@@ -109,7 +109,7 @@
 			</view>
 		</view>
 	</view>
-	<!-- <view class="bg"></view>
+	 <view class="bg"></view>
 	<view class="bind">
 		<view class="bind-name">手机绑定</view>
 		<view class="bind-con">为了您的账户安全，请及时绑定手机号</view>
@@ -121,6 +121,6 @@
 			<view class="gain"><span>获取验证码</span></view>
 		</view>
 		<view class="bind-btn"><span>绑定手机号</span></view>
-	</view> -->
+	</view> 
 </view>
 

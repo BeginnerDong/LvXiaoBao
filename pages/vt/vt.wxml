@@ -1,62 +1,65 @@
 <view>
-	<view class="vt">
-		<view class="vt-left">
-			<view class="left-img">
-				<view class="vt-img">
-					<image src="../../image/green.png"></image>
+	<view class="all">
+		<view class="vt">
+			<view class="vt-left">
+				<view class="left-img">
+					<view class="vt-img">
+						<image src="../../image/green.png"></image>
+					</view>
+					<view class="vt-imga">
+						<image src="../../image/one.png"></image>
+					</view>
 				</view>
-				<view class="vt-imga">
-					<image src="../../image/one.png"></image>
+				<view class="vt-title">
+					<view class="vt-name">￥299.00</view>
+					<view class="vt-namea">￥480.00</view>
 				</view>
 			</view>
-			<view class="vt-title">
-				<view class="vt-name">￥299.00</view>
-				<view class="vt-namea">￥480.00</view>
+			<view class="vt-con">
+				<image src="../../image/garys.png"></image>
 			</view>
 		</view>
-		<view class="vt-con">
-			<image src="../../image/quanjiao.png"></image>
+		<view class="vt" style="background: #FF88A6;margin-top: 4%;">
+			<view class="vt-left">
+				<view class="left-img">
+					<view class="vt-img">
+						<image src="../../image/font.png"></image>
+					</view>
+					<view class="vt-imga">
+						<image src="../../image/two.png"></image>
+					</view>
+				</view>
+				
+				<view class="vt-title">
+					<view class="vt-name">￥568.00</view>
+					<view class="vt-namea">￥860.00</view>
+				</view>
+			</view>
+			<view class="vt-con">
+				<image src="../../image/quan.png"></image>
+			</view>
+		</view>
+		<view class="vt" style="background: #34CBFE;margin-top: 4%;">
+			<view class="vt-left">
+				<view class="left-img">
+					<view class="vt-img">
+						<image src="../../image/blue.png"></image>
+					</view>
+					<view class="vt-imga">
+						<image src="../../image/three.png"></image>
+					</view>
+				</view>
+				<view class="vt-title">
+					<view class="vt-name">￥799.00</view>
+					<view class="vt-namea">￥1068.00</view>
+				</view>
+			</view>
+			<view class="vt-con">
+				<image src="../../image/quan.png"></image>
+			</view>
 		</view>
 	</view>
-	<view class="vt" style="background: #FF88A6;">
-		<view class="vt-left">
-			<view class="left-img">
-				<view class="vt-img">
-					<image src="../../image/font.png"></image>
-				</view>
-				<view class="vt-imga">
-					<image src="../../image/two.png"></image>
-				</view>
-			</view>
-			
-			<view class="vt-title">
-				<view class="vt-name">￥568.00</view>
-				<view class="vt-namea">￥860.00</view>
-			</view>
-		</view>
-		<view class="vt-con">
-			<image src="../../image/quan.png"></image>
-		</view>
-	</view>
-	<view class="vt" style="background: #34CBFE;">
-		<view class="vt-left">
-			<view class="left-img">
-				<view class="vt-img">
-					<image src="../../image/blue.png"></image>
-				</view>
-				<view class="vt-imga">
-					<image src="../../image/three.png"></image>
-				</view>
-			</view>
-			<view class="vt-title">
-				<view class="vt-name">￥799.00</view>
-				<view class="vt-namea">￥1068.00</view>
-			</view>
-		</view>
-		<view class="vt-con">
-			<image src="../../image/quan.png"></image>
-		</view>
-	</view>
+	
 	<view class="set">
 		<view class="set-name">选择VIP套餐</view>
 		<view class="set-con">
@@ -79,7 +82,7 @@
 		</view>
 	</view>
 	<view class="specli">
-		<view class="set-name">选择VIP套餐</view>
+		<view class="set-name">购买说明</view>
 		<view class="set-names">1、VIP套餐成功购买后，不能退款或装让</view>
 		<view class="set-names">2、开始使用日期从购买当天算起</view>
 	</view>

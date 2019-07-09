@@ -70,16 +70,16 @@
 				<input type="text" placeholder="请与证件保持一致"/>
 			</view>
 		</view>
-		<view class="peo-name">
+		<view class="peo-name" style="height: 100px;">
 			<view class="peo-con">标签</view>
-			<view class="peo-content">
+			<view class="peo-content" >
 				<view class="card">
-					<input type="text" placeholder="请与证件保持一致"/>
+					<span>来店里好几次</span>...
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
 		</view>
-		<view class="cust">+添加新标签</view>
+		<view class="cust" bindtap="intoPath" data-path="/pages/labels/labels">+添加新标签</view>
 	</view>
 	<view class="type">
 		<view class="type-name">证件信息</view>
@@ -112,8 +112,8 @@
 				<image src="../../image/caram.png"></image>
 			</view>
 		</view>
-		<view class="basic-btn">
-			<view class="basi-name">保存</view>
-		</view>
+	</view>
+	<view class="basic-btn">
+		<view class="basi-name">保存</view>
 	</view>
 </view>

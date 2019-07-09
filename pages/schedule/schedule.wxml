@@ -5,11 +5,13 @@
 	</view>
 	<view class="schedata">
 		<view class="shedu">
-			<view class="she-data">出团日期</view>
+			<view class="she-data">出团日期
+			<view class="title-line"></view></view>
 			<view class="she-date1">2019-05-08</view>
 		</view>
 		<view class="shedu">
-			<view class="she-data">出行人数</view>
+			<view class="she-data">出行人数
+			<view class="title-line"></view></view>
 			<view class="she-date">
 					<view class="count">成人x2;</view>
 					<view class="count">成人x2;</view>
@@ -17,7 +19,8 @@
 			</view>
 		</view>
 		<view class="shedu">
-			<view class="she-data">航班</view>
+			<view class="she-data">航班
+			<view class="title-line"></view></view>
 			<view class="she-date">
 				<view class="past">往</view>
 				<view class="count">05-08</view>
@@ -31,22 +34,22 @@
 				<view class="fli-con" style="text-align: right;">经济舱</view>
 			</view>
 			<view class="fli-top" >
-				<view class="fli-con">23:05</view>
+				<view class="fli-con" style="font-size: 14px;font-weight: bold;">08:00</view>
 				<view class="fli-con" style="text-align: center;">2时30分</view>
-				<view class="fli-con" style="text-align: right;">01:35
+				<view class="fli-con" style="text-align: right;font-size: 14px;font-weight: bold;">10:10
 				</view>
 			</view>
 			<view class="fli-top" style="color: #A1A1A1;">
-				<view class="fli-con">西安咸阳机场</view>
+				<view class="fli-con" style="color: #A1A1A1;">西安咸阳机场</view>
 				<view class="fli-con" style="text-align: center;"><span>直达</span></view>
-				<view class="fli-con" style="text-align: right;">上海虹桥机场</view>
+				<view class="fli-con" style="text-align: right;color: #A1A1A1;">上海虹桥机场</view>
 			</view>
 		</view>
 		<view class="back">
 			<view class="she-date2">
-				<view class="past1" style="background: #50A2FD;">往</view>
-				<view class="count2" style="width: 50px;">05-08</view>
-				<view class="count2" style="text-align: left;">西安-上海</view>
+				<view class="past1" style="background: #50A2FD;">返</view>
+				<view class="count2" style="width: 50px;">05-12</view>
+				<view class="count2" style="text-align: left;">上海-西安</view>
 			</view>
 		</view>
 		<view class="flight">
@@ -56,15 +59,15 @@
 				<view class="fli-con" style="text-align: right;">经济舱</view>
 			</view>
 			<view class="fli-top" >
-				<view class="fli-con">23:05</view>
+				<view class="fli-con" style="font-size: 14px;font-weight: bold;">23:05</view>
 				<view class="fli-con" style="text-align: center;">2时30分</view>
-				<view class="fli-con" style="text-align: right;">01:35
+				<view class="fli-con" style="text-align: right;font-size: 14px;font-weight: bold;">01:35
 				</view>
 			</view>
 			<view class="fli-top" style="color: #A1A1A1;">
-				<view class="fli-con">西安咸阳机场</view>
+				<view class="fli-con" style="color: #A1A1A1;">西安咸阳机场</view>
 				<view class="fli-con" style="text-align: center;"><span>直达</span></view>
-				<view class="fli-con" style="text-align: right;">上海虹桥机场</view>
+				<view class="fli-con" style="text-align: right;color: #A1A1A1;">上海虹桥机场</view>
 			</view>
 		</view>
 	</view>
@@ -79,16 +82,16 @@
 			</view>
 		</view>
 		<view class="card">
-			<view class="card-name">刘建超</view>
+			<view class="card-name">刘建超(成人)</view>
 			<view class="card-id">
 				<view class="card-id1">身份证:623001199201183562</view>
 				<view class="card-img">
-					<image src="../../image/delete.png"></image>
+					<image src="../../image/delete.png" style="border: 1px dashed #000000;"></image>
 				</view>
 			</view>
 		</view>
 		<view class="card">
-			<view class="card-name">刘建超</view>
+			<view class="card-name">刘建超(成人)</view>
 			<view class="card-id">
 				<view class="card-id1">身份证:623001199201183562</view>
 				<view class="card-img">
@@ -97,10 +100,18 @@
 			</view>
 		</view>
 		<view class="add"><span>+立即添加</span></view>
-		<view class="more">更多游客</view>
+		<view class="more">
+			<view class="more-add">
+				更多游客
+			</view>
+			<view class="more-img">
+				<image src="../../image/down.png"></image>
+			</view>
+		</view>
 	</view>
 	<view class="people">
-		<view class="peo-title">预订人</view>
+		<view class="peo-title">预订人
+		<view class="title-line"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">*姓名</view>
 			<view class="peo-content">
@@ -129,7 +140,12 @@
 	<view class="botom">
 		<view class="speci-left">
 			<view class="special">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
-			<view class="special">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
+			<view class="special" style="display: flex;">
+				<view class="spe-span">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
+				<view class="spe-img">
+					<image src="../../image/down.png"></image>
+				</view>
+			</view>
 		</view>
 		<view class="spaci-btn">
 			<view class="speci1" style="border-right: 1px solid white;" bindtap="intoPath" data-path="/pages/paid/paid">
@@ -142,13 +158,14 @@
 			</view>
 		</view>
 	</view>
-<!-- <view class="cost"></view>
+ <view class="cost"></view>
 <view class="expense">
-	<view class="expense-title">费用明细</view>
+	<view class="expense-title">费用明细
+	<view class="title-line"></view></view>
 	<view class="expense-content">
 		<view class="con-left">
 			<view class="con-title">线路</view>
-			<view class="con-title1">人数总额</view>
+			<view class="con-title1" style="color: #A1A1A1;">人数总额</view>
 		</view>
 		<view class="con-right">
 			<view class="con-title"><span>￥1740</span></view>
@@ -158,7 +175,7 @@
 	<view class="expense-content">
 		<view class="con-left">
 			<view class="con-title">交通</view>
-			<view class="con-title1">人数总额</view>
+			<view class="con-title1" style="color: #A1A1A1;">人数总额</view>
 		</view>
 		<view class="con-right">
 			<view class="con-title"><span>￥2891</span></view>
@@ -168,8 +185,8 @@
 	<view class="expense-content2">
 		<view class="con-left2">
 			<view class="con-title">保险</view>
-			<view class="con-title2">江泰平安行旅游意外</view>
-			<view class="con-title2">安游保永安保险</view>
+			<view class="con-title2" style="color: #A1A1A1;">江泰平安行旅游意外</view>
+			<view class="con-title2" style="color: #A1A1A1;">安游保永安保险</view>
 		</view>
 		<view class="con-right">
 			<view class="con-title" ><span>￥40</span></view>
@@ -180,7 +197,7 @@
 	<view class="expense-content">
 		<view class="con-left">
 			<view class="con-title">合同</view>
-			<view class="con-title1">大陆居民出境旅游合同</view>
+			<view class="con-title1" style="color: #A1A1A1;">大陆居民出境旅游合同</view>
 		</view>
 		<view class="con-right">
 			<view class="con-title"><span>￥6</span></view>
@@ -190,7 +207,7 @@
 	<view class="expense-content">
 		<view class="con-left">
 			<view class="con-title">优惠</view>
-			<view class="con-title1">立减优惠</view>
+			<view class="con-title1" style="color: #A1A1A1;">立减优惠</view>
 		</view>
 		<view class="con-right">
 			<view class="con-title"><span>-￥200</span></view>
@@ -199,8 +216,8 @@
 	</view>
 	<view class="expense-content1">
 			<view class="con">订单总额:</view>
-			<view class="con1"><span style="color: #EC6532;">-￥200</span></view>
+			<view class="con1"><span style="color: #EC6532;">￥5960</span></view>
 		
 	</view>
-</view> -->
+</view>
 </view>

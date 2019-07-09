@@ -9,46 +9,54 @@
 	height: 40px;
 	line-height: 40px;
 	volume: #323232;
-	font-size: 16pt;
+	font-size: 15px;
+	font-weight: 500;
 	padding-left: 3%;
+}
+.left-name{
+	width: 70%;
+	height: 20px;
+	line-height: 20px;
+	color: #333333;
+	font-size: 15px;
+	font-weight: 500;
 }
 .reco{
 	width: 100%;
 	height: 50px;
-	background: #D5D5D5;
+	background: #F4F3F3;
 	display: flex;
-	margin-top: 10px;
 	line-height: 50px;
 	padding-left: 3%;
 }
 .reco-left{
-	width: 75%;
+	width: 70%;
 	height: 50px;
 	color: #585858;
 	font-size: 15px;
 }
 .reco-right{
-	width: 25%;
+	width: 30%;
 	height: 50px;
-	color: #585858;
+	color: rgba(88,88,88,1);
 	font-size: 15px;
 	margin-right: 5%;
+	font-weight: bold;
 }
 .recor{
 	width: 100%;
 	height: 55px;
-	padding-top: 2%;
-	/* line-height: 50px; */
+	padding-top: 4%;
 	padding-left: 3%;
 	background: #FFFFFF;
-	border-bottom: 1px solid #DBDBDB;
+	border-bottom: 1px solid #E7E7E7;
 	display: flex;
 }
 .reco-left{
 	width: 80%;
 }
 .left-namea{
-	font-size: 10pt;
+	font-size: 10px;
 	margin-top: 5px;
 	color: #A1A1A1;
 }

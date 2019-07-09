@@ -112,7 +112,7 @@
 		<view class="state-name">
 			<view class="state-title">支付状态</view>
 			<view class="state-btn">
-				<span style="color: #EC6532;background: none;">未支付</span>
+				<span style="color: #EC6532;background: none;border: 1px solid #C5C5C5;">未支付</span>
 				<span>支付中</span>
 				<span>已支付</span>
 				<span>已取消</span>
@@ -121,7 +121,7 @@
 		<view class="state-name">
 			<view class="state-title">业务状态</view>
 			<view class="state-btn">
-				<span style="color: #EC6532;background: none;">未确认</span>
+				<span style="color: #EC6532;background: none;border: 1px solid #C5C5C5;">未确认</span>
 				<span>确认中</span>
 				<span>已确认</span>
 				<span>已取消</span>
@@ -141,7 +141,7 @@
 					<view class="top-left">最高金额</view>
 				</view>
 				<view class="state-top1">
-					<view class="top-left1" style="text-align: right;"><span>￥200以上</span></view>
+					<view class="top-left1" style="text-align: right;"><span style='color: #EC6532;background: none;border: 1px solid #C5C5C5;'>￥200以上</span></view>
 					<view class="top-left1" style="text-align: center;"><span>￥1000以上</span></view>
 					<view class="top-left1" style="text-align: left;"><span>￥5000以上</span></view>
 				</view>

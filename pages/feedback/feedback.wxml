@@ -13,7 +13,7 @@
 		<view class="mobile-con">(选填)</view>
 	</view>
 	<view class="upload">
-		<view class="mobile-name">上传图片(最多6张)</view>
+		<view class="mobile-name" style="color: #A1A1A1;">上传图片(最多6张)</view>
 		<view class="up-img">
 			<view class="img">
 				<image src="../../image/caram.png"></image>

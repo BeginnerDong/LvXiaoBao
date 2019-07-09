@@ -145,13 +145,16 @@
 			<view class="text">我的</view>
 		</view>
 	</view>
-	<!-- <view class="advert">
+	<view class="advert">
 	</view>
 	<view class="top1">
 		<view class="top-top">
-			<view class="top-title">业务分类</view>
+			<view class="top-title">
+				业务分类
+				<view class="title-line"></view>
+			</view>
 				<view class="choose">
-					<view class="choose-item">
+					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;">
 						海南专线
 					</view>
 					<view class="choose-item">
@@ -172,9 +175,10 @@
 			</view>
 		</view>
 		<view class="top-top1">
-			<view class="top-title">签约分类</view>
+			<view class="top-title">签约分类
+			<view class="title-line"></view></view>
 				<view class="choose">
-					<view class="choose-item">
+					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;">
 						已签约
 					</view>
 					<view class="choose-item">
@@ -183,9 +187,10 @@
 			</view>
 		</view>
 		<view class="top-top2">
-			<view class="top-title">供应商区域</view>
+			<view class="top-title">供应商区域
+			<view class="title-line"></view></view>
 				<view class="choose">
-					<view class="choose-item">
+					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;">
 						海南
 					</view>
 					<view class="choose-item">
@@ -213,13 +218,13 @@
 		</view>
 		<view class="bottom">
 			<view class="choose">
-					<view class="choose-item1" style="color: #A1A1A1;">
+					<view class="choose-item1" style="color: rgba(161,161,161,1);background: rgba(242,242,242,1);">
 						重置
 					</view>
-					<view class="choose-item1" style="color: #323232;background: #FFD101;">
+					<view class="choose-item1" style="color: rgba(50,50,50,1);background: rgba(255,209,1,1);">
 						确认
 					</view>
 			</view>
 		</view>
-	</view> -->
+	</view> 
 </view>

@@ -1,12 +1,12 @@
 <view>
-	<!-- <view class="couchar">
+	 <view class="couchar">
 		<view class="cou">充值金额</view>
 		<view class="couchar-inp">
 			<span>￥96|</span>
 		</view>
 	</view>
 	<view class="set">
-		<view class="set-name">选择VIP套餐</view>
+		<view class="set-name">充值方式</view>
 		<view class="set-con">
 			<view class="set-img">
 				<image src="../../image/weixin.png"></image>
@@ -26,8 +26,8 @@
 			</view>
 		</view>
 	</view>
-	<view class="cou-btn"><span>充值</span></view> -->
-	<view class="draw">
+	<view class="cou-btn"><span>充值</span></view> 
+	<!-- <view class="draw">
 		<view class="draw-top">支付宝账号(186*****807)</view>
 		<view class="draw-imga">
 			<image src="../../image/right.png"></image>
@@ -41,7 +41,7 @@
 			</view>
 			<view class="draw-ri">全部提现</view>
 		</view>
-		<view class="draw-top">可提现金额￥3690.00元</view>
+		<view class="draw-top" style="color: #A1A1A1;">可提现金额￥3690.00元</view>
 	</view>
 	<view class="drawa">
 		<view class="draw-topa">充值方式</view>
@@ -58,6 +58,6 @@
 			</view>
 		</view>
 		<view class="cou-btn"><span>提现</span></view>
-	</view>
+	</view> -->
 	
 </view>

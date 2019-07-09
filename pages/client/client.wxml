@@ -3,7 +3,7 @@
 	 		<view class="search">
 	 			<input placeholder="关键字搜索 如：赵海刚 海南专线" />
 	 			<view class="searchBtn">
-	 				<image src="../../image/index-icon2.png" ></image>
+	 				<image src="../../image/balack.png" ></image>
 	 			</view>
 	 		</view>
 	 </view>
@@ -13,8 +13,8 @@
 			  <image src="../../image/right.png"></image>
 		  </view>
 	 </view>
-	 <view class="client">
-	 		 <view class="cli-title">
+	 <view class="client1">
+	 		 <view class="cli-title1">
 				 <view class="title">张丽</view>
 				 <view class="mobile">17782526431</view>
 			 </view>
@@ -25,7 +25,7 @@
 				 <view class="right-titl">剩3天</view>
 			 </view>
 	 </view>
-	 <view class="client">
+	 <view class="client1">
 		 <view class="cli-title">
 				 <view class="title">吴家大小姐<span>(吴佩璇)</span></view>
 				 <view class="mobile">17782526431</view>
@@ -34,25 +34,25 @@
 	 <view class="client">
 	 		 <view class="client-name">A</view>
 	 </view>
-	  <view class="client">
+	  <view class="client1">
 		<view class="cli-title">
 	 		<view class="title">Amy<span>(乔雨欣)</span></view>
 	 		 <view class="mobile">17782526431</view>
 	 	</view>
 	 </view>
-	 <view class="client">
+	 <view class="client1">
 	 		<view class="cli-title">
 	 		<view class="title">A001刘菲<label>失信人</label></view>
 	 		 <view class="mobile">17782526431</view>
 	 	</view>
 	 </view>
-	 <view class="client">
+	 <view class="client1">
 	 		<view class="cli-title">
 	 		<view class="title">乔雨欣</view>
 	 		 <view class="mobile">17782526431</view>
 	 	</view>
 	 </view>
-	 <view class="client">
+	 <view class="client11">
 	 		<view class="cli-title">
 	 		<view class="title">艾怡良</view>
 	 		 <view class="mobile">17782526431</view>
@@ -61,7 +61,7 @@
 	 <view class="client">
 	 		 <view class="client-name">B</view>
 	 </view>
-	 <view class="client">
+	 <view class="client1">
 	 		<view class="cli-title">
 	 		<view class="title">毕婷婷</view>
 	 	</view>
@@ -69,7 +69,7 @@
 	 <view class="add">
 		 <image src="../../image/addas.png"></image>
 	 </view>
-	 <view class="bg"></view>
+	 <!-- <view class="bg"></view>
 	 <view class="dd">
 		 <view class="dd-con">
 			 <view class="dd-name">
@@ -81,7 +81,7 @@
 		 	 <view class="dd-name">
 		 			<image src="../../image/text.png"></image>
 		 	</view>
-		 	 <view class="dd-title">证件识别</view>
+		 	 <view class="dd-title">客户添加</view>
 		 </view>
 		 <view class="dd-con">
 		 	<view class="dd-name">
@@ -89,5 +89,5 @@
 		  </view>
 		  <view class="dd-title">证件识别</view>
 		 </view>
-	 </view>
+	 </view> -->
 </view>

@@ -1,13 +1,29 @@
+page{
+	background: #F4F3F3;
+}
 .jounery{
 	width: 90%;
-	height: 550px;
-	padding: 5%;
+	height: 500px;
+	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	background: white;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-left: 5%;
+	color: #323232;
+	margin-left: 3%;
 }
 .joun-con{
+	height: 360px;
 	font-size: 15px;
 	color: #323232;
-	opacity: 0.6;
+	opacity: 1;
 	margin-top: 4%;
+	line-height: 23px;
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+
 }
 .joun-btn{
 	width: 90%;
@@ -31,6 +47,7 @@
 .jo-con{
 	color: #EC6532;
 	font-size: 14pt;
+	font-weight:500;
 }
 .jounery-btn{
 	width: 100%;
@@ -40,5 +57,4 @@
 .jounery-btn image{
 	width: 20px;
 	height: 20px;
-	background: #484848;
 }

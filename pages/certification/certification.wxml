@@ -11,13 +11,15 @@
 		<view class="center-name">陕西中国旅行社有限责任公司</view>
 		<view class="center-name">西安渭滨路门市部</view>
 		<view class="center-names">
-			<view class="name-img">
-				<image src="../../image/pai.png"></image>
+			<view class="nam">
+				<view class="name-img">
+					<image src="../../image/pai.png"></image>
+				</view>
+				<view class="name">已认证</view>
 			</view>
-			<view class="name">已认证</view>
 		</view>
 	</view>
-	<view class="people">
+	<view class="people" style="margin-top: 10px;">
 		<view class="peo-name">负责人:</view>
 		<view class="peo-con">吴春兰</view>
 	</view>

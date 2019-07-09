@@ -8,15 +8,27 @@
 	color: #323232;
 	opacity: 1;
 	font-size: 14px;
+	font-weight: 500;
 }
 .detail-name{
 	width: 370px; 
 	height: 60px;
 	color: #323232;
 	opacity: 1;
-	font-size: 16pt;
+	font-size: 16px;
 	margin-top: 17px;
 	overflow: hidden;
+	font-weight: bold;
+	line-height: 23px;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:3%;
 }
 .schedata{
 	width: 100%;
@@ -26,13 +38,17 @@
 }
 .shedu{
 	display: flex;
+	border-bottom: 1px solid #E7E7E7;
 }
 .she-data{
 	width: 30%;
-	height: 50px;
 	font-size: 16px;
-	color: #323232;
-	opacity: 1;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	padding-top: 3px;
 }
 .she-date1{
 	width: 60%;
@@ -46,13 +62,13 @@
 	justify-content: center;
 }
 .count{
-	width: 22%;
+	width: 30%;
 	height: 50px;
 	font-size: 16px;
 	color: #323232;
 	opacity: 1;
+	font-weight:bold;
 	text-align: right;
-	margin-left: 1%;
 }
 .past{
 	width: 20px;
@@ -71,6 +87,7 @@
 	opacity: 1;
 	text-align: right;
 	margin-left: 1%;
+	font-weight:bold;
 }
 .flight{
 	width: 90%;
@@ -90,6 +107,8 @@
 	width: 33.4%;
 	font-size: 13px;
 	padding-top: 2%;
+	color: #323232;
+	font-weight: 500;
 }
 .fli-con span{
 	width: 40px;
@@ -108,10 +127,10 @@
 	margin-top: 2%;
 }
 .she-date2{
-		width: 100%;
-		height: 50px;
-		display: flex;
-		justify-content: flex-end;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: flex-end;
 }
 .past1{
 	width: 20px;
@@ -121,6 +140,7 @@
 	text-align: center;
 	line-height: 20px;
 	font-size: 13px;
+	margin-right: 17px;
 }
 .count2{
 	width: 100px;
@@ -129,6 +149,7 @@
 	opacity: 1;
 	text-align: right;
 	margin-left: 3%;
+	font-weight: bold;
 }
 .tourist{
 	width: 100%;
@@ -140,7 +161,7 @@
 	width: 88%;
 	height: 100px;
 	padding: 0 3%;
-	background: #E7E7E7;
+	background: #F4F3F3;
 	opacity: 1;
 	margin-top: 3%;
 	border-radius: 10px;
@@ -172,12 +193,15 @@
 	color: #323232;
 	font-size: 14px;
 	padding: 10px;
+	font-family:PingFang-SC-Bold;
+	font-weight: bold;
 }
 .add{
 	width: 100%;
 	height: 50px;
 	margin-top: 3%;
 	text-align: center;
+	border-bottom: 1px solid #E7E7E7;
 }
 .add span{
 	width: 150px;
@@ -189,6 +213,7 @@
 	line-height: 40px;
 	font-size: 15px;
 	color: #EC6532;
+	font-weight: bold;
 }
 .more{
 	width: 100%;
@@ -196,10 +221,29 @@
 	margin-top: 3%;
 	text-align: center;
 	color: #A1A1A1;
+	display: flex;
+}
+.more-add{
+	width: 50%;
+	height: 50px;
+	color: #A1A1A1;
+	font-size: 16px;
+	text-align: right;
+	margin-left: 5%;
+}
+.more-img{
+	width: 50%;
+	height: 50px;
+	text-align: left;
+	margin-top: 2px;
+}
+.more-img image{
+	width: 20px;
+	height: 20px;
 }
 .people{
 	width: 100%;
-	height: 260px;
+	height: 400px;
 	padding: 0 3%;
 	margin-top: 3%;
 	z-index: 111;
@@ -209,18 +253,29 @@
 	height: 50px;
 	font-size: 16px;
 	color: #323232;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	padding-top: 3px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .peo-name{
 	width: 100%;
 	height: 50px;
 	display: flex;
 	justify-content: center;
+	border-bottom: 1px solid #E7E7E7;
 }
 .peo-con{
 	width: 30%;
-	text-align: left;
-	color: #323232;
-	font-size: 14px;
+	height: 50px;
+	font-size:16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	line-height:50px;
 }
 .peo-content{
 	width: 70%;
@@ -266,6 +321,14 @@
 	border-radius: 20px;
 	margin-top: 3%;
 }
+.spe-img{
+	width: 20%;
+	margin-left: 10%;
+}
+.spe-img image{
+	width: 20px;
+	height: 20px;
+}
 .speci1{
 	width: 48%;
 	height: 50px;
@@ -274,31 +337,39 @@
 	text-align: center;
 	font-size: 10pt;
 	line-height: 25px;
+	font-weight: bold;
 }
 .cost{
 	width: 100%;
 	height: 20%;
 	position: fixed;
-	bottom: 80%;
+	bottom: 85%;
 	background: #000000;
 	opacity: 0.6;
 	z-index: 2222;
 }
 .expense{
 	width: 100%;
-	height: 74%;
+	height: 75%;
 	position: fixed;
-	bottom: 7.5%;
+	bottom: 10%;
 	background: #FFFFFF;
 	opacity: 1;
 	z-index: 222;
+	border-radius: 10px;
 }
 .expense-title{
 	width: 100%;
-	height: 20px;
+	height: 30px;
 	color: #323232;
-	font-size: 16pt;
+	font-size: 16px;
 	padding: 3%;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	padding-top: 3px;
 }
 .expense-content{
 	width: 100%;
@@ -314,32 +385,33 @@
 }
 .con-left2{
 	width: 50%;
-	padding-left: 3%;
+	padding-left: 8%;
 }
 .con-left{
 	width: 50%;
-	padding-left: 3%;
+	padding-left: 8%;
 }
 .con-title{
 	width: 100%;
 	height: 25px;
 	color: #323232;
-	font-size: 16pt;
-	font-weight: 800;
+	font-size: 16px;
+	font-weight: bold;
 }
 .con-title1{
 	height: 30px;
-	color: #A1A1A1;
+	color: #323232;
 	font-size: 14px;
 	margin-top: 3%;
 }
 .con-title2{
 	height: 20px;
-	color: #A1A1A1;
+	color: #323232;
 	font-size: 14px;
 }
 .con-title span{
 	color: #EC6532;
+	font-size: 20px;
 }
 .con-right{
 	width: 50%;
@@ -349,7 +421,8 @@
 	width: 100%;
 	height: 30px;
 	display: flex;
-	margin-top: 20px;
+	margin-top: 30px;
+	padding-left: 5%;
 }
 .con{
 	width: 50%;

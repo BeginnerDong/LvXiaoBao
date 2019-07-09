@@ -1,10 +1,17 @@
+page{
+	background: #E0E0E0;
+}
+.all{
+	width: 100%;
+	height: 450px;
+	background: white;
+}
 .vt{
 	width: 90%;
 	height: 130px;
 	border-radius: 10px;
 	margin-left: 5%;
 	background: #16C0A6;
-	margin-top: 3%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	display: flex;
 }
@@ -23,7 +30,7 @@
 .vt-imga image{
 	width: 80px;
 	height: 40px;
-	border: 1px dashed #F74D5F;
+	border: 1px dashed #000000;
 }
 .vt-img{
 	width: 40%;
@@ -32,7 +39,7 @@
 .vt-img image{
 	width: 40px;
 	height: 40px;
-	border: 1px dashed #F74D5F;
+	border: 1px dashed #000000;
 }
 .vt-con{
 	width: 20%;
@@ -52,20 +59,22 @@
 .vt-name{
 	color: #FFFFFF;
 	height: 40px;
-	font-size: 20pt;
+	font-size: 20px;
+	margin-top: 10px;
 }
 .vt-namea{
 	color: #FFFFFF;
 	height: 40px;
-	font-size: 13pt;
+	font-size: 13px;
 	text-decoration: line-through;
-	margin-top: 10px;
+	margin-top: 15px;
 	margin-left: 20px;
 }
 .set{
 	width: 100%;
-	height: 200px;
+	height: 150px;
 	margin-top: 20px;
+	background: white;
 }
 .set-name{
 	color: #323232;
@@ -74,14 +83,15 @@
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
+	font-weight: bold;
 }
 .set-con{
 	width: 100%;
 	height: 50px;
 	display: flex;
 	padding-left: 3%;
-	line-height: 50px;
-	border-bottom: 1px solid #A1A1A1;
+	line-height: 60px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .set-img{
 	width: 10%;
@@ -122,6 +132,9 @@
 	width: 100%;
 	height: 50px;
 	display: flex;
+	background: white;
+	position: fixed;
+	bottom: 0;
 }
 .count-title{
 	width: 20%;
@@ -131,11 +144,12 @@
 	line-height: 50px;
 	padding-left: 3%;
 	text-align: center;
+	font-weight: bold;
 }
 .count-con{
 	width: 20%;
 	color: #FF582B;
-	font-size: 14pt;
+	font-size: 14pxt;
 	height: 50px;
 	line-height: 50px;
 	text-align: left;
@@ -150,4 +164,6 @@
 	line-height: 40px;
 	margin-top: 2%;
 	margin-left: 4%;
+	font-weight: bold;
+	font-size: 17px;
 }

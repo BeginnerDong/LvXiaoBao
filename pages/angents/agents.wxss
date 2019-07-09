@@ -48,7 +48,7 @@
 	color: #585858;
 	font-size: 16pt;
 	padding-left: 5%;
-	background: #A1A1A1;
+	background: #F4F3F3;
 }
 .agents-name{
 	width: 100%;
@@ -62,14 +62,16 @@
 	height: 20px;
 	color: #323232;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: bold;
 }
 .agent-left{
 	width: 100%;
 	height: 30px;
 	display: flex;
+	margin-top: 10px;
 }
 .left-name{
 	color: #A1A1A1;
-	font-size: 13pt;
+	font-size: 13px;
+	margin-left: 2%;
 }

@@ -1,8 +1,8 @@
 <view>
 	<view class="eduit">
 	<view class="peo-name">
-		<view class="peo-con" style="width: 95%;">*旅行社名称</view>
-		<view class="card-img" style="width: 5%;"><image src="../../image/right.png"></image></view>
+		<view class="peo-con1" >*旅行社名称</view>
+		<view class="card-img1" ><image src="../../image/right.png"></image></view>
 	</view>
 	<view class="peo-name">
 		<view class="peo-con">*负责人</view>
@@ -39,7 +39,7 @@
 	</view>
 	<view class="detail">
 		<view class="detail-name">认证说明</view>
-		<view class="detail-con">1、门店认证后在系统使用期内不能变更，如需变更只能重新
+		<view class="detail-con" style="margin-top: 10px;">1、门店认证后在系统使用期内不能变更，如需变更只能重新
 开通账号后变更</view>
 <view class="detail-con">2、如果旅行社企业名录中找不到要认证的企业请联系系统客
 服，联系电话：029-89710277。</view>

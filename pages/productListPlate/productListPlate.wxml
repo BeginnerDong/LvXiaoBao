@@ -155,21 +155,22 @@
 					<span>推荐排序</span>
 				</view>
 				<view class="sort-img">
-					<image src="detail-icon2.png"></image>
+					<image src="../../image/detail-icon2.png"></image>
 				</view>
 			</view>
 			<view class="sort-title">价格从低到高</view>
 			<view class="sort-title">价格从低到高</view>
 		</view>
 </view> -->
-	<!-- <view class="screen">
+<view class="screen">
 		
 	</view>
 	<view class="scree">
 		<view class="screen-top">
-			<view class="screen-title">线路</view>
+			<view class="screen-title">线路
+			<view class="title-line"></view></view>
 			<view class="choose">
-					<view class="choose-item" style="color: #EC6532;">
+					<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
 						海南专线
 					</view>
 					<view class="choose-item">
@@ -190,7 +191,8 @@
 			</view>
 		</view>
 		<view class="screen-top">
-			<view class="screen-title">金额</view>
+			<view class="screen-title">金额
+			<view class="title-line"></view></view>
 			<view class="choose">
 				<view class="choose-in">
 					<input type="text" placeholder="最低金额"/>
@@ -203,7 +205,7 @@
 				</view>
 			</view>
 			<view class="choose">
-					<view class="choose-item" style="color: #EC6532;">
+					<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
 						￥200以上
 					</view>
 					<view class="choose-item">
@@ -215,9 +217,10 @@
 			</view>
 		</view>
 		<view class="screen-top1">
-			<view class="screen-title">品质</view>
+			<view class="screen-title">品质
+			<view class="title-line"></view></view>
 			<view class="choose">
-					<view class="choose-item" style="color: #EC6532;">
+					<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
 						半自助
 					</view>
 					<view class="choose-item">
@@ -230,15 +233,16 @@
 		</view>
 		<view class="bottom">
 			<view class="choose">
-					<view class="choose-item1" style="color: #A1A1A1;">
+					<view class="choose-item1" style="color: #A1A1A1;background: #F2F2F2;">
 						重置
+						
 					</view>
 					<view class="choose-item1" style="color: #323232;background: #FFD101;">
 						确认
 					</view>
 			</view>
 		</view>
-	</view> -->
+	</view>
 </view>
 
 

@@ -1,3 +1,6 @@
+page{
+	background:#F4F3F3;
+}
 .tourist{
 	width: 100%;
 	height: 400px;
@@ -12,20 +15,19 @@
 	border-radius:12px;
 	height:160rpx;
 	margin-top: 24px;
-	padding: 1%;
+	padding-left: 3%;
 }
 .phone{
 	width:40px;
 	height:40px;
-	background:rgba(244,243,243,1);
 	border-radius:50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .phone image{
-	width:40rpx;
-	height:40rpx;
+	width:30rpx;
+	height:30rpx;
 }
 .left{
 	width: 13%;
@@ -55,7 +57,7 @@
 }
 .card{
 	width:100%;
-	font-size: 14px;
+	font-size: 13px;
 	color: #A1A1A1;
 	margin-top: 4%;
 }
@@ -71,11 +73,11 @@
 	width: 60%;
 	height: 50px;
 	display: flex;
-	
 }
 .bott{
 	width: 30%;
 	text-align: center;
+	margin-top: 5px;
 }
 .left-img{
 	width: 100%;
@@ -84,37 +86,41 @@
 .left-img image{
 	width: 20px;
 	height: 20px;
+	border: 1px dashed #000000;
 }
 .left-cn{
 	font-size: 12px;
 	color: #323232;
-	margin-top: 1%;
+	margin-top: 5px;
 }
 .bott-btn{
 	width: 40%;
-	height: 50px;
+	height: 40px;
 	color: white;
 	background: #FF582B;
 	text-align: center;
-	line-height: 50px;
+	line-height: 40px;
 	border-radius: 30px;
 	font-size: 17px;
+	margin-top: 5px;
+	font-weight:bold;
+	margin-right: 5px;
 }
 .visi{
 	width: 100%;
-	height: 80%;
+	height: 75%;
 	position: fixed;
-	bottom:20%;
+	bottom:25%;
 	background: #000000;
 	opacity: 0.6;
 	z-index: 222;
 }
 .visitors{
 	width: 100%;
-	height: 20%;
+	height: 25%;
 	position: fixed;
 	bottom:0%;
-	background: #E7E7E7;
+	background: #FFFFFF;
 }
 .visi-name{
 	width: 100%;
@@ -123,25 +129,28 @@
 	color: #323232;
 	padding: 0 3%;
 	line-height: 40px;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #E7E7E7;
+	font-weight: bold;
+	font-family:PingFang-SC-Bold;
 }
 .visi-name1{
 	width: 100%;
-	height: 45px;
+	height: 50px;
 	display: flex;
-	line-height: 45px;
+	line-height: 50px;
 	justify-content: center;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #E7E7E7;
 }
 .visi-titlw{
-	width: 50%;
+	width: 90%;
 	height: 50px;
 	font-size: 16px;
 	color: #323232;
 	padding: 0 3%;
+	font-weight:bold;
 }
 .visi-img{
-	width: 50%;
+	width: 10%;
 	height: 50px;
 	text-align: center;
 }

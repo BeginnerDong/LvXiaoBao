@@ -1,6 +1,11 @@
+page{
+	background: #F4F3F3;
+}
 .custom{
 	width: 100%;
-	height: 630px;
+	height: 690px;
+	background: white;
+	padding-top: 10px;
 }
 .custom-name{
 	width: 100%;
@@ -8,25 +13,30 @@
 	padding-left: 5%;
 	color: #323232;
 	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #E7E7E7;
 }
 .peo-name{
 	width: 100%;
 	height: 50px;
 	display: flex;
 	padding: 0 3%;
+	line-height: 50px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .peo-con{
 	width: 30%;
 	height: 50px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #323232;
 	opacity: 1;
-	font-weight: 600;
+	font-weight: 500;
 }
 .peo-content{
 	width: 70%;
 	height: 50px;
 	display: flex;
+	line-height: 50px;
 }
 .peo-content input{
 	width: 60%;
@@ -44,7 +54,21 @@
 }
 .card{
 	width: 80%;
-	
+	height: 40px;
+	line-height: 40px;
+	padding-top: 3%;
+}
+.card span{
+	width: 80px;
+	height: 20px;
+	display: inline-block;
+	border-radius: 12px;
+	background: rgba(242,242,242,1);
+	font-size: 12px;
+	color: #585858;
+	font-weight: 500;
+	text-align: center;
+	line-height: 20px;
 }
 .card input{
 	width: 60%;
@@ -56,32 +80,40 @@
 	
 }
 .card-img image{
-	width: 20px;
-	height: 20px;
+	width:15px;
+	height: 15px;
 }
 
 .peo-content1{
 	font-size: 14px;
 	color: #323232;
+	width: 70%;
+	height: 50px;
+	padding-top: 3%;
 }
 .cust{
 	width: 100%;
+	height: 70px;
+	line-height: 40px;
 	text-align: center;
 	color: #585858;
 	font-size: 13px;
-	
+	font-weight: bold;
 }
 .type{
 	width: 100%;
-	height: 300px;
+	height: 400px;
 	margin-top: 30px;
+	background: white;
 }
 .type-name{
 	width: 100%;
 	height: 30px;
 	padding-left: 3%;
 	color: #323232;
-	font-size: 16pt;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 3%;
 }
 .photo{
 	width: 100%;
@@ -111,11 +143,12 @@
 	height: 40px;
 	line-height: 40px;
 	display: flex;
+	border-bottom: 1px solid #F4F3F3;
 }
 .title{
-	width: 70%;
+	width: 80%;
 	margin-right: 5%;
-	text-align: right;
+	text-align: center;
 	color: #323232;
 	font-size: 16px;
 	font-weight: 600;
@@ -126,10 +159,11 @@
 	display: flex;
 }
 .name{
-	width: 30%;
-	color: #585858;
+	width: 20%;
+	color: #323232;
 	font-size: 16px;
 	padding-left: 3%;
+	font-weight: 600;
 }
 .con{
 	width: 70%;
@@ -181,6 +215,7 @@
 	background: #F4F3F3;
 	text-align: center;
 	line-height: 100px;
+	margin-top: 20px;
 }
 .photo-img image{
 	width: 20px;
@@ -189,15 +224,17 @@
 .basic-btn{
 	width: 100%;
 	height: 40px;
+	margin-top: 20px;
 }
 .basic-btn .basi-name{
-	width: 300px;
-	height: 40px;
+	width: 327px;
+	height: 48px;
 	background: #FF7B57;
 	color: white;
 	border-radius: 30px;
-	margin-left: 12%;
+	margin-left: 10%;
 	text-align: center;
-	line-height: 40px;
+	line-height: 48px;
 	opacity: 0.3;
+	font-weight: bold;
 }

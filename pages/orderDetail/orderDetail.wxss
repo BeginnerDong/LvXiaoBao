@@ -1,12 +1,16 @@
+page{
+	background: #F4F3F3;
+}
 .detail{
 	width: 100%;
 	height: 100%;
 }
 .detaill-name{
-	height: 70px;
+	height: 100px;
 	background: #FFCA00;
 	margin-top: 3%;
 	padding-top: 2%;
+	z-index: 111;
 }
 .detail-title{
 	color: #323232;
@@ -20,27 +24,42 @@
 }
 .detail-message{
 	height: 250px;
-	width: 380px;
+	width: 90%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	background: #F2F2F2;
-	margin: 5%;
+	background: white;
+    margin-left: 4%;
+	z-index: 2222;
+	margin-top: -10px;
 }
 .detail-mess{
-	width: 100%;
-	height: 50px;
+	width: 90%;
+	/* height: 50px; */
 	color: #323232;
-	background: #F2F2F2;
-	font-size: 16pt;
+	background: white;
+	font-size: 16px;
 	line-height: 50px;
 	padding-left: 2%;
 	border-bottom: 1px solid #FFFFFF;
+	font-weight: bold;
+	border-radius: 10px;
+}
+.detail-messa{
+	width: 30%;
+	font-size: 16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	padding-top: 3px;
 }
 .deail-num{
 	height: 40px;
 	color: #EC6532;
 	margin-top: 5%;
 	padding-left: 2%;
-	font-size: 14pt;
+	font-size: 18px;
+	font-weight: bold;
 }
 .detail-con{
 	color: #323232;
@@ -75,9 +94,9 @@
 }
 .people{
 	height: 250px;
-	width: 380px;
+	width: 90%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	background: #F2F2F2;
+	background: white;
 	margin: 5%;
 }
 .people-name{
@@ -89,22 +108,22 @@
 	width: 50%;
 	height: 50px;
 	color: #585858;
-	font-size: 14pt;
+	font-size: 14px;
 	padding-left: 3%;
 }
 .peo-title{
 	width: 50%;
 	height: 50px;
 	color: #323232;
-	font-size: 14pt;
+	font-size: 14px;
 	text-align: right;
 	margin-right: 5%;
 }
 .list{
 	height: 200px;
-	width: 380px;
+	width: 90%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	background: #F2F2F2;
+	background: white;
 	margin: 5%;
 }
 .list-title{
@@ -118,7 +137,7 @@
 	padding-left: 3%;
 	color: #323232;
 	opacity: 1;
-	font-size: 15pt;
+	font-size: 15px;
 }
 .list-img1{
 	width: 10%;
@@ -176,9 +195,9 @@
 }
 .insurance{
 	height: 350px;
-	width: 380px;
+	width: 90%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	background: #F2F2F2;
+	background: white;
 	margin: 5%;	
 }
 .steel{
@@ -229,20 +248,24 @@
 }
 .contrat{
 	height: 400px;
-	width: 380px;
+	width: 90%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	background: #F2F2F2;
+	background: white;
 	margin: 5%;	
 }
 .order-btn{
 	width: 100%;
-	height: 40px;
+	height: 60px;
 	display: flex;
+	background: white;
+	position: fixed;
+	bottom: 0;
 }
 .can{
 	width: 45%;
 	height: 40px;
 	margin-left: 5%;
+	margin-top: 4%;
 }
 .can span{
 	width: 140px;
@@ -251,12 +274,14 @@
 	text-align: center;
 	line-height: 40px;
 	display: inline-block;
-	background: #F2F2F2;
+	background: #F4F3F3;
 	font-size: 17px;
+	color: #A1A1A1;
 }
 .can1{
 	width: 45%;
 	height: 40px;
+	margin-top: 4%;
 }
 .can1 span{
 	width: 180px;
@@ -271,7 +296,7 @@
 }
 .bg{
 	width: 100%;
-	height: 62%;
+	height: 50%;
 	position: fixed;
 	bottom: 38%;
 	background: #000000;
@@ -279,10 +304,10 @@
 }
 .payment{
 	width: 100%;
-	height: 42%;
+	height: 50%;
 	position: fixed;
 	bottom: 0;
-	background: #F5F5F5;
+	background: #FFFFFF;
 }
 .pay{
 	width: 100%;
@@ -310,6 +335,7 @@
 	color: #A1A1A1;
 	font-size:14px ;
 	line-height: 50px;
+	font-weight: 800;
 }
 .pay-img{
 	width: 10%;
@@ -319,8 +345,18 @@
 .pay-img image{
 	width: 20px;
 	height: 20px;
+	margin-top: 10px;
 }
 .pay-title1{
 	color: #585858;
 	font-size: 12px;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:3%;
 }

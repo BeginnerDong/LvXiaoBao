@@ -13,9 +13,28 @@
 	width: 30%;
 	height: 50px;
 	font-size: 14px;
-	color: #585858;
+	color:#323232;
 	opacity: 1;
-	
+	line-height: 50px;
+	font-weight:800;
+}
+.peo-con1{
+	width: 85%;
+	height: 50px;
+	font-size: 14px;
+	color:#323232;
+	opacity: 1;
+	line-height: 50px;
+	font-weight:800;
+}
+.card-img1{
+	width: 15%;
+	height: 50px;
+	line-height: 50px;
+}
+.card-img1 image{
+	width: 15px;
+	height: 15px;
 }
 .peo-content{
 	width: 70%;
@@ -33,6 +52,7 @@
 .card-img{
 	width: 20%;
 	height: 50px;
+	line-height: 50px;
 	text-align:right;
 	margin-right: 15%;
 }
@@ -50,8 +70,8 @@
 	
 }
 .card-img image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 }
 
 .peo-content1{
@@ -62,21 +82,21 @@
 .detail{
 	width: 100%;
 	height: 200px;
-	background: #C0C0C0;
+	background: #F4F3F3;
 }
 .detail-name{
 	padding-left: 3%;
 	padding-top: 5%;
 	color: #323232;
-	font-size: 16pt;
-	font-weight: 600;
+	font-size: 16px;
+	font-weight: bold;
 }
 .detail-con{
 	width: 100%;
-	height: 60px;
+	height: 40px;
 	padding-left: 3%;
 	color: #A1A1A1;
-	font-size: 13pt;
+	font-size: 13px;
 }
 .btn{
 	width: 100%;

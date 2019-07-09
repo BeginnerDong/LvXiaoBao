@@ -1,5 +1,5 @@
 page{
-	background: #F4F3F3;
+	background: #E7E7E7;
 }
 .banner-box{
 	width:100%;
@@ -26,7 +26,7 @@ page{
 }
 .start-title{
 	width: 70%;
-	padding-left: 5%;
+	padding-left: 3%;
 }
 .banner-num{
 	position: absolute;
@@ -47,7 +47,7 @@ page{
 }
 .detail-info{
 	width:100%;
-	height:280rpx;
+	height:300rpx;
 	z-index: 888;
 }
 .detail-info-top{
@@ -69,22 +69,24 @@ page{
 	color:rgba(50,50,50,1);
 	display: flex;
 	align-items: center;
+	margin-top: 5px;
+	padding-top: 5px;
 }
 .money{
-	font-size:16px;
+	font-size:21px;
 	font-family:PingFang-SC-Medium;
 	font-weight:Bold;
 	color:#EC6532;
 }
-
 .detail-id{
 	font-size:14px;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(50,50,50,1);
+	margin-top: 20px;
 }
 .detail-name{
-	margin-top: 10rpx;
+	margin-top: 10px;
 	font-size:16px;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
@@ -95,14 +97,16 @@ page{
 	height: 300rpx;
 	border-bottom: 1px solid #E7E7E7;
 	z-index: 888;
+	background: #FFFFFF;
+	margin-top: 10px;
 }
 .norm-title{
 	width: 100%;
-	height: 80rpx;
-	background: #E7E7E7;
+	height: 46px;
+	background: #FFFFFF;
 	display: flex;
 	justify-content: center;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #E7E7E7;
 	padding-top: 1%;
 }
 .norm-name{
@@ -136,10 +140,17 @@ page{
 .norm-name1{
 	width: 50%;
 	text-align: left;
-	font-size: 15px;
-	color: #A1A1A1;
+	font-size: 16px;
+	color: #323232;
 	padding-left: 14px;
 	padding-top: 17px;
+	font-weight:500;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	line-height:23px;
+	position: relative;
+	z-index:1;	
 }
 .norm-data1{
 	width: 50%;
@@ -149,39 +160,49 @@ page{
 	padding-left: 14px;
 	padding-top: 17px;
 	margin-right: 13px;
+	font-weight: 400;
+}
+.travel{
+	width: 100%;
+	height: 200px;
+	margin-top: 10px;
+	background: white;
+	
 }
 .tarcel{
 	width: 100%;
 	height: 40px;
 	margin-top: 1%;
-	background: #E7E7E7;
 	display: flex;
 }
 .tarcel1{
 	width: 100%;
 	height: 40px;
 	margin-top: 1%;
-	background: #E7E7E7;
 	display: flex;
 	justify-content: center;
 	border-bottom: 1px solid white;
 }
 .travel-title{
 	width: 100%;
-	height: 80rpx;
-	background: #E7E7E7;
+	height: 45px;
 	display: flex;
 	justify-content: center;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #E7E7E7;
 	padding-top: 1%;
 }
 .travel-name1{
 	width: 30%;
 	text-align: left;
-	font-size: 15px;
-	color: #323232;
 	padding-left: 14px;
 	padding-top: 17px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	line-height:23px;
+	position: relative;
+	z-index:1;
+	font-size: 16px;
 }
 .travel-data2{
 	width: 70%;
@@ -193,6 +214,28 @@ page{
 	margin-right: 13px;
 	font-weight: 800;
 }
+.travel-data3{
+	width: 70%;
+	height: 46px;
+	display: flex;
+}
+.phone-num{
+	width: 85%;
+	height: 46px;
+	line-height: 46px;
+	color: #396CFF;
+	font-size: 16px;
+	font-weight: 500;
+}
+.phone{
+	width: 10%;
+	height: 46px;
+	line-height: 46px;
+}
+.phone image{
+	width: 20px;
+	height: 20px;
+}
 .discount{
 	width: 40px;
 	height: 16px;
@@ -202,10 +245,12 @@ page{
 	text-align: center;
 	margin-right: 10%;
 	margin-top: 3%;
+	color: rgba(236,101,50,1);
 }
 .discoun1{
 	width:40%;
 	text-align: right;
+	color: rgba(236,101,50,1);
 }
 .discoun1 span{
 	width: 40px;
@@ -239,6 +284,9 @@ page{
 	padding-top: 2%;
 	margin-left: 5%;
 }
+.dis-content4 span{
+	color: #EA0404;
+}
 .dis-img{
 	width: 20px;
 	height: 20px;
@@ -255,10 +303,15 @@ page{
 	color: #323232;
 	padding-top: 2%;
 }
+.dis-con span{
+	font-size: 15px;
+	color: #EC6532;
+}
 .agent{
 	width: 100%;
-	height: 280px;
+	height: 230px;
 	margin-top: 2%;
+	background: white;
 }
 .select-group{
 	margin-top: 24rpx;
@@ -318,11 +371,15 @@ page{
 .product-info-bottom{
 	display: flex;
 	align-items: center;
-	height:100rpx;
+	height:13  0rpx;
 	background: #fff;
 	padding: 0 3%;
 	width:94%;
 	border-bottom: 1px solid #E7E7E7;
+
+}
+.people{
+	margin-top: 2%;
 }
 .people-title{
 	width: 55%;
@@ -336,18 +393,20 @@ page{
 	height: 20px;
 }
 .norm-data2{
-	width: 50%;
+	width: 60%;
 	text-align: right;
-	font-size: 15px;
-	color: #323232;
+	font-size: 16px;
+	color: #A1A1A1;
 	padding-left: 14px;
 	padding-top: 17px;
 	margin-right: 13px;
 	display: flex;
 	justify-content: center;
+	font-weight:500;
 }
 .product-special{
-	margin-top: 24rpx;
+	margin-top: 24px;
+	background: white;
 }
 .star-img{
 	width:10%;
@@ -362,18 +421,27 @@ page{
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:rgba(50,50,50,1);
+	line-height: 32px;
+	margin-top: 10px;
 }
 .special-img{
 	width: 100%;
 	height: 400px;
+	margin-top: 10px;
+	
 }
 .special-img image{
 	width: 100%;
 	height: 400px;
 }
 .routing{
-	height: 1000px;
+	height: 1050px;
 	margin-top: 2%;
+	background: white;
+}
+.plan{
+	width: 100%;
+	height: 1000px;
 }
 .plan-one{
 	width: 90%;
@@ -386,7 +454,7 @@ page{
 .plan-three{
 	width: 90%;
 	height: 180px;
-	background: #323232;
+	background:#EEF1FA;
 	opacity: 1;
 	font-size: 12pt;
 	border-radius: 10px;
@@ -406,16 +474,22 @@ page{
 }
 .follow{
 	width: 100%;
-	height: 900px;
+	height: 850px;
+	background: white;
+	margin-top: 10px;
 }
-.fee-explain{
+/* .fee-explain{
 	margin-top: 24rpx;
+} */
+.fee-explain1{
+	height: 280px;
+	margin-top: 10px;
 }
 .all-text view{
 	font-size:15px;
 }
 .product-special1{
-	margin-top: 24rpx;
+	margin-top: 24px;
 }
 
 .place{
@@ -425,7 +499,7 @@ page{
 	justify-content: center;
 }
 .place1{
-	width: 20%;
+	width: 15%;
 	height: 120rpx;
 	padding-top: 2%;
 	margin-left: 2%;
@@ -439,6 +513,7 @@ page{
 .place-img image{
 	width: 20px;
 	height: 20px;
+	border: 1px dashed #000000;
 }
 .place-title{
 	width: 100%;
@@ -456,15 +531,16 @@ page{
 	height: 50px;
 }
 .place-btn span{
-	width: 150px;
-	height: 50px;
+	width: 160px;
+	height: 40px;
 	background: #FF582B;
 	color: white;
 	display: inline-block;
 	text-align: center;
-	line-height:50px ;
+	line-height:40px ;
 	border-radius: 30px;
-	padding-top: 2%;
+	margin-top: 5%;
+	z-index: 111;
 }
 .choose{
 	width: 100%;
@@ -474,6 +550,7 @@ page{
 	opacity: 0.6;
 	position: fixed;
 	bottom: 60%;
+	z-index: 2222;
 }
 .choose1{
 	width: 100%;
@@ -482,6 +559,7 @@ page{
 	opacity: 1;
 	position: fixed;
 	bottom: 0;
+	z-index: 22222;
 }
 .cho1{
 	padding: 0 3%;
@@ -492,16 +570,16 @@ page{
 	width: 100%;
 	height: 50px;
 	padding: 10px;
-	font-size: 16pt;
+	font-size: 16px;
 	color: #323232;
-	font-weight: 800;
+	font-weight: bold;
 }
 .cho1-left{
 	width: 33%;
 	height: 50px;
-	font-size: 10pt;
+	font-size: 16px;
 	color: #323232;
-	font-weight: 800;
+	font-weight:bold;
 }
 .cho1-all{
 	width: 33%;
@@ -513,8 +591,8 @@ page{
 	margin-left: 2%;
 }
 .cho1-subtrat image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	margin-left: 2%;
 }
 .cho1-number{
@@ -527,7 +605,7 @@ page{
 	display: inline-block;
 	text-align: center;
 	line-height: 20px;
-	background: #484848;
+	background: #E7E7E7;
 }
 .cho1-btn{
 	width: 100%;
@@ -571,4 +649,25 @@ page{
 	height: 30px;
 	z-index: 10000;
 	border-radius: 50%;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	bottom:10rpx;
+	z-index:-1;
+	left:13%;
+	margin-top: -5px;
+}
+.title{
+	font-size:16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	line-height:45px;
+	position: relative;
+	height: 45px;
+	z-index:1
 }

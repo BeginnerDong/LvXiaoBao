@@ -19,22 +19,10 @@
 			</view>
 		</view>
 	</view>
-	<view class="mess-img">
-		<image src="../../image/bgy.png"></image>
-	</view>
+	
 	<view class="mess">
-		<view class="mess-name">
-			<view class="nam">1</view>
-			<view class="cnter">
-				<view class="center-img">
-					<image src="../../image/mine.jpg"></image>
-				</view>
-				<view class="center-name">
-					<view class="name-one">烟后很憔悴</view>
-					<view class="name-one">182****5237</view>
-				</view>
-			</view>
-			<view class="miney">￥100</view>
+		<view class="mess-img">
+			<image src="../../image/bgy.png"></image>
 		</view>
 		<view class="mess-name">
 			<view class="nam">1</view>
@@ -44,59 +32,72 @@
 				</view>
 				<view class="center-name">
 					<view class="name-one">烟后很憔悴</view>
-					<view class="name-one">182****5237</view>
+					<view class="name-two">182****5237</view>
 				</view>
 			</view>
 			<view class="miney">￥100</view>
 		</view>
 		<view class="mess-name">
-			<view class="nam">1</view>
+			<view class="nam">2</view>
 			<view class="cnter">
 				<view class="center-img">
 					<image src="../../image/mine.jpg"></image>
 				</view>
 				<view class="center-name">
 					<view class="name-one">烟后很憔悴</view>
-					<view class="name-one">182****5237</view>
+					<view class="name-two">182****5237</view>
 				</view>
 			</view>
 			<view class="miney">￥100</view>
 		</view>
 		<view class="mess-name">
-			<view class="nam">1</view>
+			<view class="nam">3</view>
 			<view class="cnter">
 				<view class="center-img">
 					<image src="../../image/mine.jpg"></image>
 				</view>
 				<view class="center-name">
 					<view class="name-one">烟后很憔悴</view>
-					<view class="name-one">182****5237</view>
+					<view class="name-two">182****5237</view>
 				</view>
 			</view>
 			<view class="miney">￥100</view>
 		</view>
 		<view class="mess-name">
-			<view class="nam">1</view>
+			<view class="nam">4</view>
 			<view class="cnter">
 				<view class="center-img">
 					<image src="../../image/mine.jpg"></image>
 				</view>
 				<view class="center-name">
 					<view class="name-one">烟后很憔悴</view>
-					<view class="name-one">182****5237</view>
+					<view class="name-two">182****5237</view>
 				</view>
 			</view>
 			<view class="miney">￥100</view>
 		</view>
 		<view class="mess-name">
-			<view class="nam">1</view>
+			<view class="nam">5</view>
 			<view class="cnter">
 				<view class="center-img">
 					<image src="../../image/mine.jpg"></image>
 				</view>
 				<view class="center-name">
 					<view class="name-one">烟后很憔悴</view>
-					<view class="name-one">182****5237</view>
+					<view class="name-two">182****5237</view>
+				</view>
+			</view>
+			<view class="miney">￥100</view>
+		</view>
+		<view class="mess-name">
+			<view class="nam">6</view>
+			<view class="cnter">
+				<view class="center-img">
+					<image src="../../image/mine.jpg"></image>
+				</view>
+				<view class="center-name">
+					<view class="name-one">烟后很憔悴</view>
+					<view class="name-two">182****5237</view>
 				</view>
 			</view>
 			<view class="miney">￥100</view>

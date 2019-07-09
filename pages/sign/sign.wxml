@@ -101,8 +101,8 @@
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>2</span></view>
-				<view class="sign-img" style="margin-top: 5px;">
-					<image src="../../image/add1.png"></image>
+				<view class="sign-img" style="margin-top: 5px;margin-left: 20px;">
+					<image src="../../image/block.png"></image>
 				</view>
 			</view>
 			<view class="sign-right">天</view>
@@ -114,8 +114,8 @@
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>2</span></view>
-				<view class="sign-img" style="margin-top: 5px;">
-					<image src="../../image/add1.png"></image>
+				<view class="sign-img" style="margin-top: 5px;margin-left: 20px;">
+					<image src="../../image/block.png"></image>
 				</view>
 			</view>
 			<view class="sign-right">晚</view>
@@ -208,8 +208,8 @@
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>2</span></view>
-				<view class="sign-img" style="margin-top: 5px;">
-					<image src="../../image/add1.png"></image>
+				<view class="sign-img" style="margin-left: 20px;">
+					<image src="../../image/block.png"></image>
 				</view>
 			</view>
 			<view class="sign-right">天</view>

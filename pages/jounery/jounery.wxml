@@ -17,7 +17,7 @@
 			</view>
 		</view>
 		<view class="jounery-btn">
-			<image src="../../image/close.png"></image>
+			<image src="../../image/clo.png"></image>
 		</view>
 	</view>
 </view>

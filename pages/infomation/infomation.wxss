@@ -17,7 +17,6 @@
 .phone{
 	width:40px;
 	height:40px;
-	background:rgba(244,243,243,1);
 	border-radius:50%;
 	display: flex;
 	align-items: center;
@@ -33,6 +32,7 @@
 .left image{
 	width: 20pt;
 	height:20pt;
+	padding-left: 15%;
 }
 .middle{
 	width:60%
@@ -76,6 +76,7 @@
 .bott{
 	width: 30%;
 	text-align: center;
+	margin-top: 3%;
 }
 .left-img{
 	width: 100%;
@@ -84,6 +85,7 @@
 .left-img image{
 	width: 20px;
 	height: 20px;
+	border: 1px dashed #000000;
 }
 .left-cn{
 	font-size: 12px;
@@ -92,13 +94,14 @@
 }
 .bott-btn{
 	width: 40%;
-	height: 50px;
+	height: 40px;
 	color: white;
 	background: #FF582B;
 	text-align: center;
-	line-height: 50px;
+	line-height: 40px;
 	border-radius: 30px;
 	font-size: 17px;
+	margin-top: 1%;
 }
 .visi{
 	width: 100%;

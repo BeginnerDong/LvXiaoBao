@@ -68,24 +68,30 @@
 		
 		<view class="poster" style="margin-top: 30px;"><span>生成推广海报</span></view>
 	</view>
-	<view  class="builder"></view>
+	 <view  class="builder"></view>
 	<view class="create">
-		<view class="img">
-			<image src="../../image/create.png"></image>
+		<view class="cera">
+			<view class="img">
+				<image src="../../image/create.png"></image>
+			</view>
+			<view class="create-name">
+				<view class="vr">邀请码</view>
+				<view class="vr">EC5216CD</view>
+			</view>
 		</view>
-		<view class="create-name">
-			<view class="vr">邀请码</view>
-			<view class="vr">EC5216CD</view>
-		</view>
+		
 		<view class="close">
 			<image src="../../image/close.png"></image>
 		</view>
-		<view class="save">
+		
+	</view>
+	<view class="btn">
+		 <view class="save">
 			<view class="save-img">
 				<image src="../../image/sa.png"></image>
 			</view>
-			<view class="save-name">保存</view>
 		</view>
+		<view class="save-name">保存</view>
 	</view>
 	
 	
