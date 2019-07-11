@@ -21,6 +21,7 @@
 	border: 1px dashed #A1A1A1;
 	margin-left: 3%;
 	margin-top: 5%;
+	position: relative;
 }
 .discount-bg{
 	width: 98%;

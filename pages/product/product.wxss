@@ -30,7 +30,7 @@ page{
 .pro-img image{
 	width: 20px;
 	height: 20px;
-	border: 1px dashed #000000;
+	
 }
 .pro-right{
 	width:75%;
@@ -52,7 +52,7 @@ page{
 }
 .mess{
 	width: 90%;
-	height: 600px;
+	
 	background: #FFFFFF;
 	border-radius: 10px;
 	margin-left: 5%;
@@ -68,7 +68,7 @@ page{
 	height: 45px;
 	margin-top: 20px;
 	margin-left: 5%;
-	border: 1px dashed #000000;
+
 }
 .mess-name{
 	width: 100%;

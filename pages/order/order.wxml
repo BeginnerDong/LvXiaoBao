@@ -1,114 +1,61 @@
 <view>
 	<view class="nav-top flex-align">
-		<view class="nav-top-item nav-top-item-active">全部
-			<view class="title-line"></view>
+		<view class="nav-top-item {{num==0?'nav-top-item-active':''}}" data-num = "0" bindtap="{{web_buttonCanClick?'menuClick':''}}">全部
+			<view class="title-line" wx:if="{{num==0}}"></view>
 		</view>
-		<view class="nav-top-item">未确认</view>
-		<view class="nav-top-item">已确认</view>
-		<view class="nav-top-item">已取消</view>
-		<view class="nav-top-item flex-all" >
+		<view class="nav-top-item {{num==1?'nav-top-item-active':''}}" data-num = "1" bindtap="{{web_buttonCanClick?'menuClick':''}}">未确认
+			<view class="title-line" wx:if="{{num==1}}"></view>
+		</view>
+		<view class="nav-top-item {{num==2?'nav-top-item-active':''}}" data-num = "2" bindtap="{{web_buttonCanClick?'menuClick':''}}">已确认
+			<view class="title-line" wx:if="{{num==2}}"></view>
+		</view>
+		<view class="nav-top-item {{num==3?'nav-top-item-active':''}}" data-num = "3" bindtap="{{web_buttonCanClick?'menuClick':''}}">已取消
+			<view class="title-line" wx:if="{{num==3}}"></view>
+		</view>
+		<view class="nav-top-item flex-all" bindtap="isShow">
 			<view>筛选</view>
 			<view class="flex-all">
 				<image src="../../image/peer-icon1.png"></image>
 			</view>	
 		</view>
 	</view>
-	<view class="order">
-		<view class="order-name" >
-			<view class="orde">
-				<view class="order-title">
-					<image src="../../image/1.png"></image>
+	<block wx:for="{{web_mainData}}">
+		<view class="order">
+			<view class="order-name" >
+				<view class="orde">
+					<view class="order-title">
+						<image src="../../image/1.png"></image>
+					</view>
+					<view class="orde-name">{{item.channelName}}</view>
+					<view class="order-ri">{{item.stateOneName}}</view>
 				</view>
-				<view class="orde-name">领袖华夏|陕西西安</view>
-				<view class="order-ri">已取消</view>
-			</view>
-			<view class="order-con">
-				<view class="con-le">氙灯多地出发|暑假 马来西亚仙本那沙巴/吉隆坡7天5晚自由行 卡帕撒马布岛</view>
-				<view class="con-righ">￥1740</view>
-			</view>
-			<view class="order-con1">
-				<view class="con-left">团期:05/28(天)~06/05(三)</view>
-				<view class="con-right">
-					<span style="color: #000000;background: #FFD101;">无保险</span>
-					<span style="color: white;background: #EC6532;opacity: 0.8;">无合同</span>
+				<view class="order-con">
+					<view class="con-le">{{item.lineName}}</view>
+					<view class="con-righ">￥{{item.shouPricef}}</view>
 				</view>
-			</view>
-			<view class="order-con1">
-				<view class="con-left">人数:5人(3大2小)</view>
-			</view>
-			<view class="conbtn">
-				<view class="con-btn"><span>确认件</span></view>
-				<view class="con-btn"><span>签署合同</span></view>
-				<view class="con-btn"><span>购买保险</span></view>
-				<view class="con-btn"><span>支付</span></view>
-			</view>
-			
-		</view>
-	</view>
-	<view class="order">
-		<view class="order-name" >
-			<view class="orde">
-				<view class="order-title">
-					<image src="../../image/1.png"></image>
+				<view class="order-con1">
+					<view class="con-left">团期:05/28(天)~06/05(三)</view>
+					<view class="con-right">
+						<span style="color: #000000;background: #FFD101;">{{item.insureName}}</span>
+						<span style="color: white;background: #EC6532;opacity: 0.8;">{{item.contractName}}</span>
+					</view>
 				</view>
-				<view class="orde-name">陕西中旅|陕西·西安</view>
-				<view class="order-ri">已取消</view>
-			</view>
-			<view class="order-con">
-				<view class="con-le">氙灯多地出发|暑假 马来西亚仙本那沙巴/吉隆坡7天5晚自由行 卡帕撒马布岛</view>
-				<view class="con-righ">￥2180</view>
-			</view>
-			<view class="order-con1">
-				<view class="con-left">团期:05/28(天)~06/05(三)</view>
-				<view class="con-right">
-					<span style="color: #000000;background: #FFD101;">已退保</span>
-					<span style="color: white;background: #EC6532;opacity: 0.8;">已作废</span>
+				<view class="order-con1">
+					<view class="con-left">人数:5人(3大2小)</view>
 				</view>
-			</view>
-			<view class="order-con1">
-				<view class="con-left">人数:5人(3大2小)</view>
-			</view>
-			<view class="conbtn">
-				<view class="con-btn"><span>确认件</span></view>
-				<view class="con-btn"><span>签署合同</span></view>
-				<view class="con-btn"><span>购买保险</span></view>
-				<view class="con-btn"><span>支付</span></view>
+				<view class="conbtn">
+					<view class="con-btn" wx:if="{{item.stateTwo=='101'}}"><span>确认件</span></view>
+					<view class="con-btn"><span>签署合同</span></view>
+					<view class="con-btn"><span>购买保险</span></view>
+					<view class="con-btn" wx:if="{{item.stateOne=='101'}}"><span>支付</span></view>
+				</view>
+				
 			</view>
 		</view>
-	</view>
-	<view class="order">
-		<view class="order-name" >
-			<view class="orde">
-				<view class="order-title">
-					<image src="../../image/1.png"></image>
-				</view>
-				<view class="orde-name">陕西青旅|陕西西安</view>
-				<view class="order-ri">已取消</view>
-			</view>
-			<view class="order-con">
-				<view class="con-le">氙灯多地出发|暑假 马来西亚仙本那沙巴/吉隆坡7天5晚自由行 卡帕撒马布岛</view>
-				<view class="con-righ">￥3890</view>
-			</view>
-			<view class="order-con1">
-				<view class="con-left">团期:05/28(天)~06/05(三)</view>
-				<view class="con-right">
-					<span style="color: #000000;background: #FFD101;">无保险</span>
-					<span style="color: white;background: #EC6532;opacity: 0.8;">无合同</span>
-				</view>
-			</view>
-			<view class="order-con1">
-				<view class="con-left">人数:5人(3大2小)</view>
-			</view>
-			<view class="conbtn">
-				<view class="con-btn"><span>确认件</span></view>
-				<view class="con-btn"><span>签署合同</span></view>
-				<view class="con-btn"><span>购买保险</span></view>
-				<view class="con-btn"><span>支付</span></view>
-			</view>
-		</view>
-	</view>
-	<view class="bg">	</view>
-	<view class="state">
+	</block>
+	
+	<view class="bg" wx:if="{{web_show}}"></view>
+	<view class="state" wx:if="{{web_show}}">
 		<view class="state-name">
 			<view class="state-title">支付状态</view>
 			<view class="state-btn">
@@ -155,14 +102,47 @@
 		</view>
 		<view class="state-btn">
 			<view class="btn-left"><span>重置</span></view>
-			<view class="btn-right"><span>确认</span></view>
+			<view class="btn-right" bindtap="isShow"><span>确认</span></view>
 		</view>
 	</view>
-	<view class="none">
+<!-- 	<view class="none">
 		<view class="none-img">
 			<image src="../../image/paid.png"></image>
 		</view>
 		<view class="mnone-con">您还没有订单记录！</view>
+	</view> -->
+	<view style="width:100%;height:130rpx"></view>
+	<view class="navbar">
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
+			<view class="nav_img">
+				<image src="../../image/index-icon3.png"></image>
+			</view>
+			<view class="text this-text">微店</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/peer/peer">
+			<view class="nav_img">
+				<image src="../../image/index-icon4.png"></image>
+			</view>
+			<view class="text">同行</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
+			<view class="nav_img">
+				<image src="../../image/index-icon6.png"></image>
+			</view>
+			<view class="text">首页</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/order/order">
+			<view class="nav_img">
+				<image src="../../image/index-icon5.png" ></image>
+			</view>
+			<view class="text">订单</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/mine/mine">
+			<view class="nav_img">
+				<image src="../../image/index-icon7.png" ></image>
+			</view>
+			<view class="text">我的</view>
+		</view>
 	</view>
 </view>
 

@@ -1,6 +1,6 @@
 <view>
 	<view class="login">
-		<view class="login-name">登录</view>
+		<view class="login-name">注册</view>
 	</view>
 	<view class="login-title">
 		<view class="login-top">
@@ -13,16 +13,16 @@
 		<view class="login-cneter">
 			<view class="cen-top">手机号</view>
 			<view class="cen-inp">
-				<input type="text" placeholder="请输入手机号码" />
+				<input type="text" placeholder="请输入手机号码" value="{{web_submitData.phone}}"  data-key="phone" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="login-cneter">
 			<view class="cen-top">邀请码</view>
 			<view class="cen-inp">
-				<input type="text" placeholder="请输入邀请码" />
+				<input type="text" placeholder="请输入邀请码" value="{{web_submitData.invitationCode}}"  data-key="invitationCode" bindblur="inputChange"/>
 			</view>
 		</view>
-		<view class="login-btn"><span>注册</span></view>
+		<view class="login-btn" bindtap="register"><span>注册</span></view>
 	</view>
-	<view class="register">已有账号,<span bindtap="intoPath" data-path="/pages/login/login">去登录</span></view>
+	<view class="register">已有账号,<span bindtap="intoPathRedirect" data-path="/pages/login/login">去登录</span></view>
 </view>

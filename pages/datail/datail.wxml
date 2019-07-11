@@ -2,14 +2,14 @@
 	<view class="banner-box">
 		<swiper indicator-dots="{{indicatorDots}}" style="width:100%;height:100%" autoplay="{{autoplay}}" duration="{{duration}}"
 		 circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}">
-			<block class="swipera" wx:for="{{bannerImg}}">
+			<block class="swipera" wx:for="{{web_bannerImg}}">
 				<swiper-item>
 					<image src="{{item}}" style="width:100%;height:100%"></image>
 					<view class="banner-start">
 						<view class="start-title">西安出发</view>|
 						<view class="start-title">26564</view>
 					</view>
-					<view class="banner-num">1/5</view>
+					<view class="banner-num">{{index+1}}/{{web_bannerImg.length}}</view>
 				</swiper-item>
 			</block>
 		</swiper>
@@ -17,11 +17,11 @@
 	<view class="detail-info">
 		<view class="detail-info-top">
 			<view class="detail-info-price">
-				<view class="detail-price" style="font-size: 10pt;color: #A1A1A1;">市场价：<span class="money1" style="text-decoration: line-through;">¥1740/</span><span class="person">人起</span></view>
-				<view class="detail-price" style="font-size:12px;font-weight: 500;">结算价：<span class="money">¥1740/</span><span class="person">人起</span></view>
+				<view class="detail-price" style="font-size: 10pt;color: #A1A1A1;">市场价：<span class="money1" style="text-decoration: line-through;">¥{{web_mainData.mpriceOrigin}}/</span><span class="person">人起</span></view>
+				<view class="detail-price" style="font-size:12px;font-weight: 500;">结算价：<span class="money">¥{{web_mainData.tpriceOrigin}}/</span><span class="person">人起</span></view>
 			</view>
-			<view class="detail-id">[产品ID：] 4567 7887 4521</view>
-			<view class="detail-name">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机票浮潜</view>
+			<view class="detail-id">[产品ID：] {{web_mainData.id}}</view>
+			<view class="detail-name">{{web_mainData.lineName}}</view>
 		</view>
 	</view>
 	<view class="norm">
@@ -45,18 +45,18 @@
 		</view>
 		<view class="norm-title">
 			<view class="norm-name1">行程天数</view>
-			<view class="norm-data1">7天</view>
+			<view class="norm-data1">{{web_mainData.tripDays}}天</view>
 		</view>
 		<view class="norm-title">
 			<view class="norm-name1">目的地</view>
-			<view class="norm-data1">泰国、普吉岛</view>
+			<view class="norm-data1">{{web_mainData.endCity}}</view>
 		</view>
 	</view>
 	<view class="travel">
 		<view class="travel-title">
 			<view class="travel-name1">旅行社
 			<view class="title-line"></view></view>
-			<view class="travel-data2">陕西中国旅行社有限责任公司</view>
+			<view class="travel-data2">{{web_mainData.companyName}}</view>
 		</view>
 			<view class="travel-title">
 				<view class="travel-name1">优惠
@@ -66,7 +66,7 @@
 					<view class="dis-con">立减<span>10</span>%</view>
 				</view>
 			</view>
-		    <view class="travel-title">
+		    <view class="travel-title" bindtap="intoPath" data-path="/pages/discount/discount">
 				<view class="tarcel1">
 					<view class="discoun1"><span>用券</span></view>
 					
@@ -89,42 +89,43 @@
 		<view class="travel-title">
 			<view class="travel-name1">旅行社
 			<view class="title-line"></view></view>
-			<view class="travel-data2">领秀华夏</view>
+			<view class="travel-data2">{{web_mainData.companyName}}</view>
 		</view>
 		<view class="travel-title">
 			<view class="travel-name1">销售
 			<view class="title-line"></view></view>
-			<view class="travel-data2" style="text-align: center;">姬芮</view>
+			<view class="travel-data2" style="text-align: center;">{{web_mainData.sales[0].name}}</view>
 			<view class="travel-data3">
-				<view class="phone-num">18245086689</view>
+				<view class="phone-num">{{web_mainData.sales[0].phone}}</view>
 				<view class="phone">
 					<image src="../../image/right.png"></image>
 				</view>
 			</view>
 		</view>
 		<view class="select-group">
+			<view class="product-info-bottom">
+				<view class="title">
+					选择团期
+					<view class="title-line"></view>
+				</view>
+			</view>
 			<view class="product-info-bottom" style="border-bottom: none;">
-				<view class="start-level start-level-active">三星</view>
-				<view class="start-level">四星</view>
-				<view class="start-level">五星</view>
+				<block wx:for="{{web_mainData.classifys}}" wx:key="id">
+					<view class="start-level {{web_selectIndex==index?'start-level-active':''}}" bindtap="changeIndex" data-index="{{index}}">{{item.classifyName}}</view>
+				</block>
+				
+				<!-- <view class="start-level">四星</view>
+				<view class="start-level">五星</view> -->
 			</view>
 			<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx">
-				<view class="group-item">
-					<view class="group-date">06-08</view>
-					<view class="group-price">¥1740</view>
-				</view>
-				<view class="group-item">
-					<view class="group-date">06-08</view>
-					<view class="group-price">¥1740</view>
-				</view>
-				<view class="group-item">
-					<view class="group-date">06-08</view>
-					<view class="group-price">¥1740</view>
-				</view>
-				<view class="group-item">
-					<view class="group-date">06-08</view>
-					<view class="group-price">¥1740</view>
-				</view>
+				<block wx:for="{{web_mainData.classifys[web_selectIndex].prices}}" wx:if="{{index<4}}">
+					<view class="group-item">
+						<view class="group-date">{{item.groupDay}}</view>
+						<view class="group-price">¥{{item.mprice}}</view>
+					</view>
+				</block>
+				
+				
 				<view style="width:1px;height:88rpx;background: #E7E7E7;"></view>
 				<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte">
 					<span style="width:28px">更多团期</span>
@@ -323,7 +324,7 @@
 				</view>
 				<view class="place-title">收藏</view>
 			</view>
-			<view class="place1">
+			<view class="place1" bindtap="showPoster">
 				<view class="place-img">
 					<image src="../../image/pic.png"></image>
 				</view>
@@ -336,10 +337,10 @@
 	</view> 
 </view>
 <!-- 选择人数 -->
- <view class="choose">
+ <view class="choose" wx:if="{{web_show}}">
 	
 </view>
-<view class="choose1">
+<view class="choose1" wx:if="{{web_show}}">
 	<view class="cho-title">
 		选择出行人数
 	</view>
@@ -399,13 +400,13 @@
 		确定
 	</view>
 </view>
-<!-- <view class="posters">
-	
-</view>
-<view class="poster">
-		<image src="../../image/where.png"></image>
-		<view class="poster-icon">
-			<image src="../../image/close.png"></image>
-		</view>
-</view> -->
+	<view class="posters" wx:if="{{show_poster}}">
+		
+	</view>
+	<view class="poster" wx:if="{{show_poster}}">
+			<image src="{{web_mainData.posterPath}}"></image>
+			<view class="poster-icon" bindtap="showPoster">
+				<image src="../../image/close.png"></image>
+			</view>
+	</view>
 </view>

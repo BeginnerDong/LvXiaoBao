@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 39,
+			"current": 43,
 			"list": [
 				{
 					"id": -1,
@@ -308,6 +308,33 @@
 					"name": "认证成功",
 					"pathName": "pages/certification/certification",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品列表",
+					"pathName": "pages/productList/productList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/productDetail/productDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "同行产品详情",
+					"pathName": "pages/datail/datail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加客户",
+					"pathName": "pages/customer/customer",
 					"scene": null
 				}
 			]

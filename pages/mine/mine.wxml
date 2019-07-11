@@ -5,28 +5,28 @@
 	<view class="mine">
 		<view class="mine-top">
 			<view class="mine-img">
-				<image src="../../image/mine.jpg"></image>
+				<image src="{{web_mainData.pictureUrl}}"></image>
 			</view>
 			<view class="mine-name">
 				<view class="name-mine">
-					<view class="name-title">我叫MR</view>
-					<view class="name-con"><span>试用版</span></view>
+					<view class="name-title">{{web_mainData.name}}</view>
+					<view class="name-con"><span>{{web_mainData.versionMark}}</span></view>
 				</view>
-				<view class="mine-con">2019-05-20 到期</view>
+				<view class="mine-con">{{web_mainData.expireDate}} 到期</view>
 			</view>
 			<view class="mine-btn" bindtap="intoPath" data-path="/pages/vt/vt"><span>续费</span></view>
 		</view>
 		<view class="mine-bottom">
 			<view class="bottom-name" style="border-right: 1px solid #A1A1A1;">
-				<view class="bott">18</view>
+				<view class="bott">{{web_mainData.noConfirmOrderNum}}</view>
 				<view class="bott-con">未确认</view>
 			</view>
 			<view class="bottom-name" style="border-right: 1px solid #A1A1A1;">
-				<view class="bott">89</view>
+				<view class="bott">{{web_mainData.confirmOrderNum}}</view>
 				<view class="bott-con">已确认</view>
 			</view>
 			<view class="bottom-name">
-				<view class="bott">218</view>
+				<view class="bott">{{web_mainData.allOrderNum}}</view>
 				<view class="bott-con">全部订单</view>
 			</view>
 		</view>
@@ -40,7 +40,7 @@
 				</view>
 				<view class="ser-title">小宝钱包</view>
 			</view>
-			<view class="ser">
+			<view class="ser" bindtap="intoPath" data-path="/pages/discount/discount">
 				<view class="ser-img">
 					<image src="../../image/discount.png"></image>
 				</view>
@@ -71,7 +71,7 @@
 				<image src="../../image/right.png"></image>
 			</view>
 		</view>
-		<view class="reco-top">
+		<view class="reco-top" bindtap="bind">
 			<view class="remo-img">
 				<image src="../../image/mobile.png"></image>
 			</view>
@@ -109,18 +109,51 @@
 			</view>
 		</view>
 	</view>
-	 <view class="bg"></view>
-	<view class="bind">
+	 <view class="bg" wx:if="{{web_show}}"></view>
+	<view class="bind" wx:if="{{web_show}}">
 		<view class="bind-name">手机绑定</view>
 		<view class="bind-con">为了您的账户安全，请及时绑定手机号</view>
 		<view class="forget-inp">
-			<input type="text" placeholder="请输入手机号码"/>
+			<input type="submitItem" placeholder="请输入手机号码" value="{{web_submitData.phone}}"  data-key="phone" bindblur="inputChange"/>
 		</view>
 		<view class="forget-input">
-			<view class="text"><input type="text" placeholder="请输入验证码"/></view>
+			<view class="submitItem"><input type="text" placeholder="请输入验证码" value="{{web_submitData.code}}"  data-key="code" bindblur="inputChange"/></view>
 			<view class="gain"><span>获取验证码</span></view>
 		</view>
-		<view class="bind-btn"><span>绑定手机号</span></view>
+		<view class="bind-btn" bindtap="bindPhone"><span>绑定手机号</span></view>
 	</view> 
+	<view style="width:100%;height:130rpx"></view>
+	<view class="navbar">
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
+			<view class="nav_img">
+				<image src="../../image/index-icon3.png"></image>
+			</view>
+			<view class="text this-text">微店</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/peer/peer">
+			<view class="nav_img">
+				<image src="../../image/index-icon4.png"></image>
+			</view>
+			<view class="text">同行</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
+			<view class="nav_img">
+				<image src="../../image/index-icon6.png"></image>
+			</view>
+			<view class="text">首页</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/order/order">
+			<view class="nav_img">
+				<image src="../../image/index-icon5.png" ></image>
+			</view>
+			<view class="text">订单</view>
+		</view>
+		<view class="navbar_item">
+			<view class="nav_img">
+				<image src="../../image/index-icon7.png" ></image>
+			</view>
+			<view class="text">我的</view>
+		</view>
+	</view>
 </view>
 

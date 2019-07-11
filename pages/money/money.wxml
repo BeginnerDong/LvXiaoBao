@@ -7,7 +7,7 @@
 					<image src="../../image/visa.png"></image>
 				</view>
 			</view>
-			<view class="bala-cen">9968.30</view>
+			<view class="bala-cen">{{web_mainData.balancePrice}}</view>
 			<view class="bala-bottom">
 				<view class="bott-left">
 					<view class="bott-img">
@@ -15,7 +15,7 @@
 					</view>
 					<view class="bott-con">充值金额不支持提现</view>
 				</view>
-				<view class="bott-right">
+				<view class="bott-right" bindtap="intoPath" data-path="/pages/record/record">
 					<view class="right-con">交易记录</view>
 					<view class="right-img">
 						<image src="../../image/right.png"></image>
@@ -48,7 +48,7 @@
 				</view>
 				<view class="name-title">
 					<view class="name-con">总充值</view>
-					<view class="name-conter">1596.00</view>
+					<view class="name-conter">{{web_mainData.sumRechargePrice}}</view>
 				</view>
 			</view>
 			<view class="name">
@@ -57,7 +57,7 @@
 				</view>
 				<view class="name-title">
 					<view class="name-con">已支出</view>
-					<view class="name-conter">3258.00</view>
+					<view class="name-conter">{{web_mainData.sumOutlayPrice}}</view>
 				</view>
 			</view>
 		</view>
@@ -68,7 +68,7 @@
 				</view>
 				<view class="name-title">
 					<view class="name-con">余额</view>
-					<view class="name-conter">968.00</view>
+					<view class="name-conter">{{web_mainData.balancePrice}}</view>
 				</view>
 			</view>
 			<view class="name">
@@ -77,7 +77,7 @@
 				</view>
 				<view class="name-title">
 					<view class="name-con">未确认</view>
-					<view class="name-conter">386.00</view>
+					<view class="name-conter">{{web_mainData.sumNoConfirmPrice}}</view>
 				</view>
 			</view>
 		</view>

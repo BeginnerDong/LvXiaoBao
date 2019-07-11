@@ -37,12 +37,10 @@ page{
 }
 .product-info{
 	width:100%;
-	
-	height:400rpx;
 }
 .product-info-top{
 	width:94%;
-	height:300rpx;
+	
 	padding: 0 3%;
 	border-bottom: 1px solid #E7E7E7;
 	background: #fff;
@@ -99,6 +97,7 @@ page{
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
+	margin-bottom: 10rpx;
 }
 .product-info-bottom{
 	display: flex;

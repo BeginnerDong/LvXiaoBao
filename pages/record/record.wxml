@@ -10,64 +10,16 @@
 		<view class="reco-left">2019年06月</view>
 		<view class="reco-right">总计:5890.00</view>
 	</view>
-	<view class="recor">
-		<view class="reco-left">
-			<view class="left-name">充值-总部</view>
-			<view class="left-namea">2019-06-20 16:13:24</view>
+	<block wx:for="{{web_mainData}}" wx:key="id">
+		<view class="recor">
+			<view class="reco-left">
+				<view class="left-name">{{item.typeName}}-{{item.roleName}}-{{item.payTypeName}}</view>
+				<view class="left-namea">{{item.createdDate}}</view>
+			</view>
+			<view class="recor-right">{{item.listPrice}}</view>
 		</view>
-		<view class="recor-right">+200</view>
-	</view>
-	<view class="recor">
-		<view class="reco-left">
-			<view class="left-name">充值-个人-微信</view>
-			<view class="left-namea">2019-06-20 16:13:24</view>
-		</view>
-		<view class="recor-right">+1000</view>
-	</view>
-	<view class="recor">
-		<view class="reco-left">
-			<view class="left-name">充值-总部</view>
-			<view class="left-namea">2019-06-20 16:13:24</view>
-		</view>
-		<view class="recor-right">+600</view>
-	</view>
-	<view class="recor">
-		<view class="reco-left">
-			<view class="left-name">充值-总部</view>
-			<view class="left-namea">2019-06-20 16:13:24</view>
-		</view>
-		<view class="recor-right">+200</view>
-	</view>
-	<view class="reco">
-		<view class="reco-left">2019年05月</view>
-		<view class="reco-right">总计:5890.00</view>
-	</view>
-	<view class="recor">
-		<view class="reco-left">
-			<view class="left-name">充值-总部</view>
-			<view class="left-namea">2019-06-20 16:13:24</view>
-		</view>
-		<view class="recor-right">+600</view>
-	</view>
-	<view class="recor">
-		<view class="reco-left">
-			<view class="left-name">充值-个人-微信</view>
-			<view class="left-namea">2019-06-20 16:13:24</view>
-		</view>
-		<view class="recor-right">+800</view>
-	</view>
-	<view class="recor">
-		<view class="reco-left">
-			<view class="left-name">充值-总部</view>
-			<view class="left-namea">2019-06-20 16:13:24</view>
-		</view>
-		<view class="recor-right">+400</view>
-	</view>
-	<view class="recor">
-		<view class="reco-left">
-			<view class="left-name">充值-个人-微信</view>
-			<view class="left-namea">2019-06-20 16:13:24</view>
-		</view>
-		<view class="recor-right">+120</view>
-	</view>
+	</block>
+
+
+	
 </view>

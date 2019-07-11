@@ -1,8 +1,11 @@
 <view>
 	 <view class="couchar">
 		<view class="cou">充值金额</view>
-		<view class="couchar-inp">
-			<span>￥96|</span>
+		<view class="couchar-inp flex">
+			<view>¥ </view>
+			<view>
+					<input value="{{web_submitData.price}}"  data-key="price" bindblur="inputChange"></input>
+				</view>
 		</view>
 	</view>
 	<view class="set">
@@ -12,8 +15,8 @@
 				<image src="../../image/weixin.png"></image>
 			</view>
 			<view class="set-title">微信支付</view>
-			<view class="setimga">
-				<image src="../../image/complete.png"></image>
+			<view class="setimga" bindtap="changeType" data-type="101">
+				<image src="{{web_submitData.type==101?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
 		<view class="set-con">
@@ -21,12 +24,12 @@
 				<image src="../../image/bank.png"></image>
 			</view>
 			<view class="set-title" style="color: #A1A1A1;">银行转账</view>
-			<view class="setimga">
-				<image src="../../image/quan.png"></image>
+			<view class="setimga" bindtap="changeType" data-type="102">
+				<image src="{{web_submitData.type==102?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
 	</view>
-	<view class="cou-btn"><span>充值</span></view> 
+	<view class="cou-btn" bindtap="{{web_buttonCanClick?'submit':''}}"><span>充值</span></view> 
 	<!-- <view class="draw">
 		<view class="draw-top">支付宝账号(186*****807)</view>
 		<view class="draw-imga">

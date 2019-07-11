@@ -13,16 +13,16 @@
 		<view class="login-cneter">
 			<view class="cen-top">手机号</view>
 			<view class="cen-inp">
-				<input type="text" placeholder="请输入手机号码" />
+				<input type="text" placeholder="请输入手机号码" value="{{web_submitData.loginPhone}}"  data-key="loginPhone" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="login-cneter">
 			<view class="cen-top">密码</view>
 			<view class="cen-inp">
-				<input type="text" placeholder="请输入手机号码" />
+				<input type="text" placeholder="请输入手机号码" value="{{web_submitData.password}}"  data-key="password" bindblur="inputChange"/>
 			</view>
 		</view>
-		<view class="login-btn"><span>登录</span></view>
+		<view class="login-btn" bindtap="login"><span>登录</span></view>
 	</view>
 	<view class="pwd"><span bindtap="intoPath" data-path="/pages/pwd/pwd">忘记密码</span></view>
 </view>

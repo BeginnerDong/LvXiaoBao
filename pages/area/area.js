@@ -1,66 +1,90 @@
-// pages/area/area.js
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
+		isFirstLoadAllStandard: ['getMainData'],
+		show: false,
+		provinces:[],
+		mainData:[]
+	},
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+	onLoad(options) {
+		const self = this;
+		api.commonInit(self);
 
-  },
+		self.getMainData();
+		self.setData({
+			web_show: self.data.show
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+	getMainData() {
+		const self = this;
+		const postData = {
 
-  },
+		};
+		const callback = (res) => {
+			if (res.code == 200) {
+				self.data.mainData.push.apply(self.data.mainData,res.content.list)
+			}
+			self.setData({
+				web_mainData: self.data.mainData
+			})
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+			console.log('getMainData', self.data.mainData)
+		};
+		api.supperProvince(postData, callback);
+	},
+	
+	supperProvinceUpdate() {
+		const self = this;
+		const postData = {
+			provinces:self.data.provinces[0]
+		};
+		const callback = (res) => {
+			
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+			console.log('getMainData', self.data.mainData)
+		};
+		api.supperProvinceUpdate(postData, callback);
+	},
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+	select(e) {
+		const self = this;
+		
+		var index = api.getDataSet(e,'index');
+		var text = self.data.mainData[index];
+		var position = self.data.provinces.indexOf(text);
+		if (position >= 0) {
+			self.data.provinces.splice(position, 1);
+		} else {
+			self.data.provinces.push(text);
+		};	
+	},
 
-  },
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+	intoPathRedi(e) {
+		const self = this;
+		wx.navigateBack({
+			delta: 1
+		})
+	},
 
-  },
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

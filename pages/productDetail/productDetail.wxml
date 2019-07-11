@@ -2,11 +2,11 @@
 	<view class="banner-box">
 		<swiper indicator-dots="{{indicatorDots}}" style="width:100%;height:100%" autoplay="{{autoplay}}" duration="{{duration}}"
 		 circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}">
-			<block class="swipera" wx:for="{{bannerImg}}">
+			<block class="swipera" wx:for="{{web_bannerImg}}">
 				<swiper-item>
 					<image src="{{item}}" style="width:100%;height:100%"></image>
 					<view class="banner-start">西安出发</view>
-					<view class="banner-num">1/2</view>
+					<view class="banner-num">{{index+1}}/{{web_bannerImg.length}}</view>
 				</swiper-item>
 			</block>
 		</swiper>
@@ -14,13 +14,13 @@
 	<view class="product-info">
 		<view class="product-info-top">
 			<view class="product-info-price">
-				<view class="product-price">市场价：<span class="money">¥1460/</span><span class="person">人起</span></view>
+				<view class="product-price">市场价：<span class="money">¥{{web_mainData.mpriceOrigin}}/</span><span class="person">人起</span></view>
 				<view class="phone">
 					<image src="../../image/detail-icon3.png"></image>
 				</view>
 			</view>
-			<view class="product-id">[产品ID：] 4567 7887 4521</view>
-			<view class="product-name">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机票浮潜</view>
+			<view class="product-id">[产品ID：] {{web_mainData.id}}</view>
+			<view class="product-name">{{web_mainData.lineName}}</view>
 		</view>
 		<view class="product-info-bottom">
 			<view class="starand">产品标准</view>
@@ -49,32 +49,30 @@
 		<view class="product-info-bottom">
 			<view class="starand">出发地：</view>
 			<view style="display: flex;flex-wrap: wrap;width:70%">
-				<view class="explain-info">北京</view>
-				<view class="explain-info">天津</view>
-				<view class="explain-info">北京</view>
-				<view class="explain-info">天津</view>
-				<view class="explain-info">北京</view>
-				<view class="explain-info">天津</view>
-				<view class="explain-info">北京</view>
-				<view class="explain-info">天津</view>
+				<block wx:for="{{web_mainData.startCity}}">
+					<view class="explain-info">{{item}}</view>
+				</block>
+		
 			</view>
 
 		</view>
 		<view class="product-info-bottom">
 			<view class="starand">目的地：</view>
-			<view class="explain-info">曼谷普吉岛</view>
+			<block wx:for="{{web_mainData.endCity}}">
+				<view class="explain-info">{{item}}</view>
+			</block>
 		</view>
 		<view class="product-info-bottom">
 			<view class="starand">行程天数：</view>
-			<view class="explain-info">6天5晚</view>
+			<view class="explain-info">{{web_mainData.tripDays}}天{{web_mainData.tripDays-1}}晚</view>
 		</view>
 		<view class="product-info-bottom">
 			<view class="starand">交通方式：</view>
-			<view class="explain-info">去程飞机 返程飞机</view>
+			<view class="explain-info">去程{{web_mainData.goTraffic}} 返程{{web_mainData.backTraffic}}</view>
 		</view>
 		<view class="product-info-bottom">
 			<view class="starand">是否含购物：</view>
-			<view class="explain-info">含购物</view>
+			<view class="explain-info">{{web_mainData.isShopping}}</view>
 		</view>
 	</view>
 	<view class="select-group">
@@ -85,27 +83,22 @@
 			</view>
 		</view>
 		<view class="product-info-bottom" style="border-bottom: none;">
-			<view class="start-level start-level-active">三星</view>
-			<view class="start-level">四星</view>
-			<view class="start-level">五星</view>
+			<block wx:for="{{web_mainData.classifys}}" wx:key="id">
+				<view class="start-level {{web_selectIndex==index?'start-level-active':''}}" bindtap="changeIndex" data-index="{{index}}">{{item.classifyName}}</view>
+			</block>
+			
+			<!-- <view class="start-level">四星</view>
+			<view class="start-level">五星</view> -->
 		</view>
 		<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx">
-			<view class="group-item">
-				<view class="group-date">06-08</view>
-				<view class="group-price">¥1740</view>
-			</view>
-			<view class="group-item">
-				<view class="group-date">06-08</view>
-				<view class="group-price">¥1740</view>
-			</view>
-			<view class="group-item">
-				<view class="group-date">06-08</view>
-				<view class="group-price">¥1740</view>
-			</view>
-			<view class="group-item">
-				<view class="group-date">06-08</view>
-				<view class="group-price">¥1740</view>
-			</view>
+			<block wx:for="{{web_mainData.classifys[web_selectIndex].prices}}" wx:if="{{index<4}}">
+				<view class="group-item">
+					<view class="group-date">{{item.groupDay}}</view>
+					<view class="group-price">¥{{item.mprice}}</view>
+				</view>
+			</block>
+			
+			
 			<view style="width:1px;height:88rpx;background: #E7E7E7;"></view>
 			<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte">
 				<span style="width:28px">更多团期</span>

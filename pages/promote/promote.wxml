@@ -40,9 +40,9 @@
 		</view>
 		<view class="pro-num">
 			<view class="num">邀请码</view>
-			<view class="number">EC5216CD</view>
+			<view class="number">{{web_mainData.invitationCode}}</view>
 		</view>
-		<view class="poster"><span>生成推广海报</span></view>
+		<view class="poster" bindtap="showPoset"><span>生成推广海报</span></view>
 	</view>
 	<view class="pro" style="height: 280px;">
 		<view class="roname">
@@ -53,47 +53,47 @@
 		</view>
 		<view class="center">
 			<view class="cent-name">
-				<view class="bgs">100</view>
+				<view class="bgs">{{web_mainData.inviteNum}}</view>
 				<view class="ngbu">已邀请</view>
 			</view>
 			<view class="cent-name">
-				<view class="bgs">26</view>
+				<view class="bgs">{{web_mainData.successNum}}</view>
 				<view class="ngbu">已成功邀请</view>
 			</view>
 			<view class="cent-name">
-				<view class="bgs">500</view>
+				<view class="bgs">{{web_mainData.rewardPrice}}</view>
 				<view class="ngbu">获得奖励</view>
 			</view>
 		</view>
-		
-		<view class="poster" style="margin-top: 30px;"><span>生成推广海报</span></view>
+
+		<view class="poster" style="margin-top: 30px;" bindtap="intoPath" data-path="/pages/product/product"><span>查看详情</span></view>
 	</view>
-	 <view  class="builder"></view>
-	<view class="create">
+	<view class="builder" wx:if="{{web_show}}"></view>
+	<view class="create" wx:if="{{web_show}}">
 		<view class="cera">
 			<view class="img">
-				<image src="../../image/create.png"></image>
+				<image src="{{web_mainData.invitationUrl}}"></image>
 			</view>
 			<view class="create-name">
 				<view class="vr">邀请码</view>
-				<view class="vr">EC5216CD</view>
+				<view class="vr">{{web_mainData.invitationCode}}</view>
 			</view>
 		</view>
-		
-		<view class="close">
+
+		<view class="close" bindtap="showPoset">
 			<image src="../../image/close.png"></image>
 		</view>
-		
+
 	</view>
-	<view class="btn">
-		 <view class="save">
+	<view class="btn" wx:if="{{web_show}}">
+		<view class="save">
 			<view class="save-img">
 				<image src="../../image/sa.png"></image>
 			</view>
 		</view>
 		<view class="save-name">保存</view>
 	</view>
-	
-	
-	
+
+
+
 </view>

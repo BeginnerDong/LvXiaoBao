@@ -18,7 +18,7 @@ class Base {
 	request(params) {
 		var that = this;
 		getApp().globalData.buttonClick = true;
-		var baseRestUrl = 'https://gaokao.solelycloud.com/api/public/index.php/api/v1/';
+		var baseRestUrl = 'http://yapi.lxbtrip.cn/mock/19';
 		
 		var url = baseRestUrl + params.url;
 		const callback = (res) => {
@@ -50,6 +50,7 @@ class Base {
 			    'content-type': 'application/json',
 			    'token': wx.getStorageSync('token')
 			},*/
+			header:params.header,
 			success: function(res) {
 				// 判断以2（2xx)开头的状态码为正确
 				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
@@ -191,7 +192,8 @@ class Base {
 		wx.showLoading();
 		self.data.buttonCanClick = false;
 		self.data.mainData = [];
-		self.data.paginate = this.cloneForm(getApp().globalData.paginate);
+		self.data.number = this.cloneForm(getApp().globalData.number);
+		self.data.size = this.cloneForm(getApp().globalData.size);
 		self.data.isLoadAll = false;
 		self.setData({
 			fonts: getApp().globalData.font,
@@ -579,7 +581,7 @@ class Base {
 
 
 	clearPageIndex(self) {
-		self.data.paginate.currentPage = 1;
+		self.data.number = 1;
 		self.data.isLoadAll = false;
 		self.data.mainData = [];
 

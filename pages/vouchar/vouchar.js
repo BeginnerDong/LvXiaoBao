@@ -1,66 +1,92 @@
-// pages/vouchar/vouchar.js
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
+		isFirstLoadAllStandard: ['getMainData'],
+		type: 0,
+		mainData: [],
+		submitData: {
+			price: '',
+			type: ''
+		},
+		buttonCanClick: true
+	},
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+	onLoad(options) {
+		const self = this;
+	
+		self.setData({
+			web_buttonCanClick:self.data.buttonCanClick
+		})
+	},
 
-  },
+	changeType(e) {
+		const self = this;
+		var type = api.getDataSet(e, 'type');
+		if (self.data.submitData.type != type) {
+			self.data.submitData.type = type;
+			self.setData({
+				web_submitData: self.data.submitData
+			})
+		}
+	},
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+	submit() {
+		const self = this;
+		api.buttonCanClick(self, false);
 
-  },
+		const pass = api.checkComplete(self.data.submitData);
+		console.log('self.data.submitData', self.data.submitData)
+		if (pass) {
+			self.pay()
+		} else {
+			api.buttonCanClick(self, true);
+			api.showToast('请补全信息', 'none');
+		};
+	},
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+	pay() {
+		const self = this;
+		const postData = api.cloneForm(self.data.submitData)
 
-  },
+		const callback = (res) => {
+			api.showToast(res.message,'none')
+			api.buttonCanClick(self, true);
+		};
+		api.walletRecharge(postData, callback);
+	},
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'submitData');
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+	},
 
-  },
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+	intoPathRedi(e) {
+		const self = this;
+		wx.navigateBack({
+			delta: 1
+		})
+	},
 
-  },
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

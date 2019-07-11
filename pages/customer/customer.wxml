@@ -4,20 +4,25 @@
 		<view class="peo-name">
 			<view class="peo-con">姓名</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户姓名"/>
+				<input type="text" placeholder="填写客户姓名" value="{{web_mainData.name}}"  data-key="name" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">姓名备注</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户备注姓名"/>
+				<input type="text" placeholder="填写客户备注姓名" value="{{web_mainData.aliasName}}"  data-key="aliasName" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">客户级别</view>
 			<view class="peo-content">
 				<view class="card">
-					<input type="text" placeholder="选择客户级别"/>
+					
+					<picker bindchange="educationChange" value="{{index}}"  range="{{levelData}}" style="width:100%;">
+						<view style="font-size: 14px;color: #323232;">
+							{{levelData[web_index]?levelData[web_index]:'选择客户级别'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -25,20 +30,24 @@
 		<view class="peo-name">
 			<view class="peo-con">手机</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="选择客户级别"/>
+				<input type="text" placeholder="填写客户手机"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">备用手机</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户备注手机"/>
+				<input type="text" placeholder="填写客户备用手机"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">性别</view>
 			<view class="peo-content">
 				<view class="card">
-					<input type="text" placeholder="选择性别"/>
+					<picker bindchange="changeLevel" value="{{index}}"  range="{{sexData}}" style="width:100%;">
+						<view style="font-size: 14px;color: #323232;">
+							{{sexData[web_sexIndex]?sexData[web_sexIndex]:'选择客户级别'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -46,20 +55,24 @@
 		<view class="peo-name">
 			<view class="peo-con">出生日期</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="选择出生日期"/>
+				<input type="text" placeholder="选择出生日期" />
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">年龄</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户年龄"/>
+				<input type="text" placeholder="填写客户年龄" value="{{web_mainData.age}}"  data-key="age" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">区域</view>
 			<view class="peo-content">
 				<view class="card">
-					<input type="text" placeholder="选择客户区域"/>
+					<picker  mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+						<view style="color:#666;font-size:28rpx;">
+							{{web_region?web_region:'请选择客户区域'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -67,7 +80,7 @@
 		<view class="peo-name">
 			<view class="peo-con">详细地址</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="请与证件保持一致"/>
+				<input type="text" placeholder="请与证件保持一致" value="{{web_mainData.address}}"  data-key="address" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name" style="height: 100px;">
@@ -87,7 +100,11 @@
 			<view class="name">证件类型</view>
 			<view class="title-con">
 				<view class="con">
-					<input type="text" placeholder="身份证"/>
+					<picker bindchange="changeCard" value="{{index}}"  range="{{cardData}}" style="width:100%;">
+						<view style="font-size: 14px;color: #323232;">
+							{{cardData[web_cardIndex]?cardData[web_cardIndex]:'选择证件类别'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img">
 					<image src="../../image/right.png"></image>
@@ -97,7 +114,7 @@
 		<view class="basic-name">
 			<view class="name">证件号码</view>
 			<view class="title">
-				<input type="text" placeholder="填写证件号码"/>
+				<input type="text" placeholder="填写证件号码" />
 			</view>
 		</view>
 		<view class="basic-name">
@@ -113,7 +130,7 @@
 			</view>
 		</view>
 	</view>
-	<view class="basic-btn">
+	<view class="basic-btn" bindtap="submit">
 		<view class="basi-name">保存</view>
 	</view>
 </view>

@@ -10,102 +10,57 @@ const token = new Token();
 
 Page({
 	data: {
-
+		isFirstLoadAllStandard:['getMainData'],
+		show:false
 	},
 
 	onLoad(options) {
 		const self = this;
-		self.getMainData()
-	},
-
-	getMainData() {
-		wx.request({
-			url: 'http://yapi.lxbtrip.cn/mock/19/mshop/v1/{id}/product/{pId}',
-			data: {
-				id:1,
-				pId:100
-			},
-			method: 'get',
-			/*header: {
-			    'content-type': 'application/json',
-			    'token': wx.getStorageSync('token')
-			},*/
-			success: function(res) {
-				// 判断以2（2xx)开头的状态码为正确
-				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
-				
-			},
-			fail: function(err) {
-
-				wx.showToast({
-					title: '网络故障',
-					icon: 'fail',
-					duration: 2000,
-					mask: true,
-				});
-				getApp().globalData.buttonClick = false;
-			}
-		});
-	},
-
-	onPullDownRefresh() {
-		const self = this;
-		wx.showNavigationBarLoading();
-		self.getMainData(true)
-
-	},
-
-	tab(e) {
-		const self = this;
-		api.buttonCanClick(self);
-		var currentId = api.getDataSet(e, 'id');
-		if (currentId == 0) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['招生政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 1) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['批次录取政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 2) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['加分政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		}
+		api.commonInit(self);
+		self.getMainData();
 		self.setData({
-			currentId: api.getDataSet(e, 'id')
-		});
-		self.getMainData(true);
+			web_show:self.data.show
+		})
+	},
+	
+	isShow(){
+		const self = this;
+		self.data.show = !self.data.show;
+		self.setData({
+			web_show:self.data.show
+		})
 	},
 
+	getMainData(isNew) {
+		const self = this;
+		if (isNew) {
+			api.clearPageIndex(self);
+		};
+		const postData = {
+			number:api.cloneForm(self.data.number),
+			size:api.cloneForm(self.data.size),
+		};
+		
+		const callback = (res) => {
+			if(res.content.list.length>0){
+				self.data.mainData.push.apply(self.data.mainData,res.content.list)
+			}else{
+				self.data.isLoadAll = true
+			};
+			self.setData({
+				web_mainData:self.data.mainData
+			})
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+			console.log('getMainData', self.data.mainData)
+		};
+		api.suppliers(postData, callback);
+	},
+
+	
 	onReachBottom() {
 		const self = this;
 		if (!self.data.isLoadAll && self.data.buttonCanClick) {
-			self.data.paginate.currentPage++;
+			self.data.number++;
 			self.getMainData();
 		};
 	},

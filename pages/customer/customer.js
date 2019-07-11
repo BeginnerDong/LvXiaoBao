@@ -1,66 +1,128 @@
-// pages/customer/customer.js
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
+		isFirstLoadAllStandard: ['getMainData'],
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+		submitData: {
+			name: '',
+			aliasName: '',
+			grade: '',
+			phone: '',
+			otherPhone: '',
+			sex: '',
+			age: '',
+			birth: '',
+			country: '',
+			province: '',
+			city: '',
+			district: '',
+			address: '',
+			tags: '',
+			isBlacklist: '',
+			isCredit: '',
+			cards: [],
+			id: ''
+		},
+		region: '',
+	},
 
-  },
+	onLoad(options) {
+		const self = this;
+		self.setData({
+			web_region:self.data.region
+		})
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+	},
 
-  },
+	bindRegionChange(e) {
+		const self = this;
+		console.log('picker发送选择改变，携带值为', e.detail.value)
+		self.data.region = e.detail.value.join('');
+		self.data.submitData.province = e.detail.value[0];
+		self.data.submitData.city = e.detail.value[1];
+		self.data.submitData.district = e.detail.value[2];
+		this.setData({
+			web_region: self.data.region
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
-  },
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'submitData');
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+	},
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
-  },
+	addTraveler() {
+		const self = this;
+		const postData = {};
+		postData.token = wx.getStorageSync('token');
+		postData.data = {};
+		postData.data = api.cloneForm(self.data.submitData);
+		const callback = (data) => {
+			if (data) {
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+				api.dealRes(data);
+				if (data.solely_code == 100000) {
+					setTimeout(function() {
+						wx.navigateBack({
+							delta: 1
+						});
+					}, 300);
+				}
+			};
 
-  },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+		};
+		api.addTraveler(postData, callback);
+	},
 
-  },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+	submit() {
+		const self = this;
 
-  },
+		var phone = self.data.submitData.phone;
+		const pass = api.checkComplete(self.data.submitData);
+		console.log('self.data.submitData', self.data.submitData)
+		if (pass) {
+			self.addTraveler()
+		} else {
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+			api.showToast('请补全信息', 'none');
 
-  }
+		};
+	},
+
+
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
+
+	intoPathRedi(e) {
+		const self = this;
+		wx.navigateBack({
+			delta: 1
+		})
+	},
+
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
+
 })

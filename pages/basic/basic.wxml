@@ -1,9 +1,9 @@
 <view>
-	<!-- <view class="top">
+	<view class="top">
 		<view class="basic">基本信息</view>
 		<view class="travel">出游信息</view>
 	</view>
-	<view class="basici">
+	<view class="basici" wx:if="{{web_num==1}}">
 		<view class="basic-name">
 			<view class="name">姓名</view>
 			<view class="title">赵凯旋</view>
@@ -103,13 +103,13 @@
 			</view>
 		</view>
 		<view class="basic-btn">
-			<view class="basi-name">+添加新标签</view>
+			<view class="basi-name">+添加证件</view>
 		</view>
-	</view> -->
-	<!-- <view class="btn">
+	</view>	
+	<view class="btn">
 		<span>保存</span>
-	</view> -->
-	<view class="travela">
+	</view>
+	<view class="travela" wx:if="{{web_num==2}}">
 		<view class="tarcel-top">
 			<view class="top-left">
 				<view class="num">6</view>

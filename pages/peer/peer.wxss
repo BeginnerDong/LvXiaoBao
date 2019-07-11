@@ -185,7 +185,7 @@ page {
 	padding-top: 3px;
 	padding-left:7%;
 }
-.title-line{
+/* .title-line{
 	width:16px;
 	height:3px;
 	background:rgba(255,209,1,1);
@@ -195,7 +195,7 @@ page {
 	z-index:-1;
 	left: 0;
 	margin-left:7%;
-}
+} */
 .choose{
 	display: flex;
 	justify-content: flex-start;
@@ -233,68 +233,4 @@ page {
 	margin-left: 24rpx;
 	margin-top: 10rpx;
 	
-}
-.plate{
-	width:87%;
-	margin: 0 auto;
-	background: #fff;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	border-radius:12px;
-	height:300rpx;
-	margin-top: 24rpx;
-	padding: 3%;
-	z-index: 888;
-}
-.plate-top{
-	height:120rpx;
-	z-index: 888;
-}
-.qian image{
-	width:40rpx;
-	height:40rpx
-}
-
-.zhuying{
-	width:72px;
-	height:20px;
-	text-align: center;
-	margin-top: 2%;
-	border-right: 1px solid #323232;
-}
-.city{
-	width:72px;
-	height:20px;
-	text-align: center;
-	margin-top: 2%;
-}
-.product{
-	width: 60%;
-}
-.product-right{
-	width: 200rpx;
-	height: 30rpx;
-	border-radius: 15rpx;
-	background: #FFD101;
-	line-height: 30rpx;
-	padding-left: 5%;
-	padding-bottom: 1%;
-}
-
-.plate-middle{
-	margin-top: 5%;
-	height:160rpx;
-}
-.plate-bottom{
-	width:100%;
-	height:120rpx
-}
-.plate-bottom-item{
-	width:33.3%
-}
-.plate-bottom-item span{
-	color: #EC6532;
-}
-.plate-bottom-item image{
-	width:32rpx;
-	height:32rpx
 }
