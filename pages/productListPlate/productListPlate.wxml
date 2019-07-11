@@ -1,0 +1,378 @@
+@@ -1,23 +1,24 @@
+<view>
+	<view class="top">
+			<view class="search">
+				<input placeholder="关键字搜索 如：巴厘岛5日游" />
+				<view class="searchBtn" bindtap="intoPath" data-path="/pages/search/search">
+					<image src="../../image/index-icon2.png" ></image>
+				</view>
+		<view class="search">
+			<input placeholder="关键字搜索 如：巴厘岛5日游" />
+			<view class="searchBtn">
+				<image src="../../image/search.png" />
+			</view>
+		</view>
+
+	</view>
+	<view class="nav">
+		<view class="nav-item">
+			<view class="nav-left">
+				<span>推荐排序</span>
+			</view>
+			<view class="nav-img" >
+				<image src="../../image/down.png" style="border: 1px dashed #A1A1A1;"></image>
+			<view class="nav-img">
+				<image src="../../image/down.png"></image>
+			</view>
+		</view>
+		<view class="nav-item">
+			<view class="nav-left1">
+			<view class="nav-left">
+				<span>全部筛选</span>
+			</view>
+			<view class="nav-img">
+@ -25,257 +26,133 @@
+			</view>
+		</view>
+	</view>
+<view class="plate" bindtap="intoPath" data-path="/pages/datail/datail">
+		<view class="plate-top flex">
+			<view style="width:100%">
+				<view class="flex-align">
+					<view class="color1 font12">[产品ID:]4567 7887 4521</view>
+				</view>
+				<view class="font14 color1 bold-font" style="margin-top:16rpx;">西安等多地出发|暑假 马来西亚仙本那杀/吉隆坡7天5晚自由行 卡帕莱马布岛旅</view>
+			</view>			
+		</view>
+		<view class="plate-middle">
+			<view class="flex-align" style="margin-top: 14rpx;">
+				<view class="product flex">
+					<view class="product-img">
+						<image src="../../image/1.png"></image>
+	<block wx:for="{{web_mainData}}" wx:key="id">
+		<view class="plate" bindtap="intoPath" data-path="/pages/datail/datail">
+			<view class="plate-top flex">
+				<view style="width:100%">
+					<view class="flex-align">
+						<view class="color1 font12">[产品ID:]{{item.id}}</view>
+					</view>
+					<view class="zhuying font14 color1">领袖华夏</view>
+					<view class="font14 color1 city">陕西·西安</view>
+				</view>
+				<view class="product-right">
+					<span class="font12">出发城市:西安</span>
+				</view>
+			</view>
+		<view class="plate-bottom flex-align">
+			<view class="plate-bottom-item flex-all">
+				<view class="font13 color2" style="margin-left: 18rpx;"><span>￥1740/</span>人起</view>
+			</view>
+			<view class="plate-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon3.png" />
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+			</view>
+			<view class="plate-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon4.png" />
+					<view class="font14 color1 bold-font" style="margin-top:16rpx;">{{item.lineName}}</view>
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="plate">
+		<view class="plate-top flex">
+			<view style="width:100%">
+				<view class="flex-align">
+					<view class="color1 font12">[产品ID:]4567 7887 4521</view>
+				</view>
+				<view class="font14 color1 bold-font" style="margin-top:16rpx;">马来西亚沙巴旅游5-7天酒店机票专车接送亲子蜜月自由行送旅拍</view>
+			</view>			
+		</view>
+		<view class="plate-middle">
+			<view class="flex-align" style="margin-top: 14rpx;">
+				<view class="product flex">
+					<view class="product-img">
+						<image src="../../image/1.png"></image>
+			<view class="plate-middle">
+				<view class="flex-align" style="margin-top: 14rpx;">
+					<view class="product flex">
+						<view class="product-img">
+							<image src="../../image/1.png"></image>
+						</view>
+						<view class="zhuying font14 color2">{{item.brandName}}</view>
+						<view class="font14 color2 city">{{item.province}}·{{item.city}}</view>
+					</view>
+					<view class="product-right">
+						<span class="font12">出发城市:{{item.startCity}}</span>
+					</view>
+					<view class="zhuying font14 color1">领袖华夏</view>
+					<view class="font14 color1 city">陕西·西安</view>
+				</view>
+				<view class="product-right">
+					<span class="font12">出发城市:西安</span>
+				</view>
+			</view>
+		<view class="plate-bottom flex-align">
+			<view class="plate-bottom-item flex-all">
+				<view class="font13 color2" style="margin-left: 18rpx;"><span>￥2580/</span>人起</view>
+			</view>
+			<view class="plate-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon3.png" />
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+			</view>
+			<view class="plate-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon4.png" />
+				<view class="plate-bottom flex-align">
+					<view class="plate-bottom-item flex-all">
+						<view class="font13 color2" style="margin-left: 18rpx;"><span>￥{{item.tpriceOrigin}}/</span>人起</view>
+					</view>
+					<view class="plate-bottom-item flex-all">
+						<view class="flex-all">
+							<image src="../../image/peer-icon3.png" />
+						</view>
+						<view class="font13 color2" style="margin-left: 18rpx;">{{item.likeNum}}</view>
+					</view>
+					<view class="plate-bottom-item flex-all">
+						<view class="flex-all">
+							<image src="../../image/peer-icon4.png" />
+						</view>
+						<view class="font13 color2" style="margin-left: 18rpx;">{{item.lookNum}}</view>
+					</view>
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+			</view>
+		</view>
+	</block>
+	
+
+	<view class="screen" wx:if="{{web_show}}">
+
+	</view>
+</view>
+<view class="plate">
+		<view class="plate-top flex">
+			<view style="width:100%;z-index: 888;">
+				<view class="flex-align">
+					<view class="color1 font12">[产品ID:]4567 7887 4521</view>
+				</view>
+				<view class="font14 color1 bold-font" style="margin-top:16rpx;">马来西亚沙巴旅游5-7天酒店机票专车接送亲子蜜月自由行送旅拍</view>
+			</view>			
+		</view>
+		<view class="plate-middle">
+			<view class="flex-align" style="margin-top: 14rpx;">
+				<view class="product flex">
+					<view class="product-img">
+						<image src="../../image/1.png"></image>
+					</view>
+					<view class="zhuying font14 color1">领袖华夏</view>
+					<view class="font14 color1 city">陕西·西安</view>
+	<view class="scree" wx:if="{{web_show}}">
+		<view class="screen-top">
+			<view class="screen-title">线路
+				<view class="title-line"></view>
+			</view>
+			<view class="choose">
+				<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
+					海南专线
+				</view>
+				<view class="product-right">
+					<span class="font12">出发城市:西安</span>
+				<view class="choose-item">
+					云南专线
+				</view>
+			</view>
+		<view class="plate-bottom flex-align">
+			<view class="plate-bottom-item flex-all">
+				<view class="font13 color2" style="margin-left: 18rpx;"><span>￥2580/</span>人起</view>
+			</view>
+			<view class="plate-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon3.png" />
+				<view class="choose-item">
+					贵州专线
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+			</view>
+			<view class="plate-bottom-item flex-all">
+				<view class="flex-all">
+					<image src="../../image/peer-icon4.png" />
+				<view class="choose-item">
+					港澳专线
+				</view>
+				<view class="font13 color2" style="margin-left: 18rpx;">1000</view>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- <view class="sorting" wx:if="is_show">
+	<view class="sorting-sort">
+			<view class="sort1">
+				<view class="sort">
+					<span>推荐排序</span>
+				<view class="choose-item">
+					桂林专线
+				</view>
+				<view class="sort-img">
+					<image src="../../image/detail-icon2.png"></image>
+				<view class="choose-item">
+					四川专线
+				</view>
+			</view>
+			<view class="sort-title">价格从低到高</view>
+			<view class="sort-title">价格从低到高</view>
+		</view>
+</view> -->
+<view class="screen">
+		
+	</view>
+	<view class="scree">
+		<view class="screen-top">
+			<view class="screen-title">线路
+			<view class="title-line"></view></view>
+			<view class="choose">
+					<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
+						海南专线
+					</view>
+					<view class="choose-item">
+						云南专线
+					</view>
+					<view class="choose-item">
+						贵州专线
+					</view>
+					<view class="choose-item">
+						港澳专线
+					</view>
+					<view class="choose-item">
+						桂林专线
+					</view>
+					<view class="choose-item">
+						四川专线
+					</view>
+			</view>
+		</view>
+		<view class="screen-top">
+			<view class="screen-title">金额
+			<view class="title-line"></view></view>
+				<view class="title-line"></view>
+			</view>
+			<view class="choose">
+				<view class="choose-in">
+					<input type="text" placeholder="最低金额"/>
+					<input type="text" placeholder="最低金额" />
+				</view>
+				<view class="line">
+					<span></span>
+				</view>
+				<view class="choose-in">
+					<input type="text" placeholder="最高金额"/>
+					<input type="text" placeholder="最高金额" />
+				</view>
+			</view>
+			<view class="choose">
+					<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
+						￥200以上
+					</view>
+					<view class="choose-item">
+						￥1000以上
+					</view>
+					<view class="choose-item">
+						￥5000以上
+					</view>
+				<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
+					￥200以上
+				</view>
+				<view class="choose-item">
+					￥1000以上
+				</view>
+				<view class="choose-item">
+					￥5000以上
+				</view>
+			</view>
+		</view>
+		<view class="screen-top1">
+			<view class="screen-title">品质
+			<view class="title-line"></view></view>
+				<view class="title-line"></view>
+			</view>
+			<view class="choose">
+					<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
+						半自助
+					</view>
+					<view class="choose-item">
+						跟团游
+					</view>
+					<view class="choose-item">
+						自由行
+					</view>
+				<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;">
+					半自助
+				</view>
+				<view class="choose-item">
+					跟团游
+				</view>
+				<view class="choose-item">
+					自由行
+				</view>
+			</view>
+		</view>
+		<view class="bottom">
+			<view class="choose">
+					<view class="choose-item1" style="color: #A1A1A1;background: #F2F2F2;">
+						重置
+						
+					</view>
+					<view class="choose-item1" style="color: #323232;background: #FFD101;">
+						确认
+					</view>
+				<view class="choose-item1" style="color: #A1A1A1;background: #F2F2F2;">
+					重置
+
+				</view>
+				<view class="choose-item1" style="color: #323232;background: #FFD101;">
+					确认
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
