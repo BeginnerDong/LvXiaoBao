@@ -18,7 +18,7 @@
 							<image src="../../image/peer-icon6.png"></image>
 						</view>
 					</view>
-					<view class="font15 color1" style="margin-top:16rpx;">{{item.companyName}}</view>
+					<view class="font15 color1 bold-font" style="margin-top:16rpx;">{{item.companyName}}</view>
 				</view>
 				<view style="width:20%" class="flex-all" bindtap="intoPath" data-path="/pages/salers/salers">
 					<view class="phone">
@@ -29,7 +29,7 @@
 			<view class="peer-middle" bindtap="intoPath" data-path="/pages/productListPlate/productListPlate">
 				<view class="flex-align" style="margin-top: 14rpx;">
 					<view class="zhuying font14 color1 bold-font">主营业务</view>
-					<view class="font14 color1">{{item.businessTypeName}}</view>
+					<view class="font14 color1" style="margin-top: 5px;margin-left: 2%;">{{item.businessTypeName}}</view>
 				</view>
 				<view class="font14 color1" style="margin-top: 16rpx;">海南专线/北京专线/桂林专线/华东专线/普吉专线/巴黎专线/泰国专线/日韩专线/欧洲专线...</view>
 			</view>
@@ -60,7 +60,7 @@
 			<view class="plate-top flex">
 				<view style="width:100%">
 					<view class="flex-align">
-						<view class="color1 font12">[产品ID:]{{item.id}}</view>
+						<view class="color1 font12" style="margin-left: 3%;">[产品ID:]{{item.id}}</view>
 					</view>
 					<view class="font14 color1 bold-font" style="margin-top:16rpx;">{{item.lineName}}</view>
 				</view>
@@ -71,26 +71,26 @@
 						<view class="product-img">
 							<image src="../../image/1.png"></image>
 						</view>
-						<view class="zhuying font14 color2">{{item.brandName}}</view>
-						<view class="font14 color2 city">{{item.province}}·{{item.city}}</view>
+						<view class="zhuy font14 color2" style="margin-left: 2%;">{{item.brandName}}</view><span class='line'></span>
+						<view class="font14 color2 city avoidOverflow">{{item.province}}·{{item.city}}</view>
 					</view>
-					<view class="product-right">
-						<span class="font12">出发城市:{{item.startCity}}</span>
+					<view class="product-right avoidOverflow">
+						<span class="font12 ">出发城市:{{item.startCity}}</span>
 					</view>
 				</view>
 				<view class="plate-bottom flex-align">
 					<view class="plate-bottom-item flex-all">
-						<view class="font13 color2" style="margin-left: 18rpx;"><span>￥{{item.tpriceOrigin}}/</span>人起</view>
+						<view class="font13 color2" style="margin-left: 18rpx;"><span style='font-size: 18px;'>￥{{item.tpriceOrigin}}/</span>人起</view>
 					</view>
 					<view class="plate-bottom-item flex-all">
 						<view class="flex-all">
-							<image src="../../image/peer-icon3.png" />
+							<image src="../../image/xing.png" />
 						</view>
 						<view class="font13 color2" style="margin-left: 18rpx;">{{item.likeNum}}</view>
 					</view>
 					<view class="plate-bottom-item flex-all">
 						<view class="flex-all">
-							<image src="../../image/peer-icon4.png" />
+							<image src="../../image/yan.png" />
 						</view>
 						<view class="font13 color2" style="margin-left: 18rpx;">{{item.lookNum}}</view>
 					</view>

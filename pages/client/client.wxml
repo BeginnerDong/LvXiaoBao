@@ -1,7 +1,7 @@
 <view>
 	<view class="top">
 		<view class="search">
-			<input placeholder="关键字搜索 如：巴厘岛5日游" />
+			<input placeholder="关键字搜索 如：赵学刚 海南专线" />
 			<view class="searchBtn">
 				<image src="../../image/search.png" />
 			</view>
@@ -9,7 +9,8 @@
 
 	</view>
 	<view class="client">
-		<view class="client-name" style="background: none;">黑名单</view>
+		<view class="client-name" style="background: none;">黑名单
+		<view class="title-line"></view></view>
 		<view class="client-img">
 			<image src="../../image/right.png"></image>
 		</view>

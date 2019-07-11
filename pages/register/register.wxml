@@ -1,7 +1,5 @@
 <view>
-	<view class="login">
-		<view class="login-name">注册</view>
-	</view>
+	<view class="bg"></view>
 	<view class="login-title">
 		<view class="login-top">
 			<view class="login-logo">logo</view>

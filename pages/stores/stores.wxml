@@ -32,13 +32,14 @@
 		</view>
 	</view>
 	<view class="peo-name">
-		<view class="peo-con">座机</view>
+		<view class="peo-con" style="margin-left: 2%;">座机</view>
 		<view class="peo-content1">
 			<input type="text" placeholder="填写旅行社座机号码"/>
 		</view>
 	</view>
 	<view class="detail">
-		<view class="detail-name">认证说明</view>
+		<view class="detail-name">认证说明
+		<view class="title-line"></view></view>
 		<view class="detail-con" style="margin-top: 10px;">1、门店认证后在系统使用期内不能变更，如需变更只能重新
 开通账号后变更</view>
 <view class="detail-con">2、如果旅行社企业名录中找不到要认证的企业请联系系统客

@@ -32,7 +32,8 @@
 		</view>
 	</view>
 	<view class="service">
-		<view class="ser-name">您的服务</view>
+		<view class="ser-name">您的服务
+		<view class="title-line"></view></view>
 		<view class="serve-con" >
 			<view class="ser">
 				<view class="ser-img" bindtap="intoPath" data-path="/pages/money/money">

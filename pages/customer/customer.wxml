@@ -1,6 +1,7 @@
 <view>
 	<view class="custom">
-		<view class="custom-name">身份信息</view>
+		<view class="custom-name">身份信息
+		<view class="title-line"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">姓名</view>
 			<view class="peo-content1">
@@ -95,7 +96,8 @@
 		<view class="cust" bindtap="intoPath" data-path="/pages/labels/labels">+添加新标签</view>
 	</view>
 	<view class="type">
-		<view class="type-name">证件信息</view>
+		<view class="type-name">证件信息
+		<view class="title-line"></view></view>
 		<view class="basic-name">
 			<view class="name">证件类型</view>
 			<view class="title-con">
@@ -129,6 +131,7 @@
 				<image src="../../image/caram.png"></image>
 			</view>
 		</view>
+		<view class="cust" >+添加证件</view>
 	</view>
 	<view class="basic-btn" bindtap="submit">
 		<view class="basi-name">保存</view>

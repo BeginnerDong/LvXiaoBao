@@ -59,11 +59,26 @@
 	width: 90%;
 	color: #323232;
 	opacity: 1;
-	font-weight: 600;
 	font-size: 16pt;
 	height: 50px;
 	line-height: 50px;
 	padding-left: 3%;
+	font-weight: 600;
+	font-family:PingFang-SC-Bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	border-bottom: 1px solid #E7E7E7;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:4%;
+	bottom: 12px;
 }
 .client-img{
 	width: 10%;
@@ -73,7 +88,6 @@
 .client-img image{
 	width: 15px;
 	height: 15px;
-	border: 1px dashed #000000;
 }
 .client-name{
 	width: 100%;
@@ -143,7 +157,6 @@
 .right-img image{
 	width: 20px;
 	height: 20px;
-	border: 1px dashed #000000;
 }
 .right{
 	width: 100%;
@@ -153,6 +166,7 @@
 	position: fixed;
 	top: 85%;
 	left: 80%;
+	z-index: 222;
 }
 .add image{
 	width: 70px;
@@ -170,7 +184,7 @@
 	width: 100%;
 	height: 20%;
 	display: flex;
-	background: #E7E7E7;
+	background: #FFFFFF;
 	position: fixed;
 	bottom: 0;
 }
@@ -181,13 +195,15 @@
 	text-align: center;
 }
 .dd-name{
-	width: 48px;
-	height: 48px;
+	width: 50px;
+	height: 50px;
 	background: #FFD101;
 	border-radius: 50%;
 	text-align: center;
-	line-height: 48px;
+	line-height: 50px;
 	margin-left: 30%;
+	margin-top: 10px;
+	padding-top: 3%;
 }
 .dd-name image{
 	width: 20px;
@@ -198,8 +214,7 @@
 	height: 30px;
 	text-align: center;
 	color: #323232;
-	opacity: 0.6;
-	margin-top: 20px;
+	margin-top: 10px;
 	font-size: 12px;
 	font-weight:500;
 }

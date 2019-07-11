@@ -1,62 +1,61 @@
+page{
+	background: #E7E7E7;
+}
 .logo{
 	width: 90%;
 	height: 500px;
 	border-radius: 10px;
 	margin-left: 5%;
-	background: #DBDBDB;
+	background: #FFFFFF;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	margin-top: 20px;
-}
-.login{
-	width: 100%;
-	height: 30px;
-	padding: 5%;
-	color: #FFFFFF;
-	font-size: 20px;
-	text-align: center;
 }
 .login-title{
 	width: 100%;
 	height: 200px;
 }
 .forget{
-	width: 100%;
+	width: 90%;
 	height: 40px;
 	color: #262628;
 	font-size: 20px;
-	padding-left: 3%;
+	margin-left: 5%;
+	line-height: 40px;
+	margin-top: 20px;
 }
 .forget-inp{
-	width: 100%;
+	width: 90%;
 	height: 40px;
-	
+	margin-left: 5%;
+	line-height: 40px;
+	margin-top: 20px;
 }
 .forget-inp input{
 	width: 90%;
 	height: 40px;
 	padding-left: 5%;
-	font-size: 10pt;
+	font-size: 14px;
 	border-radius: 20px;
 	background: #F4F3F3;
-	line-height: 30px;
+	line-height: 40px;
 	margin-left: 2%;
 }
 .forget-input{
-	width: 100%;
+	width: 90%;
 	height: 40px;
 	display: flex;
 	margin-top: 20px;
-	margin-left: 2%;
+	margin-left: 7%;
 }
 .text{
-	width: 65%;
+	width: 55%;
 	height: 40px;
 }
 .text input{
-	width: 300px;
+	width: 270px;
 	height: 40px;
 	padding-left: 5%;
-	font-size: 10pt;
+	font-size: 14px;
 	border-radius: 20px;
 	background: #F4F3F3;
 	line-height: 30px;
@@ -70,7 +69,9 @@
 }
 .gain span{
 	background: #F4F3F3;
-	font-size: 10pt;
+	font-size: 15px;
+	color: #A1A1A1;
+	
 }
 .forget-btn{
 	width: 100%;
@@ -81,11 +82,12 @@
 	width: 300px;
 	height: 50px;
 	display: inline-block;
-	background: #FFC900;
+	background:linear-gradient(90deg,rgba(255,201,0,1) 0%,rgba(255,227,0,1) 100%);
 	color: #323232;
 	font-size: 17px;
 	text-align: center;
 	line-height: 50px;
 	border-radius: 30px;
 	margin-left: 5%;
+	font-weight: bold;
 }

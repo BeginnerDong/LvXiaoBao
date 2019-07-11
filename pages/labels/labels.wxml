@@ -13,7 +13,8 @@
 			</view>
 	</view>
 	<view class="all-nav">
-		<view class="nav-top">所有标签</view>
+		<view class="nav-top">所有标签
+		<view class="title-line"></view></view>
 		<view class="nav-center">
 			<view class="nav-item">老人</view>
 			<view class="nav-item">优质客户</view>
@@ -24,4 +25,5 @@
 			<view class="nav-item">来电咨询过</view>
 		</view>
 	</view>
+	<view class="add"><span>确定</span></view>
 </view>

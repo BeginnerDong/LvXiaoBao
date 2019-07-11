@@ -2,7 +2,7 @@
 	<view class="set" bindtap="intoPath" data-path="/pages/theme/theme">
 		<view class="set-name">系统主题</view>
 		<view class="set-img">
-			<image src="../../image/right.png" style="border: 1px dashed #000000;"></image>
+			<image src="../../image/right.png"></image>
 		</view>
 	</view>
 	<view class="set"  bindtap="intoPath" data-path="/pages/area/area">

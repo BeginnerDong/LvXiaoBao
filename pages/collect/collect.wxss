@@ -60,8 +60,13 @@
 	height:24px;
 	background:rgba(255,209,1,1);
 	border-radius:12px;
-	line-height: 24px;
 	text-align: center;
+}
+
+.zhuy{
+	width:72px;
+	height:24px;
+	margin-top: 3%;
 }
 .peer-middle{
 	height:160rpx;
@@ -81,7 +86,6 @@
 .product-img image{
 	width: 30rpx;
 	height: 30rpx;
-	border: 1px dashed #323232;
 }
 .plate{
 	width:87%;
@@ -102,14 +106,16 @@
 	width:40rpx;
 	height:40rpx
 }
-
-.zhuying{
-	width:72px;
-	height:20px;
-	text-align: center;
-	margin-top: 2%;
-	border-right: 1px solid #323232;
+.line{
+	width: 1px;
+	height: 15px;
+	display: inline-block;
+	background: #A1A1A1;
+	margin-top: 4%;
+	margin-left: 2%;
+	margin-right: 2%;
 }
+
 .city{
 	width:72px;
 	height:20px;

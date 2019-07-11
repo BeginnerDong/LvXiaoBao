@@ -12,6 +12,23 @@
 	font-size: 15px;
 	font-weight: 500;
 	padding-left: 3%;
+	color: #323232;
+	font-weight: bold;
+	font-family:PingFang-SC-Bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	border-bottom: 1px solid #E7E7E7;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:14%;
+	bottom: 11px;
 }
 .left-name{
 	width: 70%;
@@ -53,13 +70,20 @@
 	display: flex;
 }
 .reco-left{
-	width: 80%;
+	width: 70%;
+	text-align: left;
 }
 .left-namea{
-	font-size: 10px;
+	font-size: 12px;
 	margin-top: 5px;
 	color: #A1A1A1;
+	font-weight: 400;
 }
 .recor-right{
-	width: 20%;
+	width: 30%;
+	text-align: right;
+	margin-right: 10%;
+	font-size: 20px;
+	font-weight: bold;
+	color: #585858;
 }

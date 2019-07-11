@@ -1,3 +1,6 @@
+page{
+	background: #F5F5F5;
+}
 .top{
 	width: 100%;
 	height: 100px;
@@ -13,7 +16,7 @@
 }
 .mine{
 	width: 90%;
-	height: 200px;
+	height: 190px;
 	background: #FFFFFF;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	margin-left: 5%;
@@ -31,11 +34,14 @@
 .mine-img{
 	width: 25%;
 	height: 100px;
+	margin-left: 4%;
 }
 .mine-img image{
-	width: 90px;
-	height: 90px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
+	
+	margin-top: 4%;
 }
 .mine-name{
 	width: 60%;
@@ -48,7 +54,7 @@
 	display: flex;
 }
 .name-title{
-	width: 45%;
+	width: 25%;
 	color: #323232;
 	font-size: 17px;
 	font-weight: 700;
@@ -58,7 +64,7 @@
 .name-con{
 	width:50%;
 	height: 20px;
-	margin-top: 5px;
+	margin-top: 8px;
 	margin-left: 3%;
 }
 .name-con span{
@@ -83,19 +89,21 @@
 	width: 25%;
 	height: 100px;
 	text-align: right;
-	margin-right: 3%;
+	margin-right: 5%;
+	margin-top: 10px;
 }
 .mine-btn span{
 	width: 80px;
 	height: 32px;
 	display: inline-block;
 	text-align: center;
-	line-height: 30px;
+	line-height: 32px;
 	border-radius: 16px;
 	color: #323232;
-	font-size: 12px;
+	font-size: 16px;
 	background: #FFD101;
 	font-weight: bold;
+	font-family:PingFang-SC-Bold;
 }
 .mine-bottom{
 	width: 100%;
@@ -104,24 +112,24 @@
 }
 .bottom-name{
 	width: 30%;
-	height: 60px;
+	height: 45px;
 	margin-left: 3%;
-	
 }
 .bott{
 	color: #323232;
 	font-size: 20px;
 	margin-left: 5%;
+	font-weight: bold;
 }
 .bott-con{
 	color: #A1A1A1;
-	font-size: 17px;
+	font-size: 14px;
 	margin-left: 5%;
 	opacity: 1;
 	font-weight: bold;
 }
 .service{
-	margin-top: 50%;
+	margin-top: 43%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	width: 90%;
 	height: 160px;
@@ -129,13 +137,28 @@
 	margin-left: 5%;
 	border-radius: 10px;
 }
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:5%;
+	bottom: 17px;
+}
 .ser-name{
-	height: 30px;
-	line-height: 30px;
-	color: #323232;
+	width: 100%;
 	font-size: 16px;
-	padding-left: 3%;
-	padding-top: 3%;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	padding-top: 3px;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 5%;
 }
 .serve-con{
 	width: 100%;
@@ -153,15 +176,15 @@
 	text-align: center;
 }
 .ser-img image{
-	width: 50px;
-	height: 50px;
-	
+	width: 46px;
+	height: 46px;
 }
 .ser-title{
 	color: #585858;
 	font-size: 14px;
 	width: 90%;
 	text-align: center;
+	font-weight: 500;
 }
 .recomm{
 	margin-top: 5%;
@@ -182,12 +205,13 @@
 .remo-img{
 	width: 10%;
 	height: 40px;
+	text-align: center;
 	line-height: 40px;
+	margin-top: 4px;
 }
 .remo-img image{
 	width: 20px;
 	height: 20px;
-	border: 1px dashed #000000;
 }
 .reco{
 	width: 40%;
@@ -220,19 +244,21 @@
 	width: 10%;	
 	height: 40px;
 	line-height: 40px;
+	text-align: right;
 }
 .reco-re image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 }
 .recoom-re{
 	width: 10%;
 	height: 40px;
 	line-height: 40px;
+	text-align: right;
 }
 .recoom-re image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 }
 .forget-input{
 	width: 100%;

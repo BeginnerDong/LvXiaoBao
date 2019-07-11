@@ -1,6 +1,7 @@
 <view>
 	<view class="all-nav">
-		<view class="nav-top">所有省份</view>
+		<view class="nav-top">所有省份
+		<view class="title-line"></view></view>
 		<view class="nav-center">
 			<block wx:for="{{web_mainData}}" wx:key="id">
 				<view class="nav-item" bindtap="select" data-index="{{index}}" >{{item}}</view>

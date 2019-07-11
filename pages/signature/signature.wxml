@@ -1,6 +1,7 @@
 <view>
 	<view class="sign">
-		<view class="sign-title">业务签章</view>
+		<view class="sign-title">业务签章
+		<view class="title-line"></view></view>
 		<view class="sign-add">
 			<view class="add">
 				<image src="../../image/block.png"></image>

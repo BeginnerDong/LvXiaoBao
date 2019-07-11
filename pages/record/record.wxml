@@ -1,7 +1,8 @@
 <view>
 	<view class="record">
 		<view class="record-name">充值</view>
-		<view class="record-name">消费</view>
+		<view class="record-name">消费
+		<view class="title-line"></view></view>
 		<view class="record-name">返现</view>
 		<view class="record-name">退款</view>
 		<view class="record-name">提现</view>
@@ -19,7 +20,4 @@
 			<view class="recor-right">{{item.listPrice}}</view>
 		</view>
 	</block>
-
-
-	
 </view>

@@ -40,7 +40,6 @@ page{
 .searchBtn image {
 	width: 50rpx;
 	height: 30rpx;
-	border: 1px dashed #000000;
 }
 .label-nav{
 	width: 100%;
@@ -63,16 +62,31 @@ page{
 }
 .all-nav{
 	width: 100%;
-	height: 100px;
+	height: 300px;
 	margin-top: 20px;
 }
 .nav-top{
 	width: 100%;
-	height: 30px;
+	height: 40px;
 	padding-left: 5%;
 	color: #323232;
 	font-size: 16px;
-	margin-top: 20px;
+	font-weight: bold;
+	line-height:40px;
+	font-family:PingFang-SC-Bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:4.5%;
+	bottom: 12px;
 }
 .nav-center{
 	width: 100%;
@@ -84,4 +98,21 @@ page{
 	width: 100%;
 	height: 50px;
 	display: flex;
+}
+.add{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+.add span{
+	width: 300px;
+	height: 48px;
+	display: inline-block;
+	line-height: 48px;
+	text-align: center;
+	color: white;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
+	font-weight: bold;
+	font-size: 17px;
+	border-radius:48px;
 }

@@ -13,7 +13,8 @@ page{
 	font-size: 16pt;
 	height: 20px;
 	line-height: 20px;
-	padding-top: 2%;
+	padding-top: 5%;
+	font-weight: 500;
 }
 .couchar-inp{
 	width: 100%;
@@ -27,34 +28,51 @@ page{
 }
 .set{
 	width: 100%;
-	height: 150px;
+	height: 135px;
 	margin-top: 20px;
 	background: white;
 }
 .set-name{
+	width: 100%;
+	height: 40px;
+	padding-left: 6%;
 	color: #323232;
 	font-size: 16px;
-	padding-left: 3%;
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
+	font-weight: bold;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	line-height: 40px;
+	border-bottom: 1px solid #E7E7E7;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:6%;
+	bottom: 12px;
 }
 .set-con{
 	width: 100%;
-	height: 50px;
+	height: 46px;
 	display: flex;
 	padding-left: 3%;
-	line-height: 50px;
-	border-bottom: 1px solid #A1A1A1;
+	line-height: 46px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .set-img{
 	width: 10%;
 	height: 50px;
+	text-align: center;
 }
 .set-img image{
 	width: 15px;
 	height: 15px;
-	border: 1px dashed #000000;
 	margin-top: 10px;
 }
 .set-title{
@@ -75,18 +93,20 @@ page{
 .cou-btn{
 	width: 100%;
 	height: 40px;
-	margin-top: 20px;
+	margin-top: 30px;
+	text-align: center;
 }
 .cou-btn span{
 	width: 300px;
-	height: 40px;
+	height: 48px;
 	text-align: center;
-	color: white;
-	background: #FF7B57;
-	line-height: 40px;
+	color: #F4F3F3;
+	background: #FF582B;
+	line-height: 48px;
 	display: inline-block;
 	border-radius: 30px;
-	margin-left: 15%;
+	font-weight: bold;
+	font-size: 17px;
 }
 .draw{
 	width: 100%;
@@ -96,8 +116,8 @@ page{
 }
 .draw-top{
 	width: 90%;
-	height: 40px;
-	line-height: 40px;
+	height: 45px;
+	line-height: 45px;
 	color: #323232;
 	font-size: 15px;
 	padding-left: 5%;
@@ -109,12 +129,12 @@ page{
 	line-height: 40px;
 }
 .draw-imga image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 }
 .drawa{
 	width: 100%;
-	height: 140px;
+	height: 130px;
 	background: white;
 	margin-top: 10px;
 }
@@ -127,14 +147,28 @@ page{
 	color: #323232;
 	font-size: 16px;
 	font-weight: bold;
+	width: 100%;
+	font-family:PingFang-SC-Bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	border-bottom: 1px solid #E7E7E7;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:5%;
+	bottom: 7px;
 }
 .draw-cen{
 	width: 100%;
 	height: 50px;
 	display: flex;
-}
-.couchar-inp{
-	width: 70%;
+	border-bottom: 1px solid #E7E7E7;
 }
 .draw-ri{
 	width: 30%;
@@ -142,18 +176,21 @@ page{
 	font-size: 11px;
 	margin-top: 30px;
 	font-weight: 400;
+	height: 20px;
+	line-height: 20px;
 }
 .draw-img{
 	width: 100%;
 	display: flex;
 	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .draw-con{
 	width: 90%;
 	padding-left: 5%;
 	color: #323232;
 	font-size: 15px;
-	margin-top: 20px;
 	font-weight: bold;
 }
 .drimg{

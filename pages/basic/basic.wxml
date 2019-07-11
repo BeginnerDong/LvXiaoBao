@@ -1,9 +1,11 @@
 <view>
 	<view class="top">
-		<view class="basic">基本信息</view>
-		<view class="travel">出游信息</view>
+		<view class="basic">基本信息
+		<view class="title-line"></view></view>
+		<view class="travel">出游信息
+		<view class="title-line" style="left: 40%;"></view></view>
 	</view>
-	<view class="basici" wx:if="{{web_num==1}}">
+	 <view class="basici" wx:if="{{web_num==1}}">
 		<view class="basic-name">
 			<view class="name">姓名</view>
 			<view class="title">赵凯旋</view>
@@ -59,7 +61,7 @@
 			<view class="name">详细地址</view>
 			<view class="title">丈八东路</view>
 		</view>
-		<view class="basic-name">
+		<view class="basic-name" style="border: none;">
 			<view class="name">标签</view>
 			<view class="title-btn">
 					<view class="btn-left"><span>到店咨询</span></view>
@@ -76,9 +78,10 @@
 		<view class="basic-btn">
 			<view class="basi-name">+添加新标签</view>
 		</view>
-		</view>
+		</view> 
 	<view class="type">
-		<view class="type-name">证件信息</view>
+		<view class="type-name">证件信息
+		<view class="title-line" style="left: 4%;bottom: 12px;"></view></view>
 		<view class="basic-name">
 			<view class="name">证件类型</view>
 			<view class="title-con">
@@ -90,7 +93,7 @@
 		</view>
 		<view class="basic-name">
 			<view class="name">证件号码</view>
-			<view class="title">2365656556566548754587</view>
+			<view class="title">2365656556</view>
 		</view>
 		<view class="basic-name">
 			<view class="name">有效期至</view>
@@ -109,7 +112,7 @@
 	<view class="btn">
 		<span>保存</span>
 	</view>
-	<view class="travela" wx:if="{{web_num==2}}">
+	<!--<view class="travela" wx:if="{{web_num==2}}">
 		<view class="tarcel-top">
 			<view class="top-left">
 				<view class="num">6</view>
@@ -130,7 +133,7 @@
 				<view class="tra-title">
 					<view class="title-name">
 						<view class="title-img">
-							<image src="../../image/posi.png"></image>
+							<image src="../../image/pis.png"></image>
 						</view>
 						<view class="titl">中国  北京</view>
 					</view>
@@ -145,7 +148,7 @@
 				<view class="tra-title">
 					<view class="title-name">
 						<view class="title-img">
-							<image src="../../image/posi.png"></image>
+							<image src="../../image/pis.png"></image>
 						</view>
 						<view class="titl">中国  北京</view>
 					</view>
@@ -160,7 +163,7 @@
 				<view class="tra-title">
 					<view class="title-name">
 						<view class="title-img">
-							<image src="../../image/posi.png"></image>
+							<image src="../../image/pis.png"></image>
 						</view>
 						<view class="titl">中国  北京</view>
 					</view>
@@ -175,7 +178,7 @@
 				<view class="tra-title">
 					<view class="title-name">
 						<view class="title-img">
-							<image src="../../image/posi.png"></image>
+							<image src="../../image/pis.png"></image>
 						</view>
 						<view class="titl">中国  北京</view>
 					</view>
@@ -198,5 +201,5 @@
 			</view>
 			<view class="bott-btn"><span>保存</span></view>
 		</view>
-	</view>
+	</view>-->
 </view>

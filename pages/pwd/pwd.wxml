@@ -1,8 +1,5 @@
 <view>
 	<view class="logo">
-		<view class="login">
-			<view class="login-name">找回密码</view>
-		</view>
 		<view class="login-title">
 			<view class="forget">忘记密码</view>
 			<view class="forget-inp">
@@ -15,6 +12,17 @@
 		</view>
 		<view class="forget-btn"><span>下一步</span></view>
 	</view>
-	
+	<!-- <view class="logo">
+		<view class="login-title">
+			<view class="forget">设置新密码</view>
+			<view class="forget-inp">
+				<input type="text" placeholder="请输入密码"/>
+			</view>
+			<view class="forget-inp">
+				<input type="text" placeholder="再次输入新密码"/>
+			</view>
+		</view>
+		<view class="forget-btn"><span>保存</span></view>
+	</view> -->
 </view>
 

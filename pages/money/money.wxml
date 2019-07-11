@@ -1,6 +1,9 @@
 <view>
 	<view class="all">
 		<view class="balance">
+			<view class="money-bg">
+				<image src="../../image/money-bg.png"></image>
+			</view>
 			<view class="bala-top">
 				<view class="bala-name">钱包余额</view>
 				<view class="bala-img">
@@ -18,7 +21,7 @@
 				<view class="bott-right" bindtap="intoPath" data-path="/pages/record/record">
 					<view class="right-con">交易记录</view>
 					<view class="right-img">
-						<image src="../../image/right.png"></image>
+						<image src="../../image/ehi.png"></image>
 					</view>
 				</view>
 			</view>
@@ -29,7 +32,7 @@
 		<view class="chan-top" bindtap="intoPath" data-path="/pages/vouchar/vouchar">
 			<view class="chan-title">充值</view>
 			<view class="chan-img">
-				<image src="../../image/right.png" style="border: 1px dashed #E7E7E7;"></image>
+				<image src="../../image/right.png"></image>
 			</view>
 		</view>
 		<view class="chan-top" bindtap="intoPath" data-path="/pages/vouchar/vouchar">
@@ -40,7 +43,8 @@
 		</view>
 	</view>
 	<view class="statist">
-		<view class="ststist-title">充值统计</view>
+		<view class="ststist-title">充值统计
+		<view class="title-line"></view></view>
 		<view class="stat-name">
 			<view class="name">
 				<view class="name-img">

@@ -24,13 +24,13 @@ page{
 .pro-img{
 	width: 25%;
 	height: 120;
-	line-height: 70px;
+	line-height:80px;
 	text-align: center;
 }
 .pro-img image{
 	width: 20px;
 	height: 20px;
-	
+	margin-right: 10px;
 }
 .pro-right{
 	width:75%;
@@ -47,7 +47,7 @@ page{
 .right-name{
 	width: 100%;
 	color: #323232;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: bold;
 }
 .mess{
@@ -64,11 +64,10 @@ page{
 	height: 70px;
 }
 .mess-img image{
-	width: 90%;
+	width: 94%;
 	height: 45px;
 	margin-top: 20px;
-	margin-left: 5%;
-
+	margin-left: 2%;
 }
 .mess-name{
 	width: 100%;
@@ -79,7 +78,7 @@ page{
 }
 .nam{
 	width: 10%;
-	padding-left: 3%;
+	padding-left: 5%;
 	color: #A1A1A1;
 	font-size: 16pt;
 	margin-top: 10px;
@@ -91,6 +90,7 @@ page{
 }
 .center-img{
 	width: 30%;
+	height: 50px;
 }
 .center-img image{
 	width: 50px;
@@ -109,6 +109,7 @@ page{
 	font-size: 16px;
 	margin-top: 20px;
 	font-weight: bold;
+	margin-right: 5%;
 }
 .name-one{
 	color: #333333;
