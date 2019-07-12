@@ -398,7 +398,7 @@
 		确定
 	</view>
 </view>
-	<view class="posters">
+	<!-- <view class="posters">
 		
 	</view>
 	<view class="poster" >
@@ -414,5 +414,5 @@
 				</view>
 				<view class="img-name">保存</view>
 			</view>
-	</view>
+	</view> -->
 </view>

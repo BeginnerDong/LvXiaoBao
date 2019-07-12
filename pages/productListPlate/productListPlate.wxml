@@ -69,7 +69,7 @@
 			</view>
 		</view>
 	</block>
-	<view class="recomm"></view>
+	<!-- <view class="recomm"></view>
 	<view class="recommed">
 		<view class="re">
 			<view class="re-name">推荐排序</view>
@@ -79,8 +79,8 @@
 		</view>
 		<view class="re-title">价格由低到高</view>
 		<view class="re-title">价格由低到高</view>
-	</view>
-	<view class="screen" wx:if="{{web_show}}">
+	</view> -->
+	<view class="screen" wx:if="{{web_show}}"> 
 
 	</view>
 	<view class="scree" wx:if="{{web_show}}">

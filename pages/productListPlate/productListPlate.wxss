@@ -126,7 +126,7 @@ page {
 	border-radius: 15rpx;
 	background: #FFD101;
 	line-height: 30rpx;
-	padding-left: 5%;
+	padding-left: 2%;
 	padding-bottom: 1%;
 }
 
