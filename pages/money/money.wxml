@@ -35,7 +35,7 @@
 				<image src="../../image/right.png"></image>
 			</view>
 		</view>
-		<view class="chan-top" bindtap="intoPath" data-path="/pages/vouchar/vouchar">
+		<view class="chan-top" bindtap="intoPath" data-path="/pages/deposit/deposit">
 			<view class="chan-title">提现</view>
 			<view class="chan-img">
 				<image src="../../image/right.png"></image>

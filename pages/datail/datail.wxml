@@ -25,23 +25,20 @@
 		</view>
 	</view>
 	<view class="norm">
-		<view class="norm-title">
-			<view class="norm-name">产品标准</view>
-			<view class="norm-imgs">
-				<view class="norm-img">
-					<image src="../../image/detail-icon2.png"></image>
-					<view class="norm-con">品质</view>
-				</view>
-				<view class="norm-img">
-					<image src="../../image/detail-icon2.png"></image>
-					<view class="norm-con">纯玩</view>
-				</view>
-				<view class="norm-img">
-					<image src="../../image/detail-icon2.png"></image>
-					<view class="norm-con">推荐</view>
-				</view>
+		<view class="product-info-bottom">
+			<view class="starand">产品标准</view>
+			<view class="starand-item">
+				<image src="../../image/detail-icon2.png"></image>
+				<view class="text">品质</view>
 			</view>
-			
+			<view class="starand-item">
+				<image src="../../image/detail-icon2.png"></image>
+				<view class="text">纯玩</view>
+			</view>
+			<view class="starand-item">
+				<image src="../../image/detail-icon2.png"></image>
+				<view class="text">推荐</view>
+			</view>
 		</view>
 		<view class="norm-title">
 			<view class="norm-name1">行程天数</view>
@@ -53,16 +50,16 @@
 		</view>
 	</view>
 	<view class="travel">
-		<view class="travel-title">
+		<view class="travel-title"> 
 			<view class="travel-name1">旅行社
 			<view class="title-line"></view></view>
 			<view class="travel-data2">{{web_mainData.companyName}}</view>
 		</view>
 			<view class="travel-title">
 				<view class="travel-name1">优惠
-				<view class="title-line"></view></view>
+				<view class="title-line" style="left: 26;"></view></view>
 				<view class="tarcel">
-					<view class="discount" style="margin-left: 6%;">立减</view>
+					<view class="discount" style="margin-left: 5%;">立减</view>
 					<view class="dis-con">立减<span>10</span>%</view>
 				</view>
 			</view>
@@ -73,7 +70,7 @@
 					 <view class="dis-content">
 						<view class="dis-con">选择优惠券</view>
 						<view class="dis-img">
-							<image src="../../image/right.png" style="width: 20px;height: 20px;"></image>
+							<image src="../../image/right.png"></image>
 						</view> 
 					</view>
 				</view>
@@ -93,7 +90,7 @@
 		</view>
 		<view class="travel-title">
 			<view class="travel-name1">销售
-			<view class="title-line"></view></view>
+			<view class="title-line" style="left: 20%;"></view></view>
 			<view class="travel-data2" style="text-align: center;">{{web_mainData.sales[0].name}}</view>
 			<view class="travel-data3">
 				<view class="phone-num">{{web_mainData.sales[0].phone}}</view>
@@ -106,7 +103,7 @@
 			<view class="product-info-bottom">
 				<view class="title">
 					选择团期
-					<view class="title-line"></view>
+					<view class="title-line" style="left: 4%;"></view>
 				</view>
 			</view>
 			<view class="product-info-bottom" style="border-bottom: none;">
@@ -135,8 +132,8 @@
 	</view>
 	<view class="people">
 		<view class="norm-title">
-			<view class="norm-name1">出行人数
-			<view class="title-line"></view></view>
+			<view class="norm-name1" style="color: #323232;">出行人数
+			<view class="title-line" style="left: 9%;bottom: 17px;"></view></view>
 			<view class="norm-data2">
 				<view class="people-title">改行程仅余10位</view>
 				<view class="people-img">
@@ -145,8 +142,8 @@
 			</view>
 		</view>
 		<view class="norm-title">
-			<view class="norm-name1">航班
-			<view class="title-line"></view></view>
+			<view class="norm-name1" style="color: #323232;">航班
+			<view class="title-line" style="left: 9%;bottom: 17px;"></view></view>
 			<view class="norm-data2">
 				<view class="people-title">更换航班</view>
 				<view class="people-img">
@@ -159,7 +156,7 @@
 		<view class="product-info-bottom">
 			<view class="title">
 				行程特色
-				<view class="title-line"></view>
+				<view class="title-line" style="left: 4%;"></view>
 			</view>
 		</view>
 		<view class="product-info-bottom" style="border-bottom: none;">
@@ -204,7 +201,7 @@
 		<view class="product-info-bottom">
 			<view class="title">
 				行程特色
-				<view class="title-line"></view>
+				<view class="title-line" style="left: 4%;"></view>
 			</view>
 		</view>
 		<view class="plan">
@@ -256,7 +253,7 @@
 		<view class="product-info-bottom">
 			<view class="title">
 				费用说明
-				<view class="title-line"></view>
+				<view class="title-line" style="left: 4%;"></view>
 			</view>
 		</view>
 		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
@@ -295,7 +292,7 @@
 		<view class="product-info-bottom">
 			<view class="title">
 				同行须知
-				<view class="title-line"></view>
+				<view class="title-line" style="left: 4%;"></view>
 			</view>
 		</view>
 		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
@@ -337,61 +334,62 @@
 	</view> 
 </view>
 <!-- 选择人数 -->
- <view class="choose" wx:if="{{web_show}}">
+ <view class="choose" bindtap="isShow" wx:if="{{web_show}}">
 	
 </view>
 <view class="choose1" wx:if="{{web_show}}">
 	<view class="cho-title">
 		选择出行人数
+		<view class="title-line" style="left: 3%;bottom: 23px;"></view>
 	</view>
 	<view class="cho1">
 		<view class="cho1-left">成人</view>
-		<view class="cho1-left"><span style="color: #EC6532;font-size: 20px;">￥1740/</span>人</view>
-		<view class="cho1-all">
-			<view class="cho1-subtrat">
-				<image src="../../image/sort.png" style="border: 1px dashed #000000;"></image>
-			</view>
-			<view class="cho1-number"><span>2</span></view>
-			<view class="cho1-subtrat">
-				<image src="../../image/add.png" style="border: 1px dashed #000000;"></image>
-			</view>
-		</view>
-	</view>
-	<view class="cho1">
-		<view class="cho1-left">老人</view>
-		<view class="cho1-left"><span style="color: #EC6532;font-size: 20px;">￥1240/</span>人</view>
+		<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span style="color: #EC6532;font-size: 20px;">￥1740/</span>人</view>
 		<view class="cho1-all">
 			<view class="cho1-subtrat">
 				<image src="../../image/sort.png"></image>
 			</view>
 			<view class="cho1-number"><span>2</span></view>
+			<view class="cho1-subtrat" style="text-align: center;">
+				<image src="../../image/add.png" style="width: 20px;height: 20px;"></image>
+			</view>
+		</view>
+	</view>
+	<view class="cho1">
+		<view class="cho1-left">老人</view>
+		<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span style="color: #EC6532;font-size: 20px;">￥1240/</span>人</view>
+		<view class="cho1-all">
 			<view class="cho1-subtrat">
+				<image src="../../image/sort.png"></image>
+			</view>
+			<view class="cho1-number"><span>2</span></view>
+			<view class="cho1-subtrat" style="text-align: center;">
 				<image src="../../image/block.png"></image>
 			</view>
 		</view>
 	</view>
 	<view class="cho1">
 		<view class="cho1-left">儿童(占床)</view>
-		<view class="cho1-left"><span  style="color: #EC6532;font-size: 20px;">￥638/</span>人</view>
+		<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span  style="color: #EC6532;font-size: 20px;">￥638/</span>人</view>
 		<view class="cho1-all">
 			<view class="cho1-subtrat">
 				<image src="../../image/sort.png"></image>
 			</view>
 			<view class="cho1-number"><span>1</span></view>
-			<view class="cho1-subtrat">
+			<view class="cho1-subtrat" style="text-align: center;">
 				<image src="../../image/block.png"></image>
 			</view>
 		</view>
 	</view>
 	<view class="cho1">
 		<view class="cho1-left">儿童(不占床)</view>
-		<view class="cho1-left"><span  style="color: #EC6532;font-size: 20px;">￥938/</span>人</view>
+		<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span  style="color: #EC6532;font-size: 20px;">￥938/</span>人</view>
 		<view class="cho1-all">
 			<view class="cho1-subtrat">
 				<image src="../../image/sort.png"></image>
 			</view>
 			<view class="cho1-number"><span>1</span></view>
-			<view class="cho1-subtrat">
+			<view class="cho1-subtrat" style="text-align: center;">
 				<image src="../../image/block.png"></image>
 			</view>
 		</view>
@@ -400,13 +398,21 @@
 		确定
 	</view>
 </view>
-	<view class="posters" wx:if="{{show_poster}}">
+	<view class="posters">
 		
 	</view>
-	<view class="poster" wx:if="{{show_poster}}">
+	<view class="poster" >
+		<view class="img">
 			<image src="{{web_mainData.posterPath}}"></image>
+		</view>
 			<view class="poster-icon" bindtap="showPoster">
 				<image src="../../image/close.png"></image>
+			</view>
+			<view class="post-img">
+				<view class="imgs">
+					<image src="../../image/sa.png"></image>
+				</view>
+				<view class="img-name">保存</view>
 			</view>
 	</view>
 </view>

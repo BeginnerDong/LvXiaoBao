@@ -2,7 +2,10 @@
 	<view class="tourist">
 		<view class="saler flex-align">
 			<view class="left">
-				<image src="../../image/02.png"></image>
+				<view class="left-img">
+					<image src="../../image/02.png"></image>
+				</view>
+				<view class="left-name" style="color: #EC6532;">单签</view>
 			</view>
 			<view class="middle">
 					<view class="font16 color1 bold-font">刘建超(成人)</view>
@@ -20,7 +23,10 @@
 		</view>
 		<view class="saler flex-align">
 			<view class="left">
-				<image src="../../image/double.png"></image>
+				<view class="left-img">
+					<image src="../../image/kuang.png"></image>
+				</view>
+				<view class="left-name">单签</view>
 			</view>
 			<view class="middle">
 					<view class="font16 color1 bold-font">李丽萍(成人)</view>
@@ -38,7 +44,10 @@
 		</view>
 		<view class="saler flex-align">
 			<view class="left">
-				<image src="../../image/double.png"></image>
+				<view class="left-img">
+					<image src="../../image/kuang.png"></image>
+				</view>
+				<view class="left-name">单签</view>
 			</view>
 			<view class="middle">
 					<view class="font16 color1 bold-font">张怡(成人)</view>

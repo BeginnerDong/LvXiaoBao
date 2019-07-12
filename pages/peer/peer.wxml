@@ -10,7 +10,7 @@
 	</view>
 	<view class="nav-top flex-align">
 		<view class="nav-top-item nav-top-item-active">全部
-			<view class="title-line"></view>
+			<view class="title-line" style="left: 30%;"></view>
 		</view>
 		<view class="nav-top-item">国内</view>
 		<view class="nav-top-item">出境</view>
@@ -110,10 +110,10 @@
 		<view class="top-top">
 			<view class="top-title">
 				业务分类
-				<view class="title-line" style="left:0"></view>
+				<view class="title-line" style="left:4%"></view>
 			</view>
 				<view class="choose">
-					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;">
+					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold;">
 						海南专线
 					</view>
 					<view class="choose-item">
@@ -137,7 +137,7 @@
 			<view class="top-title">签约分类
 			<view class="title-line"></view></view>
 				<view class="choose">
-					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;">
+					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold;">
 						已签约
 					</view>
 					<view class="choose-item">
@@ -149,7 +149,7 @@
 			<view class="top-title">供应商区域
 			<view class="title-line"></view></view>
 				<view class="choose">
-					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;">
+					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold;">
 						海南
 					</view>
 					<view class="choose-item">
@@ -180,7 +180,7 @@
 					<view class="choose-item1" style="color: rgba(161,161,161,1);background: rgba(242,242,242,1);">
 						重置
 					</view>
-					<view class="choose-item1" style="color: rgba(50,50,50,1);background: rgba(255,209,1,1);">
+					<view class="choose-item1" style="color: rgba(50,50,50,1);background: rgba(255,209,1,1);font-weight: bold;">
 						确认
 					</view>
 			</view>

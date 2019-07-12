@@ -78,11 +78,12 @@
 		</view>
 		<view class="bott-btn">确定并返回</view>
 	</view> 
-	 <view class="visi">
+	<!-- <view class="visi">
 		
 	</view>
 	<view class="visitors">
-		<view class="visi-name">添加游客</view>
+		<view class="visi-name">添加游客
+		<view class="title-line"></view></view>
 		<view class="visi-name1">
 			<view class="visi-titlw">国内模式</view>
 			<view class="visi-img">
@@ -95,5 +96,5 @@
 				<image src="../../image/quan.png"></image>
 			</view>
 		</view>
-	</view> 
+	</view> -->
 </view>

@@ -1,6 +1,10 @@
 page{
 	background: #E7E7E7;
 }
+.insurance{
+	width: 100%;
+	z-index: 1111;
+}
 .schedule{
 	width: 100%;
 	height: 100px;
@@ -37,15 +41,25 @@ page{
 }
 .she-data{
 	width: 30%;
-	/* height: 50px; */
+	height: 50px;
+	line-height: 50px;
 	font-size: 16px;
 	opacity: 1;
-	line-height: 50px;
 	font-weight: 500;
 	font-family:PingFang-SC-Bold;
 	color:rgba(50,50,50,1);
 	position: relative;
 	left: 0;
+	position: relative;
+	z-index:1;
+}
+.title-line{
+	width:16px;
+	height:3px;
+	background:rgba(255,209,1,1);
+	border-radius:2px;
+	position: absolute;
+	z-index:-1;
 }
 .she-date1{
 	width: 60%;
@@ -87,7 +101,6 @@ page{
 .she-img image{
 	width: 15px;
 	height: 15px;
-	border: 1px dashed #323232;
 	margin-left: 2%;
 	margin-top: 8px;
 }
@@ -114,10 +127,7 @@ page{
 }
 .detail-img image{
 	width: 20px;
-	height: 20px;/* 
-	border-radius: 50%; */
-	border: 1px dashed #000000;
-	border-color: #000000;
+	height: 20px;
 	margin-top: 15px;
 }
 .tourist{
@@ -136,6 +146,7 @@ page{
 	margin-top: 3%;
 	border-radius: 10px;
 	font-weight:bold;
+	display: flex;
 }
 .card-img{
 	width: 40%;
@@ -143,7 +154,7 @@ page{
 	text-align: right;
 	display: flex;
 }
-.card-img image{
+.cardi image{
 	width: 20px;
 	height: 20px;
 }
@@ -152,6 +163,7 @@ page{
 	height: 30px;
 	text-align: center;
 }
+
 .imgsa{
 	width: 50%;
 	height: 30px;
@@ -160,13 +172,11 @@ page{
 .card-id{
 	width: 100%;
 	height: 50px;
-	display: flex;
-	justify-content: center;
 	color: #A1A1A1;
 	font-size: 13px;
 }
 .card-id1{
-	width: 60%;
+	width: 100%;
 	padding-left: 10px;
 	font-weight: 500;
 }
@@ -176,12 +186,21 @@ page{
 	color: #323232;
 	font-size: 14px;
 	padding: 10px;
+	font-weight: bold;
 }
+.cardi{
+	width: 40%;
+	height: 90px;
+	display: flex;
+	line-height: 90px;
+}
+
 .add{
 	width: 100%;
 	height: 50px;
 	margin-top: 3%;
 	text-align: center;
+	border-bottom: 1px solid #E7E7E7;
 }
 .add span{
 	width: 150px;
@@ -211,13 +230,11 @@ page{
 .more-img{
 	width: 50%;
 	text-align: left;
-	margin-top: 1px;
 }
 .more-img image{
 	width: 15px;
 	height: 15px;
-	margin-left: 2%;
-	border: 1px dashed #A1A1A1;
+	margin-left: 4%;
 }
 .steel{
 	width: 100%;
@@ -230,8 +247,8 @@ page{
 .steel-title{
 	width: 100%;
 	display: flex;
-	margin-top: 3%;
-	padding-top: 3%;
+	height: 60px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .steel-left{
 	width: 50%;
@@ -242,6 +259,7 @@ page{
 	font-size: 14px;
 	color: #323232;
 	font-weight: bold;
+	padding-top: 5%;
 }
 .steel-con{
 	color: #A1A1A1;
@@ -252,10 +270,14 @@ page{
 .steel-cent{
 	width: 20%;
 	text-align: center;
+	padding-top: 5%;
+	color: #A1A1A1;
+	font-size: 14px;
 }
 .steel-right{
 	width: 30%;
 	text-align: center;
+	padding-top: 5%;
 }
 .steel-cent span{
 	color: #FF582B;
@@ -272,7 +294,7 @@ page{
 }
 .botom{
 	width: 100%;
-	height: 70px;
+	height: 60px;
 	margin-top: 1%;
 	display: flex;
 	position: fixed;
@@ -284,6 +306,7 @@ page{
 .speci-left{
 	width: 50%;
 	height: 50px;
+	padding-left: 3%;
 }
 .special{
 	width: 100%;
@@ -292,14 +315,17 @@ page{
 	color: #323232;
 	opacity: 1;
 	padding-left: 2%;
+	padding-top: 2%;
 }
 .spaci-btn{
 	width: 50%;
 	height: 50px;
 	display: flex;
 	justify-content: center;
-	background: #FF582B;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
 	border-radius: 30px;
+	margin-right: 3%;
+	margin-top: 2%;
 }
 .speci1{
 	width: 48%;
@@ -307,16 +333,16 @@ page{
 	opacity: 1;
 	color: white;
 	text-align: center;
-	font-size: 10pt;
+	font-size: 10px;
 	font-weight:bold;
-	padding-top: 10px;
+	padding-top: 8px;
 }
 .spe-img{
 	width: 10%;
 }
 .spe-img image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 10px;
 	margin-left: 55%;
 }
 .company{
@@ -333,18 +359,26 @@ page{
 	height: 45%;
 	position: fixed;
 	bottom: 0;
-	z-index: 3333;
+	z-index: 4444;
 	background: #F2F2F2;
 	opacity: 1;
+	border-radius: 20px;
 }
 .com-title{
 	width: 100%;
 	height: 50px;
 	color: #323232;
-	font-size: 16pt;
 	font-weight: bold;
-	padding-top: 5%;
 	padding-left: 3%;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family:PingFang-SC-Bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	left: 0;
+	z-index:1;
+	border-radius: 20px;
 }
 .com-title1{
 	width: 100%;
@@ -367,7 +401,7 @@ page{
 	text-align: center;
 	line-height: 50px;
 	color: #939393;
-	font-size: 16pt;
+	font-size: 16px;
 }
 .option{
 	width: 100%;
@@ -376,6 +410,7 @@ page{
 	bottom: 80%;
 	background: #000000;
 	opacity: 0.6;
+	z-index: 44444;
 }
 .data{
 	width: 100%;
@@ -384,27 +419,37 @@ page{
 	position: fixed;
 	bottom: 0;
 	opacity: 1;
+	z-index: 44444;
 }
 .data-top{
 	width: 100%;
 	height: 40px;
 	display: flex;
-	padding-top: 3%;
 }
 .data-con{
 	width: 90%;
 	height: 40px;
 	color: #323232;
-	font-size: 16pt;
+	font-weight: bold;
+	padding-left: 3%;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family:PingFang-SC-Bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	left: 0;
+	z-index:1;
+	border-radius: 20px;
 }
 .data-img{
 	width: 10%;
 	height: 40px;
+	line-height: 40px;
 }
 .data-img image{
 	width: 20px;
 	height: 20px;
-	background: #484848;
 }
 .data-cen{
 	width: 100%;
@@ -412,15 +457,31 @@ page{
 	background: #E7E7E7;
 	opacity: 1;
 	color: #323232;
-	font-size: 20pt;
+	font-size: 20px;
 	text-align: center;
 	line-height: 40px;
+	font-weight: bold;
 }
-.title-line{
-	width:16px;
-	height:3px;
-	background:rgba(255,209,1,1);
-	border-radius:2px;
-	position: absolute;
-	z-index:-1;
+.mou{
+	width: 100%;
+	height: 50px;
+}
+.date{
+	width: 100%;
+	height: 300px;
+}
+.data-btn{
+	width: 100%;
+	height: 50px;
+	display: flex;
+}
+.data-btn .btn{
+	width: 50%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size:16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(147,147,147,1);
 }

@@ -1,0 +1,160 @@
+.top{
+	width:100%;
+	height:432rpx;
+	background:linear-gradient(90deg,rgba(255,201,0,1) 0%,rgba(255,227,0,1) 100%);
+}
+.bg{
+	width: 100%;
+	height: 432rpx;
+}
+.bg image{
+	width: 100%;
+	height: 432rpx;
+}
+.search{
+	width:100%;
+	height: 100px;
+	padding: 20rpx 0;
+	position: absolute;
+	top: 2%;
+}
+.search input{
+	width:85%;
+	background: #fff;
+	border-radius:40rpx;
+	height:80rpx;
+	padding: 0 20rpx;
+	position: relative;
+	margin: 0 auto;
+	font-size:14px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(192,192,192,1);
+}
+.searchBtn{
+	width:100rpx;
+	height:80rpx;
+	background:rgba(50,50,50,1);
+	border-radius:0px 20px 20px 0px;
+	position:absolute;
+	right:4.5%;
+	top:20rpx;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	z-index:888
+}
+.searchBtn image{
+	width:40rpx;
+	height:40rpx;
+}
+.recomm{
+	width: 100%;
+	height: 50px;
+	padding-left: 5%;
+	font-size:16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	position: absolute;
+	top: 15%;
+}
+.travle{
+	width: 90%;
+	height: 400px;
+	margin-left: 5%;
+	position: absolute;
+	top: 22%;
+}
+.travle-img{
+	width: 100%;
+	height: 144px;
+}
+.travle-img image{
+	width: 100%;
+	height: 144px;
+}
+.travle-name{
+	width: 100%;
+	height: 50px;
+	font-size:14px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	margin-top: 20px;
+}
+.travle-title{
+	width: 100%;
+	height: 30px;
+	display: flex;
+}
+.name{
+	width: 80%;
+	height: 30px;
+	font-size:12px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(161,161,161,1);
+}
+.title{
+	width: 20%;
+	height: 30px;
+	display: flex;
+}
+.title-name{
+	width: 30%;
+	height: 30px;
+}
+.title-name image{
+	width: 20px;
+	height: 20px;
+}
+.title-num{
+	width: 30%;
+	height: 50px;
+	font-size:13px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(161,161,161,1);
+}
+.travle-con{
+	width: 100%;
+	height: 50px;
+	display: flex;
+}
+.con{
+	width: 60%;
+	height: 50px;
+}
+.con span{
+	width:80px;
+	height:16px;
+	background:rgba(236,101,50,1);
+	border:1px solid rgba(161, 161, 161, 1);
+	opacity:0.6;
+	border-radius:8px;
+	font-size:10px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:red;
+	display: inline-block;
+	text-align: center;
+}
+.con-right{
+	width: 40%;
+	height: 50px;
+	font-size:12px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(161,161,161,1);
+}
+.tr{
+	width: 90%;
+	height: 300px;
+	margin-top: 230px;
+	margin-left: 5%;
+}
+.tr image{
+	width: 100%;
+	height: 144px;
+}

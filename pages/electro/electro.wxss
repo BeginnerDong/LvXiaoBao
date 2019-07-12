@@ -1,3 +1,6 @@
+page{
+	background: #E7E7E7;
+}
 .electro{
 	width:90%;
 	height: 100%;

@@ -12,7 +12,8 @@ page{
 }
 .pid{
 	width: 100%;
-	height: 250px;
+	height: 230px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .paid-img{
 	width: 100%;
@@ -23,24 +24,25 @@ page{
 .paid-img image{
 	width: 100px;
 	height: 100px;
-	border: 1px dashed #323232;
 }
 .paid-title{
 	width: 100%;
 	height: 30px;
 	text-align: center;
-	color: #323232;
-	font-size: 16px;
-	margin-top: 3%;
-	font-weight: 500;
+	margin-top: 2%;
+	font-size:17px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
 }
 .paid-price{
 	width: 100%;
 	height: 30px;
 	text-align: center;
-	color: #EC6532;
-	font-size: 14px;
-	font-weight: bold;
+	font-size:20px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(236,101,50,1);
 }
 .paid-name{
 	width: 100%;
@@ -48,6 +50,10 @@ page{
 	color: #323232;
 	font-size: 16px;
 	padding-left: 3%;
+	margin-top: 20px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(50,50,50,1);
 }
 .paid-con{
 	width: 100%;
@@ -58,8 +64,10 @@ page{
 .con{
 	width: 30%;
 	height: 50px;
-	color: #585858;
-	font-size: 15px;
+	font-size:15px;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(88,88,88,1);
 }
 .mou{
 	width: 100%;
@@ -74,17 +82,22 @@ page{
 	font-size: 13px;
 	color: #A1A1A1;
 	opacity: 0.6;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(161,161,161,1);
 }
 .paid-btn{
 	width: 90%;
-	height: 40px;
-	background: #FF582B;
+	height: 48px;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
 	color: white;
 	text-align: center;
-	line-height: 40px;
+	line-height: 48px;
 	border-radius: 30px;
-	margin-left: 3%;
+	margin-left: 5%;
 	margin-top: 7%;
+	font-weight:bold;
+	font-size:17px;
 }
 .pid1{
 	width: 100%;
@@ -94,14 +107,16 @@ page{
 	width: 100%;
 	height: 30px;
 	text-align: center;
-	font-size: 13px;
-	font-weight: 500;
-	color: #A1A1A1;
+	font-size:14px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
 }
 .payment1{
 	width: 100%;
 	height: 200px;
 	text-align: center;
+	display: flex;
 }
 .view{
 	width: 100%;
@@ -109,15 +124,19 @@ page{
 	text-align: center;
 }
 .view span{
-	width: 200px;
-	height: 45px;
-	border-radius: 30px;
+	width: 120px;
+	height:48px;
+	border:1px solid rgba(88,88,88,1);
+	border-radius:30px;
 	color: white;
-	background: #FF582B;
 	margin-left: 6%;
-	line-height: 40px;
+	line-height: 48px;
 	text-align: center;
 	display: inline-block;
+	font-size:16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(88,88,88,1);
 }
 .home{
 	width: 100%;
@@ -125,13 +144,17 @@ page{
 	text-align: center;
 }
 .home span{
-	width: 200px;
-	height: 45px;
-	border-radius: 30px;
-	color:#A1A1A1;
-	background: #FFFFFF;
+	width: 120px;
+	height:48px;
+	border:1px solid rgba(236,101,50,1);
+	border-radius:30px;
+	color: white;
 	margin-left: 6%;
-	line-height: 40px;
+	line-height: 48px;
 	text-align: center;
 	display: inline-block;
+	font-size:16px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(236,101,50,1);
 }

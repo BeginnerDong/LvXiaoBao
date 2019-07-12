@@ -18,22 +18,21 @@
 			<view class="mou-title" style="text-align: right;">周六返回</view>
 		</view>
 	</view>
-	<view class="paid-btn">立即支付</view> -->
+	<view class="paid-btn">立即支付</view> --> 
 	
-	<view class="payment">
+	 <view class="payment">
 		<view class="pid1">
 			<view class="paid-img">
 				<image src="../../image/paid.png"></image>
 			</view>
 			<view class="paid-title">订单支付成功</view>
-			<view class="paid-price1">支付方式：银行卡</view>
-			<view class="paid-price1">支付金额：￥299.00</view>
+			<view class="paid-price1">￥6380.00</view>
 		</view>
 			<view class="payment1">
 			<view class="view"><span>查看订单</span></view>
 			<view class="home"><span>返回商家</span></view>
 		</view>
-	</view>
+	</view> 
 
 	
 </view>

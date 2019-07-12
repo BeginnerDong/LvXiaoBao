@@ -47,12 +47,13 @@ page{
 }
 .detail-info{
 	width:100%;
-	height:300rpx;
+	height:370rpx;
 	z-index: 888;
+	background: white;
 }
 .detail-info-top{
 	width:94%;
-	height:300rpx;
+	height:370rpx;
 	padding: 0 3%;
 	border-bottom: 1px solid #E7E7E7;
 	background: #fff;
@@ -102,12 +103,11 @@ page{
 }
 .norm-title{
 	width: 100%;
-	height: 46px;
+	height: 50px;
 	background: #FFFFFF;
 	display: flex;
 	justify-content: center;
 	border-bottom: 1px solid #E7E7E7;
-	padding-top: 1%;
 }
 .norm-name{
 	width: 30%;
@@ -139,28 +139,29 @@ page{
 }
 .norm-name1{
 	width: 50%;
+	height: 47px;
 	text-align: left;
 	font-size: 16px;
 	color: #323232;
-	padding-left: 14px;
-	padding-top: 17px;
-	font-weight:500;
-	font-family:PingFang-SC-Bold;
-	font-weight:bold;
-	color:rgba(50,50,50,1);
-	line-height:23px;
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(161,161,161,1);
+	line-height:47px;
 	position: relative;
 	z-index:1;	
+	padding-left: 14px;
 }
 .norm-data1{
 	width: 50%;
+	height: 47px;
 	text-align: right;
-	font-size: 15px;
-	color: #323232;
-	padding-left: 14px;
-	padding-top: 17px;
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(50,50,50,1);
 	margin-right: 13px;
-	font-weight: 400;
+	line-height: 47px;
 }
 .travel{
 	width: 100%;
@@ -186,6 +187,7 @@ page{
 .travel-title{
 	width: 100%;
 	height: 45px;
+
 	display: flex;
 	justify-content: center;
 	border-bottom: 1px solid #E7E7E7;
@@ -193,24 +195,24 @@ page{
 }
 .travel-name1{
 	width: 30%;
+	height: 45px;
 	text-align: left;
 	padding-left: 14px;
-	padding-top: 17px;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
-	line-height:23px;
+	line-height:45px;
 	position: relative;
 	z-index:1;
 	font-size: 16px;
 }
 .travel-data2{
 	width: 70%;
-	/* text-align: center; */
+	height: 45px;
+	line-height: 45px;
 	font-size: 15px;
 	color: #323232;
 	padding-left: 14px;
-	padding-top: 17px;
 	margin-right: 13px;
 	font-weight: 800;
 }
@@ -233,8 +235,8 @@ page{
 	line-height: 46px;
 }
 .phone image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 }
 .discount{
 	width: 40px;
@@ -281,7 +283,7 @@ page{
 	width: 55%;
 	font-size: 15px;
 	color: #323232;
-	padding-top: 2%;
+	padding-top: 1%;
 	margin-left: 5%;
 }
 .dis-content4 span{
@@ -289,14 +291,13 @@ page{
 }
 .dis-img{
 	width: 20px;
-	height: 20px;
-	line-height: 20px;
-	border: 1px dashed #323232;
+	height: 40px;
+	line-height: 40px;
 	margin-left: 50%;
 }
 .dis-img image{
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
 }
 .dis-con{
 	font-size: 15px;
@@ -309,7 +310,7 @@ page{
 }
 .agent{
 	width: 100%;
-	height: 230px;
+	height: 270px;
 	margin-top: 2%;
 	background: white;
 }
@@ -327,6 +328,7 @@ page{
 	text-align: center;
 	font-size: 28rpx;
 	margin-right: 24rpx;
+	font-weight: bold;
 }
 .start-level-active{
 	font-weight:bold;
@@ -335,13 +337,13 @@ page{
 	border: none;
 }
 .group-item{
-	width:120rpx;
+	width:180rpx;
 	height:88rpx;
 	background:rgba(255,255,255,1);
 	border:1px solid rgba(197, 197, 197, 1);
 	border-radius:8px;
 	text-align: center;
-	margin-right: 20rpx;
+	margin-right: 5rpx;
 }
 .group-date{
 	font-size:13px;
@@ -379,26 +381,30 @@ page{
 
 }
 .people{
-	margin-top: 2%;
+	margin-top: 5%;
 }
 .people-title{
-	width: 55%;
-	font-size: 13px;
+	width: 65%;
+	font-size: 16px;
+	font-weight: 500;
+	font-family:PingFang-SC-Medium;
+	color:rgba(161,161,161,1);
 }
 .people-img{
-	width: 45%;
+	width: 30%;
 }
 .people-img image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 }
 .norm-data2{
 	width: 60%;
+	height: 47px;
+	line-height: 47px;
 	text-align: right;
 	font-size: 16px;
 	color: #A1A1A1;
 	padding-left: 14px;
-	padding-top: 17px;
 	margin-right: 13px;
 	display: flex;
 	justify-content: center;
@@ -513,7 +519,7 @@ page{
 .place-img image{
 	width: 20px;
 	height: 20px;
-	border: 1px dashed #000000;
+	margin-left: 10%;
 }
 .place-title{
 	width: 100%;
@@ -533,14 +539,16 @@ page{
 .place-btn span{
 	width: 160px;
 	height: 40px;
-	background: #FF582B;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
 	color: white;
 	display: inline-block;
 	text-align: center;
 	line-height:40px ;
 	border-radius: 30px;
-	margin-top: 5%;
+	margin-top: 7%;
 	z-index: 111;
+	font-weight: bold;
+	font-size: 17px;
 }
 .choose{
 	width: 100%;
@@ -555,24 +563,35 @@ page{
 .choose1{
 	width: 100%;
 	height: 400px;
-	background: #FFEEF0;
+	background: #FFFFFF;
 	opacity: 1;
 	position: fixed;
 	bottom: 0;
 	z-index: 22222;
+	border-radius:12px 12px 0px 0px;
 }
 .cho1{
+	width: 100%;
 	padding: 0 3%;
-	height: 73px;
+	height: 60px;
 	display: flex;
+	line-height: 60px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .cho-title{
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	padding: 10px;
 	font-size: 16px;
 	color: #323232;
 	font-weight: bold;
+	border-radius:12px 12px 0px 0px;
+	font-family:PingFang-SC-Bold;
+	color:rgba(50,50,50,1);
+	line-height:40px;
+	position: relative;
+	z-index:1;
+	border-bottom: 1px solid #E7E7E7;
 }
 .cho1-left{
 	width: 33%;
@@ -580,6 +599,7 @@ page{
 	font-size: 16px;
 	color: #323232;
 	font-weight:bold;
+	font-family:PingFang-SC-Bold;
 }
 .cho1-all{
 	width: 33%;
@@ -593,7 +613,6 @@ page{
 .cho1-subtrat image{
 	width: 15px;
 	height: 15px;
-	margin-left: 2%;
 }
 .cho1-number{
 	width: 30%;
@@ -609,12 +628,15 @@ page{
 }
 .cho1-btn{
 	width: 100%;
-	height: 40px;
-	background: #FF582B;
-	border-radius: 10px;
+	height: 48px;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
 	text-align: center;
 	color: white;
-	line-height: 40px;
+	line-height: 48px;
+	font-weight: bold;
+	font-size: 17px;
+	position: fixed;
+	bottom: 0;
 }
 .posters{
 	width: 100%;
@@ -626,23 +648,28 @@ page{
 	z-index: 10000;
 }
 .poster{
-	width: 90%;
+	width: 100%;
 	height: 90%;
 	position: fixed;
 	top: 10%;
-	left: 10%;
 	z-index: 10000;
 }
-.poster image{
+.img{
 	width: 90%;
-	height: 80%;
+	height: 70%;
+	z-index: 333333;
+	margin-left: 10%;
+}
+.img image{
+	width: 90%;
+	height: 100%;
 }
 .poster-icon{
-	width: 90%;
+	width: 100%;
 	height: 10%;
 	z-index: 10000;
 	text-align: center;
-	margin-top: 2%;
+	margin-top: 4%;
 }
 .poster-icon image{
 	width: 30px;
@@ -656,10 +683,9 @@ page{
 	background: rgba(255, 209, 1, 1);
 	border-radius: 2px;
 	position:absolute;
-	bottom:10rpx;
+	bottom:24rpx;
 	z-index:-1;
 	left:13%;
-	margin-top: -5px;
 }
 .title{
 	font-size:16px;
@@ -670,4 +696,71 @@ page{
 	position: relative;
 	height: 45px;
 	z-index:1
+}
+.product-info-bottom{
+	display: flex;
+	align-items: center;
+	height:100rpx;
+	background: #fff;
+	padding: 0 3%;
+	width:94%;
+	border-bottom: 1px solid #E7E7E7;
+}
+.starand{
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(161,161,161,1);
+	width:30%;
+	
+}
+.starand-item{
+	display: flex;
+	align-items: center;
+	font-size:15px;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(50,50,50,1);
+	width:24.3%;
+	
+}
+.starand-item image{
+	width:32rpx;
+	height:32rpx
+}
+.starand-item .text{
+	margin-left: 10rpx;
+}
+.product-explain{
+	margin-top: 24rpx;
+}
+.post-img{
+	width: 100%;
+	height: 60px;
+	background: white;
+	position: fixed;
+	bottom: -5px;
+	z-index: 33333;
+	display: flex;
+	border-radius: 10px;
+}
+.imgs{
+	width: 50%;
+	height: 60px;
+	line-height: 60px;
+	text-align: right;
+	margin-right: 10px;
+}
+.imgs image{
+	width: 20px;
+	height: 20px;
+	margin-top: 20px;
+}
+.img-name{
+	width: 50%;
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #323232;
 }

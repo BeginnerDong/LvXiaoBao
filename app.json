@@ -1,15 +1,16 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/productList/productList",
     "pages/peer/peer",
     "pages/salers/salers",
     "pages/productDetail/productDetail",
-    "pages/datail/datail",
     "pages/shopping/shopping",
     "pages/productListPlate/productListPlate",
     "pages/schedule/schedule",
     "pages/discount/discount",
+    "pages/datail/datail",
     "pages/search/search",
     "pages/dateSlecte/dateSlecte",
     "pages/eduit/eduit",
@@ -46,7 +47,10 @@
     "pages/feedback/feedback",
     "pages/set/set",
     "pages/signature/signature",
-    "pages/certification/certification"
+    "pages/certification/certification",
+    "pages/deposit/deposit",
+    "pages/acticity/acticity",
+    "pages/micro/micro"
   ],
   "window": {
     "backgroundTextStyle": "light",

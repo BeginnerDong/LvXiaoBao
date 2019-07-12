@@ -5,7 +5,8 @@
 			<view class="detail-con1">订单资源比较紧缺，请尽快完成付款，以免影响行程。</view>
 		</view>
 		<view class="detail-message">
-			<view class="detail-mess">订单信息</view>
+			<view class="detail-mess">订单信息
+			<view class="title-line" style="bottom: 10px;"></view></view>
 			<view class="deail-num">￥6380.00</view>
 			<view class="detail-con">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机飘浮潜</view>
 			<view class="paid-con">
@@ -19,7 +20,8 @@
 			</view>
 		</view>
 		<view class="people">
-			<view class="detail-mess">预订人</view>
+			<view class="detail-mess">预订人
+			<view class="title-line" style="bottom: 10px;"></view></view>
 			<view class="people-name">
 				<view class="peo-titl">姓名</view>
 				<view class="peo-title">张佳怡</view>
@@ -39,7 +41,8 @@
 		</view>
 		<view class="list">
 			<view class="list-title">
-				<view class="list-left">游客名单</view>
+				<view class="list-left">游客名单
+				<view class="title-line" style="bottom: 10px;"></view></view>
 				<view class="list-img1">
 					<image src="../../image/down.png"></image>
 				</view>
@@ -54,7 +57,7 @@
 				</view>
 				<view class="name-img">
 					<view class="list-img">
-						<image src="../../image/addi.png"></image>
+						<image src="../../image/qqqq.png"></image>
 					</view>
 					<view class="list-img">
 						<image src="../../image/delete.png"></image>
@@ -71,7 +74,7 @@
 				</view>
 				<view class="name-img">
 					<view class="list-img">
-						<image src="../../image/addi.png"></image>
+						<image src="../../image/qqqq.png"></image>
 					</view>
 					<view class="list-img">
 						<image src="../../image/delete.png"></image>
@@ -81,7 +84,8 @@
 		</view>
 		<view class="insurance">
 			<view class="list-title">
-				<view class="list-left">保险</view>
+				<view class="list-left">保险
+				<view class="title-line" style="bottom: 10px;"></view></view>
 				<view class="list-img1">
 					<image src="../../image/down.png"></image>
 				</view>
@@ -118,7 +122,8 @@
 		</view>
 		<view class="contrat">
 			<view class="list-title">
-				<view class="list-left">电子合同</view>
+				<view class="list-left">电子合同
+				<view class="title-line" style="bottom: 10px;"></view></view>
 				<view class="list-img1">
 					<image src="../../image/down.png"></image>
 				</view>
@@ -134,7 +139,7 @@
 					<view class="peo-title1">
 						<view class="st">EC20190529CDE</view>
 						<view class="st-to"><span>查看</span></view>
-						<view class="st-to"><span style="background: #FD8B05;">发送</span></view>
+						<view class="st-to"><span style="background:linear-gradient(90deg,rgba(255,232,28,1) 0%,rgba(253,139,5,1) 100%);">发送</span></view>
 					</view>
 				</view>
 				<view class="steel-con">
@@ -169,7 +174,7 @@
 	 <view class="bg"></view>
 	<view class="payment">
 		<view class="detail-messa">立即支付
-		<view class="title-line"></view></view>
+		<view class="title-line" style="bottom: 12px;"></view></view>
 		<view class="pay">
 			<view class="pay-name">￥1000</view>
 			<view class="pay-data">

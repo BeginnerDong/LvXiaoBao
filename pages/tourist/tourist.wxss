@@ -13,7 +13,7 @@ page{
 	background: #fff;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	border-radius:12px;
-	height:160rpx;
+	height:200rpx;
 	margin-top: 24px;
 	padding-left: 3%;
 }
@@ -33,8 +33,8 @@ page{
 	width: 13%;
 }
 .left image{
-	width: 20pt;
-	height:20pt;
+	width: 20px;
+	height:20px;
 }
 .middle{
 	width:60%
@@ -67,7 +67,7 @@ page{
 	display: flex;
 	position: fixed;
 	bottom: 0;
-	border: 1px dashed #323232;
+	background: #E7E7E7;
 }
 .bottom-left{
 	width: 60%;
@@ -86,18 +86,18 @@ page{
 .left-img image{
 	width: 20px;
 	height: 20px;
-	border: 1px dashed #000000;
 }
 .left-cn{
 	font-size: 12px;
 	color: #323232;
 	margin-top: 5px;
+	font-weight: 500;
 }
 .bott-btn{
 	width: 40%;
 	height: 40px;
 	color: white;
-	background: #FF582B;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
 	text-align: center;
 	line-height: 40px;
 	border-radius: 30px;
@@ -108,9 +108,9 @@ page{
 }
 .visi{
 	width: 100%;
-	height: 75%;
+	height: 80%;
 	position: fixed;
-	bottom:25%;
+	bottom:20%;
 	background: #000000;
 	opacity: 0.6;
 	z-index: 222;
@@ -121,17 +121,32 @@ page{
 	position: fixed;
 	bottom:0%;
 	background: #FFFFFF;
+	border-radius: 20px;
+	z-index: 333;
 }
 .visi-name{
 	width: 100%;
-	height: 42px;
 	font-size: 16px;
-	color: #323232;
-	padding: 0 3%;
-	line-height: 40px;
-	border-bottom: 1px solid #E7E7E7;
-	font-weight: bold;
 	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	padding-top: 3px;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 5%;
+	border-radius: 30px;
+}
+.title-line {
+	width: 16px;
+	height: 3px;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 2px;
+	position:absolute;
+	z-index:-1;
+	left:5%;
+	bottom: 17px;
 }
 .visi-name1{
 	width: 100%;

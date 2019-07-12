@@ -1,6 +1,7 @@
 <view>
 	<view class="sign">
-		<view class="sign-name">签署合同</view>
+		<view class="sign-name">签署合同
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="sign-sign">
 			<view class="sign-title">电子合同</view>
 			<view class="sign-con">
@@ -21,7 +22,8 @@
 		</view>
 	</view>
 	<view class="info">
-		<view class="sign-name">游客信息</view>
+		<view class="sign-name">游客信息
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">游客类别</view>
 			<view class="peo-content1">
@@ -66,7 +68,8 @@
 	</view>
 	</view>
 	<view class="product">
-		<view class="sign-name">产品信息</view>
+		<view class="sign-name">产品信息
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">*产品名称</view>
 			<view class="peo-content1">
@@ -131,7 +134,8 @@
 		</view>
 	</view>
 	<view class="travel">
-		<view class="sign-name">旅游费用</view>
+		<view class="sign-name">旅游费用
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">*成人</view>
 			<view class="sign-content">元/人</view>
@@ -180,7 +184,8 @@
 		</view>
 	</view>
 	<view class="costs">
-		<view class="sign-name">旅游费用</view>
+		<view class="sign-name">旅游费用
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">*购买保险方式</view>
 			<view class="peo-content1">
@@ -200,7 +205,8 @@
 		</view>
 	</view>
 	<view class="agglo">
-		<view class="sign-name">成团不成团约定</view>
+		<view class="sign-name">成团不成团约定
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="peo-name">
 			<view class="sign-left">*成团人数</view>
 			<view class="sign-span">
@@ -256,7 +262,8 @@
 		</view>
 	</view>
 	<view class="group">
-		<view class="sign-name">拼团约定</view>
+		<view class="sign-name">拼团约定
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="agglo-one" style="border-bottom: 1px solid #E7E7E7;">
 			<view class="agg-con1">*游客是否同意拼团</view>
 			<view class="agg-img">
@@ -273,7 +280,8 @@
 		</view>
 	</view>
 	<view class="dispute">
-		<view class="sign-name">争议解决方式</view>
+		<view class="sign-name">争议解决方式
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="agglo-one" style="border-bottom: 1px solid #E7E7E7;">
 			<view class="agg-con1">*请求仲裁委员会仲裁</view>
 			<view class="agg-img">
@@ -296,7 +304,8 @@
 		</view>
 	</view>
 	<view class="rest">
-		<view class="sign-name">其他事项</view>
+		<view class="sign-name">其他事项
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con3">其他约定事项</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
@@ -311,7 +320,8 @@
 		</view>
 	</view>
 	<view class="pact">
-		<view class="sign-name">合同附件</view>
+		<view class="sign-name">合同附件
+		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="part-img">
 			<view class="part-ti">
 				<image src="../../image/caram.png"></image>
@@ -320,8 +330,13 @@
 	</view>
 	<view class="botom">
 		<view class="speci-left">
-			<view class="special">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
-			<view class="special">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
+			<view class="special" style="font-size: 13px;">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
+			<view class="special" style="display: flex;font-size: 15px;">
+				<view class="spe-pho">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
+				<view class="spe-img">
+					<image src="../../image/black.png"></image>
+				</view>
+			</view>
 		</view>
 		<view class="spaci-btn">
 			<view class="speci1" style="border-right: 1px solid white;" bindtap="intoPath" data-path="/pages/electro/electro">

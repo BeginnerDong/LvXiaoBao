@@ -7,25 +7,27 @@
 	height: 50px;
 	display: flex;
 	padding: 0 3%;
-	
+	border-bottom: 1px solid #E7E7E7;
 }
 .peo-con{
 	width: 30%;
 	height: 50px;
 	font-size: 16px;
 	color: rgba(50,50,50,1);
-	opacity: 1;
-	font-weight: bold;
+	font-weight: 500;
+	line-height: 50px;
 }
 .peo-content{
 	width: 70%;
 	height: 50px;
+	line-height: 50px;
 	display: flex;
 }
 .peo-content input{
-	width: 60%;
-	height: 40px;
+	width: 69%;
+	height: 49px;
 	border: none;
+	line-height: 49px;
 	font-size: 10px;
 	color: #A1A1A1;
 	opacity: 1;
@@ -37,7 +39,7 @@
 	margin-right: 15%;
 }
 .card{
-	width: 80%;
+	width: 100%;
 	
 }
 .card input{
@@ -47,25 +49,41 @@
 	font-size: 14px;
 	color: #A1A1A1;
 	opacity: 1;
+	line-height: 40px;
 	
 }
 .card-img image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 }
 
 .peo-content1{
+	width: 70%;
+	height: 50px;
+	line-height: 50px;
 	font-size: 14px;
 	color: #A1A1A1;
+}
+.peo-content1 input{
+	width: 69%;
+	height: 49px;
+	border: none;
+	line-height: 49px;
+	font-size: 13px;
+	color: #A1A1A1;
+	opacity: 1;
 }
 .btn{
 	width: 90%;
 	height: 50px;
-	background: #FF582B;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
 	color: white;
 	text-align: center;
 	border-radius: 30px;
 	line-height: 50px;
 	margin-left: 5%;
 	opacity: 0.3;
+	margin-top: 20px;
+	font-size: 17px;
+	font-weight: bold;
 }

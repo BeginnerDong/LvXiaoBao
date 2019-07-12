@@ -1,23 +1,26 @@
 <view>
 	<view class="jounery">
-		<view class="joun">第1天 昆明</view>
-		<view class="joun-con">昆明于指定时间昆明长水国际机场集合，由领队带领办理相关出国手续，乘机飞往美丽的普吉岛。普吉岛是泰国南部的世外桃源，围绕着她的是安达曼的清透海水、美丽海滩与奇形怪状的小岛及天然钟乳石洞窟等奇特景观。忽而望来青翠的丛林，忽而迎面的是蔚蓝海岸，普吉岛正展开热情的双手呼唤着您。特别提醒：泰国与中国存在时差一小时，飞机起飞以当地时间为准，因此请注意换算时间。指定时间昆明长水国际机场集合，由领队带领办理相关出国手续，乘机飞往美丽的普吉岛。</view>
+		<view class="jo">
+			<view class="joun">第1天 昆明</view>
+			<view class="joun-con">昆明于指定时间昆明长水国际机场集合，由领队带领办理相关出国手续，乘机飞往美丽的普吉岛。普吉岛是泰国南部的世外桃源，围绕着她的是安达曼的清透海水、美丽海滩与奇形怪状的小岛及天然钟乳石洞窟等奇特景观。忽而望来青翠的丛林，忽而迎面的是蔚蓝海岸，普吉岛正展开热情的双手呼唤着您。特别提醒：泰国与中国存在时差一小时，飞机起飞以当地时间为准，因此请注意换算时间。指定时间昆明长水国际机场集合，由领队带领办理相关出国手续，乘机飞往美丽的普吉岛。</view>
+		</view>
+		
 		<view class="joun-btn">
 			<view class="joun-left">
 				<view class="joun-top">
-					<image src="../../image/eduit.png"></image>
+					<image src="../../image/red.png"></image>
 				</view>
 				<view class="jo-con">编辑</view>
 			</view>
 			<view class="joun-left">
 				<view class="joun-top">
-					<image src="../../image/save.png"></image>
+					<image src="../../image/ee.png"></image>
 				</view>
 				<view class="jo-con">保存</view>
 			</view>
 		</view>
 		<view class="jounery-btn">
-			<image src="../../image/clo.png"></image>
+			<image src="../../image/aa.png"></image>
 		</view>
 	</view>
 </view>

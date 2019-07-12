@@ -1,7 +1,11 @@
+page{
+	background: #E7E7E7;
+}
 .schedule{
 	width: 100%;
 	height: 100px;
-	padding: 0 3%;
+	padding: 2% 3%;
+	background: white;
 }
 .detail-id{
 	height: 15px;
@@ -28,15 +32,20 @@
 	border-radius: 2px;
 	position:absolute;
 	z-index:-1;
-	left:3%;
+	left:1%;
+	bottom: 12px;
 }
 .schedata{
 	width: 100%;
-	height: 400px;
+	height: 450px;
 	margin-top: 2%;
 	padding: 0 3%;
+	background: white;
 }
 .shedu{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
 	display: flex;
 	border-bottom: 1px solid #E7E7E7;
 }
@@ -44,7 +53,7 @@
 	width: 30%;
 	font-size: 16px;
 	font-family:PingFang-SC-Bold;
-	font-weight:bold;
+	font-weight:500;
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
@@ -54,21 +63,24 @@
 	width: 60%;
 	height: 50px;
 	text-align: right;
+	font-weight: bold;
 }
 .she-date{
 	width: 70%;
 	height: 50px;
 	display: flex;
 	justify-content: center;
+	font-weight: bold;
 }
 .count{
-	width: 30%;
+	width: 22%;
 	height: 50px;
 	font-size: 16px;
 	color: #323232;
 	opacity: 1;
 	font-weight:bold;
 	text-align: right;
+	margin-right: 3%;
 }
 .past{
 	width: 20px;
@@ -78,6 +90,8 @@
 	text-align: center;
 	line-height: 20px;
 	font-size: 13px;
+	margin-top: 13px;
+	font-weight: bold;
 }
 .count1{
 	width: 30%;
@@ -96,6 +110,7 @@
 	background: #E7E7E7;
 	opacity: 1;
 	border-radius: 10px;
+	margin-top: 15px;
 }
 .fli-top{
 	width: 100%;
@@ -123,12 +138,13 @@
 }
 .back{
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	margin-top: 2%;
+	line-height: 40px;
 }
 .she-date2{
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	display: flex;
 	justify-content: flex-end;
 }
@@ -140,7 +156,9 @@
 	text-align: center;
 	line-height: 20px;
 	font-size: 13px;
-	margin-right: 17px;
+	margin-right: 16px;
+	margin-top: 10px;
+	font-weight: bold;
 }
 .count2{
 	width: 100px;
@@ -148,7 +166,7 @@
 	color: #323232;
 	opacity: 1;
 	text-align: right;
-	margin-left: 3%;
+	margin-right: 5%;
 	font-weight: bold;
 }
 .tourist{
@@ -156,6 +174,7 @@
 	height: 390px;
 	margin-top: 6%;
 	padding: 0 3%;
+	background: white;
 }
 .card{
 	width: 88%;
@@ -165,26 +184,32 @@
 	opacity: 1;
 	margin-top: 3%;
 	border-radius: 10px;
+	display: flex;
+}
+
+.card-id{
+	width: 85%;
+	height: 50px
+	color: #A1A1A1;
+	font-size: 13px;
+}
+.cardi{
+	width: 15%;
+	height: 100px;
+	line-height: 100px;
 }
 .card-img{
-	width: 40%;
-	height: 30px;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
 	text-align: right;
 }
 .card-img image{
 	width: 20px;
 	height: 20px;
 }
-.card-id{
-	width: 100%;
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	color: #A1A1A1;
-	font-size: 13px;
-}
 .card-id1{
-	width: 60%;
+	width: 100%;
 	padding-left: 10px;
 }
 .card-name{
@@ -207,7 +232,7 @@
 	width: 150px;
 	height: 40px;
 	display: inline-block;
-	border-radius: 20px;
+	border-radius: 32px;
 	border: 1px solid #EC6532;
 	text-align: center;
 	line-height: 40px;
@@ -218,10 +243,10 @@
 .more{
 	width: 100%;
 	height: 50px;
-	margin-top: 3%;
 	text-align: center;
 	color: #A1A1A1;
 	display: flex;
+	line-height: 50px;
 }
 .more-add{
 	width: 50%;
@@ -235,7 +260,8 @@
 	width: 50%;
 	height: 50px;
 	text-align: left;
-	margin-top: 2px;
+	margin-top: 5px;
+	margin-left: 2%;
 }
 .more-img image{
 	width: 20px;
@@ -247,6 +273,7 @@
 	padding: 0 3%;
 	margin-top: 3%;
 	z-index: 111;
+	background: white;
 }
 .peo-title{
 	width: 100%;
@@ -259,6 +286,7 @@
 	position: relative;
 	z-index:1;
 	padding-top: 3px;
+	line-height: 50px;
 	border-bottom: 1px solid #E7E7E7;
 }
 .peo-name{
@@ -271,21 +299,23 @@
 .peo-con{
 	width: 30%;
 	height: 50px;
-	font-size:16px;
+	font-size:14px;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	line-height:50px;
+	padding-left: 5%;
 }
 .peo-content{
 	width: 70%;
 	height: 50px;
 }
 .peo-content input{
-	width: 60%;
-	height: 40px;
+	width: 69%;
+	height: 49px;
 	border: none;
-	font-size: 13px;
+	line-height: 49px;
+	font-size: 14px;
 }
 .botom{
 	width: 100%;
@@ -311,6 +341,7 @@
 	color: #323232;
 	opacity: 1;
 	padding-left: 2%;
+	font-weight: 500;
 }
 .spaci-btn{
 	width: 50%;
@@ -318,16 +349,17 @@
 	display: flex;
 	justify-content: center;
 	background: #FF582B;
-	border-radius: 20px;
+	border-radius: 30px;
 	margin-top: 3%;
+	margin-right: 3%;
 }
 .spe-img{
 	width: 20%;
 	margin-left: 10%;
 }
 .spe-img image{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 10px;
 }
 .speci1{
 	width: 48%;
@@ -335,9 +367,10 @@
 	opacity: 1;
 	color: white;
 	text-align: center;
-	font-size: 10pt;
-	line-height: 25px;
+	font-size: 10px;
 	font-weight: bold;
+	line-height: 20px;
+	padding-top: 2%;
 }
 .cost{
 	width: 100%;
@@ -360,7 +393,7 @@
 }
 .expense-title{
 	width: 100%;
-	height: 30px;
+	height: 50px;
 	color: #323232;
 	font-size: 16px;
 	padding: 3%;
@@ -369,7 +402,9 @@
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
+	line-height: 50px;
 	padding-top: 3px;
+	border-bottom: 1px solid #E7E7E7;
 }
 .expense-content{
 	width: 100%;
@@ -390,6 +425,7 @@
 .con-left{
 	width: 50%;
 	padding-left: 8%;
+	padding-top: 2%;
 }
 .con-title{
 	width: 100%;
@@ -416,6 +452,7 @@
 .con-right{
 	width: 50%;
 	text-align: center;
+	padding-top: 2%;
 }
 .expense-content1{
 	width: 100%;
@@ -427,6 +464,9 @@
 .con{
 	width: 50%;
 	padding-left: 3%;
+	font-weight: bold;
+	font-size: 16px;
+	color: #323232;
 }
 .con1{
 	width: 50%;
