@@ -137,7 +137,7 @@
 			</view>
 			<view class="text">同行</view>
 		</view>
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/micro/micro">
 			<view class="nav_img">
 				<image src="../../image/index-icon6.png"></image>
 			</view>

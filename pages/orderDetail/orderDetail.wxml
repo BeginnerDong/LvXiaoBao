@@ -171,7 +171,7 @@
 			<view class="can1"><span>立即支付</span></view>
 		</view> 
 	</view>
-	 <view class="bg"></view>
+	<!-- <view class="bg"></view>
 	<view class="payment">
 		<view class="detail-messa">立即支付
 		<view class="title-line" style="bottom: 12px;"></view></view>
@@ -212,5 +212,5 @@
 			<view class="can"><span>取消订单</span></view>
 			<view class="can1"><span>立即支付</span></view>
 		</view>
-	</view> 
+	</view> -->
 </view>

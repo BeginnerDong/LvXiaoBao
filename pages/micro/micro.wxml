@@ -33,4 +33,37 @@
 	<view class="tr">
 		<image src="../../image/tral.png"></image>
 	</view>
+	<view style="width:100%;height:130rpx"></view>
+	<view class="navbar">
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
+			<view class="nav_img">
+				<image src="../../image/index-icon3.png"></image>
+			</view>
+			<view class="text this-text">微店</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/peer/peer">
+			<view class="nav_img">
+				<image src="../../image/index-icon4.png"></image>
+			</view>
+			<view class="text">同行</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/micro/micro">
+			<view class="nav_img">
+				<image src="../../image/index-icon6.png"></image>
+			</view>
+			<view class="text">首页</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/order/order">
+			<view class="nav_img">
+				<image src="../../image/index-icon5.png" ></image>
+			</view>
+			<view class="text">订单</view>
+		</view>
+		<view class="navbar_item">
+			<view class="nav_img">
+				<image src="../../image/index-icon7.png" ></image>
+			</view>
+			<view class="text">我的</view>
+		</view>
+	</view>
 </view>

@@ -20,7 +20,7 @@
 		</view>
 	</view>
 	<block wx:for="{{web_mainData}}">
-		<view class="order">
+		<view class="order"  bindtap="intoPath" data-path="/pages/orderDetail/orderDetail">
 			<view class="order-name" >
 				<view class="orde">
 					<view class="order-title">
@@ -125,7 +125,7 @@
 			</view>
 			<view class="text">同行</view>
 		</view>
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/micro/micro">
 			<view class="nav_img">
 				<image src="../../image/index-icon6.png"></image>
 			</view>

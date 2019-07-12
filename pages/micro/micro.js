@@ -1,66 +1,101 @@
-// pages/micro/micro.js
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
+		isFirstLoadAllStandard: ['getMainData'],
+		show: false,
+		submitData: {
+			phone: '',
+			code: ''
+		}
+	},
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+	onLoad(options) {
+		const self = this;
+		api.commonInit(self);
 
-  },
+		self.getMainData();
+		self.setData({
+			web_show: self.data.show
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+	getMainData() {
+		const self = this;
+		const postData = {
 
-  },
+		};
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+		const callback = (res) => {
+			if (res.code == 200) {
+				self.data.mainData = res.content
+			}
+			self.setData({
+				web_mainData: self.data.mainData
+			})
+			console.log(self.data.bannerImg)
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+			console.log('getMainData', self.data.mainData)
+		};
+		api.myInfo(postData, callback);
+	},
 
-  },
+	bind() {
+		const self = this;
+		self.data.show = !self.data.show;
+		self.setData({
+			web_show: self.data.show
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'submitData');
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+	},
 
-  },
+	bindPhone() {
+		const self = this;
+		const postData = api.cloneForm(self.data.submitData)
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+		const callback = (res) => {
+			if(res.code==200){
+				api.showToast(res.message, 'none');
+				self.bind();
+			}else{
+				api.showToast(res.errmsg, 'none')
+			}
+			
 
-  },
+		};
+		api.bindPhone(postData, callback);
+	},
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
 
-  },
+	intoPathRedi(e) {
+		const self = this;
+		wx.navigateBack({
+			delta: 1
+		})
+	},
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
 
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
