@@ -10,7 +10,7 @@
 	</view>
 	<view class="client">
 		<view class="client-name" style="background: none;">黑名单
-		<view class="title-line"></view></view>
+		<view class="title-line" style="left: 3%;bottom: 14px;"></view></view>
 		<view class="client-img">
 			<image src="../../image/right.png"></image>
 		</view>

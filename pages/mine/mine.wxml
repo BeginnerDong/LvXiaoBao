@@ -64,7 +64,7 @@
 	<view class="recomm">
 		<view class="reco-top" bindtap="intoPath" data-path="/pages/promote/promote">
 			<view class="remo-img">
-				<image src="../../image/blacklist.png"></image>
+				<image src="../../image/mi.png"></image>
 			</view>
 			<view class="reco">我的推广</view>
 			<view class="reco-con">推荐拿百元现金</view>
@@ -127,7 +127,7 @@
 	<view class="navbar">
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
 			<view class="nav_img">
-				<image src="../../image/index-icon3.png"></image>
+				<image src="../../image/cod.png" style="width: 16px;height: 23px;margin-top: 6px;"></image>
 			</view>
 			<view class="text this-text">微店</view>
 		</view>
@@ -151,7 +151,7 @@
 		</view>
 		<view class="navbar_item">
 			<view class="nav_img">
-				<image src="../../image/index-icon7.png" ></image>
+				<image src="../../image/mine.png" style="width: 16px;height: 20px;margin-top: 6px;"></image>
 			</view>
 			<view class="text">我的</view>
 		</view>

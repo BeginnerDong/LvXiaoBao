@@ -1,8 +1,12 @@
+page{
+	background: #F5F5F5;
+}
 .collect{
 	width: 100%;
 	height: 40px;
 	display: flex;
 	border-bottom: 1px solid #E7E7E7;
+	background: white;
 }
 .coll-name{
 	width: 50%;
@@ -25,11 +29,10 @@
 
 }
 .peer{
-	width:87%;
+	width:100%;
 	margin: 0 auto;
 	background: #fff;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	border-radius:12px;
 	height:380rpx;
 	margin-top: 24rpx;
 	padding: 3%;
@@ -50,6 +53,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-right: 40%;
 }
 .phone image{
 	width:40rpx;
@@ -92,7 +96,6 @@
 	margin: 0 auto;
 	background: #fff;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	border-radius:12px;
 	height:300rpx;
 	margin-top: 24rpx;
 	padding: 3%;

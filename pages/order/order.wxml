@@ -115,7 +115,7 @@
 	<view class="navbar">
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
 			<view class="nav_img">
-				<image src="../../image/index-icon3.png"></image>
+				<image src="../../image/cod.png" style="width: 16px;height: 23px;margin-top: 6px;"></image>
 			</view>
 			<view class="text this-text">微店</view>
 		</view>
@@ -133,7 +133,7 @@
 		</view>
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/order/order">
 			<view class="nav_img">
-				<image src="../../image/index-icon5.png" ></image>
+				<image src="../../image/order.png" style="width: 16px;height: 20px;margin-top: 6px;"></image>
 			</view>
 			<view class="text">订单</view>
 		</view>

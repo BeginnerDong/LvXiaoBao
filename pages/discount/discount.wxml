@@ -4,7 +4,7 @@
 			<span>可用优惠券</span>
 		</view>
 		<view class="top-left">
-			<span>不可用优惠券</span>
+			<span style='font-weight: 500;'>不可用优惠券</span>
 		</view>
 	</view>
 	<block wx:for="{{web_mainData}}" wx:key="id">
