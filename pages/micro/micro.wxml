@@ -4,35 +4,57 @@
 			<image src="../../image/microbg.png"></image>
 		</view>
 		<view class="search">
-			<input placeholder="热门目的地" />
-			<view class="searchBtn" bindtap="intoPath" data-path="/pages/search/search">
+			<input placeholder="热门目的地" value="{{web_search.keyword}}"  data-key="keyword" bindblur="inputChange"/>
+			<view class="searchBtn" bindtap="goSearch">
 				<image src="../../image/index-icon2.png" />
 			</view>
 		</view>
 		<view class="recomm">门店推荐</view>
 	</view>
-	<view class="travle">
+	<view class="travle" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{web_mainData[0].id}}">
 		<view class="travle-img">
-			<image src="../../image/tavle.png"></image>
+			<image src="{{web_mainData[0].bannerImg1}}"></image>
 		</view>
-		<view class="travle-name">泰国旅游曼谷芭提雅沙美岛6天5晚跟团游纯玩报团全程五星酒店出海</view>
+		<view class="travle-name">{{web_mainData[0].lineName}}</view>
 		<view class="travle-title">
 			<view class="name">海边款、网红款、国际品牌任选！</view>
 			<view class="title">
 				<view class="title-name">
-					<image src="../../image/peer-icon3.png"></image>
+					<image src="{{web_mainData[0].isLike>0?'../../image/peer-icon3-active.png':'../../image/peer-icon3.png'}}"></image>
 				</view>
-				<view class="title-num">1000</view>
+				<view class="title-num">{{web_mainData[0].likeNum}}</view>
 			</view>
 		</view>
 		<view class="travle-con">
 			<view class="con"><span>立减100/人</span></view>
-			<view class="con-right">结算价:<span style='color: #EC6532;font-size: 18px;'>￥1740/</span>人起</view>
+			<view class="con-right">结算价:<span style='color: #EC6532;font-size: 18px;'>￥{{web_mainData[0].tpriceOrigin}}/</span>人起</view>
 		</view>
 	</view>
-	<view class="tr">
-		<image src="../../image/tral.png"></image>
+	<view style="margin-top: 230px;">
+		<block wx:for="{{web_mainData}}" wx:key="id" >
+			<view class="tr" wx:if="{{index>0}}" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{item.id}}">
+				<view class="travle-img">
+					<image src="{{item.bannerImg1}}"></image>
+				</view>
+				<view class="travle-name">{{item.lineName}}</view>
+				<view class="travle-title">
+					<view class="name">海边款、网红款、国际品牌任选！</view>
+					<view class="title">
+						<view class="title-name">
+								<image src="{{item.isLike>0?'../../image/peer-icon3-active.png':'../../image/peer-icon3.png'}}"></image>
+						</view>
+						<view class="title-num">{{item.likeNum}}</view>
+					</view>
+				</view>
+				<view class="travle-con">
+					<view class="con"><span>立减100/人</span></view>
+					<view class="con-right">结算价:<span style='color: #EC6532;font-size: 18px;'>￥{{item.tpriceOrigin}}/</span>人起</view>
+				</view>
+			</view>
+		</block>
 	</view>
+	
+	
 	<view style="width:100%;height:130rpx"></view>
 	<view class="navbar">
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
@@ -47,7 +69,7 @@
 			</view>
 			<view class="text">同行</view>
 		</view>
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/micro/micro">
+		<view class="navbar_item" >
 			<view class="nav_img">
 				<image src="../../image/index-icon6.png"></image>
 			</view>
@@ -59,7 +81,7 @@
 			</view>
 			<view class="text">订单</view>
 		</view>
-		<view class="navbar_item">
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/mine/mine">
 			<view class="nav_img">
 				<image src="../../image/index-icon7.png" ></image>
 			</view>

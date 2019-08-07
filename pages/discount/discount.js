@@ -11,13 +11,17 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard:['getMainData'],
-		
+		type:101,
+		mainData:[]
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
-		self.getMainData()
+		self.getMainData();
+		self.setData({
+			web_type:self.data.type
+		});
 	},
 
 	getMainData(isNew) {
@@ -26,12 +30,16 @@ Page({
 			api.clearPageIndex(self);
 		};
 		const postData = {
+			header:{
+				'Authorization': wx.getStorageSync('token'),
+			},
 			number:api.cloneForm(self.data.number),
 			size:api.cloneForm(self.data.size),
-			type:101
 		};
 		
+		postData.type = self.data.type;
 		const callback = (res) => {
+			api.buttonCanClick(self,true);
 			if(res.content.list.length>0){
 				self.data.mainData.push.apply(self.data.mainData,res.content.list)
 			}else{
@@ -45,6 +53,20 @@ Page({
 		};
 		api.coupons(postData, callback);
 	},
+	
+	changeType(e){
+		const self = this;
+		api.buttonCanClick(self);
+		var type = api.getDataSet(e,'type');
+		if(self.data.type!=type){
+			self.data.type=type;
+			self.setData({
+				web_type:self.data.type
+			});
+			self.getMainData(true)
+		}
+	},
+	
 
 	
 	onReachBottom() {

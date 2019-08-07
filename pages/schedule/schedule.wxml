@@ -1,24 +1,24 @@
 <view>
 	<view class="schedule">
-		<view class="detail-id">[产品ID：] 4567 7887 4521</view>
-		<view class="detail-name">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机票浮潜</view>
+		<view class="detail-id">[产品ID：] {{web_mainData.id}}</view>
+		<view class="detail-name">{{web_mainData.lineName}}</view>
 	</view>
 	<view class="schedata">
 		<view class="shedu">
 			<view class="she-data">出团日期
 			<view class="title-line"></view></view>
-			<view class="she-date1">2019-05-08</view>
+			<view class="she-date1">{{web_orderPost.startDate}}</view>
 		</view>
 		<view class="shedu">
-			<view class="she-data">出行人数
+		<view class="she-data">出行人数
 			<view class="title-line"></view></view>
 			<view class="she-date">
-					<view class="count">成人x2;</view>
-					<view class="count">成人x2;</view>
-					<view class="count">成人x2;</view>
+				<block wx:for="{{web_orderPost.bills}}" wx:key="id">
+					<view class="count">{{item.billSubject}}x{{item.amount}};</view>
+				</block>		
 			</view>
 		</view>
-		<view class="shedu">
+		<!-- <view class="shedu">
 			<view class="she-data">航班
 			<view class="title-line"></view></view>
 			<view class="she-date">
@@ -69,48 +69,39 @@
 				<view class="fli-con" style="text-align: center;"><span>直达</span></view>
 				<view class="fli-con" style="text-align: right;color: #A1A1A1;">上海虹桥机场</view>
 			</view>
-		</view>
+		</view> -->
 	</view>
 	<view class="tourist">
 		<view class="shedu">
 			<view class="she-data">游客
 			<view class="title-line"></view></view>
 			<view class="she-date">
-					<view class="count">2成人;</view>
-					<view class="count">2老;</view>
-					<view class="count">1儿童;</view>
-					<view class="count" style="margin-right: 30px;"><span style='color: #EC6532;'>5</span>/5</view>
+					<block wx:for="{{web_orderPost.bills}}" wx:key="id">
+						<view class="count">{{item.amount}}{{item.billSubject}};</view>
+					</block>	
+					<view class="count"><span style='color: #EC6532;'>{{web_orderPost.peopleIds.length}}</span>/{{web_allPeopleCount}}</view>
 			</view>
 		</view>
-		<view class="card">
-			<view class="card-id">
-				<view class="card-name">刘建超(成人)</view>
-				<view class="card-id1">身份证:623001199201183562</view>
-			</view>
-			<view class="cardi">
-				<view class="card-img">
-					<image src="../../image/delete.png"></image>
+		<block wx:for="{{web_peopleData}}" wx:key="id">
+			<view class="card" wx:if="{{!showMore?index<2&&item.isSelect:index>=0&&item.isSelect}}">
+				<view class="card-id">
+					<view class="card-name">{{item.name}}</view>
+					<view class="card-id1">{{item.cdtype}}：{{item.card}}</view>
+				</view>
+				<view class="cardi" bindtap="cancelPeople" data-index="{{index}}">
+					<view class="card-img">
+						<image src="../../image/delete.png"></image>
+					</view>
 				</view>
 			</view>
-		</view>
-		<view class="card">
-			<view class="card-id">
-				<view class="card-name">刘建超(成人)</view>
-				<view class="card-id1">身份证:623001199201183562</view>
-			</view>
-			<view class="cardi">
-				<view class="card-img">
-					<image src="../../image/delete.png"></image>
-				</view>
-			</view>
-		</view>
-		<view class="add"><span>+立即添加</span></view>
-		<view class="more">
+		</block>
+		<view class="add" bindtap="intoPath" data-path="/pages/tourist/tourist"><span>+立即添加</span></view>
+		<view class="more"  bindtap="isShowMore">
 			<view class="more-add">
-				更多游客
+				{{showMore?'收起':'更多游客'}}
 			</view>
 			<view class="more-img">
-				<image src="../../image/down.png"></image>
+				<image src="{{showMore?'../../image/up.png':'../../image/down.png'}}"></image>
 			</view>
 		</view>
 	</view>
@@ -120,25 +111,25 @@
 		<view class="peo-name">
 			<view class="peo-con">*姓名</view>
 			<view class="peo-content">
-				<input type="text" placeholder="请输入真实姓名" />
+				<input type="text" placeholder="请输入真实姓名" value="{{web_orderPost.reservationName}}"  data-key="reservationName" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">*手机号</view>
 			<view class="peo-content">
-				<input type="text" placeholder="请输入手机号" />
+				<input type="text" placeholder="请输入手机号" value="{{web_orderPost.reservationPhone}}"  data-key="reservationPhone" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">*门店名称</view>
 			<view class="peo-content">
-				<input type="text" placeholder="请输入门店名称" />
+				<input type="text" placeholder="请输入门店名称" value="{{web_orderPost.reservationCompany}}"  data-key="reservationCompany" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">*门店地址</view>
 			<view class="peo-content">
-				<input type="text" placeholder="请输入门店地址" />
+				<input type="text" placeholder="请输入门店地址" value="{{web_orderPost.reservationAddress}}"  data-key="reservationAddress" bindblur="inputChange"/>
 			</view>
 		</view>
 	</view>
@@ -147,24 +138,24 @@
 			<view class="special" style="font-size: 13px;">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
 			<view class="special" style="display: flex;font-size: 15px;">
 				<view class="spe-span">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
-				<view class="spe-img">
+				<view class="spe-img" bindtap="isShowFee">
 					<image src="../../image/black.png"></image>
 				</view>
 			</view>
 		</view>
 		<view class="spaci-btn">
-			<view class="speci1" style="border-right: 1px solid white;" bindtap="intoPath" data-path="/pages/paid/paid">
+			<view class="speci1" style="border-right: 1px solid white;" bindtap="submit" data-type="jump">
 				<view style="font-size: 14px;">跳过</view>
 				<view style="font-size: 12px;">确认订单</view>
 			</view>
-			<view class="speci1" bindtap="intoPath" data-path="/pages/insurance/insurance">
+			<view class="speci1" bindtap="submit" data-type="next">
 				<view style="font-size: 14px;">下一步</view>
 				<view style="font-size: 12px;">购买保险</view>
 			</view>
 		</view>
 	</view>
- <view class="cost" wx:if="{{show_poster}}"></view>
-<view class="expense" wx:if="{{show_poster}}">
+ <view class="cost" wx:if="{{show_fee}}"></view>
+<view class="expense" wx:if="{{show_fee}}">
 	<view class="expense-title">费用明细
 	<view class="title-line" style="left: 3%;bottom: 27px;"></view></view>
 	<view class="expense-content">
@@ -177,7 +168,7 @@
 			<view class="con-title1">￥1740</view>
 		</view>
 	</view>
-	<view class="expense-content">
+	<!-- <view class="expense-content">
 		<view class="con-left">
 			<view class="con-title">交通</view>
 			<view class="con-title1" style="color: #A1A1A1;">人数总额</view>
@@ -186,7 +177,7 @@
 			<view class="con-title"><span>￥2891</span></view>
 			<view class="con-title1">￥2891</view>
 		</view>
-	</view>
+	</view> -->
 	<view class="expense-content2">
 		<view class="con-left2">
 			<view class="con-title">保险</view>

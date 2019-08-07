@@ -1,41 +1,32 @@
 <view>
 	<view class="set">
-		<view class="set-name">请选择反馈类型</view>
+	
+		<picker mode="selector" bindchange="typeChange" range="{{typeData}}" range-key="name" class="set-name">{{typeData[web_index].name?typeData[web_index].name:'请选择反馈类型'}}</picker>
 		<view class="set-img">
 			<image src="../../image/right.png"></image>
 		</view>
 	</view>
 	<view class="teax">
-		<textarea placeholder="请写下您对使用本系统的感受,我们将认真听取您的意见."></textarea>
+		<textarea placeholder="请写下您对使用本系统的感受,我们将认真听取您的意见." value="{{web_submitData.content}}"  data-key="content" bindblur="inputChange"></textarea>
 	</view>
 	<view class="mobile">
-		<view class="mobile-name">手机/邮箱/QQ</view>
+		<input class="mobile-name" placeholder="手机/邮箱/QQ" value="{{web_submitData.contact}}"  data-key="contact" bindblur="inputChange"></input>
 		<view class="mobile-con">(选填)</view>
 	</view>
 	<view class="upload">
 		<view class="mobile-name" style="color: #A1A1A1;">上传图片(最多6张)</view>
 		<view class="up-img">
-			<view class="img">
+			<block wx:for="{{web_imgArray}}">
+				<view style="width: 100px;height:100px">
+					<image src="{{item}}" style="width: 100%;height: 100%;"></image>
+				</view>
+			</block>
+			<view class="img" bindtap="upLoadImg" wx:if="{{web_imgArray.length<5}}">
 				<image src="../../image/caram.png"></image>
 			</view>
-			<view class="img">
-				<image src="../../image/caram.png"></image>
-			</view>
-			<view class="img">
-				<image src="../../image/caram.png"></image>
-			</view>
+			
 		</view>
-		<view class="up-img">
-			<view class="img">
-				<image src="../../image/caram.png"></image>
-			</view>
-			<view class="img">
-				<image src="../../image/caram.png"></image>
-			</view>
-			<view class="img">
-				<image src="../../image/caram.png"></image>
-			</view>
-		</view>
+		
 	</view>
-	<view class="btn"><span>提交</span></view>
+	<view class="btn" bindtap="submit"><span>提交</span></view>
 </view>

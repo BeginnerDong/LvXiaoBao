@@ -1,0 +1,31 @@
+<view>
+	<block wx:for="{{web_mainData[0]}}" wx:key="id">
+		<view class="saler flex-align">
+			<view class="left" style="width:22%">
+				<image src="{{item.pictureUrl}}"></image>
+			</view>
+			<view class="middle" style="width:60%">
+				<view class="flex-align"  style="justify-content: space-between;">
+					<view class="font16 color1 bold-font">{{item.name}}</view>
+					<view style="color: #396CFF;font-size:13px">{{item.phone}}</view>
+					<view class="flex-align" >
+						<view style="margin-right: 8rpx;">		
+							<image src="../../image/detail-icon3.png"></image>
+						</view>
+					</view>
+				</view>
+				
+				<view class="font13 color1">
+					<block wx:for="{{item.bussClassifys}}" wx:for-item="c_item">
+						<span>{{c_item}}/</span>
+					</block>
+				</view>
+			</view>
+			<view class="right flex-justify" style="width:18%" bindtap="isShow" data-index="{{index}}">
+				<view class="flex-all phone">
+					<image src="../../image/quan.png"></image>
+				</view>
+			</view>	
+		</view>
+	</block>
+</view>

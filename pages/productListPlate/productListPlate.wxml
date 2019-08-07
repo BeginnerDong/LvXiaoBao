@@ -1,15 +1,16 @@
+<wxs src="../../utils/func.wxs" module="func" />
 <view>
 	<view class="top">
 		<view class="search">
-			<input placeholder="关键字搜索 如：巴厘岛5日游" />
-			<view class="searchBtn">
+			<input placeholder="关键字搜索 如：巴厘岛5日游" value="{{web_search.keyword}}"  data-key="keyword" bindblur="inputChange"/>
+			<view class="searchBtn" bindtap="goSearch">
 				<image src="../../image/search.png" />
 			</view>
 		</view>
 
 	</view>
 	<view class="nav">
-		<view class="nav-item">
+		<view class="nav-item" bindtap="isShow1">
 			<view class="nav-left">
 				<span>推荐排序</span>
 			</view>
@@ -17,7 +18,7 @@
 				<image src="../../image/down.png"></image>
 			</view>
 		</view>
-		<view class="nav-item">
+		<view class="nav-item" bindtap="isShow">
 			<view class="nav-left">
 				<span>全部筛选</span>
 			</view>
@@ -27,8 +28,8 @@
 		</view>
 	</view>
 	<block wx:for="{{web_mainData}}" wx:key="id">
-		<view class="plate" bindtap="intoPath" data-path="/pages/datail/datail">
-			<view class="plate-top flex">
+		<view class="plate" >
+			<view class="plate-top flex" bindtap="intoPath" data-path="/pages/datail/datail?id={{item.id}}">
 				<view style="width:100%">
 					<view class="flex-align">
 						<view class="color1 font12" style="margin-left: 2%;"> [产品ID:]{{item.id}}</view>
@@ -53,9 +54,9 @@
 					<view class="plate-bottom-item flex-all">
 						<view class="font13 color2" style="margin-left: 18rpx;"><span style='font-size: 16px;font-weight: bold;'>￥{{item.tpriceOrigin}}/</span>人起</view>
 					</view>
-					<view class="plate-bottom-item flex-all">
+					<view class="plate-bottom-item flex-all" bindtap="supplierProductLike" data-index="{{index}}">
 						<view class="flex-all">
-							<image src="../../image/xing.png" />
+							<image src="{{item.isLaud>0?'../../image/peer-icon4-active.png':'../../image/peer-icon4.png'}}" />
 						</view>
 						<view class="font13 color2" style="margin-left: 18rpx;">{{item.likeNum}}</view>
 					</view>
@@ -69,17 +70,28 @@
 			</view>
 		</view>
 	</block>
-	<!-- <view class="recomm"></view>
-	<view class="recommed">
-		<view class="re">
-			<view class="re-name">推荐排序</view>
-			<view class="re-img">
+	<view class="recomm" wx:if="{{web_show1}}"></view>
+	<view class="recommed" wx:if="{{web_show1}}">
+		<view class="re" bindtap="changeOrder" data-key='101'>
+			<view class="re-title {{orderNum==101?'re-name':''}}">推荐排序</view>
+			<view class="re-img" wx:if="{{orderNum==101}}">
 				<image src="../../image/detail-icon2.png"></image>
 			</view>
 		</view>
-		<view class="re-title">价格由低到高</view>
-		<view class="re-title">价格由低到高</view>
-	</view> -->
+		<view class="re" bindtap="changeOrder" data-key='102'>
+			<view class="re-title {{orderNum==102?'re-name':''}}">价格由高到低</view>
+			<view class="re-img" wx:if="{{orderNum==102}}">
+				<image src="../../image/detail-icon2.png"></image>
+			</view>
+		</view>
+		<view class="re" bindtap="changeOrder" data-key='103'>
+			<view class="re-title {{orderNum==103?'re-name':''}}">价格由低到高</view>
+			<view class="re-img" wx:if="{{orderNum==103}}">
+				<image src="../../image/detail-icon2.png"></image>
+			</view>
+		</view>
+
+	</view>
 	<view class="screen" wx:if="{{web_show}}"> 
 
 	</view>
@@ -89,24 +101,11 @@
 				<view class="title-line"></view>
 			</view>
 			<view class="choose">
-				<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;font-weight: bold;">
-					海南专线
-				</view>
-				<view class="choose-item">
-					云南专线
-				</view>
-				<view class="choose-item">
-					贵州专线
-				</view>
-				<view class="choose-item">
-					港澳专线
-				</view>
-				<view class="choose-item">
-					桂林专线
-				</view>
-				<view class="choose-item">
-					四川专线
-				</view>
+				<block wx:for="{{web_businessClassifys}}" wx:key="index" >
+					<view class="choose-item" bindtap="selectBusiness" data-key="{{item.key}}"  style="{{func.inArrayT(item.key,web_selectBusinessData)!=-1?'color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold':''}}">
+						{{item.value}}
+					</view>
+				</block>
 			</view>
 		</view>
 		<view class="screen-top">
@@ -115,21 +114,24 @@
 			</view>
 			<view class="choose">
 				<view class="choose-in">
-					<input type="text" placeholder="最低金额" />
+					<input type="text" placeholder="最低金额" value="{{web_price.sto}}"  data-key="sto" bindblur="priceChange"/>
 				</view>
 				<view class="line">
 					<span></span>
 				</view>
 				<view class="choose-in">
-					<input type="text" placeholder="最高金额" />
+					<input type="text" placeholder="最高金额" value="{{web_price.eto}}"  data-key="eto" bindblur="priceChange"/>
 				</view>
 			</view>
 			<view class="choose">
 				<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;font-weight: bold;">
-					￥200以上
+					￥500以上
 				</view>
 				<view class="choose-item">
-					￥1000以上
+					￥500-2500
+				</view>
+				<view class="choose-item">
+					￥2500-5000
 				</view>
 				<view class="choose-item">
 					￥5000以上
@@ -141,24 +143,21 @@
 				<view class="title-line"></view>
 			</view>
 			<view class="choose">
-				<view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;font-weight: bold;">
-					半自助
-				</view>
-				<view class="choose-item">
-					跟团游
-				</view>
-				<view class="choose-item">
-					自由行
-				</view>
+				<block wx:for="{{web_standards}}" wx:key="index" >
+					<view class="choose-item" bindtap="selectStandards" data-key="{{item.key}}" 
+					style="{{func.inArrayT(item.key,web_selectStandards)!=-1?'color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold':''}}">
+						{{item.value}}
+					</view>
+				</block>
 			</view>
 		</view>
 		<view class="bottom">
 			<view class="choose">
-				<view class="choose-item1" style="color: #A1A1A1;background: #F2F2F2;">
+				<view class="choose-item1" style="color: #A1A1A1;background: #F2F2F2;" bindtap="installSelect">
 					重置
 
 				</view>
-				<view class="choose-item1" style="color: #323232;background: #FFD101;font-weight: bold;">
+				<view class="choose-item1" style="color: #323232;background: #FFD101;font-weight: bold;" bindtap="confirmSelect">
 					确认
 				</view>
 			</view>

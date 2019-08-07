@@ -1,21 +1,21 @@
 <view>
 	<view class="top">
 		<view class="search">
-			<input placeholder="热门目的地" />
-			<view class="searchBtn" bindtap="intoPath" data-path="/pages/search/search">
+			<input placeholder="热门目的地" value="{{web_search.keyword}}"  data-key="keyword" bindblur="inputChange"/>
+			<view class="searchBtn" bindtap="goSearch">
 				<image src="../../image/index-icon2.png" />
 			</view>
 		</view>
 		<view class="agency">
 			<view class="agency-top">
 				<view class="top-left">
-					<image src="../../image/mine.jpg"></image>
+					<image src="{{web_shopData.info.logo}}"></image>
 				</view>
 				<view class="top-name">
-					<view class="name">中国旅行社西安...</view>
-					<view class="name-title">电话:029-56866787</view>
+					<view class="name avoidOverflow">{{web_shopData.info.name}}</view>
+					<view class="name-title">电话:{{web_shopData.info.phone}}</view>
 				</view>
-				<view class="top-right">
+				<view class="top-right" bindtap="phoneCall">
 					<image src="../../image/detail-icon3.png"></image>
 				</view>
 			</view>
@@ -23,12 +23,12 @@
 				<view class="title-img">
 					<image src="../../image/index-icon21.png"></image>
 				</view>
-				<view class="title-name">陕西省西安市高新区曲江首座A座7楼708室...</view>
+				<view class="title-name avoidOverflow">{{web_shopData.info.address}}</view>
 			</view>
 		</view>
 	</view>
 	<view class="menu">
-		<view class="menu_item">
+		<view class="menu_item" bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=101">
 			<view style="text-align: center;">
 				<view class="menu_item_image">
 					<image src="../../image/index-icon8.png" />
@@ -36,7 +36,7 @@
 				<span class="menu_title">国内游</span>
 			</view>
 		</view>
-		<view class="menu_item">
+		<view class="menu_item"  bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=103">
 			<view style="text-align: center;">
 				<view class="menu_item_image">
 					<image src="../../image/index-icon9.png" />
@@ -44,7 +44,7 @@
 				<span class="menu_title">出境游</span>
 			</view>
 		</view>
-		<view class="menu_item">
+		<view class="menu_item"  bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=102">
 			<view style="text-align: center;">
 				<view class="menu_item_image">
 					<image src="../../image/index-icon10.png" />
@@ -52,7 +52,7 @@
 				<span class="menu_title">周边游</span>
 			</view>
 		</view>
-		<view class="menu_item">
+		<view class="menu_item"  bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=104">
 			<view style="text-align: center;">
 				<view class="menu_item_image">
 					<image src="../../image/index-icon19.png" />
@@ -67,19 +67,19 @@
 		</view>
 		<view class="main">
 			<view class="main-left">
-				<image src="../../image/theme.png"></image>
+				<image src="{{web_hotShopData[0].bannerImg1}}"></image>
 			</view>
 			<view class="main-right">
 				<view class="main-right-top">
 					<view class="main-right-top-left">
-						<image src="../../image/theme.png"></image>
+						<image src="{{web_hotShopData[1].bannerImg1}}"></image>
 					</view>
 					<view class="main-right-top-right">
-						<image src="../../image/theme.png"></image>
+						<image src="{{web_hotShopData[2].bannerImg1}}"></image>
 					</view>
 				</view>
 				<view class="main-right-bottom">
-					<image src="../../image/theme.png"></image>
+					<image src="{{web_hotShopData[3].bannerImg1}}"></image>
 				</view>
 			</view>
 		</view>
@@ -89,72 +89,72 @@
 			<view class="title-line"></view>
 		</view>
 		<view class="theme-line" style="margin-top: 30rpx;">
-			<view class="theme-item-one" style="border-radius:12px 0 0 0;" bindtap="intoPath" data-path="/pages/productList/productList">
+			<view class="theme-item-one" style="border-radius:12px 0 0 0;" bindtap="intoPath" data-path="/pages/productList/productList?code={{web_shopData.themes[0].code}}">
 				<view class="theme-item-left">
-					<view class="theme-title">海岛</view>
-					<view class="theme-description">品质海岛</view>
+					<view class="theme-title">{{web_shopData.themes[0].title}}</view>
+					<view class="theme-description">{{web_shopData.themes[0].desc}}</view>
 				</view>
 				<view class="theme-item-right">
-					<image src="../../image/index-icon11.png"></image>
+					<image src="{{web_shopData.themes[0].themeUrl}}"></image>
 				</view>
 			</view>
-			<view class="theme-item-one">
+			<view class="theme-item-one" bindtap="intoPath" data-path="/pages/productList/productList?code={{web_shopData.themes[1].code}}">
 				<view class="theme-item-left">
-					<view class="theme-title">自由行</view>
-					<view class="theme-description">出行新体验</view>
+					<view class="theme-title">{{web_shopData.themes[1].title}}</view>
+					<view class="theme-description">{{web_shopData.themes[1].desc}}</view>
 				</view>
 				<view class="theme-item-right">
-					<image src="../../image/index-icon12.png"></image>
+					<image src="{{web_shopData.themes[1].themeUrl}}"></image>
 				</view>
 			</view>
-			<view class="theme-item-one" style="border-radius:0  12px 0 0;">
+			<view class="theme-item-one" style="border-radius:0  12px 0 0;" bindtap="intoPath" data-path="/pages/productList/productList?code={{web_shopData.themes[2].code}}">
 				<view class="theme-item-left">
-					<view class="theme-title">亲子同行</view>
-					<view class="theme-description">温馨陪伴</view>
+					<view class="theme-title">{{web_shopData.themes[2].title}}</view>
+					<view class="theme-description">{{web_shopData.themes[2].desc}}</view>
 				</view>
 				<view class="theme-item-right">
-					<image src="../../image/index-icon13.png"></image>
-				</view>
-			</view>
-		</view>
-		<view class="theme-line">
-			<view class="theme-item-two">
-				<view class="theme-item-left">
-					<view class="theme-title">蜜月度假</view>
-					<view class="theme-description">自然亲密接触</view>
-				</view>
-				<view class="theme-item-right">
-					<image src="../../image/index-icon14.png"></image>
-				</view>
-			</view>
-			<view class="theme-item-two">
-				<view class="theme-item-left">
-					<view class="theme-title">水世界</view>
-					<view class="theme-description">清凉好去处</view>
-				</view>
-				<view class="theme-item-right">
-					<image src="../../image/index-icon15.png"></image>
+					<image src="{{web_shopData.themes[2].themeUrl}}"></image>
 				</view>
 			</view>
 		</view>
 		<view class="theme-line">
-			<view class="theme-item-two" style="border-radius:0 0  0 12px;">
+			<view class="theme-item-two" bindtap="intoPath" data-path="/pages/productList/productList?code={{web_shopData.themes[3].code}}">
 				<view class="theme-item-left">
-					<view class="theme-title">周边热门</view>
-					<view class="theme-description">发现好玩周边</view>
+					<view class="theme-title">{{web_shopData.themes[3].title}}</view>
+					<view class="theme-description">{{web_shopData.themes[3].desc}}</view>
 				</view>
 				<view class="theme-item-right">
-					<image src="../../image/index-icon13.png"></image>
+					<image src="{{web_shopData.themes[3].themeUrl}}"></image>
+				</view>
+			</view>
+			<view class="theme-item-two" bindtap="intoPath" data-path="/pages/productList/productList?code={{web_shopData.themes[4].code}}">
+				<view class="theme-item-left">
+					<view class="theme-title">{{web_shopData.themes[4].title}}</view>
+					<view class="theme-description">{{web_shopData.themes[4].desc}}</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="{{web_shopData.themes[4].themeUrl}}"></image>
+				</view>
+			</view>
+		</view>
+		<view class="theme-line">
+			<view class="theme-item-two" style="border-radius:0 0  0 12px;" bindtap="intoPath" data-path="/pages/productList/productList?code={{web_shopData.themes[5].code}}">
+				<view class="theme-item-left">
+					<view class="theme-title">{{web_shopData.themes[5].title}}</view>
+					<view class="theme-description">{{web_shopData.themes[5].desc}}</view>
+				</view>
+				<view class="theme-item-right">
+					<image src="{{web_shopData.themes[5].themeUrl}}"></image>
 				</view>
 			</view>
 
-			<view class="theme-item-two" style="border-radius:0 0  12px 0;">
+			<view class="theme-item-two" style="border-radius:0 0  12px 0;" bindtap="intoPath" data-path="/pages/productList/productList?code={{web_shopData.themes[6].code}}">
 				<view class="theme-item-left">
-					<view class="theme-title">一日游</view>
-					<view class="theme-description">周末好去处</view>
+					<view class="theme-title">{{web_shopData.themes[6].title}}</view>
+					<view class="theme-description">{{web_shopData.themes[6].desc}}</view>
 				</view>
 				<view class="theme-item-right">
-					<image src="../../image/index-icon13.png"></image>
+					<image src="{{web_shopData.themes[6].themeUrl}}"></image>
 				</view>
 			</view>
 		</view>
@@ -165,59 +165,51 @@
 		</view>
 		<view class="size-main">
 			<view class="tab">
-				<view class="tab-item active">
+				<view class="tab-item {{web_postData.lineCategory==101?'active':''}}" bindtap="changeCategory" data-id="101">
 					国内游
 				</view>
-				<view class="tab-item">
+				<view class="tab-item {{web_postData.lineCategory==103?'active':''}}" bindtap="changeCategory" data-id="103">
 					出境游
 				</view>
-				<view class="tab-item">
+				<view class="tab-item {{web_postData.lineCategory==102?'active':''}}" bindtap="changeCategory" data-id="102">
 					周边游
 				</view>
-				<view class="tab-item">
+				<view class="tab-item {{web_postData.lineCategory==104?'active':''}}" bindtap="changeCategory" data-id="104">
 					一日游
 				</view>
 			</view>
 			<view class="choose">
-				<view class="choose-item">
-					三亚
-				</view>
-				<view class="choose-item">
-					厦门
-				</view>
-				<view class="choose-item">
-					西安
-				</view>
-				<view class="choose-item">
-					西双版纳
-				</view>
-				<view class="choose-item">
-					丽江大理
-				</view>
-				<view class="choose-item">
-					北京
-				</view>
+				<block wx:for="{{web_businessClassifys}}" wx:key="key">
+					<view class="choose-item avoidOverflow" style="{{web_businessClassifys==item.key?'font-weight: 700':''}}" bindtap="changeClassify" data-key="{{item.key}}">
+						{{item.value}}
+					</view>
+				</block>
 			</view>
 		</view>
 	</view>
-	<view class="product" bindtap="intoPath" data-path="/pages/productDetail/productDetail">
-		<view class="product-left">
-			<image src="../../image/img1.jpg"></image>
-		</view>
-		<view class="product-right">
-			<view class="product-id">[产品id：]4584 6544 4546</view>
-			<view class="product-title avoidOverflow2">海南三亚5日4晚半自助游(5钻)海南三亚+南山文化旅游...</view>
-			<view class="product-description avoidOverflow">1晚起住·海量【机票+酒店】随心...</view>
-			<view class="product-bottom">
-				<view style="width:50%">
-					<view class="product-tip">双飞</view>
-				</view>
-				<view class="product-price">
-					<span>¥1460/</span>人起
+	<block wx:for="{{web_mainData}}">
+		<view class="product" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{item.id}}">
+			<view class="product-left">
+				<image src="{{item.bannerImg1}}"></image>
+			</view>
+			<view class="product-right">
+				<view class="product-id">[产品id：]{{item.id}}</view>
+				<view class="product-title avoidOverflow2">{{item.lineName}}</view>
+				<view class="product-description avoidOverflow">1晚起住·海量【机票+酒店】随心...</view>
+				<view class="product-bottom">
+					<view style="width:50%;display: flex;">
+						<block wx:for="{{item.lineStandard}}" wx:for-item="c_item">
+							<view class="product-tip" style="margin-right: 5px;">{{c_item.value}}</view>
+						</block>
+
+					</view>
+					<view class="product-price">
+						<span>¥{{item.mpriceOrigin}}/</span>人起
+					</view>
 				</view>
 			</view>
 		</view>
-	</view>
+	</block>
 	<view style="width:100%;height:130rpx"></view>
 	<view class="navbar">
 		<view class="navbar_item">
@@ -240,13 +232,13 @@
 		</view>
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/order/order">
 			<view class="nav_img">
-				<image src="../../image/index-icon5.png" ></image>
+				<image src="../../image/index-icon5.png"></image>
 			</view>
 			<view class="text">订单</view>
 		</view>
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/mine/mine">
 			<view class="nav_img">
-				<image src="../../image/index-icon7.png" ></image>
+				<image src="../../image/index-icon7.png"></image>
 			</view>
 			<view class="text">我的</view>
 		</view>

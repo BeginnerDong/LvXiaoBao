@@ -1,66 +1,80 @@
-// pages/jounery/jounery.js
+
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+		submitData:{
+			content:''
+		},
+		disabled:true
+	},
 
-  },
+	onLoad(options) {
+		const self = this;
+		self.data.submitData.content = wx.getStorageSync('journery');
+		self.setData({
+			web_disabled:self.data.disabled,
+			web_submitData:self.data.submitData
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+	edit(){
+		const self = this;
+		console.log(111)
+		self.data.disabled = false;
+		self.setData({
+			web_disabled:self.data.disabled
+		})
+	},
 
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
-  },
+	save(){
+		const self= this;
+		wx.setStorageSync('journery',self.data.submitData.content);
+		wx.navigateBack({
+			delta: 1
+		})
+	},
+	
+	
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'submitData');
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+	},
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
 
-  },
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+	intoPathRedi(e) {
+		const self = this;
+		wx.navigateBack({
+			delta: 1
+		})
+	},
 
-  },
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

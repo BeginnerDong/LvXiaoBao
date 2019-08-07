@@ -1,66 +1,133 @@
-// pages/signature/signature.js
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+		signatureUrl:''
+	},
 
-  },
+	onLoad(options) {
+		const self = this;
+		
+	},
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
 
-  },
+	busignature() {
+		const self = this;
+		const postData = {
+			signatureUrl:self.data.signatureUrl
+		};
+		postData.header = {
+			'Content-Type': 'application/x-www-form-urlencoded',
+			'Authorization':wx.getStorageSync('token')
+		};
+		const callback = (data) => {
+			if (data) {
+				if (data.code == 200) {
+					api.showToast('设置成功','none');
+					setTimeout(function() {
+						wx.navigateBack({
+							delta: 1
+						});
+					}, 300);
+				}
+			};
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
-  },
+		};
+		api.busignature(postData, callback);
+	},
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
+	submit() {
+		const self = this;
+		
+		if (self.data.signatureUrl!='') {
+			self.busignature()
+		} else {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+			api.showToast('请上传图片', 'none');
 
-  },
+		};
+	},
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
 
-  },
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'submitData');
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+	},
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
 
-  },
+	upLoadImg() {
+		const self = this;
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+		wx.showLoading({
+			mask: true,
+			title: '图片上传中',
+		});
+		const callback = (res) => {
+			console.log('res', res)
+			if (res.result == '0') {
+				var url = res.fullPath;
+				
+				self.data.signatureUrl = url;
+				self.setData({
+					web_signatureUrl:self.data.signatureUrl
+				});
+				wx.hideLoading()
+			} else {
+				api.showToast(res.msg, 'none')
+			}
 
-  },
+		};
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+		wx.chooseImage({
+			count: 1,
+			success: function(res) {
+				console.log(res);
+				var tempFilePaths = res.tempFilePaths;
+				console.log(callback)
+				api.uploadFile(tempFilePaths[0], 'file', {
+					classify: 'T019',
+					rwidth: 150,
+					rheight: 150,
+					file: tempFilePaths[0],
+				}, callback)
+			},
+			fail: function(err) {
+				wx.hideLoading();
+			}
+		})
+	},
 
-  }
+
+
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
+
+	intoPathRedi(e) {
+		const self = this;
+		wx.navigateBack({
+			delta: 1
+		})
+	},
+
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
+
 })

@@ -10,105 +10,107 @@ const token = new Token();
 
 Page({
 	data: {
+		isFirstLoadAllStandard: ['getMainData'],
 
+		submitData: {
+			repDate:'',
+			repType:101,
+			repAddress:'',
+			repItem:'',
+			repGoods:'',
+			repDuration:'',
+			otherExplain:''
+		},
+		
 	},
 
 	onLoad(options) {
 		const self = this;
-		//self.getMainData()
-	},
-
-	getMainData() {
-		wx.request({
-			url: 'http://yapi.lxbtrip.cn/mock/19/mshop/v1/{id}/product/{pId}',
-			data: {
-				id:1,
-				pId:100
-			},
-			method: 'get',
-			/*header: {
-			    'content-type': 'application/json',
-			    'token': wx.getStorageSync('token')
-			},*/
-			success: function(res) {
-				// 判断以2（2xx)开头的状态码为正确
-				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
-				
-			},
-			fail: function(err) {
-
-				wx.showToast({
-					title: '网络故障',
-					icon: 'fail',
-					duration: 2000,
-					mask: true,
-				});
-				getApp().globalData.buttonClick = false;
-			}
-		});
-	},
-
-	onPullDownRefresh() {
-		const self = this;
-		wx.showNavigationBarLoading();
-		self.getMainData(true)
-
-	},
-
-	tab(e) {
-		const self = this;
-		api.buttonCanClick(self);
-		var currentId = api.getDataSet(e, 'id');
-		if (currentId == 0) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['招生政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 1) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['批次录取政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 2) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['加分政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
+		self.data.mainData = wx.getStorageSync('shopping');
+		if(!self.data.mainData){
+			self.data.mainData = []
 		}
+		if(options.index){
+			self.data.index = options.index,
+			self.data.submitData.repDate = self.data.mainData[self.data.index].repDate,
+			self.data.submitData.repAddress = self.data.mainData[self.data.index].repAddress,
+			self.data.submitData.repItem = self.data.mainData[self.data.index].repItem,
+			self.data.submitData.repGoods = self.data.mainData[self.data.index].repGoods,
+			self.data.submitData.repDuration = self.data.mainData[self.data.index].repDuration,
+			self.data.submitData.otherExplain = self.data.mainData[self.data.index].otherExplain
+		};
 		self.setData({
-			currentId: api.getDataSet(e, 'id')
-		});
-		self.getMainData(true);
+			web_submitData:self.data.submitData
+		})
+		console.log(self.data.mainData)
 	},
 
-	onReachBottom() {
+	dateChange(e) {
 		const self = this;
-		if (!self.data.isLoadAll && self.data.buttonCanClick) {
-			self.data.paginate.currentPage++;
-			self.getMainData();
+		console.log(e)
+		self.data.submitData.repDate = e.detail.value;
+		self.setData({
+			web_submitData:self.data.submitData
+		})
+	},
+
+
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'submitData');
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+	},
+
+	updateShopping(){
+		const self = this;
+		self.data.mainData[self.data.index].repDate = self.data.submitData.repDate;
+		self.data.mainData[self.data.index].repAddress =self.data.submitData.repAddress,
+		self.data.mainData[self.data.index].repItem =self.data.submitData.repItem,
+		self.data.mainData[self.data.index].repGoods =self.data.submitData.repGoods,
+		self.data.mainData[self.data.index].repDuration =self.data.submitData.repDuration,
+		self.data.mainData[self.data.index].otherExplain =self.data.submitData.otherExplain
+		
+		wx.setStorageSync('shopping',self.data.mainData);
+		setTimeout(function() {
+			wx.navigateBack({
+				delta: 1
+			});
+		}, 300);
+	},
+
+	addShopping() {
+		const self = this;
+		self.data.mainData.push(self.data.submitData);
+		
+		wx.setStorageSync('shopping',self.data.mainData);
+		setTimeout(function() {
+			wx.navigateBack({
+				delta: 1
+			});
+		}, 300);
+	},
+
+
+	submit() {
+		const self = this;
+		const pass = api.checkComplete(self.data.submitData);
+		console.log('self.data.submitData', self.data.submitData)
+		if (pass) {
+			if(self.data.index){
+				self.updateShopping()
+			}else{
+				self.addShopping()
+			}
+			
+		} else {
+
+			api.showToast('请补全信息', 'none');
+
 		};
 	},
+
 
 	intoPath(e) {
 		const self = this;

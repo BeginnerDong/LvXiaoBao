@@ -54,6 +54,11 @@ var integer= function(num){
 var inArray= function(value,array){
     return  array.indexOf(parseInt(value));
 }
+
+var inArrayT= function(value,array){
+    return  array.indexOf(value);
+}
+
 var getArrayByTarget = function(array,targetName,target){
   var getItemsBytarget =function(array,targetName,target){
 
@@ -129,7 +134,8 @@ module.exports = {
   integer: integer,
   getArrayByTarget: getArrayByTarget,
   inArray:inArray
-  SecondToDate:SecondToDate
+  SecondToDate:SecondToDate,
+  inArrayT:inArrayT
  
  
 };

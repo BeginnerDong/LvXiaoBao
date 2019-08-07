@@ -17,8 +17,10 @@
 	<view class="detail-info">
 		<view class="detail-info-top">
 			<view class="detail-info-price">
-				<view class="detail-price" style="font-size: 10pt;color: #A1A1A1;">市场价：<span class="money1" style="text-decoration: line-through;">¥{{web_mainData.mpriceOrigin}}/</span><span class="person">人起</span></view>
-				<view class="detail-price" style="font-size:12px;font-weight: 500;">结算价：<span class="money">¥{{web_mainData.tpriceOrigin}}/</span><span class="person">人起</span></view>
+				<view class="detail-price" style="font-size: 10pt;color: #A1A1A1;">市场价：<span class="money1" style="text-decoration: line-through;">¥{{web_mainData.mpriceOrigin}}/</span><span
+					 class="person">人起</span></view>
+				<view class="detail-price" style="font-size:12px;font-weight: 500;">结算价：<span class="money">¥{{web_mainData.tpriceOrigin}}/</span><span
+					 class="person">人起</span></view>
 			</view>
 			<view class="detail-id">[产品ID：] {{web_mainData.id}}</view>
 			<view class="detail-name">{{web_mainData.lineName}}</view>
@@ -50,47 +52,56 @@
 		</view>
 	</view>
 	<view class="travel">
-		<view class="travel-title"> 
+		<view class="travel-title">
 			<view class="travel-name1">旅行社
-			<view class="title-line"></view></view>
+				<view class="title-line"></view>
+			</view>
 			<view class="travel-data2">{{web_mainData.companyName}}</view>
 		</view>
-			<view class="travel-title">
-				<view class="travel-name1">优惠
-				<view class="title-line" style="left: 26;"></view></view>
-				<view class="tarcel">
-					<view class="discount" style="margin-left: 5%;">立减</view>
-					<view class="dis-con">立减<span>10</span>%</view>
-				</view>
+		<view class="travel-title" style="justify-content: initial;">
+			<view class="travel-name1">优惠
+				<view class="title-line" style="left: 26;"></view>
 			</view>
-		    <view class="travel-title" bindtap="intoPath" data-path="/pages/discount/discount">
-				<view class="tarcel1">
-					<view class="discoun1"><span>用券</span></view>
-					
-					 <view class="dis-content">
-						<view class="dis-con">选择优惠券</view>
-						<view class="dis-img">
-							<image src="../../image/right.png"></image>
-						</view> 
+
+		</view>
+		
+		<view class="travel-title">
+
+			<view class="tarcel1">
+				<view class="discoun1"><span>立减</span></view>
+				<view class="dis-content4">立减<span>10</span>%</view>
+			</view>
+		</view>
+		<view class="travel-title" bindtap="intoPath" data-path="/pages/discount/discount">
+			<view class="tarcel1">
+				<view class="discoun1"><span>用券</span></view>
+
+				<view class="dis-content">
+					<view class="dis-con">选择优惠券</view>
+					<view class="dis-img">
+						<image src="../../image/right.png"></image>
 					</view>
 				</view>
 			</view>
-			<view class="travel-title">
-				<view class="tarcel1">
-					<view class="discoun1"><span>送券</span></view>
-					<view class="dis-content4">赠券<span>20</span>元/成人</view>
-				</view>
+		</view>
+		<view class="travel-title">
+			<view class="tarcel1">
+				<view class="discoun1"><span>送券</span></view>
+				<view class="dis-content4">赠券<span>20</span>元/成人</view>
 			</view>
+		</view>
 	</view>
 	<view class="agent">
 		<view class="travel-title">
 			<view class="travel-name1">旅行社
-			<view class="title-line"></view></view>
+				<view class="title-line"></view>
+			</view>
 			<view class="travel-data2">{{web_mainData.companyName}}</view>
 		</view>
-		<view class="travel-title">
+		<view class="travel-title" bindtap="intoPath" data-path="/pages/seleteSalers/seleteSalers">
 			<view class="travel-name1">销售
-			<view class="title-line" style="left: 20%;"></view></view>
+				<view class="title-line" style="left: 20%;"></view>
+			</view>
 			<view class="travel-data2" style="text-align: center;">{{web_mainData.sales[0].name}}</view>
 			<view class="travel-data3">
 				<view class="phone-num">{{web_mainData.sales[0].phone}}</view>
@@ -110,19 +121,20 @@
 				<block wx:for="{{web_mainData.classifys}}" wx:key="id">
 					<view class="start-level {{web_selectIndex==index?'start-level-active':''}}" bindtap="changeIndex" data-index="{{index}}">{{item.classifyName}}</view>
 				</block>
-				
+
 				<!-- <view class="start-level">四星</view>
 				<view class="start-level">五星</view> -->
 			</view>
 			<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx">
-				<block wx:for="{{web_mainData.classifys[web_selectIndex].prices}}" wx:if="{{index<4}}">
-					<view class="group-item">
-						<view class="group-date">{{item.groupDay}}</view>
-						<view class="group-price">¥{{item.mprice}}</view>
-					</view>
-				</block>
-				
-				
+				<view style="width:80%;display: flex;align-items: center;">
+					<block wx:for="{{web_mainData.classifys[web_selectIndex].prices}}" wx:if="{{index<4}}">
+						<view class="group-item" style="{{web_orderPost.startDate==item.groupDay?'border:1px solid #EC6532':''}}" bindtap="selectDay" data-day="{{item.groupDay}}" wx:if="{{item.subjectType=='101'}}">
+							<view class="group-date">{{item.groupDay}}</view>
+							<view class="group-price">¥{{item.mprice}}</view>
+						</view>
+					</block>
+				</view>
+
 				<view style="width:1px;height:88rpx;background: #E7E7E7;"></view>
 				<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte">
 					<span style="width:28px">更多团期</span>
@@ -131,26 +143,34 @@
 		</view>
 	</view>
 	<view class="people">
-		<view class="norm-title">
+		<view class="norm-title" bindtap="showPeople">
 			<view class="norm-name1" style="color: #323232;">出行人数
-			<view class="title-line" style="left: 9%;bottom: 17px;"></view></view>
+				<view class="title-line" style="left: 9%;bottom: 17px;"></view>
+			</view>
 			<view class="norm-data2">
-				<view class="people-title">改行程仅余10位</view>
+				<view class="people-title" wx:if="{{web_orderPost.bills.length==0}}">请选择出行人数</view>
+				<view class="people-title" wx:if="{{web_orderPost.bills.length>0}}">
+					<block wx:for="{{web_orderPost.bills}}" wx:key="id">
+						<span>{{item.billSubject}}x{{item.amount}}人</span>
+					</block>
+					
+				</view>
 				<view class="people-img">
 					<image src="../../image/right.png"></image>
 				</view>
 			</view>
 		</view>
-		<view class="norm-title">
+	<!-- 	<view class="norm-title">
 			<view class="norm-name1" style="color: #323232;">航班
-			<view class="title-line" style="left: 9%;bottom: 17px;"></view></view>
+				<view class="title-line" style="left: 9%;bottom: 17px;"></view>
+			</view>
 			<view class="norm-data2">
 				<view class="people-title">更换航班</view>
 				<view class="people-img">
 					<image src="../../image/right.png"></image>
 				</view>
 			</view>
-		</view>
+		</view> -->
 	</view>
 	<view class="product-special">
 		<view class="product-info-bottom">
@@ -232,7 +252,8 @@
 			</view>
 			<view class="plan-three">
 				<view class="plan-content">出发抵达码头后乘坐快艇前往著名的甲米四岛：</view>
-				<view class="plan-content">甲米四岛各自都拥有洁白细腻的沙滩清澈透底的海水。您可在出海游玩后将大PP岛和小PP岛海域与甲米四岛海域的【管子岛Tube island】+【莫岛Moh island】三岛通过细腻白沙相连接，形成了浪漫的宽阔白色沙路，每天只有几个小时可以看到，其他时间都被张超的海水淹没</view>
+				<view class="plan-content">甲米四岛各自都拥有洁白细腻的沙滩清澈透底的海水。您可在出海游玩后将大PP岛和小PP岛海域与甲米四岛海域的【管子岛Tube island】+【莫岛Moh
+					island】三岛通过细腻白沙相连接，形成了浪漫的宽阔白色沙路，每天只有几个小时可以看到，其他时间都被张超的海水淹没</view>
 				<view class="plan-content">您可以在浪漫白沙上自由自在通行于三岛</view>
 			</view>
 			<view class="plan-img">
@@ -249,170 +270,133 @@
 				<view class="plan-scienic">注意：</view>
 			</view>
 		</view>
-	<view class="fee-explain1">
-		<view class="product-info-bottom">
-			<view class="title">
-				费用说明
-				<view class="title-line" style="left: 4%;"></view>
-			</view>
-		</view>
-		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
-			<view style="font-weight:700 ;">费用不含</view>
-			<view>旅游护照、签证等相关出行证件办理费用。</view>
-			<view>内陆段交通。</view>
-			<view>当地机场至酒店的往返接送服务。</view>
-			<view>所在地到出发地的往返交通费用。</view>
-			<view>因交通延阻、战争、政变、罢工、天气、飞机机器故
-				障、航班取消或更改时间等不可抗力原因所引致的额
-				外费用。</view>
-		</view>
-		<view class="product-info-bottom" style="text-align: center;height: 50px;">
-			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
-		</view>
-	</view> 
-	 <view class="fee-explain1">
-		<view class="product-info-bottom">
-			<view class="title">
-				预订须知
-				<view class="title-line"></view>
-			</view>
-		</view>
-		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
-			<view>安全常识: 出游安全提示和出游常识</view>
-			<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
-			</view>
-			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
-	
-		</view>
-		<view class="product-info-bottom" style="text-align: center;height: 50px;">
-			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
-		</view>
-	</view> 
-	<view class="fee-explain1">
-		<view class="product-info-bottom">
-			<view class="title">
-				同行须知
-				<view class="title-line" style="left: 4%;"></view>
-			</view>
-		</view>
-		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
-			<view>安全常识: 出游安全提示和出游常识</view>
-			<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
-			</view>
-			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
-	
-		</view>
-		<view class="product-info-bottom" style="text-align: center;height: 50px;">
-			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
-		</view>
-	</view> 
-	 <view style="width:100%;height:120rpx"></view>
-	<view style="position: fixed;bottom: 0;border-radius:0;z-index:888;" class="bo">
-		<view class="place">
-			<view class="place1">
-				<view class="place-img">
-					<image src="../../image/phone.png"></image>
+		<view class="fee-explain1">
+			<view class="product-info-bottom">
+				<view class="title">
+					费用说明
+					<view class="title-line" style="left: 4%;"></view>
 				</view>
-				<view class="place-title">客服</view>
 			</view>
-			<view class="place1">
-				<view class="place-img">
-					<image src="../../image/peer-icon4.png"></image>
+			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+				<view style="font-weight:700 ;">费用不含</view>
+				<view>旅游护照、签证等相关出行证件办理费用。</view>
+				<view>内陆段交通。</view>
+				<view>当地机场至酒店的往返接送服务。</view>
+				<view>所在地到出发地的往返交通费用。</view>
+				<view>因交通延阻、战争、政变、罢工、天气、飞机机器故
+					障、航班取消或更改时间等不可抗力原因所引致的额
+					外费用。</view>
+			</view>
+			<view class="product-info-bottom" style="text-align: center;height: 50px;">
+				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+			</view>
+		</view>
+		<view class="fee-explain1">
+			<view class="product-info-bottom">
+				<view class="title">
+					预订须知
+					<view class="title-line"></view>
 				</view>
-				<view class="place-title">收藏</view>
 			</view>
-			<view class="place1" bindtap="showPoster">
-				<view class="place-img">
-					<image src="../../image/pic.png"></image>
+			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+				<view>安全常识: 出游安全提示和出游常识</view>
+				<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
 				</view>
-				<view class="place-title">海报</view>
+				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
+
 			</view>
-			<view class="place-btn" bindtap="intoPath" data-path="/pages/schedule/schedule">
-				<span>立即预定</span>
-			</view>
-		</view>
-	</view> 
-</view>
-<!-- 选择人数 -->
- <view class="choose" bindtap="isShow" wx:if="{{web_show}}">
-	
-</view>
-<view class="choose1" wx:if="{{web_show}}">
-	<view class="cho-title">
-		选择出行人数
-		<view class="title-line" style="left: 3%;bottom: 23px;"></view>
-	</view>
-	<view class="cho1">
-		<view class="cho1-left">成人</view>
-		<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span style="color: #EC6532;font-size: 20px;">￥1740/</span>人</view>
-		<view class="cho1-all">
-			<view class="cho1-subtrat">
-				<image src="../../image/sort.png"></image>
-			</view>
-			<view class="cho1-number"><span>2</span></view>
-			<view class="cho1-subtrat" style="text-align: center;">
-				<image src="../../image/add.png" style="width: 20px;height: 20px;"></image>
+			<view class="product-info-bottom" style="text-align: center;height: 50px;">
+				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
 			</view>
 		</view>
-	</view>
-	<view class="cho1">
-		<view class="cho1-left">老人</view>
-		<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span style="color: #EC6532;font-size: 20px;">￥1240/</span>人</view>
-		<view class="cho1-all">
-			<view class="cho1-subtrat">
-				<image src="../../image/sort.png"></image>
+		<view class="fee-explain1">
+			<view class="product-info-bottom">
+				<view class="title">
+					同行须知
+					<view class="title-line" style="left: 4%;"></view>
+				</view>
 			</view>
-			<view class="cho1-number"><span>2</span></view>
-			<view class="cho1-subtrat" style="text-align: center;">
-				<image src="../../image/block.png"></image>
+			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+				<view>安全常识: 出游安全提示和出游常识</view>
+				<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
+				</view>
+				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
+
+			</view>
+			<view class="product-info-bottom" style="text-align: center;height: 50px;">
+				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
 			</view>
 		</view>
-	</view>
-	<view class="cho1">
-		<view class="cho1-left">儿童(占床)</view>
-		<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span  style="color: #EC6532;font-size: 20px;">￥638/</span>人</view>
-		<view class="cho1-all">
-			<view class="cho1-subtrat">
-				<image src="../../image/sort.png"></image>
-			</view>
-			<view class="cho1-number"><span>1</span></view>
-			<view class="cho1-subtrat" style="text-align: center;">
-				<image src="../../image/block.png"></image>
+		<view style="width:100%;height:120rpx"></view>
+		<view style="position: fixed;bottom: 0;border-radius:0;z-index:888;" class="bo">
+			<view class="place">
+				<view class="place1" bindtap="intoPath" data-path="/pages/seleteSalers/seleteSalers">
+					<view class="place-img">
+						<image src="../../image/phone.png"></image>
+					</view>
+					<view class="place-title">客服</view>
+				</view>
+				<view class="place1">
+					<view class="place-img">
+						<image src="../../image/peer-icon4.png"></image>
+					</view>
+					<view class="place-title">收藏</view>
+				</view>
+				<view class="place1" bindtap="showPoster">
+					<view class="place-img">
+						<image src="../../image/pic.png"></image>
+					</view>
+					<view class="place-title">海报</view>
+				</view>
+				<view class="place-btn" bindtap="goBook" data-path="/pages/schedule/schedule">
+					<span>立即预定</span>
+				</view>
 			</view>
 		</view>
 	</view>
-	<view class="cho1">
-		<view class="cho1-left">儿童(不占床)</view>
-		<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span  style="color: #EC6532;font-size: 20px;">￥938/</span>人</view>
-		<view class="cho1-all">
-			<view class="cho1-subtrat">
-				<image src="../../image/sort.png"></image>
+	<!-- 选择人数 -->
+	<view class="choose" bindtap="showPeople" wx:if="{{show_people}}">
+
+	</view>
+	<view class="choose1" wx:if="{{show_people}}">
+		<view class="cho-title">
+			选择出行人数
+			<view class="title-line" style="left: 3%;bottom: 23px;"></view>
+		</view>
+		<block wx:for="{{web_subjectData}}" wx:key="id">
+			<view class="cho1">
+				<view class="cho1-left">{{item.typeName}}</view>
+				<view class="cho1-left" style="color: #A1A1A1;font-size: 12px;"><span style="color: #EC6532;font-size: 20px;">￥{{item.cprice}}/</span>人</view>
+				<view class="cho1-all">
+					<view class="cho1-subtrat" bindtap="counter" data-type="-" data-index="{{index}}" style="text-align: center;">
+						<image src="../../image/sort.png"></image>
+					</view>
+					<view class="cho1-number"><span>{{item.count}}</span></view>
+					<view class="cho1-subtrat" bindtap="counter" data-type="+" data-index="{{index}}" style="text-align: center;">
+						<image src="../../image/add.png" style="width: 20px;height: 20px;"></image>
+					</view>
+				</view>
 			</view>
-			<view class="cho1-number"><span>1</span></view>
-			<view class="cho1-subtrat" style="text-align: center;">
-				<image src="../../image/block.png"></image>
-			</view>
+		</block>
+		<view class="cho1-btn" bindtap="confirm">
+			确定
 		</view>
 	</view>
-	<view class="cho1-btn">
-		确定
+	<view class="posters" wx:if="{{show_poster}}">
+
 	</view>
-</view>
-	<!-- <view class="posters">
-		
-	</view>
-	<view class="poster" >
+	<view class="poster" wx:if="{{show_poster}}">
 		<view class="img">
 			<image src="{{web_mainData.posterPath}}"></image>
 		</view>
-			<view class="poster-icon" bindtap="showPoster">
-				<image src="../../image/close.png"></image>
+		<view class="poster-icon" bindtap="showPoster">
+			<image src="../../image/close.png"></image>
+		</view>
+		<view class="post-img">
+			<view class="imgs">
+				<image src="../../image/sa.png"></image>
 			</view>
-			<view class="post-img">
-				<view class="imgs">
-					<image src="../../image/sa.png"></image>
-				</view>
-				<view class="img-name">保存</view>
-			</view>
-	</view> -->
+			<view class="img-name">保存</view>
+		</view>
+	</view>
 </view>

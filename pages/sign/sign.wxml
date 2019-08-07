@@ -5,7 +5,13 @@
 		<view class="sign-sign">
 			<view class="sign-title">电子合同</view>
 			<view class="sign-con">
-				<view class="con">111111111</view>
+				<view class="con">
+					<picker bindchange="cddTypeChange" value="{{index}}"  range="{{web_cddTypeData}}" range-key="name" style="width:100%;">
+						<view>
+							{{web_cddTypeData[web_index].name?web_cddTypeData[web_index].name:'选择合同类别'}}
+						</view>
+					</picker>
+				</view>
 				<view class="con-img">
 					<image src="../../image/right.png"></image>
 				</view>
@@ -14,7 +20,13 @@
 		<view class="sign-sign">
 			<view class="sign-title">合同类型</view>
 			<view class="sign-con">
-				<view class="con">1111111111</view>
+				<view class="con">
+					<picker bindchange="cddClassifyChange" value="{{index}}"  range="{{web_cddClassifyData}}" range-key="name" style="width:100%;">
+						<view>
+							{{web_cddClassifyData[web_index1].name?web_cddClassifyData[web_index1].name:'选择合同类型'}}
+						</view>
+					</picker>
+				</view>
 				<view class="con-img">
 					<image src="../../image/right.png"></image>
 				</view>
@@ -28,7 +40,11 @@
 			<view class="peo-con">游客类别</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="选择游客类别"/>
+					<picker bindchange="touristsTypeChange" value="{{index}}"  range="{{touristsTypeData}}" range-key="name" style="width:100%;">
+						<view>
+							{{touristsTypeData[web_index2].name?touristsTypeData[web_index2].name:'选择游客类别'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -36,32 +52,40 @@
 		<view class="peo-name">
 			<view class="peo-con">*游客代表</view>
 			<view class="peo-content">
-				<input type="text" placeholder="请填写游客代表的姓名"/>
+				<input type="text" placeholder="请填写游客代表的姓名" 
+				value="{{web_submitData.travelerRepresentName}}"  data-key="travelerRepresentName" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 		<view class="peo-con">*手机</view>
 		<view class="peo-content">
-			<input type="text" placeholder="用于接收电子合同"/>
+			<input type="text" placeholder="用于接收电子合同"
+			value="{{web_submitData.travelerRepresentPhone}}"  data-key="travelerRepresentPhone" bindblur="inputChange"/>
 		</view>
 	</view>
 	<view class="peo-name">
 		<view class="peo-con">*身份证号</view>
 		<view class="peo-content">
-			<input type="text" placeholder="填写身份证号"/>
+			<input type="text" placeholder="填写身份证号"
+			value="{{web_submitData.travelerRepresentCard}}"  data-key="travelerRepresentCard" bindblur="inputChange"/>
 		</view>
 	</view>
 	<view class="peo-name">
 		<view class="peo-con">邮箱</view>
 		<view class="peo-content">
-			<input type="text" placeholder="填写邮箱信息"/>
+			<input type="text" placeholder="填写邮箱信息"
+			value="{{web_submitData.travelerRepresentEmail}}"  data-key="travelerRepresentEmail" bindblur="inputChange"/>
 		</view>
 	</view>
 	<view class="peo-name">
 		<view class="peo-con">选择游客</view>
 		<view class="peo-content1">
 			<view class="card">
-				<input type="text" placeholder="选择签署合同游客"/>
+				<picker bindchange="peopleChange" value="{{index}}"  range="{{web_orderDetailData.peoples}}" range-key="name" style="width:100%;">
+					<view>
+						{{web_orderDetailData.peoples[web_index3].name?web_orderDetailData.peoples[web_index3].name:'选择游客'}}
+					</view>
+				</picker>
 			</view>
 			<view class="card-img"><image src="../../image/right.png"></image></view>
 		</view>
@@ -74,7 +98,8 @@
 			<view class="peo-con">*产品名称</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="填写产品名称"/>
+					<input type="text" 
+					value="{{web_submitData.productName}}"  data-key="productName" bindblur="inputChange"/>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -83,7 +108,11 @@
 			<view class="peo-con">*出发日期</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="选择出发日期"/>
+					<picker bindchange="dateChangeStart" mode="date"  style="width:100%;">
+						<view>
+							{{web_submitData.startDate?web_submitData.startDate:'选择出发日期'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -92,7 +121,11 @@
 			<view class="peo-con">*结束日期</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="选择结束日期"/>
+					<picker bindchange="dateChangeEnd" mode="date"  style="width:100%;">
+						<view>
+							{{web_submitData.backDate?web_submitData.backDate:'选择结束日期'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -100,11 +133,11 @@
 		<view class="peo-name">
 			<view class="sign-left">共计</view>
 			<view class="sign-span">
-				<view class="sign-img" style="margin-top: 5px;">
+				<view class="sign-img" style="margin-top: 5px;" bindtap="counter" data-key="totalDay" data-type="-">
 					<image src="../../image/sort.png"></image>
 				</view>
-				<view class="sign-cent"><span>2</span></view>
-				<view class="sign-img" style="margin-top: 5px;margin-left: 20px;">
+				<view class="sign-cent"><span>{{web_submitData.totalDay}}</span></view>
+				<view class="sign-img" style="margin-top: 5px;margin-left: 20px;" bindtap="counter" data-key="totalDay" data-type="+">
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
@@ -113,11 +146,11 @@
 		<view class="peo-name">
 			<view class="sign-left">住宿</view>
 			<view class="sign-span">
-				<view class="sign-img" style="margin-top: 5px;">
+				<view class="sign-img" style="margin-top: 5px;" bindtap="counter" data-key="totalNight" data-type="-">
 					<image src="../../image/sort.png"></image>
 				</view>
-				<view class="sign-cent"><span>2</span></view>
-				<view class="sign-img" style="margin-top: 5px;margin-left: 20px;">
+				<view class="sign-cent"><span>{{web_submitData.totalNight}}</span></view>
+				<view class="sign-img" style="margin-top: 5px;margin-left: 20px;" bindtap="counter" data-key="totalNight" data-type="+">
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
@@ -125,7 +158,7 @@
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">行程信息</view>
-			<view class="peo-content1">
+			<view class="peo-content1" bindtap="goEditJournery">
 				<view class="card">
 					<input type="text" placeholder="行程信息"/>
 				</view>
@@ -138,25 +171,41 @@
 		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">*成人</view>
-			<view class="sign-content">元/人</view>
+			
+			<view class="sign-content">
+				<input  value="{{web_submitData.adultPrice}}"  data-key="adultPrice" bindblur="inputChange"/>
+				元/人
+			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">*儿童</view>
-			<view class="sign-content">元/人</view>
+			<view class="sign-content">
+				<input  value="{{web_submitData.childPrice}}"  data-key="childPrice" bindblur="inputChange"/>
+				元/人
+			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">导游服务费</view>
-			<view class="sign-content">元/人</view>
+			<view class="sign-content">
+				<input value="{{web_submitData.tourGuideServicePrice}}"  data-key="tourGuideServicePrice" bindblur="inputChange" />
+				元/人
+			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">单房差</view>
+			<input  value="{{web_submitData.singleSupplement}}"  data-key="singleSupplement" bindblur="inputChange"/>
 			<view class="sign-content">元/人</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">*支付时间</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="选择支付时间"/>
+			
+					<picker bindchange="payDateChange" mode="date"  style="width:100%;">
+						<view>
+							{{web_submitData.travelPayDate?web_submitData.travelPayDate:'选择支付时间'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -165,20 +214,25 @@
 			<view class="peo-con">*支付方式</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="选择支付方式"/>
+					<picker bindchange="payTypeChange" value="{{index}}"  range="{{payType}}"  style="width:100%;">
+						<view>
+							{{payType[web_index5]?payType[web_index5]:'选择支付方式'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">*合计</view>
-			<view class="sign-content">元</view>
+			<view class="sign-content">
+				<input  value="{{web_submitData.travelTotalPrice}}"  data-key="travelTotalPrice" bindblur="inputChange"/>元</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">支付说明</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="填写支付说明"/>
+					<input type="text" placeholder="填写支付说明" value="{{web_submitData.travelPayRemark}}"  data-key="travelPayRemark" bindblur="inputChange"/>
 				</view>
 			</view>
 		</view>
@@ -189,8 +243,12 @@
 		<view class="peo-name">
 			<view class="peo-con">*购买保险方式</view>
 			<view class="peo-content1">
-				<view class="card">
-					<input type="text" placeholder="选择购买保险方式"/>
+				<view class="card">			
+					<picker bindchange="insureBuyTypeChange" value="{{index}}"  range="{{insureBuyType}}" range-key="name" style="width:100%;">
+						<view>
+							{{insureBuyType[web_index4].name?insureBuyType[web_index4].name:'选择购买保险方式'}}
+						</view>
+					</picker>
 				</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 			</view>
@@ -199,7 +257,7 @@
 			<view class="peo-con">保险产品名称</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="填写保险产品名称"/>
+					<input type="text" placeholder="填写保险产品名称" value="{{web_submitData.insuranceName}}"  data-key="insuranceName" bindblur="inputChange"/>
 				</view>
 			</view>
 		</view>
@@ -210,11 +268,11 @@
 		<view class="peo-name">
 			<view class="sign-left">*成团人数</view>
 			<view class="sign-span">
-				<view class="sign-img" style="margin-top: 5px;">
+				<view class="sign-img" style="margin-top: 5px;"  bindtap="counter" data-key="lowestGroup" data-type="-">
 					<image src="../../image/sort.png"></image>
 				</view>
-				<view class="sign-cent"><span>2</span></view>
-				<view class="sign-img" style="margin-left: 20px;">
+				<view class="sign-cent"><span>{{web_submitData.lowestGroup}}</span></view>
+				<view class="sign-img" style="margin-left: 20px;"  bindtap="counter" data-key="lowestGroup" data-type="+">
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
@@ -229,35 +287,35 @@
 		<view class="agglo-agg">
 			<view class="agglo-one">
 				<view class="agg-con">1.委托第三方旅行社</view>
-				<view class="agg-img">
-					<image src="../../image/complete.png"></image>
+				<view class="agg-img" bindtap="inputChange" data-key="notGroupChoose" data-value="101">
+					<image src="{{web_submitData.notGroupChoose==101?'../../image/complete.png':'../../image/quan.png'}}"></image>
 				</view>
 			</view>
-			<view class="peo-name">
+			<view class="peo-name" wx:if="{{web_submitData.notGroupChoose==101}}">
 				<view class="peo-con">旅行社名称</view>
 				<view class="peo-content1">
 					<view class="card">
-						<input type="text" placeholder="填写委托第三方旅行社名称"/>
+						<input type="text" placeholder="填写委托第三方旅行社名称" value="{{web_submitData.intrustTravelName}}"  data-key="intrustTravelName" bindblur="inputChange"/>
 					</view>
 				</view>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con1">2.延期出团</view>
-			<view class="sign-content1">
-				<image src="../../image/quan.png"></image>
+			<view class="sign-content1" bindtap="inputChange" data-key="notGroupChoose" data-value="102">
+				<image src="{{web_submitData.notGroupChoose==102?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con1">3.改签其他线路出团</view>
-			<view class="sign-content1">
-				<image src="../../image/quan.png"></image>
+			<view class="sign-content1" bindtap="inputChange" data-key="notGroupChoose" data-value="103">
+				<image src="{{web_submitData.notGroupChoose==103?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con1">解除合同</view>
-			<view class="sign-content1">
-				<image src="../../image/quan.png"></image>
+			<view class="sign-content1" bindtap="inputChange" data-key="notGroupChoose" data-value="104">
+				<image src="{{web_submitData.notGroupChoose==104?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
 	</view>
@@ -266,15 +324,15 @@
 		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="agglo-one" style="border-bottom: 1px solid #E7E7E7;">
 			<view class="agg-con1">*游客是否同意拼团</view>
-			<view class="agg-img">
-				<image src="../../image/complete.png"></image>
+			<view class="agg-img"  bindtap="inputChange" data-key="isAgreeGroup" data-value="true">
+				<image src="{{web_submitData.isAgreeGroup=='true'?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
-		<view class="peo-name">
+		<view class="peo-name" wx:if="{{web_submitData.isAgreeGroup=='true'}}">
 			<view class="peo-con">*拼团至</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="填写拼团其他旅行社名称"/>
+					<input type="text" placeholder="填写拼团其他旅行社名称" value="{{web_submitData.isAgreeGroupTravelName}}"  data-key="isAgreeGroupTravelName" bindblur="inputChange"/>
 				</view>
 			</view>
 		</view>
@@ -284,37 +342,37 @@
 		<view class="title-line" style="bottom: 16px;"></view></view>
 		<view class="agglo-one" style="border-bottom: 1px solid #E7E7E7;">
 			<view class="agg-con1">*请求仲裁委员会仲裁</view>
-			<view class="agg-img">
-				<image src="../../image/complete.png"></image>
+			<view class="agg-img" bindtap="inputChange" data-key="methodChoose" data-value="1">
+				<image src="{{web_submitData.methodChoose=='1'?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
-		<view class="peo-name">
+		<view class="peo-name"  wx:if="{{web_submitData.methodChoose=='1'}}">
 			<view class="peo-con">仲裁委员会</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="填写仲裁委员会"/>
+					<input type="text" placeholder="填写仲裁委员会" value="{{web_submitData.arbitrationName}}"  data-key="arbitrationName" bindblur="inputChange"/>
 				</view>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con1">依法向人民法院发起起诉</view>
-			<view class="sign-content1">
-				<image src="../../image/quan.png"></image>
+			<view class="sign-content1" bindtap="inputChange" data-key="methodChoose" data-value="2">
+				<image src="{{web_submitData.methodChoose=='2'?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
 	</view>
 	<view class="rest">
 		<view class="sign-name">其他事项
 		<view class="title-line" style="bottom: 16px;"></view></view>
-		<view class="peo-name">
+		<view class="peo-name" bindtap="goOtherDeal">
 			<view class="peo-con3">其他约定事项</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 		</view>
-		<view class="peo-name">
+		<view class="peo-name" bindtap="intoPath" data-path="/pages/acticity/acticity">
 			<view class="peo-con3">自愿购物活动补充协议</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
 		</view>
-		<view class="peo-name">
+		<view class="peo-name" bindtap="intoPath" data-path="/pages/payFee/payFee">
 			<view class="peo-con3">自愿付费项目补充协议</view>
 			<view class="card-img"><image src="../../image/right.png"></image></view>
 		</view>
@@ -322,8 +380,14 @@
 	<view class="pact">
 		<view class="sign-name">合同附件
 		<view class="title-line" style="bottom: 16px;"></view></view>
-		<view class="part-img">
-			<view class="part-ti">
+		<view class="part-img" style="display: flex;">
+			<block wx:for="{{web_submitData.accessorys}}">			
+				<view class="part-ti">
+					<image src="{{item.accUrl}}" style="width: 100;height: 100%;"></image>
+				</view>
+			</block>
+			
+			<view class="part-ti" bindtap="upLoadImg">
 				<image src="../../image/caram.png"></image>
 			</view>
 		</view>
@@ -339,10 +403,10 @@
 			</view>
 		</view>
 		<view class="spaci-btn">
-			<view class="speci1" style="border-right: 1px solid white;" bindtap="intoPath" data-path="/pages/electro/electro">
+			<view class="speci1" style="border-right: 1px solid white;" bindtap="{{web_buttonCanClick?'submit':''}}" data-type="jump">
 				<view>保存并预览</view>
 			</view>
-			<view class="speci1" bindtap="intoPath" data-path="/pages/orderDetail/orderDetail">
+			<view class="speci1" bindtap="{{web_buttonCanClick?'submit':''}}" data-type="next">
 				<view>提交订单</view>
 			</view>
 		</view>

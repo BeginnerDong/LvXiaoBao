@@ -10,8 +10,8 @@ const token = new Token();
 
 Page({
 	data: {
-		isFirstLoadAllStandard:['getMainData'],
-		bannerImg:[],
+		isFirstLoadAllStandard: ['getMainData'],
+		bannerImg: [],
 		indicatorDots: false,
 		vertical: false,
 		autoplay: true,
@@ -20,8 +20,28 @@ Page({
 		duration: 500,
 		previousMargin: 0,
 		nextMargin: 0,
-		selectIndex:0,
-		show_poster:false
+		selectIndex: 0,
+		show_poster: false,
+		show_people:false,
+		
+		orderPost:{
+			pdtId:'',
+			classifyId:'',
+			startDate:'',
+			bills:[],
+			reservationName:'',
+			reservationPhone:'',
+			reservationCompany:'',
+			reservationAddress:'',
+			remark:'1',
+			peopleIds:[],
+			coupons:[],
+			saleId:'',
+			saleName:'',
+			salePhone:''
+		},
+		dayData:{},
+		subjectData:[]
 	},
 
 	onLoad(options) {
@@ -30,25 +50,39 @@ Page({
 		self.data.id = options.id;
 		self.getMainData();
 		self.setData({
-			show_poster:self.data.showPoster,
-			web_selectIndex:self.data.selectIndex
+			web_orderPost:self.data.orderPost,
+			show_people:self.data.show_people,
+			show_poster: self.data.show_poster,
+			web_selectIndex: self.data.selectIndex
 		})
+		
 	},
 
 	getMainData() {
 		const self = this;
-		const postData = {	
-			
+		const postData = {
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			},
+			url:'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/'+self.data.id
 		};
-		
+
 		const callback = (res) => {
-			if(res.code==200){
-				self.data.mainData = res.content,
-				self.data.bannerImg = [res.content.bannerImg1,res.content.bannerImg2,res.content.bannerImg3,res.content.bannerImg4,res.content.bannerImg5]
+			if (res.code == 200) {
+				self.data.mainData = res.content;
+				self.data.bannerImg = [res.content.bannerImg1, res.content.bannerImg2, res.content.bannerImg3, res.content.bannerImg4,
+					res.content.bannerImg5
+				];
+				self.data.orderPost.pdtId = self.data.mainData.id;
+				self.data.orderPost.saleId = self.data.mainData.sales[0].id;
+				self.data.orderPost.saleName = self.data.mainData.sales[0].name;
+				self.data.orderPost.salePhone = self.data.mainData.sales[0].phone;
+				self.data.orderPost.classifyId =  self.data.mainData.classifys[0].id;
+				api.setStorageArray('salesData',self.data.mainData.sales,'id',999);
 			}
 			self.setData({
-				web_bannerImg:self.data.bannerImg,
-				web_mainData:self.data.mainData
+				web_bannerImg: self.data.bannerImg,
+				web_mainData: self.data.mainData
 			})
 			console.log(self.data.bannerImg)
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
@@ -56,24 +90,115 @@ Page({
 		};
 		api.supplierpProductsDetail(postData, callback);
 	},
-	
-	showPoster(){
+
+	showPoster() {
 		const self = this;
 		self.data.show_poster = !self.data.show_poster;
 		self.setData({
-			show_poster:self.data.show_poster
+			show_poster: self.data.show_poster
+		})
+	},
+	
+	showPeople() {
+		const self = this;
+		if(self.data.subjectData.length==0){
+			api.showToast('请先选择团期','none')
+			return
+		};
+		self.data.show_people = !self.data.show_people;
+		self.setData({
+			show_people: self.data.show_people
 		})
 	},
 
-	changeIndex(e){
+	
+
+	changeIndex(e) {
 		const self = this;
-		var index = api.getDataSet(e,'index');
-		if(self.data.selectIndex!=index){
+		var index = api.getDataSet(e, 'index');
+		if (self.data.selectIndex != index) {
+			self.data.orderPost.classifyId =  self.data.mainData.classifys[self.data.selectIndex].id;
 			self.data.selectIndex = index;
 			self.setData({
-				web_selectIndex:self.data.selectIndex
+				web_orderPost:self.data.orderPost,
+				web_selectIndex: self.data.selectIndex
 			})
-		};	
+			
+			console.log('self.data.dayData',self.data.dayData)
+		};
+	},
+	
+	
+	
+	
+	selectDay(e) {
+		const self = this;
+		var day = api.getDataSet(e,'day')
+		if(self.data.orderPost.startDate!=day){
+			self.data.orderPost.startDate = day;
+			for (var i = 0; i < self.data.mainData.classifys[self.data.selectIndex].prices.length; i++) {
+				if(self.data.mainData.classifys[self.data.selectIndex].prices[i].groupDay==self.data.orderPost.startDate){
+					self.data.subjectData.push(self.data.mainData.classifys[self.data.selectIndex].prices[i])
+				}
+				
+			};
+			for (var i = 0; i < self.data.subjectData.length; i++) {
+				self.data.subjectData[i].count = 0
+			};
+			self.setData({
+				web_orderPost:self.data.orderPost,
+				web_subjectData:self.data.subjectData
+			})
+		}
+		console.log('self.data.subjectData',self.data.subjectData)
+		
+	},
+	
+	counter(e){
+		const self = this;
+		var type  = api.getDataSet(e,'type');
+		var index = api.getDataSet(e,'index');
+		if(type=='-'){
+			if(self.data.subjectData[index].count>0){
+				self.data.subjectData[index].count--
+			}
+		}else if(type=='+'){
+			self.data.subjectData[index].count++	
+		}
+		self.setData({
+			web_subjectData:self.data.subjectData
+		})	
+	},
+	
+	confirm(e){
+		const self = this;
+		for (var i = 0; i < self.data.subjectData.length; i++) {
+			if(self.data.subjectData[i].count>0){
+				self.data.orderPost.bills.push(
+					{billSubjectid:self.data.subjectData[i].subjectType,
+					billSubject:self.data.subjectData[i].typeName,
+					amount:self.data.subjectData[i].count}
+				)
+			}
+		}
+		self.data.show_people = false;
+		self.setData({
+			web_orderPost:self.data.orderPost,
+			show_people:self.data.show_people
+		});
+		console.log('self.data.orderPost',self.data.orderPost)
+	},
+	
+	goBook(e){
+		const self = this;
+		if(self.data.orderPost.startDate==''){
+			api.showToast('请选择团期','none')	
+		}else if(self.data.orderPost.bills.length==0){			
+			api.showToast('请选择出行人数','none')		
+		}else{
+			wx.setStorageSync('orderPost',self.data.orderPost)
+			api.pathTo(api.getDataSet(e, 'path'), 'nav');
+		}
 	},
 
 	intoPath(e) {

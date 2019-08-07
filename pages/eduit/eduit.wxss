@@ -24,7 +24,7 @@
 	display: flex;
 }
 .peo-content input{
-	width: 69%;
+	width: 100%;
 	height: 49px;
 	border: none;
 	line-height: 49px;
@@ -43,13 +43,13 @@
 	
 }
 .card input{
-	width: 60%;
-	height: 40px;
+	width: 100%;
+	height: 49px;
 	border: none;
 	font-size: 14px;
 	color: #A1A1A1;
 	opacity: 1;
-	line-height: 40px;
+	line-height: 49px;
 	
 }
 .card-img image{

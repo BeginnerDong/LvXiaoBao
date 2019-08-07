@@ -10,108 +10,450 @@ const token = new Token();
 
 Page({
 	data: {
-
+		show: false,
+		isFirstLoadAllStandard: ['getCddTypeData', 'getCddClassifyData', 'getOrderDetail'],
+		cardData: [{
+				key: '身份证',
+				value: 101
+			}, {
+				key: '护照',
+				value: 102
+			}, {
+				key: '军官证',
+				value: 103
+			}, {
+				key: '学生证',
+				value: 104
+			}, {
+				key: '老年证',
+				value: 105
+			}, {
+				key: '台湾通行证',
+				value: 106
+			},
+			{
+				key: '港澳通行证',
+				value: 107
+			}
+		],
+		cddTypeData: [],
+		cddClassifyData: [],
+		touristsTypeData: [{
+			name: '个人',
+			value: 101
+		}, {
+			name: '委托他人',
+			value: 102
+		}, {
+			name: '委托企业',
+			value: 103
+		}],
+		insureBuyType: [{
+			name: '放弃购买',
+			value: 101
+		}, {
+			name: '委托旅行社购买',
+			value: 102
+		}, {
+			name: '自行购买',
+			value: 103
+		}],
+		payType: ['现金', '支票', '信用卡', '其他'],
+		submitData: {
+			orderCode: '',
+			cddSource: '',
+			cddType: '',
+			touristsType: '',
+			travelerRepresentName: '',
+			travelerRepresentCard: '',
+			travelerRepresentPhone: '',
+			travelerRepresentEmail: '',
+			peoples: [],
+			productName: '',
+			startDate: '',
+			backDate: '',
+			totalDay: 1,
+			totalNight: 1,
+			cddJourney: '',
+			adultPrice: '',
+			childPrice: '',
+			tourGuideServicePrice: '',
+			singleSupplement: '',
+			travelPayDate: '',
+			travelPayType: '',
+			travelTotalPrice: '',
+			travelPayRemark: '',
+			insuranceChoose: '',
+			insuranceName: '',
+			lowestGroup: 1,
+			notGroupChoose: '',
+			isAgreeGroup: '',
+			isAgreeGroupTravelName: '',
+			methodChoose: '',
+			arbitrationName: '',
+			otherDeal: '',
+			signPeoples: [],
+			cddCheckType: 101,
+			replenishs: [],
+			intrustTravelName: '',
+			accessorys: []
+		}
 	},
 
 	onLoad(options) {
 		const self = this;
-		//self.getMainData()
+		api.commonInit(self);
+		self.data.orderCode = options.orderCode;
+		self.data.submitData.orderCode = self.data.orderCode;
+		if(!wx.getStorageSync('payFee')){
+			wx.setStorageSync('payFee',[])
+		};
+		if(!wx.getStorageSync('shopping')){
+			wx.setStorageSync('shopping',[])
+		};
+		self.getOrderDetail();
+		self.getCddTypeData();
+		self.getCddClassifyData();
+	},
+	
+	onShow(){
+		const self = this;
+		var arr1 = wx.getStorageSync('payFee');
+		arr1.push.apply(arr1,wx.getStorageSync('shopping'));
+		self.data.submitData.replenishs = arr1;
+		console.log(self.data.submitData.replenishs)
 	},
 
-	getMainData() {
-		wx.request({
-			url: 'http://yapi.lxbtrip.cn/mock/19/mshop/v1/{id}/product/{pId}',
-			data: {
-				id:1,
-				pId:100
-			},
-			method: 'get',
-			/*header: {
-			    'content-type': 'application/json',
-			    'token': wx.getStorageSync('token')
-			},*/
+	upLoadImg() {
+		const self = this;
+
+		wx.showLoading({
+			mask: true,
+			title: '图片上传中',
+		});
+		const callback = (res) => {
+			console.log('res', res)
+			if (res.result == '0') {
+				var url = res.fullPath;
+
+				self.data.submitData.accessorys.push(
+					{accUrl:url,accType:102,accClassify:101}
+				)
+				self.setData({
+					web_submitData: self.data.submitData
+				});
+				wx.hideLoading()
+			} else {
+				api.showToast(res.msg, 'none')
+			}
+
+		};
+
+		wx.chooseImage({
+			count: 1,
 			success: function(res) {
-				// 判断以2（2xx)开头的状态码为正确
-				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
-				
+				console.log(res);
+				var tempFilePaths = res.tempFilePaths;
+				console.log(callback)
+				api.uploadFile(tempFilePaths[0], 'file', {
+					classify: 'T019',
+					rwidth: 150,
+					rheight: 150,
+					file: tempFilePaths[0],
+				}, callback)
 			},
 			fail: function(err) {
-
-				wx.showToast({
-					title: '网络故障',
-					icon: 'fail',
-					duration: 2000,
-					mask: true,
-				});
-				getApp().globalData.buttonClick = false;
+				wx.hideLoading();
 			}
-		});
+		})
 	},
 
-	onPullDownRefresh() {
+
+	getOrderDetail(e) {
 		const self = this;
-		wx.showNavigationBarLoading();
-		self.getMainData(true)
+		const postData = {
+			header: {
+				'Authorization': wx.getStorageSync('token')
+			},
+			url: 'http://yapi.lxbtrip.cn/mock/19/odr/v1/order/' + self.data.orderCode
+		}
+		const callback = (res) => {
+			if (res.content) {
+				self.data.orderDetailData = res.content,
+					self.data.submitData.productName = self.data.orderDetailData.pdtName,
+					self.data.submitData.startDate = self.data.orderDetailData.startDate,
+					self.data.submitData.backDate = self.data.orderDetailData.endDate
+				self.data.submitData.travelPayDate = self.data.orderDetailData.payDate,
+					self.data.submitData.travelPayDate = self.data.orderDetailData.payDate
 
+			};
+			self.journery(self.data.orderDetailData.pdtId, self.data.orderDetailData.pdtPricetypeid)
+			self.setData({
+				web_submitData: self.data.submitData,
+				web_orderDetailData: self.data.orderDetailData
+			})
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getOrderDetail', self);
+		};
+		api.orderDetail(postData, callback);
 	},
 
-	tab(e) {
+	journery(id, typeId) {
+		const self = this;
+		const postData = {
+			pdtId: id,
+			classifyId: typeId
+		}
+		const callback = (res) => {
+			if (res.code == 200) {
+				var totalContent = '';
+				for (var i = 0; i < res.content.journeys.length; i++) {
+					var basic = res.content.journeys[i];
+					var content = '第' + basic.journeyDay + '天 ' + basic.endCity + '\n\n' + basic.journeyContent + '\n';
+					console.log(content)
+					totalContent += content;
+				}
+			}
+			self.data.submitData.cddJourney = totalContent
+		};
+		api.journery(postData, callback);
+	},
+
+	goEditJournery() {
+		const self = this;
+		wx.setStorageSync('journery', self.data.submitData.cddJourney);
+		api.pathTo('/pages/jounery/jounery', 'nav');
+	},
+	
+	goOtherDeal() {
+		const self = this;
+		wx.setStorageSync('otherDeal', self.data.submitData.otherDeal);
+		api.pathTo('/pages/otherDeal/otherDeal', 'nav');
+	},
+
+	getCddTypeData() {
+		const self = this;
+		const postData = {};
+		const callback = (res) => {
+			if (res.content.list) {
+				self.data.cddTypeData.push.apply(self.data.cddTypeData, res.content.list)
+			} else {
+				api.showToast(res.message, 'none')
+			}
+			self.setData({
+				web_cddTypeData: self.data.cddTypeData
+			})
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getCddTypeData', self);
+		};
+		api.cddType(postData, callback);
+	},
+
+	getCddClassifyData() {
+		const self = this;
+		const postData = {
+
+		};
+		const callback = (res) => {
+			if (res.content.list) {
+				self.data.cddClassifyData.push.apply(self.data.cddClassifyData, res.content.list)
+			} else {
+				api.showToast(res.message, 'none')
+			}
+			self.setData({
+				web_cddClassifyData: self.data.cddClassifyData
+			})
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getCddClassifyData', self);
+		};
+		api.cddClassify(postData, callback);
+	},
+
+
+	submit(e) {
 		const self = this;
 		api.buttonCanClick(self);
-		var currentId = api.getDataSet(e, 'id');
-		if (currentId == 0) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['招生政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 1) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['批次录取政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 2) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['加分政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
+		var type = api.getDataSet(e, 'type');
+		var newObject = api.cloneForm(self.data.submitData);
+		delete newObject.replenishs;
+		delete newObject.accessorys;
+		if (self.data.submitData.notGroupChoose != 101) {
+			delete newObject.intrustTravelName
+		};
+		if (self.data.submitData.isAgreeGroup != 'true') {
+			delete newObject.isAgreeGroupTravelName
 		}
-		self.setData({
-			currentId: api.getDataSet(e, 'id')
-		});
-		self.getMainData(true);
+		if (self.data.submitData.methodChoose != '1') {
+			delete newObject.arbitrationName
+		}
+		const pass = api.checkComplete(newObject);
+
+		if (!pass) {
+			api.buttonCanClick(self, true);
+			api.showToast('请补全信息', 'none');
+			return
+		};
+		self.contractSign(type)
 	},
 
-	onReachBottom() {
+	contractSign(type) {
 		const self = this;
-		if (!self.data.isLoadAll && self.data.buttonCanClick) {
-			self.data.paginate.currentPage++;
-			self.getMainData();
+		if (type == 'jump') {
+			self.data.submitData.cddCheckType = 102
 		};
+		const postData = api.cloneForm(self.data.submitData);
+		postData.header = {
+			'Authorization': wx.getStorageSync('token'),
+			'Content-Type': 'application/x-www-form-urlencoded'
+		};
+		const callback = (res) => {
+			console.log(res)
+			if (res.content.contractCode) {
+				api.buttonCanClick(self, true);
+				wx.setStorageSync('contract', res.content)
+
+				if (type == 'jump') {
+					api.pathTo('/pages/electro/electro', 'nav')
+				} else if (type == 'next') {
+					api.pathTo('/pages/orderDetail/orderDetail?orderCode=' + self.data.orderCode, 'nav')
+				}
+			} else {
+				api.buttonCanClick(self, true);
+				api.showToast(res.messgae, 'none');
+				return
+			}
+		};
+		api.contractSign(postData, callback);
+	},
+
+	counter(e) {
+		const self = this;
+		var key = api.getDataSet(e, 'key');
+		var type = api.getDataSet(e, 'type');
+		console.log(key)
+		if (type == '-') {
+			if (self.data.submitData[key] > 1) {
+				self.data.submitData[key]--
+			}
+		} else {
+			console.log(self.data.submitData[key])
+			self.data.submitData[key]++
+		}
+		self.setData({
+			web_submitData: self.data.submitData
+		})
+	},
+
+
+	inputChange(e) {
+		const self = this;
+		if (api.getDataSet(e, 'value')) {
+			self.data.submitData[api.getDataSet(e, 'key')] = api.getDataSet(e, 'value');
+		} else {
+			api.fillChange(e, self, 'submitData');
+		};
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+		console.log(self.data.submitData)
+	},
+
+
+
+	cddTypeChange(e) {
+		const self = this;
+		console.log(e)
+		self.data.submitData.cddSource = self.data.cddTypeData[e.detail.value].type;
+		self.setData({
+			web_index: e.detail.value,
+			web_submitData: self.data.submitData
+		})
+	},
+
+	cddClassifyChange(e) {
+		const self = this;
+		console.log(e)
+		self.data.submitData.cddType = self.data.cddClassifyData[e.detail.value].type;
+		self.data.submitData.otherDeal = self.data.cddClassifyData[e.detail.value].agreement
+		self.setData({
+			web_index1: e.detail.value,
+			web_submitData: self.data.submitData
+		})
+	},
+
+	touristsTypeChange(e) {
+		const self = this;
+		console.log(e)
+		self.data.submitData.touristsType = self.data.touristsTypeData[e.detail.value].value;
+		self.setData({
+			web_index2: e.detail.value,
+			web_submitData: self.data.submitData
+		})
+	},
+
+
+
+	peopleChange(e) {
+		const self = this;
+		console.log(e)
+		self.data.submitData.peoples = [];
+		self.data.submitData.peoples.push(self.data.orderDetailData.peoples[e.detail.value].id);
+		self.data.submitData.signPeoples.push(self.data.orderDetailData.peoples[e.detail.value].id);
+		self.setData({
+			web_index3: e.detail.value,
+			web_submitData: self.data.submitData
+		})
+	},
+
+	insureBuyTypeChange(e) {
+		const self = this;
+		console.log(e)
+		self.data.submitData.insuranceChoose = self.data.insureBuyType[e.detail.value].value;
+		self.setData({
+			web_index4: e.detail.value,
+			web_submitData: self.data.submitData
+		})
+	},
+
+
+	payTypeChange(e) {
+		const self = this;
+		console.log(e)
+		self.data.submitData.travelPayType = self.data.payType[e.detail.value];
+		self.setData({
+			web_index5: e.detail.value,
+			web_submitData: self.data.submitData
+		})
+	},
+
+
+	dateChangeStart(e) {
+		const self = this;
+		self.data.submitData.startDate = e.detail.value;
+		self.setData({
+			web_submitData: self.data.submitData
+		})
+	},
+
+
+	dateChangeEnd(e) {
+		const self = this;
+		self.data.submitData.backDate = e.detail.value;
+		self.setData({
+			web_submitData: self.data.submitData
+		})
+	},
+
+
+
+	payDateChange(e) {
+		const self = this;
+		self.data.submitData.travelPayDate = e.detail.value;
+		self.setData({
+			web_submitData: self.data.submitData
+		})
 	},
 
 	intoPath(e) {
 		const self = this;
+
 		api.pathTo(api.getDataSet(e, 'path'), 'nav');
 	},
 

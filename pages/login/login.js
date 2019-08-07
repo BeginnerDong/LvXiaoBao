@@ -13,12 +13,27 @@ Page({
 		submitData:{
 			loginPhone:'',
 			password:''
-		}
+		},
+		show:false
 	},
 
 	onLoad(options) {
 		const self = this;
 		//self.getMainData()
+	},
+	
+	
+	onShow() {
+		const self = this;
+		if (wx.getStorageSync('token')) {
+			wx.redirectTo({
+				url: '/pages/micro/micro'
+			})
+		}else{
+			self.setData({
+				web_show:true
+			})
+		}
 	},
 
 	
@@ -33,11 +48,15 @@ Page({
 	login() {
 		const self = this;
 		const postData = api.cloneForm(self.data.submitData)
-	
+		postData.header = {
+			'Content-Type':'application/x-www-form-urlencoded'
+		};
 		const callback = (res) => {
 			if(res.code==200){
 				wx.setStorageSync('token','Basic'+' '+res.content.token)
-				
+				wx.redirectTo({
+					url: '/pages/micro/micro'
+				})
 			}else{
 				api.showToast(res.errmsg, 'none')
 			}	

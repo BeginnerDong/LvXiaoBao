@@ -1,66 +1,75 @@
-// pages/jounery/jounery.js
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
 
-  },
+	},
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+	onLoad(options) {
+		const self = this;
+		self.downloadFile()
+	},
 
-  },
+	downloadFile(e) {
+		console.log(e);
+		let url = wx.getStorageSync('contract').contractPdf;
+		url += 'pdf';
+		wx.downloadFile({
+			url: url,
+			header: {},
+			success: function(res) {
+				var filePath = res.tempFilePath;
+				console.log(filePath);
+				wx.openDocument({
+					filePath: filePath,
+					fileType:'pdf',
+					success: function(res) {
+						console.log('打开文档成功')
+					},
+					fail: function(res) {
+						console.log(res);
+					},
+					complete: function(res) {
+						console.log(res);
+					}
+				})
+			},
+			fail: function(res) {
+				console.log('文件下载失败');
+			},
+			complete: function(res) {},
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
-  },
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+	intoPathRedi(e) {
+		const self = this;
+		wx.navigateBack({
+			delta: 1
+		})
+	},
 
-  },
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

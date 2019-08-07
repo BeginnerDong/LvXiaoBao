@@ -1,4 +1,4 @@
-<view>
+<view wx:if="{{web_show}}">
 	<view class="login">
 		<view class="login-name">登录</view>
 	</view>

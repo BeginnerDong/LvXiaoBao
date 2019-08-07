@@ -1,66 +1,228 @@
-// pages/feedback/feedback.js
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+		typeData: [{
+				name: '无法打开小程序',
+				value: 101
+			}, {
+				name: '小程序闪退',
+				value: 102
+			}, {
+				name: '卡顿',
+				value: 103
+			}, {
+				name: '界面错误',
+				value: 104
+			}, {
+				name: '界面加载慢',
+				value: 105
+			},
+			{
+				name: '死机',
+				value: 106
+			}, {
+				name: '其他异常',
+				value: 107
+			},
+		],
+		submitData: {
+			feedbackType: '',
+			content: '',
+			contact: '',
+			images: [
+				
+			]
+		},
+		imgArray:[]
+	},
 
-  },
+	onLoad(options) {
+		const self = this;
+		self.setData({
+			web_imgArray:self.data.imgArray
+		})
+	},
+	
+	typeChange(e) {
+		const self = this;
+		console.log('picker发送选择改变，携带值为', e.detail.value)
+		self.data.submitData.feedbackType = self.data.typeData[e.detail.value].value;
+		console.log(self.data.submitData);
+		self.setData({
+			web_index: e.detail.value,
+			web_submitData: self.data.submitData
+		})
+	},
+	
+	feedback() {
+		const self = this;
+		const postData = api.cloneForm(self.data.submitData);
+		postData.header = {
+			'Content-Type':'application/x-www-form-urlencoded'
+		};
+		const callback = (data) => {
+			if (data) {			
+				if (data.code == 200) {
+					setTimeout(function() {
+						wx.navigateBack({
+							delta: 1
+						});
+					}, 300);
+				}
+			};
+	
+	
+		};
+		api.feedback(postData, callback);
+	},
+	
+	
+	submit() {
+		const self = this;
+	
+		var newObject = api.cloneForm(self.data.submitData);
+		delete newObject.contact
+		const pass = api.checkComplete(newObject);
+		console.log('self.data.submitData', self.data.submitData)
+		if (pass) {
+			self.feedback()
+		} else {
+	
+			api.showToast('请补全信息', 'none');
+	
+		};
+	},
+	
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'submitData');
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+	},
 
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+/* 	upLoadImg(e) {
+		const self = this;
+	
+		wx.showLoading({
+			mask: true,
+			title: '图片上传中',
+		});
+		const callback = (res) => {
+			console.log('res', res)
+			if (res.result == '0') {
+				var url = res.fullPath;
+				var name = res.fileName;
+				self.data.submitData.image.push(
+					{fileName:name}
+				);
+				self.data.imgArray.push(url)
+				self.setData({
+					web_imgArray:self.data.imgArray,
+					web_submitData: self.data.submitData
+				});
+				wx.hideLoading()
+			} else {
+				api.showToast('网络故障', 'none')
+			}
+		};
+		wx.chooseImage({
+			count: 1,
+			success: function(res) {
+				console.log(res);
+				var tempFilePaths = res.tempFilePaths;
+				console.log('tempFilePaths',tempFilePaths)
+				const postData = {
+					classify:'T019',
+					rwidth:150,
+					rheight:150,
+					file:tempFilePaths[0]
+				}
+				api.uploadFile(postData, callback)
+			},
+			fail: function(err) {
+				wx.hideLoading();
+			},
 
-  },
+		})
+		console.log(self.data.submitData.file)
+	}, */
+	
+	upLoadImg(){
+	  const self = this;
+	 
+	  wx.showLoading({
+	    mask: true,
+	    title: '图片上传中',
+	  });
+	  const callback = (res)=>{
+	    console.log('res',res)
+		if (res.result == '0') {
+			var url = res.fullPath;
+			var name = res.fileName;
+			self.data.submitData.images.push(
+				{fileName:name}
+			);
+			self.data.imgArray.push(url)
+			self.setData({
+				web_imgArray:self.data.imgArray,
+				web_submitData: self.data.submitData
+			});
+			wx.hideLoading()
+		} else {
+			api.showToast(res.msg, 'none')
+		}
+	
+	  };
+	
+	  wx.chooseImage({
+	    count:1,
+	    success: function(res) {
+	      console.log(res);
+	      var tempFilePaths = res.tempFilePaths;
+	      console.log(callback)
+	      api.uploadFile(tempFilePaths[0],'file',{
+				classify:'T019',
+				rwidth:150,
+				rheight:150,
+				file:tempFilePaths[0],
+		},callback)
+	    },
+	    fail: function(err){
+	      wx.hideLoading();
+	    }
+	  })
+	},
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
 
-  },
+	intoPathRedi(e) {
+		const self = this;
+		wx.navigateBack({
+			delta: 1
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
 
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

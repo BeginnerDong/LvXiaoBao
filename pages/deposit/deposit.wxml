@@ -1,5 +1,5 @@
  <view class="draw">
-		<view class="draw-top">支付宝账号(186*****807)</view>
+		<view class="draw-top">{{web_mainData.accounts[0].name}}({{web_mainData.accounts[0].account}})</view>
 		<view class="draw-imga">
 			<image src="../../image/right.png"></image>
 		</view>
@@ -10,8 +10,8 @@
 			<view class="couchar-inp flex">
 				<view>¥ </view>
 				<view>
-						<input value="{{web_submitData.price}}"  data-key="price" bindblur="inputChange"></input>
-					</view>
+					<input value="{{web_submitData.price}}"  data-key="price" bindblur="inputChange"></input>
+				</view>
 			</view>
 			<view class="draw-ri">全部提现</view>
 		</view>
@@ -20,17 +20,16 @@
 	<view class="drawa">
 		<view class="draw-topa">充值方式
 		<view class="title-line"></view></view>
-		<view class="draw-img">
-			<view class="draw-con">单内到账<span style="color: #A1A1A1;">(手续费3.08%)</span></view>
-			<view class="drimg">
-				<image src="../../image/complete.png"></image>
+		<block wx:for="{{web_mainData.type}}"> 
+			<view class="draw-img">
+				<view class="draw-con">{{item.title}}<span style="color: #A1A1A1;">{{item.rate==0?'(免费)':'(手续费'+item.rate+'%)'}}</span></view>
+				<view class="drimg" bindtap="changeType" data-type="{{item.id}}">
+					<image src="{{web_submitData.typeId==item.id?'../../image/complete.png':'../../image/quan.png'}}"></image>
+				</view>
 			</view>
-		</view>
-		<view class="draw-img">
-			<view class="draw-con" style="color: #A1A1A1;">次日到账(免费)</view>
-			<view class="drimg">
-				<image src="../../image/quan.png"></image>
-			</view>
-		</view>
-		<view class="cou-btn"><span>提现</span></view>
+		</block>
+		
+		
+		
+		<view class="cou-btn" bindtap="{{web_buttonCanClick?'submit':''}}"><span>提现</span></view>
 	</view>

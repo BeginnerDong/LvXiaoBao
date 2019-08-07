@@ -10,97 +10,82 @@ const token = new Token();
 
 Page({
 	data: {
-
+		show: false,
+		isFirstLoadAllStandard: ['getMainData'],
+		cardData: [{
+				key: '身份证',
+				value: 101
+			}, {
+				key: '护照',
+				value: 102
+			}, {
+				key: '军官证',
+				value: 103
+			}, {
+				key: '学生证',
+				value: 104
+			}, {
+				key: '老年证',
+				value: 105
+			}, {
+				key: '台湾通行证',
+				value: 106
+			},
+			{
+				key: '港澳通行证',
+				value: 107
+			}
+		],
 	},
 
 	onLoad(options) {
 		const self = this;
-		//self.getMainData()
-	},
-
-	getMainData() {
-		wx.request({
-			url: 'http://yapi.lxbtrip.cn/mock/19/mshop/v1/{id}/product/{pId}',
-			data: {
-				id:1,
-				pId:100
-			},
-			method: 'get',
-			/*header: {
-			    'content-type': 'application/json',
-			    'token': wx.getStorageSync('token')
-			},*/
-			success: function(res) {
-				// 判断以2（2xx)开头的状态码为正确
-				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
-				
-			},
-			fail: function(err) {
-
-				wx.showToast({
-					title: '网络故障',
-					icon: 'fail',
-					duration: 2000,
-					mask: true,
-				});
-				getApp().globalData.buttonClick = false;
-			}
-		});
-	},
-
-	onPullDownRefresh() {
-		const self = this;
-		wx.showNavigationBarLoading();
-		self.getMainData(true)
-
-	},
-
-	tab(e) {
-		const self = this;
-		api.buttonCanClick(self);
-		var currentId = api.getDataSet(e, 'id');
-		if (currentId == 0) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['招生政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 1) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['批次录取政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 2) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['加分政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		}
+		api.commonInit(self);
+		
 		self.setData({
-			currentId: api.getDataSet(e, 'id')
-		});
-		self.getMainData(true);
+			web_show: self.data.show
+		})
 	},
+
+	onShow() {
+		const self = this;
+		self.data.mainData = api.getStorageArray('peopleData');
+		console.log('onShow', self.data.mainData);
+		for (var i = 0; i < self.data.mainData.length; i++) {
+			for (var j = 0; j < self.data.cardData.length; j++) {
+				if (self.data.mainData[i].cdtype == self.data.cardData[j].value) {
+					self.data.mainData[i].cdtype = self.data.cardData[j].key
+				}
+			}
+		};
+		self.setData({
+			web_mainData: self.data.mainData
+		});
+		api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+	},
+
+	choose(e) {
+		const self = this;
+		const index = api.getDataSet(e, 'index');
+		if (self.data.mainData[index].isSelect) {
+			self.data.mainData[index].isSelect = false;
+		} else {
+			self.data.mainData[index].isSelect = true;
+		};
+		api.setStorageArray('peopleData', self.data.mainData[index], 'id', 999);
+		self.setData({
+			web_mainData: self.data.mainData
+		});
+	},
+
+	add() {
+		const self = this;
+		self.data.show = !self.data.show;
+		self.setData({
+			web_show: self.data.show
+		})
+	},
+
 
 	onReachBottom() {
 		const self = this;
@@ -112,6 +97,10 @@ Page({
 
 	intoPath(e) {
 		const self = this;
+		self.data.show = !self.data.show;
+		self.setData({
+			web_show: self.data.show
+		})
 		api.pathTo(api.getDataSet(e, 'path'), 'nav');
 	},
 

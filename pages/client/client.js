@@ -13,7 +13,10 @@ Page({
 		isFirstLoadAllStandard:['getMainData'],
 		show:false,
 		mainDataC:{},
-		alphbate:['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+		alphbate:['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'],
+		search:{
+			keyword:''
+		}
 	},
 
 	onLoad(options) {
@@ -35,6 +38,23 @@ Page({
 			web_show:self.data.show
 		})
 	},
+	
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'search');
+		self.setData({
+			web_search: self.data.search,
+		});
+	},
+	
+	goSearch(){
+		const self = this;
+		if(self.data.search.keyword!=''){
+			self.getMainData(true)
+		}else{
+			api.showToast('请输入关键词搜索','none')
+		}
+	},
 
 	getMainData(isNew) {
 		const self = this;
@@ -42,9 +62,12 @@ Page({
 			api.clearPageIndex(self);
 		};
 		const postData = {
-			
+			number:1,
+			size:1
 		};
-		
+		if(self.data.search.keyword!=''){
+			postData.keyword =self.data.search.keyword
+		};
 		const callback = (res) => {
 			if(res.content.list.length>0){
 				/* self.data.mainData.push.apply(self.data.mainData,res.content.list) */
@@ -63,9 +86,10 @@ Page({
 								data:[res.content.list[i]]
 							});
 						}; */
+						/* if(api.timeToTimestamp(res.content.list.birth)) */
 					
 				};
-				
+				console.log(api.timeToTimestamp(res.content.list[0].birth))
 			}else{
 				self.data.isLoadAll = true
 			};

@@ -3,42 +3,44 @@
 		<view class="peo-name">
 			<view class="peo-con">具体时间</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写具体时间"/>
+				<picker bindchange="dateChange" mode="date"  style="width:100%;height:100%">
+					{{web_submitData.repDate?web_submitData.repDate:'请选择具体日期'}}
+				</picker>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">购物地点</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写购物地点"/>
+				<input type="text" placeholder="填写购物地点" value="{{web_submitData.repAddress}}"  data-key="repAddress" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">购物场所</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写购物场所"/>
+				<input type="text" placeholder="填写购物场所" value="{{web_submitData.repItem}}"  data-key="repItem" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">商品信息</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写商品信息"/>
+				<input type="text" placeholder="填写商品信息" value="{{web_submitData.repGoods}}"  data-key="repGoods" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">停留时间</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写购物时间"/>
+				<input type="text" placeholder="填写购物时间" value="{{web_submitData.repDuration}}"  data-key="repDuration" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">其他说明</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写其他说明"/>
+				<input type="text" placeholder="填写其他说明" value="{{web_submitData.otherExplain}}"  data-key="otherExplain" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="shop-btn">
-			<view class="off">取消</view>
-			<view class="add">保存</view>
+			<view class="off" bindtap="intoPathRedi">取消</view>
+			<view class="add" bindtap="submit">保存</view>
 		</view>
 	</view>
 </view>

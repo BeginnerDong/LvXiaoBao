@@ -9,7 +9,7 @@
 		<view class="nav-top-item {{num==2?'nav-top-item-active':''}}" data-num = "2" bindtap="{{web_buttonCanClick?'menuClick':''}}">已确认
 			<view class="title-line" wx:if="{{num==2}}"></view>
 		</view>
-		<view class="nav-top-item {{num==3?'nav-top-item-active':''}}" data-num = "3" bindtap="{{web_buttonCanClick?'menuClick':''}}">已取消
+		<view class="nav-top-item {{num==3?'nav-top-item-active':''}}" style="border-right:1px solid #A1A1A1" data-num = "3" bindtap="{{web_buttonCanClick?'menuClick':''}}">已取消
 			<view class="title-line" wx:if="{{num==3}}"></view>
 		</view>
 		<view class="nav-top-item flex-all" bindtap="isShow">
@@ -20,7 +20,7 @@
 		</view>
 	</view>
 	<block wx:for="{{web_mainData}}">
-		<view class="order"  bindtap="intoPath" data-path="/pages/orderDetail/orderDetail">
+		<view class="order" >
 			<view class="order-name" >
 				<view class="orde">
 					<view class="order-title">
@@ -34,20 +34,22 @@
 					<view class="con-righ">￥{{item.shouPricef}}</view>
 				</view>
 				<view class="order-con1">
-					<view class="con-left">团期:05/28(天)~06/05(三)</view>
+					<view class="con-left">团期:{{item.startDate}}({{item.startWeek}})~{{item.endDate}}({{item.endWeek}})</view>
 					<view class="con-right">
 						<span style="color: #000000;background: #FFD101;">{{item.insureName}}</span>
 						<span style="color: white;background: #EC6532;opacity: 0.8;">{{item.contractName}}</span>
 					</view>
 				</view>
+				
 				<view class="order-con1">
-					<view class="con-left">人数:5人(3大2小)</view>
+					<view class="con-left">人数:{{item.totalNum[0]+item.totalNum[1]+item.totalNum[2]+item.totalNum[3]}}人({{item.totalNum[0]+item.totalNum[3]}}大{{item.totalNum[1]+item.totalNum[2]}}小)</view>
 				</view>
 				<view class="conbtn">
+					<view class="con-btn" wx:if="{{item.stateThree=='101'}}"><span>出团通知</span></view>
 					<view class="con-btn" wx:if="{{item.stateTwo=='101'}}"><span>确认件</span></view>
-					<view class="con-btn"><span>签署合同</span></view>
-					<view class="con-btn"><span>购买保险</span></view>
-					<view class="con-btn" wx:if="{{item.stateOne=='101'}}"><span>支付</span></view>
+					<view class="con-btn" bindtap="intoPath" data-path="/pages/sign/sign?orderCode={{item.orderCode}}" wx:if="{{item.contractIntegrity=='-1'||item.contractIntegrity=='0'}}"><span>签署合同</span></view>
+					<view class="con-btn" bindtap="intoPath" data-path="/pages/insurance/insurance?orderCode={{item.orderCode}}" wx:if="{{item.insureIntegrity=='-1'||item.insureIntegrity=='0'}}"><span>购买保险</span></view>
+					<view class="con-btn" bindtap="intoPath" data-path="/pages/orderDetail/orderDetail?orderCode={{item.orderCode}}"  wx:if="{{item.stateOne=='101'||item.stateOne=='102'}}"><span style="border: 1px solid #EC6532;color: #EC6532;">支付</span></view>
 				</view>
 				
 			</view>
@@ -59,10 +61,17 @@
 		<view class="state-name">
 			<view class="state-title">支付状态</view>
 			<view class="state-btn">
-				<span style="color: #EC6532;background: none;border: 1px solid #C5C5C5;">未支付</span>
-				<span>支付中</span>
-				<span>已支付</span>
-				<span>已取消</span>
+				<span bindtap="selectStateOne" data-key="101" 
+				style="{{func.inArrayT('101',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">
+					
+				
+				未支付</span>
+				<span bindtap="selectStateOne" data-key="102" 
+				style="{{func.inArrayT('102',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">支付中</span>
+				<span bindtap="selectStateOne" data-key="103" 
+				style="{{func.inArrayT('103',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已支付</span>
+				<span bindtap="selectStateOne" data-key="108" 
+				style="{{func.inArrayT('104',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已取消</span>
 			</view>
 		</view>
 		<view class="state-name">
@@ -75,7 +84,7 @@
 			</view>
 		</view>
 		<view class="state-name">
-			<view class="state-title">游客信息</view>
+			<view class="state-title">产品信息</view>
 			<view class="state-btn">
 				<input type="text" placeholder="半自助"/>
 			</view>

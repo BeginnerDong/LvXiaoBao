@@ -1,8 +1,8 @@
 <view>
 	<view class="top">
 		<view class="search">
-			<input placeholder="关键字搜索 如：赵学刚 海南专线" />
-			<view class="searchBtn">
+			<input placeholder="关键字搜索 如：赵学刚 海南专线"  value="{{web_search.keyword}}"  data-key="keyword" bindblur="inputChange"/>
+			<view class="searchBtn" bindtap="goSearch">
 				<image src="../../image/search.png" />
 			</view>
 		</view>
@@ -27,18 +27,13 @@
 			<view class="right-titl">剩3天</view>
 		</view>
 	</view>
-	<view class="client1">
-		<view class="cli-title">
-			<view class="title">{{web_mainDataC['A'][0].name}}<span>(吴佩璇)</span></view>
-			<view class="mobile">17782526431</view>
-		</view>
-	</view>
+	
 	<block wx:for="{{alphbate}}" wx:key="id">
 		<view class="client" wx:if="{{web_mainDataC[item].length>0}}">
 			<view class="client-name">{{item}}</view>
 		</view>
 		<block wx:for="{{web_mainDataC[item]}}" wx:key="id" wx:for-item="c_item">
-			<view class="client1" bindtap="intoPath" data-path="/pages/basic/basic?id={{item.id}}">
+			<view class="client1" bindtap="intoPath" data-path="/pages/basic/basic?id={{c_item.id}}">
 				<view class="cli-title">
 					<view class="title">{{c_item.name}}<span>({{c_item.aliasName}})</span></view>
 					<view class="mobile">{{c_item.phone}}</view>

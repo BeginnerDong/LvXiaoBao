@@ -1,20 +1,29 @@
+
 <view>
 	<view class="top">
 		<view class="search">
-			<input placeholder="领秀华夏" />
-			<view class="searchBtn" bindtap="intoPath" data-path="/pages/search/search">
+			<input placeholder="领秀华夏" value="{{web_search.keyword}}"  data-key="keyword" bindblur="inputChange"/>
+			<view class="searchBtn" bindtap="goSearch">
 				<image src="../../image/index-icon2.png" />
 			</view>
 		</view>
 		
 	</view>
 	<view class="nav-top flex-align">
-		<view class="nav-top-item nav-top-item-active">全部
-			<view class="title-line" style="left: 30%;"></view>
+		
+		
+		<view class="nav-top-item {{num==0?'nav-top-item-active':''}}" data-num = "0" bindtap="{{web_buttonCanClick?'menuClick':''}}">全部
+			<view class="title-line" style="left: 30%;" wx:if="{{num==0}}"></view>
 		</view>
-		<view class="nav-top-item">国内</view>
-		<view class="nav-top-item">出境</view>
-		<view class="nav-top-item" style="border-right:1px solid #A1A1A1">周边</view>
+		<view class="nav-top-item {{num==1?'nav-top-item-active':''}}" data-num = "1" bindtap="{{web_buttonCanClick?'menuClick':''}}">国内
+			<view class="title-line" style="left: 30%;" wx:if="{{num==1}}"></view>
+		</view>
+		<view class="nav-top-item {{num==2?'nav-top-item-active':''}}" data-num = "2" bindtap="{{web_buttonCanClick?'menuClick':''}}">出境
+			<view class="title-line" style="left: 30%;" wx:if="{{num==2}}"></view>
+		</view>
+		<view class="nav-top-item {{num==3?'nav-top-item-active':''}}" style="border-right:1px solid #A1A1A1" data-num = "3" bindtap="{{web_buttonCanClick?'menuClick':''}}">周边
+			<view class="title-line" style="left: 30%;" wx:if="{{num==3}}"></view>
+		</view>
 		<view class="nav-top-item flex-all" bindtap="isShow">
 			<view>筛选</view>
 			<view class="flex-all">
@@ -22,7 +31,7 @@
 			</view>	
 		</view>
 	</view>
-	
+	<wxs src="../../utils/func.wxs" module="func" />
 	<block wx:for="{{web_mainData}}" wx:key="id">
 		<view class="peer">
 			<view class="peer-top flex">
@@ -47,7 +56,7 @@
 					<view class="zhuying font14 color1 bold-font">主营业务</view>
 					<view class="font14 color1">{{item.businessTypeName}}</view>
 				</view>
-				<view class="font14 color1" style="margin-top: 16rpx;">海南专线/北京专线/桂林专线/华东专线/普吉专线/巴黎专线/泰国专线/日韩专线/欧洲专线...</view>
+				<view class="font14 color1" style="margin-top: 16rpx;">{{item.businessClassifyName}}</view>
 			</view>
 			<view class="peer-bottom flex-align">
 				<view class="peer-bottom-item flex-all">
@@ -56,15 +65,15 @@
 					</view>
 					<view class="font13 color2" style="margin-left: 18rpx;">{{item.prodNum}}件</view>
 				</view>
-				<view class="peer-bottom-item flex-all">
+				<view class="peer-bottom-item flex-all" >
 					<view class="flex-all">
-						<image src="../../image/peer-icon3.png" />
+						<image src="{{item.isLike>0?'../../image/peer-icon3-active.png':'../../image/peer-icon3.png'}}" bindtap="supplierLike"/>
 					</view>
 					<view class="font13 color2" style="margin-left: 18rpx;">{{item.likeNum}}</view>
 				</view>
 				<view class="peer-bottom-item flex-all">
 					<view class="flex-all">
-						<image src="../../image/peer-icon4.png" />
+						<image src="{{item.isLaud>0?'../../image/peer-icon4-active.png':'../../image/peer-icon4.png'}}" bindtap="supplierGood"/>
 					</view>
 					<view class="font13 color2" style="margin-left: 18rpx;">{{item.laudNum}}</view>
 				</view>
@@ -73,13 +82,13 @@
 	</block>
 	<view style="width:100%;height:130rpx"></view>
 	<view class="navbar">
-		<view class="navbar_item">
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
 			<view class="nav_img">
 				<image src="../../image/cod.png" style="width: 16px;height: 23px;margin-top: 6px;"></image>
 			</view>
 			<view class="text ">微店</view>
 		</view>
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/information/information">
+		<view class="navbar_item" >
 			<view class="nav_img">
 				<image src="../../image/peer-icon5.png" ></image>
 			</view>
@@ -97,7 +106,7 @@
 			</view>
 			<view class="text">订单</view>
 		</view>
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/mine/mine">
+		<view class="navbar_item" bindtap="intoPathRedirect"  data-path="/pages/mine/mine">
 			<view class="nav_img">
 				<image src="../../image/index-icon7.png" ></image>
 			</view>
@@ -110,37 +119,29 @@
 		<view class="top-top">
 			<view class="top-title">
 				业务分类
-				<view class="title-line" style="left:4%"></view>
+				<view class="title-line"></view>
 			</view>
 				<view class="choose">
-					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold;">
-						海南专线
-					</view>
-					<view class="choose-item">
-						云南专线
-					</view>
-					<view class="choose-item">
-						贵州专线
-					</view>
-					<view class="choose-item">
-						港澳专线
-					</view>
-					<view class="choose-item">
-						桂林专线
-					</view>
-					<view class="choose-item">
-						四川专线
-					</view>
+					<block wx:for="{{web_businessClassifys}}" wx:key="index" wx:if="{{index<6}}">
+						<view class="choose-item" bindtap="selectBusiness" data-key="{{item.key}}" 
+						style="{{func.inArrayT(item.key,web_selectBusinessData)!=-1?'color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold':''}}">
+							{{item.value}}{{func.inArray(item.key,web_selectBusinessData)}}
+						</view>
+					</block>
+					
+				
 			</view>
 		</view>
 		<view class="top-top1">
 			<view class="top-title">签约分类
 			<view class="title-line"></view></view>
 				<view class="choose">
-					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold;">
+					<view class="choose-item" bindtap="selectSign" data-key="102"
+					style="{{func.inArrayT('102',web_selectSignData)!=-1?'color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold':''}}">
 						已签约
 					</view>
-					<view class="choose-item">
+					<view class="choose-item" bindtap="selectSign" data-key="101"
+					style="{{func.inArrayT('101',web_selectSignData)!=-1?'color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold':''}}">
 						未签约
 					</view>
 			</view>
@@ -149,74 +150,26 @@
 			<view class="top-title">供应商区域
 			<view class="title-line"></view></view>
 				<view class="choose">
-					<view class="choose-item" style="color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold;">
-						海南
-					</view>
-					<view class="choose-item">
-						云南
-					</view>
-					<view class="choose-item">
-						湖北
-					</view>
-					<view class="choose-item">
-						福建
-					</view>
-					<view class="choose-item">
-						四川
-					</view>
-					<view class="choose-item">
-						陕西
-					</view>
-					<view class="choose-item">
-						安徽
-					</view>
-					<view class="choose-item">
-						河南
-					</view>
+					<block wx:for="{{web_provinces}}"  wx:key="index">
+						<view class="choose-item avoidOverflow" bindtap="selectProvince" data-key="{{item}}"
+						style="{{func.inArrayT(item,web_selectProvinceData)!=-1?'color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold':''}}">
+							{{item}}
+						</view>
+					</block>
+					
+					
 			</view>
 		</view>
 		<view class="bottom">
 			<view class="choose">
-					<view class="choose-item1" style="color: rgba(161,161,161,1);background: rgba(242,242,242,1);">
+					<view class="choose-item1" style="color: rgba(161,161,161,1);background: rgba(242,242,242,1);" bindtap="installSelect">
 						重置
 					</view>
-					<view class="choose-item1" style="color: rgba(50,50,50,1);background: rgba(255,209,1,1);font-weight: bold;">
+					<view class="choose-item1" style="color: rgba(50,50,50,1);background: rgba(255,209,1,1);font-weight: bold;" bindtap="confirmSelect">
 						确认
 					</view>
 			</view>
 		</view>
 	</view> 
-	<view style="width:100%;height:130rpx"></view>
-	<view class="navbar">
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
-			<view class="nav_img">
-				<image src="../../image/index-icon3.png"></image>
-			</view>
-			<view class="text this-text">微店</view>
-		</view>
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/peer/peer">
-			<view class="nav_img">
-				<image src="../../image/index-icon4.png"></image>
-			</view>
-			<view class="text">同行</view>
-		</view>
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/micro/micro">
-			<view class="nav_img">
-				<image src="../../image/index-icon6.png"></image>
-			</view>
-			<view class="text">首页</view>
-		</view>
-		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/order/order">
-			<view class="nav_img">
-				<image src="../../image/index-icon5.png" ></image>
-			</view>
-			<view class="text">订单</view>
-		</view>
-		<view class="navbar_item">
-			<view class="nav_img">
-				<image src="../../image/index-icon7.png" ></image>
-			</view>
-			<view class="text">我的</view>
-		</view>
-	</view>
+	
 </view>

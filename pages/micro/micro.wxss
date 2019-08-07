@@ -61,7 +61,6 @@
 }
 .travle{
 	width: 90%;
-	height: 400px;
 	margin-left: 5%;
 	position: absolute;
 	top: 22%;
@@ -151,10 +150,5 @@
 .tr{
 	width: 90%;
 	height: 300px;
-	margin-top: 230px;
 	margin-left: 5%;
-}
-.tr image{
-	width: 100%;
-	height: 144px;
 }

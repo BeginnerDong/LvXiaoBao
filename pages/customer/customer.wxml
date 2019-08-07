@@ -5,13 +5,13 @@
 		<view class="peo-name">
 			<view class="peo-con">姓名</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户姓名" value="{{web_mainData.name}}"  data-key="name" bindblur="inputChange"/>
+				<input type="text" placeholder="填写客户姓名" value="{{web_submitData.name}}"  data-key="name" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">姓名备注</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户备注姓名" value="{{web_mainData.aliasName}}"  data-key="aliasName" bindblur="inputChange"/>
+				<input type="text" placeholder="填写客户备注姓名" value="{{web_submitData.aliasName}}"  data-key="aliasName" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
@@ -19,9 +19,9 @@
 			<view class="peo-content">
 				<view class="card">
 					
-					<picker bindchange="educationChange" value="{{index}}"  range="{{levelData}}" style="width:100%;">
+					<picker bindchange="levelChange" value="{{index}}"  range="{{levelData}}" range-key="name"  style="width:100%;">
 						<view style="font-size: 14px;color: #323232;">
-							{{levelData[web_index]?levelData[web_index]:'选择客户级别'}}
+							{{levelData[web_index].name?levelData[web_index].name:'选择客户级别'}}
 						</view>
 					</picker>
 				</view>
@@ -31,22 +31,22 @@
 		<view class="peo-name">
 			<view class="peo-con">手机</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户手机"/>
+				<input type="text" placeholder="填写客户手机" value="{{web_mainData.phone}}"  data-key="phone" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">备用手机</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户备用手机"/>
+				<input type="text" placeholder="填写客户备用手机" value="{{web_mainData.otherPhone}}"  data-key="otherPhone" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">性别</view>
 			<view class="peo-content">
 				<view class="card">
-					<picker bindchange="changeLevel" value="{{index}}"  range="{{sexData}}" style="width:100%;">
+					<picker bindchange="sexChange" value="{{index}}"  range="{{sexData}}" style="width:100%;">
 						<view style="font-size: 14px;color: #323232;">
-							{{sexData[web_sexIndex]?sexData[web_sexIndex]:'选择客户级别'}}
+							{{sexData[web_sexIndex]?sexData[web_sexIndex]:'选择客户性别'}}
 						</view>
 					</picker>
 				</view>
@@ -55,14 +55,20 @@
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">出生日期</view>
-			<view class="peo-content1">
-				<input type="text" placeholder="选择出生日期" />
+			<view class="peo-content">
+				<view class="card">		
+					<picker bindchange="dateChange" mode="date"  style="width:100%;">
+						<view style="font-size: 14px;color: #323232;">
+							{{web_submitData.birth?web_submitData.birth:'选择出生日期'}}
+						</view>
+					</picker>
+				</view>
 			</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">年龄</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="填写客户年龄" value="{{web_mainData.age}}"  data-key="age" bindblur="inputChange"/>
+				<input type="text" placeholder="填写客户年龄" value="{{web_submitData.age}}"  data-key="age" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
@@ -81,7 +87,7 @@
 		<view class="peo-name">
 			<view class="peo-con">详细地址</view>
 			<view class="peo-content1">
-				<input type="text" placeholder="请与证件保持一致" value="{{web_mainData.address}}"  data-key="address" bindblur="inputChange"/>
+				<input type="text" placeholder="请与证件保持一致" value="{{web_submitData.address}}"  data-key="address" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name" style="height: 100px;">

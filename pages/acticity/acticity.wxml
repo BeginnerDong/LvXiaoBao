@@ -1,48 +1,53 @@
 <view>
-	<view class="acti">
-		<view class="acti-top">
-			<view class="top-name">自愿购物活动1
-			<view class="title-line"></view></view>
-			<view class="top-right">
-				<view class="right-img">
-					<image src="../../image/write.png"></image>
-				</view>
-				<view class="right-img">
-					<image src="../../image/delete.png"></image>
+	<block wx:for="{{web_mainData}}">
+		<view class="acti">
+			<view class="acti-top">
+				<view class="top-name">自愿购物活动{{index+1}}
+				<view class="title-line"></view></view>
+				<view class="top-right">
+					<view class="right-img" bindtap="intoPath" data-path="/pages/shopping/shopping?index={{index}}">
+						<image src="../../image/write.png"></image>
+					</view>
+					<view class="right-img">
+						<image src="../../image/delete.png"></image>
+					</view>
 				</view>
 			</view>
-		</view>
-		<view class="activi">
-			<view class="name">具体时间</view>
-			<view class="title">2019-05-10</view>
-		</view>
-		<view class="activi">
-			<view class="name">购物地点</view>
-			<view class="title">海南</view>
-		</view>
-		<view class="activi">
-			<view class="name">购物场所</view>
-			<view class="title">海南免税店</view>
-		</view>
-		<view class="activi">
-			<view class="name">商品信息</view>
-			<view class="title">玉石</view>
-		</view>
-		<view class="activi">
-			<view class="name">停留时间</view>
-			<view class="title">30分钟</view>
-		</view>
-		<view class="activi">
-			<view class="name">其他说明</view>
-			<view class="title">无</view>
-		</view>
-		<view class="btn"  bindtap="intoPath" data-path="/pages/shopping/shopping">
-			<view class="all">
-				<view class="btn-img">
-					<image src="../../image/whi.png"></image>
-				</view>
-				<view class="btn-name">添加自愿购物</view>
+			<view class="activi">
+				<view class="name">具体时间</view>
+				<view class="title">{{item.repDate}}</view>
 			</view>
+			<view class="activi">
+				<view class="name">购物地点</view>
+				<view class="title">{{item.repAddress}}</view>
+			</view>
+			<view class="activi">
+				<view class="name">购物场所</view>
+				<view class="title">{{item.repItem}}</view>
+			</view>
+			<view class="activi">
+				<view class="name">商品信息</view>
+				<view class="title">{{item.repGoods}}</view>
+			</view>
+			<view class="activi">
+				<view class="name">停留时间</view>
+				<view class="title">{{item.repDuration}}分钟</view>
+			</view>
+			<view class="activi">
+				<view class="name">其他说明</view>
+				<view class="title">{{item.otherExplain}}</view>
+			</view>
+			
+		</view>
+		
+	</block>
+	<view style="width: 100%;height: 100px;"></view>
+	<view class="btn"  bindtap="intoPath" data-path="/pages/shopping/shopping">
+		<view class="all">
+			<view class="btn-img">
+				<image src="../../image/whi.png"></image>
+			</view>
+			<view class="btn-name">添加自愿购物</view>
 		</view>
 	</view>
 </view>

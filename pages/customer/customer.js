@@ -11,7 +11,8 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
-
+		levelData:[{name:'一级',value:1},{name:'二级',value:2},{name:'三级',value:3},{name:'四级',value:4}],
+		sexData:['男','女'],
 		submitData: {
 			name: '',
 			aliasName: '',
@@ -41,6 +42,36 @@ Page({
 			web_region:self.data.region
 		})
 
+	},
+	
+	levelChange(e){
+		const self = this;
+		var index = e.detail.value;
+		self.data.submitData.grade = self.data.levelData[e.detail.value].value;
+		self.setData({
+			web_submitData:self.data.submitData,
+			web_index:index
+		})
+		console.log(self.data.submitData)
+	},
+	
+	sexChange(e){
+		const self = this;
+		var index = e.detail.value;
+		self.data.submitData.sex = self.data.levelData[e.detail.value];
+		self.setData({
+			web_submitData:self.data.submitData,
+			web_sexIndex:index
+		})
+		console.log(self.data.submitData)
+	},
+	
+	dateChange(e){
+		const self = this;
+		self.data.submitData.birth = e.detail.value;
+		self.setData({
+			web_submitData:self.data.submitData
+		})
 	},
 
 	bindRegionChange(e) {

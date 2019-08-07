@@ -11,12 +11,12 @@
 					</view>
 				</view>
 				<view class="vt-title">
-					<view class="vt-name">￥299.00</view>
-					<view class="vt-namea">￥480.00</view>
+					<view class="vt-name">￥{{web_mainData[0].salePrice}}</view>
+					<view class="vt-namea">￥{{web_mainData[0].originalPrice}}</view>
 				</view>
 			</view>
-			<view class="vt-con">
-				<image src="../../image/whitegou.png"></image>
+			<view class="vt-con" bindtap="chooseType" data-id="{{web_mainData[0].id}}"  data-price="{{web_mainData[0].salePrice}}">
+				<image src="{{web_id==web_mainData[0].id?'../../image/whitegou.png':'../../image/white.png'}}"></image>
 			</view>
 		</view>
 		<view class="vt" style="background:linear-gradient(-45deg,rgba(247,77,95,1) 0%,rgba(255,136,166,1) 100%);margin-top: 4%;">
@@ -31,12 +31,12 @@
 				</view>
 				
 				<view class="vt-title">
-					<view class="vt-name">￥568.00</view>
-					<view class="vt-namea">￥860.00</view>
+					<view class="vt-name">￥{{web_mainData[1].salePrice}}</view>
+					<view class="vt-namea">￥{{web_mainData[1].originalPrice}}</view>
 				</view>
 			</view>
-			<view class="vt-con">
-				<image src="../../image/white.png"></image>
+			<view class="vt-con" bindtap="chooseType" data-id="{{web_mainData[1].id}}"  data-price="{{web_mainData[1].salePrice}}">
+				<image src="{{web_id==web_mainData[1].id?'../../image/whitegou.png':'../../image/white.png'}}"></image>
 			</view>
 		</view>
 		<view class="vt" style="background:linear-gradient(-45deg,rgba(0,150,255,1) 0%,rgba(52,203,254,1) 100%);margin-top: 4%;">
@@ -50,12 +50,12 @@
 					</view>
 				</view>
 				<view class="vt-title">
-					<view class="vt-name">￥799.00</view>
-					<view class="vt-namea">￥1068.00</view>
+					<view class="vt-name">￥{{web_mainData[2].originalPrice}}</view>
+					<view class="vt-namea">￥{{web_mainData[2].originalPrice}}</view>
 				</view>
 			</view>
-			<view class="vt-con">
-				<image src="../../image/white.png"></image>
+			<view class="vt-con" bindtap="chooseType" data-id="{{web_mainData[2].id}}"  data-price="{{web_mainData[2].salePrice}}">
+				<image src="{{web_id==web_mainData[2].id?'../../image/whitegou.png':'../../image/white.png'}}"></image>
 			</view>
 		</view>
 	</view>
@@ -89,7 +89,7 @@
 	</view>
 	<view class="count">
 		<view class="count-title">总计：</view>
-		<view class="count-con">￥299.00</view>
-		<view class="count-btn" bindtap="intoPath" data-path="/pages/paid/paid">立即支付</view>
+		<view class="count-con">￥{{web_price}}</view>
+		<view class="count-btn" bindtap="buy">立即支付</view>
 	</view>
 </view>

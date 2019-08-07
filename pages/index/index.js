@@ -10,105 +10,169 @@ const token = new Token();
 
 Page({
 	data: {
-
+		isFirstLoadAllStandard: ['getShopInfo', 'getHotShop','getMainData'],
+		show: false,
+		hotShopData: [],
+		postData:{
+			
+		},
+		mainData:[],
+		search:{
+			keyword:''
+		},
+		
 	},
 
 	onLoad(options) {
 		const self = this;
-		//self.getMainData()
-	},
-
-	getMainData() {
-		wx.request({
-			url: 'http://yapi.lxbtrip.cn/mock/19/mshop/v1/{id}/product/{pId}',
-			data: {
-				id:1,
-				pId:100
-			},
-			method: 'get',
-			/*header: {
-			    'content-type': 'application/json',
-			    'token': wx.getStorageSync('token')
-			},*/
-			success: function(res) {
-				// 判断以2（2xx)开头的状态码为正确
-				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
-				
-			},
-			fail: function(err) {
-
-				wx.showToast({
-					title: '网络故障',
-					icon: 'fail',
-					duration: 2000,
-					mask: true,
-				});
-				getApp().globalData.buttonClick = false;
-			}
-		});
-	},
-
-	onPullDownRefresh() {
-		const self = this;
-		wx.showNavigationBarLoading();
-		self.getMainData(true)
-
-	},
-
-	tab(e) {
-		const self = this;
-		api.buttonCanClick(self);
-		var currentId = api.getDataSet(e, 'id');
-		if (currentId == 0) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['招生政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 1) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['批次录取政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 2) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['加分政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		}
+		api.commonInit(self);
+		self.data.postData = {
+			number:api.cloneForm(self.data.number),
+			size:api.cloneForm(self.data.size),
+			lineCategory:101
+		};		
 		self.setData({
-			currentId: api.getDataSet(e, 'id')
+			web_postData:self.data.postData
 		});
-		self.getMainData(true);
+		self.getHotShop();
+		self.getShopInfo();
+		self.getMainData()
+
 	},
+	
+	changeClassify(e){
+		const self = this;
+		var type = api.getDataSet(e,'key');
+		console.log(type)
+		if(self.data.postData.businessClassify!=type){
+			self.data.postData.businessClassify = type
+			self.setData({
+				web_businessClassifys:self.data.postData.businessClassify
+			});
+			self.getMainData(true)
+		};
+		
+	},
+	
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'search');
+		self.setData({
+			web_search: self.data.search,
+		});
+	},
+	
+	goSearch(){
+		const self = this;
+		if(self.data.search.keyword!=''){
+			api.pathTo('/pages/productList/productList?keyword='+self.data.search.keyword,'nav')
+		}else{
+			api.pathTo('/pages/search/search','nav')
+		}
+	},
+
+	getHotShop() {
+		const self = this;
+		const postData = {
+			number: 1,
+			size: 4,
+		};
+
+		const callback = (res) => {
+			if (res.content.list.length > 0) {
+				self.data.hotShopData.push.apply(self.data.hotShopData, res.content.list)
+			}
+			self.setData({
+				web_hotShopData: self.data.hotShopData
+			})
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getHotShop', self);
+
+		};
+		api.collectProducts(postData, callback);
+	},
+
+	getShopInfo() {
+		const self = this;
+		const postData = {
+
+		};
+
+		const callback = (res) => {
+			if (res.code == 200) {
+				self.data.shopData = res.content
+			}
+			self.setData({
+				web_shopData: self.data.shopData
+			})
+	
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getShopInfo', self);
+		
+		};
+		api.mshopInfo(postData, callback);
+	},
+	
+	phoneCall() {
+		const self = this;
+		wx.makePhoneCall({
+			phoneNumber: self.data.shopData.info.phone
+		})
+	},
+	
+
+	getMainData(isNew) {
+		const self = this;
+		if (isNew) {
+			api.clearPageIndex(self);
+		};
+		const postData = api.cloneForm(self.data.postData)
+		const callback = (res) => {
+			if (res.content.list.length > 0) {
+				self.data.mainData.push.apply(self.data.mainData, res.content.list);
+				self.data.businessClassifys = res.content.businessClassifys
+			} else {
+				self.data.isLoadAll = true
+			};
+			self.setData({
+				web_businessClassifys:self.data.businessClassifys,
+				web_mainData: self.data.mainData
+			})
+			console.log(self.data.businessClassifys)
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+			console.log('getMainData', self.data.mainData)
+		};
+		api.mshopProducts(postData, callback);
+	},
+	
+	changeCategory(e){
+		const self = this;
+		var id = api.getDataSet(e,'id');
+		if(self.data.postData.lineCategory!=id){
+			self.data.postData.lineCategory = id;
+			self.setData({
+				web_postData:self.data.postData
+			});
+			self.getMainData(true)
+		}	
+	},
+
 
 	onReachBottom() {
 		const self = this;
 		if (!self.data.isLoadAll && self.data.buttonCanClick) {
-			self.data.paginate.currentPage++;
+			self.data.number++;
 			self.getMainData();
 		};
 	},
+
+
+
+	/* 	onReachBottom() {
+			const self = this;
+			if (!self.data.isLoadAll && self.data.buttonCanClick) {
+				self.data.paginate.currentPage++;
+				self.getMainData();
+			};
+		}, */
 
 	intoPath(e) {
 		const self = this;

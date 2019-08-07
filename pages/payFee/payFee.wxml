@@ -1,0 +1,53 @@
+<view>
+	<block wx:for="{{web_mainData}}">
+		<view class="acti">
+			<view class="acti-top">
+				<view class="top-name">自愿付费项目{{index+1}}
+				<view class="title-line"></view></view>
+				<view class="top-right">
+					<view class="right-img" bindtap="intoPath" data-path="/pages/shopping/shopping?index={{index}}">
+						<image src="../../image/write.png"></image>
+					</view>
+					<view class="right-img">
+						<image src="../../image/delete.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="activi">
+				<view class="name">具体时间</view>
+				<view class="title">{{item.repDate}}</view>
+			</view>
+			<view class="activi">
+				<view class="name">地点</view>
+				<view class="title">{{item.repAddress}}</view>
+			</view>
+			<view class="activi">
+				<view class="name">项目名称</view>
+				<view class="title">{{item.repItem}}</view>
+			</view>
+			<view class="activi">
+				<view class="name">费用(元)</view>
+				<view class="title">{{item.repFee}}</view>
+			</view>
+			<view class="activi">
+				<view class="name">项目市场</view>
+				<view class="title">{{item.repDuration}}分钟</view>
+			</view>
+			<view class="activi">
+				<view class="name">其他说明</view>
+				<view class="title">{{item.otherExplain}}</view>
+			</view>
+			
+		</view>
+		
+	</block>
+	<view style="width: 100%;height: 100px;"></view>
+	<view class="btn"  bindtap="intoPath" data-path="/pages/addPayFee/addPayFee">
+		<view class="all">
+			<view class="btn-img">
+				<image src="../../image/whi.png"></image>
+			</view>
+			<view class="btn-name">添加自愿付费项目</view>
+		</view>
+	</view>
+</view>

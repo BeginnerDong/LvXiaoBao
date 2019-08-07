@@ -8,7 +8,7 @@ page{
 .detaill-name{
 	height: 150px;
 	background:linear-gradient(180deg,rgba(255,202,0,1) 0%,rgba(244,243,243,1) 100%);
-	margin-top: 3%;
+
 	padding-top: 2%;
 	z-index: 111;
 }
@@ -31,9 +31,10 @@ page{
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	background: white;
     margin-left: 4%;
-	z-index: 2222;
+	z-index: 222;
 	position: absolute;
-	top: 20%;
+	top: 14%;
+	border-radius:8px;
 }
 .detail-mess{
 	width: 97%;
@@ -124,7 +125,8 @@ page{
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	background: white;
 	margin: 5%;
-	margin-top: 240px;
+	margin-top: 190px;
+	border-radius:8px;
 }
 .people-name{
 	width: 100%;
@@ -153,11 +155,12 @@ page{
 	margin-right: 5%;
 }
 .list{
-	height: 181px;
+	/* height: 181px; */
 	width: 90%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	background: white;
 	margin: 5%;
+	border-radius:8px;
 }
 .list-title{
 	width: 100%;
@@ -251,11 +254,12 @@ page{
 	height: 20px;
 }
 .insurance{
-	height: 350px;
+	/* height: 350px; */
 	width: 90%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	background: white;
 	margin: 5%;	
+	border-radius:8px;
 }
 .steel{
 	width: 100%;
@@ -310,11 +314,12 @@ page{
 	border-radius: 20px;
 }
 .contrat{
-	height: 440px;
+	/* height: 440px; */
 	width: 90%;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	background: white;
 	margin: 5%;	
+	border-radius:8px;
 }
 .order-btn{
 	width: 100%;
@@ -323,6 +328,7 @@ page{
 	background: white;
 	position: fixed;
 	bottom: 0;
+	z-index: 9999;
 }
 .can{
 	width: 45%;
@@ -363,21 +369,21 @@ page{
 }
 .bg{
 	width: 100%;
-	height: 70%;
+	height: 100%;
 	position: fixed;
-	bottom: 38%;
+	bottom: 0;
 	background: #000000;
 	opacity: 0.6;
-	z-index: 44444;
+	z-index: 555;
 }
 .payment{
 	width: 100%;
-	height: 50%;
+	
 	position: fixed;
-	bottom: 0;
+	bottom: 60px;
 	background: #FFFFFF;
 	z-index: 44444;
-	border-radius: 20px;
+	border-radius:12px 12px 0px 0px;
 }
 .pay{
 	width: 100%;

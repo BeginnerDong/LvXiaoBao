@@ -14,7 +14,7 @@
 .top-left span{
 	font-size:15px;
 	font-family:PingFang-SC-Bold;
-	font-weight:bold;
+	
 	color:rgba(50,50,50,1);
 }
 .discount{

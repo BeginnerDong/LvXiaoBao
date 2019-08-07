@@ -24,6 +24,7 @@ Page({
 		const self = this;
 	
 		self.setData({
+			web_submitData:self.data.submitData,
 			web_buttonCanClick:self.data.buttonCanClick
 		})
 	},

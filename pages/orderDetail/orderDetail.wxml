@@ -7,12 +7,12 @@
 		<view class="detail-message">
 			<view class="detail-mess">订单信息
 			<view class="title-line" style="bottom: 10px;"></view></view>
-			<view class="deail-num">￥6380.00</view>
-			<view class="detail-con">网红新选泰国旅游普吉岛PP岛帝王岛天堂湾6天5晚跟团游含机飘浮潜</view>
+			<view class="deail-num">￥{{web_mainData.orderPrice}}</view>
+			<view class="detail-con">{{web_mainData.pdtName}}</view>
 			<view class="paid-con">
-				<view class="con">05月29日</view>
+				<view class="con">{{web_mainData.startDate}}</view>
 				<view class="con" style="color: #A1A1A1;opacity: 0.6;">4成人  1儿童</view>
-				<view class="con" style="text-align: right;">06月08日</view>
+				<view class="con" style="text-align: right;">{{web_mainData.endDate}}</view>
 			</view>
 			<view class="mou">
 				<view class="mou-title">周三出发</view>
@@ -24,19 +24,19 @@
 			<view class="title-line" style="bottom: 10px;"></view></view>
 			<view class="people-name">
 				<view class="peo-titl">姓名</view>
-				<view class="peo-title">张佳怡</view>
+				<view class="peo-title avoidOverflow">{{web_mainData.reservationName}}</view>
 			</view>
 			<view class="people-name">
 				<view class="peo-titl">手机号</view>
-				<view class="peo-title">17782526431</view>
+				<view class="peo-title">{{web_mainData.reservationPhone}}</view>
 			</view>
 			<view class="people-name">
 				<view class="peo-titl">门店地址</view>
-				<view class="peo-title">西安中国国际旅行社</view>
+				<view class="peo-title avoidOverflow">{{web_mainData.reservationCompany}}</view>
 			</view>
 			<view class="people-name">
 				<view class="peo-titl">门店地址</view>
-				<view class="peo-title">长安街区</view>
+				<view class="peo-title avoidOverflow">{{web_mainData.reservationArea}}</view>
 			</view>
 		</view>
 		<view class="list">
@@ -47,40 +47,25 @@
 					<image src="../../image/down.png"></image>
 				</view>
 			</view>
-			<view class="list-name">
-				<view class="name-left">
-					<view class="name">
-						<view class="name-name">游客1</view>
-						<view class="name-con">李正峰(成人)</view>
+			<block wx:for="{{web_mainData.peoples}}">
+				<view class="list-name">
+					<view class="name-left">
+						<view class="name">
+							<view class="name-name">游客{{index+1}}</view>
+							<view class="name-con">{{item.name}}</view>
+						</view>
+						<view class="name-card">{{item.cdtypeName}}:{{item.card}}</view>
 					</view>
-					<view class="name-card">身份证:62284819562456</view>
-				</view>
-				<view class="name-img">
-					<view class="list-img">
-						<image src="../../image/qqqq.png"></image>
-					</view>
-					<view class="list-img">
-						<image src="../../image/delete.png"></image>
-					</view>
-				</view>
-			</view>
-			<view class="list-name">
-				<view class="name-left">
-					<view class="name">
-						<view class="name-name">游客2</view>
-						<view class="name-con">张佳怡(成人)</view>
-					</view>
-					<view class="name-card">身份证:62284819562456</view>
-				</view>
-				<view class="name-img">
-					<view class="list-img">
-						<image src="../../image/qqqq.png"></image>
-					</view>
-					<view class="list-img">
-						<image src="../../image/delete.png"></image>
+					<view class="name-img">
+						<view class="list-img">
+							<image src="../../image/qqqq.png"></image>
+						</view>
+						<view class="list-img">
+							<image src="../../image/delete.png"></image>
+						</view>
 					</view>
 				</view>
-			</view>
+			</block>
 		</view>
 		<view class="insurance">
 			<view class="list-title">
@@ -90,35 +75,37 @@
 					<image src="../../image/down.png"></image>
 				</view>
 			</view>
-			<view class="steel">
-				<view class="steel-name">江泰保险</view>
-				<view class="steel-con">
-					<view class="peo-titl">保险名称</view>
-					<view class="peo-title">2017年度江泰</view>
-				</view>
-				<view class="steel-con">
-					<view class="peo-titl">保险期限</view>
-					<view class="peo-title">2019-05-29</view>
-				</view>
-				<view class="steel-con">
-					<view class="peo-titl">被保人</view>
-					<view class="peo-title1">
-						<view class="st">10人</view>
-						<view class="st-to"><span>查看</span></view>
+			<block wx:for="{{web_mainData.insures}}" wx:key="id">
+				<view class="steel">
+					<view class="steel-name">{{item.companyBrand}}</view>
+					<view class="steel-con">
+						<view class="peo-titl">保险名称</view>
+						<view class="peo-title">{{item.pdtName}}</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">保险期限</view>
+						<view class="peo-title">{{item.securityStart}} 至 {{item.securityEnd}}</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">被保人</view>
+						<view class="peo-title1">
+							<view class="st">{{item.tourists.length}}人</view>
+							<view class="st-to"  bindtap="checkInsurePeople" data-index="{{index}}"><span>查看</span></view>
+						</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">保险状态</view>
+						<view class="peo-title">{{item.stateTwoName}}</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">保单号</view>
+						<view class="peo-title1">
+							<view class="st">{{item.stateTwoName}}</view>
+							<view class="st-to"><span>查看</span></view>
+						</view>
 					</view>
 				</view>
-				<view class="steel-con">
-					<view class="peo-titl">保险状态</view>
-					<view class="peo-title">已提交</view>
-				</view>
-				<view class="steel-con">
-					<view class="peo-titl">保单号</view>
-					<view class="peo-title1">
-						<view class="st">EC20190529CDE</view>
-						<view class="st-to"><span>查看</span></view>
-					</view>
-				</view>
-			</view>
+			</block>
 		</view>
 		<view class="contrat">
 			<view class="list-title">
@@ -128,16 +115,17 @@
 					<image src="../../image/down.png"></image>
 				</view>
 			</view>
+			<block wx:for="{{web_mainData.contracts}}">
 			<view class="steel">
-				<view class="steel-name">12301</view>
+				<view class="steel-name">{{item.contractCode}}</view>
 				<view class="steel-con">
 					<view class="peo-titl">合同类型</view>
-					<view class="peo-title">陆居民境内旅游合同</view>
+					<view class="peo-title">{{item.cddTypeName}}</view>
 				</view>
 				<view class="steel-con">
 					<view class="peo-titl">合同编号</view>
 					<view class="peo-title1">
-						<view class="st">EC20190529CDE</view>
+						<view class="st">{{item.contractCode}}</view>
 						<view class="st-to"><span>查看</span></view>
 						<view class="st-to"><span style="background:linear-gradient(90deg,rgba(255,232,28,1) 0%,rgba(253,139,5,1) 100%);">发送</span></view>
 					</view>
@@ -145,72 +133,59 @@
 				<view class="steel-con">
 					<view class="peo-titl">合同金额</view>
 					<view class="peo-title1">
-						<view class="st">6840.00元</view>
-						<view class="st-to"><span>查看</span></view>
+						<view class="st">{{item.cddPrice}}元</view>	
 					</view>
 				</view>
 				<view class="steel-con">
 					<view class="peo-titl">游客代表</view>
-					<view class="peo-title">已提交</view>
+					<view class="peo-title">{{item.appUsername}}</view>
 				</view>
 				<view class="steel-con">
 					<view class="peo-titl">游客信息</view>
 					<view class="peo-title1">
-						<view class="st">10人</view>
-						<view class="st-to"><span>查看</span></view>
+						<view class="st">{{item.touristNum.length}}人</view>
+						<view class="st-to" bindtap="checkContractsPeople" data-index="{{index}}"><span>查看</span></view>
 					</view>
 				</view>
 				<view class="steel-con">
 					<view class="peo-titl">合同状态</view>
-					<view class="peo-title">已提交</view>
+					<view class="peo-title">{{item.stateTwoName}}</view>
 				</view>
 			</view>
+			</block>
 		</view>
+	
 		 <view class="order-btn">
 			<view class="can"><span>取消订单</span></view>
 			<view class="can1"><span>立即支付</span></view>
 		</view> 
 	</view>
-	<!-- <view class="bg"></view>
-	<view class="payment">
+	<view style="height:100px;width:100%" ></view>
+	<view class="bg" wx:if="{{showPay}}"></view>
+	<view class="payment" wx:if="{{showPay}}">
 		<view class="detail-messa">立即支付
 		<view class="title-line" style="bottom: 12px;"></view></view>
-		<view class="pay">
-			<view class="pay-name">￥1000</view>
-			<view class="pay-data">
-				<view class="pay-title">2019-05-10</view>
-				<view class="pay-title1">第1期</view>
+		<block wx:for="{{web_mainData.plans}}">		
+			<view class="pay">
+				<view class="pay-name">￥{{item.sprice}}</view>
+				<view class="pay-data">
+					<view class="pay-title">{{item.sdate}}</view>
+					<view class="pay-title1">第{{item.num}}期</view>
+				</view>
+				<view class="prepaid" style="height: 60px;line-height: 60px;{{item.state>101?'color: #FF0000':''}}">未支付</view>
+				<view class="pay-img" style="height: 60px;display: flex;align-items: center;" bindtap="choose" data-index="{{index}}">
+					<image src="{{web_planCode==item.planCode?'../../image/complete.png':'../../image/quan.png'}}"></image>
+				</view>
 			</view>
-			<view class="prepaid" style="color: #FF0000;">已支付</view>
-			<view class="pay-img">
-				<image src="../../image/garys.png"></image>
-			</view>
+		</block>
+		<view class="order-btn" style="z-index:999999">
+			<view class="can" ><span>取消订单</span></view>
+			<view class="can1" bindtap="pay"><span>立即支付</span></view>
 		</view>
-		<view class="pay">
-			<view class="pay-name">￥1000</view>
-			<view class="pay-data">
-				<view class="pay-title">2019-06-10</view>
-				<view class="pay-title1">第2期</view>
-			</view>
-			<view class="prepaid">未支付</view>
-			<view class="pay-img">
-				<image src="../../image/fonts.png"></image>
-			</view>
-		</view>
-		<view class="pay">
-			<view class="pay-name">￥1000</view>
-			<view class="pay-data">
-				<view class="pay-title">2019-07-10</view>
-				<view class="pay-title1">第3期</view>
-			</view>
-			<view class="prepaid">未支付</view>
-			<view class="pay-img">
-				<image src="../../image/quan.png"></image>
-			</view>
-		</view>
-		<view class="order-btn">
-			<view class="can"><span>取消订单</span></view>
-			<view class="can1"><span>立即支付</span></view>
-		</view>
-	</view> -->
+		
+	</view>
+	<view class="order-btn">
+		<view class="can" ><span>取消订单</span></view>
+		<view class="can1" bindtap="submit"><span>立即支付</span></view>
+	</view>
 </view>

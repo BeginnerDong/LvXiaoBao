@@ -20,7 +20,13 @@ class Base {
 		getApp().globalData.buttonClick = true;
 		var baseRestUrl = 'http://yapi.lxbtrip.cn/mock/19';
 		
-		var url = baseRestUrl + params.url;
+		
+		if(params.data.url){
+			var url = params.data.url;
+		}else{
+		   var url = baseRestUrl + params.url;
+		}
+		
 		const callback = (res) => {
 			if (res) {
 				params.data.refreshToken = false;
@@ -77,40 +83,69 @@ class Base {
 			}
 		});
 	}
+	
+	uploadFile(filePath,name,formData,callback){
+	
+	    var that = this;
+	    const c_callback = (res)=>{
+	        that.uploadFile(filePath,name,formData,callback);
+	    };
+	    console.log('uploadFile',formData)
+	  /*  if(formData.tokenFuncName){
+	        if(formData.refreshTokn){
+	            token[formData.tokenFuncName](c_callback,{refreshToken:true});
+	        }else{
+	            formData.token = token[formData.tokenFuncName](c_callback);
+	        };
+	        if(!formData.token){
+	            return;
+	        };
+	    }; */
+	    wx.uploadFile({
+	        url: 'http://ws.lxbtrip.com/upload/image',
+	        filePath:filePath,
+	        name:name,
+	        formData:formData,
+	        success: function (res) {
+	            if(res.data){
+	                res.data = JSON.parse(res.data);
+	            };
+	            /* if (res.data.solely_code == '200000') {
+	                token[formData.tokenFuncName](c_callback,{refreshToken:true});
+	            }else{
+	                callback&&callback(res.data);
+	            }; */
+				callback&&callback(res.data);
+	        },
+	        fail: function(err){
+	            wx.showToast({
+	                title:'网络故障',
+	                icon:'fail',
+	                duration:2000,
+	                mask:true,
+	            });
+	        }
+	    })
+	}
 
-	uploadFile(filePath, name, formData, callback) {
+	/* uploadFile(param, callback) {
 
 		var that = this;
 		const c_callback = (res) => {
-			that.uploadFile(filePath, name, formData, callback);
+			that.uploadFile(param, callback);
 		};
-		console.log('uploadFile', formData)
-		if (formData.tokenFuncName) {
-			if (formData.refreshTokn) {
-				token[formData.tokenFuncName](c_callback, {
-					refreshToken: true
-				});
-			} else {
-				formData.token = token[formData.tokenFuncName](c_callback);
-			};
-			if (!formData.token) {
-				return;
-			};
-		};
+		
+		
 		wx.uploadFile({
-			url: 'https://gaokao.solelycloud.com/api/public/index.php/api/v1/Base/FtpFile/upload',
+			url: 'http://ws.lxbtrip.com/upload/image',
 			
-			filePath: filePath,
-			name: name,
-			formData: formData,
+			filePath: param.file,
+			name: 'file',
+			
 			success: function(res) {
+				console.log(res)
 				if (res.data) {
 					res.data = JSON.parse(res.data);
-				};
-				if (res.data.solely_code == '200000') {
-					token[formData.tokenFuncName](c_callback, {
-						refreshToken: true
-					});
 				} else {
 					callback && callback(res.data);
 				};
@@ -124,7 +159,7 @@ class Base {
 				});
 			}
 		})
-	}
+	} */
 
 	parentAdd(tokenFuncName, parent_no, callback, passage1) {
 		var token = new Token({

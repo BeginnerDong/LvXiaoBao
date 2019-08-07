@@ -1,0 +1,110 @@
+.shop{
+	width: 100%;
+	height: 500px;
+	margin-top: 5%;
+}
+.peo-name{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	/* justify-content: center; */
+	padding: 0 3%;
+	line-height: 50px;
+	border-bottom: 1px solid #E7E7E7;
+}
+.peo-con{
+	width: 30%;
+	height: 50px;
+	font-size: 16px;
+	color:#323232;
+	opacity: 1;
+	font-weight: 500;
+}
+.peo-content{
+	width: 70%;
+	height: 50px;
+	display: flex;
+	line-height: 50px;
+}
+.peo-content input{
+	width: 69%;
+	height: 49px;
+	border: none;
+	font-size: 14px;
+	color: #A1A1A1;
+	opacity: 1;
+	line-height:49px;
+}
+.card-img{
+	width: 20%;
+	height: 50px;
+	text-align:right;
+	margin-right: 15%;
+}
+.card{
+	width: 80%;
+	
+}
+.card input{
+	width: 60%;
+	height: 40px;
+	border: none;
+	font-size: 14px;
+	color: #A1A1A1;
+	opacity: 1;
+	
+}
+.card-img image{
+	width: 20px;
+	height: 20px;
+}
+
+.peo-content1{
+	font-size: 14px;
+	color: #323232;
+	width: 70%;
+	height: 50px;
+	line-height: 50px;
+}
+.peo-content1 input{
+	width: 69%;
+	height: 49px;
+	border: none;
+	font-size: 14px;
+	color: #A1A1A1;
+	opacity: 1;
+	line-height:49px;
+}
+.shop-btn{
+	width: 100%;
+	height: 60px;
+	background: white;
+	display: flex;
+	position: fixed;
+	bottom: 0;
+}
+.off{
+	width: 48%;
+	height: 50px;
+	border-radius: 30px;
+	color: #A1A1A1;
+	opacity: 0.8;
+	background: #F4F3F3;
+	margin-left: 3%;
+	text-align: center;
+	line-height: 50px;
+	font-weight: 500;
+	font-size: 17px;
+}
+.add{
+	width: 48%;
+	height: 50px;
+	border-radius: 30px;
+	color: white;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
+	opacity: 1;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	font-size: 17px;
+}

@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 46,
+			"current": 62,
 			"list": [
 				{
 					"id": -1,
@@ -356,6 +356,118 @@
 					"id": -1,
 					"name": "微店首页",
 					"pathName": "pages/micro/micro",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "同行产品",
+					"pathName": "pages/productListPlate/productListPlate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购买保险",
+					"pathName": "pages/insurance/insurance",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增游客",
+					"pathName": "pages/eduit/eduit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "游客信息",
+					"pathName": "pages/tourist/tourist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择销售",
+					"pathName": "pages/seleteSalers/seleteSalers",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择销售",
+					"pathName": "pages/seleteSalers/seleteSalers",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/schedule/schedule",
+					"pathName": "pages/schedule/schedule",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/deposit/deposit",
+					"pathName": "pages/deposit/deposit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/basic/basic",
+					"pathName": "pages/basic/basic",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/schedule/schedule",
+					"pathName": "pages/schedule/schedule",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/insurance/insurance",
+					"pathName": "pages/insurance/insurance",
+					"query": "orderCode= TL201503291747036971",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/sign/sign",
+					"pathName": "pages/sign/sign",
+					"query": "orderCode= TL201503291747036971",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/electro/electro",
+					"pathName": "pages/electro/electro",
+					"query": "orderCode= TL201503291747036971",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/acticity/acticity",
+					"pathName": "pages/acticity/acticity",
+					"query": "orderCode= TL201503291747036971",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
 					"query": "",
 					"scene": null
 				}

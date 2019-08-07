@@ -128,6 +128,7 @@ page {
 	height: 30px;
 	display: flex;
 	margin-top: 10px;
+	
 }
 .order-con1{
 	width: 100%;
@@ -174,17 +175,19 @@ page {
 }
 
 .conbtn{
-	width: 100%;
+	width: 96%;
 	height: 40px;
 	display: flex;
 	margin-top: 15px;
+	justify-content: flex-end;
 }
 .con-btn{
 	width: 25%;
 	font-size: 14px;
+
 }
 .con-btn span{
-	width: 80px;
+	width: 75px;
 	height: 30px;
 	border: 1px solid #323232;
 	color: #323232;

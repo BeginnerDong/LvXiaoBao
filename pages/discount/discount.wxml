@@ -1,10 +1,10 @@
 <view>
 	<view class="top">
-		<view class="top-left">
-			<span>可用优惠券</span>
+		<view class="top-left" bindtap="changeType" data-type='101'>
+			<span style="{{web_type==101?'font-weight: 700':''}}">可用优惠券</span>
 		</view>
-		<view class="top-left">
-			<span style='font-weight: 500;'>不可用优惠券</span>
+		<view class="top-left" bindtap="changeType" data-type='102'>
+			<span style="{{web_type==102?'font-weight: 700':''}}">不可用优惠券</span>
 		</view>
 	</view>
 	<block wx:for="{{web_mainData}}" wx:key="id">

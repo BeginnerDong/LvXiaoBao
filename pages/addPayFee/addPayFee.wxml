@@ -1,0 +1,46 @@
+<view>
+	<view class="shop">
+		<view class="peo-name">
+			<view class="peo-con">具体时间</view>
+			<view class="peo-content1">
+				<picker bindchange="dateChange" mode="date"  style="width:100%;height:100%">
+					{{web_submitData.repDate?web_submitData.repDate:'请选择具体日期'}}
+				</picker>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">地点</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写地点" value="{{web_submitData.repAddress}}"  data-key="repAddress" bindblur="inputChange"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">项目名称</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写项目名称" value="{{web_submitData.repItem}}"  data-key="repItem" bindblur="inputChange"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">费用（元）</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写费用" value="{{web_submitData.repFee}}"  data-key="repFee" bindblur="inputChange"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">项目时长（分）</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写购物时间" value="{{web_submitData.repDuration}}"  data-key="repDuration" bindblur="inputChange"/>
+			</view>
+		</view>
+		<view class="peo-name">
+			<view class="peo-con">其他说明</view>
+			<view class="peo-content1">
+				<input type="text" placeholder="填写其他说明" value="{{web_submitData.otherExplain}}"  data-key="otherExplain" bindblur="inputChange"/>
+			</view>
+		</view>
+		<view class="shop-btn">
+			<view class="off" bindtap="intoPathRedi">取消</view>
+			<view class="add" bindtap="submit">保存</view>
+		</view>
+	</view>
+</view>

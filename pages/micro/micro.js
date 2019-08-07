@@ -11,32 +11,52 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
-		show: false,
-		submitData: {
-			phone: '',
-			code: ''
+		mainData:[],
+		search:{
+			keyword:''
 		}
+		
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
-
+	
 		self.getMainData();
+
+	},
+	
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'search');
 		self.setData({
-			web_show: self.data.show
-		})
+			web_search: self.data.search,
+		});
+	},
+	
+	goSearch(){
+		const self = this;
+		if(self.data.search.keyword!=''){
+			self.getMainData(true)
+		}else{
+			api.showToast('请输入关键词搜索','none')
+		}
 	},
 
-	getMainData() {
+	getMainData(isNew) {
 		const self = this;
-		const postData = {
-
+		if (isNew) {
+			api.clearPageIndex(self)
 		};
-
+		const postData = {
+			'Authorization':wx.getStorageSync('token')
+		};
+		if(self.data.search.keyword!=''){
+			postData.keyword =self.data.search.keyword
+		};
 		const callback = (res) => {
 			if (res.code == 200) {
-				self.data.mainData = res.content
+				self.data.mainData.push.apply(self.data.mainData,res.content.list.list)
 			}
 			self.setData({
 				web_mainData: self.data.mainData
@@ -45,41 +65,18 @@ Page({
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			console.log('getMainData', self.data.mainData)
 		};
-		api.myInfo(postData, callback);
+		api.recommendProduct(postData, callback);
 	},
-
-	bind() {
+	
+	onReachBottom() {
 		const self = this;
-		self.data.show = !self.data.show;
-		self.setData({
-			web_show: self.data.show
-		})
-	},
-
-	inputChange(e) {
-		const self = this;
-		api.fillChange(e, self, 'submitData');
-		self.setData({
-			web_submitData: self.data.submitData,
-		});
-	},
-
-	bindPhone() {
-		const self = this;
-		const postData = api.cloneForm(self.data.submitData)
-
-		const callback = (res) => {
-			if(res.code==200){
-				api.showToast(res.message, 'none');
-				self.bind();
-			}else{
-				api.showToast(res.errmsg, 'none')
-			}
-			
-
+		if (!self.data.isLoadAll && self.data.buttonCanClick) {
+			self.data.number++;
+			self.getMainData();
 		};
-		api.bindPhone(postData, callback);
 	},
+
+	
 
 	intoPath(e) {
 		const self = this;

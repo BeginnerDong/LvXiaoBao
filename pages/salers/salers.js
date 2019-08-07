@@ -11,7 +11,11 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard:['getMainData'],
-		show:false
+		show:false,
+		search:{
+		  keyword:''
+		}
+		
 	},
 
 	onLoad(options) {
@@ -21,6 +25,23 @@ Page({
 		self.setData({
 			web_show:self.data.show
 		})
+	},
+	
+	inputChange(e) {
+		const self = this;
+		api.fillChange(e, self, 'search');
+		self.setData({
+			web_search: self.data.search,
+		});
+	},
+	
+	goSearch(){
+		const self = this;
+		if(self.data.search.keyword!=''){
+			self.getMainData(true)
+		}else{
+			api.showToast('请输入关键词搜索','none')
+		}
 	},
 	
 	isShow(e){
@@ -51,7 +72,9 @@ Page({
 			number:api.cloneForm(self.data.number),
 			size:api.cloneForm(self.data.size),
 		};
-		
+		if(self.data.search.keyword!=''){
+			postData.keyword =self.data.search.keyword
+		};
 		const callback = (res) => {
 			if(res.content.list.length>0){
 				self.data.mainData.push.apply(self.data.mainData,res.content.list)

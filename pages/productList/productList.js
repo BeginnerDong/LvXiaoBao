@@ -10,12 +10,26 @@ const token = new Token();
 
 Page({
 	data: {
-		isFirstLoadAllStandard:['getMainData']
+		isFirstLoadAllStandard:['getMainData'],
+		postData:{}
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
+		self.data.postData = {
+			number:api.cloneForm(self.data.number),
+			size:api.cloneForm(self.data.size),
+		};			
+		if(options.code){
+			self.data.postData.lineTheme = options.code
+		};
+		if(options.keyword){
+			self.data.postData.keyword = options.keyword
+		};
+		if(options.lineCategory){
+			self.data.postData.lineCategory = options.lineCategory
+		};
 		self.getMainData()
 	},
 
@@ -24,11 +38,7 @@ Page({
 		if (isNew) {
 			api.clearPageIndex(self);
 		};
-		const postData = {
-			number:api.cloneForm(self.data.number),
-			size:api.cloneForm(self.data.size),
-		};
-		
+		const postData = api.cloneForm(self.data.postData)
 		const callback = (res) => {
 			if(res.content.list.length>0){
 				self.data.mainData.push.apply(self.data.mainData,res.content.list)

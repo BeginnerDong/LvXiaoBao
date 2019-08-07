@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+     "pages/login/login",
     "pages/index/index",
     "pages/productList/productList",
     "pages/peer/peer",
@@ -25,7 +25,7 @@
     "pages/electro/electro",
     "pages/orderDetail/orderDetail",
     "pages/order/order",
-    "pages/login/login",
+   "pages/otherDeal/otherDeal",
     "pages/register/register",
     "pages/pwd/pwd",
     "pages/mine/mine",
@@ -50,7 +50,11 @@
     "pages/certification/certification",
     "pages/deposit/deposit",
     "pages/acticity/acticity",
-    "pages/micro/micro"
+    "pages/micro/micro",
+	"pages/seleteSalers/seleteSalers",
+	"pages/payFee/payFee",
+	"pages/addPayFee/addPayFee",
+	"pages/orderPeople/orderPeople"
   ],
   "window": {
     "backgroundTextStyle": "light",

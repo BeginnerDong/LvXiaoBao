@@ -1,0 +1,15 @@
+<view> 
+	<view class="tourist">
+		<block wx:for="{{web_mainData}}" wx:key="id">
+			<view class="saler flex-align">
+				
+				<view class="middle">
+						<view class="font16 color1 bold-font">{{item.name}}</view>
+						<view class="card">{{item.cdtype}}：{{item.card}}</view>
+						<view class="card">手机号码：{{item.phone}}</view>
+				</view>
+				
+			</view>
+		</block>
+	</view>
+</view>

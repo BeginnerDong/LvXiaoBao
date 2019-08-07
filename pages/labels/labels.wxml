@@ -1,29 +1,30 @@
 <view>
 	<view class="top">
 			<view class="search">
-				<input placeholder="请输入标签名称" />
-				<view class="searchBtn" bindtap="intoPath" data-path="/pages/search/search">
+				<input placeholder="请输入标签名称" value="{{web_submitData.name}}"  data-key="name" bindblur="inputChange"/>
+				<view class="searchBtn" bindtap="labelAdd" style="z-index: 999;">
 					<image src="../../image/searchaaa.png" ></image>
 				</view>
 			</view>
 			<view class="label-nav">
-				<view class="nav-item" style="color: #323232;">VIP客户</view>
-				<view class="nav-item">优质客户</view>
-				<view class="nav-item">只看不订</view>
+				<block wx:for="{{web_mainData[0]}}" >
+					<view class="nav-item" style="color: #323232;font-weight: bold;position: relative;overflow: hidden;" bindtap="select" data-name="{{item}}">{{item}}
+						<view style="width:28px;height:28px;background:rgba(255,209,1,1);border-radius:50%;position: absolute;top: -14px;right: -10px;"></view>
+					</view>
+				</block>
 			</view>
 	</view>
 	<view class="all-nav">
 		<view class="nav-top">所有标签
 		<view class="title-line"></view></view>
 		<view class="nav-center">
-			<view class="nav-item">老人</view>
-			<view class="nav-item">优质客户</view>
-			<view class="nav-item">只看不订</view>
+			<block wx:for="{{web_labelData}}" >
+				<view class="nav-item" bindtap="select" data-name="{{item.labelName}}">{{item.labelName}}</view>
+			</block>
+			
+			
 		</view>
-		<view class="nav-bott">
-			<view class="nav-item">其他同行</view>
-			<view class="nav-item">来电咨询过</view>
-		</view>
+		
 	</view>
-	<view class="add"><span>确定</span></view>
+	<view class="add" bindtap="confirm"><span>确定</span></view>
 </view>

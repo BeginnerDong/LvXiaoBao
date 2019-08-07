@@ -17,7 +17,7 @@ Page({
 	},
 
 	onLoad(options) {
-		const self = this;
+		const self = this;	
 		api.commonInit(self);
 
 		self.getMainData();
@@ -47,7 +47,7 @@ Page({
 	supperProvinceUpdate() {
 		const self = this;
 		const postData = {
-			provinces:self.data.provinces[0]
+			provinces:self.data.provinces
 		};
 		const callback = (res) => {
 			

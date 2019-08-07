@@ -13,12 +13,13 @@ Page({
 		isFirstLoadAllStandard:['getMainData'],
 		show:false,
 		num:0,
-		stateOne:'',
-		stateTwo:'',
+		keyword:'',
 		peopleName:'',
 		ssp:'',
 		esp:'',
-		
+		week:['天','一','二','三','四','五','六'],
+		selectStateOne:[],
+		selectStateTwo:[],
 	},
 
 	onLoad(options) {
@@ -49,16 +50,37 @@ Page({
 		const postData = {
 			number:api.cloneForm(self.data.number),
 			size:api.cloneForm(self.data.size),
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			}
 		};
-		if(self.data.stateOne!=''){
-			postData.stateOne = self.data.stateOne
+		if(self.data.selectStateOne.length>0){
+			postData.stateOne = self.data.selectStateOne
 		};
-		if(self.data.stateTwo!=''){
-			postData.stateTwo = self.data.stateTwo
+		if(self.data.selectStateTwo.length>0){
+			postData.stateTwo = self.data.selectStateTwo
+		};
+		if(self.data.ssp!=''){
+			postData.ssp = self.data.ssp
+		};
+		if(self.data.esp!=''){
+			postData.esp = self.data.esp
+		};
+		if(self.data.peopleName!=''){
+			postData.peopleName = self.data.peopleName
+		};
+		if(self.data.keyword!=''){
+			postData.keyword = self.data.keyword
 		};
 		const callback = (res) => {
 			if(res.content.list.length>0){
-				self.data.mainData.push.apply(self.data.mainData,res.content.list)
+				self.data.mainData.push.apply(self.data.mainData,res.content.list);
+				for (var i = 0; i < self.data.mainData.length; i++) {
+					self.data.mainData[i].startDate = self.data.mainData[i].startDate.substring(5);
+					self.data.mainData[i].endDate = self.data.mainData[i].endDate.substring(5);
+					self.data.mainData[i].startWeek = self.data.week[new Date(self.data.mainData[i].startDate).getDay()];
+					self.data.mainData[i].endWeek = self.data.week[new Date(self.data.mainData[i].endDate).getDay()]
+				}
 			}else{
 				self.data.isLoadAll = true
 			};

@@ -1,40 +1,54 @@
 <view>
 	<view class="top">
-		<view class="basic">基本信息
-		<view class="title-line"></view></view>
-		<view class="travel">出游信息
-		<view class="title-line" style="left: 40%;"></view></view>
+		<view class="basic" style="{{web_num==1?'font-weight:bold':''}}" bindtap="changeNum" data-num='1'>基本信息
+			<view class="title-line" wx:if="{{web_num==1}}"></view>
+		</view>
+		<view class="basic" style="{{web_num==2?'font-weight:bold':''}}" bindtap="changeNum" data-num='2'>出游信息
+			<view class="title-line" wx:if="{{web_num==2}}"></view>
+		</view>
 	</view>
-	 <view class="basici" wx:if="{{web_num==1}}">
+	<view class="basici" wx:if="{{web_num==1}}">
 		<view class="basic-name">
 			<view class="name">姓名</view>
-			<view class="title">赵凯旋</view>
+			<input class="title" value="{{web_submitData.name}}"></input>
 		</view>
 		<view class="basic-name">
 			<view class="name">姓名备注</view>
-			<view class="title">赵凯旋</view>
+			<input class="title" value="{{web_submitData.aliasName}}"></input>
 		</view>
 		<view class="basic-name">
 			<view class="name">客户级别</view>
 			<view class="title-con">
-				<view class="con">一级客户</view>
+				<view class="con">
+					<picker bindchange="levelChange" value="{{index}}"  range="{{levelData}}" range-key="name"  style="width:100%;">
+						<view>
+							{{levelData[web_index].name?levelData[web_index].name:'选择客户级别'}}
+						</view>
+					</picker>
+				</view>
 				<view class="con-img">
 					<image src="../../image/right.png"></image>
 				</view>
 			</view>
 		</view>
 		<view class="basic-name">
-			<view class="name">手机备注</view>
-			<view class="title">17782526431</view>
+			<view class="name">手机</view>
+			<input class="title" value="{{web_submitData.phone}}"></input>
 		</view>
 		<view class="basic-name">
 			<view class="name">备用手机</view>
-			<view class="title">-</view>
+			<input class="title" value="{{web_submitData.otherPhone}}"></input>
 		</view>
 		<view class="basic-name">
 			<view class="name">性别</view>
 			<view class="title-con">
-				<view class="con">男</view>
+				<view class="con">
+					<picker bindchange="sexChange" value="{{index}}"  range="{{sexData}}" range-key="name"  style="width:100%;">
+						<view>
+							{{sexData[web_index1].name?sexData[web_index1].name:'选择客户性别'}}
+						</view>
+					</picker>
+				</view>
 				<view class="con-img">
 					<image src="../../image/right.png"></image>
 				</view>
@@ -42,16 +56,28 @@
 		</view>
 		<view class="basic-name">
 			<view class="name">出生日期</view>
-			<view class="title">1992-06-18</view>
+			<view class="title">
+				<picker bindchange="dateChange" mode="date"  style="width:100%;">
+					<view style="font-size: 14px;color: #323232;">
+						{{web_submitData.birth?web_submitData.birth:'选择出生日期'}}
+					</view>
+				</picker>
+			</view>
 		</view>
 		<view class="basic-name">
 			<view class="name">年龄</view>
-			<view class="title">28</view>
+			<input class="title" value="{{web_submitData.age}}"></input>
 		</view>
 		<view class="basic-name">
 			<view class="name">区域</view>
 			<view class="title-con">
-				<view class="con">陕西省西安市雁塔区</view>
+				<view class="con">
+					<picker  mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+						<view>
+							{{web_submitData?web_submitData.province+''+web_submitData.city+''+web_submitData.district:'请选择客户区域'}}
+						</view>
+					</picker>
+				</view>
 				<view class="con-img">
 					<image src="../../image/right.png"></image>
 				</view>
@@ -59,133 +85,99 @@
 		</view>
 		<view class="basic-name">
 			<view class="name">详细地址</view>
-			<view class="title">丈八东路</view>
+			<input class="title" value="{{web_submitData.address}}"></input>
 		</view>
 		<view class="basic-name" style="border: none;">
 			<view class="name">标签</view>
 			<view class="title-btn">
-					<view class="btn-left"><span>到店咨询</span></view>
-					<view class="btn-left"><span>VIP客户</span></view>
-					<view class="btn-left"><span>夫妻</span></view>
-					<view class="con-img">
-						<image src="../../image/right.png"></image>
-					</view>
-			</view>
-		</view>
-		<view class="basic-name">
-			<view class="namea"><span>优质客户</span></view>
-		</view>
-		<view class="basic-btn">
-			<view class="basi-name">+添加新标签</view>
-		</view>
-		</view> 
-	<view class="type">
-		<view class="type-name">证件信息
-		<view class="title-line" style="left: 4%;bottom: 12px;"></view></view>
-		<view class="basic-name">
-			<view class="name">证件类型</view>
-			<view class="title-con">
-				<view class="con">身份证</view>
+				<block wx:for="{{web_tagData}}" wx:key="id" wx:if="{{index<3}}">
+					<view class="btn-left"><span>{{item}}</span></view>
+				</block>
+				
+				
 				<view class="con-img">
 					<image src="../../image/right.png"></image>
 				</view>
 			</view>
 		</view>
 		<view class="basic-name">
-			<view class="name">证件号码</view>
-			<view class="title">2365656556</view>
-		</view>
-		<view class="basic-name">
-			<view class="name">有效期至</view>
-			<view class="title">2030-12-31</view>
-		</view>
-		<view class="photo">
-			<view class="phpto-text">照片</view>
-			<view class="photo-img">
-				<image src="../../image/caram.png"></image>
-			</view>
+			<block wx:for="{{web_tagData}}" wx:key="id" wx:if="{{index>=3}}">
+				<view class="namea"><span>{{item}}</span></view>
+			</block>
 		</view>
 		<view class="basic-btn">
-			<view class="basi-name">+添加证件</view>
+			<view class="basi-name" bindtap="intoPath" data-path="/pages/labels/labels">+添加新	标签</view>
 		</view>
-	</view>	
-	<view class="btn">
-		<span>保存</span>
+		<view class="type">
+			<view class="type-name">证件信息
+				<view class="title-line" style="left: 4%;bottom: 12px;"></view>
+			</view>
+			<view class="basic-name">
+				<view class="name">证件类型</view>
+				<view class="title-con">
+					<view class="con">身份证</view>
+					<view class="con-img">
+						<image src="../../image/right.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="basic-name">
+				<view class="name">证件号码</view>
+				<view class="title">2365656556</view>
+			</view>
+			<view class="basic-name">
+				<view class="name">有效期至</view>
+				<view class="title">2030-12-31</view>
+			</view>
+			<view class="photo">
+				<view class="phpto-text">照片</view>
+				<view class="photo-img">
+					<image src="../../image/caram.png"></image>
+				</view>
+			</view>
+			<view class="basic-btn">
+				<view class="basi-name">+添加证件</view>
+			</view>
+		</view>
+		<view class="btn">
+			<span>保存</span>
+		</view>
 	</view>
-	<!--<view class="travela" wx:if="{{web_num==2}}">
+
+	<view class="travela" wx:if="{{web_num==2}}">
 		<view class="tarcel-top">
 			<view class="top-left">
-				<view class="num">6</view>
+				<view class="num">{{web_recordData.count.endCityNum}}</view>
 				<view class="rich">目的地个数</view>
 			</view>
 			<view class="top-left">
-				<view class="num">￥29586</view>
+				<view class="num">￥{{web_recordData.count.spendPrice}}</view>
 				<view class="rich">累计消费</view>
 			</view>
 		</view>
 		<view class="tra">
 			<view class="tra-name">游客足迹</view>
-			<view class="tra-con">
-				<view class="tracon">
-					<view class="number">Jun.9</view>
-					<view class="numb">2015</view>
-				</view>
-				<view class="tra-title">
-					<view class="title-name">
-						<view class="title-img">
-							<image src="../../image/pis.png"></image>
-						</view>
-						<view class="titl">中国  北京</view>
+			<block wx:for="{{web_recordData.list}}">
+				<view class="tra-con">
+					<view class="tracon" style="{{index%2 ==0?'':'opacity: 0.7'}}">
+						<view class="number">{{item.month}}.{{item.day}}</view>
+						<view class="numb">{{item.year}}</view>
 					</view>
-					<view class="trap">北京我来了~~~~~~~~</view>
-				</view>
-			</view>
-			<view class="tra-con">
-				<view class="tracon" style="opacity: 0.7;">
-					<view class="number">Jun.9</view>
-					<view class="numb">2015</view>
-				</view>
-				<view class="tra-title">
-					<view class="title-name">
-						<view class="title-img">
-							<image src="../../image/pis.png"></image>
+					<view class="tra-title">
+						<view class="title-name">
+							<view class="title-img">
+								<image src="../../image/pis.png"></image>
+							</view>
+							<view class="titl">{{item.goonCountry}} {{item.goonCity}}</view>
 						</view>
-						<view class="titl">中国  北京</view>
+						<view class="trap avoidOverflow">{{item.describe}}</view>
 					</view>
-					<view class="trap">北京我来了~~~~~~~~</view>
 				</view>
-			</view>
-			<view class="tra-con">
-				<view class="tracon">
-					<view class="number">Jun.9</view>
-					<view class="numb">2015</view>
-				</view>
-				<view class="tra-title">
-					<view class="title-name">
-						<view class="title-img">
-							<image src="../../image/pis.png"></image>
-						</view>
-						<view class="titl">中国  北京</view>
-					</view>
-					<view class="trap">北京我来了~~~~~~~~</view>
-				</view>
-			</view>
-			<view class="tra-con">
-				<view class="tracon" style="opacity: 0.7;">
-					<view class="number">Jun.9</view>
-					<view class="numb">2015</view>
-				</view>
-				<view class="tra-title">
-					<view class="title-name">
-						<view class="title-img">
-							<image src="../../image/pis.png"></image>
-						</view>
-						<view class="titl">中国  北京</view>
-					</view>
-					<view class="trap">北京我来了~~~~~~~~</view>
-				</view>
-			</view>
+			</block>
+			
+	
 		</view>
+		<view style="width: 100%;height: 200rpx;"></view>
 		<view class="tra-bottom">
 			<view class="bott">
 				<view class="bott-img">
@@ -201,5 +193,5 @@
 			</view>
 			<view class="bott-btn"><span>保存</span></view>
 		</view>
-	</view>-->
+	</view>
 </view>
