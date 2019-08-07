@@ -47,7 +47,7 @@ Page({
 	supperProvinceUpdate() {
 		const self = this;
 		const postData = {
-			provinces:self.data.provinces
+			list:self.data.provinces
 		};
 		const callback = (res) => {
 			
