@@ -635,6 +635,21 @@ class Api extends Base {
 		};
 		this.request(allParams);
 	}
+	
+	
+	
+	//团期
+	datePrice(param, callback) {
+		var allParams = {
+			url: '/pdt/v1/product/{id}/prices',
+			type: 'get',
+			data: param,
+			sCallback: function(data) {
+				callback && callback(data);
+			}
+		};
+		this.request(allParams);
+	}
 }
 
 export {

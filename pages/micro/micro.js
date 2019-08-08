@@ -68,6 +68,27 @@ Page({
 		api.recommendProduct(postData, callback);
 	},
 	
+	
+	supplierProductLike(e) {
+		const self = this;
+		var id = self.data.mainData[api.getDataSet(e,'index')].id;
+		const postData = {
+			header:{
+				'Content-Type':'application/x-www-form-urlencoded',
+				'Authorization':wx.getStorageSync('token')
+			},
+			url:'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/'+id+'/like'
+		};
+	
+		const callback = (res) => {
+			if(res.code==200){
+				self.getMainData(true)
+			}
+		
+		};
+		api.supplierProductLike(postData, callback);
+	},
+	
 	onReachBottom() {
 		const self = this;
 		if (!self.data.isLoadAll && self.data.buttonCanClick) {

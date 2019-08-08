@@ -66,19 +66,19 @@
 			<view class="title-line"></view>
 		</view>
 		<view class="main">
-			<view class="main-left">
+			<view class="main-left" bindtap="intoPath" data-path="/pages/productDetail/productDetail?code={{web_hotShopData[0].id}}">
 				<image src="{{web_hotShopData[0].bannerImg1}}"></image>
 			</view>
 			<view class="main-right">
 				<view class="main-right-top">
-					<view class="main-right-top-left">
+					<view class="main-right-top-left" bindtap="intoPath" data-path="/pages/productDetail/productDetail?code={{web_hotShopData[1].id}}">
 						<image src="{{web_hotShopData[1].bannerImg1}}"></image>
 					</view>
-					<view class="main-right-top-right">
+					<view class="main-right-top-right" bindtap="intoPath" data-path="/pages/productDetail/productDetail?code={{web_hotShopData[2].id}}">
 						<image src="{{web_hotShopData[2].bannerImg1}}"></image>
 					</view>
 				</view>
-				<view class="main-right-bottom">
+				<view class="main-right-bottom" bindtap="intoPath" data-path="/pages/productDetail/productDetail?code={{web_hotShopData[3].id}}">
 					<image src="{{web_hotShopData[3].bannerImg1}}"></image>
 				</view>
 			</view>

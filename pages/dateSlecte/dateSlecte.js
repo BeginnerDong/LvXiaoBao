@@ -10,44 +10,102 @@ const token = new Token();
 
 Page({
 	data: {
-		week:['日','一','二','三','四','五','六'],
-		day:[{},{},{},{days:1},{days:2},{days:3},{days:4},{days:5},{days:6},{days:7},{days:8},{days:9},{days:10},{days:11},{days:12},{days:13},{days:14},{days:15},
-		{days:16},{days:17},{days:18},{days:19},{days:20},{days:21},{days:22},{days:23},{days:24},{days:25},{days:26},{days:27},{days:28},{days:29},{days:30}]
+		isFirstLoadAllStandard: ['getMainData'],
+		week: ['日', '一', '二', '三', '四', '五', '六'],
+		day: [{}, {}, {}, {
+				days: 1
+			}, {
+				days: 2
+			}, {
+				days: 3
+			}, {
+				days: 4
+			}, {
+				days: 5
+			}, {
+				days: 6
+			}, {
+				days: 7
+			}, {
+				days: 8
+			}, {
+				days: 9
+			}, {
+				days: 10
+			}, {
+				days: 11
+			}, {
+				days: 12
+			}, {
+				days: 13
+			}, {
+				days: 14
+			}, {
+				days: 15
+			},
+			{
+				days: 16
+			}, {
+				days: 17
+			}, {
+				days: 18
+			}, {
+				days: 19
+			}, {
+				days: 20
+			}, {
+				days: 21
+			}, {
+				days: 22
+			}, {
+				days: 23
+			}, {
+				days: 24
+			}, {
+				days: 25
+			}, {
+				days: 26
+			}, {
+				days: 27
+			}, {
+				days: 28
+			}, {
+				days: 29
+			}, {
+				days: 30
+			}
+		]
 	},
 
 	onLoad(options) {
 		const self = this;
+		api.commonInit(self);
+		self.data.id = options.id;
+		self.data.classifyId = options.classifyId;
 		self.getMainData()
 	},
 
 	getMainData() {
-		wx.request({
-			url: 'http://yapi.lxbtrip.cn/mock/19/mshop/v1/{id}/product/{pId}',
-			data: {
-				id:1,
-				pId:100
-			},
-			method: 'get',
-			/*header: {
-			    'content-type': 'application/json',
-			    'token': wx.getStorageSync('token')
-			},*/
-			success: function(res) {
-				// 判断以2（2xx)开头的状态码为正确
-				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
-				
-			},
-			fail: function(err) {
-
-				wx.showToast({
-					title: '网络故障',
-					icon: 'fail',
-					duration: 2000,
-					mask: true,
-				});
-				getApp().globalData.buttonClick = false;
+		const self = this;
+		
+		const postData = {
+			'Authorization': wx.getStorageSync('token'),
+			classifyId:self.data.id,
+			url:'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/+self.data.id'+self.data.id+'/prices'
+		};
+		
+		const callback = (res) => {
+			if (res.code == 200) {
+				self.data.mainData.push.apply(self.data.mainData, res.content.list.prices)
 			}
-		});
+			self.setData({
+				web_mainData: self.data.mainData
+			})
+		
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+			console.log('getMainData', self.data.mainData)
+		};
+		api.datePrice(postData, callback);
 	},
 
 	onPullDownRefresh() {

@@ -100,7 +100,7 @@
 			
 			
 			<view style="width:1px;height:88rpx;background: #E7E7E7;"></view>
-			<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte">
+			<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte?id={{web_mainData.id}}&classifyId={{web_mainData.classifys[web_selectIndex].id}}">
 				<span style="width:28px">更多团期</span>
 			</view>
 		</view>

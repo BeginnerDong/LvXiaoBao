@@ -11,14 +11,14 @@
 		</view>
 		<view class="recomm">门店推荐</view>
 	</view>
-	<view class="travle" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{web_mainData[0].id}}">
-		<view class="travle-img">
+	<view class="travle" >
+		<view class="travle-img" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{web_mainData[0].id}}">
 			<image src="{{web_mainData[0].bannerImg1}}"></image>
 		</view>
 		<view class="travle-name">{{web_mainData[0].lineName}}</view>
 		<view class="travle-title">
 			<view class="name">海边款、网红款、国际品牌任选！</view>
-			<view class="title">
+			<view class="title" bindtap="supplierProductLike" data-index="0">
 				<view class="title-name">
 					<image src="{{web_mainData[0].isLike>0?'../../image/peer-icon3-active.png':'../../image/peer-icon3.png'}}"></image>
 				</view>
@@ -32,14 +32,14 @@
 	</view>
 	<view style="margin-top: 230px;">
 		<block wx:for="{{web_mainData}}" wx:key="id" >
-			<view class="tr" wx:if="{{index>0}}" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{item.id}}">
-				<view class="travle-img">
+			<view class="tr" wx:if="{{index>0}}">
+				<view class="travle-img" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{item.id}}">
 					<image src="{{item.bannerImg1}}"></image>
 				</view>
 				<view class="travle-name">{{item.lineName}}</view>
 				<view class="travle-title">
 					<view class="name">海边款、网红款、国际品牌任选！</view>
-					<view class="title">
+					<view class="title" bindtap="supplierProductLike" data-index="{{index}}">
 						<view class="title-name">
 								<image src="{{item.isLike>0?'../../image/peer-icon3-active.png':'../../image/peer-icon3.png'}}"></image>
 						</view>
