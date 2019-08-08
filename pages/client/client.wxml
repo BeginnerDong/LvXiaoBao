@@ -1,3 +1,15 @@
+
+ <view style="position:fixed;width:60rpx;top:30rpx;right:0;background-color:gray;z-index:999">
+ 	<block wx:for="{{alphbate}}" wx:key="id" wx:for-item="item">
+ 		<view 
+ 			data-alp="{{item}}"
+ 			bind:touchstart="handleTouchStart" 
+ 			bind:touchmove="handleTouchMove"
+ 			bind:touchcancel="handleTouchCancel"
+ 			bindtap="clickToPoint"
+ 		>{{item}}</view>
+ 	</block>
+ </view>
 <view>
 	<view class="top">
 		<view class="search">
@@ -6,7 +18,6 @@
 				<image src="../../image/search.png" />
 			</view>
 		</view>
-
 	</view>
 	<view class="client">
 		<view class="client-name" style="background: none;">黑名单
@@ -29,7 +40,7 @@
 	</view>
 	
 	<block wx:for="{{alphbate}}" wx:key="id">
-		<view class="client" wx:if="{{web_mainDataC[item].length>0}}">
+		<view id="{{item}}" class="client" wx:if="{{web_mainDataC[item].length>0}}">
 			<view class="client-name">{{item}}</view>
 		</view>
 		<block wx:for="{{web_mainDataC[item]}}" wx:key="id" wx:for-item="c_item">
@@ -68,4 +79,6 @@
 		  <view class="dd-title">客户添加</view>
 		 </view>
 	 </view>
+
+	
 </view>
