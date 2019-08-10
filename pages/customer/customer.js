@@ -30,19 +30,41 @@ Page({
 			tags: '',
 			isBlacklist: '',
 			isCredit: '',
-			cards: [],
+			cards: [{
+				type:0,
+				num:'',
+				deadline:'',
+				img:''
+			}],
 			id: ''
 		},
 		region: '',
+
+
 	},
 
 	onLoad(options) {
 		const self = this;
 		self.setData({
-			web_region:self.data.region
+			web_region:self.data.region,
+			web_submitData:self.data.submitData
 		})
-
 	},
+
+
+	addPaper(){
+		const self = this;
+		self.data.submitData.cards.push({
+			type:0,
+			num:'',
+			deadline:'',
+			img:''
+		});
+		self.setData({
+			web_submitData:self.data.submitData
+		})
+	},
+
 	
 	levelChange(e){
 		const self = this;

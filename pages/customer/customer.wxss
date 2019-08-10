@@ -120,7 +120,6 @@ page{
 }
 .type{
 	width: 100%;
-	height: 350px;
 	margin-top: 30px;
 	background: white;
 }

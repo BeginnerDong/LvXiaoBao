@@ -27,14 +27,12 @@ Page({
     var newArray = [];
     for (var i = 0; i < key.length; i++) {
       var rex = new RegExp(key[i], "g"); 
-      console.log(rex);
       var temp = self.data.mainData.split(rex);
-      var str = temp[1];
+      console.log(temp)
+      var str = temp[temp.length-1];
       var hasOne = false;
       if(newArray.length>0){
         for (var j = 0; j < newArray.length; j++) {
-          console.log('newArray[j].str.length',newArray);
-
           if(newArray[j].str.length<str.length){
             newArray.splice(j,0,{name:key[i],str:str});
             hasOne = true;
@@ -48,12 +46,16 @@ Page({
         newArray.push({name:key[i],str:str})
       };
     };
+    
+   
     for (var i = 0; i < newArray.length; i++) {
       if(i!==newArray.length-1){
-        var newStr = newArray[i].str.replace(newArray[i+1].str,"").replace(/\s/g,"").replace(/[^a-zA-Z0-9]/g,"");
+        console.log('newArray[i+1].str',newArray[i+1].str)
+        var newStr = newArray[i].str.replace(newArray[i+1].str,"").replace(/\s/g,"").replace(/[：|，|；|。|【|】|\/|-|、|;|,|.]/g,"");
+        console.log('newStr',newStr)
         newArray[i].str = newStr;
       }else{
-        var newStr = newArray[i].str.replace(/\s/g,"").replace(/[^a-zA-Z0-9]/g,"");
+        var newStr = newArray[i].str.replace(/\s/g,"").replace(/[：|，|；|。|【|】|\/|-|、|;|,|.]/g,"");
         newArray[i].str = newStr;
       };
     };

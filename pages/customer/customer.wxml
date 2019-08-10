@@ -104,40 +104,44 @@
 	<view class="type">
 		<view class="type-name">证件信息
 		<view class="title-line"></view></view>
-		<view class="basic-name">
-			<view class="name">证件类型</view>
-			<view class="title-con">
-				<view class="con">
-					<picker bindchange="changeCard" value="{{index}}"  range="{{cardData}}" style="width:100%;">
-						<view style="font-size: 14px;color: #323232;">
-							{{cardData[web_cardIndex]?cardData[web_cardIndex]:'选择证件类别'}}
-						</view>
-					</picker>
+		<block wx:for="{{web_submitData.cards}}">
+			<view style="width:100%;height:30rpx"></view>
+			<view class="basic-name">
+				<view class="name">证件类型</view>
+				<view class="title-con">
+					<view class="con">
+						<picker data-index="{{index}}"  bindchange="changeCard" value=""  range="{{cardData}}" style="width:100%;">
+							<view style="font-size: 14px;color: #323232;">
+								{{cardData[web_cardIndex]?cardData[web_cardIndex]:'选择证件类别'}}
+							</view>
+						</picker>
+					</view>
+					<view class="card-img">
+						<image src="../../image/right.png"></image>
+					</view>
 				</view>
-				<view class="card-img">
-					<image src="../../image/right.png"></image>
+			</view>
+			<view class="basic-name">
+				<view class="name">证件号码</view>
+				<view class="title">
+					<input data-index="{{index}}" type="text" placeholder="填写证件号码" />
 				</view>
 			</view>
-		</view>
-		<view class="basic-name">
-			<view class="name">证件号码</view>
-			<view class="title">
-				<input type="text" placeholder="填写证件号码" />
+			<view class="basic-name">
+				<view class="name">有效期至</view>
+				<view class="title">
+					<input data-index="{{index}}" type="text" placeholder="选择有效日期"/>
+				</view>
 			</view>
-		</view>
-		<view class="basic-name">
-			<view class="name">有效期至</view>
-			<view class="title">
-				<input type="text" placeholder="选择有效日期"/>
+			<view class="photo">
+				<view class="phpto-text">照片</view>
+				<view class="photo-img">
+					<image src="../../image/caram.png"></image>
+				</view>
 			</view>
-		</view>
-		<view class="photo">
-			<view class="phpto-text">照片</view>
-			<view class="photo-img">
-				<image src="../../image/caram.png"></image>
-			</view>
-		</view>
-		<view class="cust" >+添加证件</view>
+		</block>
+		
+		<view class="cust" bindtap="addPaper" >+添加证件</view>
 	</view>
 	<view class="basic-btn" bindtap="submit">
 		<view class="basi-name">保存</view>
