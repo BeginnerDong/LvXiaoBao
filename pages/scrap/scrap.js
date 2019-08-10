@@ -5,62 +5,61 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    mainData:'姓名：test手机号：15929911250;邮编地址：71000地址：xxxx',
+    finishArray:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      const self = this;
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  inputChange(e){
+    const self = this;
+    self.data.mainData = e.detail.value;
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  splitString(){
+    const self = this;
+    var key = ['姓名','手机号','地址'];
+    var newArray = [];
+    for (var i = 0; i < key.length; i++) {
+      var rex = new RegExp(key[i], "g"); 
+      console.log(rex);
+      var temp = self.data.mainData.split(rex);
+      var str = temp[1];
+      var hasOne = false;
+      if(newArray.length>0){
+        for (var j = 0; j < newArray.length; j++) {
+          console.log('newArray[j].str.length',newArray);
 
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+          if(newArray[j].str.length<str.length){
+            newArray.splice(j,0,{name:key[i],str:str});
+            hasOne = true;
+            break;
+          }
+        };
+        if(!hasOne){
+          newArray.push({name:key[i],str:str})
+        }
+      }else{
+        newArray.push({name:key[i],str:str})
+      };
+    };
+    for (var i = 0; i < newArray.length; i++) {
+      if(i!==newArray.length-1){
+        var newStr = newArray[i].str.replace(newArray[i+1].str,"").replace(/\s/g,"").replace(/[^a-zA-Z0-9]/g,"");
+        newArray[i].str = newStr;
+      }else{
+        var newStr = newArray[i].str.replace(/\s/g,"").replace(/[^a-zA-Z0-9]/g,"");
+        newArray[i].str = newStr;
+      };
+    };
+    self.data.finishArray = newArray;
+    console.log('self.data.finishArray',self.data.finishArray)
   }
+
+
 })
