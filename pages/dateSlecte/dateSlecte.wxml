@@ -1,19 +1,8 @@
 <view style="width:100%">
 	<view class="month flex-align">
-		<view class="month-item" style="font-weight: 700;">
-			6月
-			<view class="title-line"></view>
-		</view>
-		<view class="month-item">
-			7月
-			
-		</view>
-		<view class="month-item">
-			8月
-			
-		</view>
-		<view class="month-item">
-			9月		
+		<view class="month-item" style="font-weight: 700;" wx:for="{{web_monthArray}}">
+			{{item}}月
+			<view wx:if="{{index==0}}" class="title-line"></view>
 		</view>
 	</view>
 	<view class="calendar">
@@ -23,10 +12,9 @@
 			</view>
 		</view>
 		<view class="days flex-align">
-			<view class="days-item {{item.days==12?'days-item-active':''}}" wx:for="{{day}}">
+			<view class="days-item {{item.timeFormat==web_choosedTimeFormat?'days-item-active':''}}" data-timeFormat="{{item.timeFormat}}" data-item="{{item.item}}" wx:for="{{web_dateData}}" bindtap="chooseDay">
 				{{item.days}}
-				<view class="days-price" wx:if="{{item.days==10}}">¥1740</view>
-				<view class="days-price days-price-active" wx:if="{{item.days==12}}">¥1740</view>
+				<view class="days-price days-price-active" wx:if="{{item.item}}">¥{{item.item.cprice}}</view>
 			</view>
 		</view>
 		

@@ -10,18 +10,18 @@ const token = new Token();
 
 Page({
 	data: {
-
-
+		url:''
 	},
 
 	onLoad(options) {
 		const self = this;
+		self.url = options.url;
 		self.downloadFile()
 	},
 
 	downloadFile(e) {
 		console.log(e);
-		let url = wx.getStorageSync('contract').contractPdf;
+		let url = self.url;
 		url += 'pdf';
 		wx.downloadFile({
 			url: url,
