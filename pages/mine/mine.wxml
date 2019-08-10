@@ -17,11 +17,11 @@
 			<view class="mine-btn" bindtap="intoPath" data-path="/pages/vt/vt"><span>续费</span></view>
 		</view>
 		<view class="mine-bottom">
-			<view class="bottom-name" style="border-right: 1px solid #A1A1A1;">
+			<view class="bottom-name">
 				<view class="bott">{{web_mainData.noConfirmOrderNum}}</view>
 				<view class="bott-con">未确认</view>
 			</view>
-			<view class="bottom-name" style="border-right: 1px solid #A1A1A1;">
+			<view class="bottom-name">
 				<view class="bott">{{web_mainData.confirmOrderNum}}</view>
 				<view class="bott-con">已确认</view>
 			</view>
@@ -87,6 +87,7 @@
 				<image src="../../image/store.png"></image>
 			</view>
 			<view class="recoom">门店认证</view>
+      <view class="reco-con"></view>
 			<view class="recoom-re">
 				<image src="../../image/right.png"></image>
 			</view>
@@ -96,6 +97,7 @@
 				<image src="../../image/feed.png"></image>
 			</view>
 			<view class="recoom">意见反馈</view>
+      <view class="reco-con"></view>
 			<view class="recoom-re">
 				<image src="../../image/right.png"></image>
 			</view>
@@ -105,6 +107,7 @@
 				<image src="../../image/set.png"></image>
 			</view>
 			<view class="recoom">设置</view>
+      <view class="reco-con"></view>
 			<view class="recoom-re">
 				<image src="../../image/right.png"></image>
 			</view>
@@ -123,7 +126,7 @@
 		</view>
 		<view class="bind-btn" bindtap="bindPhone"><span>绑定手机号</span></view>
 	</view> 
-	<view style="width:100%;height:130rpx"></view>
+	<view style="width:100%;height:140rpx"></view>
 	<view class="navbar">
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
 			<view class="nav_img">

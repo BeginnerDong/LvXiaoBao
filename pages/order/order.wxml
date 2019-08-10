@@ -26,11 +26,11 @@
 					<view class="order-title">
 						<image src="../../image/1.png"></image>
 					</view>
-					<view class="orde-name">{{item.channelName}}</view>
+					<view class="orde-name avoidOverflow">{{item.channelName}}</view>
 					<view class="order-ri">{{item.stateOneName}}</view>
 				</view>
 				<view class="order-con">
-					<view class="con-le">{{item.lineName}}</view>
+					<view class="con-le avoidOverflow2">{{item.lineName}}</view>
 					<view class="con-righ">￥{{item.shouPricef}}</view>
 				</view>
 				<view class="order-con1">

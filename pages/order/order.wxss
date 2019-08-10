@@ -21,7 +21,7 @@ page {
 	padding: 0 20rpx;
 	position: relative;
 	margin: 0 auto;
-	font-size: 14px;
+	font-size: 28rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(192, 192, 192, 1);
@@ -31,7 +31,7 @@ page {
 	width: 100rpx;
 	height: 80rpx;
 	background: rgba(50, 50, 50, 1);
-	border-radius: 0px 20px 20px 0px;
+	border-radius: 0px 40rpx 40rpx 0px;
 	position: absolute;
 	right: 4.5%;
 	top: 20rpx;
@@ -47,10 +47,10 @@ page {
 }
 
 .title-line {
-	width: 16px;
-	height: 3px;
+	width: 32rpx;
+	height: 6rx;
 	background: rgba(255, 209, 1, 1);
-	border-radius: 2px;
+	border-radius: 4rpx;
 	position:absolute;
 	bottom:10rpx;
 	z-index:-1;
@@ -68,7 +68,7 @@ page {
 .nav-top-item {
 	width: 20%;
 	text-align: center;
-	font-size: 15px;
+	font-size: 30rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(50, 50, 50, 1);
@@ -85,119 +85,116 @@ page {
 	height:40rpx
 }
 .order{
-	width: 90%;
-	height: 230px;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	margin-left: 5%;
-	margin-top: 3%;
+	width: 92%;
+  margin:30rpx auto 0 auto;
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
 	background: white;
-	border-radius: 10px;
+	border-radius: 20rpx;
 }
 .order-name{
-	width: 100%;
-	height: 400px;
-	padding-left: 2%;
+	/* height: 800rpx; */
+	padding: 10rpx 20rpx;
 }
 .orde{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
-	padding-top: 3%;
+  justify-content: space-around;
+  align-items: center;
 }
 .order-title{
 	width: 7%;
 }
 .order-title image{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 }
 .orde-name{
 	width: 73%;
 	color: #323232;
-	font-size: 15px;
-	margin-top: 2px;
+	font-size: 30rpx;
+  padding-right:20rpx;
 }
 .order-ri{
 	width: 20%;
 	color: #EC6532;
-	font-size: 15px;
-	margin-top: 2px;
+	font-size: 30rpx;
+	margin-top: 4rpx;
+  font-weight: bold;
+  text-align: right;
 }
 .order-con{
 	width: 100%;
-	height: 30px;
 	display: flex;
-	margin-top: 10px;
-	
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10rpx;
 }
 .order-con1{
 	width: 100%;
-	height: 20px;
+  height: 60rpx;
 	display: flex;
-	margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 .con-le{
-	width: 80%;
+	width: 76%;
 	color: #323232;
-	font-size: 14px;
+	font-size: 28rpx;
 	opacity: 1;
-	padding-left: 2%;
+  font-weight: bold;
 }
 .con-righ{
 	width: 20%;
 	color: #323232;
-	font-size: 14px;
+	font-size: 28rpx;
 }
 .con-left{
-	width: 70%;
+	width: 65%;
 	color: #585858;
-	font-size: 14px;
-	opacity: 1;
-	margin-top: 10px;
-	padding-left: 2%;
+	font-size: 28rpx;
+	overflow: hidden;
+
 }
-.con-right{
-	width: 30%;
-	color: #323232;
-	font-size: 14px;
-	margin-top: 10px;
-}
+
 .con-right span{
-	width: 43%;
-	height: 20px;
+	width: 90rpx;
+	height: 44rpx;
 	display: inline-block;
-	border-radius: 30px;
+	border-radius: 60rpx;
 	color: #323232;
-	font-size: 11px;
-	margin-right: 7%;
+	font-size: 24rpx;
+	margin-left: 8rpx;
 	text-align: center;
-	line-height: 20px;
+	line-height: 44rpx;
 }
 
 .conbtn{
-	width: 96%;
-	height: 40px;
+	width: 100%;
 	display: flex;
-	margin-top: 15px;
+	margin-top: 20rpx;
 	justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .con-btn{
-	width: 25%;
-	font-size: 14px;
+	width: 140rpx;
+  padding:0 8rpx;
+  margin-bottom: 20rpx;
+  
 
 }
 .con-btn span{
-	width: 75px;
-	height: 30px;
-	border: 1px solid #323232;
+	width: 100%;
+	height:54rpx;
+	border:2rpx solid #323232;
 	color: #323232;
 	opacity: 0.6;
 	text-align: center;
-	line-height: 30px;
-	font-size: 14px;
-	border-radius: 20px;
-
-	display: inline-block;
+	line-height: 54rpx;
+	font-size: 24rpx;
+	border-radius: 40rpx;
+	display: block;
 }
 .bg{
 	width: 100%;
@@ -218,132 +215,132 @@ page {
 }
 .state-name{
 	width: 100%;
-	height: 90px;
+	height: 180rpx;
 }
 .state-title{
 	width: 100%;
 	height: 30px;
 	color: #323232;
-	font-size: 16px;
-	line-height: 30px;
+	font-size: 32rpx;
+	line-height: 60rpx;
 	padding-left: 3%;
 	padding-top: 3%;
 	font-weight: bold;
 }
 .state-btn{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	display: flex;
-	margin-top: 10px;
+	margin-top: 20rpx;
 }
 .state-btn span{
-	width: 80px;
-	height: 40px;
+	width: 160rpx;
+	height: 80rpx;
 	display: inline-block;
 	text-align: center;
-	line-height: 40px;
-	border-radius: 10px;
+	line-height: 80rpx;
+	border-radius: 20rpx;
 	color: #323232;
 	margin-left: 3%;
-	font-size: 14px;
+	font-size: 28rpx;
 	background: #F2F2F2;
 	font-weight: bold;
 }
 .state-btn input{
 	width: 80%;
-	height: 30px;
+	height: 60rpx;
 	margin-left: 5%;
 	border: 1px solid #E0E0E0;
-	border-radius: 10px;
+	border-radius: 20rpx;
 	color: #EC6532;
 }
 .state-btn input[placeholder="半自助"]{
 	padding-left: 3%;
-	font-size: 14px;
+	font-size: 28rpx;
 	color: #EC6532;
 }
 .state-top{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	display: flex;
 }
 .state-btn1{
 	width: 100%;
-	height: 40px;
-	margin-top: 10px;
+	height: 80rpx;
+	margin-top: 20rpx;
 }
 .top-left{
 	width: 40%;
-	height: 40px;
-	border: 1px solid #E0E0E0;
+	height: 80rpx;
+	border: 2rpx solid #E0E0E0;
 	margin-left: 5%;
-	border-radius: 10px;
+	border-radius: 20rpx;
 	text-align: center;
-	line-height: 40px;
+	line-height: 80rpx;
 	color: #C0C0C0;
-	font-size: 14px;
+	font-size: 28rpx;
 }
 
 .state-top1{
 	width: 100%;
-	height: 40px;
+	height:80rpx;
 	display: flex;
 }
 .top-left1{
 	width: 32%;
-	height: 40px;
+	height: 80rpx;
 	/* margin-left: 1%; */
-	margin-top: 10px;
+	margin-top:20rpx;
 }
 .top-left1 span{
-	width: 80px;
-	height: 40px;
+	width: 160rpx;
+	height: 80rpx;
 	display: inline-block;
 	text-align: center;
-	line-height: 40px;
-	border-radius: 10px;
+	line-height: 80rpx;
+	border-radius: 20rpx;
 	color: #323232;
-	font-size: 14px;
+	font-size: 28rpx;
 	background: #F2F2F2;
 	font-weight: bold;
 }
 .state-btn{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	display: flex;
 }
 .btn-left{
 	width: 45%;
-	height: 40px;
+	height: 80rpx;
 	margin-left: 3%;
 }
 .btn-right{
 	width: 45%;
-	height:40px;
+	height:80rpx;
 }
 .btn-right span{
-	width: 150px;
-	height: 40px;
-	border-radius: 30px;
-	border: 1px solid #FFD101;
+	width: 300rpx;
+	height: 80rpx;
+	border-radius: 60rpx;
+	border: 2rpx solid #FFD101;
 	background: #FFD101;
 	color: #323232;
-	line-height: 40px;
+	line-height: 80rpx;
 	text-align: center;
 	display: inline-block;
-	font-size: 18px;
+	font-size: 36rpx;
 	font-weight: 500;
 }
 .btn-left span{
-	width: 150px;
-	height: 40px;
-	border-radius: 30px;
-	border: 1px solid #F2F2F2;
+	width: 300rpx;
+	height: 80rpx;
+	border-radius: 60rpx;
+	border: 2rpx solid #F2F2F2;
 	background: #F2F2F2;
 	color: #A1A1A1;
-	line-height: 40px;
+	line-height:80rpx;
 	text-align: center;
 	display: inline-block;
-	font-size: 18px;
+	font-size: 36rpx;
 	font-weight: 500;
 }

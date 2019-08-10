@@ -289,9 +289,8 @@ page{
 }
 .choose{
 	display: flex;
-	
 	flex-wrap: wrap;
-	margin: 0 24rpx;
+	margin: 0 24rpx 24rpx 24rpx;
 	
 }
 .choose-item{

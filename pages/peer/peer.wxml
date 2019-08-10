@@ -54,7 +54,7 @@
 			<view class="peer-middle" bindtap="intoPath" data-path="/pages/productListPlate/productListPlate">
 				<view class="flex-align" style="margin-top: 14rpx;">
 					<view class="zhuying font14 color1 bold-font">主营业务</view>
-					<view class="font14 color1">{{item.businessTypeName}}</view>
+					<view class="font14 color1" style="padding-left:16rpx">{{item.businessTypeName}}</view>
 				</view>
 				<view class="font14 color1" style="margin-top: 16rpx;">{{item.businessClassifyName}}</view>
 			</view>

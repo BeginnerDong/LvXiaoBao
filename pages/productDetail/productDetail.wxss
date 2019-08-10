@@ -15,7 +15,7 @@ page{
 	padding: 10rpx;
 	top:680rpx;
 	left:24rpx;
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;	
 	color:rgba(255,255,255,1);
@@ -25,12 +25,12 @@ page{
 	height:40rpx;
 	background:rgba(50,50,50,1);
 	opacity:0.6;
-	border-radius:10px;
+	border-radius:20rpx;
 	line-height: 40rpx;
 	padding: 10rpx;
 	top:680rpx;
 	right:24rpx;
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;	
 	color:rgba(255,255,255,1);
@@ -40,9 +40,8 @@ page{
 }
 .product-info-top{
 	width:94%;
-	
 	padding: 0 3%;
-	border-bottom: 1px solid #E7E7E7;
+	border-bottom: 2rpx solid #E7E7E7;
 	background: #fff;
 }
 .product-info-price{
@@ -52,7 +51,7 @@ page{
 }
 .product-price{
 	width:90%;
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(50,50,50,1);
@@ -60,21 +59,20 @@ page{
 	align-items: center;
 }
 .money{
-	
-	font-size:20px;
+	font-size:40rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:Bold;
 	color:#EC6532;
 }
 .person{
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:Bold;
 	color:#A1A1A1;
 }
 .phone{
-	width:40px;
-	height:40px;
+	width:80rpx;
+	height:80rpx;
 	background:rgba(244,243,243,1);
 	border-radius:50%;
 	display: flex;
@@ -86,18 +84,23 @@ page{
 	height:40rpx;
 }
 .product-id{
-	font-size:14px;
+	font-size:32rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(50,50,50,1);
 }
 .product-name{
 	margin-top: 10rpx;
-	font-size:16px;
+	font-size:32rpx;
+  line-height: 48rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	margin-bottom: 10rpx;
+}
+
+.product-special .product-info-bottom{
+  height: 120rpx;
 }
 .product-info-bottom{
 	display: flex;
@@ -109,7 +112,7 @@ page{
 	border-bottom: 1px solid #E7E7E7;
 }
 .starand{
-	font-size:15px;
+	font-size:30rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:rgba(161,161,161,1);
@@ -119,7 +122,7 @@ page{
 .starand-item{
 	display: flex;
 	align-items: center;
-	font-size:15px;
+	font-size:30rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:rgba(50,50,50,1);
@@ -137,25 +140,25 @@ page{
 	margin-top: 24rpx;
 }
 .title{
-	font-size:16px;
+	font-size:32rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
-	line-height:23px;
+	line-height:46rpx;
 	position: relative;
 	z-index:1
 }
 .title-line{
-	width:16px;
-	height:3px;
+	width:32rpx;
+	height:6rpx;
 	background:rgba(255,209,1,1);
-	border-radius:2px;
+	border-radius:4rpx;
 	position: absolute;
 	bottom:5rpx;
 	z-index:-1
 }
 .explain-info{
-	font-size:15px;
+	font-size:30rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:rgba(50,50,50,1);
@@ -167,8 +170,8 @@ page{
 .start-level{
 	width:96rpx;
 	height:64rpx;
-	border:1px solid rgba(197, 197, 197, 1);
-	border-radius:4px;
+	border:2rpx solid rgba(197, 197, 197, 1);
+	border-radius:8rpx;
 	line-height: 64rpx;
 	color: #A1A1A1;
 	text-align: center;
@@ -186,29 +189,29 @@ page{
 	height:88rpx;
 	background:rgba(255,255,255,1);
 	border:1px solid rgba(197, 197, 197, 1);
-	border-radius:8px;
+	border-radius:16rpx;
 	text-align: center;
 	margin-right: 20rpx;
 }
 .group-date{
-	font-size:13px;
+	font-size:26rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(50,50,50,1);
 	line-height: 45rpx;
 }
 .group-price{
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(236,101,50,1);
 }
 .more-group{
-	width:67px;
-	height:44px;
+	width:134rpx;
+	height:88rpx;
 	background:rgba(255,209,1,1);
-	border-radius:22px 0px 0px 22px;
-	font-size:14px;
+	border-radius:44rpx 0px 0px 44rpx;
+	font-size:28rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
@@ -220,14 +223,15 @@ page{
 }
 .star-img{
 	width:10%;
-	height:70%
+	height:70%;
 }
 .star-img image{
 	width:32rpx;
 	height:32rpx
 }
 .special-info{
-	font-size:15px;
+	font-size:30rpx;
+  line-height: 44rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:rgba(50,50,50,1);
@@ -236,6 +240,7 @@ page{
 	margin-top: 24rpx;
 }
 .all-text view{
-	font-size:15px;
+	font-size:30rpx;
+   line-height: 48rpx;
 	color:rgba(50,50,50,1);
 }

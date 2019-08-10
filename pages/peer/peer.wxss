@@ -66,7 +66,7 @@ page {
 .nav-top-item {
 	width: 20%;
 	text-align: center;
-	font-size: 15px;
+	font-size: 30rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(50, 50, 50, 1);
@@ -86,23 +86,23 @@ page {
 	width:87%;
 	margin: 0 auto;
 	background: #fff;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	border-radius:12px;
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
+	border-radius:24rpx;
 	height:380rpx;
 	margin-top: 24rpx;
 	padding: 3%;
 }
 .peer-top{
 	height:120rpx;
-	border-bottom: 1px solid #E7E7E7;
+	border-bottom: 2rpx solid #E7E7E7;
 }
 .qian image{
 	width:40rpx;
 	height:40rpx
 }
 .phone{
-	width:40px;
-	height:40px;
+	width:80rpx;
+	height:80rpx;
 	background:rgba(244,243,243,1);
 	border-radius:50%;
 	display: flex;
@@ -114,11 +114,11 @@ page {
 	height:40rpx;
 }
 .zhuying{
-	width:72px;
-	height:24px;
+	width:144rpx;
+	height:48rpx;
 	background:rgba(255,209,1,1);
-	border-radius:12px;
-	line-height: 24px;
+	border-radius:24rpx;
+	line-height: 48rpx;
 	text-align: center;
 }
 .peer-middle{

@@ -9,20 +9,20 @@ page{
 	
 }
 .month-item{
-	font-size:20px;
+	font-size:40rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:500;
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
-	width:23%
+	width:23%;
 }
 
 .title-line{
-	width:16px;
-	height:3px;
+	width:32rpx;
+	height:6rpx;
 	background:rgba(255,209,1,1);
-	border-radius:2px;
+	border-radius:4rpx;
 	position: absolute;
 	bottom:5rpx;
 	z-index:-1
@@ -41,7 +41,7 @@ page{
 	
 }
 .week-item{
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(161,161,161,1);
@@ -53,10 +53,10 @@ page{
 .days-item{
 	width:14.28%;
 	height:90rpx;
-	border-radius:8px;
+	border-radius:16rpx;
 	color: #A1A1A1;
 	text-align: center;
-	font-size:14px
+	font-size:28rpx;
 }
 .days-item-active{
 	background:rgba(255,209,1,1);
@@ -64,7 +64,7 @@ page{
 	font-weight: 700;
 }
 .days-price{
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(236,101,50,1);
@@ -77,17 +77,17 @@ page{
 	width:100%;
 	height:100rpx;
 	text-align: center;
-	font-size: 16px;
+	font-size: 32rpx;
 	color: #A1A1A1;
 	line-height: 100rpx;
-	border-top: 1px solid #e7e7e7;
+	border-top: 2rpx solid #e7e7e7;
 	background:#fff;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	border-radius:0px 0px 12px 12px;
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
+	border-radius:0px 0px 24rpx 24rpx;
 }
 .calendar-bottom span{
 	
-	font-size: 18px;
+	font-size: 36rpx;
 	color: #EC6532;
 }
 .calendar-button{
@@ -103,26 +103,26 @@ page{
 .calendar-button-item-left{
 	width: 80%;
 	margin: 0 auto;
-	height:36px;
+	height:72rpx;
 	background:rgba(242,242,242,1);
-	border-radius:16px;
-	font-size:17px;
+	border-radius:32rpx;
+	font-size:34rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(161,161,161,1);
-	line-height:36px;
+	line-height:72rpx;
 	text-align: center;
 }
 .calendar-button-item-right{
 	width: 80%;
 	margin: 0 auto;
-	height:36px;
+	height:72rpx;
 	background:rgba(255,209,1,1);
-	border-radius:16px;
-	font-size:17px;
+	border-radius:32rpx;
+	font-size:34rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
-	line-height:36px;
+	line-height:72rpx;
 	text-align: center;
 }

@@ -3,12 +3,12 @@ page{
 }
 .top{
 	width: 100%;
-	height: 100px;
+	height: 200rpx;
 	background:#FFC900 ;
 }
 .top image{
-	width: 260px;
-	height: 40px;
+	width: 520rpx;
+	height: 80rpx;
 	position: absolute;
 	top: 1%;
 	left: 25%;
@@ -16,276 +16,271 @@ page{
 }
 .mine{
 	width: 90%;
-	height: 190px;
+  padding: 40rpx;
+  box-sizing: border-box;
+	height: 340rpx;
 	background: #FFFFFF;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	margin-left: 5%;
-	position: absolute;
-	top: 10%;
-	border-radius: 10px;
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
+  margin: -100rpx auto 0 auto;
+	position: relative;
+	border-radius: 20rpx;
 	z-index: 2;
 }
 .mine-top{
 	width: 100%;
-	height: 100px;
+	height: 170rpx;
 	display: flex;
-	margin-top: 5%;
 }
 .mine-img{
 	width: 25%;
-	height: 100px;
-	margin-left: 4%;
 }
 .mine-img image{
-	width: 60px;
-	height: 60px;
+	width: 120rpx;
+	height: 120rpx;
 	border-radius: 50%;
 	
 	margin-top: 4%;
 }
 .mine-name{
 	width: 60%;
-	height: 100px;
 	margin-left: 2%;
 }
 .name-mine{
 	width: 100%;
-	height: 50px;
 	display: flex;
 }
 .name-title{
 	width: 25%;
 	color: #323232;
-	font-size: 17px;
-	font-weight: 700;
-	margin-top: 10px;
+	font-size: 34rpx;
+	margin-top: 20rpx;
 	font-weight: bold;
 }
 .name-con{
 	width:50%;
-	height: 20px;
-	margin-top: 8px;
+	height: 40rpx;
+	margin-top: 16rpx;
 	margin-left: 3%;
 }
 .name-con span{
-	width: 50px;
-	height: 20px;
+	width: 100rpx;
+	height: 40rpx;
 	display: inline-block;
 	text-align: center;
-	line-height: 20px;
-	border-radius: 8px;
+	line-height: 40rpx;
+	border-radius: 30rpx;
 	color: #ED6533;
-	font-size: 12px;
-	border: 1px solid #C5C5C5;
+	font-size: 24rpx;
+	border: 2rpx solid #C5C5C5;
 }
 .mine-con{
 	width: 100%;
-	height: 20px;
+	height: 40rpx;
+  margin-top: 20rpx;
 	color: #585858;
-	font-size: 14px;
+	font-size: 28rpx;
 	opacity: 0.6;
 }
 .mine-btn{
-	width: 25%;
-	height: 100px;
+	width: 30%;
 	text-align: right;
-	margin-right: 5%;
-	margin-top: 10px;
+	margin-top: 20rpx;
 }
 .mine-btn span{
-	width: 80px;
-	height: 32px;
+	width: 160rpx;
+	height: 64rpx;
 	display: inline-block;
 	text-align: center;
-	line-height: 32px;
-	border-radius: 16px;
+	line-height: 64rpx;
+	border-radius: 32rpx;
 	color: #323232;
-	font-size: 16px;
+	font-size: 32rpx;
 	background: #FFD101;
 	font-weight: bold;
 	font-family:PingFang-SC-Bold;
 }
 .mine-bottom{
 	width: 100%;
-	height: 80px;
+  margin: 0 auto;
+	height: 100rpx;
 	display: flex;
 }
 .bottom-name{
-	width: 30%;
-	height: 45px;
-	margin-left: 3%;
+	width: 33.3%;
+	height: 90rpx;
+  border-right: 2rpx solid #e7e7e7;
+  box-sizing:border-box;
+  padding:0 20rpx;
+}
+.bottom-name:last-child{
+  border-right:none;
 }
 .bott{
 	color: #323232;
-	font-size: 20px;
-	margin-left: 5%;
+	font-size: 40rpx;
 	font-weight: bold;
 }
 .bott-con{
 	color: #A1A1A1;
-	font-size: 14px;
-	margin-left: 5%;
-	opacity: 1;
-	font-weight: bold;
+	font-size: 28rpx;
 }
 .service{
-	margin-top: 43%;
+	margin: 30rpx auto;
 	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
 	width: 90%;
-	height: 160px;
+  box-sizing: border-box;
+  padding: 0 20rpx;
 	background: #FFFFFF;
-	margin-left: 5%;
-	border-radius: 10px;
+	border-radius: 20rpx;
 }
 .title-line {
-	width: 16px;
-	height: 3px;
+	width: 32rpx;
+	height: 6rpx;
 	background: rgba(255, 209, 1, 1);
-	border-radius: 2px;
+	border-radius: 4rpx;
 	position:absolute;
 	z-index:-1;
 	left:5%;
-	bottom: 17px;
+	bottom: 34rpx;
 }
 .ser-name{
-	width: 100%;
-	font-size: 16px;
-	font-family:PingFang-SC-Bold;
+	font-size: 32rpx;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
-	padding-top: 3px;
-	height: 50px;
-	line-height: 50px;
-	padding-left: 5%;
+	padding-top: 10rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+  border-bottom: 2rpx solid #e7e7e7;
 }
 .serve-con{
 	width: 100%;
-	height: 100px;
+	height: 180rpx;
 	display: flex;
-	margin-top: 2%;
+  justify-content: space-around;
+  align-items: center;
 }
 .ser{
-	width: 23%;
-	height: 100px;
-	margin-left: 2%;
+	width: 25%;
 }
 .ser-img{
 	width: 100%;
 	text-align: center;
 }
 .ser-img image{
-	width: 46px;
-	height: 46px;
+	width: 52rpx;
+	height: 52rpx;
 }
 .ser-title{
 	color: #585858;
-	font-size: 14px;
+	font-size: 28rpx;
 	width: 90%;
 	text-align: center;
 	font-weight: 500;
 }
 .recomm{
-	margin-top: 5%;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
 	width: 90%;
-	height: 200px;
 	background: #FFFFFF;
 	margin-left: 5%;
-	border-radius: 10px;
+	border-radius: 20rpx;
 }
 .reco-top{
 	width: 100%;
-	height: 40px;
+	height: 92rpx;
+  padding:0 20rpx;
+  box-sizing: border-box;
 	display: flex;
-	padding-left: 3%;
-	border-bottom: 1px solid white;
+  justify-content: space-between;
+  align-items: center;
+	border-bottom: 1px solid #e7e7e7;
 }
 .remo-img{
 	width: 10%;
-	height: 40px;
+	height: 80rpx;
 	text-align: center;
-	line-height: 40px;
-	margin-top: 4px;
+	line-height: 80rpx;
+	margin-top: 8rpx;
 }
 .remo-img image{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 }
 .reco{
-	width: 40%;
+	width: 25%;
 	color: #585858;
-	font-size: 14px;
-	height: 40px;
-	line-height: 40px;
+	font-size: 28rpx;
+	height: 80rpx;
+	line-height: 80rpx;
 	margin-left: 2%;
 	font-weight: 500;
 }
 .recoom{
-	width: 72%;
+	width: 25%;
 	color: #585858;
-	font-size: 14px;
-	height: 40px;
-	line-height: 40px;
+	font-size: 28rpx;
+	height: 80rpx;
+	line-height: 80rpx;
 	margin-left: 2%;
 	font-weight: 500;
 }
 .reco-con{
-	width: 30%;
+	width: 60%;
+  line-height: 40rpx;
+  height: 40rpx;
+  text-align: right;
 	color: #ED6533;
-	font-size: 14px;
-	height: 40px;
-	line-height: 40px;
+	font-size: 28rpx;
 	margin-left: 2%;
-	font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .reco-re{
 	width: 10%;	
-	height: 40px;
-	line-height: 40px;
 	text-align: right;
 }
 .reco-re image{
-	width: 15px;
-	height: 15px;
+	width: 30rpx;
+	height: 30rpx;
 }
 .recoom-re{
 	width: 10%;
-	height: 40px;
-	line-height: 40px;
+	height: 80rpx;
+	line-height: 80rpx;
 	text-align: right;
 }
 .recoom-re image{
-	width: 15px;
-	height: 15px;
+	width: 30rpx;
+	height: 30rpx;
 }
 .forget-input{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	display: flex;
-	margin-top: 20px;
+	margin-top: 40rpx;
 	margin-left: 2%;
 }
 .submitItem{
 	width: 65%;
-	height: 40px;
+	height: 80rpx;
 }
 .submitItem input{
-	width: 300px;
-	height: 40px;
+	width: 600rpx;
+	height: 80rpx;
 	padding-left: 5%;
 	font-size: 10pt;
-	border-radius: 20px;
+	border-radius: 40rpx;
 	background: #F4F3F3;
-	line-height: 30px;
+	line-height: 80rpx;
 }
 .gain{
 	width: 30%;
-	height: 40px;
-	border-radius: 20px;
+	height: 80rpx;
+	border-radius: 40rpx;
 	background: #F4F3F3;
-	line-height: 40px;
+	line-height: 40rpx;
 }
 .gain span{
 	background: #F4F3F3;
@@ -303,69 +298,69 @@ page{
 }
 .bind{
 	width: 90%;
-	height: 300px;
+	height: 600rpx;
 	background: #FFFFFF;
 	position: fixed;
 	top: 20%;
 	z-index: 444;
 	margin-left: 5%;
-	border-radius: 10px;
+	border-radius: 20rpx;
 }
 .bind-name{
 	width: 100%;
-	height: 30px;
+	height: 60rpx;
 	padding-left: 5%;
 	padding-top: 8%;
 	color: #262628;
-	font-size: 20px;
+	font-size: 40rpx;
 	font-weight: bold;
 }
 .bind-con{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	padding-left: 5%;
 	color: #A1A1A1;
-	font-size: 13px;
-	margin-top: 10px;
+	font-size: 26rpx;
+	margin-top: 20rpx;
 }
 .forget{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	color: #262628;
-	font-size: 20px;
+	font-size: 40rpx;
 	padding-left: 3%;
 }
 .forget-inp{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	
 }
 .forget-inp input{
 	width: 90%;
-	height: 40px;
+	height: 80rpx;
 	padding-left: 5%;
 	font-size: 10pt;
-	border-radius: 20px;
+	border-radius: 40rpx;
 	background: #F4F3F3;
-	line-height: 30px;
+	line-height: 60rpx;
 	margin-left: 2%;
 }
 
 .bind-btn{
 	width: 100%;
-	height: 50px;
-	margin-top: 30px;
+	height: 100rpx;
+	margin-top: 60rpx;
 	margin-left: 5%;
 }
 .bind-btn span{
-	width: 300px;
-	height: 40px;
+	width: 600rpx;
+	height: 80rpx;
 	background: #FFC900;
 	color: #000000;
 	text-align: center;
-	line-height: 40px;
+	line-height: 80rpx;
 	display: inline-block;
-	border-radius: 30px;
-	font-size: 17px;
+	border-radius: 60rpx;
+	font-size: 34rpx;
 	font-weight: bold;
 }

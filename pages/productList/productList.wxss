@@ -6,7 +6,7 @@ page{
 	margin: 0 auto;
 	margin-top: 24rpx;
 	height:290rpx;
-	border-radius:12px;
+	border-radius:24rpx;
 	background: #fff;
 	display: flex;
 }
@@ -27,28 +27,28 @@ page{
 	border-radius:8rpx
 }
 .product-id{
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(50,50,50,1);
 	margin-top:35rpx;
 }
 .product-title{
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	margin-top: 18rpx;
 }
 .product-description{
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(161,161,161,1);
 	margin-top: 20rpx;
 }
 .product-price span{
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(236,101,50,1);
@@ -58,17 +58,18 @@ page{
 	margin-top: 20rpx;
 }
 .product-tip{
-	width:32px;
-	height:16px;
-	border:1px solid rgba(161, 161, 161, 1);
-	border-radius:8px;
-	font-size: 10px;
-	line-height: 16px;
+	width:64rpx;
+	height:32rpx;
+	border:2rpx solid rgba(161, 161, 161, 1);
+	border-radius:16rpx;
+	font-size: 20rpx;
+	line-height: 32rpx;
 	color:#A1A1A1;
 	text-align: center;
+  margin-right: 10rpx;
 }
 .product-price{
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:#A1A1A1;

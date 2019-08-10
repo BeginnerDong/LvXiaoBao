@@ -10,7 +10,7 @@
 			<view class="product-bottom">
 				<view style="width:50%;display: flex;">
 					<block wx:for="{{item.lineStandard}}" wx:for-item="c_item">
-						<view class="product-tip" style="margin-right: 5px;">{{c_item.value}}</view>
+						<view class="product-tip" >{{c_item.value}}</view>
 					</block>
 					
 				</view>

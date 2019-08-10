@@ -90,7 +90,7 @@
 			<!-- <view class="start-level">四星</view>
 			<view class="start-level">五星</view> -->
 		</view>
-		<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx">
+		<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx;box-sizing:border-box">
 			<block wx:for="{{web_mainData.classifys[web_selectIndex].prices}}" wx:if="{{index<4}}">
 				<view class="group-item">
 					<view class="group-date">{{item.groupDay}}</view>
@@ -101,7 +101,7 @@
 			
 			<view style="width:1px;height:88rpx;background: #E7E7E7;"></view>
 			<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte?id={{web_mainData.id}}&classifyId={{web_mainData.classifys[web_selectIndex].id}}">
-				<span style="width:28px">更多团期</span>
+				<span>更多团期</span>
 			</view>
 		</view>
 	</view>
@@ -116,7 +116,7 @@
 			<view class="star-img flex">
 				<image src="../../image/detail-icon4.png"></image>
 			</view>
-			<view class="special-info">
+			<view class="special-info avoidOverflow2">
 				[暑假放价] 双人下单减400元，免落地签签证费，送happy电话卡！
 			</view>
 		</view>
@@ -124,7 +124,7 @@
 			<view class="star-img flex">
 				<image src="../../image/detail-icon4.png"></image>
 			</view>
-			<view class="special-info">
+			<view class="special-info avoidOverflow2">
 				[网红打卡] 宝蓝谷水上市场+天堂湾+猴子滩+大小PP岛+帝王岛
 			</view>
 		</view>
@@ -132,7 +132,7 @@
 			<view class="star-img flex">
 				<image src="../../image/detail-icon4.png"></image>
 			</view>
-			<view class="special-info">
+			<view class="special-info avoidOverflow2">
 				[饕餮盛宴] 中式风味餐+泰式火锅+日式料理+霸
 				王龙虾面+王大福海鲜餐厅
 			</view>
@@ -166,7 +166,7 @@
 				外费用。</view>
 		</view>
 		<view class="product-info-bottom" style="text-align: center;">
-			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+			<view style="text-align: center;font-size:32rpx;color: #A1A1A1;width: 100%;">查看更多 》</view>
 		</view>
 	</view>
 	<view class="fee-explain">
@@ -184,7 +184,7 @@
 
 		</view>
 		<view class="product-info-bottom" style="text-align: center;">
-			<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+			<view style="text-align: center;font-size:32rpx;color: #A1A1A1;width: 100%;">查看更多 》</view>
 		</view>
 	</view>
 	

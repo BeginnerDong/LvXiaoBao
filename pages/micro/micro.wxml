@@ -11,7 +11,7 @@
 		</view>
 		<view class="recomm">门店推荐</view>
 	</view>
-	<view class="travle" >
+	<view class="tr travle" >
 		<view class="travle-img" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{web_mainData[0].id}}">
 			<image src="{{web_mainData[0].bannerImg1}}"></image>
 		</view>
@@ -30,7 +30,7 @@
 			<view class="con-right">结算价:<span style='color: #EC6532;font-size: 18px;'>￥{{web_mainData[0].tpriceOrigin}}/</span>人起</view>
 		</view>
 	</view>
-	<view style="margin-top: 230px;">
+	<view>
 		<block wx:for="{{web_mainData}}" wx:key="id" >
 			<view class="tr" wx:if="{{index>0}}">
 				<view class="travle-img" bindtap="intoPath" data-path="/pages/productDetail/productDetail?id={{item.id}}">
