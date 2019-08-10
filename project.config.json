@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 74,
+			"current": 77,
 			"list": [
 				{
 					"id": -1,
@@ -552,6 +552,27 @@
 					"id": -1,
 					"name": "pages/productDetail/productDetail",
 					"pathName": "pages/productDetail/productDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/productListPlate/productListPlate",
+					"pathName": "pages/productListPlate/productListPlate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/datail/datail",
+					"pathName": "pages/datail/datail",
 					"scene": null
 				}
 			]

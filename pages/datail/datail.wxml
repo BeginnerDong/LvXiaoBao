@@ -125,7 +125,7 @@
 				<!-- <view class="start-level">四星</view>
 				<view class="start-level">五星</view> -->
 			</view>
-			<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx">
+			<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx; box-sizing:border-box;">
 				<view style="width:80%;display: flex;align-items: center;">
 					<block wx:for="{{web_mainData.classifys[web_selectIndex].prices}}" wx:if="{{index<4}}">
 						<view class="group-item" style="{{web_orderPost.startDate==item.groupDay?'border:1px solid #EC6532':''}}" bindtap="selectDay" data-day="{{item.groupDay}}" wx:if="{{item.subjectType=='101'}}">
@@ -137,7 +137,7 @@
 
 				<view style="width:1px;height:88rpx;background: #E7E7E7;"></view>
 				<view class="more-group flex-all" bindtap="intoPath" data-path="/pages/dateSlecte/dateSlecte">
-					<span style="width:28px">更多团期</span>
+					<span>更多团期</span>
 				</view>
 			</view>
 		</view>
@@ -145,7 +145,7 @@
 	<view class="people">
 		<view class="norm-title" bindtap="showPeople">
 			<view class="norm-name1" style="color: #323232;">出行人数
-				<view class="title-line" style="left: 9%;bottom: 17px;"></view>
+				<view class="title-line" style="left: 9%;bottom: 34rpx;"></view>
 			</view>
 			<view class="norm-data2">
 				<view class="people-title" wx:if="{{web_orderPost.bills.length==0}}">请选择出行人数</view>
