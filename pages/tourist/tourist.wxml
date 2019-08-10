@@ -29,7 +29,7 @@
 				</view>
 				<view class="left-cn">手动添加</view>
 			</view>
-			<view class="bott">
+			<view class="bott" bindtap="intoPath" data-path="/pages/clipboard/clipboard">
 				<view class="left-img">
 					<image src="../../image/texta.png"></image>
 				</view>

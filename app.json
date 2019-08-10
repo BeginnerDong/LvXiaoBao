@@ -15,6 +15,7 @@
     "pages/dateSlecte/dateSlecte",
     "pages/eduit/eduit",
     "pages/tourist/tourist",
+    "pages/clipboard/clipboard",
     "pages/outbound/outbound",
     "pages/scrap/scrap",
     "pages/sign/sign",

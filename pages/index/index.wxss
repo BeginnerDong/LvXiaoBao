@@ -19,8 +19,7 @@ page{
 	padding: 0 20rpx;
 	position: relative;
 	margin: 0 auto;
-	font-size:14px;
-	font-family:PingFang-SC-Medium;
+	font-size:28rpx;
 	font-weight:500;
 	color:rgba(192,192,192,1);
 }
@@ -51,72 +50,71 @@ page{
 }
 .agency-top{
 	width: 100%;
-	height: 70px;
+	height: 140rpx;
 	display: flex;
-	padding-top: 20px;
+	padding-top: 40rpx;
 }
 .top-left{
 	width: 20%;
-	height: 70px;
+	height: 140rpx;
 	text-align: center;
 }
 .top-left image{
-	width: 60px;
-	height: 60px;
+	width:120rpx;
+	height: 120rpx;
 	border-radius: 50%;
 }
 .top-name{
 	width: 60%;
-	height: 70px;
+	height: 140rpx;
 	margin-left: 2%;
 	border-right: 1px solid #E7E7E7;
 }
 .name{
-	font-size:20px;
-	font-family:PingFang-SC-Bold;
+	font-size:40rpx;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 }
 .name-title{
-	font-size:13px;
+	font-size:26rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:#A1A1A1;
-	margin-top: 10px;
+	margin-top: 20rpx;
 }
 .top-right{
 	width: 20%;
-	height: 70px;
+	height: 140rpx;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 40rpx;
 }
 .top-right image{
-	width: 32px;
-	height: 32px;
+	width: 64rpx;
+	height:64rpx;
 }
 .agency-title{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
-	margin-top: 10px;
+	margin-top: 20rpx;
 }
 .title-img{
 	width: 10%;
-	height: 50px;
+	height: 100rpx;
 	text-align: center;
 }
 .title-img image{
-	width: 16px;
-	height: 16px;
+	width: 32rpx;
+	height: 32rpx;
 }
 .title-name{
 	width: 90%;
-	font-size:13px;
+	font-size:26rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:rgba(161,161,161,1);
 	text-align: left;
-	margin-top: 4px;
+	margin-top: 8rpx;
 }
 .menu{
 	width:700rpx;
@@ -125,7 +123,7 @@ page{
 	height:220rpx;
 	border-radius: 20rpx;
 	margin: 40rpx auto;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
 }
 .menu_item{
 	width:25%;
@@ -149,37 +147,36 @@ page{
 	justify-content: center;
 }
 .menu_title{
-	height:13px;
-	font-size:14px;
+	height:26rpx;
+	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(50,50,50,1);
-	line-height:23px;
+	line-height:46rpx;
 }
 .shop{
 	width:700rpx;
 	margin: 0 auto;
 }
 .title{
-	font-size:16px;
+	font-size:32rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
-	line-height:23px;
+	line-height:46rpx;
 	position: relative;
 }
 .main{
 	margin-top: 30rpx;
 	width:100%;
-	height:175px;
-	border-radius:8px;
+	height:375rpx;
+	border-radius:16rpx;
 	display: flex;
 	overflow: hidden;
 }
 .main-left,.main-right{
 	width:50%;
-	height:175px;
-	
+	height:375rpx;
 }
 
 .main-right-bottom,.main-right-top{
@@ -200,7 +197,7 @@ page{
 	width:700rpx;
 	margin: 0 auto;
 	margin-top: 90rpx;
-	border-radius:8px;
+	border-radius:16rpx;
 	overflow: hidden;
 }
 .theme-line{
@@ -208,27 +205,34 @@ page{
 	display: flex;
 }
 .theme-item-one{
-	width:33%;
+	width:33.3%;
 	height:160rpx;
 	display: flex;
+  justify-content: space-around;
+  align-items: center;
 	background:rgba(255,255,255,1);
-	border-right:1px solid #E7E7E7;
-	border-bottom:1px solid #E7E7E7;
+	border-right:2rpx solid #E7E7E7;
+	border-bottom:2rpx solid #E7E7E7;
 }
+
 .theme-item-two{
 	width:50%;
 	height:160rpx;
 	display: flex;
+  justify-content: space-around;
+  align-items: center;
 	background:rgba(255,255,255,1);
-	border-right:1px solid #E7E7E7;
-	border-bottom:1px solid #E7E7E7;
+	border-right:2rpx solid #E7E7E7;
+	border-bottom:2rpx solid #E7E7E7;
 }
 .theme-item-left,.theme-item-right{
 	width:50%;
-	
+  box-sizing: border-box;
 }
 .theme-item-left{
-	padding: 0 0 0 8px
+	padding: 0 0 0 10rpx;
+  position: relative;
+  z-index: 5;
 }
 .theme-item-right{
 	display: flex;
@@ -236,19 +240,17 @@ page{
 	justify-content: flex-end;
 }
 .theme-title{
-	font-size:14px;
-	font-family:PingFang-SC-Medium;
-	font-weight:500;
-	color:rgba(50,50,50,1);
-	margin-top: 20px;
+	font-size:28rpx;
+	color:#222;
 	white-space: nowrap;
 }
 .theme-description{
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
-	color:rgba(50,50,50,1);
+	color:#666;
 	white-space: nowrap;
+  padding-top: 6rpx;
 }
 .theme-item-right image{
 	width:120rpx;
@@ -262,22 +264,22 @@ page{
 .size-main{
 	/* height:300rpx; */
 	width:100%;
-	border-radius:12px;
+	border-radius:24rpx;
 	background: #fff;
 	margin-top:30rpx;
-	margin-bottom:4px;
+	margin-bottom:8rpx;
 }
 .tab{
 	display: flex;
 	height:100rpx;
 	width:100%;
-	border-bottom: 1px solid #e7e7e7;
+	border-bottom: 2rpx solid #e7e7e7;
 }
 .tab-item{
 	line-height:100rpx;
 	width:25%;
 	text-align: center;
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:#A1A1A1;
@@ -295,22 +297,22 @@ page{
 .choose-item{
 	width:200rpx;
 	height:64rpx;
-	border:1px solid #c5c5c5;
-	border-radius:8px;
+	border:2rpx solid #c5c5c5;
+	border-radius:16rpx;
 	line-height: 64rpx;
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;	
 	color:#A1A1A1;
 	text-align: center;
-	margin: 24rpx 3px 0 3px;
+	margin: 24rpx 6rpx 0 6rpx;
 }
 .product{
 	width:700rpx;
 	margin: 0 auto;
 	margin-top: 24rpx;
 	height:290rpx;
-	border-radius:12px;
+	border-radius:24rpx;
 	background: #fff;
 	display: flex;
 }
@@ -331,21 +333,21 @@ page{
 	border-radius:8rpx
 }
 .product-id{
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(50,50,50,1);
 	margin-top:35rpx;
 }
 .product-title{
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	margin-top: 18rpx;
 }
 .product-description{
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(161,161,161,1);
@@ -362,17 +364,17 @@ page{
 	margin-top: 20rpx;
 }
 .product-tip{
-	width:32px;
-	height:16px;
-	border:1px solid rgba(161, 161, 161, 1);
-	border-radius:8px;
-	font-size: 10px;
-	line-height: 16px;
+	width:64rpx;
+	height:32rpx;
+	border:2rpx solid rgba(161, 161, 161, 1);
+	border-radius:16rpx;
+	font-size: 20rpx;
+	line-height: 32rpx;
 	color:#A1A1A1;
 	text-align: center;
 }
 .product-price{
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:#A1A1A1;
@@ -380,10 +382,10 @@ page{
 	text-align: right;
 }
 .title-line{
-	width:16px;
-	height:3px;
+	width:32rpx;
+	height:6rpx;
 	background:rgba(255,209,1,1);
-	border-radius:2px;
+	border-radius:4rpx;
 	position: absolute;
 	bottom:5rpx;
 	z-index:-1

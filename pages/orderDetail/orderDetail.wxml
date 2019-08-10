@@ -4,14 +4,15 @@
 			<view class="detail-title">待支付</view>
 			<view class="detail-con1">订单资源比较紧缺，请尽快完成付款，以免影响行程。</view>
 		</view>
-		<view class="detail-message">
+		<view class="detail-message boxshaw contLis">
 			<view class="detail-mess">订单信息
-			<view class="title-line" style="bottom: 10px;"></view></view>
+			  <view class="title-line"></view>
+      </view>
 			<view class="deail-num">￥{{web_mainData.orderPrice}}</view>
 			<view class="detail-con">{{web_mainData.pdtName}}</view>
 			<view class="paid-con">
 				<view class="con">{{web_mainData.startDate}}</view>
-				<view class="con" style="color: #A1A1A1;opacity: 0.6;">4成人  1儿童</view>
+				<view class="con" style="color: #A1A1A1;opacity: 0.6;text-align: center;border-bottom:2rpx solid rgba(231,231,231,1);">4成人  1儿童</view>
 				<view class="con" style="text-align: right;">{{web_mainData.endDate}}</view>
 			</view>
 			<view class="mou">
@@ -19,9 +20,10 @@
 				<view class="mou-title" style="text-align: right;">周六返回</view>
 			</view>
 		</view>
-		<view class="people">
+		<view class="people boxshaw contLis">
 			<view class="detail-mess">预订人
-			<view class="title-line" style="bottom: 10px;"></view></view>
+			  <view class="title-line"></view>
+      </view>
 			<view class="people-name">
 				<view class="peo-titl">姓名</view>
 				<view class="peo-title avoidOverflow">{{web_mainData.reservationName}}</view>
@@ -39,14 +41,13 @@
 				<view class="peo-title avoidOverflow">{{web_mainData.reservationArea}}</view>
 			</view>
 		</view>
-		<view class="list">
-			<view class="list-title">
-				<view class="list-left">游客名单
-				<view class="title-line" style="bottom: 10px;"></view></view>
-				<view class="list-img1">
+		<view class="list boxshaw contLis">
+      <view class="detail-mess">游客名单
+			  <view class="title-line"></view>
+        <view class="list-img1">
 					<image src="../../image/down.png"></image>
 				</view>
-			</view>
+      </view>
 			<block wx:for="{{web_mainData.peoples}}">
 				<view class="list-name">
 					<view class="name-left">
@@ -67,14 +68,13 @@
 				</view>
 			</block>
 		</view>
-		<view class="insurance">
-			<view class="list-title">
-				<view class="list-left">保险
-				<view class="title-line" style="bottom: 10px;"></view></view>
-				<view class="list-img1">
-					<image src="../../image/down.png"></image>
-				</view>
-			</view>
+		<view class="insurance boxshaw contLis">
+      <view class="detail-mess">保险
+        <view class="title-line"></view>
+        <view class="list-img1">
+          <image src="../../image/down.png"></image>
+        </view>
+      </view>
 			<block wx:for="{{web_mainData.insures}}" wx:key="id">
 				<view class="steel">
 					<view class="steel-name">{{item.companyBrand}}</view>
@@ -107,14 +107,13 @@
 				</view>
 			</block>
 		</view>
-		<view class="contrat">
-			<view class="list-title">
-				<view class="list-left">电子合同
-				<view class="title-line" style="bottom: 10px;"></view></view>
-				<view class="list-img1">
-					<image src="../../image/down.png"></image>
-				</view>
-			</view>
+		<view class="contrat boxshaw contLis">
+      <view class="detail-mess">电子合同
+        <view class="title-line"></view>
+        <view class="list-img1">
+          <image src="../../image/down.png"></image>
+        </view>
+      </view>
 			<block wx:for="{{web_mainData.contracts}}">
 			<view class="steel">
 				<view class="steel-name">{{item.contractCode}}</view>
@@ -163,8 +162,9 @@
 	<view style="height:100px;width:100%" ></view>
 	<view class="bg" wx:if="{{showPay}}"></view>
 	<view class="payment" wx:if="{{showPay}}">
-		<view class="detail-messa">立即支付
-		<view class="title-line" style="bottom: 12px;"></view></view>
+    <view class="detail-mess">立即支付
+      <view class="title-line"></view>
+    </view>
 		<block wx:for="{{web_mainData.plans}}">		
 			<view class="pay">
 				<view class="pay-name">￥{{item.sprice}}</view>
@@ -172,8 +172,8 @@
 					<view class="pay-title">{{item.sdate}}</view>
 					<view class="pay-title1">第{{item.num}}期</view>
 				</view>
-				<view class="prepaid" style="height: 60px;line-height: 60px;{{item.state>101?'color: #FF0000':''}}">未支付</view>
-				<view class="pay-img" style="height: 60px;display: flex;align-items: center;" bindtap="choose" data-index="{{index}}">
+				<view class="prepaid" style="{{item.state>101?'color: #FF0000':''}}">未支付</view>
+				<view class="pay-img" bindtap="choose" data-index="{{index}}">
 					<image src="{{web_planCode==item.planCode?'../../image/complete.png':'../../image/quan.png'}}"></image>
 				</view>
 			</view>

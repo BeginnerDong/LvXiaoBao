@@ -1,0 +1,10 @@
+<!--pages/clipboard/clipboard.wxml-->
+<view>
+
+  <view class="textbox">
+    <textarea placeholder="系统将自动粘贴剪贴板信息到此输入框，点击保存自动识别。" placeholder-style="color:#A1A1A1"></textarea>
+  </view>
+  <view>
+    <button type="submint">保存</button>
+  </view>
+</view>
