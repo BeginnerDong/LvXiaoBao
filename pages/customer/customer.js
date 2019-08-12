@@ -11,6 +11,8 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
+		cardData:[{key:'身份证',value:101},{key:'护照',value:102},{key:'军官证',value:103},{key:'学生证',value:104},{key:'老年证',value:105},{key:'台湾通行证',value:106},
+		{key:'港澳通行证',value:107}],
 		levelData:[{name:'一级',value:1},{name:'二级',value:2},{name:'三级',value:3},{name:'四级',value:4}],
 		sexData:['男','女'],
 		submitData: {
@@ -31,10 +33,10 @@ Page({
 			isBlacklist: '',
 			isCredit: '',
 			cards: [{
-				type:0,
-				num:'',
-				deadline:'',
-				img:''
+				cardType:'',
+				cardNo:'',
+				cardValidity:'',
+				cardPaths:''
 			}],
 			id: ''
 		},
@@ -42,6 +44,8 @@ Page({
 
 
 	},
+	
+	
 
 	onLoad(options) {
 		const self = this;
@@ -50,15 +54,72 @@ Page({
 			web_submitData:self.data.submitData
 		})
 	},
+	
+	changeCard(e){
+		const self = this;
+		console.log(e)
+	},
+	
+	dateChangeTwo(e){
+		const self = this;
+		console.log(e);
+		var index = api.getDataSet(e,'index');
+		self.data.submitData.cards[index].cardValidity = e.detail.value;
+		self.setData({
+			web_submitData:self.data.submitData
+		})
+	},
+	
+	upLoadImg(e) {
+		const self = this;
+		var index = api.getDataSet(e,'index');
+		wx.showLoading({
+			mask: true,
+			title: '图片上传中',
+		});
+		const callback = (res) => {
+			console.log('res', res)
+			if (res.result == '0') {
+				var url = res.fullPath;
+				
+				self.data.submitData.cards[index].cardPaths = url;
+				self.setData({
+					web_submitData:self.data.submitData
+				});
+				wx.hideLoading()
+			} else {
+				api.showToast(res.msg, 'none')
+			}
+	
+		};
+	
+		wx.chooseImage({
+			count: 1,
+			success: function(res) {
+				console.log(res);
+				var tempFilePaths = res.tempFilePaths;
+				console.log(callback)
+				api.uploadFile(tempFilePaths[0], 'file', {
+					classify: 'T019',
+					rwidth: 150,
+					rheight: 150,
+					file: tempFilePaths[0],
+				}, callback)
+			},
+			fail: function(err) {
+				wx.hideLoading();
+			}
+		})
+	},
 
 
 	addPaper(){
 		const self = this;
 		self.data.submitData.cards.push({
-			type:0,
-			num:'',
-			deadline:'',
-			img:''
+			cardType:'',
+			cardNo:'',
+			cardValidity:'',
+			cardPaths:''
 		});
 		self.setData({
 			web_submitData:self.data.submitData
@@ -94,6 +155,11 @@ Page({
 		self.setData({
 			web_submitData:self.data.submitData
 		})
+	},
+	
+	cardInputChange(e){
+		const self = this;
+		console.log(e)
 	},
 
 	bindRegionChange(e) {

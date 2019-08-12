@@ -124,13 +124,23 @@
 			<view class="basic-name">
 				<view class="name">证件号码</view>
 				<view class="title">
-					<input data-index="{{index}}" type="text" placeholder="填写证件号码" />
+					<input data-index="{{index}}" type="text"   placeholder="填写证件号码" 
+					value="{{item.cardNo}}"  data-key="cardNo" bindblur="cardInputChange"/>
 				</view>
 			</view>
 			<view class="basic-name">
 				<view class="name">有效期至</view>
-				<view class="title">
-					<input data-index="{{index}}" type="text" placeholder="选择有效日期"/>
+				<view class="title-con">
+					<view class="con">
+						<picker bindchange="dateChangeTwo" data-index="{{index}}" mode="date"  style="width:100%;">
+							<view style="font-size: 14px;color: #323232;">
+								{{item.cardValidity?item.cardValidity:'选择有效日期'}}
+							</view>
+						</picker>
+					</view>
+					<view class="card-img">
+						<image src="../../image/right.png"></image>
+					</view>
 				</view>
 			</view>
 			<view class="photo">
