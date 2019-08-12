@@ -58,7 +58,7 @@
 			<view class="name">出生日期</view>
 			<view class="title">
 				<picker bindchange="dateChange" mode="date"  style="width:100%;">
-					<view style="font-size: 14px;color: #323232;">
+					<view style="font-size: 28rpx;color: #323232;">
 						{{web_submitData.birth?web_submitData.birth:'选择出生日期'}}
 					</view>
 				</picker>

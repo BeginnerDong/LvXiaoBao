@@ -1,6 +1,6 @@
 .top{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 	border-bottom: 1px solid #E7E7E7;
 }
@@ -8,11 +8,11 @@
 	width: 50%;
 	display: flex;
 	justify-content: center;
-	height: 50px;
+	height: 100rpx;
 	background: white;
 }
 .top-left span{
-	font-size:15px;
+	font-size:30rpx;
 	font-family:PingFang-SC-Bold;
 	
 	color:rgba(50,50,50,1);
@@ -41,28 +41,23 @@
 }
 .discount-left span{
 	display: inline-block;
-	font-size: 30px;
+	font-size: 60rpx;
 	color: white;
 }
 .discount-right{
-	width: 60%;
+	width: 52%;
 	position: absolute;
-	top: 15%;
-	left: 40%;
+	top: 16%;
+	right: 10%;
 }
 .discount-img{
-	width: 100%;
-	height: 40px;
-	margin-left: 10%;
 }
 .discount-img image{
-	width: 20px;
-	height: 20px;
-	margin-top: 11%;
+	width: 40rpx;
+	height: 40rpx;
 }
 .discount-name{
-	margin-left: 2%;
-	font-size:16px;
+	font-size:32rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
@@ -70,18 +65,19 @@
 }
 .discount-content{
 	display: flex;
-	justify-content: center;
+	justify-content:space-between;
+  align-items: center;
+  height: 100rpx;
 }
 .discount-title{
 	white-space: nowrap;
-	font-size:15px;
+	font-size:30rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(161,161,161,1);
-	margin-top: 3%;
 }
 .discount-data{
-	font-size:13px;
+	font-size:26rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(161,161,161,1);

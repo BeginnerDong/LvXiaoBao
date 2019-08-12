@@ -37,8 +37,8 @@
 			<view class="peer-top flex">
 				<view style="width:80%">
 					<view class="flex-align">
-						<view class="color1 font18 bold-font">{{item.brand}}</view>
-						<view class="color2 font12 bold-font" style="margin-left: 16rpx;">{{item.province}}·{{item.city}}</view>
+						<view class="color1 font18 bold-font avoidOverflow">{{item.brand}}</view>
+						<view class="color2 font12 bold-font avoidOverflow" style="margin-left: 16rpx;">{{item.province}}·{{item.city}}</view>
 						<view class="flex-all qian" style="margin-left: 26rpx;" wx:if="{{item.signNum==1}}">
 							<image src="../../image/peer-icon6.png"></image>
 						</view>

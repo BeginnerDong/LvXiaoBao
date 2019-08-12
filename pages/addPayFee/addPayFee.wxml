@@ -21,13 +21,13 @@
 			</view>
 		</view>
 		<view class="peo-name">
-			<view class="peo-con">费用（元）</view>
+			<view class="peo-con">费用(元)</view>
 			<view class="peo-content1">
 				<input type="text" placeholder="填写费用" value="{{web_submitData.repFee}}"  data-key="repFee" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="peo-name">
-			<view class="peo-con">项目时长（分）</view>
+			<view class="peo-con">项目时长(分)</view>
 			<view class="peo-content1">
 				<input type="text" placeholder="填写购物时间" value="{{web_submitData.repDuration}}"  data-key="repDuration" bindblur="inputChange"/>
 			</view>
@@ -44,3 +44,4 @@
 		</view>
 	</view>
 </view>
+

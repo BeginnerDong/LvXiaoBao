@@ -7,7 +7,7 @@
 			<view class="sign-con">
 				<view class="con">
 					<picker bindchange="cddTypeChange" value="{{index}}"  range="{{web_cddTypeData}}" range-key="name" style="width:100%;">
-						<view>
+						<view style="font-size:32rpx">
 							{{web_cddTypeData[web_index].name?web_cddTypeData[web_index].name:'选择合同类别'}}
 						</view>
 					</picker>
@@ -22,7 +22,7 @@
 			<view class="sign-con">
 				<view class="con">
 					<picker bindchange="cddClassifyChange" value="{{index}}"  range="{{web_cddClassifyData}}" range-key="name" style="width:100%;">
-						<view>
+						<view  style="font-size:32rpx">
 							{{web_cddClassifyData[web_index1].name?web_cddClassifyData[web_index1].name:'选择合同类型'}}
 						</view>
 					</picker>
@@ -41,7 +41,7 @@
 			<view class="peo-content1">
 				<view class="card">
 					<picker bindchange="touristsTypeChange" value="{{index}}"  range="{{touristsTypeData}}" range-key="name" style="width:100%;">
-						<view>
+						<view  style="font-size:30rpx;">
 							{{touristsTypeData[web_index2].name?touristsTypeData[web_index2].name:'选择游客类别'}}
 						</view>
 					</picker>
@@ -109,7 +109,7 @@
 			<view class="peo-content1">
 				<view class="card">
 					<picker bindchange="dateChangeStart" mode="date"  style="width:100%;">
-						<view>
+						<view style="font-size:32rpx;">
 							{{web_submitData.startDate?web_submitData.startDate:'选择出发日期'}}
 						</view>
 					</picker>
@@ -122,7 +122,7 @@
 			<view class="peo-content1">
 				<view class="card">
 					<picker bindchange="dateChangeEnd" mode="date"  style="width:100%;">
-						<view>
+						<view style="font-size:32rpx;">
 							{{web_submitData.backDate?web_submitData.backDate:'选择结束日期'}}
 						</view>
 					</picker>
@@ -133,11 +133,11 @@
 		<view class="peo-name">
 			<view class="sign-left">共计</view>
 			<view class="sign-span">
-				<view class="sign-img" style="margin-top: 5px;" bindtap="counter" data-key="totalDay" data-type="-">
+				<view class="sign-img" bindtap="counter" data-key="totalDay" data-type="-">
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>{{web_submitData.totalDay}}</span></view>
-				<view class="sign-img" style="margin-top: 5px;margin-left: 20px;" bindtap="counter" data-key="totalDay" data-type="+">
+				<view class="sign-img" style="margin-left: 20px;" bindtap="counter" data-key="totalDay" data-type="+">
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
@@ -146,11 +146,11 @@
 		<view class="peo-name">
 			<view class="sign-left">住宿</view>
 			<view class="sign-span">
-				<view class="sign-img" style="margin-top: 5px;" bindtap="counter" data-key="totalNight" data-type="-">
+				<view class="sign-img" bindtap="counter" data-key="totalNight" data-type="-">
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>{{web_submitData.totalNight}}</span></view>
-				<view class="sign-img" style="margin-top: 5px;margin-left: 20px;" bindtap="counter" data-key="totalNight" data-type="+">
+				<view class="sign-img" style="margin-left: 20px;" bindtap="counter" data-key="totalNight" data-type="+">
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
@@ -168,7 +168,7 @@
 	</view>
 	<view class="travel">
 		<view class="sign-name">旅游费用
-		<view class="title-line" style="bottom: 16px;"></view></view>
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">*成人</view>
 			
@@ -268,7 +268,7 @@
 		<view class="peo-name">
 			<view class="sign-left">*成团人数</view>
 			<view class="sign-span">
-				<view class="sign-img" style="margin-top: 5px;"  bindtap="counter" data-key="lowestGroup" data-type="-">
+				<view class="sign-img"  bindtap="counter" data-key="lowestGroup" data-type="-">
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>{{web_submitData.lowestGroup}}</span></view>
@@ -285,13 +285,13 @@
 			<view class="agglo-con">如不能成团，安那种方式解决</view>
 		</view>
 		<view class="agglo-agg">
-			<view class="agglo-one">
+			<view class="agglo-one" style="padding-bottom:10rpx;">
 				<view class="agg-con">1.委托第三方旅行社</view>
 				<view class="agg-img" bindtap="inputChange" data-key="notGroupChoose" data-value="101">
 					<image src="{{web_submitData.notGroupChoose==101?'../../image/complete.png':'../../image/quan.png'}}"></image>
 				</view>
 			</view>
-			<view class="peo-name" wx:if="{{web_submitData.notGroupChoose==101}}">
+			<view class="peo-name" wx:if="{{web_submitData.notGroupChoose==101}}" style="height:80rpx;">
 				<view class="peo-con">旅行社名称</view>
 				<view class="peo-content1">
 					<view class="card">
@@ -300,7 +300,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="peo-name">
+		<view class="peo-name" style="border-top: 2rpx solid #E7E7E7;">
 			<view class="peo-con1">2.延期出团</view>
 			<view class="sign-content1" bindtap="inputChange" data-key="notGroupChoose" data-value="102">
 				<image src="{{web_submitData.notGroupChoose==102?'../../image/complete.png':'../../image/quan.png'}}"></image>
@@ -394,8 +394,8 @@
 	</view>
 	<view class="botom">
 		<view class="speci-left">
-			<view class="special" style="font-size: 13px;">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
-			<view class="special" style="display: flex;font-size: 15px;">
+			<view class="special" style="font-size: 26rpx;">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
+			<view class="special" style="display: flex;font-size: 30rpx;">
 				<view class="spe-pho">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
 				<view class="spe-img">
 					<image src="../../image/black.png"></image>
@@ -403,7 +403,7 @@
 			</view>
 		</view>
 		<view class="spaci-btn">
-			<view class="speci1" style="border-right: 1px solid white;" bindtap="{{web_buttonCanClick?'submit':''}}" data-type="jump">
+			<view class="speci1" style="border-right: 2rpx solid white;" bindtap="{{web_buttonCanClick?'submit':''}}" data-type="jump">
 				<view>保存并预览</view>
 			</view>
 			<view class="speci1" bindtap="{{web_buttonCanClick?'submit':''}}" data-type="next">

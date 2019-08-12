@@ -21,7 +21,7 @@ page {
 	padding: 0 20rpx;
 	position: relative;
 	margin: 0 auto;
-	font-size: 14px;
+	font-size: 28rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(192, 192, 192, 1);
@@ -49,8 +49,8 @@ page {
 	width:87%;
 	margin: 0 auto;
 	background: #fff;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	border-radius:12px;
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
+	border-radius:24rpx;
 	height:160rpx;
 	margin-top: 24rpx;
 	padding: 3%;
@@ -96,12 +96,12 @@ page {
 	top:35%;
 	height:340rpx;
 	background:rgba(255,255,255,1);
-	border-radius:12px;
+	border-radius:24rpx;
 }
 .item{
 	width:50%;
-	height:48px;
-	line-height: 48px;
+	height:96rpx;
+	line-height: 96rpx;
 	text-align: center;
 }
 .notice{

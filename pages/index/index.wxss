@@ -71,7 +71,7 @@ page{
 	border-right: 1px solid #E7E7E7;
 }
 .name{
-	font-size:40rpx;
+	font-size:36rpx;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 }
@@ -290,7 +290,7 @@ page{
 .choose{
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 24rpx 24rpx 24rpx;
+	padding: 0 24rpx 24rpx 24rpx;
 	
 }
 .choose-item{
