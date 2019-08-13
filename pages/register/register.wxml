@@ -11,7 +11,7 @@
 		<view class="login-cneter">
 			<view class="cen-top">手机号</view>
 			<view class="cen-inp">
-				<input type="text" placeholder="请输入手机号码" value="{{web_submitData.phone}}"  data-key="phone" bindblur="inputChange"/>
+				<input type="text" placeholder="请输入手机号码" value="{{web_submitData.phone}}" data-key="phone" bindblur="inputChange"/>
 			</view>
 		</view>
 		<view class="login-cneter">

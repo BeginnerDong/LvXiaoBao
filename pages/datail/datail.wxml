@@ -144,10 +144,10 @@
 	</view>
 	<view class="people">
 		<view class="norm-title" bindtap="showPeople">
-			<view class="norm-name1" style="color: #323232;">出行人数
-				<view class="title-line" style="left: 9%;bottom: 29rpx;"></view>
+			<view class="norm-name1" style="color: #323232;width:20%;height:94rpx">出行人数
+				<view class="title-line" style="left:1%;bottom: 29rpx;"></view>
 			</view>
-			<view class="norm-data2">
+			<view class="norm-data2" style="width:80%;height:auto">
 				<view class="people-title" wx:if="{{web_orderPost.bills.length==0}}">请选择出行人数</view>
 				<view class="people-title" wx:if="{{web_orderPost.bills.length>0}}">
 					<block wx:for="{{web_orderPost.bills}}" wx:key="id">

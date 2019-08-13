@@ -102,7 +102,7 @@ page{
 	margin-top:20rpx;
 }
 .norm-title{
-	width: 100%;
+  padding: 0 3%;
 	height: 100rpx;
 	background: #FFFFFF;
 	display: flex;
@@ -373,17 +373,22 @@ page{
 }
 .people{
 	margin-top: 20rpx;
-  padding: 0 3%;
   background: #fff;
 }
 .people-title{
-	width: 80%;
+	width: 90%;
 	font-size: 32rpx;
 	font-weight: 500;
 	color:rgba(161,161,161,1);
 }
+.people-title span{
+  padding-left:10rpx;
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+}
 .people-img{
-	width: 20%;
+	width: 10%;
 }
 .people-img image{
 	width: 30rpx;
@@ -391,17 +396,16 @@ page{
 }
 .norm-data2{
 	width: 60%;
-	height: 94rpx;
-	line-height: 94rpx;
 	text-align: right;
 	font-size: 32rpx;
-	color: #A1A1A1;
+	color: #333;
 	display: flex;
 	justify-content: center;
+  align-items: center;
 	font-weight:500;
 }
 .product-special{
-	margin-top: 48rpx;
+	margin-top: 20rpx;
 	background: white;
 }
 .product-special .product-info-bottom{
