@@ -10,7 +10,7 @@
 		<view class="peo-con">*证件类型</view>
 		<view class="peo-content">
 			<view class="card">
-				<picker bindchange="cardChange" value="{{index}}"  range="{{cardData}}" range-key="key"  style="width:100%;height:100%;font-size:13px;color:#A1A1A1;">
+				<picker bindchange="cardChange" value="{{index}}"  range="{{cardData}}" range-key="key"  style="width:100%;height:100%;font-size:26rpx;color:#A1A1A1;">
 					{{cardData[web_index].key?cardData[web_index].key:'请选择证件类型'}}
 				</picker>
 			</view>
@@ -30,7 +30,7 @@
 		<view class="peo-con">性别</view>
 		<view class="peo-content">
 			<view class="card">
-				<picker bindchange="sexChange" value="{{index}}"  range="{{sexData}}" range-key="key" style="width:100%;height:100%;font-size:13px;color:#A1A1A1;">
+				<picker bindchange="sexChange" value="{{index}}"  range="{{sexData}}" range-key="key" style="width:100%;height:100%;font-size:26rpx;color:#A1A1A1;">
 					{{sexData[web_index1].key?sexData[web_index1].key:'请选择性别'}}
 				</picker>
 			</view>
@@ -41,7 +41,7 @@
 		<view class="peo-con">出生日期</view>
 		<view class="peo-content">
 			<view class="card">
-				<picker bindchange="birthChange" mode="date"  style="width:100%;height:100%;font-size:13px;color:#A1A1A1;">
+				<picker bindchange="birthChange" mode="date"  style="width:100%;height:100%;font-size:26rpx;color:#A1A1A1;">
 					{{web_submitData.birth?web_submitData.birth:'请选择出生日期'}}
 				</picker>
 			</view>

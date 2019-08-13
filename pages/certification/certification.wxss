@@ -1,137 +1,145 @@
+page{
+  background: #f5f5f5;
+}
+.contLis{ 
+  background: #fff;
+}
 .top{
 	width: 100%;
-	height: 300px;
+	height: 560rpx;
+  padding-top: 40rpx;
 	background: #FFC900;
 	display: flex;
 }
 .top-img{
 	width: 60%;
-	height: 200px;
+	height: 400rpx;
 	text-align: right;
-	margin-top: 10px;
 }
 .top-img image{
-	width: 80px;
-	height: 80px;
+	width: 160rpx;
+	height: 160rpx;
 	border-radius: 50%;
 }
 .top-imgs{
 	width: 25%;
-	height: 200px;
+	height: 400rpx;
 	margin-left: 5%;
-	margin-top: 10px;
 }
 .top-imgs image{
-	width: 80px;
-	height: 80px;
-	border: 1px dashed #000000;
+	width: 160rpx;
+	height: 160rpx;
+	border: 2rpx dashed #000000;
 }
 .center{
 	width: 90%;
-	height: 130px;
-	border-radius: 10px;
+	height: 260rpx;
+	border-radius: 20rpx;
 	margin-left: 5%;
 	position: absolute;
-	top: 20%;
+	top: 240rpx;
 	background: white;
 	text-align: center;
 	padding-top: 5%;
 }
 .center-name{
 	color: #323232;
-	font-size: 16pt;
+	font-size: 32rpx;
 	font-weight: 600;
 }
 .center-names{
 	width: 100%;
-	height: 50px;
-	margin-top: 10px;
+	height: 100rpx;
+	margin-top: 20rpx;
 }
 .nam{
-	width: 80px;
-	height: 30px;
+	width: 160rpx;
+	height: 60rpx;
 	display: flex;
 	background: #F6D7A0;
-	border-radius: 10px;
-	line-height: 30px;
+	border-radius: 20rpx;
+	line-height: 60rpx;
 	margin-left: 35%;
 }
 .name{
-	font-size: 13px;
+	font-size: 26rpx;
 	font-weight: bold;
 	color: #9C793D;
 	margin-left: 3%;
 }
 .name-img{
 	width: 40%;
-	height: 30px;
+	height: 60rpx;
 	text-align: right;
 }
 .name-img image{
-	width: 15px;
-	height: 15px;
-	border: 1px dashed #000000;
+	width: 30rpx;
+	height: 30rpx;
+	border: 2rpx dashed #000000;
 }
 .name{
 	width: 50%;
-	height: 50px;
+	height: 100rpx;
 	text-align: left;
 }
 .people{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
-	line-height: 50px;
-	border: 1px dashed #F4F3F3;
+	line-height: 100rpx;
+	border-bottom: 2rpx solid #e7e7e7;
+}
+.people:last-child{ 
+  border-bottom: none;
 }
 .peo-name{
 	width: 60%;
-	height: 40px;
-	line-height: 40px;
+	height: 80rpx;
+	line-height: 80rpx;
 	color: #585858;
-	font-size: 16px;
+	font-size: 32rpx;
 	padding-left: 4%;
 	
 }
 .peo-con{
 	width: 40%;
 	color: #323232;
-	font-size: 16px;
-	line-height: 40px;
+	font-size: 32rpx;
+	line-height: 80rpx;
 	text-align: right;
 	margin-right: 5%;
 	font-weight: bold;
 }
 .peo-namea{
 	width: 40%;
-	height: 40px;
-	line-height: 40px;
+	height: 80rpx;
+	line-height: 80rpx;
 	color: #585858;
-	font-size: 16px;
+	font-size: 32rpx;
 	padding-left: 4%;
 }
 .peo-cona{
 	width:60%;
 	color: #323232;
-	font-size: 16px;
-	line-height: 40px;
+	font-size: 32rpx;
+	line-height: 80rpx;
 	font-weight: bold;
 }
 .btn{
 	width: 100%;
-	height: 40px;
-	margin-top: 20px;
+	height: 200rpx;
+	display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .btn span{
-	width: 300px;
-	height: 50px;
-	line-height: 50px;
+	width: 600rpx;
+	height: 88rpx;
+	line-height: 88rpx;
 	display: inline-block;
 	color: white;
 	background: #FF7B57;
-	margin-left: 10%;
 	text-align: center;
-	border-radius: 30px;
-	font-size: 17px;
-	font-weight: bold;
+	border-radius: 60rpx;
+	font-size: 32rpx;
 }

@@ -1,6 +1,6 @@
 .tourist{
 	width: 100%;
-	height: 400px;
+	height: 800rpx;
 	padding-top: 2%;
 	z-index: 111;
 }
@@ -8,15 +8,15 @@
 	width:87%;
 	margin: 0 auto;
 	background: #fff;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	border-radius:12px;
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
+	border-radius:24rpx;
 	height:160rpx;
-	margin-top: 24px;
+	margin-top: 48rpx;
 	padding: 1%;
 }
 .phone{
-	width:40px;
-	height:40px;
+	width:80rpx;
+	height:80rpx;
 	border-radius:50%;
 	display: flex;
 	align-items: center;
@@ -31,17 +31,17 @@
 }
 .left-img{
 	width: 100%;
-	height: 30px;
+	height: 60rpx;
 	text-align: center;
 }
 .left-img image{
-	width: 15px;
-	height:15px;
+	width:30rpx;
+	height:30rpx;
 }
 .left-name{
 	width: 100%;
 	text-align: center;
-	font-size:12px;
+	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:#585858;
@@ -67,13 +67,13 @@
 }
 .card{
 	width:100%;
-	font-size: 14px;
+	font-size: 28rpx;
 	color: #A1A1A1;
 	margin-top: 4%;
 }
 .bottom{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 	position: fixed;
 	bottom: 0;
@@ -81,9 +81,8 @@
 }
 .bottom-left{
 	width: 60%;
-	height: 50px;
+	height:100rpx;
 	display: flex;
-	
 }
 .bott{
 	width: 30%;
@@ -92,26 +91,26 @@
 }
 .left-img{
 	width: 100%;
-	height: 20px;
+	height: 40rpx;
 }
 .left-img image{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 }
 .left-cn{
-	font-size: 12px;
+	font-size: 24rpx;
 	color: #323232;
 	margin-top: 1%;
 }
 .bott-btn{
 	width: 40%;
-	height: 40px;
+	height: 80rpx;
 	color: white;
 	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
 	text-align: center;
-	line-height: 40px;
-	border-radius: 30px;
-	font-size: 17px;
+	line-height: 80rpx;
+	border-radius: 60rpx;
+	font-size: 34rpx;
 	margin-top: 1%;
 	margin-right: 4%;
 }
@@ -133,34 +132,34 @@
 }
 .visi-name{
 	width: 100%;
-	height: 42px;
-	font-size: 16px;
+	height: 84rpx;
+	font-size: 32rpx;
 	color: #323232;
 	padding: 0 3%;
-	line-height: 40px;
-	border-bottom: 1px solid white;
+	line-height: 84rpx;
+	border-bottom: 2rpx solid white;
 }
 .visi-name1{
 	width: 100%;
-	height: 45px;
+	height: 90rpx;
 	display: flex;
-	line-height: 45px;
+	line-height: 90rpx;
 	justify-content: center;
-	border-bottom: 1px solid white;
+	border-bottom: 2rpx solid white;
 }
 .visi-titlw{
 	width: 50%;
-	height: 50px;
-	font-size: 16px;
+	height: 100rpx;
+	font-size: 32rpx;
 	color: #323232;
 	padding: 0 3%;
 }
 .visi-img{
 	width: 50%;
-	height: 50px;
+	height: 100rpx;
 	text-align: center;
 }
 .visi-img image{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 }

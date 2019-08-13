@@ -3,24 +3,24 @@ page{
 }
 .acti{
 	width: 90%;
-	height: 350px;
+	height: 700rpx;
 	background: white;
 	margin-left: 5%;
-	margin-top: 20px;
-	border-radius: 10px;
+	margin-top: 40rpx;
+	border-radius: 20rpx;
 }
 .acti-top{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 	border-bottom: 1px solid #E7E7E7;
 }
 .top-name{
 	width: 80%;
-	height: 50px;
-	line-height: 50px;
+	height: 100rpx;
+	line-height:100rpx;
 	padding-left: 3%;
-	font-size:15px;
+	font-size:30rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
@@ -28,83 +28,83 @@ page{
 	z-index:1;
 }
 .title-line {
-	width: 16px;
-	height: 3px;
+	width: 32rpx;
+	height: 6rpx;
 	background: rgba(255, 209, 1, 1);
-	border-radius: 2px;
+	border-radius: 4rpx;
 	position:absolute;
 	z-index:-1;
 	left:5%;
-	bottom: 17px;
+	bottom: 34rpx;
 }
 .top-right{
 	width: 20%;
-	height: 50px;
-	line-height: 50px;
+	height: 100rpx;
+	line-height: 100rpx;
 	display: flex;
 }
 .right-img{
 	width: 50%;
-	height: 50px;
-	line-height: 50px;
+	height: 100rpx;
+	line-height: 100rpx;
 }
 .right-img image{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 }
 .activi{
 	width: 100%;
-	height: 50px;
-	line-height: 50px;
+	height: 100rpx;
+	line-height: 100rpx;
 	padding-left: 3%;
 	display: flex;
-	border-bottom: 1px solid #E7E7E7;
+	border-bottom: 2rpx solid #E7E7E7;
 }
 .name{
 	width: 40%;
-	font-size:14px;
+	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(88,88,88,1);
 }
 .title{
 	width: 60%;
-	font-size:16px;
+	font-size:32rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 }
 .btn{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	position: fixed;
 	bottom: 0;
 }
 .all{
 	width:86%;
 	margin: 0 auto;
-	height:40px;
+	height:80rpx;
 	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
-	border-radius:20px;
+	border-radius:40rpx;
 	display: flex;
 }
 .btn-img{
 	width: 40%;
-	height: 40px;
-	line-height: 40px;
+	height: 80rpx;
+	line-height: 80rpx;
 	text-align: right;
-	margin-top: 2px;
-	margin-right: 10px;
+	margin-top: 4rpx;
+	margin-right: 20rpx;
 }
 .btn-img image{
-	width:20px;
-	height:20px;
+	width:40rpx;
+	height:40rpx;
 }
 .btn-name{
 	width: 60%;
-	height:40px;
-	line-height: 40px;
-	font-size:17px;
+	height:80rpx;
+	line-height: 80rpx;
+	font-size:34rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(255,255,255,1);

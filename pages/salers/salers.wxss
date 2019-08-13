@@ -21,7 +21,7 @@ page {
 	padding: 0 20rpx;
 	position: relative;
 	margin: 0 auto;
-	font-size: 14px;
+	font-size: 28rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(192, 192, 192, 1);
@@ -31,14 +31,14 @@ page {
 	width: 100rpx;
 	height: 80rpx;
 	background: #FFD101;
-	border-radius: 0px 20px 20px 0px;
+	border-radius: 0px 40rpx 40rpx 0px;
 	position: absolute;
 	right: 4.5%;
 	top: 20rpx;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 888
+	z-index: 888;
 }
 
 .searchBtn image {
@@ -49,15 +49,14 @@ page {
 	width:87%;
 	margin: 0 auto;
 	background: #fff;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
-	border-radius:12px;
-	height:160rpx;
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
+	border-radius:24rpx;
 	margin-top: 24rpx;
 	padding: 3%;
 }
 .phone{
-	width:40px;
-	height:40px;
+	width:80rpx;
+	height:80rpx;
 	background:rgba(244,243,243,1);
 	border-radius:50%;
 	display: flex;
@@ -74,17 +73,17 @@ page {
 .left image{
 	width: 120rpx;
 	height:120rpx;
-	border-radius:50%
+	border-radius:50%;
 }
 .middle{
-	width:50%
+	width:57%;
 }
 .middle image{
 	width:24rpx;
 	height:24rpx
 }
 .right{
-	width:27%
+	width:20%;
 }
 .phoneCall{
 	width: 100%;
@@ -93,7 +92,7 @@ page {
 	top:0;
 	background:rgba(0,0,0,1);
 	opacity:0.6;
-	z-index:9999
+	z-index:9999;
 }
 .card{
 	position: fixed;
@@ -102,12 +101,12 @@ page {
 	top:35%;
 	height:340rpx;
 	background:rgba(255,255,255,1);
-	border-radius:12px;
+	border-radius:34rpx;
 }
 .item{
 	width:50%;
-	height:48px;
-	line-height: 48px;
+	height:96rpx;
+	line-height: 96rpx;
 	text-align: center;
 }
 .notice{

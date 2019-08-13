@@ -6,12 +6,13 @@
 }
 .top-left{
 	width: 50%;
-	display: flex;
-	justify-content: center;
 	height: 100rpx;
+  line-height: 100rpx;
 	background: white;
+  text-align: center;
 }
 .top-left span{
+  display: inline-block;
 	font-size:30rpx;
 	font-family:PingFang-SC-Bold;
 	

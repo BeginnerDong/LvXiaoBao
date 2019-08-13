@@ -1,22 +1,12 @@
 page{
-	background: #E7E7E7;
+	background: #f5f5f5;
 }
 .electro{
-	width:90%;
+	width:94%;
 	height: 100%;
-	margin-left: 5%;
+	margin:20rpx auto 0 auto;
 }
 .electro image{
 	width: 100%;
-	height: 800px;
-}
-.electrol{
-	width: 90%;
-	height: 150px;
-	margin-left: 5%;
-	margin-top: 5%;
-}
-.electrol image{
-	width: 100%;
-	height: 100px;
+  display: block;
 }

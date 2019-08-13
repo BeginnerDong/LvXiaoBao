@@ -20,16 +20,16 @@
 					</view>
 					<view class="font15 color1 bold-font" style="margin-top:16rpx;">{{item.companyName}}</view>
 				</view>
-				<view style="width:20%" class="flex-all" bindtap="intoPath" data-path="/pages/salers/salers">
+				<view style="width:100rpx" class="flex-all" bindtap="intoPath" data-path="/pages/salers/salers">
 					<view class="phone">
 						<image src="../../image/detail-icon3.png"></image>
 					</view>
 				</view>
 			</view>
 			<view class="peer-middle" bindtap="intoPath" data-path="/pages/productListPlate/productListPlate">
-				<view class="flex-align" style="margin-top: 14rpx;">
+				<view class="flex-align">
 					<view class="zhuying font14 color1 bold-font">主营业务</view>
-					<view class="font14 color1" style="margin-top: 5px;margin-left: 2%;">{{item.businessTypeName}}</view>
+					<view class="font14 color1" style="margin-left: 2%;">{{item.businessTypeName}}</view>
 				</view>
 				<view class="font14 color1" style="margin-top: 16rpx;">海南专线/北京专线/桂林专线/华东专线/普吉专线/巴黎专线/泰国专线/日韩专线/欧洲专线...</view>
 			</view>
@@ -74,9 +74,7 @@
 						<view class="zhuy font14 color2" style="margin-left: 2%;">{{item.brandName}}</view><span class='line'></span>
 						<view class="font14 color2 city avoidOverflow">{{item.province}}·{{item.city}}</view>
 					</view>
-					<view class="product-right avoidOverflow">
-						<span class="font12 ">出发城市:{{item.startCity}}</span>
-					</view>
+					<view class="product-right avoidOverflow">出发城市:{{item.startCity}}</view>
 				</view>
 				<view class="plate-bottom flex-align">
 					<view class="plate-bottom-item flex-all">

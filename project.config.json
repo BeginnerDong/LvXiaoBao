@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 97,
+			"current": 136,
 			"list": [
 				{
 					"id": -1,
@@ -713,6 +713,279 @@
 					"id": -1,
 					"name": "pages/basic/basic",
 					"pathName": "pages/basic/basic",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/certification/certification",
+					"pathName": "pages/certification/certification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/client/client",
+					"pathName": "pages/client/client",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/clipboard/clipboard",
+					"pathName": "pages/clipboard/clipboard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/collect/collect",
+					"pathName": "pages/collect/collect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/customer/customer",
+					"pathName": "pages/customer/customer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/datail/datail",
+					"pathName": "pages/datail/datail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/dateSlecte/dateSlecte",
+					"pathName": "pages/dateSlecte/dateSlecte",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/deposit/deposit",
+					"pathName": "pages/deposit/deposit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/discount/discount",
+					"pathName": "pages/discount/discount",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/eduit/eduit",
+					"pathName": "pages/eduit/eduit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/electro/electro",
+					"pathName": "pages/electro/electro",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/feedback/feedback",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/infomation/infomation",
+					"pathName": "pages/infomation/infomation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/insurance/insurance",
+					"pathName": "pages/insurance/insurance",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/jounery/jounery",
+					"pathName": "pages/jounery/jounery",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/labels/labels",
+					"pathName": "pages/labels/labels",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/micro/micro",
+					"pathName": "pages/micro/micro",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/money/money",
+					"pathName": "pages/money/money",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/orderDetail/orderDetail",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/orderPeople/orderPeople",
+					"pathName": "pages/orderPeople/orderPeople",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/otherDeal/otherDeal",
+					"pathName": "pages/otherDeal/otherDeal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/outbound/outbound",
+					"pathName": "pages/outbound/outbound",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/paid/paid",
+					"pathName": "pages/paid/paid",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/payFee/payFee",
+					"pathName": "pages/payFee/payFee",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/product/product",
+					"pathName": "pages/product/product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/productDetail/productDetail",
+					"pathName": "pages/productDetail/productDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/productList/productList",
+					"pathName": "pages/productList/productList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/productListPlate/productListPlate",
+					"pathName": "pages/productListPlate/productListPlate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/promote/promote",
+					"pathName": "pages/promote/promote",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pwd/pwd",
+					"pathName": "pages/pwd/pwd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/record/record",
+					"pathName": "pages/record/record",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/register/register",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/salers/salers",
+					"pathName": "pages/salers/salers",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/schedule/schedule",
+					"pathName": "pages/schedule/schedule",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/scrap/scrap",
+					"pathName": "pages/scrap/scrap",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/seleteSalers/seleteSalers",
+					"pathName": "pages/seleteSalers/seleteSalers",
 					"scene": null
 				}
 			]

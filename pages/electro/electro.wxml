@@ -1,9 +1,9 @@
 <view>
 	<view class="electro">
-	<image src="../../image/tex.png"></image>
+	<image mode="widthFix" src="../../image/tex.png"></image>
 	</view>
-	<view class="electrol">
-		<image src="../../image/ter.png"></image>
+	<view class="electro">
+		<image mode="widthFix" src="../../image/ter.png"></image>
 	</view>
 </view>
 

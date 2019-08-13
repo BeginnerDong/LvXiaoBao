@@ -1,4 +1,4 @@
-<view>
+<view class="contLis">
 	<view class="top">
 		<view class="top-img">
 			<image src="../../image/gao.png"></image>
@@ -35,5 +35,5 @@
 		<view class="peo-namea">地址:</view>
 		<view class="peo-cona">陕西省西安市莲湖区渭滨路</view>
 	</view>
-	<view class="btn"><span>重新认证</span></view>
 </view>
+<view class="btn"><span>重新认证</span></view>

@@ -1,73 +1,71 @@
 
 .login{
 	width: 100%;
-	height: 300px;
+	height: 600rpx;
 	background: #FFC900;
 }
 .login-name{
 	width: 100%;
-	height: 30px;
-	line-height: 30px;
+	height: 60rpx;
+	line-height: 60rpx;
 	text-align: center;
 	color: #323232;
-	padding-top: 10px;
-	
+	padding-top: 20rpx;
 }
 .login-title{
 	width: 90%;
-	height: 450px;
+	height: 900rpx;
 	margin-left: 5%;
 	position: fixed;
 	top: 10%;
-	background: white;
-	border-radius: 10px;
-	box-shadow:0px 20px 20px 0px rgba(0, 0, 0, 0.08);
+	background: w20rpx;
+	box-shadow:0px 40rpx 40rpx 0px rgba(0, 0, 0, 0.08);
 }
 .login-top{
 	width: 100%;
-	height: 100px;
+	height: 200rpx;
 	display: flex;
 	padding-top: 5%;
 	padding-left: 10%;
 }
 .login-logo{
-	width: 70px;
-	height: 70px;
+	width: 140rpx;
+	height: 140rpx;
 	border-radius: 50%;
 	text-align: center;
-	line-height: 70px;
-	box-shadow:0px 2px 3px 0px rgba(222,222,222,1);
+	line-height: 140rpx;
+	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);
 	color: #ED6533;
 }
 .logo-con{
-	margin-top: 13px;
+	margin-top: 26rpx;
 	margin-left: 5%;
 	font-weight: bold;
-	color: 20px;
+	color: 40rpx;
 }
 .login-cneter{
 	width: 90%;
-	height: 60px;
+	height: 120rpx;
 	margin-left: 10%;
-	margin-top: 30px;
+	margin-top: 60rpx;
 }
 .cen-top{
 	color: #333333;
-	font-size: 16px;
+	font-size: 32rpx;
 	font-weight: bold;
 }
 .cen-inp{
 	width: 90%;
-	height: 50px;
-	margin-top: 10px;
+	height: 100rpx;
+	margin-top: 20rpx;
 }
 .cen-inp input{
-	width: 250px;
-	height: 40px;
-	border-radius: 20px;
+	width: 500rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
 	background: #F4F3F3;
-	border: 1px solid white;
-	font-size: 14px;
+	border: 2rpx solid white;
+	font-size: 28rpx;
 }
 .cen-inp input[placeholder]{
 	padding-left: 5%;
@@ -77,50 +75,49 @@
 }
 .cen-input{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 }
 .ceinp{
 	width: 80%;
-	height: 50px;
+	height: 100rpx;
 }
 .ceinp input{
-	width: 300px;
-	height: 40px;
-	border-radius: 20px;
+	width: 600rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
 	background: #F4F3F3;
-	border: 1px solid white;
-	font-size: 10pt;
+	border: 2rpx solid white;
+	font-size:24rpx;
 }
 .cen-img image{
-	width: 30px;
-	height: 20px;
-	border: 1px dashed #F4F3F3;
+	width: 60rpx;
+	height: 40rpx;
+	border: 2rpx dashed #F4F3F3;
 	background: #000000;
 }
 .login-btn{
 	width: 100%;
-	height: 50px;
-	margin-top: 40px;
+	height: 100rpx;
+	margin-top:80rpx;
 }
 .login-btn span{
-	width: 300px;
-	height: 48px;
+	width: 696rpx;
 	display: inline-block;
 	background: #FFC900;
 	color: #323232;
-	font-size: 17px;
+	font-size: 34rpx;
 	text-align: center;
-	line-height: 48px;
-	border-radius: 30px;
+	line-height: 96rpx;
+	border-radius: 60rpx;
 	margin-left: 5%;
 	font-weight: bold;
 }
 .pwd{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	text-align: center;
-	font-size: 17px;
+	font-size: 34rpx;
 	color: #585858;
 	position: fixed;
 	bottom: 0;

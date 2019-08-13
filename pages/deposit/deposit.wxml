@@ -5,15 +5,15 @@
 		</view>
 	</view>
 	<view class="drawa">
-		<view class="draw-topa">提现金额</view>
+		<view class="draw-topa" style="border-bottom:none;">提现金额</view>
 		<view class="draw-cen">
 			<view class="couchar-inp flex">
 				<view>¥ </view>
 				<view>
-					<input value="{{web_submitData.price}}"  data-key="price" bindblur="inputChange"></input>
+					<input class="mnyInput" value="{{web_submitData.price}}"  data-key="price" bindblur="inputChange"></input>
 				</view>
 			</view>
-			<view class="draw-ri">全部提现</view>
+			<view class="draw-ri" style="font-size: 28rpx;">全部提现</view>
 		</view>
 		<view class="draw-top" style="color: #A1A1A1;">可提现金额￥3690.00元</view>
 	</view>
@@ -29,7 +29,6 @@
 			</view>
 		</block>
 		
-		
-		
-		<view class="cou-btn" bindtap="{{web_buttonCanClick?'submit':''}}"><span>提现</span></view>
 	</view>
+
+  	<view class="cou-btn" bindtap="{{web_buttonCanClick?'submit':''}}"><span>提现</span></view>

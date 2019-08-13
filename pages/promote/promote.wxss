@@ -6,11 +6,11 @@
 }
 .top-img{
 	width: 100%;
-	height: 250px;
+	height: 500rpx;
 }
 .top-img image{
 	width: 100%;
-	height: 250px;
+	height: 500rpx;
 }
 .top-name{
 	position: absolute;
@@ -19,37 +19,37 @@
 }
 .namea{
 	color: #FFFFFF;
-	font-size: 32px;
+	font-size: 34rpx;
 	font-weight: 800;
 }
 .name{
 	color:#FFE984;
-	font-size: 22pt;
+	font-size: 44rpx;
 	font-weight: 800;
 	text-align: center;
 	width: 100%;
 }
 .pro{
 	width: 90%;
-	height: 330px;
+	height: 660rpx;
 	background: white;
 	margin-left: 5%;
-	border-radius: 10px;
-	margin-top: 30px;
+	border-radius: 20rpx;
+	margin-top:60rpx;
 	z-index: 111;
 }
 .roname{
 	width: 100%;
-	height: 100px;
+	height: 200rpx;
 }
 .pro-top{
 	width: 100%;
 	text-align: center;
 }
 .pro-top image{
-	width: 200px;
-	height: 50px;
-	margin-top: 20px;
+	width: 400rpx;
+	height: 100rpx;
+	margin-top: 40rpx;
 }
 .proti{
 	width: 100%;
@@ -58,53 +58,53 @@
 	top: 52%;
 	left: 0%;
 	color: white;
-	font-size: 20px;
+	font-size: 40rpx;
 	font-weight: 800;
 }
 .pro-cen{
 	width: 100%;
-	height: 100px;
+	height: 200rpx;
 }
 .cen-img{
 	width: 100%;
 }
 .cen-img image{
 	width: 80%;
-	height: 23px;
+	height: 46rpx;
 	margin-left: 10%;
 }
 .cen-name{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	display: flex;
 }
 .nam{
 	width: 21%;
-	height: 30px;
+	height: 60rpxpx;
 	margin-left: 5%;
 	color: #E1501B;
-	font-size: 14px;
+	font-size: 28rpx;
 }
 .pro-num{
 	width: 100%;
-	height: 60px;
+	height: 120rpx;
 	text-align: center;
 	color: #E1501B;
 	font-weight: 600;
 }
 .poster{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 }
 .poster span{
-	width: 300px;
-	height: 48px;
+	width: 600rpx;
+	height: 96rpx;
 	display: inline-block;
 	text-align: center;
-	line-height: 48px;
+	line-height: 96rpx;
 	color: white;
 	background: #FF582B;
-	border-radius: 30px;
+	border-radius: 60rpx;
 	margin-left: 6%;
 	font-weight: bold;
 }
@@ -115,23 +115,23 @@
 	top: 111%;
 	left: 0%;
 	color: white;
-	font-size: 20px;
+	font-size: 40rpx;
 	font-weight: 800;
 }
 .center{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 }
 .cent-name{
 	width: 30%;
-	height: 50px;
+	height:100rpx;
 	margin-left: 3%;
 	border-right: 1px solid #FAB159;
 }
 .bgs{
 	color: #FF582C;
-	font-size: 18px;
+	font-size:36rpx;
 }
 .builder{
 	width: 100%;
@@ -144,8 +144,8 @@
 }
 .create{
 	width: 90%;
-	height: 430px;
-	border-radius: 10px;
+	height: 860rpx;
+	border-radius: 20rpx;
 	background: #FFFFFF;
 	position: fixed;
 	top: 10%;
@@ -154,57 +154,57 @@
 }
 .cera{
 	width: 100%;
-	height: 430px;
+	height: 860rpx;
 	background: white;
 }
 .img{
 	width: 100%;
-	height: 330px;
+	height: 660rpx;
 }
 .img image{
 	width: 100%;
-	height: 300px;
+	height:600rpx;
 }
 .create-name{
 	width: 80%;
-	height: 70px;
-	border-radius: 10px;
+	height: 140rpx;
+	border-radius: 20rpx;
 	background: #F0E1DA;
 	color: #FF582C;
-	font-size: 17px;
+	font-size: 34rpx;
 	text-align: center;
 	margin-left: 10%;
-	padding-top: 20px;
+	padding-top: 40rpx;
 }
 .close{
 	width: 100%;
-	height: 20px;
+	height: 40rpx;
 	text-align: center;
 }
 .close image{
-	width: 20px;
-	height: 20px;
-	margin-top: 10px;
+	width: 40rpx;
+	height: 40rpx;
+	margin-top: 20rpx;
 	border-radius: 50%;
 }
 .save{
 	width: 50%;
-	height: 50px;
+	height: 100rpx;
 	background: #FFFFFF;
 }
 .save-img{
 	width: 100%;
 	text-align: right;
-	margin-top: 10px;
+	margin-top:20rpx;
 }
 .save-img image{
-	width: 20px;
-	height: 20px;
-	margin-right: 15px;
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 30rpx;
 }
 .btn{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 	background: white;
 	z-index: 233333;
@@ -214,18 +214,18 @@
 .save-name{
 	width: 50%;
 	color: #323232;
-	font-size: 18px;
+	font-size: 36rpx;
 	font-weight: bold;
-	margin-top: 8px;
+	margin-top:16rpx;
 }
 .ngbu{
-	font-size:18px;
+	font-size:36rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:500;
 	color:#323232;
 }
 .vr{
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 40rpx;
 	background:rgba(240,225,218,1);
 }

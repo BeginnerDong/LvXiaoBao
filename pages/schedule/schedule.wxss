@@ -2,80 +2,76 @@ page{
 	background: #E7E7E7;
 }
 .schedule{
-	width: 100%;
-	height: 100px;
+	height: 200rpx;
 	padding: 2% 3%;
 	background: white;
 }
 .detail-id{
-	height: 15px;
+	height: 30rpx;
 	color: #323232;
 	opacity: 1;
-	font-size: 14px;
+	font-size: 28rpx;
 	font-weight: 500;
 }
 .detail-name{
 	width: 94%; 
-	
 	color: #323232;
 	opacity: 1;
-	font-size: 16px;
-	margin-top: 17px;
+	font-size: 32rpx;
+	margin-top: 34rpx;
 	overflow: hidden;
 	font-weight: bold;
-	line-height: 23px;
+	line-height: 46rpx;
 }
 .title-line {
-	width: 16px;
-	height: 3px;
+	width: 32rpx;
+	height: 6rpx;
 	background: rgba(255, 209, 1, 1);
-	border-radius: 2px;
+	border-radius: 4rpx;
 	position:absolute;
 	z-index:-1;
 	left:1%;
-	bottom: 12px;
+	bottom: 24rpx;
 }
 .schedata{
 	width: 100%;
-	
 	margin-top: 2%;
 	padding: 0 3%;
 	background: white;
 }
 .shedu{
 	width: 100%;
-	height: 48px;
-	line-height: 48px;
+	height: 96rpx;
+	line-height: 96rpx;
 	display: flex;
 	border-bottom: 1px solid #E7E7E7;
 }
 .she-data{
 	width: 30%;
-	font-size: 16px;
+	font-size: 32rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:500;
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
-	padding-top: 3px;
+	padding-top: 6rpx;
 }
 .she-date1{
 	width: 60%;
-	height: 50px;
+	height: 100rpx;
 	text-align: right;
 	font-weight: bold;
 }
 .she-date{
 	width: 62%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 	justify-content: flex-end;
 	font-weight: bold;
 }
 .count{
-
-	height: 50px;
-	font-size: 16px;
+	height: 100rpx;
+	font-size: 32rpx;
 	color: #323232;
 	opacity: 1;
 	font-weight:bold;
@@ -83,20 +79,20 @@ page{
 	margin-right: 3%;
 }
 .past{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 	background: #EC6532;
 	color: white;
 	text-align: center;
-	line-height: 20px;
-	font-size: 13px;
-	margin-top: 13px;
+	line-height: 40rpx;
+	font-size: 26rpx;
+	margin-top:26rpx;
 	font-weight: bold;
 }
 .count1{
 	width: 30%;
-	height: 50px;
-	font-size: 16px;
+	height: 100rpx;
+	font-size: 32rpx;
 	color: #323232;
 	opacity: 1;
 	text-align: right;
@@ -106,63 +102,63 @@ page{
 .flight{
 	width: 90%;
 	padding: 0 3%;
-	height: 100px;
+	height: 200rpx;
 	background: #E7E7E7;
 	opacity: 1;
-	border-radius: 10px;
-	margin-top: 15px;
+	border-radius: 20rpx;
+	margin-top: 30rpx;
 }
 .fli-top{
 	width: 100%;
-	height: 30px;
+	height: 60rpx;
 	display: flex;
 	justify-content: center;
 }
 .fli-con{
 	width: 33.4%;
-	font-size: 13px;
+	font-size: 26rpx;
 	padding-top: 2%;
 	color: #323232;
 	font-weight: 500;
 }
 .fli-con span{
-	width: 40px;
-	height: 20px;
-	border-radius: 10px;
+	width: 80rpx;
+	height: 40rpx;
+	border-radius: 20rpx;
 	background: #FFD101;
 	display: inline-block;
 	opacity: 1;
 	text-align: center;
-	line-height: 20px;
+	line-height: 40rpx;
 	color: #323232;
 }
 .back{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	margin-top: 2%;
-	line-height: 40px;
+	line-height: 80rpx;
 }
 .she-date2{
 	width: 100%;
-	height: 40px;
+	height: 80rpx;
 	display: flex;
 	justify-content: flex-end;
 }
 .past1{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 	background: #EC6532;
 	color: white;
 	text-align: center;
-	line-height: 20px;
-	font-size: 13px;
-	margin-right: 16px;
-	margin-top: 10px;
+	line-height: 40rpx;
+	font-size: 26rpx;
+	margin-right: 26rpx;
+	margin-top: 20rpx;
 	font-weight: bold;
 }
 .count2{
 	width: 100px;
-	font-size: 16px;
+	font-size: 32rpx;
 	color: #323232;
 	opacity: 1;
 	text-align: right;
@@ -171,105 +167,103 @@ page{
 }
 .tourist{
 	width: 100%;
-	
 	margin-top: 2%;
 	padding: 0 3%;
 	background: white;
 }
 .card{
 	width: 88%;
-	height: 100px;
+	height: 200rpx;
 	padding: 0 3%;
 	background: #F4F3F3;
 	opacity: 1;
 	margin-top: 3%;
-	border-radius: 10px;
+	border-radius: 20rpx;
 	display: flex;
 }
 
 .card-id{
 	width: 85%;
-	height: 50px;
+	height: 100rpx;
 	color: #A1A1A1;
-	font-size: 13px;
+	font-size: 26rpx;
 }
 .cardi{
 	width: 15%;
-	height: 100px;
-	line-height: 100px;
+	height:200rpx;
+	line-height: 200rpx;
 }
 .card-img{
 	width: 100%;
-	height: 100px;
-	line-height: 100px;
+	height: 200rpx;
+	line-height: 200rpx;
 	text-align: right;
 }
 .card-img image{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 }
 .card-id1{
 	width: 100%;
-	padding-left: 10px;
+	padding-left: 20rpx;
 }
 .card-name{
-	width: 100%;
-	height: 30px;
+	height: 60rpx;
 	color: #323232;
-	font-size: 14px;
-	padding: 10px;
+	font-size: 28rpx;
+	padding: 20rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight: bold;
 }
 .add{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	margin-top: 3%;
 	text-align: center;
 	border-bottom: 1px solid #E7E7E7;
 }
 .add span{
-	width: 150px;
-	height: 40px;
+	width: 300rpx;
+	height: 80rpx;
 	display: inline-block;
-	border-radius: 32px;
+	border-radius: 64rpx;
 	border: 1px solid #EC6532;
 	text-align: center;
-	line-height: 40px;
-	font-size: 15px;
+	line-height: 80rpx;
+	font-size:32rpx;
 	color: #EC6532;
 	font-weight: bold;
 }
 .more{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	text-align: center;
 	color: #A1A1A1;
 	display: flex;
-	line-height: 50px;
+	line-height: 100rpx;
 }
 .more-add{
 	width: 50%;
-	height: 50px;
+	height: 100rpx;
 	color: #A1A1A1;
-	font-size: 16px;
+	font-size:32rpx;
 	text-align: right;
 	margin-left: 5%;
 }
 .more-img{
 	width: 50%;
-	height: 50px;
+	height: 100rpx;
 	text-align: left;
-	margin-top: 5px;
+	margin-top: 10rpx;
 	margin-left: 2%;
 }
 .more-img image{
-	width: 20px;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 }
 .people{
 	width: 100%;
-	height: 400px;
+	height: 800rpx;
 	padding: 0 3%;
 	margin-top: 3%;
 	z-index: 111;
@@ -277,49 +271,49 @@ page{
 }
 .peo-title{
 	width: 100%;
-	height: 50px;
-	font-size: 16px;
+	height: 100rpx;
+	font-size: 32rpx;
 	color: #323232;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
-	padding-top: 3px;
-	line-height: 50px;
-	border-bottom: 1px solid #E7E7E7;
+	padding-top: 6rpx;
+	line-height: 100rpx;
+	border-bottom: 2rpx solid #E7E7E7;
 }
 .peo-name{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 	justify-content: center;
 	border-bottom: 1px solid #E7E7E7;
 }
 .peo-con{
 	width: 30%;
-	height: 50px;
-	font-size:14px;
+	height: 100rpx;
+	font-size:28rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
-	line-height:50px;
+	line-height:100rpx;
 	padding-left: 5%;
 }
 .peo-content{
 	width: 70%;
-	height: 50px;
+	height: 100rpx;
 }
 .peo-content input{
 	width: 69%;
-	height: 49px;
+	height: 98rpx;
 	border: none;
-	line-height: 49px;
-	font-size: 14px;
+	line-height: 98rpx;
+	font-size: 28rpx;
 }
 .botom{
 	width: 100%;
-	height: 70px;
+	height: 140rpx;
 	margin-top: 1%;
 	display: flex;
 	position: fixed;
@@ -327,17 +321,18 @@ page{
 	background: #FFFFFF;
 	opacity: 1;
 	z-index: 222;
+  box-shadow: 0 -4rpx 6rpx rgba(0,0,0,0.1);
 }
 .speci-left{
 	width: 50%;
-	height: 50px;
+	height: 100rpx;
 	padding-top: 3%;
 	padding-left: 3%;
 }
 .special{
 	width: 100%;
-	height: 25px;
-	font-size: 13px;
+	height: 50rpx;
+	font-size: 26rpx;
 	color: #323232;
 	opacity: 1;
 	padding-left: 2%;
@@ -345,11 +340,11 @@ page{
 }
 .spaci-btn{
 	width: 50%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 	justify-content: center;
 	background: #FF582B;
-	border-radius: 30px;
+	border-radius: 60rpx;
 	margin-top: 3%;
 	margin-right: 3%;
 }
@@ -358,18 +353,18 @@ page{
 	margin-left: 10%;
 }
 .spe-img image{
-	width: 15px;
-	height: 10px;
+	width: 30rpx;
+	height: 20rpx;
 }
 .speci1{
 	width: 48%;
-	height: 50px;
+	height: 100rpx;
 	opacity: 1;
 	color: white;
 	text-align: center;
-	font-size: 10px;
+	font-size: 20rpx;
 	font-weight: bold;
-	line-height: 20px;
+	line-height: 40rpx;
 	padding-top: 2%;
 }
 .cost{
@@ -389,32 +384,32 @@ page{
 	background: #FFFFFF;
 	opacity: 1;
 	z-index: 222;
-	border-radius: 10px;
+	border-radius: 20rpx;
 }
 .expense-title{
 	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	color: #323232;
-	font-size: 16px;
+	font-size: 32rpx;
 	padding: 3%;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
-	line-height: 50px;
-	padding-top: 3px;
+	line-height: 100rpx;
+	padding-top: 6rpx;
 	border-bottom: 1px solid #E7E7E7;
 }
 .expense-content{
 	width: 100%;
-	height: 60px;
+	height: 120rpx;
 	display: flex;
-	border-bottom: 1px solid #E7E7E7;
+	border-bottom: 2rpx solid #E7E7E7;
 }
 .expense-content2{
 	width: 100%;
-	height: 70px;
+	height: 140rpx;
 	display: flex;
 	border-bottom: 1px solid #E7E7E7;
 }
@@ -429,25 +424,25 @@ page{
 }
 .con-title{
 	width: 100%;
-	height: 25px;
+	height: 50rpx;
 	color: #323232;
-	font-size: 16px;
+	font-size: 32rpx;
 	font-weight: bold;
 }
 .con-title1{
-	height: 30px;
+	height: 60rpx;
 	color: #323232;
-	font-size: 14px;
+	font-size: 28rpx;
 	margin-top: 3%;
 }
 .con-title2{
-	height: 20px;
+	height: 40rpx;
 	color: #323232;
-	font-size: 14px;
+	font-size: 28rpx;
 }
 .con-title span{
 	color: #EC6532;
-	font-size: 20px;
+	font-size: 40rpx;
 }
 .con-right{
 	width: 50%;
@@ -456,16 +451,16 @@ page{
 }
 .expense-content1{
 	width: 100%;
-	height: 30px;
+	height: 60rpx;
 	display: flex;
-	margin-top: 30px;
+	margin-top: 60rpx;
 	padding-left: 5%;
 }
 .con{
 	width: 50%;
 	padding-left: 3%;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 32rpx;
 	color: #323232;
 }
 .con1{

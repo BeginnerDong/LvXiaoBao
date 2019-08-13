@@ -135,8 +135,8 @@
 	</view>
 	<view class="botom">
 		<view class="speci-left">
-			<view class="special" style="font-size: 13px;">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
-			<view class="special" style="display: flex;font-size: 15px;">
+			<view class="special" style="font-size: 26rpx;">优惠：<span style='color: #EC6532;'>￥100.00</span></view>
+			<view class="special" style="display: flex;font-size: 30rpx;">
 				<view class="spe-span">总价：<span style='color: #EC6532;'>￥5860.00</span></view>
 				<view class="spe-img" bindtap="isShowFee">
 					<image src="../../image/black.png"></image>
@@ -145,12 +145,12 @@
 		</view>
 		<view class="spaci-btn">
 			<view class="speci1" style="border-right: 1px solid white;" bindtap="submit" data-type="jump">
-				<view style="font-size: 14px;">跳过</view>
-				<view style="font-size: 12px;">确认订单</view>
+				<view style="font-size: 28rpx;">跳过</view>
+				<view style="font-size: 24rpx;">确认订单</view>
 			</view>
 			<view class="speci1" bindtap="submit" data-type="next">
-				<view style="font-size: 14px;">下一步</view>
-				<view style="font-size: 12px;">购买保险</view>
+				<view style="font-size: 28rpx;">下一步</view>
+				<view style="font-size: 24rpx;">购买保险</view>
 			</view>
 		</view>
 	</view>
