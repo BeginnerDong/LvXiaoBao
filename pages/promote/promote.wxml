@@ -85,7 +85,7 @@
 		</view>
 
 	</view>
-	<view class="btn" wx:if="{{web_show}}">
+	<view class="btn" wx:if="{{web_show}}"  bindtap="save">
 		<view class="save">
 			<view class="save-img">
 				<image src="../../image/sa.png"></image>

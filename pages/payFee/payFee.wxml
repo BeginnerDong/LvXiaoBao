@@ -8,7 +8,7 @@
 					<view class="right-img" bindtap="intoPath" data-path="/pages/shopping/shopping?index={{index}}">
 						<image src="../../image/write.png"></image>
 					</view>
-					<view class="right-img">
+					<view class="right-img" bindtap="deleteShopping" data-index="{{index}}">
 						<image src="../../image/delete.png"></image>
 					</view>
 				</view>

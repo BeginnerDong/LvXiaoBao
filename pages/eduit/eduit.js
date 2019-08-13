@@ -28,7 +28,38 @@ Page({
 
 	onLoad(options) {
 		const self = this;
-	
+		self.data.mainData = api.getStorageArray('peopleData');
+		if(!self.data.mainData){
+			self.data.mainData = []
+		}
+		console.log('self.data.mainData',self.data.mainData)
+		if(options.index){
+			self.data.index = options.index;
+			self.data.submitData.name = self.data.mainData[self.data.index].name;
+			self.data.submitData.card = self.data.mainData[self.data.index].card;
+			for (var i = 0; i < self.data.cardData.length; i++) {
+				if(self.data.mainData[self.data.index].cdtype==self.data.cardData[i].key){
+					self.data.submitData.cdtype = self.data.cardData[i].value;
+					self.setData({
+						web_index:i
+					})
+				}
+			};
+			for (var i = 0; i < self.data.sexData.length; i++) {
+				if(self.data.mainData[self.data.index].sex==self.data.sexData[i].value){
+					self.data.submitData.sex = self.data.sexData[i].value;
+					self.setData({
+						web_index1:i
+					})
+				}
+			};
+			self.data.submitData.phone = self.data.mainData[self.data.index].phone;
+			self.data.submitData.birth = self.data.mainData[self.data.index].birth;
+			
+		};
+		self.setData({
+			web_submitData:self.data.submitData
+		})
 
 	},
 
@@ -99,6 +130,31 @@ Page({
 		};
 		api.addPeople(postData, callback);
 	},
+	
+	updatePeople() {
+		const self = this;
+		const postData = api.cloneForm(self.data.submitData);
+		postData.header = {
+			'Content-Type':'application/x-www-form-urlencoded',
+			'Authorization':wx.getStorageSync('token')
+		};
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/odr/v1/people/'+self.data.mainData[self.data.index].id
+		const callback = (data) => {
+			if (data) {
+				if(data.content.id){
+					
+					api.setStorageArray('peopleData',self.data.mainData[self.data.index],'id',999);
+					setTimeout(function() {
+						wx.navigateBack({
+							delta: 1
+						});
+					}, 300);
+				}
+			
+			};
+		};
+		api.updatePeople(postData, callback);
+	},
 
 
 	submit() {
@@ -108,7 +164,18 @@ Page({
 		const pass = api.checkComplete(self.data.submitData);
 		console.log('self.data.submitData', self.data.submitData)
 		if (pass) {
-			self.addPeople()
+			if(self.data.index){
+				self.data.mainData[self.data.index].name=self.data.submitData.name;
+				self.data.mainData[self.data.index].phone=self.data.submitData.phone;
+				self.data.mainData[self.data.index].sex=self.data.submitData.sex;
+				self.data.mainData[self.data.index].birth=self.data.submitData.birth;
+				self.data.mainData[self.data.index].card=self.data.submitData.card;
+				self.data.mainData[self.data.index].cdtype=self.data.submitData.cdtype;
+				self.updatePeople()
+			}else{
+				self.addPeople()
+			}
+			
 		} else {
 
 			api.showToast('请补全信息', 'none');

@@ -154,7 +154,7 @@ Page({
 		api.buttonCanClick(self);
 		var type=api.getDataSet(e,'type');
 	
-		if(self.data.reservationAddress==''||self.data.reservationCompany==''||self.data.reservationName==''||self.data.reservationPhone==''){
+		if(self.data.orderPost.reservationAddress==''||self.data.orderPost.reservationCompany==''||self.data.orderPost.reservationName==''||self.data.orderPost.reservationPhone==''){
 			api.buttonCanClick(self,true);
 			api.showToast('请补充预定人信息','none');
 			return

@@ -22,6 +22,7 @@ Page({
 
 		self.getMainData();
 		self.setData({
+			web_provinces:self.data.provinces,
 			web_show: self.data.show
 		})
 	},
@@ -29,7 +30,9 @@ Page({
 	getMainData() {
 		const self = this;
 		const postData = {
-
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			}
 		};
 		const callback = (res) => {
 			if (res.code == 200) {
@@ -50,7 +53,11 @@ Page({
 			list:self.data.provinces
 		};
 		const callback = (res) => {
-			
+			if(res.code==200){
+				api.showToast('设置成功','none')
+			}else{
+				api.showToast(res.errmsg,'none')
+			}
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			console.log('getMainData', self.data.mainData)
 		};
@@ -68,6 +75,9 @@ Page({
 		} else {
 			self.data.provinces.push(text);
 		};	
+		self.setData({
+			web_provinces:self.data.provinces,
+		})
 	},
 
 	intoPath(e) {

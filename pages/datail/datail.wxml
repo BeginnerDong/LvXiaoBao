@@ -392,7 +392,7 @@
 		<view class="poster-icon" bindtap="showPoster">
 			<image src="../../image/close.png"></image>
 		</view>
-		<view class="post-img">
+		<view class="post-img" bindtap="save">
 			<view class="imgs">
 				<image src="../../image/sa.png"></image>
 			</view>

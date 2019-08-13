@@ -4,11 +4,12 @@
 		<view class="title-line"></view></view>
 		<view class="nav-center">
 			<block wx:for="{{web_mainData}}" wx:key="id">
-				<view class="nav-item" bindtap="select" data-index="{{index}}" >{{item}}</view>
+				<view class="nav-item"  bindtap="select" data-index="{{index}}" 
+				style="{{func.inArrayT(item,web_provinces)!=-1?'color:rgba(236,101,50,1);background: none;border: 1px solid #C5C5C5;font-weight: bold':''}}">{{item}}</view>
 			</block>	
 		</view>
 	</view>
 		<view class="area-btn" bindtap='supperProvinceUpdate'>
 			<span>确定</span>
 		</view>
-</view>
+</view><wxs src="../../utils/func.wxs" module="func" />

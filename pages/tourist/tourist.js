@@ -77,6 +77,38 @@ Page({
 			web_mainData: self.data.mainData
 		});
 	},
+	
+	
+	deletePeople(e) {
+		const self = this;
+		var index = api.getDataSet(e,'index');
+		const postData = {};
+		postData.header = {
+			'Content-Type':'application/x-www-form-urlencoded',
+			'Authorization':wx.getStorageSync('token')
+		};
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/odr/v1/people/'+self.data.mainData[index].id
+		const callback = (data) => {
+			if (data) {
+				if(data.code==200){
+					
+					
+					api.delStorageArray('peopleData',self.data.mainData[index],'index');
+					setTimeout(function() {
+						wx.navigateBack({
+							delta: 1
+						});
+					}, 300);
+				}
+				self.setData({
+					web_mainData: self.data.mainData
+				});
+			};
+		};
+		api.deletePeople(postData, callback);
+	},
+	
+	
 
 	add() {
 		const self = this;
@@ -95,12 +127,18 @@ Page({
 		};
 	},
 
-	intoPath(e) {
+	intoAdd(e) {
 		const self = this;
 		self.data.show = !self.data.show;
 		self.setData({
 			web_show: self.data.show
 		})
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
+	
+	intoPath(e) {
+		const self = this;
+		
 		api.pathTo(api.getDataSet(e, 'path'), 'nav');
 	},
 

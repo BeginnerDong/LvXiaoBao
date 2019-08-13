@@ -11,10 +11,10 @@
 						<view class="card">手机号码：{{item.phone}}</view>
 				</view>
 				<view class="right flex-justify">
-					<view class="phone">
+					<view class="phone" bindtap="intoPath" data-path="/pages/eduit/eduit?index={{index}}">
 						<image src="../../image/write.png"></image>
 					</view>
-					<view class="phone">
+					<view class="phone" bindtap="deletePeople" data-index="{{index}}">
 						<image src="../../image/delete.png"></image>
 					</view>
 				</view>	
@@ -42,7 +42,7 @@
 				<view class="left-cn">客户添加</view>
 			</view>
 		</view>
-		<view class="bott-btn">确定并返回</view>
+		<view class="bott-btn" bindtap="intoPathRedi">确定并返回</view>
 	</view> 
 	<view class="visi" wx:if="{{web_show}}">
 		
@@ -50,13 +50,13 @@
 	<view class="visitors" wx:if="{{web_show}}">
 		<view class="visi-name">添加游客
 		<view class="title-line"></view></view>
-		<view class="visi-name1" bindtap="intoPath" data-path="/pages/eduit/eduit">
+		<view class="visi-name1" bindtap="intoAdd" data-path="/pages/eduit/eduit">
 			<view class="visi-titlw">国内模式</view>
 			<view class="visi-img">
 				<image src="../../image/complete.png"></image>
 			</view>
 		</view>
-		<view class="visi-name1" bindtap="intoPath" data-path="/pages/outbound/outbound">
+		<view class="visi-name1" bindtap="intoAdd" data-path="/pages/outbound/outbound">
 			<view class="visi-titlw">出境模式</view>
 			<view class="visi-img">
 				<image src="../../image/quan.png"></image>

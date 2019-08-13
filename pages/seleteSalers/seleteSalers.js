@@ -26,54 +26,31 @@ Page({
 	  const self = this;
 	  self.data.mainData = api.getStorageArray('salesData');
 	  console.log('onShow',self.data.mainData);
-	 
+	 self.data.selectSale = wx.getStorageSync('selectSale');
+	 console.log('self.data.selectSale',self.data.selectSale)
 	  self.setData({
+		  web_selectSale:self.data.selectSale,
 	    web_mainData:self.data.mainData
 	  });
 	  api.checkLoadAll(self.data.isFirstLoadAllStandard,'getMainData',self);
 	},
 	
 	
-	
-	
-
-	getMainData(isNew) {
+	choose(e) {
 		const self = this;
-		if (isNew) {
-			api.clearPageIndex(self);
-		};
-		const postData = {
-			number:api.cloneForm(self.data.number),
-			size:api.cloneForm(self.data.size),
-		};
-		if(self.data.search.keyword!=''){
-			postData.keyword =self.data.search.keyword
-		};
-		const callback = (res) => {
-			if(res.content.list.length>0){
-				self.data.mainData.push.apply(self.data.mainData,res.content.list)
-			}else{
-				self.data.isLoadAll = true
-			};
-			self.setData({
-				web_mainData:self.data.mainData
-			})
-			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
-		};
-		api.sales(postData, callback);
+		const index = api.getDataSet(e, 'index');
+		
+		var selectSale = self.data.mainData[0][index];
+		wx.setStorageSync('selectSale',selectSale);
+		
+		wx.navigateBack({
+			delta:1
+		});
+		self.setData({
+			web_mainData: self.data.mainData
+		});
 	},
 	
-
-
-	
-	onReachBottom() {
-		const self = this;
-		if (!self.data.isLoadAll && self.data.buttonCanClick) {
-			self.data.number++;
-			self.getMainData();
-		};
-	},
 
 	intoPath(e) {
 		const self = this;

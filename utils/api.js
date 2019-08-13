@@ -476,6 +476,31 @@ class Api extends Base {
 		this.request(allParams);
 	}
 	
+	updatePeople(param, callback) {
+		var allParams = {
+			url: '/odr/v1/people/{id}',
+			type: 'put',
+			data: param,
+			sCallback: function(data) {
+				callback && callback(data);
+			}
+		};
+		this.request(allParams);
+	}
+	
+	
+	deletePeople(param, callback) {
+		var allParams = {
+			url: '/odr/v1/people/{id}',
+			type: 'delete',
+			data: param,
+			sCallback: function(data) {
+				callback && callback(data);
+			}
+		};
+		this.request(allParams);
+	}
+	
 	recommendProduct(param, callback) {
 		var allParams = {
 			url: '/home/v1/recommend/products',

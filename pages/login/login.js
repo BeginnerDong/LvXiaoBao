@@ -49,7 +49,7 @@ Page({
 		const self = this;
 		const postData = api.cloneForm(self.data.submitData)
 		postData.header = {
-			'Content-Type':'application/x-www-form-urlencoded'
+			'content-Type':'application/x-www-form-urlencoded'
 		};
 		const callback = (res) => {
 			if(res.code==200){

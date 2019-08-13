@@ -21,9 +21,9 @@
 					</block>
 				</view>
 			</view>
-			<view class="right flex-justify" style="width:18%" bindtap="isShow" data-index="{{index}}">
+			<view class="right flex-justify" style="width:18%" bindtap="choose" data-index="{{index}}">
 				<view class="flex-all phone">
-					<image src="../../image/quan.png"></image>
+					<image src="{{web_selectSale.id==item.id?'../../image/complete.png':'../../image/quan.png'}}"></image>
 				</view>
 			</view>	
 		</view>

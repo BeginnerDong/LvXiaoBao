@@ -19,6 +19,7 @@
 			</view>	
 		</view>
 	</view>
+	<wxs src="../../utils/func.wxs" module="func" />
 	<block wx:for="{{web_mainData}}">
 		<view class="order" >
 			<view class="order-name" >
@@ -71,47 +72,56 @@
 				<span bindtap="selectStateOne" data-key="103" 
 				style="{{func.inArrayT('103',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已支付</span>
 				<span bindtap="selectStateOne" data-key="108" 
-				style="{{func.inArrayT('104',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已取消</span>
+				style="{{func.inArrayT('108',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已取消</span>
 			</view>
 		</view>
 		<view class="state-name">
 			<view class="state-title">业务状态</view>
 			<view class="state-btn">
-				<span style="color: #EC6532;background: none;border: 1px solid #C5C5C5;">未确认</span>
-				<span>确认中</span>
-				<span>已确认</span>
-				<span>已取消</span>
+				<span bindtap="selectStateTwo" data-key="101"  
+				style="{{func.inArrayT('101',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">未确认</span>
+				<!-- <span style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">确认中</span> -->
+				<span bindtap="selectStateTwo" data-key="102" 
+				style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已确认</span>
+				<!-- <span style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已取消</span> -->
 			</view>
 		</view>
 		<view class="state-name">
 			<view class="state-title">产品信息</view>
 			<view class="state-btn">
-				<input type="text" placeholder="半自助"/>
+				<input type="text" placeholder="半自助" value="{{web_submitData.keyword}}"  data-key="keyword" bindblur="changeBind"/>
 			</view>
 		</view>
 		<view class="state-name" style="height: 140px;">
 			<view class="state-title">金额</view>
 			<view class="state-btn1">
 				<view class="state-top">
-					<view class="top-left">最低金额</view>-
-					<view class="top-left">最高金额</view>
+					<input class="top-left" placeholder="最低金额" value="{{web_submitData.ssp}}"  data-key="ssp" bindblur="changeBind"></input>-
+					<input class="top-left" placeholder="最高金额"  value="{{web_submitData.esp}}"  data-key="esp" bindblur="changeBind"></input>
 				</view>
 				<view class="state-top1">
-					<view class="top-left1" style="text-align: right;"><span style='color: #EC6532;background: none;border: 1px solid #C5C5C5;'>￥200以上</span></view>
-					<view class="top-left1" style="text-align: center;"><span>￥1000以上</span></view>
-					<view class="top-left1" style="text-align: left;"><span>￥5000以上</span></view>
+					<view class="top-left1" style="text-align: right;" bindtap="changeSsp" data-value="200">
+						<span style="{{web_submitData.ssp=='200'?'color: #EC6532;background: none;border: 1px solid #C5C5C5;':''}}">￥200以上</span>
+					</view>
+					<view class="top-left1" style="text-align: center;" bindtap="changeSsp" data-value="1000">
+						<span style="{{web_submitData.ssp=='1000'?'color: #EC6532;background: none;border: 1px solid #C5C5C5;':''}}">￥1000以上
+						</span>
+					</view>
+					<view class="top-left1" style="text-align: left;" bindtap="changeSsp" data-value="5000">
+						<span style="{{web_submitData.ssp=='5000'?'color: #EC6532;background: none;border: 1px solid #C5C5C5;':''}}">￥5000以上</span>
+					</view>
 				</view>
 			</view>
 		</view>
 		<view class="state-name">
 			<view class="state-title">游客信息</view>
 			<view class="state-btn">
-				<input type="text" placeholder="半自助"/>
+				<input type="text" placeholder="半自助" value="{{web_submitData.peopleName}}"  data-key="peopleName" bindblur="changeBind"/>
 			</view>
 		</view>
 		<view class="state-btn">
-			<view class="btn-left"><span>重置</span></view>
-			<view class="btn-right" bindtap="isShow"><span>确认</span></view>
+			<view class="btn-left" bindtap="installSelect"><span>重置</span></view>
+			<view class="btn-right" bindtap="confirmSelect"><span>确认</span></view>
 		</view>
 	</view>
 <!-- 	<view class="none">

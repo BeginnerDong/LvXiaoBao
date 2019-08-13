@@ -47,16 +47,17 @@ class Base {
 			};
 			console.log('params.data.token', params.data.token);
 		};
-
+		var header = params.data.header;
+		delete params.data.header;
 		wx.request({
 			url: url,
 			data: params.data,
 			method: params.type,
-			/*header: {
+			/* header: {
 			    'content-type': 'application/json',
 			    'token': wx.getStorageSync('token')
-			},*/
-			header:params.header,
+			}, */
+			header:header,
 			success: function(res) {
 				// 判断以2（2xx)开头的状态码为正确
 				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
