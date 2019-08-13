@@ -146,7 +146,6 @@ page{
 	line-height:94rpx;
 	position: relative;
 	z-index:1;	
-	padding-left: 28rpx;
 }
 .norm-data1{
 	width: 50%;
@@ -373,16 +372,18 @@ page{
 	border-bottom: 2rpx solid #E7E7E7;
 }
 .people{
-	margin-top: 5%;
+	margin-top: 20rpx;
+  padding: 0 3%;
+  background: #fff;
 }
 .people-title{
-	width: 65%;
+	width: 80%;
 	font-size: 32rpx;
 	font-weight: 500;
 	color:rgba(161,161,161,1);
 }
 .people-img{
-	width: 30%;
+	width: 20%;
 }
 .people-img image{
 	width: 30rpx;
@@ -395,8 +396,6 @@ page{
 	text-align: right;
 	font-size: 32rpx;
 	color: #A1A1A1;
-	padding-left: 28rpx;
-	margin-right: 26rpx;
 	display: flex;
 	justify-content: center;
 	font-weight:500;

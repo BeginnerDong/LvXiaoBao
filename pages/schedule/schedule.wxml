@@ -9,7 +9,7 @@
 			<view class="title-line"></view></view>
 			<view class="she-date1">{{web_orderPost.startDate}}</view>
 		</view>
-		<view class="shedu">
+		<view class="sheduHt">
 		<view class="she-data">出行人数
 			<view class="title-line"></view></view>
 			<view class="she-date">
@@ -72,14 +72,14 @@
 		</view> -->
 	</view>
 	<view class="tourist">
-		<view class="shedu">
+		<view class="sheduHt">
 			<view class="she-data">游客
 			<view class="title-line"></view></view>
-			<view class="she-date">
+			<view class="she-date"  style="padding-right:70rpx;">
 					<block wx:for="{{web_orderPost.bills}}" wx:key="id">
 						<view class="count">{{item.amount}}{{item.billSubject}};</view>
 					</block>	
-					<view class="count"><span style='color: #EC6532;'>{{web_orderPost.peopleIds.length}}</span>/{{web_allPeopleCount}}</view>
+					<view class="count numb"><span style='color: #EC6532;'>{{web_orderPost.peopleIds.length}}</span>/{{web_allPeopleCount}}</view>
 			</view>
 		</view>
 		<block wx:for="{{web_peopleData}}" wx:key="id">

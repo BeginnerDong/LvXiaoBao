@@ -52,7 +52,7 @@
 				</view>
 				<view class="plate-bottom flex-align">
 					<view class="plate-bottom-item flex-all">
-						<view class="font13 color2" style="margin-left: 18rpx;"><span style='font-size: 16px;font-weight: bold;'>￥{{item.tpriceOrigin}}/</span>人起</view>
+						<view class="font13 color2" style="margin-left: 18rpx;"><span style='font-size: 32rpx;font-weight: bold;'>￥{{item.tpriceOrigin}}/</span>人起</view>
 					</view>
 					<view class="plate-bottom-item flex-all" bindtap="supplierProductLike" data-index="{{index}}">
 						<view class="flex-all">
