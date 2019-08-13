@@ -1,147 +1,135 @@
 .eduit{
 	width: 100%;
-	height: 400px;
 }
 .peo-name{
-	width: 100%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
-	line-height: 50px;
+	line-height: 100rpx;
 	/* justify-content: center; */
 	padding: 0 3%;
-	border: 1px solid #E7E7E7;
+	border-top: 2rpx solid #E7E7E7;
 }
 .peo-con{
 	width: 30%;
-	height: 50px;
-	font-size: 16px;
+	font-size: 30rpx;
 	color:#323232;
-	line-height: 50px;
-	font-weight:500;
 }
 .peo-con1{
 	width: 85%;
-	height: 50px;
-	font-size: 16px;
+	height: 100rpx;
+	font-size: 32rpx;
 	color:#323232;
-	line-height: 50px;
+	line-height: 100rpx;
 	font-weight:500;
 }
 .card-img1{
 	width: 15%;
-	height: 50px;
-	line-height: 50px;
+	height: 100rpx;
+	line-height: 100rpx;
+  text-align: right;
 }
 .card-img1 image{
-	width: 15px;
-	height: 15px;
+	width: 30rpx;
+	height: 30rpx;
 }
 .peo-content{
 	width: 70%;
-	height: 50px;
+	height: 100rpx;
 	display: flex;
 }
 .peo-content input{
-	width: 60%;
-	height: 50px;
+	width: 100%;
+	height: 100rpx;
 	border: none;
-	font-size: 10px;
-	color: #A1A1A1;
-	line-height: 50px;
-	opacity: 1;
+	font-size: 26rpx;
+	color: #333;
+	line-height: 100rpx;
 }
 .card-img{
 	width: 20%;
-	height: 50px;
-	line-height: 50px;
+	height: 100rpx;
+	line-height: 100rpx;
 	text-align:right;
-	margin-right: 15%;
 }
 .card{
 	width: 80%;
-	
 }
 .card input{
 	width: 60%;
-	height: 50px;
+	height: 100rpx;
 	border: none;
-	font-size: 14px;
+	font-size: 28rpx;
 	color: #A1A1A1;
 	opacity: 1;
-	line-height: 50px;
+	line-height: 100rpx;
 	
 }
 .card-img image{
-	width: 15px;
-	height: 15px;
+	width: 30rpx;
+	height: 30rpx;
 }
 
 .peo-content1{
-	font-size: 14px;
+	font-size: 28rpx;
 	color: #323232;
 }
 .peo-content1 input{
 	width: 70%;
-	height: 50px;
+	height: 100rpx;
 	border: none;
-	font-size: 14px;
+	font-size: 28rpx;
 	color: #A1A1A1;
-	line-height: 50px;
+	line-height: 100rpx;
 	opacity: 1;
 }
 .detail{
-	width: 100%;
-	height: 200px;
+	padding: 0 3%;
 	background: #F4F3F3;
+  padding-bottom: 40rpx;
 }
 .detail-name{
 	width: 100%;
-	font-size: 16px;
-	font-family:PingFang-SC-Bold;
+	font-size: 32rpx;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
-	padding-top: 3px;
-	height: 50px;
-	line-height: 50px;
-	padding-left: 5%;
+	padding-top: 20rpx;
+	height: 90rpx;
+	line-height: 90rpx;
 }
 .title-line {
-	width: 16px;
-	height: 3px;
+	width: 32rpx;
+	height: 6rpx;
 	background: rgba(255, 209, 1, 1);
-	border-radius: 2px;
+	border-radius: 4rpx;
 	position:absolute;
 	z-index:-1;
-	left:5%;
-	bottom: 17px;
+	left:1%;
+	bottom: 34rpx;
 }
 .detail-con{
 	width: 100%;
-	height: 45px;
-	padding-left: 3%;
+	height: 90rpx;
 	color: #A1A1A1;
-	font-size: 13px;
-	line-height: 25px;
-	font-weight: 500;
+	font-size: 26rpx;
+	line-height: 45rpx;
 }
 .btn{
 	width: 100%;
-	height: 50px;
-	margin-top: 20px;
+	margin: 80rpx 0;
 }
 .btn span{
-	width: 300px;
-	height: 48px;
+	width: 600rpx;
+	height: 88rpx;
 	text-align: center;
-	line-height: 48px;
-	display: inline-block;
-	border-radius: 30px;
-	font-size: 17px;
+	line-height: 88rpx;
+	display: block;
+	border-radius: 50rpx;
+	font-size: 32rpx;
 	color: #FFFFFF;
 	background: #FF7B57;
-	opacity: 0.2;
-	margin-left: 10%;
+	opacity: 0.3;
 	font-weight: bold;
+  margin: 0 auto;
 }

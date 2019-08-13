@@ -19,7 +19,7 @@
 				<image src="{{web_id==web_mainData[0].id?'../../image/whitegou.png':'../../image/white.png'}}"></image>
 			</view>
 		</view>
-		<view class="vt" style="background:linear-gradient(-45deg,rgba(247,77,95,1) 0%,rgba(255,136,166,1) 100%);margin-top: 4%;">
+		<view class="vt" style="background:linear-gradient(-45deg,rgba(247,77,95,1) 0%,rgba(255,136,166,1) 100%);">
 			<view class="vt-left">
 				<view class="left-img">
 					<view class="vt-img">
@@ -39,7 +39,7 @@
 				<image src="{{web_id==web_mainData[1].id?'../../image/whitegou.png':'../../image/white.png'}}"></image>
 			</view>
 		</view>
-		<view class="vt" style="background:linear-gradient(-45deg,rgba(0,150,255,1) 0%,rgba(52,203,254,1) 100%);margin-top: 4%;">
+		<view class="vt" style="background:linear-gradient(-45deg,rgba(0,150,255,1) 0%,rgba(52,203,254,1) 100%);">
 			<view class="vt-left">
 				<view class="left-img">
 					<view class="vt-img">
@@ -88,7 +88,7 @@
 		<view class="set-names">2、开始使用日期从购买当天算起</view>
 	</view>
 	<view class="count">
-		<view class="count-title">总计：</view>
+      <!-- <view class="count-title">总计：</view> -->
 		<view class="count-con">￥{{web_price}}</view>
 		<view class="count-btn" bindtap="buy">立即支付</view>
 	</view>

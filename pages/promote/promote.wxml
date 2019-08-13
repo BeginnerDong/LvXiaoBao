@@ -1,7 +1,7 @@
-<view style="width: 100%;height: 100%;background: #FF3300;">
+<view>
 	<view class="top">
 		<view class="top-img">
-			<image src="../../image/promotebg.png"></image>
+			<image src="../../image/promotebg.png" mode="widthFix"></image>
 		</view>
 		<view class="top-name">
 			<view class="namea">每邀请一位好友</view>
@@ -17,7 +17,7 @@
 		</view>
 		<view class="pro-cen">
 			<view class="cen-img">
-				<image src="../../image/pro.png"></image>
+				<image src="../../image/pro.png" mode="widthFix"></image>
 			</view>
 			<view class="cen-name">
 				<view class="nam">
@@ -44,12 +44,12 @@
 		</view>
 		<view class="poster" bindtap="showPoset"><span>生成推广海报</span></view>
 	</view>
-	<view class="pro" style="height: 280px;">
+	<view class="pro">
 		<view class="roname">
 			<view class="pro-top">
 				<image src="../../image/promote.png"></image>
 			</view>
-			<view class="protis">我的奖励</view>
+			<view class="proti">我的奖励</view>
 		</view>
 		<view class="center">
 			<view class="cent-name">

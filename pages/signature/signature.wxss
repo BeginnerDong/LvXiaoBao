@@ -3,73 +3,70 @@ page{
 }
 .sign{
 	width: 100%;
-	height: 440px;
 	background: white;
+  padding-bottom: 40rpx
 }
 .sign-title{
-	width: 100%;
-	font-size: 16px;
+	font-size: 32rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
 	position: relative;
 	z-index:1;
-	padding-top: 3px;
-	height: 40px;
-	line-height: 40px;
-	padding-left: 5%;
+	padding-top:10rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	padding:0 5%;
 }
 .title-line {
-	width: 16px;
-	height: 3px;
+	width: 32rpx;
+	height: 6rpx;
 	background: rgba(255, 209, 1, 1);
-	border-radius: 2px;
+	border-radius: 4rpx;
 	position:absolute;
 	z-index:-1;
 	left:5%;
-	bottom: 12px;
+	bottom: 24rpx;
 }
 .sign-add{
 	width: 100%;
-	height: 150px;
+	height: 300rpx;
 	margin-left: 40%;
 }
 .add{
-	width: 100px;
-	height: 100px;
+	width: 200rpx;
+	height: 200rpx;
 	text-align: center;
-	line-height: 100px;
+	line-height: 200rpx;
 	background: #F2F2F2;
-	border-radius: 8px;
+	border-radius: 16rpx;
 }
 .add image{
-	width: 15px;
-	height: 15px;
+	width: 30rpx;
+	height: 30rpx;
 }
 .sign-name{
-	width: 100%;
-	height: 35px;
-	line-height: 35px;
+	height:70rpx;
+	line-height: 70rpx;
 	color: #585858;
-	padding-left: 5%;
-	font-size: 12px;
+	padding:0 5%;
+	font-size: 24rpx;
 	font-weight:500;
 }
 .btn{
 	width: 100%;
-	height: 40px;
-	margin-top: 20px;
+  padding: 80rpx 0;
 }
 .btn span{
-	width: 300px;
-	height: 48px;
-	line-height: 48px;
-	display: inline-block;
+	width: 600rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+	display: block;
 	color: white;
 	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
-	margin-left: 10%;
+	margin:0rpx auto;
 	text-align: center;
-	border-radius: 30px;
-	font-size: 17px;
+	border-radius: 60rpx;
+	font-size: 34rpx;
 	font-weight: bold;
 }

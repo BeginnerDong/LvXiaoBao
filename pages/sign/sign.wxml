@@ -1,7 +1,7 @@
 <view>
 	<view class="sign">
 		<view class="sign-name">签署合同
-		<view class="title-line" style="bottom: 16px;"></view></view>
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="sign-sign">
 			<view class="sign-title">电子合同</view>
 			<view class="sign-con">
@@ -35,7 +35,7 @@
 	</view>
 	<view class="info">
 		<view class="sign-name">游客信息
-		<view class="title-line" style="bottom: 16px;"></view></view>
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">游客类别</view>
 			<view class="peo-content1">
@@ -93,7 +93,7 @@
 	</view>
 	<view class="product">
 		<view class="sign-name">产品信息
-		<view class="title-line" style="bottom: 16px;"></view></view>
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">*产品名称</view>
 			<view class="peo-content1">
@@ -137,7 +137,7 @@
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>{{web_submitData.totalDay}}</span></view>
-				<view class="sign-img" style="margin-left: 20px;" bindtap="counter" data-key="totalDay" data-type="+">
+				<view class="sign-img" style="margin-left: 40rpx;" bindtap="counter" data-key="totalDay" data-type="+">
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
@@ -150,7 +150,7 @@
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>{{web_submitData.totalNight}}</span></view>
-				<view class="sign-img" style="margin-left: 20px;" bindtap="counter" data-key="totalNight" data-type="+">
+				<view class="sign-img" style="margin-left: 40rpx;" bindtap="counter" data-key="totalNight" data-type="+">
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
@@ -226,7 +226,7 @@
 		<view class="peo-name">
 			<view class="peo-con">*合计</view>
 			<view class="sign-content">
-				<input  value="{{web_submitData.travelTotalPrice}}"  data-key="travelTotalPrice" bindblur="inputChange"/>元</view>
+				<input style="color:#333; font-size:32rpx;padding-right:20rpx;"  value="{{web_submitData.travelTotalPrice}}"  data-key="travelTotalPrice" bindblur="inputChange"/>元</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">支付说明</view>
@@ -239,7 +239,7 @@
 	</view>
 	<view class="costs">
 		<view class="sign-name">旅游费用
-		<view class="title-line" style="bottom: 16px;"></view></view>
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="peo-name">
 			<view class="peo-con">*购买保险方式</view>
 			<view class="peo-content1">
@@ -264,7 +264,7 @@
 	</view>
 	<view class="agglo">
 		<view class="sign-name">成团不成团约定
-		<view class="title-line" style="bottom: 16px;"></view></view>
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="peo-name">
 			<view class="sign-left">*成团人数</view>
 			<view class="sign-span">
@@ -272,7 +272,7 @@
 					<image src="../../image/sort.png"></image>
 				</view>
 				<view class="sign-cent"><span>{{web_submitData.lowestGroup}}</span></view>
-				<view class="sign-img" style="margin-left: 20px;"  bindtap="counter" data-key="lowestGroup" data-type="+">
+				<view class="sign-img" style="margin-left: 40rpx;"  bindtap="counter" data-key="lowestGroup" data-type="+">
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
@@ -321,8 +321,8 @@
 	</view>
 	<view class="group">
 		<view class="sign-name">拼团约定
-		<view class="title-line" style="bottom: 16px;"></view></view>
-		<view class="agglo-one" style="border-bottom: 1px solid #E7E7E7;">
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
+		<view class="agglo-one" style="border-bottom: 2rpx solid #E7E7E7;">
 			<view class="agg-con1">*游客是否同意拼团</view>
 			<view class="agg-img"  bindtap="inputChange" data-key="isAgreeGroup" data-value="true">
 				<image src="{{web_submitData.isAgreeGroup=='true'?'../../image/complete.png':'../../image/quan.png'}}"></image>
@@ -339,8 +339,8 @@
 	</view>
 	<view class="dispute">
 		<view class="sign-name">争议解决方式
-		<view class="title-line" style="bottom: 16px;"></view></view>
-		<view class="agglo-one" style="border-bottom: 1px solid #E7E7E7;">
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
+		<view class="agglo-one" style="border-bottom: 2rpx solid #E7E7E7;">
 			<view class="agg-con1">*请求仲裁委员会仲裁</view>
 			<view class="agg-img" bindtap="inputChange" data-key="methodChoose" data-value="1">
 				<image src="{{web_submitData.methodChoose=='1'?'../../image/complete.png':'../../image/quan.png'}}"></image>
@@ -363,7 +363,7 @@
 	</view>
 	<view class="rest">
 		<view class="sign-name">其他事项
-		<view class="title-line" style="bottom: 16px;"></view></view>
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="peo-name" bindtap="goOtherDeal">
 			<view class="peo-con3">其他约定事项</view>
 				<view class="card-img"><image src="../../image/right.png"></image></view>
@@ -379,11 +379,11 @@
 	</view>
 	<view class="pact">
 		<view class="sign-name">合同附件
-		<view class="title-line" style="bottom: 16px;"></view></view>
+		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="part-img" style="display: flex;">
 			<block wx:for="{{web_submitData.accessorys}}">			
 				<view class="part-ti">
-					<image src="{{item.accUrl}}" style="width: 100;height: 100%;"></image>
+					<image src="{{item.accUrl}}" style="width: 100%;height: 100%;"></image>
 				</view>
 			</block>
 			

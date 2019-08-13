@@ -1,7 +1,7 @@
 
- <view style="position:fixed;width:60rpx;top:30rpx;right:0;background-color:gray;z-index:999">
+ <view class="rightNav">
  	<block wx:for="{{alphbate}}" wx:key="id" wx:for-item="item">
- 		<view 
+ 		<view class="num" hover-class="on" 
  			data-alp="{{item}}"
  			bind:touchstart="handleTouchStart" 
  			bind:touchmove="handleTouchMove"

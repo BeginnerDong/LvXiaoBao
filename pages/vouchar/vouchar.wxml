@@ -4,7 +4,7 @@
 		<view class="couchar-inp flex">
 			<view>¥ </view>
 			<view>
-					<input value="{{web_submitData.price}}"  data-key="price" bindblur="inputChange"></input>
+					<input class="priceIput" type="number" value="{{web_submitData.price}}"  data-key="price" bindblur="inputChange"></input>
 				</view>
 		</view>
 	</view>

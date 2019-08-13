@@ -30,14 +30,14 @@ page {
 	width: 100rpx;
 	height: 80rpx;
 	background: #FFD101;
-	border-radius: 0px 20px 20px 0px;
+	border-radius: 0px 40rpx 40rpx 0px;
 	position: absolute;
 	right: 4.5%;
 	top: 20rpx;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 888
+	z-index: 888;
 }
 
 .searchBtn image {
@@ -73,8 +73,8 @@ page {
 	width:50%
 }
 .middle image{
-	width:24rpx;
-	height:24rpx
+	width:30rpx;
+	height:30rpx
 }
 .right{
 	width:27%

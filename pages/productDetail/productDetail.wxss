@@ -7,12 +7,12 @@ page{
 }
 .banner-start{
 	position: absolute;
-	height:40rpx;
+	height:60rpx;
 	background:rgba(50,50,50,1);
 	opacity:0.6;
-	border-radius:20rpx;
-	line-height: 40rpx;
-	padding: 10rpx;
+	border-radius:30rpx;
+	line-height: 60rpx;
+	padding:0 20rpx;
 	top:680rpx;
 	left:24rpx;
 	font-size:28rpx;
@@ -22,12 +22,12 @@ page{
 }
 .banner-num{
 	position: absolute;
-	height:40rpx;
+	height:60rpx;
 	background:rgba(50,50,50,1);
 	opacity:0.6;
-	border-radius:20rpx;
-	line-height: 40rpx;
-	padding: 10rpx;
+	border-radius:30rpx;
+	line-height: 60rpx;
+	padding: 0rpx 20rpx;
 	top:680rpx;
 	right:24rpx;
 	font-size:28rpx;

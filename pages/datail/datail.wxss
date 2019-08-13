@@ -463,14 +463,15 @@ page{
 	color: #484848;
 }
 .plan-img{
-	width: 95%;
+	width: 94%;
+  padding: 0 3%;
 	height: 600rpx;
-	margin-top: 1%;
+	margin-top: 20rpx;
 }
 .plan-img image{
-	width: 95%;
+	width: 100%;
 	height: 500rpx;
-	margin-left: 4%;
+  display: block;
 }
 .follow{
 	width: 100%;
@@ -572,7 +573,6 @@ page{
 	border-bottom: 2rpx solid #E7E7E7;
 }
 .cho-title{
-	width: 100%;
 	height: 80rpx;
 	padding: 20rpx;
 	font-size: 32rpx;
@@ -601,7 +601,6 @@ page{
 }
 .cho1-subtrat{
 	width: 30%;
-	margin-left: 2%;
 }
 .cho1-subtrat image{
 	width:30rpx;
@@ -609,7 +608,8 @@ page{
 }
 .cho1-number{
 	width: 30%;
-	height: 120rpx;
+  text-align: center;
+  background: #e7e7e7;
 }
 .cho1-number span{
 	width:80rx;
