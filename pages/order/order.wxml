@@ -129,6 +129,71 @@
 			<view class="btn-right" bindtap="confirmSelect"><span>确认</span></view>
 		</view>
 	</view>
+
+  <!-- 待确认弹出列表 -->
+  <view class="alertConfirm">
+    <view class="cfm-contbox">
+      <view class="detail-mess">待确认
+			  <view class="title-line"></view>
+      </view>
+      <view class="cfm-lisbox">
+
+        <view class="cfm-lis">
+          <!-- left -->
+          <view class="cfm-left">
+            <view class="tit avoidOverflow">领袖华夏</view>
+            <view class="cfm-people">
+              <view class="cfm-name">张丽</view>
+              <image class="cfm-phone" mode="widthFix" src="../../image/index-icon20.png"></image>
+            </view>
+          </view>
+          <!-- left end -->
+
+          <!-- middle时间 -->
+          <view class="cfm-middle">
+            <view class="data">2019-06-20</view>
+            <view class="time">12:28:07</view>
+          </view>
+          <!-- middle时间 end -->
+
+          <view class="cfm-ing">待确认</view>
+
+          <view class="cmf-btn">
+            <span>查看</span>
+          </view>
+
+        </view>
+        <!--  -->
+        <view class="cfm-lis">
+          <!-- left -->
+          <view class="cfm-left">
+            <view class="tit avoidOverflow">领袖华夏</view>
+            <view class="cfm-people">
+              <view class="cfm-name">张丽</view>
+              <image class="cfm-phone" mode="widthFix" src="../../image/index-icon20.png"></image>
+            </view>
+          </view>
+          <!-- left end -->
+
+          <!-- middle时间 -->
+          <view class="cfm-middle">
+            <view class="data">2019-06-20</view>
+            <view class="time">12:28:07</view>
+          </view>
+          <!-- middle时间 end -->
+
+          <view class="cfm-ing">待确认</view>
+
+          <view class="cmf-btn">
+            <span>查看</span>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <!-- 待确认弹出列表 end -->
+
 <!-- 	<view class="none">
 		<view class="none-img">
 			<image src="../../image/paid.png"></image>

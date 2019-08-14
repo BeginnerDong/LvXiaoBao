@@ -440,3 +440,94 @@ boxshaw{box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);border-radius: 16rpx; o
 	left:0rpx;
   bottom: 14rpx;
 }
+
+.alertConfirm{ 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0; 
+  top: 0;
+  right:0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 99999;
+}
+.alertConfirm .cfm-contbox{
+  background: #fff;
+  width:100%;
+  margin: 0 auto;
+  border-radius: 20rpx 20rpx 0 0;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20rpx;
+  z-index: 666;
+}
+.alertConfirm .detail-mess{
+	width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+	background: white;
+	height: 100rpx;
+	font-size: 32rpx;
+  font-weight: bold;
+	font-family:PingFang-SC-Bold;
+	color:rgba(50,50,50,1);
+	position: relative;
+	z-index:1;
+	line-height: 100rpx;
+}
+.alertConfirm .title-line {
+	width: 40rpx;
+	height: 6rpx;
+	background: rgba(255, 209, 1, 1);
+	border-radius: 4rpx;
+	position:absolute;
+	z-index:-1;
+	left:0rpx;
+  bottom: 28rpx;
+}
+.cfm-lis{ 
+  height: 120rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-top:2rpx solid #e7e7e7;
+}
+.cfm-left{
+   width: 20%;
+}
+.cfm-left .tit{
+  font-size: 32rpx;
+}
+
+.cfm-phone{
+  width: 40%;
+  text-align: center;
+  font-size: 32rpx;
+}
+.cfm-no{
+  width: 30%;
+  color: #a1a1a1;
+  font-size: 30rpx;
+  text-align: center;
+}
+.cmf-ewm{
+  width: 20%;
+  text-align: center;
+}
+.cmf-ewm image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+
+
+
+
+
+
+
+
+

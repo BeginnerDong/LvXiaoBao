@@ -189,3 +189,41 @@
 		<view class="can1" bindtap="submit"><span>立即支付</span></view>
 	</view>
 </view>
+
+
+  <!-- 电子合同弹出列表 -->
+  <view class="alertConfirm">
+    <view class="cfm-contbox">
+      <view class="detail-mess">电子合同
+			  <view class="title-line"></view>
+      </view>
+      <view class="cfm-lisbox">
+
+        <view class="cfm-lis">
+          <view class="cfm-left">
+            <view class="tit avoidOverflow">张丽</view>
+          </view>
+          <view class="cfm-phone">15102985632</view>
+          <view class="cfm-no">未签署</view>
+          <view class="cmf-ewm">
+            <image mode="widthFix" src="../../image/icon _ewm.png"></image>
+          </view>
+        </view>
+        <!--  -->
+        <view class="cfm-lis">
+          <view class="cfm-left">
+            <view class="tit avoidOverflow">王少峰</view>
+          </view>
+          <view class="cfm-phone">15102985632</view>
+          <view class="cfm-no">未签署</view>
+          <view class="cmf-ewm">
+            <image mode="widthFix" src="../../image/icon _ewm.png"></image>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <!--电子合同弹出列表 end -->
+
+
