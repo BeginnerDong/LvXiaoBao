@@ -47,7 +47,10 @@
 				</view>
 				<view class="conbtn">
 					<view class="con-btn" wx:if="{{item.stateThree=='101'}}"><span>出团通知</span></view>
-					<view class="con-btn" wx:if="{{item.stateTwo=='101'}}"><span>确认件</span></view>
+					<view class="con-btn" style="position: relative;" wx:if="{{item.stateTwo!='101'}}">
+						<span>确认件</span>
+						<view style="border-radius: 50%;text-align: center;line-height: 40rpx;right: -10rpx;font-size: 14px;width: 40rpx;height: 40rpx;position: absolute;top:-10rpx;background: #EC6532;color: #fff;">{{item.sendNum}}</view>
+					</view>
 					<view class="con-btn" bindtap="intoPath" data-path="/pages/sign/sign?orderCode={{item.orderCode}}" wx:if="{{item.contractIntegrity=='-1'||item.contractIntegrity=='0'}}"><span>签署合同</span></view>
 					<view class="con-btn" bindtap="intoPath" data-path="/pages/insurance/insurance?orderCode={{item.orderCode}}" wx:if="{{item.insureIntegrity=='-1'||item.insureIntegrity=='0'}}"><span>购买保险</span></view>
 					<view class="con-btn" bindtap="intoPath" data-path="/pages/orderDetail/orderDetail?orderCode={{item.orderCode}}"  wx:if="{{item.stateOne=='101'||item.stateOne=='102'}}"><span style="border: 1px solid #EC6532;color: #EC6532;">支付</span></view>
@@ -58,6 +61,8 @@
 	</block>
 	
 	<view class="bg" wx:if="{{web_show}}"></view>
+	
+	
 	<view class="state" wx:if="{{web_show}}">
 		<view class="state-name">
 			<view class="state-title">支付状态</view>
