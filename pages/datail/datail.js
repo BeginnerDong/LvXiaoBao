@@ -111,7 +111,7 @@ Page({
 			show_poster: self.data.show_poster
 		})
 	},
-
+  
 	showPeople() {
 		const self = this;
 		if (self.data.subjectData.length == 0) {
