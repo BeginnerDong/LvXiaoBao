@@ -39,11 +39,11 @@
 		
 	</view>
 	<view class="card" wx:if="{{web_show}}" style="z-index: 10000;">
-		<view style="height:130rpx;padding-top:30rpx;box-sizing:border-box;text-align: center;border-bottom: 1px solid #E7E7E7;">
+		<view style="height:130rpx;padding:20rpx 0 10rpx 0;box-sizing:border-box;text-align: center;border-bottom: 1px solid #E7E7E7;">
 			<view class="font16  color1">是否拨打销售热线？</view>
 			<view class="font16" style="color: #3960F2;">{{web_mainData[web_index].phone}}</view>
 		</view>
-		<view class="" style="height:120rpx;padding-top:20rpx;border-bottom: 1px solid #E7E7E7;text-align:center">
+		<view class="alertPhone">
 			<view class="font14" style="color: #EC6532;">联系不到TA，通知供应商</view>
 			<view class="notice">通知TA</view>
 		</view>

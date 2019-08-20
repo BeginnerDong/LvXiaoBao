@@ -7,7 +7,7 @@
 			<view class="sign-con">
 				<view class="con">
 					<picker bindchange="cddTypeChange" value="{{index}}"  range="{{web_cddTypeData}}" range-key="name" style="width:100%;">
-						<view style="font-size:32rpx">
+						<view  class="cont-tex avoidOverflow">
 							{{web_cddTypeData[web_index].name?web_cddTypeData[web_index].name:'选择合同类别'}}
 						</view>
 					</picker>
@@ -22,7 +22,7 @@
 			<view class="sign-con">
 				<view class="con">
 					<picker bindchange="cddClassifyChange" value="{{index}}"  range="{{web_cddClassifyData}}" range-key="name" style="width:100%;">
-						<view  style="font-size:32rpx">
+						<view class="cont-tex avoidOverflow">
 							{{web_cddClassifyData[web_index1].name?web_cddClassifyData[web_index1].name:'选择合同类型'}}
 						</view>
 					</picker>
@@ -241,8 +241,8 @@
 		<view class="sign-name">旅游费用
 		<view class="title-line" style="bottom: 32rpx;"></view></view>
 		<view class="peo-name">
-			<view class="peo-con">*购买保险方式</view>
-			<view class="peo-content1">
+			<view class="peo-con" style="width:40%">*购买保险方式</view>
+			<view class="peo-content1"  style="width:60%;">
 				<view class="card">			
 					<picker bindchange="insureBuyTypeChange" value="{{index}}"  range="{{insureBuyType}}" range-key="name" style="width:100%;">
 						<view>
@@ -254,8 +254,8 @@
 			</view>
 		</view>
 		<view class="peo-name">
-			<view class="peo-con">保险产品名称</view>
-			<view class="peo-content1">
+			<view class="peo-con" style="width:40%">*保险产品名称</view>
+			<view class="peo-content1" style="width:60%">
 				<view class="card">
 					<input type="text" placeholder="填写保险产品名称" value="{{web_submitData.insuranceName}}"  data-key="insuranceName" bindblur="inputChange"/>
 				</view>
@@ -282,7 +282,7 @@
 			<view class="agglo-img">
 				<image src="../../image/about.png"></image>
 			</view>
-			<view class="agglo-con">如不能成团，安那种方式解决</view>
+			<view class="agglo-con">如不能成团，按那种方式解决</view>
 		</view>
 		<view class="agglo-agg">
 			<view class="agglo-one" style="padding-bottom:10rpx;">

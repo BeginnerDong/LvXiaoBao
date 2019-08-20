@@ -37,20 +37,27 @@ page{
 	border-bottom: 2rpx solid #E7E7E7;
 }
 .sign-title{
-	width: 50%;
+	width: 30%;
 	color: #585858;
 	font-size: 32rpx;
 	font-weight: 500;
 }
 .sign-con{
-	width: 50%;
+	width: 70%;
 	height: 100rpx;
 	display: flex;
 }
 .con{
 	width: 90%;
 	color: #323232;
-	font-size: 16pt;
+	font-size: 28rpx;
+  text-align: right;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+.cont-tex{
+  font-size: 28rpx;
+  
 }
 .con-img{
 	width: 10%;
@@ -97,7 +104,7 @@ page{
 .peo-con{
 	width: 30%;
 	font-weight:500;
-	font-size: 32rpx;
+	font-size: 30rpx;
 	color: #323232;
 	opacity: 1;
 	padding-left: 2%;
@@ -205,27 +212,26 @@ page{
 }
 .agglo-title{
 	width: 100%;
-	height: 80rpx;
+	height: 100rpx;
 	display: flex;
-	padding-top: 2%;
+  align-items: center;
+  border-bottom: 2rpx solid #E7E7E7;
+
 }
 .agglo-img{
-	width: 10%;
-	text-align: right;
-	margin-top: -4rpx;
 	padding-left: 4%;
+  display: inline-block
 }
 .agglo-img image{
 	width: 32rpx;
 	height: 32rpx;
 }
 .agglo-con{
-	width: 90%;
+  display: inline-block;
 	color: #EC6532;
-	font-size: 30rpx;
-	text-align: left;
-	font-weight:500;
-	padding-left: 5%;
+	font-size: 28rpx;
+	padding-left: 10rpx;
+  line-height: 46rpx;
 }
 .agglo-one{
 	display: flex;
@@ -250,6 +256,10 @@ page{
 	width: 10%;
   text-align: center;
 
+}
+
+.agglo-agg{
+  padding: 20rpx 0;
 }
 .peo-con1{
 	width: 90%;

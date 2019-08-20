@@ -21,8 +21,7 @@ page{
 }
 .joun-con{
 	width: 100%;
-	height: 720rpx;
-	font-size: 30rpx;
+	height: 800rpx;
 	color: #323232;
 	opacity: 1;
 	margin-top: 4%;
@@ -37,20 +36,19 @@ textarea{
 .joun-btn{
 	width: 100%;
   margin: 0 auto;
-	height: 100px;
+	/* height: 100px; */
 	display: flex;
 	margin-top: 20rpx;
-  padding-top:40rpx;
+  padding-top:20rpx;
   border-top:2rpx solid #e7e7e7;
 }
 .joun-left{
 	width: 50%;
-	height: 160rpx;
 	text-align: center;
 }
 .joun-top{
 	width: 100%;
-	height: 80rpx;
+	height: 50rpx;
 }
 .joun-top image{
 	width:40rpx;

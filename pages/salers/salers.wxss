@@ -70,6 +70,14 @@ page {
 .left{
 	width: 23%;
 }
+.alertPhone{
+  height:100rpx;
+  border-bottom: 1px solid #E7E7E7;
+  text-align:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .left image{
 	width: 120rpx;
 	height:120rpx;
@@ -107,11 +115,22 @@ page {
 }
 .item{
 	width:50%;
-	height:96rpx;
-	line-height: 96rpx;
+	height:60rpx;
+	line-height: 60rpx;
 	text-align: center;
+  margin: 20rpx 0;
+}
+.item:first-child{
+  border-right: 2rpx solid #e7e7e7;
 }
 .notice{
-	
+	line-height: 60rpx;
+  background: #ffd101;
+  color: #333;
+  text-align: center;
+  padding: 0 20rpx;
+  display: block;
+  font-size: 28rpx;
+  border-radius: 30rpx;
 }
 
