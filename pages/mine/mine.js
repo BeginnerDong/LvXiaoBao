@@ -31,7 +31,9 @@ Page({
 	getMainData() {
 		const self = this;
 		const postData = {
-
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			}
 		};
 
 		const callback = (res) => {
@@ -73,7 +75,7 @@ Page({
 				api.showToast(res.message, 'none');
 				self.bind();
 			}else{
-				api.showToast(res.errmsg, 'none')
+				api.showToast(res.message, 'none')
 			}
 			
 

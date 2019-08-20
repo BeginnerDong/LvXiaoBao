@@ -164,21 +164,11 @@
 			<view class="con-title1" style="color: #A1A1A1;">人数总额</view>
 		</view>
 		<view class="con-right">
-			<view class="con-title"><span>￥1740</span></view>
-			<view class="con-title1">￥1740</view>
+			<view class="con-title"><span>￥{{web_lineFee}}</span></view>
+			<view class="con-title1">￥{{web_lineFee}}</view>
 		</view>
 	</view>
-	<!-- <view class="expense-content">
-		<view class="con-left">
-			<view class="con-title">交通</view>
-			<view class="con-title1" style="color: #A1A1A1;">人数总额</view>
-		</view>
-		<view class="con-right">
-			<view class="con-title"><span>￥2891</span></view>
-			<view class="con-title1">￥2891</view>
-		</view>
-	</view> -->
-	<view class="expense-content2">
+<!-- 	<view class="expense-content2">
 		<view class="con-left2">
 			<view class="con-title">保险</view>
 			<view class="con-title2" style="color: #A1A1A1;">江泰平安行旅游意外</view>
@@ -199,7 +189,7 @@
 			<view class="con-title"><span>￥6</span></view>
 			<view class="con-title1">￥3x2</view>
 		</view>
-	</view>
+	</view> -->
 	<view class="expense-content">
 		<view class="con-left">
 			<view class="con-title">优惠</view>

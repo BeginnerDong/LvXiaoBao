@@ -3,7 +3,7 @@
 	<view class="peo-name">
 		<view class="peo-con">*姓名</view>
 		<view class="peo-content1">
-			<input type="text" placeholder="请与证件姓名一致" value="{{web_submitData.name}}"  data-key="name" bindblur="inputChange"/>
+			<input type="text" placeholder="请与证件姓名一致" value="{{web_submitData.name}}"  data-key="name" bindinput="inputChange"/>
 		</view>
 	</view>
 	<view class="peo-name">
@@ -21,7 +21,7 @@
 		<view class="peo-con">*证件号码</view>
 		<view class="peo-content">
 			<view class="card">
-				<input type="number" placeholder="请与证件号码一致" value="{{web_submitData.card}}"  data-key="card" bindblur="inputChange"/>
+				<input type="number" placeholder="请与证件号码一致" value="{{web_submitData.card}}"  data-key="card" bindinput="inputChange"/>
 			</view>
 			<view class="card-img"><image src="../../image/jiao.png"></image></view>
 		</view>
@@ -52,9 +52,9 @@
 	<view class="peo-name">
 		<view class="peo-con">手机号</view>
 		<view class="peo-content1">
-			<input type="number" placeholder="请填写手机号码" value="{{web_submitData.phone}}"  data-key="phone" bindblur="inputChange"/>
+			<input type="number" placeholder="请填写手机号码" value="{{web_submitData.phone}}"  data-key="phone" bindinput="inputChange"/>
 		</view>
 	</view>
-	<view class="btn" bindtap="submit">保存</view>
+	<view class="btn" bindtap="submit" style="{{web_isComplete?'opacity:1':''}}">保存</view>
 	</view>
 </view>

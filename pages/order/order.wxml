@@ -1,28 +1,29 @@
 <view>
 	<view class="nav-top flex-align">
-		<view class="nav-top-item {{num==0?'nav-top-item-active':''}}" data-num = "0" bindtap="{{web_buttonCanClick?'menuClick':''}}">全部
+		<view class="nav-top-item {{num==0?'nav-top-item-active':''}}" data-num="0" bindtap="{{web_buttonCanClick?'menuClick':''}}">全部
 			<view class="title-line" wx:if="{{num==0}}"></view>
 		</view>
-		<view class="nav-top-item {{num==1?'nav-top-item-active':''}}" data-num = "1" bindtap="{{web_buttonCanClick?'menuClick':''}}">未确认
+		<view class="nav-top-item {{num==1?'nav-top-item-active':''}}" data-num="1" bindtap="{{web_buttonCanClick?'menuClick':''}}">未确认
 			<view class="title-line" wx:if="{{num==1}}"></view>
 		</view>
-		<view class="nav-top-item {{num==2?'nav-top-item-active':''}}" data-num = "2" bindtap="{{web_buttonCanClick?'menuClick':''}}">已确认
+		<view class="nav-top-item {{num==2?'nav-top-item-active':''}}" data-num="2" bindtap="{{web_buttonCanClick?'menuClick':''}}">已确认
 			<view class="title-line" wx:if="{{num==2}}"></view>
 		</view>
-		<view class="nav-top-item {{num==3?'nav-top-item-active':''}}" style="border-right:1px solid #A1A1A1" data-num = "3" bindtap="{{web_buttonCanClick?'menuClick':''}}">已取消
+		<view class="nav-top-item {{num==3?'nav-top-item-active':''}}" style="border-right:1px solid #A1A1A1" data-num="3"
+		 bindtap="{{web_buttonCanClick?'menuClick':''}}">已取消
 			<view class="title-line" wx:if="{{num==3}}"></view>
 		</view>
 		<view class="nav-top-item flex-all" bindtap="isShow">
 			<view>筛选</view>
 			<view class="flex-all">
 				<image src="../../image/peer-icon1.png"></image>
-			</view>	
+			</view>
 		</view>
 	</view>
 	<wxs src="../../utils/func.wxs" module="func" />
 	<block wx:for="{{web_mainData}}">
-		<view class="order" >
-			<view class="order-name" >
+		<view class="order">
+			<view class="order-name">
 				<view class="orde">
 					<view class="order-title">
 						<image src="../../image/1.png"></image>
@@ -30,7 +31,7 @@
 					<view class="orde-name avoidOverflow">{{item.channelName}}</view>
 					<view class="order-ri">{{item.stateOneName}}</view>
 				</view>
-				<view class="order-con">
+				<view class="order-con" bindtap="intoPath" bindtap="intoPath" data-path="/pages/orderDetail/orderDetail?orderCode={{item.orderCode}}">
 					<view class="con-le avoidOverflow2">{{item.lineName}}</view>
 					<view class="con-righ">￥{{item.shouPricef}}</view>
 				</view>
@@ -41,68 +42,63 @@
 						<span style="color: white;background: #EC6532;opacity: 0.8;">{{item.contractName}}</span>
 					</view>
 				</view>
-				
+
 				<view class="order-con1">
 					<view class="con-left">人数:{{item.totalNum[0]+item.totalNum[1]+item.totalNum[2]+item.totalNum[3]}}人({{item.totalNum[0]+item.totalNum[3]}}大{{item.totalNum[1]+item.totalNum[2]}}小)</view>
 				</view>
 				<view class="conbtn">
 					<view class="con-btn" wx:if="{{item.stateThree=='101'}}"><span>出团通知</span></view>
-					<view class="con-btn" style="position: relative;" wx:if="{{item.stateTwo!='101'}}">
+					<view class="con-btn" bindtap="sendsGet" data-order="{{item.orderCode}}" style="position: relative;" wx:if="{{item.stateTwo!='101'}}">
 						<span>确认件</span>
 						<view style="border-radius: 50%;text-align: center;line-height: 40rpx;right: -10rpx;font-size: 14px;width: 40rpx;height: 40rpx;position: absolute;top:-10rpx;background: #EC6532;color: #fff;">{{item.sendNum}}</view>
 					</view>
 					<view class="con-btn" bindtap="intoPath" data-path="/pages/sign/sign?orderCode={{item.orderCode}}" wx:if="{{item.contractIntegrity=='-1'||item.contractIntegrity=='0'}}"><span>签署合同</span></view>
 					<view class="con-btn" bindtap="intoPath" data-path="/pages/insurance/insurance?orderCode={{item.orderCode}}" wx:if="{{item.insureIntegrity=='-1'||item.insureIntegrity=='0'}}"><span>购买保险</span></view>
-					<view class="con-btn" bindtap="intoPath" data-path="/pages/orderDetail/orderDetail?orderCode={{item.orderCode}}"  wx:if="{{item.stateOne=='101'||item.stateOne=='102'}}"><span style="border: 1px solid #EC6532;color: #EC6532;">支付</span></view>
+					<view class="con-btn" bindtap="intoPath" data-path="/pages/orderDetail/orderDetail?orderCode={{item.orderCode}}"
+					 wx:if="{{item.stateOne=='101'||item.stateOne=='102'}}"><span style="border: 1px solid #EC6532;color: #EC6532;">支付</span></view>
 				</view>
-				
+
 			</view>
 		</view>
 	</block>
-	
+
 	<view class="bg" wx:if="{{web_show}}"></view>
-	
-	
+
+
 	<view class="state" wx:if="{{web_show}}">
 		<view class="state-name">
 			<view class="state-title">支付状态</view>
 			<view class="state-btn">
-				<span bindtap="selectStateOne" data-key="101" 
-				style="{{func.inArrayT('101',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">
-					
-				
-				未支付</span>
-				<span bindtap="selectStateOne" data-key="102" 
-				style="{{func.inArrayT('102',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">支付中</span>
-				<span bindtap="selectStateOne" data-key="103" 
-				style="{{func.inArrayT('103',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已支付</span>
-				<span bindtap="selectStateOne" data-key="108" 
-				style="{{func.inArrayT('108',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已取消</span>
+				<span bindtap="selectStateOne" data-key="101" style="{{func.inArrayT('101',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">
+
+
+					未支付</span>
+				<span bindtap="selectStateOne" data-key="102" style="{{func.inArrayT('102',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">支付中</span>
+				<span bindtap="selectStateOne" data-key="103" style="{{func.inArrayT('103',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已支付</span>
+				<span bindtap="selectStateOne" data-key="108" style="{{func.inArrayT('108',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已取消</span>
 			</view>
 		</view>
 		<view class="state-name">
 			<view class="state-title">业务状态</view>
 			<view class="state-btn">
-				<span bindtap="selectStateTwo" data-key="101"  
-				style="{{func.inArrayT('101',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">未确认</span>
+				<span bindtap="selectStateTwo" data-key="101" style="{{func.inArrayT('101',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">未确认</span>
 				<!-- <span style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">确认中</span> -->
-				<span bindtap="selectStateTwo" data-key="102" 
-				style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已确认</span>
+				<span bindtap="selectStateTwo" data-key="102" style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已确认</span>
 				<!-- <span style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已取消</span> -->
 			</view>
 		</view>
 		<view class="state-name">
 			<view class="state-title">产品信息</view>
 			<view class="state-btn">
-				<input type="text" placeholder="半自助" value="{{web_submitData.keyword}}"  data-key="keyword" bindblur="changeBind"/>
+				<input type="text" placeholder="半自助" value="{{web_submitData.keyword}}" data-key="keyword" bindblur="changeBind" />
 			</view>
 		</view>
 		<view class="state-name" style="height: 140px;">
 			<view class="state-title">金额</view>
 			<view class="state-btn1">
 				<view class="state-top">
-					<input class="top-left" placeholder="最低金额" value="{{web_submitData.ssp}}"  data-key="ssp" bindblur="changeBind"></input>-
-					<input class="top-left" placeholder="最高金额"  value="{{web_submitData.esp}}"  data-key="esp" bindblur="changeBind"></input>
+					<input class="top-left" placeholder="最低金额" value="{{web_submitData.ssp}}" data-key="ssp" bindblur="changeBind"></input>-
+					<input class="top-left" placeholder="最高金额" value="{{web_submitData.esp}}" data-key="esp" bindblur="changeBind"></input>
 				</view>
 				<view class="state-top1">
 					<view class="top-left1" style="text-align: right;" bindtap="changeSsp" data-value="200">
@@ -121,7 +117,7 @@
 		<view class="state-name">
 			<view class="state-title">游客信息</view>
 			<view class="state-btn">
-				<input type="text" placeholder="半自助" value="{{web_submitData.peopleName}}"  data-key="peopleName" bindblur="changeBind"/>
+				<input type="text" placeholder="半自助" value="{{web_submitData.peopleName}}" data-key="peopleName" bindblur="changeBind" />
 			</view>
 		</view>
 		<view class="state-btn">
@@ -130,71 +126,49 @@
 		</view>
 	</view>
 
-  <!-- 待确认弹出列表 -->
-  <view class="alertConfirm">
-    <view class="cfm-contbox">
-      <view class="detail-mess">待确认
-			  <view class="title-line"></view>
-      </view>
-      <view class="cfm-lisbox">
+	<!-- 待确认弹出列表 -->
+	<view class="alertConfirm" wx:if="{{web_send}}"  bindtap="close">
+		<view class="cfm-contbox">
+			<view class="detail-mess">待确认
+				<view class="title-line"></view>
+			</view>
+			<view class="cfm-lisbox">
+				<block wx:for="{{web_sendData}}">
+					<view class="cfm-lis">
+						<!-- left -->
+						<view class="cfm-left">
+							<view class="tit avoidOverflow">{{item.sendCompanyname}}</view>
+							<view class="cfm-people">
+								<view class="cfm-name">{{item.sendUsername}}</view>
+								<image class="cfm-phone" mode="widthFix" src="../../image/index-icon20.png"></image>
+							</view>
+						</view>
+						<!-- left end -->
+					
+						<!-- middle时间 -->
+						<view class="cfm-middle">
+							<view class="data">{{item.updateTimeDate}}</view>
+							<view class="time">{{item.updateTimeTime}}</view>
+						</view>
+						<!-- middle时间 end -->
+					
+						<view class="cfm-ing">{{item.stateName}}</view>
+					
+						<view class="cmf-btn">
+							<span>查看</span>
+						</view>
+					
+					</view>
+				</block>
+				
 
-        <view class="cfm-lis">
-          <!-- left -->
-          <view class="cfm-left">
-            <view class="tit avoidOverflow">领袖华夏</view>
-            <view class="cfm-people">
-              <view class="cfm-name">张丽</view>
-              <image class="cfm-phone" mode="widthFix" src="../../image/index-icon20.png"></image>
-            </view>
-          </view>
-          <!-- left end -->
 
-          <!-- middle时间 -->
-          <view class="cfm-middle">
-            <view class="data">2019-06-20</view>
-            <view class="time">12:28:07</view>
-          </view>
-          <!-- middle时间 end -->
+			</view>
+		</view>
+	</view>
+	<!-- 待确认弹出列表 end -->
 
-          <view class="cfm-ing">待确认</view>
-
-          <view class="cmf-btn">
-            <span>查看</span>
-          </view>
-
-        </view>
-        <!--  -->
-        <view class="cfm-lis">
-          <!-- left -->
-          <view class="cfm-left">
-            <view class="tit avoidOverflow">领袖华夏</view>
-            <view class="cfm-people">
-              <view class="cfm-name">张丽</view>
-              <image class="cfm-phone" mode="widthFix" src="../../image/index-icon20.png"></image>
-            </view>
-          </view>
-          <!-- left end -->
-
-          <!-- middle时间 -->
-          <view class="cfm-middle">
-            <view class="data">2019-06-20</view>
-            <view class="time">12:28:07</view>
-          </view>
-          <!-- middle时间 end -->
-
-          <view class="cfm-ing">待确认</view>
-
-          <view class="cmf-btn">
-            <span>查看</span>
-          </view>
-        </view>
-
-      </view>
-    </view>
-  </view>
-  <!-- 待确认弹出列表 end -->
-
-<!-- 	<view class="none">
+	<!-- 	<view class="none">
 		<view class="none-img">
 			<image src="../../image/paid.png"></image>
 		</view>
@@ -228,11 +202,9 @@
 		</view>
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/mine/mine">
 			<view class="nav_img">
-				<image src="../../image/index-icon7.png" ></image>
+				<image src="../../image/index-icon7.png"></image>
 			</view>
 			<view class="text">我的</view>
 		</view>
 	</view>
 </view>
-
- 

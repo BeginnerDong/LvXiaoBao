@@ -675,6 +675,19 @@ class Api extends Base {
 		};
 		this.request(allParams);
 	}
+	
+	//确认件
+	sendsGet(param, callback) {
+		var allParams = {
+			url: '/odr/v1/officeorders/{code}/sends',
+			type: 'get',
+			data: param,
+			sCallback: function(data) {
+				callback && callback(data);
+			}
+		};
+		this.request(allParams);
+	}
 }
 
 export {

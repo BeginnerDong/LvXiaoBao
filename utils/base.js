@@ -20,11 +20,13 @@ class Base {
 		getApp().globalData.buttonClick = true;
 		var baseRestUrl = 'http://yapi.lxbtrip.cn/mock/19';
 		
-		
+		console.log(params)
 		if(params.data.url){
 			var url = params.data.url;
+			delete params.data.url
 		}else{
 		   var url = baseRestUrl + params.url;
+		   
 		}
 		
 		const callback = (res) => {
@@ -46,9 +48,11 @@ class Base {
 				return;
 			};
 			console.log('params.data.token', params.data.token);
-		};
+		};		
+		
 		var header = params.data.header;
 		delete params.data.header;
+		
 		wx.request({
 			url: url,
 			data: params.data,

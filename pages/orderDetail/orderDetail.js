@@ -7,12 +7,19 @@ import {
 	Token
 } from '../../utils/token.js';
 const token = new Token();
-
+const QRCode = require('../../utils/weapp-qrcode.js')
+import rpx2px from '../../utils/rpx2px.js'
+let qrcode;
+const qrcodeWidth = rpx2px(300)
 Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
 		showPay:false,
-		orderInsurePeople:[]
+		orderInsurePeople:[],
+		orderContractsPeople:[],
+		show:false,
+		qrcodeWidth: qrcodeWidth,
+		showQr:false
 	},
 
 	onLoad(options) {
@@ -21,6 +28,73 @@ Page({
 		self.data.orderCode = options.orderCode;
 		self.getMainData();
 		
+	},
+	
+	showQr(e){
+		const self = this;
+		self.data.cIndex = api.getDataSet(e,'index');
+		console.log(self.data.cIndex)
+		for (var i = 0; i < self.data.mainData.contracts[self.data.cIndex].signs.length; i++) {
+			for (var j = 0; j < self.data.mainData.peoples.length; j++) {
+				if(self.data.mainData.contracts[self.data.cIndex].signs[i].touristId==self.data.mainData.peoples[j].id){
+					self.data.mainData.contracts[self.data.cIndex].signs[i].name=self.data.mainData.peoples[j].name
+					self.data.mainData.contracts[self.data.cIndex].signs[i].phone=self.data.mainData.peoples[j].phone
+				}
+			}
+		};
+		console.log(self.data.mainData.contracts[self.data.cIndex].signs)
+		self.setData({
+			web_mainData:self.data.mainData,
+			web_index:self.data.cIndex,
+			web_show:true
+		})	
+	},
+	
+	cavans(e){
+		const self = this;
+		var pIndex = api.getDataSet(e,'index');
+		qrcode = new QRCode('canvas', {
+			// usingIn: this,
+			text: self.data.mainData.contracts[self.data.cIndex].signs[pIndex].qrcode,
+			
+			width: qrcodeWidth,
+			height: qrcodeWidth,
+			colorDark: "#1CA4FC",
+			colorLight: "white",
+			correctLevel: QRCode.CorrectLevel.H,
+		});
+		self.setData({
+			showQr:true
+		})
+	},
+	
+	closeQr(){
+		const self = this;
+		self.setData({
+			showQr:false
+		})
+	},
+	
+	/* previewImg(e) {
+		const self = this;
+		var pIndex = e.currentTarget.dataset.index;
+		self.data.qrUrl = self.data.mainData.contracts[cIndex].signs[pIndex].qrcode
+		console.log('self.data.originData.mainImg', self.data.originData.mainImg)
+		wx.previewImage({
+			current: self.data.originData.mainImg[index].url,
+			urls: self.data.urlSet,
+			success: function(res) {},
+			fail: function(res) {},
+			complete: function(res) {},
+		})
+	}, */
+	
+	close(){
+		const self = this;
+		self.data.show = false;
+		self.setData({
+			web_show:self.data.show
+		})
 	},
 	
 	

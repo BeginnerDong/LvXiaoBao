@@ -112,7 +112,11 @@
 				<view class="title-line"></view>
 			</view>
 		</view>
-		<view class="product-info-bottom" style="border-bottom: none;">
+		<view style="font-size:15px;padding: 12px 3%;">
+			<rich-text>{{web_mainData.lineFeature}}</rich-text>
+		</view>
+		
+		<!-- <view class="product-info-bottom" style="border-bottom: none;">
 			<view class="star-img flex">
 				<image src="../../image/detail-icon4.png"></image>
 			</view>
@@ -145,7 +149,7 @@
 				[超值馈赠] 高尔夫挥杆体验+浮潜+泰式按摩精油
 				SPA双体验+超多特色！
 			</view>
-		</view>
+		</view> -->
 	</view>
 	<view class="fee-explain">
 		<view class="product-info-bottom">
@@ -156,14 +160,16 @@
 		</view>
 		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
 			<view style="font-weight:700 ;">费用不含</view>
-			<view>旅游护照、签证等相关出行证件办理费用。
+			<!-- <view>旅游护照、签证等相关出行证件办理费用。
 			</view>
 			<view>内陆段交通。</view>
 			<view>当地机场至酒店的往返接送服务。</view>
 			<view>所在地到出发地的往返交通费用。</view>
 			<view>因交通延阻、战争、政变、罢工、天气、飞机机器故
 				障、航班取消或更改时间等不可抗力原因所引致的额
-				外费用。</view>
+				外费用。</view> -->
+			
+			<rich-text style="font-size:15px;padding: 12px 3%;;">{{web_mainData.priceInclude}}</rich-text>
 		</view>
 		<view class="product-info-bottom" style="text-align: center;">
 			<view style="text-align: center;font-size:32rpx;color: #A1A1A1;width: 100%;">查看更多 》</view>
@@ -177,11 +183,11 @@
 			</view>
 		</view>
 		<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
-			<view>安全常识: 出游安全提示和出游常识</view>
+			<!-- <view>安全常识: 出游安全提示和出游常识</view>
 			<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
 			</view>
-			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
-
+			<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view> -->
+			<rich-text style="font-size:15px;padding: 12px 3%;;">{{web_mainData.bookingInfo}}</rich-text>
 		</view>
 		<view class="product-info-bottom" style="text-align: center;">
 			<view style="text-align: center;font-size:32rpx;color: #A1A1A1;width: 100%;">查看更多 》</view>

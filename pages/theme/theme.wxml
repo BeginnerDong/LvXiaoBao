@@ -2,13 +2,13 @@
 	<view class="title">
 		<view class="top">
 			<view class="top-img">
-				<image src="../../image/111%20(3).png"></image>
+				<image src="../../image/2.png"></image>
 			</view>
 			<view class="top-name">暖阳</view>
 		</view>
 		<view class="top">
 			<view class="top-img">
-				<image src="../../image/111%20(4).png"></image>
+				<image src="../../image/3.png"></image>
 			</view>
 			<view class="top-name">印象</view>
 		</view>
@@ -16,13 +16,13 @@
 	<view class="title">
 	<view class="top">
 		<view class="top-img">
-			<image src="../../image/111%20(2).png"></image>
+			<image src="../../image/4.png"></image>
 		</view>
 		<view class="top-name">星空</view>
 	</view>
 	<view class="top">
 		<view class="top-img">
-			<image src="../../image/111%20(1).png"></image>
+			<image src="../../image/2.png"></image>
 		</view>
 		<view class="top-name">系统</view>
 	</view>

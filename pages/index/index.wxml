@@ -1,7 +1,7 @@
 <view>
 	<view class="top">
 		<view class="search">
-			<input placeholder="热门目的地" value="{{web_search.keyword}}"  data-key="keyword" bindblur="inputChange"/>
+			<input placeholder="热门目的地" value="{{web_search.keyword}}" data-key="keyword" bindblur="inputChange" />
 			<view class="searchBtn" bindtap="goSearch">
 				<image src="../../image/index-icon2.png" />
 			</view>
@@ -31,20 +31,20 @@
 		<view class="menu_item" bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=101">
 			<view style="text-align: center;">
 				<view class="menu_item_image">
-					<image src="../../image/index-icon8.png" />
+					<image src="../../image/index-icon9.png" />
 				</view>
 				<span class="menu_title">国内游</span>
 			</view>
 		</view>
-		<view class="menu_item"  bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=103">
+		<view class="menu_item" bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=103">
 			<view style="text-align: center;">
 				<view class="menu_item_image">
-					<image src="../../image/index-icon9.png" />
+					<image src="../../image/index-icon8.png" />
 				</view>
 				<span class="menu_title">出境游</span>
 			</view>
 		</view>
-		<view class="menu_item"  bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=102">
+		<view class="menu_item" bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=102">
 			<view style="text-align: center;">
 				<view class="menu_item_image">
 					<image src="../../image/index-icon10.png" />
@@ -52,7 +52,7 @@
 				<span class="menu_title">周边游</span>
 			</view>
 		</view>
-		<view class="menu_item"  bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=104">
+		<view class="menu_item" bindtap="intoPath" data-path="/pages/productList/productList?lineCategory=104">
 			<view style="text-align: center;">
 				<view class="menu_item_image">
 					<image src="../../image/index-icon19.png" />
@@ -164,7 +164,7 @@
 			<view class="title-line"></view>
 		</view>
 		<view class="size-main">
-			<view class="tab">
+			<view class="tab" style="position: relative;overflow: hidden;">
 				<view class="tab-item {{web_postData.lineCategory==101?'active':''}}" bindtap="changeCategory" data-id="101">
 					国内游
 				</view>
@@ -177,11 +177,14 @@
 				<view class="tab-item {{web_postData.lineCategory==104?'active':''}}" bindtap="changeCategory" data-id="104">
 					一日游
 				</view>
+				<view style="width:42px;height:33px;background:rgba(255,209,1,1);border-radius:50%;position: absolute;right: -20rpx;top: -20rpx;"></view>
 			</view>
 			<view class="choose">
 				<block wx:for="{{web_businessClassifys}}" wx:key="key">
-					<view class="choose-item avoidOverflow" style="{{web_businessClassifys==item.key?'font-weight: 700':''}}" bindtap="changeClassify" data-key="{{item.key}}">
+					<view class="choose-item avoidOverflow" style="{{web_businessClassifys==item.key?'font-weight: 700':''}};position: relative;" bindtap="changeClassify"
+					 data-key="{{item.key}}">
 						{{item.value}}
+						<view wx:if="{{web_businessClassifys==item.key}}" style="width:42px;height:33px;background:rgba(255,209,1,1);border-radius:50%;position: absolute;right: -30rpx;top: -24rpx;"></view>
 					</view>
 				</block>
 			</view>
@@ -193,7 +196,7 @@
 				<image src="{{item.bannerImg1}}"></image>
 			</view>
 			<view class="product-right">
-				<view class="product-id">[产品id：]{{item.id}}</view>
+				<view class="product-id">[产品ID：]{{item.id}}</view>
 				<view class="product-title avoidOverflow2">{{item.lineName}}</view>
 				<view class="product-description avoidOverflow">1晚起住·海量【机票+酒店】随心...</view>
 				<view class="product-bottom">

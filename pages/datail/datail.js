@@ -111,7 +111,7 @@ Page({
 			show_poster: self.data.show_poster
 		})
 	},
-  
+
 	showPeople() {
 		const self = this;
 		if (self.data.subjectData.length == 0) {
@@ -180,7 +180,37 @@ Page({
 		}
 		self.setData({
 			web_subjectData: self.data.subjectData
-		})
+		});
+		self.countPrice()
+	},
+	
+	countPrice(){
+		const self = this;
+		self.data.lineFee = 0
+		for (var i = 0; i < self.data.subjectData.length; i++) {
+			self.data.lineFee += self.data.subjectData[i].count*self.data.subjectData[i].cprice
+		}	
+	},
+	
+	supplierProductLike(e) {
+		const self = this;
+		var id = self.data.id;
+		console.log(id)
+		const postData = {
+			header:{
+				'Content-Type':'application/x-www-form-urlencoded',
+				'Authorization':wx.getStorageSync('token')
+			},
+			url:'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/'+self.data.id+'/like'
+		};
+	
+		const callback = (res) => {
+			if(res.code==200){
+				api.showTaost('点赞成功','none')
+			}
+		
+		};
+		api.supplierProductLike(postData, callback);
 	},
 
 	confirm(e) {
@@ -215,6 +245,7 @@ Page({
 		} else if (self.data.orderPost.bills.length == 0) {
 			api.showToast('请选择出行人数', 'none')
 		} else {
+			wx.setStorageSync('lineFee', self.data.lineFee)
 			wx.setStorageSync('orderPost', self.data.orderPost)
 			api.pathTo(api.getDataSet(e, 'path'), 'nav');
 		}

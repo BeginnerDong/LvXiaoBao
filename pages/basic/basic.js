@@ -54,7 +54,8 @@ Page({
 			isCredit: '',
 			cards: [],
 			id: ''
-		}
+		},
+		region: ['陕西省', '西安市', '雁塔区'],
 	},
 
 	onLoad(options) {
@@ -118,7 +119,7 @@ Page({
 		self.data.submitData.city = e.detail.value[1];
 		self.data.submitData.district = e.detail.value[2];
 		this.setData({
-			web_region: self.data.region
+			web_submitData: self.data.submitData
 		})
 	},
 	

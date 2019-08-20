@@ -35,8 +35,7 @@ Page({
 				value: 107
 			}
 		],
-		orderPost: {},
-		
+		orderPost: {},	
 		show_fee:false,
 		showMore:false,
 		lineFee:0,
@@ -68,6 +67,7 @@ Page({
 	onShow() {
 		const self = this;
 		self.data.allPeopleCount=0;
+		self.data.lineFee = wx.getStorageSync('lineFee');
 		self.data.peopleData = api.getStorageArray('peopleData');
 		
 		self.data.orderPost = wx.getStorageSync('orderPost');
@@ -88,7 +88,7 @@ Page({
 		};
 		console.log(self.data.orderPost);
 		self.setData({
-			
+			web_lineFee:self.data.lineFee,
 			web_allPeopleCount:self.data.allPeopleCount,
 			web_orderPost: self.data.orderPost,
 			web_peopleData: self.data.peopleData
@@ -113,10 +113,7 @@ Page({
 	
 	
 	
-	countPrice(){
-		const self = this;
-		
-	},
+	
 
 	getMainData() {
 		const self = this;

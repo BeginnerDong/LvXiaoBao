@@ -126,7 +126,7 @@
 					<view class="peo-title1">
 						<view class="st">{{item.contractCode}}</view>
 						<view class="st-to"><span>查看</span></view>
-						<view class="st-to"><span style="background:linear-gradient(90deg,rgba(255,232,28,1) 0%,rgba(253,139,5,1) 100%);">发送</span></view>
+						<view class="st-to" bindtap="showQr" data-index="{{index}}"><span style="background:linear-gradient(90deg,rgba(255,232,28,1) 0%,rgba(253,139,5,1) 100%);">发送</span></view>
 					</view>
 				</view>
 				<view class="steel-con">
@@ -189,38 +189,34 @@
 		<view class="can1" bindtap="submit"><span>立即支付</span></view>
 	</view>
 </view>
+ <view class="alertConfirm" wx:if="{{showQr}}" bindtap="closeQr">
+	 <canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas' style="left:30%;position: fixed;top:30%;z-index: 999;"></canvas>
+ </view>
+
 
 
   <!-- 电子合同弹出列表 -->
-  <view class="alertConfirm">
+  <view class="alertConfirm" wx:if="{{web_show}}" bindtap="close">
     <view class="cfm-contbox">
-      <view class="detail-mess">电子合同
+      <view class="detail-mess">电子合同{{web_mainData.contracts[web_index].signs.length}}
 			  <view class="title-line"></view>
       </view>
       <view class="cfm-lisbox">
-
-        <view class="cfm-lis">
-          <view class="cfm-left">
-            <view class="tit avoidOverflow">张丽</view>
-          </view>
-          <view class="cfm-phone">15102985632</view>
-          <view class="cfm-no">未签署</view>
-          <view class="cmf-ewm">
-            <image mode="widthFix" src="../../image/icon _ewm.png"></image>
-          </view>
-        </view>
-        <!--  -->
-        <view class="cfm-lis">
-          <view class="cfm-left">
-            <view class="tit avoidOverflow">王少峰</view>
-          </view>
-          <view class="cfm-phone">15102985632</view>
-          <view class="cfm-no">未签署</view>
-          <view class="cmf-ewm">
-            <image mode="widthFix" src="../../image/icon _ewm.png"></image>
-          </view>
-        </view>
-
+		<block wx:for="{{web_mainData.contracts[web_index].signs}}">
+			<view class="cfm-lis">
+			  <view class="cfm-left">
+			    <view class="tit avoidOverflow">{{item.name}}</view>
+			  </view>
+			  <view class="cfm-phone">{{item.phone}}</view>
+			  <view class="cfm-no">{{item.authCode==0?'未签署':'已签署'}}</view>
+			  <view class="cmf-ewm" bindtap="cavans" data-index="{{index}}">
+			    <image mode="widthFix" src="../../image/icon _ewm.png"></image>
+			  </view>
+			</view>
+			
+		</block>
+       
+ 
       </view>
     </view>
   </view>

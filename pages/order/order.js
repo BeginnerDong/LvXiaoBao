@@ -23,6 +23,8 @@ Page({
 		week:['天','一','二','三','四','五','六'],
 		selectStateOne:[],
 		selectStateTwo:[],
+		sendData:[],
+		send:false
 	},
 
 	onLoad(options) {
@@ -32,7 +34,8 @@ Page({
 		self.setData({
 			web_selectStateTwo:self.data.selectStateTwo,
 			web_selectStateOne:self.data.selectStateOne,
-			web_show:self.data.show
+			web_show:self.data.show,
+			web_send:self.data.send
 		})
 	},
 	
@@ -42,6 +45,44 @@ Page({
 		self.setData({
 			web_submitData:self.data.submitData
 		})
+	},
+	
+	close(){
+		const self = this;
+		self.data.send = !self.data.send;
+		self.setData({
+			web_send:self.data.send
+		})
+	},
+	
+	sendsGet(e) {
+		const self = this;
+		var orderCode = api.getDataSet(e,'order');
+		console.log(e)
+		const postData = {
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			},
+			url:'http://yapi.lxbtrip.cn/mock/19/odr/v1/officeorders/'+orderCode+'/sends'
+		};
+		
+		const callback = (res) => {
+			if(res.code==200){
+				self.data.sendData.push.apply(self.data.sendData,res.content.list.list);
+				for (var i = 0; i < self.data.sendData.length; i++) {
+					self.data.sendData[i].updateTimeDate = self.data.sendData[i].updateTime.substring(0,10)
+					self.data.sendData[i].updateTimeTime = self.data.sendData[i].updateTime.substring(11,19)
+				}
+				self.data.send = true;
+			}
+			self.setData({
+				web_send:self.data.send,
+				web_sendData:self.data.sendData
+			})
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'sendsGet', self);
+			console.log('getMainData', self.data.sendData)
+		};
+		api.sendsGet(postData, callback);
 	},
 	
 	isShow(e){
@@ -87,13 +128,18 @@ Page({
 		};
 		const callback = (res) => {
 			if(res.content.list.length>0){
-				self.data.mainData.push.apply(self.data.mainData,res.content.list);
-				for (var i = 0; i < self.data.mainData.length; i++) {
-					self.data.mainData[i].startDate = self.data.mainData[i].startDate.substring(5);
-					self.data.mainData[i].endDate = self.data.mainData[i].endDate.substring(5);
-					self.data.mainData[i].startWeek = self.data.week[new Date(self.data.mainData[i].startDate).getDay()];
-					self.data.mainData[i].endWeek = self.data.week[new Date(self.data.mainData[i].endDate).getDay()]
+				
+				for (var i = 0; i < res.content.list.length; i++) {
+					if(res.content.list[i].startDate){
+						res.content.list[i].startDate = res.content.list[i].startDate.substring(5);
+						res.content.list[i].endDate = res.content.list[i].endDate.substring(5);
+					};
+					
+					res.content.list[i].startWeek = self.data.week[new Date(res.content.list[i].startDate).getDay()];
+					res.content.list[i].endWeek = self.data.week[new Date(res.content.list[i].endDate).getDay()]
 				}
+				self.data.mainData.push.apply(self.data.mainData,res.content.list);
+				
 			}else{
 				self.data.isLoadAll = true
 			};

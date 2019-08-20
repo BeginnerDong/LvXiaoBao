@@ -11,7 +11,7 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard:['getMainData'],
-		type:102,
+		type:101,
 		mainData:[],
 	},
 
@@ -29,7 +29,10 @@ Page({
 		const postData = {
 			number:api.cloneForm(self.data.number),
 			size:api.cloneForm(self.data.size),
-			type:self.data.type
+			type:self.data.type,
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			}
 		};
 		
 		const callback = (res) => {

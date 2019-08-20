@@ -78,6 +78,8 @@ Page({
 							delta: 1
 						});
 					}, 300);
+				}else{
+					api.showToast(data.message,'none')
 				}
 			};
 	

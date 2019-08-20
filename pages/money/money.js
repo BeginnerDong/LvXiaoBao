@@ -27,7 +27,9 @@ Page({
 	getMainData() {
 		const self = this;
 		const postData = {	
-			
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			}
 		};
 		
 		const callback = (res) => {

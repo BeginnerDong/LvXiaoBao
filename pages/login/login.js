@@ -53,7 +53,7 @@ Page({
 		};
 		const callback = (res) => {
 			if(res.code==200){
-				wx.setStorageSync('token','Basic'+' '+res.content.token)
+				wx.setStorageSync('token','Basic'+' '+res.content)
 				wx.redirectTo({
 					url: '/pages/micro/micro'
 				})

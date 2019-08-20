@@ -35,6 +35,7 @@ Page({
 		api.commonInit(self);
 		self.data.mainDataPost.number=api.cloneForm(self.data.number);
 		self.data.mainDataPost.size=api.cloneForm(self.data.size);
+		self.data.id = options.id;
 		self.getMainData();
 		self.setData({
 			 web_selectStandards:self.data.selectStandards,
@@ -96,6 +97,7 @@ Page({
 	supplierProductLike(e) {
 		const self = this;
 		var id = self.data.mainData[api.getDataSet(e,'index')].id;
+		console.log(id)
 		const postData = {
 			header:{
 				'Content-Type':'application/x-www-form-urlencoded',
@@ -168,8 +170,10 @@ Page({
 			api.clearPageIndex(self);
 		};
 		const postData = api.cloneForm(self.data.mainDataPost);
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/pdt/v1/supplier/'+self.data.id+'/products'
 		postData.header = {
 			'Authorization':wx.getStorageSync('token')
+			
 		};
 		if(self.data.selectBusinessData.length>0){
 			postData.businessClassify =self.data.selectBusinessData 

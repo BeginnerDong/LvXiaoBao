@@ -95,7 +95,7 @@ Page({
 		const postData = {
 			'Authorization': wx.getStorageSync('token'),
 			classifyId:self.data.id,
-			url:'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/+self.data.id'+self.data.id+'/prices'
+			url:'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/'+self.data.id+'/prices'
 		};
 		
 		const callback = (res) => {

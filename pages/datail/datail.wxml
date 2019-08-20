@@ -64,32 +64,33 @@
 			</view>
 
 		</view>
-		
-		<view class="travel-title">
-
-			<view class="tarcel1">
-				<view class="discoun1"><span>立减</span></view>
-				<view class="dis-content4">立减<span>10</span>%</view>
+		<block wx:for="{{web_mainData.rule}}">
+			<view class="travel-title" wx:if="{{item.itemType==2&&(item.useSet==1||item.userSet==2)}}">
+				<view class="tarcel1">
+					<view class="discoun1"><span>立减</span></view>
+					<view class="dis-content4">立减<span>{{item.cvalue}}</span>{{item.attribute1==1?'%':'元'}}</view>
+				</view>
 			</view>
-		</view>
-		<view class="travel-title" bindtap="intoPath" data-path="/pages/discount/discount">
-			<view class="tarcel1">
-				<view class="discoun1"><span>用券</span></view>
-
-				<view class="dis-content">
-					<view class="dis-con">选择优惠券</view>
-					<view class="dis-img">
-						<image src="../../image/right.png"></image>
+			<view class="travel-title" wx:if="{{item.itemType==3&&(item.useSet==1||item.userSet==3)}}"  bindtap="intoPath" data-path="/pages/discount/discount">
+				<view class="tarcel1">
+					<view class="discoun1"><span>用券</span></view>
+			
+					<view class="dis-content">
+						<view class="dis-con">选择优惠券</view>
+						<view class="dis-img">
+							<image src="../../image/right.png"></image>
+						</view>
 					</view>
 				</view>
 			</view>
-		</view>
-		<view class="travel-title">
-			<view class="tarcel1">
-				<view class="discoun1"><span>送券</span></view>
-				<view class="dis-content4">赠券<span>20</span>元/成人</view>
-			</view>
-		</view>
+			<!-- <view class="travel-title" wx:if="{{item.itemType==4}}">
+				<view class="tarcel1">
+					<view class="discoun1"><span>送券</span></view>
+					<view class="dis-content4">赠券<span>20</span>元/成人</view>
+				</view>
+			</view> -->
+		</block>
+		
 	</view>
 	<view class="agent">
 		<view class="travel-title">
@@ -179,7 +180,7 @@
 				<view class="title-line" style="left: 4%;"></view>
 			</view>
 		</view>
-		<view class="product-info-bottom" style="border-bottom: none;">
+		<!-- <view class="product-info-bottom" style="border-bottom: none;">
 			<view class="star-img flex">
 				<image src="../../image/detail-icon4.png"></image>
 			</view>
@@ -215,16 +216,19 @@
 		</view>
 		<view class="special-img">
 			<image src="../../image/img3.png" mode="widthFix"></image>
+		</view> -->
+		<view style="font-size:15px;padding: 12px 3%;">
+			<rich-text>{{web_mainData.lineFeature}}</rich-text>
 		</view>
 	</view>
 	<view class="routing">
-		<view class="product-info-bottom">
+		<!-- <view class="product-info-bottom">
 			<view class="title">
 				行程特色
 				<view class="title-line" style="left: 4%;"></view>
 			</view>
-		</view>
-		<view class="plan">
+		</view> -->
+		<!-- <view class="plan">
 			<view class="plan-one">第一天：萨瓦迪卡，泰国之旅开始啦 普吉岛</view>
 			<view class="plan-one">
 				<view class="plan-scienic">景点·珊瑚岛-神仙半岛</view>
@@ -269,7 +273,7 @@
 				<view class="plan-scienic">温馨提示</view>
 				<view class="plan-scienic">注意：</view>
 			</view>
-		</view>
+		</view> -->
 		<view class="fee-explain1">
 			<view class="product-info-bottom">
 				<view class="title">
@@ -279,13 +283,7 @@
 			</view>
 			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
 				<view style="font-weight:700 ;">费用不含</view>
-				<view>旅游护照、签证等相关出行证件办理费用。</view>
-				<view>内陆段交通。</view>
-				<view>当地机场至酒店的往返接送服务。</view>
-				<view>所在地到出发地的往返交通费用。</view>
-				<view>因交通延阻、战争、政变、罢工、天气、飞机机器故
-					障、航班取消或更改时间等不可抗力原因所引致的额
-					外费用。</view>
+				<rich-text style="font-size:15px;padding: 12px 3%;;">{{web_mainData.priceInclude}}</rich-text>
 			</view>
 			<view class="product-info-bottom" style="text-align: center;height: 50px;">
 				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
@@ -299,11 +297,11 @@
 				</view>
 			</view>
 			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
-				<view>安全常识: 出游安全提示和出游常识</view>
+				<!-- <view>安全常识: 出游安全提示和出游常识</view>
 				<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
 				</view>
-				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
-
+				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view> -->
+				<rich-text style="font-size:15px;padding: 12px 3%;;">{{web_mainData.bookingInfo}}</rich-text>
 			</view>
 			<view class="product-info-bottom" style="text-align: center;height: 50px;">
 				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
@@ -317,11 +315,11 @@
 				</view>
 			</view>
 			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
-				<view>安全常识: 出游安全提示和出游常识</view>
+				<!-- <view>安全常识: 出游安全提示和出游常识</view>
 				<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
 				</view>
-				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view>
-
+				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view> -->
+				<rich-text style="font-size:15px;padding: 12px 3%;;">{{web_mainData.peerNotice}}</rich-text>
 			</view>
 			<view class="product-info-bottom" style="text-align: center;height: 50px;">
 				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>

@@ -51,7 +51,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="peer-middle" bindtap="intoPath" data-path="/pages/productListPlate/productListPlate">
+			<view class="peer-middle" bindtap="intoPath" data-path="/pages/productListPlate/productListPlate?id={{item.id}}">
 				<view class="flex-align" style="margin-top: 14rpx;">
 					<view class="zhuying font14 color1 bold-font">主营业务</view>
 					<view class="font14 color1" style="padding-left:16rpx">{{item.businessTypeName}}</view>
@@ -65,17 +65,18 @@
 					</view>
 					<view class="font13 color2" style="margin-left: 18rpx;">{{item.prodNum}}件</view>
 				</view>
-				<view class="peer-bottom-item flex-all" >
-					<view class="flex-all">
-						<image src="{{item.isLike>0?'../../image/peer-icon3-active.png':'../../image/peer-icon3.png'}}" bindtap="supplierLike"/>
-					</view>
-					<view class="font13 color2" style="margin-left: 18rpx;">{{item.likeNum}}</view>
-				</view>
+				
 				<view class="peer-bottom-item flex-all">
 					<view class="flex-all">
 						<image src="{{item.isLaud>0?'../../image/peer-icon4-active.png':'../../image/peer-icon4.png'}}" bindtap="supplierGood"/>
 					</view>
 					<view class="font13 color2" style="margin-left: 18rpx;">{{item.laudNum}}</view>
+				</view>
+				<view class="peer-bottom-item flex-all" >
+					<view class="flex-all">
+						<image src="{{item.isLike>0?'../../image/peer-icon3-active.png':'../../image/peer-icon3.png'}}" bindtap="supplierLike"/>
+					</view>
+					<view class="font13 color2" style="margin-left: 18rpx;">{{item.likeNum}}</view>
 				</view>
 			</view>
 		</view>

@@ -11,16 +11,19 @@
 	</view>
 	<view class="nav">
 		<view class="nav-item" bindtap="isShow1">
-			<view class="nav-left">
+			<view class="nav-left" style="position: relative;">
 				<span>推荐排序</span>
+				<view style="height: 3px;width: 20%;background: #FFD101;position: absolute;bottom: 0;" wx:if="{{web_show1}}"></view>
 			</view>
 			<view class="nav-img">
 				<image src="../../image/down.png"></image>
 			</view>
+			
 		</view>
 		<view class="nav-item" bindtap="isShow">
-			<view class="nav-left">
+			<view class="nav-left" style="position: relative;">
 				<span>全部筛选</span>
+				<view style="height: 3px;width: 20%;background: #FFD101;position: absolute;bottom: 0;" wx:if="{{web_show}}"></view>
 			</view>
 			<view class="nav-img">
 				<image src="../../image/down.png"></image>
@@ -77,6 +80,7 @@
 			<view class="re-img" wx:if="{{orderNum==101}}">
 				<image src="../../image/detail-icon2.png"></image>
 			</view>
+			
 		</view>
 		<view class="re" bindtap="changeOrder" data-key='102'>
 			<view class="re-title {{orderNum==102?'re-name':''}}">价格由高到低</view>

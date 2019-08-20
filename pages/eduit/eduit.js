@@ -11,7 +11,7 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
-
+		isComplete:false,
 		submitData: {
 			name:'',
 			sex:'',
@@ -58,6 +58,7 @@ Page({
 			
 		};
 		self.setData({
+			web_isComplete:self.data.isComplete,
 			web_submitData:self.data.submitData
 		})
 
@@ -88,7 +89,12 @@ Page({
 	inputChange(e) {
 		const self = this;
 		api.fillChange(e, self, 'submitData');
+		const pass = api.checkComplete(self.data.submitData);
+		if(pass){
+			self.data.isComplete = true
+		}
 		self.setData({
+			web_isComplete:self.data.isComplete,
 			web_submitData: self.data.submitData,
 		});
 	},
@@ -138,7 +144,7 @@ Page({
 			'Content-Type':'application/x-www-form-urlencoded',
 			'Authorization':wx.getStorageSync('token')
 		};
-		postData.url = 'http://yapi.lxbtrip.cn/mock/19/odr/v1/people/'+self.data.mainData[self.data.index].id
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/v1/people/'+self.data.mainData[self.data.index].id
 		const callback = (data) => {
 			if (data) {
 				if(data.content.id){
@@ -164,6 +170,7 @@ Page({
 		const pass = api.checkComplete(self.data.submitData);
 		console.log('self.data.submitData', self.data.submitData)
 		if (pass) {
+			
 			if(self.data.index){
 				self.data.mainData[self.data.index].name=self.data.submitData.name;
 				self.data.mainData[self.data.index].phone=self.data.submitData.phone;

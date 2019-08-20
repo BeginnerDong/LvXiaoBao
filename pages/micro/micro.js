@@ -49,7 +49,13 @@ Page({
 			api.clearPageIndex(self)
 		};
 		const postData = {
-			'Authorization':wx.getStorageSync('token')
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			}
+			
+			/* header:{
+				'Content-type':'application/json;charset=UTF-8'
+			} */
 		};
 		if(self.data.search.keyword!=''){
 			postData.keyword =self.data.search.keyword

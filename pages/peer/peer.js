@@ -70,6 +70,9 @@ Page({
 		const postData = {
 			number: api.cloneForm(self.data.number),
 			size: api.cloneForm(self.data.size),
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			}
 		};
 		if(self.data.businessType!=''){
 			postData.businessType = self.data.businessType
@@ -191,7 +194,7 @@ Page({
 		});
 		self.data.searchItem = {}
 		if (num == '0') {
-	
+			delete self.data.businessType
 		} else if (num == '1') {
 			self.data.businessType = '101';
 	
