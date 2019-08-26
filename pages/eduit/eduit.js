@@ -23,7 +23,8 @@ Page({
 		},
 		cardData:[{key:'身份证',value:101},{key:'护照',value:102},{key:'军官证',value:103},{key:'学生证',value:104},{key:'老年证',value:105},{key:'台湾通行证',value:106},
 		{key:'港澳通行证',value:107}],
-		sexData:[{key:'男',value:101},{key:'女',value:102},{key:'保密',value:103}]
+		sexData:[{key:'男',value:101},{key:'女',value:102},{key:'保密',value:103}],
+		buttonCanClick:true
 	},
 
 	onLoad(options) {
@@ -58,6 +59,7 @@ Page({
 			
 		};
 		self.setData({
+			web_buttonCanClick:self.data.buttonCanClick,
 			web_isComplete:self.data.isComplete,
 			web_submitData:self.data.submitData
 		})
@@ -119,6 +121,7 @@ Page({
 		const callback = (data) => {
 			if (data) {
 				if(data.content.id){
+					api.buttoonCanClick(self,true);
 					self.data.submitData.id = data.content.id;
 					self.data.submitData.isSelect = false;
 					self.data.submitData.isBx = false;
@@ -148,7 +151,7 @@ Page({
 		const callback = (data) => {
 			if (data) {
 				if(data.content.id){
-					
+					api.buttoonCanClick(self,true);
 					api.setStorageArray('peopleData',self.data.mainData[self.data.index],'id',999);
 					setTimeout(function() {
 						wx.navigateBack({
@@ -165,7 +168,7 @@ Page({
 
 	submit() {
 		const self = this;
-
+		api.buttoonCanClick(self);
 		var phone = self.data.submitData.phone;
 		const pass = api.checkComplete(self.data.submitData);
 		console.log('self.data.submitData', self.data.submitData)

@@ -55,6 +55,6 @@
 			<input type="number" placeholder="请填写手机号码" value="{{web_submitData.phone}}"  data-key="phone" bindinput="inputChange"/>
 		</view>
 	</view>
-	<view class="btn" bindtap="submit" style="{{web_isComplete?'opacity:1':''}}">保存</view>
+	<view class="btn" bindtap="{{web_buttonCanClick?'submit':''}}" style="{{web_isComplete?'opacity:1':''}}">保存</view>
 	</view>
 </view>

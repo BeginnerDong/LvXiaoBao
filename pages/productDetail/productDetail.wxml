@@ -1,15 +1,18 @@
 <view style="width:100%;height:100%">
 	<view class="banner-box">
 		<swiper indicator-dots="{{indicatorDots}}" style="width:100%;height:100%" autoplay="{{autoplay}}" duration="{{duration}}"
-		 circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}">
+		 circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" bindchange="change">
 			<block class="swipera" wx:for="{{web_bannerImg}}">
 				<swiper-item>
 					<image src="{{item}}" style="width:100%;height:100%"></image>
-					<view class="banner-start">西安出发</view>
-					<view class="banner-num">{{index+1}}/{{web_bannerImg.length}}</view>
+					
 				</swiper-item>
+				
 			</block>
+			
 		</swiper>
+		<view class="banner-start">西安出发</view>
+		<view class="banner-num">{{web_index+1}}/{{web_bannerImg.length}}</view>
 	</view>
 	<view class="product-info">
 		<view class="product-info-top">

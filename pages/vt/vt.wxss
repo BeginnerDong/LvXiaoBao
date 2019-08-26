@@ -98,8 +98,8 @@ page{
 	border-radius: 4rpx;
 	position:absolute;
 	z-index:-1;
-	left:3%;
-	bottom: 24rpx;
+	left:0%;
+	bottom: 32rpx;
 }
 .set-con{
 	width: 100%;

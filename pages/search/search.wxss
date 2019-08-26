@@ -10,7 +10,7 @@ page{
 	padding: 20rpx 0;
 }
 .search input{
-	width:660rpx;
+	width:86%;
 	background: #fff;
 	border-radius:40rpx;
 	height:80rpx;
@@ -33,17 +33,30 @@ page{
 	display:flex;
 	align-items:center;
 	justify-content: center;
+	z-index: 99;
 }
 .searchBtn image{
 	width:40rpx;
 	height:40rpx;
 }
+
 .title{
-	font-size:16px;
+	font-size:32rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(50,50,50,1);
-	line-height:23px;
+	line-height:46rpx;
+	position: relative;
+	z-index:1
+}
+.title-line{
+	width:32rpx;
+	height:6rpx;
+	background:rgba(255,209,1,1);
+	border-radius:4rpx;
+	position: absolute;
+	bottom:5rpx;
+	z-index:-1
 }
 .choose{
 	display: flex;

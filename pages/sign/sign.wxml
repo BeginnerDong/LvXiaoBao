@@ -59,14 +59,14 @@
 		<view class="peo-name">
 		<view class="peo-con">*手机</view>
 		<view class="peo-content">
-			<input type="text" placeholder="用于接收电子合同"
+			<input type="number" placeholder="用于接收电子合同"
 			value="{{web_submitData.travelerRepresentPhone}}"  data-key="travelerRepresentPhone" bindblur="inputChange"/>
 		</view>
 	</view>
 	<view class="peo-name">
 		<view class="peo-con">*身份证号</view>
 		<view class="peo-content">
-			<input type="text" placeholder="填写身份证号"
+			<input type="number" placeholder="填写身份证号"
 			value="{{web_submitData.travelerRepresentCard}}"  data-key="travelerRepresentCard" bindblur="inputChange"/>
 		</view>
 	</view>
@@ -276,7 +276,7 @@
 					<image src="../../image/block.png"></image>
 				</view>
 			</view>
-			<view class="sign-right">天</view>
+			<view class="sign-right">人</view>
 		</view>
 		<view class="agglo-title">
 			<view class="agglo-img">

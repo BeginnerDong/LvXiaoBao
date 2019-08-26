@@ -64,11 +64,12 @@ Page({
 	
 	goSearch(){
 		const self = this;
-		if(self.data.search.keyword!=''){
+		api.pathTo('/pages/search/search','nav')
+		/* if(self.data.search.keyword!=''){
 			api.pathTo('/pages/productList/productList?keyword='+self.data.search.keyword,'nav')
 		}else{
 			api.pathTo('/pages/search/search','nav')
-		}
+		} */
 	},
 
 	getHotShop() {
@@ -94,7 +95,10 @@ Page({
 	getShopInfo() {
 		const self = this;
 		const postData = {
-
+			url:'http://yapi.lxbtrip.cn/mock/19/mshop/v1/1/info',
+			header: {
+				'Authorization': wx.getStorageSync('token')
+			},
 		};
 
 		const callback = (res) => {
@@ -125,6 +129,7 @@ Page({
 			api.clearPageIndex(self);
 		};
 		const postData = api.cloneForm(self.data.postData)
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/mshop/v1/1/products';
 		const callback = (res) => {
 			if (res.content.list.length > 0) {
 				self.data.mainData.push.apply(self.data.mainData, res.content.list);

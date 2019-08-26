@@ -1,35 +1,28 @@
 <view>
 	<view class="top">
 		<view class="search">
-			<input placeholder="热门目的地" />
-			<view class="searchBtn">
+			<input placeholder="热门目的地" value="{{web_search.keyword}}" data-key="keyword" bindinput="inputChange"/>
+			<view wx:if="{{web_search.keyword!=''}}" style="z-index: 999;height:80rpx;position: absolute;display: flex;align-items: center;justify-content: center;right: 20%;top:20rpx" bindtap="deleteInput">
+				<image src="../../image/inputDelete.png" style="width: 40rpx;height: 40rpx;"></image>
+			</view>
+			<view class="searchBtn" bindtap="goSearch">
 				<image src="../../image/search.png" />
 			</view>
 		</view>
 	</view>
 	
 	<view class="size">
-		<view class="title">热门搜索</view>
+		<view class="title">历史搜索
+			<view class="title-line"></view>
+		</view>
 		<view class="size-main">
 			<view class="choose">
-				<view class="choose-item">
-					三亚
-				</view>
-				<view class="choose-item">
-					厦门
-				</view>
-				<view class="choose-item">
-					西安
-				</view>
-				<view class="choose-item">
-					西双版纳
-				</view>
-				<view class="choose-item">
-					丽江大理
-				</view>
-				<view class="choose-item">
-					北京
-				</view>
+				<block wx:for="{{web_mainData}}" wx:if="{{index<9}}">
+					<view class="choose-item"  bindtap="choose" data-item="{{item}}">
+						{{item}}
+						<view wx:if="{{web_choose==item}}" style="width:42px;height:33px;background:rgba(255,209,1,1);border-radius:50%;position: absolute;right: -30rpx;top: -24rpx;"></view>
+					</view>
+				</block>
 			</view>
 		</view>
 	</view>

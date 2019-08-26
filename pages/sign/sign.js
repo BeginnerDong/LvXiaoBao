@@ -310,7 +310,7 @@ Page({
 				wx.setStorageSync('contract', res.content)
 
 				if (type == 'jump') {
-					api.pathTo('/pages/electro/electro', 'nav')
+					api.pathTo('/pages/electro/electro?url='+res.content.contractPdf, 'nav')
 				} else if (type == 'next') {
 					api.pathTo('/pages/orderDetail/orderDetail?orderCode=' + self.data.orderCode, 'nav')
 				}

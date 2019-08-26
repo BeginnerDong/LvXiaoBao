@@ -67,18 +67,18 @@
 			<view class="set-img">
 				<image src="../../image/weixin.png"></image>
 			</view>
-			<view class="set-title">微信支付</view>
-			<view class="setimga">
-				<image src="../../image/complete.png"></image>
+			<view class="set-title" style="{{web_type==2?'color: #A1A1A1':''}}">微信支付</view>
+			<view class="setimga" bindtap="changeType" data-type='1'>
+				<image src="{{web_type==1?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
 		<view class="set-con">
 			<view class="set-img">
 				<image src="../../image/bank.png"></image>
 			</view>
-			<view class="set-title" style="color: #A1A1A1;">银行转账</view>
-			<view class="setimga">
-				<image src="../../image/quan.png"></image>
+			<view class="set-title" style="{{web_type==1?'color: #A1A1A1':''}}">银行转账</view>
+			<view class="setimga" bindtap="changeType" data-type='2'>
+				<image src="{{web_type==2?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
 	</view>

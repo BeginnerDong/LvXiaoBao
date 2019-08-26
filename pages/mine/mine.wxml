@@ -1,6 +1,6 @@
 <view>
 	<view class="top">
-		<image src="../../image/top.png"></image>
+		<image src="../../image/top.png" bindtap="close"></image>
 	</view>
 	<view class="mine">
 		<view class="mine-top">

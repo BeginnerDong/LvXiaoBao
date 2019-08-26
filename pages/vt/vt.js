@@ -12,13 +12,26 @@ Page({
 	data: {
 		mainData:[],
 		isFirstLoadAllStandard: ['getMainData'],
+		type:1
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self)
-		self.getMainData()
+		self.getMainData();
+		self.setData({
+			web_type:self.data.type,
+		})
 	},
+	
+	changeType(e){
+		const self = this;
+		self.data.type=api.getDataSet(e,'type');
+		self.setData({
+			web_type:self.data.type,
+		})
+	},
+	
 	
 	chooseType(e){
 		const self = this;
@@ -69,7 +82,6 @@ Page({
 			},
 			id:self.data.id
 		};
-	
 		const callback = (res) => {
 			if (res.code == 200) {
 				api.buttonCanClick(self, true);

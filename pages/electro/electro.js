@@ -15,13 +15,14 @@ Page({
 
 	onLoad(options) {
 		const self = this;
-		self.url = options.url;
+		self.data.url = options.url;
 		self.downloadFile()
 	},
 
 	downloadFile(e) {
+		const self = this;
 		console.log(e);
-		let url = self.url;
+		let url = self.data.url;
 		url += 'pdf';
 		wx.downloadFile({
 			url: url,

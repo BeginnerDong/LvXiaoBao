@@ -7,8 +7,8 @@ page{
 	background:#FFC900 ;
 }
 .top image{
-	width: 520rpx;
-	height: 80rpx;
+	width: 540rpx;
+	height: 78rpx;
 	position: absolute;
 	top: 1%;
 	left: 25%;

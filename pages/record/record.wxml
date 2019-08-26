@@ -1,11 +1,15 @@
 <view>
 	<view class="record">
-		<view class="record-name">充值</view>
-		<view class="record-name">消费
-		<view class="title-line"></view></view>
-		<view class="record-name">返现</view>
-		<view class="record-name">退款</view>
-		<view class="record-name">提现</view>
+		<view class="record-name" style="{{num==0?'font-weight:700':''}}" data-num = "0" bindtap="{{web_buttonCanClick?'menuClick':''}}">充值
+		<view class="title-line" wx:if="{{num==0}}"></view></view>
+		<view class="record-name" style="{{num==1?'font-weight:700':''}}" data-num = "1" bindtap="{{web_buttonCanClick?'menuClick':''}}">消费
+		<view class="title-line"  wx:if="{{num==1}}"></view></view>
+		<view class="record-name" style="{{num==2?'font-weight:700':''}}" data-num = "2" bindtap="{{web_buttonCanClick?'menuClick':''}}">返现
+		<view class="title-line"  wx:if="{{num==2}}"></view></view>
+		<view class="record-name" style="{{num==3?'font-weight:700':''}}" data-num = "3" bindtap="{{web_buttonCanClick?'menuClick':''}}">退款
+		<view class="title-line"  wx:if="{{num==3}}"></view></view>
+		<view class="record-name" style="{{num==4?'font-weight:700':''}}" data-num = "4" bindtap="{{web_buttonCanClick?'menuClick':''}}">提现
+		<view class="title-line"  wx:if="{{num==4}}"></view></view>
 	</view>
 	<view class="reco">
 		<view class="reco-left">2019年06月</view>

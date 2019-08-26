@@ -11,10 +11,10 @@
 				{{item}}
 			</view>
 		</view>
-		<view class="days flex-align">
+		<view class="days flex-align" >
 			<view class="days-item {{item.timeFormat==web_choosedTimeFormat?'days-item-active':''}}" data-timeFormat="{{item.timeFormat}}" data-item="{{item.item}}" wx:for="{{web_dateData}}" bindtap="chooseDay">
 				{{item.days}}
-				<view class="days-price days-price-active" wx:if="{{item.item}}">¥{{item.item.cprice}}</view>
+				<view class="days-price days-price-active" wx:if="{{item.item}}" bindtap="chooseDay" data-timeFormat="{{item.timeFormat}}" data-item="{{item.item}}">¥{{item.item.cprice}}</view>
 			</view>
 		</view>
 		
@@ -23,12 +23,12 @@
 		改行程仅余<span>10</span>位
 	</view>
 	<view class="calendar-button flex-all">
-		<view class="calendar-button-item flex-all">
+		<view class="calendar-button-item flex-all" bindtap="intoPathRedi">
 			<view class="calendar-button-item-left">
 				取消
 			</view>
 		</view>
-		<view class="calendar-button-item flex-all">
+		<view class="calendar-button-item flex-all" bindtap="intoPathRedi">
 			<view class="calendar-button-item-right">
 				确认
 			</view>

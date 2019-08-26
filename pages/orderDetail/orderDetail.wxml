@@ -6,13 +6,14 @@
 		</view>
 		<view class="detail-message boxshaw contLis">
 			<view class="detail-mess">订单信息
-			  <view class="title-line"></view>
-      </view>
+				<view class="title-line"></view>
+			</view>
 			<view class="deail-num">￥{{web_mainData.orderPrice}}</view>
 			<view class="detail-con">{{web_mainData.pdtName}}</view>
 			<view class="paid-con">
 				<view class="con">{{web_mainData.startDate}}</view>
-				<view class="con" style="color: #A1A1A1;opacity: 0.6;text-align: center;border-bottom:2rpx solid rgba(231,231,231,1);">4成人  1儿童</view>
+				<view class="con" style="color: #A1A1A1;opacity: 0.6;text-align: center;border-bottom:2rpx solid rgba(231,231,231,1);">4成人
+					1儿童</view>
 				<view class="con" style="text-align: right;">{{web_mainData.endDate}}</view>
 			</view>
 			<view class="mou">
@@ -22,8 +23,8 @@
 		</view>
 		<view class="people boxshaw contLis">
 			<view class="detail-mess">预订人
-			  <view class="title-line"></view>
-      </view>
+				<view class="title-line"></view>
+			</view>
 			<view class="people-name">
 				<view class="peo-titl">姓名</view>
 				<view class="peo-title avoidOverflow">{{web_mainData.reservationName}}</view>
@@ -42,13 +43,13 @@
 			</view>
 		</view>
 		<view class="list boxshaw contLis">
-      <view class="detail-mess">游客名单
-			  <view class="title-line"></view>
-        <view class="list-img1">
+			<view class="detail-mess">游客名单
+				<view class="title-line"></view>
+				<view class="list-img1" bindtap="clickYk">
 					<image src="../../image/down.png"></image>
 				</view>
-      </view>
-			<block wx:for="{{web_mainData.peoples}}">
+			</view>
+			<block wx:for="{{web_mainData.peoples}}" wx:if="{{web_showYk}}">
 				<view class="list-name">
 					<view class="name-left">
 						<view class="name">
@@ -69,13 +70,13 @@
 			</block>
 		</view>
 		<view class="insurance boxshaw contLis">
-      <view class="detail-mess">保险
-        <view class="title-line"></view>
-        <view class="list-img1">
-          <image src="../../image/down.png"></image>
-        </view>
-      </view>
-			<block wx:for="{{web_mainData.insures}}" wx:key="id">
+			<view class="detail-mess">保险
+				<view class="title-line"></view>
+				<view class="list-img1" bindtap="clickBx">
+					<image src="../../image/down.png"></image>
+				</view>
+			</view>
+			<block wx:for="{{web_mainData.insures}}" wx:key="id" wx:if="{{web_showBx}}">
 				<view class="steel">
 					<view class="steel-name">{{item.companyBrand}}</view>
 					<view class="steel-con">
@@ -90,7 +91,7 @@
 						<view class="peo-titl">被保人</view>
 						<view class="peo-title1">
 							<view class="st">{{item.tourists.length}}人</view>
-							<view class="st-to"  bindtap="checkInsurePeople" data-index="{{index}}"><span>查看</span></view>
+							<view class="st-to" bindtap="checkInsurePeople" data-index="{{index}}"><span>查看</span></view>
 						</view>
 					</view>
 					<view class="steel-con">
@@ -101,71 +102,71 @@
 						<view class="peo-titl">保单号</view>
 						<view class="peo-title1">
 							<view class="st">{{item.stateTwoName}}</view>
-							<view class="st-to"><span>查看</span></view>
+							<view class="st-to" bindtap="goPdf" data-index="{{index}}" data-type="bx"><span>查看</span></view>
 						</view>
 					</view>
 				</view>
 			</block>
 		</view>
 		<view class="contrat boxshaw contLis">
-      <view class="detail-mess">电子合同
-        <view class="title-line"></view>
-        <view class="list-img1">
-          <image src="../../image/down.png"></image>
-        </view>
-      </view>
-			<block wx:for="{{web_mainData.contracts}}">
-			<view class="steel">
-				<view class="steel-name">{{item.contractCode}}</view>
-				<view class="steel-con">
-					<view class="peo-titl">合同类型</view>
-					<view class="peo-title">{{item.cddTypeName}}</view>
-				</view>
-				<view class="steel-con">
-					<view class="peo-titl">合同编号</view>
-					<view class="peo-title1">
-						<view class="st">{{item.contractCode}}</view>
-						<view class="st-to"><span>查看</span></view>
-						<view class="st-to" bindtap="showQr" data-index="{{index}}"><span style="background:linear-gradient(90deg,rgba(255,232,28,1) 0%,rgba(253,139,5,1) 100%);">发送</span></view>
-					</view>
-				</view>
-				<view class="steel-con">
-					<view class="peo-titl">合同金额</view>
-					<view class="peo-title1">
-						<view class="st">{{item.cddPrice}}元</view>	
-					</view>
-				</view>
-				<view class="steel-con">
-					<view class="peo-titl">游客代表</view>
-					<view class="peo-title">{{item.appUsername}}</view>
-				</view>
-				<view class="steel-con">
-					<view class="peo-titl">游客信息</view>
-					<view class="peo-title1">
-						<view class="st">{{item.touristNum.length}}人</view>
-						<view class="st-to" bindtap="checkContractsPeople" data-index="{{index}}"><span>查看</span></view>
-					</view>
-				</view>
-				<view class="steel-con">
-					<view class="peo-titl">合同状态</view>
-					<view class="peo-title">{{item.stateTwoName}}</view>
+			<view class="detail-mess">电子合同
+				<view class="title-line"></view>
+				<view class="list-img1" bindtap="clickHt">
+					<image src="../../image/down.png"></image>
 				</view>
 			</view>
+			<block wx:for="{{web_mainData.contracts}}" wx:if="{{web_showHt}}">
+				<view class="steel">
+					<view class="steel-name">{{item.contractCode}}</view>
+					<view class="steel-con">
+						<view class="peo-titl">合同类型</view>
+						<view class="peo-title">{{item.cddTypeName}}</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">合同编号</view>
+						<view class="peo-title1">
+							<view class="st">{{item.contractCode}}</view>
+							<view class="st-to" bindtap="goPdf" data-index="{{index}}" data-type="ht"><span>查看</span></view>
+							<view class="st-to" bindtap="showQr" data-index="{{index}}"><span style="background:linear-gradient(90deg,rgba(255,232,28,1) 0%,rgba(253,139,5,1) 100%);">发送</span></view>
+						</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">合同金额</view>
+						<view class="peo-title1">
+							<view class="st">{{item.cddPrice}}元</view>
+						</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">游客代表</view>
+						<view class="peo-title">{{item.appUsername}}</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">游客信息</view>
+						<view class="peo-title1">
+							<view class="st">{{item.touristNum.length}}人</view>
+							<view class="st-to" bindtap="checkContractsPeople" data-index="{{index}}"><span>查看</span></view>
+						</view>
+					</view>
+					<view class="steel-con">
+						<view class="peo-titl">合同状态</view>
+						<view class="peo-title">{{item.stateTwoName}}</view>
+					</view>
+				</view>
 			</block>
 		</view>
-	
-		 <view class="order-btn">
+
+		<view class="order-btn">
 			<view class="can"><span>取消订单</span></view>
 			<view class="can1"><span>立即支付</span></view>
-		</view> 
+		</view>
 	</view>
-	<view style="height:100px;width:100%" ></view>
+	<view style="height:100px;width:100%"></view>
 	<view class="bg" wx:if="{{showPay}}"></view>
 	<view class="payment" wx:if="{{showPay}}">
-    <view class="detail-mess">立即支付
-      <view class="title-line"></view>
-    </view>
-		<block wx:for="{{web_mainData.plans}}">		
+		<view class="detail-mess">立即支付
+			<view class="title-line"></view>
+		</view>
+		<block wx:for="{{web_mainData.plans}}">
 			<view class="pay">
 				<view class="pay-name">￥{{item.sprice}}</view>
 				<view class="pay-data">
@@ -179,47 +180,45 @@
 			</view>
 		</block>
 		<view class="order-btn" style="z-index:999999">
-			<view class="can" ><span>取消订单</span></view>
+			<view class="can"><span>取消订单</span></view>
 			<view class="can1" bindtap="pay"><span>立即支付</span></view>
 		</view>
-		
+
 	</view>
 	<view class="order-btn">
-		<view class="can" ><span>取消订单</span></view>
+		<view class="can"><span>取消订单</span></view>
 		<view class="can1" bindtap="submit"><span>立即支付</span></view>
 	</view>
 </view>
- <view class="alertConfirm" wx:if="{{showQr}}" bindtap="closeQr">
-	 <canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas' style="left:30%;position: fixed;top:30%;z-index: 999;"></canvas>
- </view>
+<view class="alertConfirm" wx:if="{{showQr}}" bindtap="closeQr">
+	<canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas' style="left:30%;position: fixed;top:30%;z-index: 999;"></canvas>
+</view>
 
 
 
-  <!-- 电子合同弹出列表 -->
-  <view class="alertConfirm" wx:if="{{web_show}}" bindtap="close">
-    <view class="cfm-contbox">
-      <view class="detail-mess">电子合同{{web_mainData.contracts[web_index].signs.length}}
-			  <view class="title-line"></view>
-      </view>
-      <view class="cfm-lisbox">
-		<block wx:for="{{web_mainData.contracts[web_index].signs}}">
-			<view class="cfm-lis">
-			  <view class="cfm-left">
-			    <view class="tit avoidOverflow">{{item.name}}</view>
-			  </view>
-			  <view class="cfm-phone">{{item.phone}}</view>
-			  <view class="cfm-no">{{item.authCode==0?'未签署':'已签署'}}</view>
-			  <view class="cmf-ewm" bindtap="cavans" data-index="{{index}}">
-			    <image mode="widthFix" src="../../image/icon _ewm.png"></image>
-			  </view>
-			</view>
-			
-		</block>
-       
- 
-      </view>
-    </view>
-  </view>
-  <!--电子合同弹出列表 end -->
+<!-- 电子合同弹出列表 -->
+<view class="alertConfirm" wx:if="{{web_show}}" bindtap="close">
+	<view class="cfm-contbox">
+		<view class="detail-mess">电子合同{{web_mainData.contracts[web_index].signs.length}}
+			<view class="title-line"></view>
+		</view>
+		<view class="cfm-lisbox">
+			<block wx:for="{{web_mainData.contracts[web_index].signs}}">
+				<view class="cfm-lis">
+					<view class="cfm-left">
+						<view class="tit avoidOverflow">{{item.name}}</view>
+					</view>
+					<view class="cfm-phone">{{item.phone}}</view>
+					<view class="cfm-no">{{item.authCode==0?'未签署':'已签署'}}</view>
+					<view class="cmf-ewm" bindtap="cavans" data-index="{{index}}">
+						<image mode="widthFix" src="../../image/icon _ewm.png"></image>
+					</view>
+				</view>
+
+			</block>
 
 
+		</view>
+	</view>
+</view>
+<!--电子合同弹出列表 end -->

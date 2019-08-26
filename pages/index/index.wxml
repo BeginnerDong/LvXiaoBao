@@ -1,8 +1,8 @@
 <view>
 	<view class="top">
-		<view class="search">
+		<view class="search" bindtap="goSearch">
 			<input placeholder="热门目的地" value="{{web_search.keyword}}" data-key="keyword" bindblur="inputChange" />
-			<view class="searchBtn" bindtap="goSearch">
+			<view class="searchBtn">
 				<image src="../../image/index-icon2.png" />
 			</view>
 		</view>

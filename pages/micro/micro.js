@@ -51,8 +51,9 @@ Page({
 		const postData = {
 			header:{
 				'Authorization':wx.getStorageSync('token')
-			}
-			
+			},
+			number:api.cloneForm(self.data.number),
+			size:api.cloneForm(self.data.size),
 			/* header:{
 				'Content-type':'application/json;charset=UTF-8'
 			} */

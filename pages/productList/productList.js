@@ -39,6 +39,11 @@ Page({
 			api.clearPageIndex(self);
 		};
 		const postData = api.cloneForm(self.data.postData)
+		
+		postData.header = {
+			'Authorization': wx.getStorageSync('token'),
+			url:'http://yapi.lxbtrip.cn/mock/19/mshop/v1/'+1+'/products'
+		};
 		const callback = (res) => {
 			if(res.content.list.length>0){
 				self.data.mainData.push.apply(self.data.mainData,res.content.list)

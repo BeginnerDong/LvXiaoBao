@@ -430,7 +430,7 @@ class Api extends Base {
 	
 	insures(param, callback) {
 		var allParams = {
-			url: '/crm/v1/insures',
+			url: '/pdt/v1/insure-config',
 			type: 'GET',
 			data: param,
 			sCallback: function(data) {
@@ -688,6 +688,20 @@ class Api extends Base {
 		};
 		this.request(allParams);
 	}
+	
+	//确认件
+	getOpenId(param, callback) {
+		var allParams = {
+			url: '/auth/v1/openid/{code}',
+			type: 'get',
+			data: param,
+			sCallback: function(data) {
+				callback && callback(data);
+			}
+		};
+		this.request(allParams);
+	}
+	
 }
 
 export {

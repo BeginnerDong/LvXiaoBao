@@ -1,7 +1,7 @@
 <view>
 	<view class="nav-top flex-align">
 		<view class="nav-top-item {{num==0?'nav-top-item-active':''}}" data-num="0" bindtap="{{web_buttonCanClick?'menuClick':''}}">全部
-			<view class="title-line" wx:if="{{num==0}}"></view>
+			<view class="title-line" style="left:30%" wx:if="{{num==0}}"></view>
 		</view>
 		<view class="nav-top-item {{num==1?'nav-top-item-active':''}}" data-num="1" bindtap="{{web_buttonCanClick?'menuClick':''}}">未确认
 			<view class="title-line" wx:if="{{num==1}}"></view>

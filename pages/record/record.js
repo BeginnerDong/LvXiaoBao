@@ -13,6 +13,7 @@ Page({
 		isFirstLoadAllStandard:['getMainData'],
 		type:101,
 		mainData:[],
+		num:0
 	},
 
 	onLoad(options) {
@@ -49,7 +50,40 @@ Page({
 		};
 		api.walletDeals(postData, callback);
 	},
-
+	
+	menuClick(e) {
+		const self = this;
+		api.buttonCanClick(self);
+		const num = e.currentTarget.dataset.num;
+		self.changeSearch(num);
+	},
+	
+	changeSearch(num) {
+		const self = this;
+		this.setData({
+			num: num
+		});
+		self.data.searchItem = {}
+		if (num == '0') {
+			self.data.type = '101'
+		} else if (num == '1') {
+			self.data.type = '102';
+	
+		} else if (num == '2') {
+			self.data.type = '105';
+		
+		} else if (num == '3') {
+			self.data.type = '103';
+		} else if (num == '4') {
+			self.data.type = '106';
+		} 
+		self.setData({
+			web_mainData: [],
+		});
+		self.getMainData(true);
+	},
+	
+	
 	
 	onReachBottom() {
 		const self = this;

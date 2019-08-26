@@ -20,7 +20,8 @@ Page({
 		duration: 500,
 		previousMargin: 0,
 		nextMargin: 0,
-		selectIndex:0
+		selectIndex:0,
+		index:0
 	},
 
 	onLoad(options) {
@@ -29,15 +30,27 @@ Page({
 		self.data.id = options.id;
 		self.getMainData();
 		self.setData({
+			web_index:self.data.index,
 			web_selectIndex:self.data.selectIndex
+		})
+	},
+	
+	change(e){
+		const self = this;
+		console.log(e)
+		self.data.index = e.detail.current;
+		self.setData({
+			web_index:self.data.index
 		})
 	},
 
 	getMainData() {
 		const self = this;
-		const postData = {	
-			id:1,
-			pId:self.data.id,
+		const postData = {			
+			header: {
+				'Authorization': wx.getStorageSync('token')
+			},
+			url:'http://yapi.lxbtrip.cn/mock/19/mshop/v1/'+self.data.id+'/product/'+1
 		};
 		
 		const callback = (res) => {

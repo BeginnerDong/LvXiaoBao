@@ -41,7 +41,8 @@ Page({
 			salePhone: ''
 		},
 		dayData: {},
-		subjectData: []
+		subjectData: [],
+		index:0
 	},
 
 	onLoad(options) {
@@ -50,6 +51,7 @@ Page({
 		self.data.id = options.id;
 		self.getMainData();
 		self.setData({
+			web_index:self.data.index,
 			web_orderPost: self.data.orderPost,
 			show_people: self.data.show_people,
 			show_poster: self.data.show_poster,
@@ -57,6 +59,16 @@ Page({
 		})
 
 	},
+	
+	change(e){
+		const self = this;
+		console.log(e)
+		self.data.index = e.detail.current;
+		self.setData({
+			web_index:self.data.index
+		})
+	},
+	
 	
 	onShow(){
 		const self = this;

@@ -48,13 +48,13 @@ page {
 
 .title-line {
 	width: 32rpx;
-	height: 6rx;
+	height: 6rpx;
 	background: rgba(255, 209, 1, 1);
 	border-radius: 4rpx;
 	position:absolute;
 	bottom:10rpx;
 	z-index:-1;
-	left:30%;
+	left:20%;
 
 }
 

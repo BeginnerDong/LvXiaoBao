@@ -19,7 +19,10 @@ Page({
 		orderContractsPeople:[],
 		show:false,
 		qrcodeWidth: qrcodeWidth,
-		showQr:false
+		showQr:false,
+		showHt:false,
+		showBx:false,
+		showYk:false
 	},
 
 	onLoad(options) {
@@ -27,7 +30,11 @@ Page({
 		api.commonInit(self);
 		self.data.orderCode = options.orderCode;
 		self.getMainData();
-		
+		self.setData({
+			web_showBx:self.data.showBx,
+			web_showHt:self.data.showHt,
+			web_showYk:self.data.showYk
+		})
 	},
 	
 	showQr(e){
@@ -72,6 +79,30 @@ Page({
 		const self = this;
 		self.setData({
 			showQr:false
+		})
+	},
+	
+	clickBx(){
+		const self = this;
+		self.data.showBx = !self.data.showBx;
+		self.setData({
+			web_showBx:self.data.showBx
+		})
+	},
+	
+	clickHt(){
+		const self = this;
+		self.data.showHt = !self.data.showHt;
+		self.setData({
+			web_showHt:self.data.showHt
+		})
+	},
+	
+	clickYk(){
+		const self = this;
+		self.data.showYk = !self.data.showYk;
+		self.setData({
+			web_showYk:self.data.showYk
 		})
 	},
 	
@@ -207,6 +238,16 @@ Page({
 		api.orderPay(postData, callback);
 	},
 	
+	goPdf(e){
+		const self = this;
+		var index = api.getDataSet(e,'index');
+		var type = api.getDataSet(e,'type');
+		if(type=='bx'){
+			api.pathTo('/pages/electro/electro?url='+self.data.mainData.insures[index].pdfUrl, 'nav')
+		}else{
+			api.pathTo('/pages/electro/electro?url='+self.data.mainData.contracts[index].cddPdfurl, 'nav')
+		}
+	},
 	
 	intoPath(e) {
 		const self = this;

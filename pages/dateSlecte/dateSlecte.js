@@ -126,6 +126,9 @@ Page({
 		console.log('e',e)
 		var item = e.target.dataset.item;
 		var timeFormat = e.target.dataset.timeformat;
+		if(!item||item==undefined){
+			return
+		};
 		console.log('timeFormat',timeFormat)
 		if(timeFormat&&timeFormat!=self.data.choosedTimeFormat){
 			self.data.choosedTimeFormat = timeFormat;

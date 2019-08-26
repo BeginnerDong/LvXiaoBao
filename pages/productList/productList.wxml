@@ -4,7 +4,7 @@
 			<image src="{{item.bannerImg1}}"></image>
 		</view>
 		<view class="product-right">
-			<view class="product-id">[产品id：]{{item.id}}</view>
+			<view class="product-id">[产品ID：]{{item.id}}</view>
 			<view class="product-title avoidOverflow2">{{item.lineName}}</view>
 			<view class="product-description avoidOverflow">1晚起住·海量【机票+酒店】随心...</view>
 			<view class="product-bottom">
