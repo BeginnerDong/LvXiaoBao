@@ -3,7 +3,7 @@
 		<view class="jo">
 			
 			<view class="joun-con">
-				<textarea disabled="{{web_disabled}}" auto-focus="true" value="{{web_submitData.content}}" data-key="content" bindblur="inputChange"  maxlength="10000" style="height: 100%;"></textarea>
+				<textarea disabled="{{web_disabled}}"  value="{{web_submitData.content}}" data-key="content" bindblur="inputChange"  maxlength="10000" style="height: 100%;width:100%"></textarea>
 			</view>
 		</view>
 		

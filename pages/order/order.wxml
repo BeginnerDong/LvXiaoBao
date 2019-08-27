@@ -68,11 +68,8 @@
 	<view class="state" wx:if="{{web_show}}">
 		<view class="state-name">
 			<view class="state-title">支付状态</view>
-			<view class="state-btn">
-				<span bindtap="selectStateOne" data-key="101" style="{{func.inArrayT('101',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">
-
-
-					未支付</span>
+			<view class="state-btn flexRowBetween">
+				<span bindtap="selectStateOne" data-key="101" style="{{func.inArrayT('101',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">未支付</span>
 				<span bindtap="selectStateOne" data-key="102" style="{{func.inArrayT('102',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">支付中</span>
 				<span bindtap="selectStateOne" data-key="103" style="{{func.inArrayT('103',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已支付</span>
 				<span bindtap="selectStateOne" data-key="108" style="{{func.inArrayT('108',web_selectStateOne)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已取消</span>
@@ -80,7 +77,7 @@
 		</view>
 		<view class="state-name">
 			<view class="state-title">业务状态</view>
-			<view class="state-btn">
+			<view class="state-btn  flexRowBetween" style="  justify-content:flex-start">
 				<span bindtap="selectStateTwo" data-key="101" style="{{func.inArrayT('101',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">未确认</span>
 				<!-- <span style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">确认中</span> -->
 				<span bindtap="selectStateTwo" data-key="102" style="{{func.inArrayT('102',web_selectStateTwo)!=-1?'color: #EC6532;background: none;border: 1px solid #C5C5C5':''}}">已确认</span>
@@ -120,7 +117,7 @@
 				<input type="text" placeholder="半自助" value="{{web_submitData.peopleName}}" data-key="peopleName" bindblur="changeBind" />
 			</view>
 		</view>
-		<view class="state-btn">
+		<view class="state-btn" style="margin: 40rpx 0;  display: flex;justify-content: space-between;align-items: center;">
 			<view class="btn-left" bindtap="installSelect"><span>重置</span></view>
 			<view class="btn-right" bindtap="confirmSelect"><span>确认</span></view>
 		</view>

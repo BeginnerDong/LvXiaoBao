@@ -35,7 +35,7 @@
 			</view>
 			<view class="people-name">
 				<view class="peo-titl">门店地址</view>
-				<view class="peo-title avoidOverflow">{{web_mainData.reservationCompany}}</view>
+				<view class="peo-title">{{web_mainData.reservationCompany}}</view>
 			</view>
 			<view class="people-name">
 				<view class="peo-titl">门店地址</view>
@@ -162,9 +162,9 @@
 	</view>
 	<view style="height:100px;width:100%"></view>
 	<view class="bg" wx:if="{{showPay}}"></view>
-	<view class="payment" wx:if="{{showPay}}">
-		<view class="detail-mess">立即支付
-			<view class="title-line"></view>
+	<view class="payment" wx:if="{{showPay}}" >
+		<view class="detail-mess" style="padding:0 4%;box-sizing:border-box;">立即支付
+			<view class="title-line" style="left:4%"></view>
 		</view>
 		<block wx:for="{{web_mainData.plans}}">
 			<view class="pay">

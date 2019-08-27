@@ -224,6 +224,7 @@ page{
 	background:rgba(255,255,255,1);
 	border-right:2rpx solid #E7E7E7;
 	border-bottom:2rpx solid #E7E7E7;
+  box-sizing: border-box;
 }
 .theme-item-left,.theme-item-right{
 	width:50%;
@@ -325,6 +326,8 @@ page{
 .product-right{
 	width:60%;
 	padding: 0 2%;
+  box-sizing: border-box;
+
 }
 .product-left image{
 	width:240rpx;

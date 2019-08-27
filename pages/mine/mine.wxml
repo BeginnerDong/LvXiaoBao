@@ -1,7 +1,10 @@
 <view>
-	<view class="top">
-		<image src="../../image/top.png" bindtap="close"></image>
+	<view class="topbj">
+		<!-- <image src="../../image/top.png" bindtap="close"></image> -->
 	</view>
+  <view style=" position: relative; z-index: 22">
+  
+  <view class="addImg" wx:if="{{icon_show}}"><image src="../../image/top.png" bindtap="closeImg"></image></view>
 	<view class="mine">
 		<view class="mine-top">
 			<view class="mine-img">
@@ -9,7 +12,7 @@
 			</view>
 			<view class="mine-name">
 				<view class="name-mine">
-					<view class="name-title">{{web_mainData.name}}</view>
+					<view class="name-title overflow1">{{web_mainData.name}}</view>
 					<view class="name-con"><span>{{web_mainData.versionMark}}</span></view>
 				</view>
 				<view class="mine-con">{{web_mainData.expireDate}} 到期</view>
@@ -128,6 +131,7 @@
     <view class="closeBtn"><image  bindtap="bind" style="width:40rpx; height:40rpx;" src="../../image/clo.png" mode="widthFix"></image></view>
 	</view> 
 	<view style="width:100%;height:140rpx"></view>
+</view>
 	<view class="navbar">
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
 			<view class="nav_img">

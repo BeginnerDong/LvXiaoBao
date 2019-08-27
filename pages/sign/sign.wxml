@@ -193,8 +193,10 @@
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">单房差</view>
-			<input  value="{{web_submitData.singleSupplement}}"  data-key="singleSupplement" bindblur="inputChange"/>
-			<view class="sign-content">元/人</view>
+			
+			<view class="sign-content">
+      <input  value="{{web_submitData.singleSupplement}}"  data-key="singleSupplement" bindblur="inputChange"/>
+      元/人</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">*支付时间</view>
@@ -226,7 +228,7 @@
 		<view class="peo-name">
 			<view class="peo-con">*合计</view>
 			<view class="sign-content">
-				<input style="color:#333; font-size:32rpx;padding-right:20rpx;"  value="{{web_submitData.travelTotalPrice}}"  data-key="travelTotalPrice" bindblur="inputChange"/>元</view>
+				<input style="color:#333; font-size:32rpx; width:310rpx"  value="{{web_submitData.travelTotalPrice}}"  data-key="travelTotalPrice" bindblur="inputChange"/>元</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">支付说明</view>

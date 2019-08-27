@@ -8,6 +8,7 @@
 	</view>
 	<view class="teax">
 		<textarea placeholder="请写下您对使用本系统的感受,我们将认真听取您的意见." value="{{web_submitData.content}}"  data-key="content" bindblur="inputChange"></textarea>
+    <view style="text-align: right;font-size:24rpx;color:#999">1/100</view>
 	</view>
 	<view class="mobile">
 		<input class="mobile-name" placeholder="手机/邮箱/QQ" value="{{web_submitData.contact}}"  data-key="contact" bindblur="inputChange"></input>

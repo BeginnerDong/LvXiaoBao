@@ -28,30 +28,30 @@ page{
 }
 .teax{
 	padding:20rpx 5%;
-	height: 400rpx;
 	margin-top: 20rpx;
 	background: white;
 }
 textarea{
 	width: 100%;
-	height:100%;
+	min-height:220rpx;
 	font-size: 28rpx;
 	color: #333;
   line-height: 40rpx;
+  box-sizing: border-box;
 }
 .mobile{
-	width: 100%;
+  padding: 0 5%;
 	height: 100rpx;
 	display: flex;
 	margin-top: 20rpx;
 	background: white;
+  justify-content: space-between;
 }
 .mobile-name{
 	height:100rpx;
 	line-height: 100rpx;
 	color: #323232;
 	font-size: 32rpx;
-	padding-left: 5%;
 	font-weight: 500;
 }
 .mobile-con{
@@ -60,9 +60,10 @@ textarea{
 	line-height: 100rpx;
 	color: #A1A1A1;
 	font-size:28rpx;	
+  text-align: right;
 }
 .upload{
-	width: 100%;
+	padding: 0 5%;
 	margin-top: 20rpx;
 	background: white;
 }

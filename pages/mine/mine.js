@@ -12,6 +12,7 @@ Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
 		show: false,
+    icon_show:true,
 		submitData: {
 			phone: '',
 			code: ''
@@ -65,7 +66,12 @@ Page({
 			web_submitData: self.data.submitData,
 		});
 	},
-
+  closeImg(){
+    const self = this;
+    self.setData({
+      icon_show: false
+    })
+  },
 	bindPhone() {
 		const self = this;
 		const postData = api.cloneForm(self.data.submitData)

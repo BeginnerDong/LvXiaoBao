@@ -225,9 +225,17 @@
 }
 .flex-align{
 	display: flex;
-	align-items: center
+	align-items: center;
 }
 .flex-justify{
 	display: flex;
 	justify-content: center;
 }
+
+.flexRowBetween{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+}
+

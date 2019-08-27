@@ -46,8 +46,8 @@
 						<view class="product-img">
 							<image src="../../image/1.png"></image>
 						</view>
-						<view class="zhuy font14 color2">{{item.brandName}}</view><span class='linea'></span>
-						<view class="font14 color2 city avoidOverflow">{{item.province}}·{{item.city}}</view>
+						<view class="zhuy color2">{{item.brandName}}</view><span class='linea'></span>
+						<view class=" color2 city avoidOverflow">{{item.province}}·{{item.city}}</view>
 					</view>
 					<view class="product-right">
 						<span class="font12 avoidOverflow2">出发城市:{{item.startCity}}</span>
@@ -117,7 +117,7 @@
         <view class="screen-title">金额
           <view class="title-line"></view>
         </view>
-        <view class="choose">
+        <view class="choose" style=" justify-content: space-between;align-items: center">
           <view class="choose-in">
             <input type="text" placeholder="最低金额" value="{{web_price.sto}}"  data-key="sto" bindblur="priceChange"/>
           </view>
@@ -156,17 +156,12 @@
           </block>
         </view>
       </view>
-      <view class="bottom">
+    </scroll-view>
+    <view class="bottom">
         <view class="choose">
-          <view class="choose-item1" style="color: #A1A1A1;background: #F2F2F2;" bindtap="installSelect">
-            重置
-
-          </view>
-          <view class="choose-item1" style="color: #323232;background: #FFD101;font-weight: bold;" bindtap="confirmSelect">
-            确认
-          </view>
+          <view class="choose-item1" style="color: #A1A1A1;background: #F2F2F2;" bindtap="installSelect"> 重置</view>
+          <view class="choose-item1" style="color: #323232;background: #FFD101;font-weight: bold;" bindtap="confirmSelect">确认</view>
         </view>
       </view>
-    </scroll-view>
 	</view>
 </view>
