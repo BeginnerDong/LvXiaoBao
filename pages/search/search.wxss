@@ -10,26 +10,25 @@ page{
 	padding: 20rpx 0;
 }
 .search input{
-	width:86%;
+	width:60%;
 	background: #fff;
 	border-radius:40rpx;
 	height:80rpx;
-	padding: 0 20rpx;
+	padding: 0 2.5%;
 	position: relative;
-	margin: 0 auto;
+	margin-left: 5%;
 	font-size:28rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(192,192,192,1);
+	border-radius: 20px 0px 0px 20px;
 }
 .searchBtn{
-	width:100rpx;
+	width:15%;
 	height:80rpx;
 	background:#FFD101;
 	border-radius:0px 20px 20px 0px;
-	position:absolute;
-	right:3.5%;
-	top:20rpx;
+	
 	display:flex;
 	align-items:center;
 	justify-content: center;

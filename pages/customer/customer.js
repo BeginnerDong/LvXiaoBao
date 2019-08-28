@@ -37,8 +37,17 @@ Page({
 				cardNo:'',
 				cardValidity:'',
 				cardPaths:''
-			}],
+			}],			
 			id: ''
+		},
+		cardName:{
+			101:'身份证',
+			102:'护照',
+			103:'军官证',
+			104:'学生证',
+			105:'老年证',
+			106:'台湾通行证',
+			107:'港澳通行证',			
 		},
 		region: '',
 
@@ -51,13 +60,32 @@ Page({
 		const self = this;
 		self.setData({
 			web_region:self.data.region,
-			web_submitData:self.data.submitData
+			web_submitData:self.data.submitData,
+			web_cardName:self.data.cardName
+		})
+	},
+	
+	onShow(){
+		const self = this;
+		self.data.submitData.tags=api.getStorageArray('labelData')[0].join(',');
+		console.log(self.data.submitData.tags)
+		self.data.tagData = self.data.submitData.tags.split(',');
+		console.log(self.data.tagData);
+		self.setData({
+			web_tagData:self.data.tagData
 		})
 	},
 	
 	changeCard(e){
 		const self = this;
-		console.log(e)
+		console.log(e);
+		var value = self.data.cardData[e.detail.value].value;
+		var index = api.getDataSet(e,'index');
+		self.data.submitData.cards[index]['cardType'] = value;
+		self.setData({
+			web_submitData:self.data.submitData
+		})
+		
 	},
 	
 	dateChangeTwo(e){
@@ -159,7 +187,13 @@ Page({
 	
 	cardInputChange(e){
 		const self = this;
-		console.log(e)
+		console.log(e);
+		var index = api.getDataSet(e,'index');
+		self.data.submitData.cards[index][api.getDataSet(e,'key')] = e.detail.value;
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+		console.log(self.data.submitData)
 	},
 
 	bindRegionChange(e) {
@@ -197,6 +231,7 @@ Page({
 
 				api.dealRes(data);
 				if (data.solely_code == 100000) {
+					wx.removeStorageSync('labelData')
 					setTimeout(function() {
 						wx.navigateBack({
 							delta: 1

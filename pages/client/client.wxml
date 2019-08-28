@@ -26,19 +26,20 @@
 			<image src="../../image/right.png"></image>
 		</view>
 	</view>
-	<view class="client1">
-		<view class="cli-title1">
-			<view class="title">张丽</view>
-			<view class="mobile">17782526431</view>
-		</view>
-		<view class="cli-right">
-			<view class="right-img">
-				<image src="../../image/huizhang.png"></image>
+	<block wx:for="{{web_birthMainData}}" wx:key="id">
+		<view class="client1">
+			<view class="cli-title1">
+				<view class="title">{{item.name}}</view>
+				<view class="mobile">{{item.phone}}</view>
 			</view>
-			<view class="right-titl">剩3天</view>
+			<view class="cli-right">
+				<view class="right-img">
+					<image src="../../image/huizhang.png"></image>
+				</view>
+				<view class="right-titl">剩{{item.gapDay}}天</view>
+			</view>
 		</view>
-	</view>
-	
+	</block>
 	<block wx:for="{{alphbate}}" wx:key="id">
 		<view id="{{item}}" class="client" wx:if="{{web_mainDataC[item].length>0}}">
 			<view class="client-name">{{item}}</view>

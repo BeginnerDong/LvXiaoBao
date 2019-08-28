@@ -162,6 +162,7 @@ Page({
 				self.data.isLoadAll = true
 			};
 			self.setData({
+				web_birthMainData:self.data.birthMainData,
 				web_mainDataC:self.data.mainDataC
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);

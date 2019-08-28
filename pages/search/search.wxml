@@ -1,9 +1,9 @@
 <view>
 	<view class="top">
-		<view class="search">
-			<input placeholder="热门目的地" value="{{web_search.keyword}}" data-key="keyword" bindinput="inputChange"/>
-			<view wx:if="{{web_search.keyword!=''}}" style="z-index: 999;height:80rpx;position: absolute;display: flex;align-items: center;justify-content: center;right: 20%;top:20rpx" bindtap="deleteInput">
-				<image src="../../image/inputDelete.png" style="width: 40rpx;height: 40rpx;"></image>
+		<view class="search" style="display: flex;">
+			<input  placeholder="热门目的地" value="{{web_search.keyword}}" data-key="keyword" bindinput="inputChange"/>
+			<view  style="width:10%;z-index: 999;height:80rpx;display: flex;align-items: center;justify-content: center;background: #fff;">
+				<image wx:if="{{web_search.keyword!=''}}"  bindtap="deleteInput" src="../../image/inputDelete.png" style="width: 40rpx;height: 40rpx;"></image>
 			</view>
 			<view class="searchBtn" bindtap="goSearch">
 				<image src="../../image/search.png" />

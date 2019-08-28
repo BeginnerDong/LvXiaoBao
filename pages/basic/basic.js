@@ -34,6 +34,8 @@ Page({
 			name: '女',
 			value: 2
 		}],
+		cardData:[{key:'身份证',value:101},{key:'护照',value:102},{key:'军官证',value:103},{key:'学生证',value:104},{key:'老年证',value:105},{key:'台湾通行证',value:106},
+		{key:'港澳通行证',value:107}],
 		monthData:['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec'],
 		submitData: {
 			name: '',
@@ -55,6 +57,15 @@ Page({
 			cards: [],
 			id: ''
 		},
+		cardName:{
+			101:'身份证',
+			102:'护照',
+			103:'军官证',
+			104:'学生证',
+			105:'老年证',
+			106:'台湾通行证',
+			107:'港澳通行证',			
+		},
 		region: ['陕西省', '西安市', '雁塔区'],
 	},
 
@@ -65,6 +76,7 @@ Page({
 		self.getMainData();
 		self.travelRecord();
 		self.setData({
+			web_cardName:self.data.cardName,
 			web_num: self.data.num,
 			show_poster: self.data.showPoster,
 			web_selectIndex: self.data.selectIndex
@@ -79,6 +91,85 @@ Page({
 				web_tagData:self.data.tagData[0]
 			})
 		}
+	},
+	
+	changeCard(e){
+		const self = this;
+		console.log(e);
+		var value = self.data.cardData[e.detail.value].value;
+		var index = api.getDataSet(e,'index');
+		self.data.submitData.cards[index]['cardType'] = value;
+		self.setData({
+			web_submitData:self.data.submitData
+		})
+		console.log(self.data.submitData)
+		
+	},
+	
+	dateChangeTwo(e){
+		const self = this;
+		console.log(e);
+		var index = api.getDataSet(e,'index');
+		self.data.submitData.cards[index].cardValidity = e.detail.value;
+		self.setData({
+			web_submitData:self.data.submitData
+		})
+	},
+	
+	upLoadImg(e) {
+		const self = this;
+		var index = api.getDataSet(e,'index');
+		wx.showLoading({
+			mask: true,
+			title: '图片上传中',
+		});
+		const callback = (res) => {
+			console.log('res', res)
+			if (res.result == '0') {
+				var url = res.fullPath;
+				
+				self.data.submitData.cards[index].cardPaths = url;
+				self.setData({
+					web_submitData:self.data.submitData
+				});
+				wx.hideLoading()
+			} else {
+				api.showToast(res.msg, 'none')
+			}
+	
+		};
+	
+		wx.chooseImage({
+			count: 1,
+			success: function(res) {
+				console.log(res);
+				var tempFilePaths = res.tempFilePaths;
+				console.log(callback)
+				api.uploadFile(tempFilePaths[0], 'file', {
+					classify: 'T019',
+					rwidth: 150,
+					rheight: 150,
+					file: tempFilePaths[0],
+				}, callback)
+			},
+			fail: function(err) {
+				wx.hideLoading();
+			}
+		})
+	},
+	
+	
+	addPaper(){
+		const self = this;
+		self.data.submitData.cards.push({
+			cardType:'',
+			cardNo:'',
+			cardValidity:'',
+			cardPaths:''
+		});
+		self.setData({
+			web_submitData:self.data.submitData
+		})
 	},
 	
 	levelChange(e){
@@ -173,8 +264,14 @@ Page({
 				self.data.submitData.isCredit = self.data.mainData.isCredit;
 				self.data.submitData.cards = self.data.mainData.cards;
 				self.data.tagData = self.data.submitData.tags.split(',');
+				/* for (var i = 0; i < self.data.submitData.cards.length; i++) {
+					for (var j = 0; j < Things.length; j++) {
+						if(self.data.submitData.cards[i].)
+					}					
+				} */
 			}
 			self.setData({
+				web_cardName:self.data.cardName,
 				web_tagData:self.data.tagData,
 				web_index1:self.data.mainData.sex -1,
 				web_index:self.data.mainData.grade-1,
@@ -218,7 +315,48 @@ Page({
 	},
 
 
+	travelerDetailUpdate() {
+		const self = this;
+		const postData = {
+			header: {
+				'Authorization': wx.getStorageSync('token')
+			},
+			url: 'http://yapi.lxbtrip.cn/mock/19/own/v1/traveler/' + self.data.submitData.id
+		}
+		const callback = (data) => {
+			if (data) {
+	
+				api.dealRes(data);
+				if (data.solely_code == 100000) {
+					
+					setTimeout(function() {
+						wx.navigateBack({
+							delta: 1
+						});
+					}, 300);
+				}
+			};
+	
 
+		};
+		api.travelerDetailUpdate(postData, callback);
+	},
+	
+	
+	submit() {
+		const self = this;
+	
+		var phone = self.data.submitData.phone;
+		const pass = api.checkComplete(self.data.submitData);
+		console.log('self.data.submitData', self.data.submitData)
+		if (pass) {
+			self.travelerDetailUpdate()
+		} else {
+	
+			api.showToast('请补全信息', 'none');
+	
+		};
+	},
 
 	intoPath(e) {
 		const self = this;

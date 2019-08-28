@@ -97,12 +97,13 @@
 				<input type="text" placeholder="请与证件保持一致" value="{{web_submitData.address}}" data-key="address" bindblur="inputChange" />
 			</view>
 		</view>
-		<view class="peo-name" style="height: 100px;">
+		<view class="peo-name">
 			<view class="peo-con">标签</view>
 			<view class="peo-content">
 				<view class="card">
-					<span>来店里好几次</span>...
+					<span>{{web_tagData[0]}}</span>...
 				</view>
+				
 				<view class="card-img">
 					<image src="../../image/right.png"></image>
 				</view>
@@ -110,57 +111,7 @@
 		</view>
 		<view class="cust" bindtap="intoPath" data-path="/pages/labels/labels">+添加新标签</view>
 	</view>
-	<!-- <view class="type">
-		<view class="type-name">证件信息
-			<view class="title-line"></view>
-		</view>
-		<block wx:for="{{web_submitData.cards}}">
-			<view class="basic-name">
-				<view class="name">证件类型</view>
-				<view class="title-con">
-					<view class="con">
-						<picker data-index="{{index}}" bindchange="changeCard" value="" range="{{cardData}}" style="width:100%;">
-							<view style="font-size: 28rpx;color: #323232;">
-								{{cardData[web_cardIndex]?cardData[web_cardIndex]:'选择证件类别'}}
-							</view>
-						</picker>
-					</view>
-					<view class="card-img">
-						<image src="../../image/right.png"></image>
-					</view>
-				</view>
-			</view>
-			<view class="basic-name">
-				<view class="name">证件号码</view>
-				<view class="title">
-					<input data-index="{{index}}" type="text" placeholder="填写证件号码" value="{{item.cardNo}}" data-key="cardNo" bindblur="cardInputChange" />
-				</view>
-			</view>
-			<view class="basic-name">
-				<view class="name">有效期至</view>
-				<view class="title-con">
-					<view class="con">
-						<picker bindchange="dateChangeTwo" data-index="{{index}}" mode="date" style="width:100%;">
-							<view style="font-size: 28rpx;color: #323232;">
-								{{item.cardValidity?item.cardValidity:'选择有效日期'}}
-							</view>
-						</picker>
-					</view>
-					<view class="card-img">
-						<image src="../../image/right.png"></image>
-					</view>
-				</view>
-			</view>
-			<view class="photo">
-				<view class="phpto-text">照片</view>
-				<view class="photo-img">
-					<image src="../../image/caram.png"></image>
-				</view>
-			</view>
-		</block>
-
-		<view class="cust" bindtap="addPaper">+添加证件</view>
-	</view> -->
+	
 	<view class="type">
 		<view class="type-name">证件信息
 			<view class="title-line"></view>
@@ -173,7 +124,7 @@
 					<view class="con">
 						<picker data-index="{{index}}" bindchange="changeCard" value="" range-key="key" range="{{cardData}}" style="width:100%;">
 							<view style="font-size: 28rpx;color: #323232;">
-								{{cardData[index].key?cardData[index].key:'选择证件类别'}}
+								{{web_cardName[web_submitData.cards[index]['cardType']]?web_cardName[web_submitData.cards[index]['cardType']]:'选择证件类别'}}
 							</view>
 						</picker>
 					</view>

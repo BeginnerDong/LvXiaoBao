@@ -43,13 +43,16 @@ Page({
 				
 			]
 		},
-		imgArray:[]
+		imgArray:[],
+		max:100,
+		len:0
 	},
 
 	onLoad(options) {
 		const self = this;
 		self.setData({
-			web_imgArray:self.data.imgArray
+			web_imgArray:self.data.imgArray,
+			web_len:self.data.len
 		})
 	},
 	
@@ -109,7 +112,14 @@ Page({
 	inputChange(e) {
 		const self = this;
 		api.fillChange(e, self, 'submitData');
+		console.log(e)
+		if(e.currentTarget.dataset.key=='content'){
+			var value = e.detail.value;
+			var len = parseInt(value.length);		
+			if(len > self.data.max) return;
+		};
 		self.setData({
+			web_len:len,
 			web_submitData: self.data.submitData,
 		});
 	},

@@ -293,11 +293,12 @@
 					<image src="{{web_submitData.notGroupChoose==101?'../../image/complete.png':'../../image/quan.png'}}"></image>
 				</view>
 			</view>
-			<view class="peo-name" wx:if="{{web_submitData.notGroupChoose==101}}" style="height:80rpx;">
+			<view class="peo-name"  style="height:80rpx;">
 				<view class="peo-con">旅行社名称</view>
 				<view class="peo-content1">
 					<view class="card">
-						<input type="text" placeholder="填写委托第三方旅行社名称" value="{{web_submitData.intrustTravelName}}"  data-key="intrustTravelName" bindblur="inputChange"/>
+						<input type="text"  wx:if="{{web_submitData.notGroupChoose==101}}" placeholder="填写委托第三方旅行社名称" value="{{web_submitData.intrustTravelName}}"  data-key="intrustTravelName" bindblur="inputChange"/>
+						<input type="text" wx:else disabled="true"  placeholder="填写委托第三方旅行社名称" value="{{web_submitData.intrustTravelName}}"  data-key="intrustTravelName" bindblur="inputChange"/>
 					</view>
 				</view>
 			</view>
@@ -330,11 +331,12 @@
 				<image src="{{web_submitData.isAgreeGroup=='true'?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
-		<view class="peo-name" wx:if="{{web_submitData.isAgreeGroup=='true'}}">
+		<view class="peo-name">
 			<view class="peo-con">*拼团至</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="填写拼团其他旅行社名称" value="{{web_submitData.isAgreeGroupTravelName}}"  data-key="isAgreeGroupTravelName" bindblur="inputChange"/>
+					<input type="text"  wx:if="{{web_submitData.isAgreeGroup=='true'}}" placeholder="填写拼团其他旅行社名称" value="{{web_submitData.isAgreeGroupTravelName}}"  data-key="isAgreeGroupTravelName" bindblur="inputChange"/>
+					<input type="text"  wx:else disabled="true" placeholder="填写拼团其他旅行社名称" value="{{web_submitData.isAgreeGroupTravelName}}"  data-key="isAgreeGroupTravelName" bindblur="inputChange"/>
 				</view>
 			</view>
 		</view>
@@ -348,11 +350,12 @@
 				<image src="{{web_submitData.methodChoose=='1'?'../../image/complete.png':'../../image/quan.png'}}"></image>
 			</view>
 		</view>
-		<view class="peo-name"  wx:if="{{web_submitData.methodChoose=='1'}}">
+		<view class="peo-name">
 			<view class="peo-con">仲裁委员会</view>
 			<view class="peo-content1">
 				<view class="card">
-					<input type="text" placeholder="填写仲裁委员会" value="{{web_submitData.arbitrationName}}"  data-key="arbitrationName" bindblur="inputChange"/>
+					<input type="text"   wx:if="{{web_submitData.methodChoose=='1'}}" placeholder="填写仲裁委员会" value="{{web_submitData.arbitrationName}}"  data-key="arbitrationName" bindblur="inputChange"/>
+					<input type="text"   wx:else disabled="true" placeholder="填写仲裁委员会" value="{{web_submitData.arbitrationName}}"  data-key="arbitrationName" bindblur="inputChange"/>
 				</view>
 			</view>
 		</view>

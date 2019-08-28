@@ -221,6 +221,18 @@ class Api extends Base {
 		};
 		this.request(allParams);
 	}
+	
+	travelerDetailUpdate(param, callback) {
+		var allParams = {
+			url: '/own/v1/traveler/{id}',
+			type: 'put',
+			data: param,
+			sCallback: function(data) {
+				callback && callback(data);
+			}
+		};
+		this.request(allParams);
+	}
 
 	addTraveler(param, callback) {
 		var allParams = {
