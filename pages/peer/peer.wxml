@@ -116,7 +116,7 @@
 	</view>
 	<view class="advert" bindtap="isShow" wx:if="{{web_show}}">
 	</view>
-	<view class="top1" wx:if="{{web_show}}">
+	<view class="top1" wx:if="{{web_show}}" catchtouchmove='true'>
 		<view class="top-top">
 			<view class="top-title">
 				业务分类
