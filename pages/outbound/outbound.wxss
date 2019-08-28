@@ -33,7 +33,11 @@
 	width: 20%;
 	height: 100rpx;
 	text-align:right;
-	margin-right: 15%;
+	margin-right: 3%;
+}
+.card-img image{
+  width: 30rpx;
+  height: 30rpx;
 }
 .card{
 	width: 80%;
@@ -76,4 +80,18 @@
 	margin: 80rpx auto;
 	font-weight: bold;
 	font-size: 30rpx;
+}
+.btn{
+	width: 90%;
+	height: 100rpx;
+	background:linear-gradient(90deg,rgba(255,88,43,1) 0%,rgba(255,123,87,1) 100%);
+	color: white;
+	text-align: center;
+	border-radius: 60rpx;
+	line-height: 100rpx;
+	margin-left: 5%;
+	opacity: 0.3;
+	margin-top: 40rpx;
+	font-size: 34rpx;
+	font-weight: bold;
 }

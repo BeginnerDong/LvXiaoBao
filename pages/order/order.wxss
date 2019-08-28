@@ -207,9 +207,9 @@ page {
 }
 .state{
 	width: 100%;
-	height: 95%;
+	height: 100%;
 	position: fixed;
-	bottom: 6%;
+	bottom: 0%;
 	z-index: 1100;
 	background:white;
   overflow-y: auto;
