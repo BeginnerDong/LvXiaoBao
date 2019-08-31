@@ -114,7 +114,7 @@
 			<view class="text">我的</view>
 		</view>
 	</view>
-	<view class="advert" bindtap="isShow" wx:if="{{web_show}}">
+	<view class="advert" bindtap="isShow"  wx:if="{{web_show}}" catchtouchmove='true'>
 	</view>
 	<view class="top1" wx:if="{{web_show}}" catchtouchmove='true'>
 		<view class="top-top">

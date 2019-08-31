@@ -1,8 +1,8 @@
 <view style="width:100%">
 	<view class="month flex-align">
-		<view class="month-item" style="font-weight: 700;" wx:for="{{web_monthArray}}">
+		<view class="month-item" style="font-weight: 700;" wx:for="{{web_monthArray}}" bindtap="changeMonth" data-item="{{item}}">
 			{{item}}月
-			<view wx:if="{{index==0}}" class="title-line"></view>
+			<view wx:if="{{item==monthIndex}}" class="title-line"></view>
 		</view>
 	</view>
 	<view class="calendar">

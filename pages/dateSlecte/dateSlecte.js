@@ -89,9 +89,11 @@ Page({
 		//self.getMainData()
 	},
 
-	getMainData() {
+	getMainData(isNew) {
 		const self = this;
-		
+		if(isNew){
+			self.data.mainData = []
+		};
 		const postData = {
 			'Authorization': wx.getStorageSync('token'),
 			classifyId:self.data.id,
@@ -238,20 +240,43 @@ Page({
 			self.data.monthArray.push(self.data.curMonth+3);
 			self.data.monthArray.push(self.data.curMonth+4);
 		};
+		
 		self.data.curYear = curDate.getFullYear();
 		self.data.curDay = curDate.getDate();
 		self.data.choosedTimeFormat = self.getTimeFormat(self.data.curYear,self.data.curMonth+1,self.data.curDay);
 		self.setData({
+			monthIndex:self.data.monthArray[0],
 			web_choosedTimeFormat:self.data.choosedTimeFormat,
 			web_monthArray:self.data.monthArray
 		})
 		self.refreshPageData(self.data.curYear, self.data.curMonth, self.data.curDay);		
 	},
 	
+	changeMonth(e){
+		const self = this;
+		var item = api.getDataSet(e,'item');
+		var curDate = new Date();
+		if(item==self.data.monthArray[0]){
+			self.calenderInit()
+		}else{
+			self.data.curYear = curDate.getFullYear();
+			self.data.curDay = curDate.getDate();
+			self.data.choosedTimeFormat = self.getTimeFormat(self.data.curYear,self.data.curMonth+1,1);
+			self.setData({
+				monthIndex:item,
+				web_choosedTimeFormat:self.data.choosedTimeFormat,
+			})
+			self.refreshPageData(self.data.curYear, item, self.data.curDay);	
+		}
+	},
+	
 	//刷新全部数据
 	refreshPageData(year, month, day) {
 		const self = this;
 		console.log(111)
+		self.data.curYear = year;
+		self.data.curMonth = month;
+		
 		self.data.signData = [];
 		self.data.dateData = [];
 		self.getOffset(self.data.curYear, self.data.curMonth);
@@ -286,7 +311,7 @@ Page({
 			web_dateData:self.data.dateData
 		});
 		console.log('self.dateData', self.data.dateData);
-		self.getMainData()
+		self.getMainData(true)
 	},
 
 	getTimeFormat(year,month,day){
