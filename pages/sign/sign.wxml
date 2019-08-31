@@ -228,7 +228,7 @@
 		<view class="peo-name">
 			<view class="peo-con">*合计</view>
 			<view class="sign-content">
-				<input style="color:#333; font-size:32rpx; width:310rpx"  value="{{web_submitData.travelTotalPrice}}"  data-key="travelTotalPrice" bindblur="inputChange"/>元</view>
+				<input style="color:#333; font-size:32rpx;"  value="{{web_submitData.travelTotalPrice}}"  data-key="travelTotalPrice" bindblur="inputChange"/>元</view>
 		</view>
 		<view class="peo-name">
 			<view class="peo-con">支付说明</view>

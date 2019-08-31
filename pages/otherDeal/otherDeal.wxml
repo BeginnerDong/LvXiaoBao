@@ -21,8 +21,8 @@
 				<view class="jo-con">保存</view>
 			</view>
 		</view>
-		<view class="jounery-btn" bindtap="intoPathRedi">
+	</view>
+  <view class="jounery-btn" bindtap="intoPathRedi">
 			<image src="../../image/aa.png"></image>
 		</view>
-	</view>
 </view>

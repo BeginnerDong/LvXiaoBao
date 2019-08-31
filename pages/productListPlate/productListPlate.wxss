@@ -211,7 +211,7 @@ page {
 }
 .scree{
 	width: 100%;
-	top:181rpx;
+	top:179rpx;
 	background:#FFFFFF;
 	opacity:1;  
 	z-index:11111;
@@ -256,7 +256,7 @@ page {
 	margin: 20rpx 0rpx;
 }
 .choose-item{
-  width: 172rpx;
+  width: 190rpx;
 	height:80rpx;
 	border-radius:16rpx;
 	line-height: 80rpx;
@@ -265,7 +265,7 @@ page {
 	font-weight:500;
 	color:rgba(50,50,50,1);
 	text-align: center;
-	margin: 10rpx 76rpx 10rpx 0;
+	margin: 10rpx 52rpx 10rpx 0;
 	background: #F2F2F2;
   box-sizing: border-box;
 }

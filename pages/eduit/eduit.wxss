@@ -1,12 +1,13 @@
 .eduit{
 	width: 100%;
-	height: 800rpx;
+	/* height: 800rpx; */
 }
 .peo-name{
 	width: 100%;
 	height: 100rpx;
 	display: flex;
 	padding: 0 3%;
+  box-sizing: border-box;
 	border-bottom: 2rpx solid #E7E7E7;
 }
 .peo-con{
@@ -34,8 +35,7 @@
 .card-img{
 	width: 20%;
 	height:100rpx;
-	text-align:right;
-	margin-right: 15%;
+	text-align:center;
 }
 .card{
 	width: 100%;
@@ -45,7 +45,7 @@
 	width: 100%;
 	height: 96rpx;
 	border: none;
-	font-size: 28rpx;
+  font-size: 28rpx;
 	color: #A1A1A1;
 	line-height: 96rpx;
 	
@@ -67,7 +67,7 @@
 	height: 96rpx;
 	border: none;
 	line-height: 96rpx;
-	font-size: 24rpx;
+	font-size: 28rpx;
 	color: #A1A1A1;
 	opacity: 1;
 }

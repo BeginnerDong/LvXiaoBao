@@ -12,6 +12,7 @@ Page({
 	data: {
 		show_bx:false,
 		show_date:false,
+    show_tips:true,
 		isFirstLoadAllStandard:['getInsuranceData'],
 		mainData:[],
 		insuranceData:[],
@@ -47,7 +48,12 @@ Page({
 			show_fee:self.data.show_fee
 		})
 	},
-	
+  close_tips(){
+    const self = this;
+    self.setData({
+       show_tips : false
+    })
+  },
 	isShowMore(){
 		const self = this;
 		self.data.showMore = !self.data.showMore;

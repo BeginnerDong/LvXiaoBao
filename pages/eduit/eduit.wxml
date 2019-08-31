@@ -3,14 +3,14 @@
 	<view class="peo-name">
 		<view class="peo-con">*姓名</view>
 		<view class="peo-content1">
-			<input type="text" placeholder="请与证件姓名一致" value="{{web_submitData.name}}"  data-key="name" bindinput="inputChange"/>
+			<input type="text" placeholder="请与证件姓名一致" value="{{web_submitData.name}}"  data-key="name" bindinput="inputChange" placeholder-style="color:#a1a1a1"/>
 		</view>
 	</view>
 	<view class="peo-name">
 		<view class="peo-con">*证件类型</view>
 		<view class="peo-content">
 			<view class="card">
-				<picker bindchange="cardChange" value="{{index}}"  range="{{cardData}}" range-key="key"  style="width:100%;height:100%;font-size:26rpx;color:#A1A1A1;">{{cardData[web_index].key?cardData[web_index].key:'请选择证件类型'}}
+				<picker bindchange="cardChange" value="{{index}}"  range="{{cardData}}" range-key="key"  style="width:100%;height:100%;font-size:28rpx;color:#A1A1A1;">{{cardData[web_index].key?cardData[web_index].key:'请选择证件类型'}}
 				</picker>
 			</view>
 			<view class="card-img"><image src="../../image/right.png"></image></view>
@@ -20,7 +20,7 @@
 		<view class="peo-con">*证件号码</view>
 		<view class="peo-content">
 			<view class="card">
-				<input type="number" placeholder="请与证件号码一致" value="{{web_submitData.card}}"  data-key="card" bindinput="inputChange"/>
+				<input type="number" placeholder="请与证件号码一致" placeholder-style="color:#a1a1a1" value="{{web_submitData.card}}"  data-key="card" bindinput="inputChange"/>
 			</view>
 			<view class="card-img"><image src="../../image/jiao.png"></image></view>
 		</view>
@@ -29,7 +29,7 @@
 		<view class="peo-con">性别</view>
 		<view class="peo-content">
 			<view class="card">
-				<picker bindchange="sexChange" value="{{index}}"  range="{{sexData}}" range-key="key" style="width:100%;height:100%;font-size:26rpx;color:#A1A1A1;">{{sexData[web_index1].key?sexData[web_index1].key:'请选择性别'}}
+				<picker bindchange="sexChange" value="{{index}}"  range="{{sexData}}" range-key="key" style="width:100%;height:100%;font-size:28rpx;color:#A1A1A1;">{{sexData[web_index1].key?sexData[web_index1].key:'请选择性别'}}
 				</picker>
 			</view>
 			<view class="card-img"><image src="../../image/right.png"></image></view>
@@ -39,7 +39,7 @@
 		<view class="peo-con">出生日期</view>
 		<view class="peo-content">
 			<view class="card">
-				<picker bindchange="birthChange" mode="date"  style="width:100%;height:100%;font-size:26rpx;color:#A1A1A1;">{{web_submitData.birth?web_submitData.birth:'请选择出生日期'}}
+				<picker bindchange="birthChange" mode="date"  style="width:100%;height:100%;font-size:28rpx;color:#A1A1A1;">{{web_submitData.birth?web_submitData.birth:'请选择出生日期'}}
 				</picker>
 			</view>
 			<view class="card-img"><image src="../../image/right.png"></image></view>
@@ -49,7 +49,7 @@
 	<view class="peo-name">
 		<view class="peo-con">手机号</view>
 		<view class="peo-content1">
-			<input type="number" placeholder="请填写手机号码" value="{{web_submitData.phone}}"  data-key="phone" bindinput="inputChange"/>
+			<input type="number" placeholder="请填写手机号码" value="{{web_submitData.phone}}"  data-key="phone" bindinput="inputChange" placeholder-style="color:#a1a1a1"/>
 		</view>
 	</view>
 	<view class="btn" bindtap="{{web_buttonCanClick?'submit':''}}" style="{{web_isComplete?'opacity:1':''}}">保存</view>

@@ -203,13 +203,13 @@ page {
 	bottom: 0;
 	background: #000000;
 	opacity: 0.6;
-	z-index: 1000;
+	z-index: 990;
 }
 .state{
 	width: 100%;
-	height: 100%;
+	height: 88%;
 	position: fixed;
-	bottom: 0%;
+	top: 0;
 	z-index: 1100;
 	background:white;
   overflow-y: auto;
@@ -231,6 +231,7 @@ page {
 	display: flex;
   flex-wrap: wrap;
   margin-top: 10rpx;
+  box-sizing: border-box;
 }
 .state-btn span{
 	width: 160rpx;
@@ -406,7 +407,8 @@ page {
    width: 30%;
 }
 .cfm-left .tit{
-  font-size: 32rpx;
+  font-size:28rpx;
+  font-weight: bold;
 }
 .cfm-left .cfm-people{
 width: 120rpx;
@@ -466,6 +468,11 @@ height: 40rpx;
   text-align: center;
 }
 
+
+.cfm-lisbox{ 
+  height: 560rpx; 
+  overflow-y:auto;  
+}
 
 
 

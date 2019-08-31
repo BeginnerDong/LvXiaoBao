@@ -37,10 +37,10 @@
 					</view>
 				</view>
 			</view>
-			<view style="width: 100%;display: flex;align-items: center;">
+			<view style="width: 100%;display: flex;align-items: center;" wx:if="{{show_tips}}">
 				<view class="detail">
 					<view class="detail-title">由于保险费用是根据游客年龄，行程天数实时计算保险费用，需要先选择需要购买保险的游客。</view>
-					<view class="detail-img">
+					<view class="detail-img" bindtap="close_tips">
 						<image src="../../image/clo.png"></image>
 					</view>
 				</view>

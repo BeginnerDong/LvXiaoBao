@@ -13,7 +13,7 @@
 			<view class="mine-name">
 				<view class="name-mine">
 					<view class="name-title overflow1">{{web_mainData.name}}</view>
-					<view class="name-con"><span>{{web_mainData.versionMark}}</span></view>
+					<view class="name-con"><span>{{web_mainData.versionMark}}</span><view class="dian"></view></view>
 				</view>
 				<view class="mine-con">{{web_mainData.expireDate}} 到期</view>
 			</view>

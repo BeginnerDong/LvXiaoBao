@@ -157,11 +157,11 @@
 
 		<view class="order-btn">
 			<view class="can"><span>取消订单</span></view>
-			<view class="can1"><span>立即支付</span></view>
+			<view class="can1"><span>立即支付1</span></view>
 		</view>
 	</view>
 	<view style="height:100px;width:100%"></view>
-	<view class="bg" wx:if="{{showPay}}"></view>
+	<view class="bg" wx:if="{{showPay}}" bindtap="submit"></view>
 	<view class="payment" wx:if="{{showPay}}" >
 		<view class="detail-mess" style="padding:0 4%;box-sizing:border-box;">立即支付
 			<view class="title-line" style="left:4%"></view>

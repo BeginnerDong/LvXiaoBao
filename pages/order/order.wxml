@@ -90,7 +90,7 @@
 				<input type="text" placeholder="半自助" value="{{web_submitData.keyword}}" data-key="keyword" bindblur="changeBind" />
 			</view>
 		</view>
-		<view class="state-name" style="height: 140px;">
+		<view class="state-name" >
 			<view class="state-title">金额</view>
 			<view class="state-btn1">
 				<view class="state-top">

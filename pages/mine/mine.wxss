@@ -62,32 +62,43 @@ padding: 0 5%;
 }
 .name-mine{
 	width: 100%;
+  margin-top: 20rpx;
 	display: flex;
+  justify-content: left;
+  align-items: center;
 }
 .name-title{
 	/* width: 25%; */
 	color: #323232;
 	font-size: 32rpx;
-	margin-top: 20rpx;
 	font-weight: bold;
 
 }
 .name-con{
-	width:50%;
-	height: 40rpx;
-	margin-top: 16rpx;
+  width: 106rpx;
+  height: 34rpx;
+  border-radius: 30rpx;
 	margin-left: 3%;
+  font-size: 24rpx;
+  border: 2rpx solid #C5C5C5;
+  position: relative;
+  overflow: hidden;
 }
 .name-con span{
-	width: 100rpx;
-	height: 40rpx;
-	display: inline-block;
+  display: block;
 	text-align: center;
-	line-height: 40rpx;
-	border-radius: 30rpx;
+	line-height: 34rpx;
 	color: #ED6533;
-	font-size: 24rpx;
-	border: 2rpx solid #C5C5C5;
+}
+.name-con .dian{
+  width: 30rpx;
+  height: 28rpx;
+  background: #FFD101;
+  border-radius: 20rpx;
+  display: block;
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
 }
 .mine-con{
 	width: 100%;
@@ -176,7 +187,7 @@ padding: 0 5%;
 }
 .serve-con{
 	width: 100%;
-	height: 180rpx;
+	padding: 30rpx 0;
 	display: flex;
   justify-content: space-around;
   align-items: center;
@@ -189,8 +200,10 @@ padding: 0 5%;
 	text-align: center;
 }
 .ser-img image{
-	width: 52rpx;
-	height: 52rpx;
+	width: 88rpx;
+	height: 88rpx;
+  display: block;
+  margin: 0 auto;
 }
 .ser-title{
 	color: #585858;
@@ -198,6 +211,7 @@ padding: 0 5%;
 	width: 100%;
 	text-align: center;
 	font-weight: 500;
+  margin-top: 20rpx;
 }
 .recomm{
 	box-shadow:0px 4rpx 6rpx 0px rgba(222,222,222,1);

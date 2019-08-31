@@ -206,6 +206,7 @@ page {
 	margin-left: 24rpx;
 	margin-top: 20rpx;
 	background: rgba(242,242,242,1);
+  box-sizing: border-box;
 }
 .bottom{
 	width: 100%;

@@ -154,7 +154,7 @@
 			</view>
 		</view>
 	</view>
- <view class="cost" wx:if="{{show_fee}}"></view>
+ <view class="cost" wx:if="{{show_fee}}" bindtap="isShowFee"></view>
 <view class="expense" wx:if="{{show_fee}}">
 	<view class="expense-title">费用明细
 	<view class="title-line" style="left: 3%;bottom: 27px;"></view></view>
