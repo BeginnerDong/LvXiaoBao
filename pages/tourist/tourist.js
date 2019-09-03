@@ -119,13 +119,6 @@ Page({
 	},
 
 
-	onReachBottom() {
-		const self = this;
-		if (!self.data.isLoadAll && self.data.buttonCanClick) {
-			self.data.paginate.currentPage++;
-			self.getMainData();
-		};
-	},
 
 	intoAdd(e) {
 		const self = this;
