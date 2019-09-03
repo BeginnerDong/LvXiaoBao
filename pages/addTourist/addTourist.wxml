@@ -1,0 +1,46 @@
+
+ <view class="rightNav">
+ 	<block wx:for="{{alphbate}}" wx:key="id" wx:for-item="item">
+ 		<view class="num" hover-class="on" 
+ 			data-alp="{{item}}"
+ 			bind:touchstart="handleTouchStart" 
+ 			bind:touchmove="handleTouchMove"
+ 			bind:touchcancel="handleTouchCancel"
+ 			bindtap="clickToPoint"
+ 		>{{item}}</view>
+ 	</block>
+ </view>
+<view>
+	<view class="topAdd">
+		<view class="lis">张浩</view>
+    <view class="lis">张浩</view>
+    <view class="lis">张浩</view>
+    <view class="lis">张浩</view>
+    <view class="lis">张浩</view>
+    <view class="lis">张浩</view>
+	</view>
+	<block wx:for="{{alphbate}}" wx:key="id">
+		<view id="{{item}}" class="client" wx:if="{{web_mainDataC[item].length>0}}">
+			<view class="client-name">{{item}}</view>
+		</view>
+		<block wx:for="{{web_mainDataC[item]}}" wx:key="id" wx:for-item="c_item">
+			<view class="client1" bindtap="intoPath" data-path="/pages/basic/basic?id={{c_item.id}}">
+        <view class="selIcon">
+          <image src="../../image/quan.png"></image>
+          <image wx-if="{{is_show}}" src="../../image/complete.png"></image>
+        </view>
+				<view class="cli-title">
+					<view class="title">{{c_item.name}}<span>({{c_item.aliasName}})</span></view>
+					<view class="mobile">{{c_item.phone}}</view>
+				</view>
+			</view>
+		</block>
+		
+	</block>
+
+  <view class="subOkBtn">
+    <view class="btn">确定</view>
+  </view>
+
+	
+</view>

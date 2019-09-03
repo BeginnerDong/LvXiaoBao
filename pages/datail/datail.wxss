@@ -303,7 +303,7 @@ page{
 .agent{
 	width: 100%;
 	height: 540rpx;
-	margin-top: 2%;
+	margin-top: 10rpx;
 	background: white;
 }
 .select-group{
@@ -409,7 +409,7 @@ page{
 	background: white;
 }
 .product-special .product-info-bottom{
-  height: 120rpx;
+  /* height: 120rpx; */
 }
 
 .star-img{
@@ -439,8 +439,8 @@ page{
 	height: 800rpx;
 }
 .routing{
-	margin-top: 2%;
-	background: white;
+	/* margin-top: 10rpx; */
+	/* background: white; */
 }
 .plan{
 	width: 100%;
@@ -448,22 +448,45 @@ page{
 }
 .plan-one{
 	width: 94%;
+  box-sizing: border-box;
+  padding-left: 26rpx;
   margin: 0 auto;
-
-	font-size: 26rpx;
+	font-size: 30rpx;
 	color: #323232;
-	padding-top: 20rpx;
+	padding-bottom: 30rpx;
+  border-left: 2rpx solid #FFD101;
+  position: relative;
+}
+.plan-one::before{
+  content: "";
+  width: 20rpx;
+  height: 20rpx;
+  background: #FFD101;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -11rpx;
+}
+.plan-one view{
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #666;
+}
+.plan-scienic{
+  position: relative;
+  top: -10rpx;
 }
 .plan-three{
-	width: 90%;
-
+	/* width: 90%; */
 	background:#EEF1FA;
 	opacity: 1;
-	font-size: 12pt;
-	border-radius: 20rpx;
+	font-size: 26rpx;
+  line-height: 44rpx;
+	border-radius: 10rpx;
 	padding: 20rpx;
-	margin: 2%;
+	margin:20rpx auto;
 	color: #484848;
+  box-sizing: border-box;
 }
 .plan-img{
 	width: 94%;
@@ -479,15 +502,36 @@ page{
 .follow{
 	width: 100%;
 	background: white;
-	margin-top: 20rpx;
+	margin-bottom: 20rpx;
+  font-size: 28rpx;
+  line-height: 44rpx;
+  padding:40rpx 0;
 }
 /* .fee-explain{
 	margin-top: 24rpx;
 } */
 .fee-explain1{
-	height: 560rpx;
+	/* height: 560rpx; */
 	margin-top: 20rpx;
+
 }
+.fee-explain1 .all-text{
+  height:auto;
+  padding: 24rpx 3%;
+  margin-top: 0rpx;
+  display: block;
+  width: 94%;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #e7e7e7;
+  background: #fff;
+}
+.texCont{
+  font-size:26rpx;
+  padding:0 3%;
+  color: #666;
+  line-height: 44rpx;
+}
+
 .all-text view{
 	font-size:30rpx;
   line-height: 44rpx;
@@ -701,6 +745,7 @@ page{
 	padding: 0 3%;
 	width:94%;
 	border-bottom: 2rpx solid #E7E7E7;
+  margin-top: 20rpx;
 }
 .starand{
 	font-size:30rpx;

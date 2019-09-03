@@ -36,7 +36,7 @@
 				</view>
 				<view class="left-cn">剪贴板添加</view>
 			</view>
-			<view class="bott">
+			<view class="bott" bindtap="intoPath" data-path="/pages/addTourist/addTourist">
 				<view class="left-img">
 					<image src="../../image/blacklist.png"></image>
 				</view>

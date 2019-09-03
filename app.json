@@ -55,7 +55,8 @@
 	"pages/seleteSalers/seleteSalers",
 	"pages/payFee/payFee",
 	"pages/addPayFee/addPayFee",
-	"pages/orderPeople/orderPeople"
+	"pages/orderPeople/orderPeople",
+  "pages/addTourist/addTourist"
   ],
   "window": {
     "backgroundTextStyle": "light",

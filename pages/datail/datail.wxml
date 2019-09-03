@@ -218,7 +218,7 @@
 		<view class="special-img">
 			<image src="../../image/img3.png" mode="widthFix"></image>
 		</view> -->
-		<view style="font-size:15px;padding: 12px 3%;">
+		<view style="font-size:28rpx;padding: 12px 3%;line-height: 44rpx">
 			<rich-text>{{web_mainData.lineFeature}}</rich-text>
 		</view>
 	</view>
@@ -237,12 +237,16 @@
 					</view>
 					<view class="plan-one">
 						<view class="plan-scienic">景点·{{item.startCity}}-{{item.endCity}}</view>
+            <view class="plan-three">
+              <rich-text>{{item.journeyContent}}</rich-text>
+            </view>
 					</view>
-					<view class="plan-three">
-						<rich-text>{{item.journeyContent}}</rich-text>
-					</view>
+					
 				
-					<view class="plan-one">早餐:{{item.isBreakfast==1?'不含':'包含'}}；午餐:{{item.isLunch==1?'不含':'包含'}}；晚餐:{{item.isDinner==1?'不含':'包含'}}</view>
+					<view class="plan-one">
+            <view class="plan-scienic">早餐：{{item.isBreakfast==1?'不含':'包含'}}；午餐：{{item.isLunch==1?'不含':'包含'}}；晚餐：{{item.isDinner==1?'不含':'包含'}}
+            </view>
+          </view>
 					<view class="plan-one">
 						<view class="plan-scienic">早餐:{{item.breakfast}}</view>
 						<view class="plan-scienic">午餐:{{item.lunch}}</view>
@@ -259,13 +263,14 @@
 					<view class="title-line" style="left: 4%;"></view>
 				</view>
 			</view>
-			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
-				<view style="font-weight:700 ;">费用不含</view>
-				<rich-text style="font-size:15px;padding: 12px 3%;;">{{web_mainData.priceInclude}}</rich-text>
+			<view class="all-text">
+				<view style="font-weight:700 ;padding-bottom:16rpx; color:#666">费用不含</view>
+				<view class="texCont">{{web_mainData.priceInclude}}</view>
 			</view>
-			<view class="product-info-bottom" style="text-align: center;height: 50px;">
+      <view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;  background: #fff;line-height: 100rpx; border-top:2rpx solid #E7E7E7;">查看更多 》</view>
+			<!-- <view class="product-info-bottom" style="text-align: center;height: 50px;">
 				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
-			</view>
+			</view> -->
 		</view>
 		<view class="fee-explain1">
 			<view class="product-info-bottom">
@@ -274,16 +279,14 @@
 					<view class="title-line"></view>
 				</view>
 			</view>
-			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+			<view class="all-text">
 				<!-- <view>安全常识: 出游安全提示和出游常识</view>
 				<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
 				</view>
 				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view> -->
-				<rich-text style="font-size:15px;padding: 12px 3%;;">{{web_mainData.bookingInfo}}</rich-text>
+				<view class="texCont">{{web_mainData.bookingInfo}}</view>
 			</view>
-			<view class="product-info-bottom" style="text-align: center;height: 50px;">
-				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
-			</view>
+      <view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;  background: #fff;line-height: 100rpx; border-top:2rpx solid #E7E7E7;">查看更多 》</view>
 		</view>
 		<view class="fee-explain1">
 			<view class="product-info-bottom">
@@ -292,15 +295,15 @@
 					<view class="title-line" style="left: 4%;"></view>
 				</view>
 			</view>
-			<view class="product-info-bottom all-text" style="height:auto;display: inherit;padding: 24rpx 3%;">
+			<view class="all-text">
 				<!-- <view>安全常识: 出游安全提示和出游常识</view>
 				<view>1、自助游产品均为即时计价，请以我司网站展示和客服告知确认价格为准。
 				</view>
 				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view> -->
-				<rich-text style="font-size:15px;padding: 12px 3%;;">{{web_mainData.peerNotice}}</rich-text>
+				<view  class="texCont">{{web_mainData.peerNotice}}</view>
 			</view>
 			<view class="product-info-bottom" style="text-align: center;height: 50px;">
-				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
+				<view style="font-size:28rpx;padding:0 3%;line-height: 44rpx;">查看更多 》</view>
 			</view>
 		</view>
 		<view style="width:100%;height:120rpx"></view>
