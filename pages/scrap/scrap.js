@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mainData:'姓名：test；手机号：15929911250;地址：xxxx',
+    mainData:'地址：xxxx;姓名：test；手机号：15929911250;',
     finishArray:[]
   },
 
@@ -28,8 +28,8 @@ Page({
     for (var i = 0; i < key.length; i++) {
       var rex = new RegExp(key[i], "g"); 
       var temp = self.data.mainData.split(rex);
-      console.log(temp)
       var str = temp[temp.length-1];
+      console.log(str)
       var hasOne = false;
       if(newArray.length>0){
         for (var j = 0; j < newArray.length; j++) {
@@ -46,12 +46,11 @@ Page({
         newArray.push({name:key[i],str:str})
       };
     };
-    
-   
+  
     for (var i = 0; i < newArray.length; i++) {
       if(i!==newArray.length-1){
         console.log('newArray[i+1].str',newArray[i+1].str)
-        var newStr = newArray[i].str.replace(newArray[i+1].str,"").replace(/\s/g,"").replace(/[：|，|；|。|【|】|\/|-|、|;|,|.]/g,"");
+        var newStr = newArray[i].str.replace(newArray[i+1].name + newArray[i+1].str,"").replace(/\s/g,"").replace(/[：|，|；|。|【|】|\/|-|、|;|,|.]/g,"");
         console.log('newStr',newStr)
         newArray[i].str = newStr;
       }else{
