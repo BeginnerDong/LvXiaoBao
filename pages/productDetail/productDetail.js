@@ -35,6 +35,13 @@ Page({
 		})
 	},
 	
+	phoneCall() {
+		const self = this;
+		wx.makePhoneCall({
+			phoneNumber: self.data.mainData.advisoryPhone,
+		})
+	},
+	
 	change(e){
 		const self = this;
 	

@@ -49,7 +49,7 @@
 					<image src="../../image/down.png"></image>
 				</view>
 			</view>
-			<block wx:for="{{web_mainData.peoples}}" wx:if="{{web_showYk}}">
+			<block wx:for="{{web_peopleData}}" wx:if="{{web_showYk}}">
 				<view class="list-name">
 					<view class="name-left">
 						<view class="name">
@@ -59,10 +59,10 @@
 						<view class="name-card">{{item.cdtypeName}}:{{item.card}}</view>
 					</view>
 					<view class="name-img">
-						<view class="list-img">
+						<view class="list-img" bindtap="intoPath" data-path="/pages/eduit/eduit?index={{index}}">
 							<image src="../../image/qqqq.png"></image>
 						</view>
-						<view class="list-img">
+						<view class="list-img"  bindtap="deletePeople" data-index="{{index}}">
 							<image src="../../image/delete.png"></image>
 						</view>
 					</view>

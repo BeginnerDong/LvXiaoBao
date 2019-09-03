@@ -80,7 +80,8 @@ textarea{
 	text-align: center;
 	line-height: 200rpx;
 	background: #F4F3F3;
-	margin-left: 3%;
+	margin-top: 12px;
+	margin-right: 12px;
 	}
 .img image{
 	width: 40rpx;

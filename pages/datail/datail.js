@@ -62,7 +62,7 @@ Page({
 	
 	change(e){
 		const self = this;
-		console.log(e)
+	
 		self.data.index = e.detail.current;
 		self.setData({
 			web_index:self.data.index

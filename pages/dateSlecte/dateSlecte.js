@@ -110,6 +110,15 @@ Page({
 						};
 					}
 				}
+				for (var i = 0; i < self.data.dateData.length; i++) {
+					if(self.data.dateData[i].item&&self.data.dateData[i].item!=undefined){
+						self.data.choosedTimeFormat =self.data.dateData[i].groupDay;
+						self.setData({
+							web_choosedTimeFormat:self.data.choosedTimeFormat
+						})
+						return
+					}
+				}
 			};
 			self.setData({
 				web_mainData: self.data.mainData,
@@ -152,52 +161,7 @@ Page({
 
 	},
 
-	tab(e) {
-		const self = this;
-		api.buttonCanClick(self);
-		var currentId = api.getDataSet(e, 'id');
-		if (currentId == 0) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['招生政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 1) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['批次录取政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		} else if (currentId == 2) {
-			self.data.getBefore = {
-				caseData: {
-					tableName: 'Label',
-					searchItem: {
-						title: ['=', ['加分政策']],
-					},
-					middleKey: 'menu_id',
-					key: 'id',
-					condition: 'in',
-				},
-			}
-		}
-		self.setData({
-			currentId: api.getDataSet(e, 'id')
-		});
-		self.getMainData(true);
-	},
+
 
 	onReachBottom() {
 		const self = this;
@@ -243,10 +207,10 @@ Page({
 		
 		self.data.curYear = curDate.getFullYear();
 		self.data.curDay = curDate.getDate();
-		self.data.choosedTimeFormat = self.getTimeFormat(self.data.curYear,self.data.curMonth+1,self.data.curDay);
+		//self.data.choosedTimeFormat = self.getTimeFormat(self.data.curYear,self.data.curMonth+1,self.data.curDay);
 		self.setData({
 			monthIndex:self.data.monthArray[0],
-			web_choosedTimeFormat:self.data.choosedTimeFormat,
+			//web_choosedTimeFormat:self.data.choosedTimeFormat,
 			web_monthArray:self.data.monthArray
 		})
 		self.refreshPageData(self.data.curYear, self.data.curMonth, self.data.curDay);		

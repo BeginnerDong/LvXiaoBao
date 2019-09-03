@@ -116,6 +116,15 @@ Page({
 		self.getCddClassifyData();
 	},
 	
+	deleteImg(e){
+		const self = this;
+		var index = api.getDataSet(e,'index');
+		self.data.submitData.accessorys.splice(index,1);
+		self.setData({
+			web_submitData:self.data.submitData
+		})
+	},
+	
 	onShow(){
 		const self = this;
 		var arr1 = wx.getStorageSync('payFee');

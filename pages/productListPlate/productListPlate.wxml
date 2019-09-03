@@ -128,17 +128,22 @@
             <input type="text" placeholder="最高金额" value="{{web_price.eto}}"  data-key="eto" bindblur="priceChange"/>
           </view>
         </view>
-        <view class="choose">
-          <view class="choose-item" style="color: #EC6532;background: none;border:1px solid #c5c5c5;font-weight: bold;">
+        <view class="choose flexRowBetween">
+		
+          <view class="choose-item" bindtap="changeSsp" data-sto="500" 
+		  style="{{web_price.sto=='500'&&web_price.eto==''?'color: #EC6532;background: none;border:1px solid #c5c5c5;font-weight: bold':''}}">
             ￥500以上
           </view>
-          <view class="choose-item">
+          <view class="choose-item" bindtap="changeSsp" data-sto="500" data-eto='2500'
+		  style="{{web_price.sto=='500'&&web_price.eto=='2500'?'color: #EC6532;background: none;border:1px solid #c5c5c5;font-weight: bold':''}}">
             ￥500-2500
           </view>
-          <view class="choose-item">
+          <view class="choose-item" bindtap="changeSsp" data-sto="2500" data-eto='5000'
+		  style="{{web_price.sto=='2500'&&web_price.eto=='5000'?'color: #EC6532;background: none;border:1px solid #c5c5c5;font-weight: bold':''}}">
             ￥2500-5000
           </view>
-          <view class="choose-item">
+          <view class="choose-item" bindtap="changeSsp" data-sto="5000"
+		  style="{{web_price.sto=='5000'&&web_price.eto==''?'color: #EC6532;background: none;border:1px solid #c5c5c5;font-weight: bold':''}}">
             ￥5000以上
           </view>
         </view>

@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 214,
+			"current": 215,
 			"list": [
 				{
 					"id": -1,
@@ -1532,6 +1532,13 @@
 					"id": -1,
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/scrap/scrap",
+					"pathName": "pages/scrap/scrap",
 					"scene": null
 				}
 			]

@@ -3,7 +3,6 @@ page{
 }
 .tourist{
 	width: 100%;
-	height: 800rpx;
 	padding-top: 2%;
 	z-index: 111;
 }

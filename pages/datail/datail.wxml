@@ -223,58 +223,35 @@
 		</view>
 	</view>
 	<view class="routing">
-		<!-- <view class="product-info-bottom">
+		<view class="product-info-bottom">
 			<view class="title">
-				行程特色
+				行程安排
 				<view class="title-line" style="left: 4%;"></view>
 			</view>
-		</view> -->
-		<!-- <view class="plan">
-			<view class="plan-one">第一天：萨瓦迪卡，泰国之旅开始啦 普吉岛</view>
-			<view class="plan-one">
-				<view class="plan-scienic">景点·珊瑚岛-神仙半岛</view>
-				<view class="plan-scienic">前往乘坐快艇前往【珊瑚岛】-(停留约2小时)</view>
-			</view>
-			<view class="plan-three">
-				面积约一平方公里，在印度洋蓝色海水的环绕之中白色的沙滩，迷人的光晕，渐变的海水。这是一个只属于休闲度假的岛屿，七彩的遮阳伞，奔跑的海浪，都邀请你投入大海的怀抱。除此之外，水下美丽的珊瑚礁也在等待你的探索。可以静静地躺在沙滩上享受阳光，也可以感受刺激的**项目
-			</view>
-			<view class="plan-one">住宿·现代泰式套房酒店(高档型)</view>
-			<view class="plan-img">
-				<image src="../../image/scienic1.png" mode="widthFix"></image>
-			</view>
-			<view class="plan-img">
-				<image src="../../image/scienic2.png"  mode="widthFix"></image>
-			</view>
 		</view>
-		<view class="follow">
-			<view class="plan-one">
-				<view class="plan-scienic">第二天：珊瑚岛+帆船环游珊瑚岛 神仙半岛</view>
-				<view class="plan-scienic">lawai海鲜市场 博森ATV</view>
-			</view>
-			<view class="plan-one">
-				<view class="plan-scienic">景点·甲米府-大小pp岛</view>
-				<view class="plan-scienic">甲米四岛：鸡岛+管子岛+莫岛+波达岛</view>
-			</view>
-			<view class="plan-three">
-				<view class="plan-content">出发抵达码头后乘坐快艇前往著名的甲米四岛：</view>
-				<view class="plan-content">甲米四岛各自都拥有洁白细腻的沙滩清澈透底的海水。您可在出海游玩后将大PP岛和小PP岛海域与甲米四岛海域的【管子岛Tube island】+【莫岛Moh
-					island】三岛通过细腻白沙相连接，形成了浪漫的宽阔白色沙路，每天只有几个小时可以看到，其他时间都被张超的海水淹没</view>
-				<view class="plan-content">您可以在浪漫白沙上自由自在通行于三岛</view>
-			</view>
-			<view class="plan-img">
-				<image src="../../image/scienic3.png"></image>
-			</view>
-			<view class="plan-one">早餐：已含</view>
-			<view class="plan-one">
-				<view class="plan-scienic">早餐：</view>
-				<view class="plan-scienic">午餐</view>
-				<view class="plan-scienic">晚餐</view>
-			</view>
-			<view class="plan-one">
-				<view class="plan-scienic">温馨提示</view>
-				<view class="plan-scienic">注意：</view>
-			</view>
-		</view> -->
+		<view>
+			<block wx:for="{{web_mainData.journeys}}">
+				<view class="follow">
+					<view class="plan-one">
+						<view class="plan-scienic">第{{item.journeyDay}}天：{{item.journeyTitle}}</view>
+					</view>
+					<view class="plan-one">
+						<view class="plan-scienic">景点·{{item.startCity}}-{{item.endCity}}</view>
+					</view>
+					<view class="plan-three">
+						<rich-text>{{item.journeyContent}}</rich-text>
+					</view>
+				
+					<view class="plan-one">早餐:{{item.isBreakfast==1?'不含':'包含'}}；午餐:{{item.isLunch==1?'不含':'包含'}}；晚餐:{{item.isDinner==1?'不含':'包含'}}</view>
+					<view class="plan-one">
+						<view class="plan-scienic">早餐:{{item.breakfast}}</view>
+						<view class="plan-scienic">午餐:{{item.lunch}}</view>
+						<view class="plan-scienic">晚餐:{{item.dinner}}</view>
+					</view>
+				</view>
+			</block>
+		</view>
+
 		<view class="fee-explain1">
 			<view class="product-info-bottom">
 				<view class="title">

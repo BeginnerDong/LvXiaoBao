@@ -106,6 +106,8 @@ Page({
 		})
 	},
 	
+	
+	
 	/* previewImg(e) {
 		const self = this;
 		var pIndex = e.currentTarget.dataset.index;
@@ -142,14 +144,47 @@ Page({
 			if(res.content){
 				self.data.mainData = res.content
 				self.data.planCode = self.data.mainData.plans[0].planCode
+				for (var i = 0; i < self.data.mainData.peoples.length; i++) {
+					api.setStorageArray('peopleData',self.data.mainData.peoples[i],'id',999);
+				};
+				
+				self.data.peopleData = api.getStorageArray('peopleData')
 			};
 			self.setData({
+				web_peopleData:self.data.peopleData,
 				web_planCode:self.data.planCode,
 				web_mainData:self.data.mainData
 			})
+			console.log(self.data.peopleData)
+			
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 		};
 		api.orderDetail(postData, callback);
+	},
+	
+	deletePeople(e) {
+		const self = this;
+		var index = api.getDataSet(e,'index');
+		console.log(index)
+		const postData = {};
+		postData.header = {
+			'Content-Type':'application/x-www-form-urlencoded',
+			'Authorization':wx.getStorageSync('token')
+		};
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/odr/v1/people/'+self.data.peopleData[index].id
+		const callback = (data) => {
+			if (data) {
+				if(data.code==200){
+
+					api.delStorageArray('peopleData',self.data.peopleData[index],'id');
+					self.data.peopleData = api.getStorageArray('peopleData')
+				}
+				self.setData({
+					web_peopleData: self.data.peopleData
+				});
+			};
+		};
+		api.deletePeople(postData, callback);
 	},
 	
 	

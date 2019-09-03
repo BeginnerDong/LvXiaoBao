@@ -36,10 +36,14 @@ Page({
 		console.log('self.data.mainData',self.data.mainData)
 		if(options.index){
 			self.data.index = options.index;
+			console.log('self.data.mainData',self.data.mainData[self.data.index])
 			self.data.submitData.name = self.data.mainData[self.data.index].name;
 			self.data.submitData.card = self.data.mainData[self.data.index].card;
 			for (var i = 0; i < self.data.cardData.length; i++) {
-				if(self.data.mainData[self.data.index].cdtype==self.data.cardData[i].key){
+				console.log(parseInt(self.data.mainData[self.data.index].cdtype));
+				console.log(self.data.cardData[i].key);
+				if(parseInt(self.data.mainData[self.data.index].cdtype)==self.data.cardData[i].value){
+					console.log(22213)
 					self.data.submitData.cdtype = self.data.cardData[i].value;
 					self.setData({
 						web_index:i
@@ -121,7 +125,7 @@ Page({
 		const callback = (data) => {
 			if (data) {
 				if(data.content.id){
-					api.buttoonCanClick(self,true);
+					api.buttonCanClick(self,true);
 					self.data.submitData.id = data.content.id;
 					self.data.submitData.isSelect = false;
 					self.data.submitData.isBx = false;
@@ -168,12 +172,12 @@ Page({
 
 	submit() {
 		const self = this;
-		api.buttoonCanClick(self);
+		api.buttonCanClick(self);
 		var phone = self.data.submitData.phone;
 		const pass = api.checkComplete(self.data.submitData);
 		console.log('self.data.submitData', self.data.submitData)
 		if (pass) {
-			
+			console.log(222)
 			if(self.data.index){
 				self.data.mainData[self.data.index].name=self.data.submitData.name;
 				self.data.mainData[self.data.index].phone=self.data.submitData.phone;
@@ -187,7 +191,7 @@ Page({
 			}
 			
 		} else {
-
+			api.buttonCanClick(self,true);
 			api.showToast('请补全信息', 'none');
 
 		};

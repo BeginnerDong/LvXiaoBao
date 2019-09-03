@@ -449,14 +449,14 @@ page{
 .plan-one{
 	width: 94%;
   margin: 0 auto;
-	height: 120rpx;
+
 	font-size: 26rpx;
 	color: #323232;
 	padding-top: 20rpx;
 }
 .plan-three{
 	width: 90%;
-	height: 180px;
+
 	background:#EEF1FA;
 	opacity: 1;
 	font-size: 12pt;

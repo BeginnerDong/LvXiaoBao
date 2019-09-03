@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mainData:'姓名：test手机号：15929911250;邮编地址：71000地址：xxxx',
+    mainData:'姓名：test；手机号：15929911250;地址：xxxx',
     finishArray:[]
   },
 

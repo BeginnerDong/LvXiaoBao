@@ -29,6 +29,20 @@ Page({
 		}
 		
 	},
+	
+	changeSsp(e){
+		const self = this;
+		self.data.price.sto = api.getDataSet(e,'sto');
+		if(api.getDataSet(e,'eto')){
+			self.data.price.eto = api.getDataSet(e,'eto');
+		}else{
+			self.data.price.eto =''
+		};
+		self.setData({
+			web_price:self.data.price
+		})
+		console.log(self.data.price)
+	},
 
 	onLoad(options) {
 		const self = this;

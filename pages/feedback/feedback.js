@@ -172,6 +172,17 @@ Page({
 		console.log(self.data.submitData.file)
 	}, */
 	
+	deleteImg(e){
+		const self = this;
+		var index = api.getDataSet(e,'index');
+		self.data.submitData.images.splice(index,1);
+		self.data.imgArray.splice(index,1);
+		self.setData({
+			web_imgArray:self.data.imgArray,
+			web_submitData:self.data.submitData
+		})
+	},
+	
 	upLoadImg(){
 	  const self = this;
 	 

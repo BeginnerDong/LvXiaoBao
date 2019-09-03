@@ -385,18 +385,22 @@
 	<view class="pact">
 		<view class="sign-name">合同附件
 		<view class="title-line" style="bottom: 32rpx;"></view></view>
-		<view class="part-img" style="display: flex;">
+		<view class="part-img" style="display: flex;flex-wrap: wrap;">
 			<block wx:for="{{web_submitData.accessorys}}">			
-				<view class="part-ti">
+				<view class="part-ti"  style="position: relative;">
 					<image src="{{item.accUrl}}" style="width: 100%;height: 100%;"></image>
+					<image src="../../image/inputDelete.png"  bindtap="deleteImg" data-index="{{index}}"
+					style="width: 40rpx;height: 40rpx;position: absolute;top: -20rpx;right:-20rpx;"></image>
 				</view>
 			</block>
 			
 			<view class="part-ti" bindtap="upLoadImg">
 				<image src="../../image/caram.png"></image>
+				
 			</view>
 		</view>
 	</view>
+	<view style="height: 70px;width: 100%;"></view>
 	<view class="botom">
 		<view class="speci-left">
 			<view class="special" style="font-size: 26rpx;">优惠：<span style='color: #EC6532;'>￥100.00</span></view>

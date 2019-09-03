@@ -18,11 +18,13 @@
 		<view class="mobile-name" style="color: #A1A1A1;">上传图片(最多6张)</view>
 		<view class="up-img">
 			<block wx:for="{{web_imgArray}}">
-				<view style="width: 100px;height:100px">
+				<view style="width: 100px;height:100px;position: relative;margin-right: 12px;margin-top: 12px;">
 					<image src="{{item}}" style="width: 100%;height: 100%;"></image>
+					<image src="../../image/inputDelete.png"  bindtap="deleteImg" data-index="{{index}}"
+					style="width: 40rpx;height: 40rpx;position: absolute;top: -20rpx;right:-20rpx;"></image>
 				</view>
 			</block>
-			<view class="img" bindtap="upLoadImg" wx:if="{{web_imgArray.length<5}}">
+			<view class="img" bindtap="upLoadImg" wx:if="{{web_imgArray.length<6}}">
 				<image src="../../image/caram.png"></image>
 			</view>
 			
