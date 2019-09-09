@@ -267,7 +267,7 @@
 				<view style="font-weight:700 ;padding-bottom:16rpx; color:#666">费用不含</view>
 				<view class="texCont">{{web_mainData.priceInclude}}</view>
 			</view>
-      <view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;  background: #fff;line-height: 100rpx; border-top:2rpx solid #E7E7E7;">查看更多 》</view>
+      <view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;  background: #fff;line-height: 100rpx;">查看更多 》</view>
 			<!-- <view class="product-info-bottom" style="text-align: center;height: 50px;">
 				<view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;">查看更多 》</view>
 			</view> -->
@@ -286,7 +286,7 @@
 				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view> -->
 				<view class="texCont">{{web_mainData.bookingInfo}}</view>
 			</view>
-      <view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;  background: #fff;line-height: 100rpx; border-top:2rpx solid #E7E7E7;">查看更多 》</view>
+      <view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;  background: #fff;line-height: 100rpx;">查看更多 》</view>
 		</view>
 		<view class="fee-explain1">
 			<view class="product-info-bottom">
@@ -302,9 +302,7 @@
 				<view>2、机票一经开出，更改、签转、退票以航空公司相关政策为准。若您所预订的机票为团队优惠套票，一经开出，不得签转退票；因存在航班调整的可能（包括航空公司、起飞时间的变化），故最终航班情况以出票时的具体信息为准。</view> -->
 				<view  class="texCont">{{web_mainData.peerNotice}}</view>
 			</view>
-			<view class="product-info-bottom" style="text-align: center;height: 50px;">
-				<view style="font-size:28rpx;padding:0 3%;line-height: 44rpx;">查看更多 》</view>
-			</view>
+      <view style="text-align: center;font-size:16px;color: #A1A1A1;width: 100%;  background: #fff;line-height: 100rpx;">查看更多 》</view>
 		</view>
 		<view style="width:100%;height:120rpx"></view>
 		<view style="position: fixed;bottom: 0;border-radius:0;z-index:888;" class="bo">

@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 221,
+			"current": 227,
 			"list": [
 				{
 					"id": -1,
@@ -1581,6 +1581,48 @@
 					"id": -1,
 					"name": "pages/tourist/tourist",
 					"pathName": "pages/tourist/tourist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/angents/agents",
+					"pathName": "pages/angents/agents",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/angents/agents",
+					"pathName": "pages/angents/agents",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/angents/agents",
+					"pathName": "pages/angents/agents",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/certification/certification",
+					"pathName": "pages/certification/certification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/certification/certification",
+					"pathName": "pages/certification/certification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]

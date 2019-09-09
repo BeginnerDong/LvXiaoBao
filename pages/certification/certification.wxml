@@ -1,9 +1,18 @@
+
+
 <view class="contLis">
-	<view class="top">
-		<view class="top-img">
-			<image src="../../image/gao.png"></image>
-		</view>
-	</view>
+  <view class="topInfor">
+    <view class="topBj">
+      <image src="../../image/storeBj.png"></image>
+    </view>
+    <view class="top">
+      <view class="top-img">
+        <image src="../../image/gao.png"></image>
+      </view>
+    </view>
+  </view>
+
+
 	<view class="center">
 		<view class="center-name">陕西中国旅行社有限责任公司</view>
 		<view class="center-name">西安渭滨路门市部</view>

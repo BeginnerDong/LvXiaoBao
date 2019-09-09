@@ -1,4 +1,19 @@
 <view>
+
+ <view class="rightNav">
+ 	<block wx:for="{{alphbate}}" wx:key="id" wx:for-item="item">
+ 		<view class="num" hover-class="on" 
+ 			data-alp="{{item}}"
+ 			bind:touchstart="handleTouchStart" 
+ 			bind:touchmove="handleTouchMove"
+ 			bind:touchcancel="handleTouchCancel"
+ 			bindtap="clickToPoint"
+ 		>{{item}}</view>
+ 	</block>
+ </view>
+
+
+
 <view class="top">
 			<view class="search">
 				<input placeholder="关键字搜索 如：陕中旅" />
@@ -7,6 +22,7 @@
 				</view>
 			</view>
 	</view>
+
 	<view class="agents">B</view>
 	<view class="agents-name">
 		<view class="agents-title">北京丝路国际旅行社有限公司</view>
