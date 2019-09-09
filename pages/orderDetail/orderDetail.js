@@ -37,6 +37,14 @@ Page({
 		})
 	},
 	
+	onShow(){
+		const self = this;
+		self.data.peopleData = api.getStorageArray('peopleData');
+		self.setData({
+			web_peopleData:self.data.peopleData
+		})
+	},
+	
 	showQr(e){
 		const self = this;
 		self.data.cIndex = api.getDataSet(e,'index');

@@ -175,6 +175,8 @@ Page({
 		};
 		const callback = (res) => {
 			console.log(res)
+			wx.removeStorageSync('peopleData');
+			wx.removeStorageSync('orderPost');
 			if (res.content.orderCode) {
 				console.log(111)
 				if(type=='jump'){

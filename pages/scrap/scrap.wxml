@@ -1,6 +1,7 @@
 <view>
 	<view class="scrap">
-		<textarea value="{{mainData}}" bindinput='inputChange' placeholder="系统将自动黏贴剪贴板信息到此输入框,点击保存自动识别"></textarea>
+		<textarea value="{{mainData}}" bindinput='inputChange' 
+		placeholder="系统将自动黏贴剪贴板信息到此输入框,点击保存自动识别(形式如'姓名:XX;手机号:180xxxxx')"></textarea>
 	</view>
-  <view class="scrap-btn" bindtap="splitString" >保存</view>
+  <view class="scrap-btn" style="opacity: 1;" bindtap="splitString">保存</view>
 </view> 

@@ -701,10 +701,24 @@ class Api extends Base {
 		this.request(allParams);
 	}
 	
-	//确认件
+	//openid
 	getOpenId(param, callback) {
 		var allParams = {
 			url: '/auth/v1/openid/{code}',
+			type: 'get',
+			data: param,
+			sCallback: function(data) {
+				callback && callback(data);
+			}
+		};
+		this.request(allParams);
+	}
+	
+	//确认件pdf
+	
+	sendPdf(param, callback) {
+		var allParams = {
+			url: '/odr/v1/officeorders/{code}/send/{id}/pdf',
 			type: 'get',
 			data: param,
 			sCallback: function(data) {

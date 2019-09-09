@@ -85,6 +85,27 @@ Page({
 		api.sendsGet(postData, callback);
 	},
 	
+	
+	sendPdf(e) {
+		const self = this;
+		
+		var index = api.getDataSet(e,'index');
+		console.log(e)
+		const postData = {
+			header:{
+				'Authorization':wx.getStorageSync('token')
+			},
+			url:'http://yapi.lxbtrip.cn/mock/19/odr/v1/officeorders/'+self.data.sendData[index].businessCode+'/send/'+self.data.sendData[index].id+'/pdf'
+		};
+		
+		const callback = (res) => {
+			if(res.code==200){
+				api.pathTo('/pages/electro/electro?url='+res.content, 'nav')
+			}
+		};
+		api.sendPdf(postData, callback);
+	},
+	
 	isShow(e){
 		const self = this;
 		self.data.index = api.getDataSet(e,'index');

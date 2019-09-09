@@ -1,6 +1,6 @@
 <view>
 	<view class="eduit">
-	<view class="peo-name">
+	<view class="peo-name" bindtap="intoPath" data-path="/pages/angents/agents">
 		<view class="peo-con1" >*旅行社名称</view>
 		<view class="card-img1" ><image src="../../image/right.png"></image></view>
 	</view>
@@ -45,6 +45,6 @@
 <view class="detail-con">2、如果旅行社企业名录中找不到要认证的企业请联系系统客
 服，联系电话：029-89710277。</view>
 	</view>
-	<view class="btn"><span>保存</span></view>
+	<view class="btn" bindtap="intoPath" data-path="/pages/certification/certification"><span>保存</span></view>
 	</view>
 </view>

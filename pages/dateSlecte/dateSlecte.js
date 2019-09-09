@@ -77,7 +77,8 @@ Page({
 		],
 		monthArray:[],
 		dateData:[],
-		choosedTimeFormat:''
+		choosedTimeFormat:'',
+		hasItem:[]
 	},
 
 	onLoad(options) {
@@ -112,15 +113,14 @@ Page({
 				}
 				for (var i = 0; i < self.data.dateData.length; i++) {
 					if(self.data.dateData[i].item&&self.data.dateData[i].item!=undefined){
-						self.data.choosedTimeFormat =self.data.dateData[i].groupDay;
-						self.setData({
-							web_choosedTimeFormat:self.data.choosedTimeFormat
-						})
-						return
+						self.data.hasItem.push(i)
+					
 					}
 				}
+			
 			};
 			self.setData({
+				web_choosedTimeFormat:self.data.dateData[self.data.hasItem[0]].timeFormat,
 				web_mainData: self.data.mainData,
 				web_dateData:self.data.dateData
 			});
@@ -192,6 +192,7 @@ Page({
 	calenderInit() {
 		const self = this;
 		var curDate = new Date();
+		self.data.monthArray= [];
 		self.data.curMonth = curDate.getMonth();
 		self.data.monthArray.push(self.data.curMonth+1);
 

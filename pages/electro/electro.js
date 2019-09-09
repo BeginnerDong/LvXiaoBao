@@ -23,7 +23,7 @@ Page({
 		const self = this;
 		console.log(e);
 		let url = self.data.url;
-		url += 'pdf';
+		//url += 'pdf';
 		wx.downloadFile({
 			url: url,
 			header: {},

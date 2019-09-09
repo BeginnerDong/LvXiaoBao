@@ -151,11 +151,11 @@ Page({
 			'Content-Type':'application/x-www-form-urlencoded',
 			'Authorization':wx.getStorageSync('token')
 		};
-		postData.url = 'http://yapi.lxbtrip.cn/mock/19/v1/people/'+self.data.mainData[self.data.index].id
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/odr/v1/people/'+self.data.mainData[self.data.index].id
 		const callback = (data) => {
 			if (data) {
 				if(data.content.id){
-					api.buttoonCanClick(self,true);
+					api.buttonCanClick(self,true);
 					api.setStorageArray('peopleData',self.data.mainData[self.data.index],'id',999);
 					setTimeout(function() {
 						wx.navigateBack({

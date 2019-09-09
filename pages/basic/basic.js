@@ -317,12 +317,11 @@ Page({
 
 	travelerDetailUpdate() {
 		const self = this;
-		const postData = {
-			header: {
-				'Authorization': wx.getStorageSync('token')
-			},
-			url: 'http://yapi.lxbtrip.cn/mock/19/own/v1/traveler/' + self.data.submitData.id
-		}
+		const postData = api.cloneForm(self.data.submitData);
+		postData.header = {
+			'Authorization': wx.getStorageSync('token')
+		};
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/own/v1/traveler/' + self.data.submitData.id;
 		const callback = (data) => {
 			if (data) {
 	

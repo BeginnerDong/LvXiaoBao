@@ -151,7 +151,7 @@
 					
 						<view class="cfm-ing">{{item.stateName}}</view>
 					
-						<view class="cmf-btn">
+						<view class="cmf-btn" bindtap="sendPdf" data-index="{{index}}">
 							<span>查看</span>
 						</view>
 					
