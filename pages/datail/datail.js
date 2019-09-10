@@ -80,6 +80,27 @@ Page({
 				web_mainData:self.data.mainData
 			})
 		}
+		if(wx.getStorageSync('chooseDay')){
+			
+			var chooseItem = wx.getStorageSync('chooseDay');
+			chooseItem.subjectType=101;
+			self.data.orderPost.startDate = chooseItem.groupDay;
+			self.data.mainData.classifys[self.data.selectIndex].classifyName = chooseItem.typeName;
+			self.data.mainData.classifys[self.data.selectIndex].prices = [chooseItem];
+			self.data.subjectData = [chooseItem];
+			for (var i = 0; i < self.data.subjectData.length; i++) {
+				self.data.subjectData[i].count = 0
+			};
+			self.setData({
+				web_selectIndex: self.data.selectIndex,
+				web_orderPost: self.data.orderPost,
+				web_subjectData: self.data.subjectData,
+				web_mainData:self.data.mainData
+			});
+			console.log('self.data.orderPost.startDate',self.data.orderPost.startDate)
+			console.log('self.data.orderPost.startDate',self.data.mainData)
+			wx.removeStorageSync('chooseDay')
+		};
 		
 	},
 

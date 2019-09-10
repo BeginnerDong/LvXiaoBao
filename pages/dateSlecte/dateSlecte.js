@@ -117,10 +117,16 @@ Page({
 					
 					}
 				}
-			
+				if(self.data.hasItem.length>0){
+					wx.setStorageSync('chooseDay',self.data.dateData[self.data.hasItem[0]].item)
+					self.setData({
+						web_choosedTimeFormat:self.data.dateData[self.data.hasItem[0]].timeFormat
+					})
+				}
+				
 			};
 			self.setData({
-				web_choosedTimeFormat:self.data.dateData[self.data.hasItem[0]].timeFormat,
+				
 				web_mainData: self.data.mainData,
 				web_dateData:self.data.dateData
 			});

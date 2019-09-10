@@ -129,8 +129,8 @@
 			</view>
 			<view class="product-info-bottom" style="padding: 0;width: 100%;padding-left: 15rpx;height:120rpx; box-sizing:border-box;">
 				<view style="width:80%;display: flex;align-items: center;">
-					<block wx:for="{{web_mainData.classifys[web_selectIndex].prices}}" wx:if="{{index<4}}">
-						<view class="group-item" style="{{web_orderPost.startDate==item.groupDay?'border:1px solid #EC6532':''}}" bindtap="selectDay" data-day="{{item.groupDay}}" wx:if="{{item.subjectType=='101'}}">
+					<block wx:for="{{web_mainData.classifys[web_selectIndex].prices}}" wx:if="{{index<3}}">
+						<view class="group-item" style="{{web_orderPost.startDate==item.groupDay?'border:1px solid #EC6532':''}}" bindtap="selectDay" data-day="{{item.groupDay}}">
 							<view class="group-date">{{item.groupDay}}</view>
 							<view class="group-price">¥{{item.mprice}}</view>
 						</view>

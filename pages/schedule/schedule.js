@@ -102,13 +102,19 @@ Page({
 		console.log(index)
 		if (self.data.peopleData[index].isSelect) {
 			self.data.peopleData[index].isSelect = false;
+			var position = self.data.orderPost.peopleIds.indexOf(self.data.peopleData[index].id);
+			console.log(position)
+			self.data.orderPost.peopleIds.splice(parseInt(position),1)
 		} else {
 			self.data.peopleData[index].isSelect = true;
 		};
 		api.setStorageArray('peopleData', self.data.peopleData[index], 'id', 999);
 		self.setData({
+			web_orderPost:self.data.orderPost,
 			web_peopleData: self.data.peopleData
 		});
+		console.log(self.data.orderPost)
+		console.log(self.data.allPeopleCount)
 	},
 	
 	
@@ -144,6 +150,7 @@ Page({
 		});
 		wx.setStorageSync('orderPost',self.data.orderPost)
 		console.log(self.data.orderPost)
+		console.log(self.data.allPeopleCount)
 	},
 	
 	submit(e){
