@@ -41,7 +41,6 @@ Page({
 		self.setData({
 			web_price:self.data.price
 		})
-		console.log(self.data.price)
 	},
 
 	onLoad(options) {
@@ -111,7 +110,6 @@ Page({
 	supplierProductLike(e) {
 		const self = this;
 		var id = self.data.mainData[api.getDataSet(e,'index')].id;
-		console.log(id)
 		const postData = {
 			header:{
 				'Content-Type':'application/x-www-form-urlencoded',
@@ -130,8 +128,7 @@ Page({
 	},
 	
 	changeOrder(e){
-		const self = this;
-		
+		const self = this;	
 		var orderNum = api.getDataSet(e,'key');
 		if(self.data.mainDataPost.sortType!=orderNum){
 			api.buttonCanClick(self)
@@ -153,11 +150,8 @@ Page({
 		  self.data.selectBusinessData.splice(position, 1);
 			
 		}else{
-		  self.data.selectBusinessData.push(key);
-		  
+		  self.data.selectBusinessData.push(key);	  
 		};	
-		
-		console.log(self.data.selectBusinessData)
 		self.setData({
 		   web_selectBusinessData:self.data.selectBusinessData
 		});
@@ -172,7 +166,6 @@ Page({
 		}else{
 		  self.data.selectStandards.push(key);	  
 		};		
-		console.log(self.data.selectStandards)
 		self.setData({
 		   web_selectStandards:self.data.selectStandards
 		});
@@ -219,7 +212,6 @@ Page({
 				web_mainData:self.data.mainData
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.supplierProducts(postData, callback);
 	},
@@ -241,8 +233,7 @@ Page({
 		self.data.price.eto = '',
 		self.setData({
 			web_price:self.data.price,
-			web_selectBusinessData:self.data.selectBusinessData,
-			
+			web_selectBusinessData:self.data.selectBusinessData,			
 		})
 	},
 	

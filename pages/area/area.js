@@ -42,7 +42,7 @@ Page({
 				web_mainData: self.data.mainData
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
+			
 		};
 		api.supperProvince(postData, callback);
 	},
@@ -59,7 +59,7 @@ Page({
 				api.showToast(res.errmsg,'none')
 			}
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
+			
 		};
 		api.supperProvinceUpdate(postData, callback);
 	},

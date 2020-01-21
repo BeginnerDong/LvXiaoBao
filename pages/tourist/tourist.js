@@ -50,7 +50,6 @@ Page({
 	onShow() {
 		const self = this;
 		self.data.mainData = api.getStorageArray('peopleData');
-		console.log('onShow', self.data.mainData);
 		for (var i = 0; i < self.data.mainData.length; i++) {
 			for (var j = 0; j < self.data.cardData.length; j++) {
 				if (self.data.mainData[i].cdtype == self.data.cardData[j].value) {

@@ -86,7 +86,7 @@ Page({
 		const self = this;
 		if(api.getStorageArray('labelData')){
 			self.data.tagData = api.getStorageArray('labelData');
-			console.log(self.data.tagData)
+		
 			self.setData({
 				web_tagData:self.data.tagData[0]
 			})
@@ -95,20 +95,17 @@ Page({
 	
 	changeCard(e){
 		const self = this;
-		console.log(e);
+		
 		var value = self.data.cardData[e.detail.value].value;
 		var index = api.getDataSet(e,'index');
 		self.data.submitData.cards[index]['cardType'] = value;
 		self.setData({
 			web_submitData:self.data.submitData
 		})
-		console.log(self.data.submitData)
-		
 	},
 	
 	dateChangeTwo(e){
 		const self = this;
-		console.log(e);
 		var index = api.getDataSet(e,'index');
 		self.data.submitData.cards[index].cardValidity = e.detail.value;
 		self.setData({
@@ -142,9 +139,7 @@ Page({
 		wx.chooseImage({
 			count: 1,
 			success: function(res) {
-				console.log(res);
 				var tempFilePaths = res.tempFilePaths;
-				console.log(callback)
 				api.uploadFile(tempFilePaths[0], 'file', {
 					classify: 'T019',
 					rwidth: 150,
@@ -180,7 +175,6 @@ Page({
 			web_submitData:self.data.submitData,
 			web_index:index
 		})
-		console.log(self.data.submitData)
 	},
 	
 	sexChange(e){
@@ -191,7 +185,6 @@ Page({
 			web_submitData:self.data.submitData,
 			web_sexIndex:index
 		})
-		console.log(self.data.submitData)
 	},
 	
 	dateChange(e){

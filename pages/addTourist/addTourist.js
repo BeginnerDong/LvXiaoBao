@@ -33,7 +33,7 @@ Page({
 		self.setData({
 			web_show: self.data.show
 		})
-		console.log(api.getStorageArray('peopleData'))
+	
 	},
 
 	isShow() {
@@ -70,7 +70,7 @@ Page({
 	handleTouchCancel() {
 
 		const self = this;
-		console.log('handleTouchCancel')
+		
 		self.touchStatus = false;
 
 	},
@@ -79,7 +79,7 @@ Page({
 
 		const self = this;
 		var alphbate = api.getDataSet(e, 'alp');
-		console.log(alphbate);
+		
 		if (alphbate) {
 			self.goToPoint(alphbate)
 		};
@@ -93,7 +93,7 @@ Page({
 
 		query.selectViewport().scrollOffset();
 		query.exec((res) => {
-			console.log('res', res)
+			
 			if (res[1] && res[0]) {
 				wx.pageScrollTo({
 					scrollTop: res[0].top + res[1].scrollTop,
@@ -152,7 +152,7 @@ Page({
 						self.data.mainDataC[res.content.list[i].firstLetter].push(res.content.list[i])
 					};
 				};
-				console.log('self.data.mainDataC', self.data.mainDataC)
+				
 			} else {
 				self.data.isLoadAll = true
 			};
@@ -170,8 +170,8 @@ Page({
 		const self = this;
 		var item = api.getDataSet(e, 'item');
 		var index = api.getDataSet(e, 'index');
-		console.log('item', item)
-		console.log('self.data.mainData[item]', self.data.mainDataC[item])
+		
+		
 		self.data.mainDataC[item][index].choose = !self.data.mainDataC[item][index].choose;
 		
 		if(self.data.mainDataC[item][index].choose){
@@ -179,7 +179,7 @@ Page({
 		}else{
 			self.data.chooseData.splice(api.findItemInArray(self.data.chooseData,'id',self.data.mainDataC[item][index].id)[0],1)
 		};
-		console.log('self.data.chooseData',self.data.chooseData)
+
 		self.setData({
 			web_mainDataC:self.data.mainDataC,
 			web_chooseData: self.data.chooseData
@@ -196,7 +196,7 @@ Page({
 				delta: 1
 			});
 		}, 300);
-		console.log(api.getStorageArray('peopleData'))
+		
 	},
 
 

@@ -33,15 +33,11 @@ Page({
 		if(!self.data.mainData){
 			self.data.mainData = []
 		}
-		console.log('self.data.mainData',self.data.mainData)
 		if(options.index){
 			self.data.index = options.index;
-			console.log('self.data.mainData',self.data.mainData[self.data.index])
 			self.data.submitData.name = self.data.mainData[self.data.index].name;
 			self.data.submitData.card = self.data.mainData[self.data.index].card;
 			for (var i = 0; i < self.data.cardData.length; i++) {
-				console.log(parseInt(self.data.mainData[self.data.index].cdtype));
-				console.log(self.data.cardData[i].key);
 				if(parseInt(self.data.mainData[self.data.index].cdtype)==self.data.cardData[i].value){
 					console.log(22213)
 					self.data.submitData.cdtype = self.data.cardData[i].value;
@@ -107,7 +103,6 @@ Page({
 
 	birthChange(e) {
 		const self = this;
-		console.log(e)
 		self.data.submitData.birth = e.detail.value;
 		self.setData({
 			web_submitData:self.data.submitData
@@ -175,9 +170,7 @@ Page({
 		api.buttonCanClick(self);
 		var phone = self.data.submitData.phone;
 		const pass = api.checkComplete(self.data.submitData);
-		console.log('self.data.submitData', self.data.submitData)
 		if (pass) {
-			console.log(222)
 			if(self.data.index){
 				self.data.mainData[self.data.index].name=self.data.submitData.name;
 				self.data.mainData[self.data.index].phone=self.data.submitData.phone;

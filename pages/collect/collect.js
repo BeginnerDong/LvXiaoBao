@@ -48,7 +48,6 @@ Page({
 				web_mainData:self.data.mainData
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.collectProducts(postData, callback);
 	},
@@ -73,7 +72,6 @@ Page({
 				web_mainDataTwo:self.data.mainDataTwo
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainDataTwo)
 		};
 		api.collectSuppliers(postData, callback);
 	},

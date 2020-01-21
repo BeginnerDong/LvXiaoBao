@@ -1,4 +1,3 @@
-
 import {
 	Api
 } from '../../utils/api.js';
@@ -12,41 +11,40 @@ const token = new Token();
 Page({
 	data: {
 
-		submitData:{
-			content:''
+		submitData: {
+			content: ''
 		},
-		disabled:true
+		disabled: true
 	},
 
 	onLoad(options) {
 		const self = this;
 		self.data.submitData.content = wx.getStorageSync('journery');
 		self.setData({
-			web_disabled:self.data.disabled,
-			web_submitData:self.data.submitData
+			web_disabled: self.data.disabled,
+			web_submitData: self.data.submitData
 		})
 	},
 
-	edit(){
+	edit() {
 		const self = this;
-		console.log(111)
 		self.data.disabled = false;
 		self.setData({
-			web_disabled:self.data.disabled
+			web_disabled: self.data.disabled
 		})
 	},
 
 
 
-	save(){
-		const self= this;
-		wx.setStorageSync('journery',self.data.submitData.content);
+	save() {
+		const self = this;
+		wx.setStorageSync('journery', self.data.submitData.content);
 		wx.navigateBack({
 			delta: 1
 		})
 	},
-	
-	
+
+
 
 	inputChange(e) {
 		const self = this;

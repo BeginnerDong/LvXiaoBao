@@ -58,9 +58,7 @@ Page({
 	
 	typeChange(e) {
 		const self = this;
-		console.log('picker发送选择改变，携带值为', e.detail.value)
 		self.data.submitData.feedbackType = self.data.typeData[e.detail.value].value;
-		console.log(self.data.submitData);
 		self.setData({
 			web_index: e.detail.value,
 			web_submitData: self.data.submitData
@@ -98,7 +96,6 @@ Page({
 		var newObject = api.cloneForm(self.data.submitData);
 		delete newObject.contact
 		const pass = api.checkComplete(newObject);
-		console.log('self.data.submitData', self.data.submitData)
 		if (pass) {
 			self.feedback()
 		} else {
@@ -112,7 +109,6 @@ Page({
 	inputChange(e) {
 		const self = this;
 		api.fillChange(e, self, 'submitData');
-		console.log(e)
 		if(e.currentTarget.dataset.key=='content'){
 			var value = e.detail.value;
 			var len = parseInt(value.length);		
@@ -191,7 +187,6 @@ Page({
 	    title: '图片上传中',
 	  });
 	  const callback = (res)=>{
-	    console.log('res',res)
 		if (res.result == '0') {
 			var url = res.fullPath;
 			var name = res.fileName;
@@ -213,9 +208,7 @@ Page({
 	  wx.chooseImage({
 	    count:1,
 	    success: function(res) {
-	      console.log(res);
 	      var tempFilePaths = res.tempFilePaths;
-	      console.log(callback)
 	      api.uploadFile(tempFilePaths[0],'file',{
 				classify:'T019',
 				rwidth:150,

@@ -25,8 +25,6 @@ Page({
 	onShow() {
 		const self = this;
 		self.data.mainData = wx.getStorageSync('payFee');
-		console.log('onShow', self.data.mainData);
-		
 		self.setData({
 			web_mainData: self.data.mainData
 		});

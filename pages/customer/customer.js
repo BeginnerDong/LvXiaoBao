@@ -68,9 +68,7 @@ Page({
 	onShow(){
 		const self = this;
 		self.data.submitData.tags=api.getStorageArray('labelData')[0].join(',');
-		console.log(self.data.submitData.tags)
 		self.data.tagData = self.data.submitData.tags.split(',');
-		console.log(self.data.tagData);
 		self.setData({
 			web_tagData:self.data.tagData
 		})
@@ -78,7 +76,6 @@ Page({
 	
 	changeCard(e){
 		const self = this;
-		console.log(e);
 		var value = self.data.cardData[e.detail.value].value;
 		var index = api.getDataSet(e,'index');
 		self.data.submitData.cards[index]['cardType'] = value;
@@ -90,7 +87,6 @@ Page({
 	
 	dateChangeTwo(e){
 		const self = this;
-		console.log(e);
 		var index = api.getDataSet(e,'index');
 		self.data.submitData.cards[index].cardValidity = e.detail.value;
 		self.setData({
@@ -106,7 +102,6 @@ Page({
 			title: '图片上传中',
 		});
 		const callback = (res) => {
-			console.log('res', res)
 			if (res.result == '0') {
 				var url = res.fullPath;
 				
@@ -124,9 +119,7 @@ Page({
 		wx.chooseImage({
 			count: 1,
 			success: function(res) {
-				console.log(res);
 				var tempFilePaths = res.tempFilePaths;
-				console.log(callback)
 				api.uploadFile(tempFilePaths[0], 'file', {
 					classify: 'T019',
 					rwidth: 150,
@@ -163,7 +156,6 @@ Page({
 			web_submitData:self.data.submitData,
 			web_index:index
 		})
-		console.log(self.data.submitData)
 	},
 	
 	sexChange(e){
@@ -174,7 +166,6 @@ Page({
 			web_submitData:self.data.submitData,
 			web_sexIndex:index
 		})
-		console.log(self.data.submitData)
 	},
 	
 	dateChange(e){
@@ -193,12 +184,10 @@ Page({
 		self.setData({
 			web_submitData: self.data.submitData,
 		});
-		console.log(self.data.submitData)
 	},
 
 	bindRegionChange(e) {
 		const self = this;
-		console.log('picker发送选择改变，携带值为', e.detail.value)
 		self.data.region = e.detail.value.join('');
 		self.data.submitData.province = e.detail.value[0];
 		self.data.submitData.city = e.detail.value[1];
@@ -251,7 +240,6 @@ Page({
 
 		var phone = self.data.submitData.phone;
 		const pass = api.checkComplete(self.data.submitData);
-		console.log('self.data.submitData', self.data.submitData)
 		if (pass) {
 			self.addTraveler()
 		} else {

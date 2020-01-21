@@ -31,7 +31,6 @@ Page({
 
 	changeType(e) {
 		const self = this;
-		console.log(e)
 		var type = api.getDataSet(e, 'type');
 		if (self.data.submitData.typeId != type) {
 			self.data.submitData.typeId = type;
@@ -60,7 +59,6 @@ Page({
 				web_mainData:self.data.mainData
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.withdrawInfo(postData, callback);
 	},
@@ -68,9 +66,7 @@ Page({
 	submit() {
 		const self = this;
 		api.buttonCanClick(self, false);
-
 		const pass = api.checkComplete(self.data.submitData);
-		console.log('self.data.submitData', self.data.submitData)
 		if (pass) {
 			self.withdraw();
 			

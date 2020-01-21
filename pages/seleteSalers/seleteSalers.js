@@ -25,9 +25,7 @@ Page({
 	onShow() {
 	  const self = this;
 	  self.data.mainData = api.getStorageArray('salesData');
-	  console.log('onShow',self.data.mainData);
 	 self.data.selectSale = wx.getStorageSync('selectSale');
-	 console.log('self.data.selectSale',self.data.selectSale)
 	  self.setData({
 		  web_selectSale:self.data.selectSale,
 	    web_mainData:self.data.mainData

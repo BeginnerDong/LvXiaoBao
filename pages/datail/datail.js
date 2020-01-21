@@ -42,7 +42,7 @@ Page({
 		},
 		dayData: {},
 		subjectData: [],
-		index:0
+		index: 0
 	},
 
 	onLoad(options) {
@@ -51,7 +51,7 @@ Page({
 		self.data.id = options.id;
 		self.getMainData();
 		self.setData({
-			web_index:self.data.index,
+			web_index: self.data.index,
 			web_orderPost: self.data.orderPost,
 			show_people: self.data.show_people,
 			show_poster: self.data.show_poster,
@@ -59,31 +59,31 @@ Page({
 		})
 
 	},
-	
-	change(e){
+
+	change(e) {
 		const self = this;
-	
+
 		self.data.index = e.detail.current;
 		self.setData({
-			web_index:self.data.index
+			web_index: self.data.index
 		})
 	},
-	
-	
-	onShow(){
+
+
+	onShow() {
 		const self = this;
-		if(wx.getStorageSync('selectSale')){
+		if (wx.getStorageSync('selectSale')) {
 			self.data.mainData.sales[0] = wx.getStorageSync('selectSale');
 			self.data.orderPost.saleId = self.data.mainData.sales[0].id;
 			self.data.orderPost.saleName = self.data.mainData.sales[0].name;
 			self.setData({
-				web_mainData:self.data.mainData
+				web_mainData: self.data.mainData
 			})
 		}
-		if(wx.getStorageSync('chooseDay')){
-			
+		if (wx.getStorageSync('chooseDay')) {
+
 			var chooseItem = wx.getStorageSync('chooseDay');
-			chooseItem.subjectType=101;
+			chooseItem.subjectType = 101;
 			self.data.orderPost.startDate = chooseItem.groupDay;
 			self.data.mainData.classifys[self.data.selectIndex].classifyName = chooseItem.typeName;
 			self.data.mainData.classifys[self.data.selectIndex].prices = [chooseItem];
@@ -95,13 +95,11 @@ Page({
 				web_selectIndex: self.data.selectIndex,
 				web_orderPost: self.data.orderPost,
 				web_subjectData: self.data.subjectData,
-				web_mainData:self.data.mainData
+				web_mainData: self.data.mainData
 			});
-			console.log('self.data.orderPost.startDate',self.data.orderPost.startDate)
-			console.log('self.data.orderPost.startDate',self.data.mainData)
 			wx.removeStorageSync('chooseDay')
 		};
-		
+
 	},
 
 	getMainData() {
@@ -130,9 +128,7 @@ Page({
 				web_bannerImg: self.data.bannerImg,
 				web_mainData: self.data.mainData
 			})
-			console.log(self.data.bannerImg)
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.supplierpProductsDetail(postData, callback);
 	},
@@ -196,8 +192,6 @@ Page({
 				web_subjectData: self.data.subjectData
 			})
 		}
-		console.log('self.data.subjectData', self.data.subjectData)
-
 	},
 
 	counter(e) {
@@ -216,32 +210,31 @@ Page({
 		});
 		self.countPrice()
 	},
-	
-	countPrice(){
+
+	countPrice() {
 		const self = this;
 		self.data.lineFee = 0
 		for (var i = 0; i < self.data.subjectData.length; i++) {
-			self.data.lineFee += self.data.subjectData[i].count*self.data.subjectData[i].cprice
-		}	
+			self.data.lineFee += self.data.subjectData[i].count * self.data.subjectData[i].cprice
+		}
 	},
-	
+
 	supplierProductLike(e) {
 		const self = this;
 		var id = self.data.id;
-		console.log(id)
 		const postData = {
-			header:{
-				'Content-Type':'application/x-www-form-urlencoded',
-				'Authorization':wx.getStorageSync('token')
+			header: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				'Authorization': wx.getStorageSync('token')
 			},
-			url:'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/'+self.data.id+'/like'
+			url: 'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/' + self.data.id + '/like'
 		};
-	
+
 		const callback = (res) => {
-			if(res.code==200){
-				api.showTaost('点赞成功','none')
+			if (res.code == 200) {
+				api.showTaost('点赞成功', 'none')
 			}
-		
+
 		};
 		api.supplierProductLike(postData, callback);
 	},
@@ -250,9 +243,9 @@ Page({
 		const self = this;
 		for (var i = 0; i < self.data.subjectData.length; i++) {
 			if (self.data.subjectData[i].count > 0) {
-				
-				for(var j =0;j<self.data.orderPost.bills.length;j++){
-					if(self.data.orderPost.bills[j]['billSubjectid']==self.data.subjectData[i].subjectType){
+
+				for (var j = 0; j < self.data.orderPost.bills.length; j++) {
+					if (self.data.orderPost.bills[j]['billSubjectid'] == self.data.subjectData[i].subjectType) {
 						self.data.orderPost.bills.splice(j)
 					};
 				};
@@ -268,7 +261,6 @@ Page({
 			web_orderPost: self.data.orderPost,
 			show_people: self.data.show_people
 		});
-		console.log('self.data.orderPost', self.data.orderPost)
 	},
 
 	goBook(e) {

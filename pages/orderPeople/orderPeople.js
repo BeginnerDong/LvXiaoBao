@@ -41,7 +41,7 @@ Page({
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
-		
+
 		self.setData({
 			web_show: self.data.show
 		})
@@ -50,7 +50,6 @@ Page({
 	onShow() {
 		const self = this;
 		self.data.mainData = wx.getStorageSync('orderPeople');
-		console.log('onShow', self.data.mainData);
 		for (var i = 0; i < self.data.mainData.length; i++) {
 			for (var j = 0; j < self.data.cardData.length; j++) {
 				if (self.data.mainData[i].cdtype == self.data.cardData[j].value) {
@@ -64,7 +63,7 @@ Page({
 		api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 	},
 
-	
+
 
 	intoPath(e) {
 		const self = this;

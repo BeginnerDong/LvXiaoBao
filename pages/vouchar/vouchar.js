@@ -43,9 +43,7 @@ Page({
 	submit() {
 		const self = this;
 		api.buttonCanClick(self, false);
-
 		const pass = api.checkComplete(self.data.submitData);
-		console.log('self.data.submitData', self.data.submitData)
 		if (pass) {
 			self.pay()
 		} else {

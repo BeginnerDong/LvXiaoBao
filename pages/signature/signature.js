@@ -77,7 +77,6 @@ Page({
 			title: '图片上传中',
 		});
 		const callback = (res) => {
-			console.log('res', res)
 			if (res.result == '0') {
 				var url = res.fullPath;
 				
@@ -95,9 +94,7 @@ Page({
 		wx.chooseImage({
 			count: 1,
 			success: function(res) {
-				console.log(res);
 				var tempFilePaths = res.tempFilePaths;
-				console.log(callback)
 				api.uploadFile(tempFilePaths[0], 'file', {
 					classify: 'T019',
 					rwidth: 150,

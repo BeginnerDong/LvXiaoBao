@@ -35,7 +35,6 @@ Page({
 			web_mainData:self.data.mainData
 		})
 		api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-		console.log(self.data.mainData);
 	},
 
 	inputChange(e) {

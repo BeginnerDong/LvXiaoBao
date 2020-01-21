@@ -49,7 +49,6 @@ Page({
       var rex = new RegExp(key[i], "g"); 
       var temp = self.data.mainData.split(rex);
       var str = temp[temp.length-1];
-      console.log(str)
       var hasOne = false;
       if(newArray.length>0){
         for (var j = 0; j < newArray.length; j++) {
@@ -69,9 +68,7 @@ Page({
   
     for (var i = 0; i < newArray.length; i++) {
       if(i!==newArray.length-1){
-        console.log('newArray[i+1].str',newArray[i+1].str)
         var newStr = newArray[i].str.replace(newArray[i+1].name + newArray[i+1].str,"").replace(/\s/g,"").replace(/[：|，|；|。|【|】|\/|-|、|;|,|.]/g,"");
-        console.log('newStr',newStr)
         newArray[i].str = newStr;
       }else{
         var newStr = newArray[i].str.replace(/\s/g,"").replace(/[：|，|；|。|【|】|\/|-|、|;|,|.]/g,"");
@@ -79,7 +76,6 @@ Page({
       };
     };
     self.data.finishArray = newArray;
-    console.log('self.data.finishArray',self.data.finishArray);
 	for (var i = 0; i < self.data.finishArray.length; i++) {
 		if(self.data.finishArray[i].name=='姓名'){
 			self.data.submitData.name=self.data.finishArray[i].str

@@ -130,7 +130,6 @@ Page({
 		var arr1 = wx.getStorageSync('payFee');
 		arr1.push.apply(arr1,wx.getStorageSync('shopping'));
 		self.data.submitData.replenishs = arr1;
-		console.log(self.data.submitData.replenishs)
 	},
 
 	upLoadImg() {
@@ -161,9 +160,7 @@ Page({
 		wx.chooseImage({
 			count: 1,
 			success: function(res) {
-				console.log(res);
 				var tempFilePaths = res.tempFilePaths;
-				console.log(callback)
 				api.uploadFile(tempFilePaths[0], 'file', {
 					classify: 'T019',
 					rwidth: 150,
@@ -192,7 +189,7 @@ Page({
 					self.data.submitData.productName = self.data.orderDetailData.pdtName,
 					self.data.submitData.startDate = self.data.orderDetailData.startDate,
 					self.data.submitData.backDate = self.data.orderDetailData.endDate
-				self.data.submitData.travelPayDate = self.data.orderDetailData.payDate,
+				    self.data.submitData.travelPayDate = self.data.orderDetailData.payDate,
 					self.data.submitData.travelPayDate = self.data.orderDetailData.payDate
 
 			};
@@ -218,7 +215,6 @@ Page({
 				for (var i = 0; i < res.content.journeys.length; i++) {
 					var basic = res.content.journeys[i];
 					var content = '第' + basic.journeyDay + '天 ' + basic.endCity + '\n\n' + basic.journeyContent + '\n';
-					console.log(content)
 					totalContent += content;
 				}
 			}
@@ -313,7 +309,6 @@ Page({
 			'Content-Type': 'application/x-www-form-urlencoded'
 		};
 		const callback = (res) => {
-			console.log(res)
 			if (res.content.contractCode) {
 				api.buttonCanClick(self, true);
 				wx.setStorageSync('contract', res.content)
@@ -336,13 +331,11 @@ Page({
 		const self = this;
 		var key = api.getDataSet(e, 'key');
 		var type = api.getDataSet(e, 'type');
-		console.log(key)
 		if (type == '-') {
 			if (self.data.submitData[key] > 1) {
 				self.data.submitData[key]--
 			}
 		} else {
-			console.log(self.data.submitData[key])
 			self.data.submitData[key]++
 		}
 		self.setData({
@@ -361,14 +354,12 @@ Page({
 		self.setData({
 			web_submitData: self.data.submitData,
 		});
-		console.log(self.data.submitData)
 	},
 
 
 
 	cddTypeChange(e) {
 		const self = this;
-		console.log(e)
 		self.data.submitData.cddSource = self.data.cddTypeData[e.detail.value].type;
 		self.setData({
 			web_index: e.detail.value,
@@ -378,7 +369,6 @@ Page({
 
 	cddClassifyChange(e) {
 		const self = this;
-		console.log(e)
 		self.data.submitData.cddType = self.data.cddClassifyData[e.detail.value].type;
 		self.data.submitData.otherDeal = self.data.cddClassifyData[e.detail.value].agreement
 		self.setData({
@@ -389,7 +379,6 @@ Page({
 
 	touristsTypeChange(e) {
 		const self = this;
-		console.log(e)
 		self.data.submitData.touristsType = self.data.touristsTypeData[e.detail.value].value;
 		self.setData({
 			web_index2: e.detail.value,
@@ -401,7 +390,6 @@ Page({
 
 	peopleChange(e) {
 		const self = this;
-		console.log(e)
 		self.data.submitData.peoples = [];
 		self.data.submitData.peoples.push(self.data.orderDetailData.peoples[e.detail.value].id);
 		self.data.submitData.signPeoples.push(self.data.orderDetailData.peoples[e.detail.value].id);
@@ -413,7 +401,6 @@ Page({
 
 	insureBuyTypeChange(e) {
 		const self = this;
-		console.log(e)
 		self.data.submitData.insuranceChoose = self.data.insureBuyType[e.detail.value].value;
 		self.setData({
 			web_index4: e.detail.value,
@@ -424,7 +411,6 @@ Page({
 
 	payTypeChange(e) {
 		const self = this;
-		console.log(e)
 		self.data.submitData.travelPayType = self.data.payType[e.detail.value];
 		self.setData({
 			web_index5: e.detail.value,

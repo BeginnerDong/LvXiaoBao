@@ -10,50 +10,49 @@ const token = new Token();
 
 Page({
 	data: {
-		isFirstLoadAllStandard: ['getShopInfo', 'getHotShop','getMainData'],
+		isFirstLoadAllStandard: ['getShopInfo', 'getHotShop', 'getMainData'],
 		show: false,
 		hotShopData: [],
-		postData:{
-			
+		postData: {
+
 		},
-		mainData:[],
-		search:{
-			keyword:''
+		mainData: [],
+		search: {
+			keyword: ''
 		},
-		
+
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
 		self.data.postData = {
-			number:api.cloneForm(self.data.number),
-			size:api.cloneForm(self.data.size),
-			lineCategory:101
-		};		
+			number: api.cloneForm(self.data.number),
+			size: api.cloneForm(self.data.size),
+			lineCategory: 101
+		};
 		self.setData({
-			web_postData:self.data.postData
+			web_postData: self.data.postData
 		});
 		self.getHotShop();
 		self.getShopInfo();
 		self.getMainData()
 
 	},
-	
-	changeClassify(e){
+
+	changeClassify(e) {
 		const self = this;
-		var type = api.getDataSet(e,'key');
-		console.log(type)
-		if(self.data.postData.businessClassify!=type){
+		var type = api.getDataSet(e, 'key');
+		if (self.data.postData.businessClassify != type) {
 			self.data.postData.businessClassify = type
 			self.setData({
-				web_businessClassifys:self.data.postData.businessClassify
+				web_businessClassifys: self.data.postData.businessClassify
 			});
 			self.getMainData(true)
 		};
-		
+
 	},
-	
+
 	inputChange(e) {
 		const self = this;
 		api.fillChange(e, self, 'search');
@@ -61,10 +60,10 @@ Page({
 			web_search: self.data.search,
 		});
 	},
-	
-	goSearch(){
+
+	goSearch() {
 		const self = this;
-		api.pathTo('/pages/search/search','nav')
+		api.pathTo('/pages/search/search', 'nav')
 		/* if(self.data.search.keyword!=''){
 			api.pathTo('/pages/productList/productList?keyword='+self.data.search.keyword,'nav')
 		}else{
@@ -95,7 +94,7 @@ Page({
 	getShopInfo() {
 		const self = this;
 		const postData = {
-			url:'http://yapi.lxbtrip.cn/mock/19/mshop/v1/1/info',
+			url: 'http://yapi.lxbtrip.cn/mock/19/mshop/v1/1/info',
 			header: {
 				'Authorization': wx.getStorageSync('token')
 			},
@@ -108,20 +107,20 @@ Page({
 			self.setData({
 				web_shopData: self.data.shopData
 			})
-	
+
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getShopInfo', self);
-		
+
 		};
 		api.mshopInfo(postData, callback);
 	},
-	
+
 	phoneCall() {
 		const self = this;
 		wx.makePhoneCall({
 			phoneNumber: self.data.shopData.info.phone
 		})
 	},
-	
+
 
 	getMainData(isNew) {
 		const self = this;
@@ -138,26 +137,24 @@ Page({
 				self.data.isLoadAll = true
 			};
 			self.setData({
-				web_businessClassifys:self.data.businessClassifys,
+				web_businessClassifys: self.data.businessClassifys,
 				web_mainData: self.data.mainData
 			})
-			console.log(self.data.businessClassifys)
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.mshopProducts(postData, callback);
 	},
-	
-	changeCategory(e){
+
+	changeCategory(e) {
 		const self = this;
-		var id = api.getDataSet(e,'id');
-		if(self.data.postData.lineCategory!=id){
+		var id = api.getDataSet(e, 'id');
+		if (self.data.postData.lineCategory != id) {
 			self.data.postData.lineCategory = id;
 			self.setData({
-				web_postData:self.data.postData
+				web_postData: self.data.postData
 			});
 			self.getMainData(true)
-		}	
+		}
 	},
 
 

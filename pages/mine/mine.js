@@ -12,7 +12,7 @@ Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
 		show: false,
-    icon_show:true,
+		icon_show: true,
 		submitData: {
 			phone: '',
 			code: ''
@@ -32,8 +32,8 @@ Page({
 	getMainData() {
 		const self = this;
 		const postData = {
-			header:{
-				'Authorization':wx.getStorageSync('token')
+			header: {
+				'Authorization': wx.getStorageSync('token')
 			}
 		};
 
@@ -44,9 +44,7 @@ Page({
 			self.setData({
 				web_mainData: self.data.mainData
 			})
-			console.log(self.data.bannerImg)
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.myInfo(postData, callback);
 	},
@@ -66,24 +64,24 @@ Page({
 			web_submitData: self.data.submitData,
 		});
 	},
-  closeImg(){
-    const self = this;
-    self.setData({
-      icon_show: false
-    })
-  },
+	closeImg() {
+		const self = this;
+		self.setData({
+			icon_show: false
+		})
+	},
 	bindPhone() {
 		const self = this;
 		const postData = api.cloneForm(self.data.submitData)
 
 		const callback = (res) => {
-			if(res.code==200){
+			if (res.code == 200) {
 				api.showToast(res.message, 'none');
 				self.bind();
-			}else{
+			} else {
 				api.showToast(res.message, 'none')
 			}
-			
+
 
 		};
 		api.bindPhone(postData, callback);

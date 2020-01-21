@@ -13,11 +13,11 @@ Page({
 		submitData: {
 			loginPhone: '',
 			password: '',
-			openId:''
+			openId: ''
 		},
 		show: false,
 		canIUse: wx.canIUse('button.open-type.getUserInfo'),
-		
+
 	},
 
 	onLoad(options) {
@@ -46,12 +46,11 @@ Page({
 		// 获取openid
 		wx.login({
 			success: function(res) {
-				console.log(res)
 				if (res.code) {
-					
+
 					wx.getUserInfo({
 						success: function(data) {
-							self.getOpenId(res.code)							
+							self.getOpenId(res.code)
 						}
 					});
 				}
@@ -66,10 +65,10 @@ Page({
 			appid: 'wxc8fa29be6e676279'
 		}
 		const callback = (res) => {
-			if(res.code==200){
+			if (res.code == 200) {
 				self.data.submitData.openId = res.content.openid
-			}else{
-				api.showToast(res.message,'none')
+			} else {
+				api.showToast(res.message, 'none')
 			}
 		};
 		api.getOpenId(postData, callback);

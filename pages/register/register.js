@@ -43,7 +43,6 @@ Page({
 		// 获取openid
 		wx.login({
 			success: function(res) {
-				console.log(res)
 				if (res.code) {
 					
 					wx.getUserInfo({

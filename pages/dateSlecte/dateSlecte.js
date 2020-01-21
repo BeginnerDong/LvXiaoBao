@@ -132,21 +132,17 @@ Page({
 			});
 		
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData-data', self.data.mainData)
-			console.log('getMainData', self.data.dateData)
 		};
 		api.datePrice(postData, callback);
 	},
 
 	chooseDay(e){
 		const self = this;
-		console.log('e',e)
 		var item = e.target.dataset.item;
 		var timeFormat = e.target.dataset.timeformat;
 		if(!item||item==undefined){
 			return
 		};
-		console.log('timeFormat',timeFormat)
 		if(timeFormat&&timeFormat!=self.data.choosedTimeFormat){
 			self.data.choosedTimeFormat = timeFormat;
 			self.setData({
@@ -157,7 +153,6 @@ Page({
 		if(item&&item!=undefined){
 			wx.setStorageSync('chooseDay',item)
 		};
-		console.log('item',item)
 	},
 
 	onPullDownRefresh() {
@@ -244,7 +239,6 @@ Page({
 	//刷新全部数据
 	refreshPageData(year, month, day) {
 		const self = this;
-		console.log(111)
 		self.data.curYear = year;
 		self.data.curMonth = month;
 		
@@ -281,7 +275,6 @@ Page({
 		self.setData({
 			web_dateData:self.data.dateData
 		});
-		console.log('self.dateData', self.data.dateData);
 		self.getMainData(true)
 	},
 
@@ -310,7 +303,6 @@ Page({
 		var offset = new Date(curYear, curMonth, 1).getDay();
 		offset = offset == 0 ? 0 : offset ;
 		//注意这个转换，Date对象的getDay函数返回返回值是 0（周日） 到 6（周六） 
-		console.log('offset', offset)
 		return offset;
 	},
 	isLeapYear(year) {

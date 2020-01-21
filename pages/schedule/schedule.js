@@ -72,7 +72,6 @@ Page({
 		
 		self.data.orderPost = wx.getStorageSync('orderPost');
 		self.data.orderPost.peopleIds = [];
-		console.log('onShow', self.data.peopleData);
 		for (var i = 0; i < self.data.peopleData.length; i++) {
 			for (var j = 0; j < self.data.cardData.length; j++) {
 				if (self.data.peopleData[i].cdtype == self.data.cardData[j].value) {
@@ -86,7 +85,6 @@ Page({
 		for (var i = 0; i < self.data.orderPost.bills.length; i++) {
 			self.data.allPeopleCount += self.data.orderPost.bills[i].amount
 		};
-		console.log(self.data.orderPost);
 		self.setData({
 			web_lineFee:self.data.lineFee,
 			web_allPeopleCount:self.data.allPeopleCount,
@@ -99,7 +97,6 @@ Page({
 	cancelPeople(e) {
 		const self = this;
 		const index = api.getDataSet(e, 'index');
-		console.log(index)
 		if (self.data.peopleData[index].isSelect) {
 			self.data.peopleData[index].isSelect = false;
 			var position = self.data.orderPost.peopleIds.indexOf(self.data.peopleData[index].id);
@@ -113,8 +110,6 @@ Page({
 			web_orderPost:self.data.orderPost,
 			web_peopleData: self.data.peopleData
 		});
-		console.log(self.data.orderPost)
-		console.log(self.data.allPeopleCount)
 	},
 	
 	
@@ -137,7 +132,6 @@ Page({
 				web_mainData: self.data.mainData
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.supplierpProductsDetail(postData, callback);
 	},
@@ -149,8 +143,6 @@ Page({
 			web_orderPost: self.data.orderPost,
 		});
 		wx.setStorageSync('orderPost',self.data.orderPost)
-		console.log(self.data.orderPost)
-		console.log(self.data.allPeopleCount)
 	},
 	
 	submit(e){
@@ -185,7 +177,6 @@ Page({
 			wx.removeStorageSync('peopleData');
 			wx.removeStorageSync('orderPost');
 			if (res.content.orderCode) {
-				console.log(111)
 				if(type=='jump'){
 					api.pathTo('/pages/orderDetail/orderDetail?orderCode=' + res.content.orderCode, 'nav')
 				}else if(type=='next'){

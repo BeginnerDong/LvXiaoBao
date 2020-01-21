@@ -25,7 +25,7 @@ Page({
 	onShow() {
 		const self = this;
 		self.data.mainData = wx.getStorageSync('shopping');
-		console.log('onShow', self.data.mainData);
+		
 		
 		self.setData({
 			web_mainData: self.data.mainData

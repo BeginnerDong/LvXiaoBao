@@ -21,7 +21,6 @@ Page({
 
 	downloadFile(e) {
 		const self = this;
-		console.log(e);
 		let url = self.data.url;
 		//url += 'pdf';
 		wx.downloadFile({
@@ -34,18 +33,18 @@ Page({
 					filePath: filePath,
 					fileType:'pdf',
 					success: function(res) {
-						console.log('打开文档成功')
+						
 					},
 					fail: function(res) {
-						console.log(res);
+					
 					},
 					complete: function(res) {
-						console.log(res);
+					
 					}
 				})
 			},
 			fail: function(res) {
-				console.log('文件下载失败');
+				
 			},
 			complete: function(res) {},
 		})

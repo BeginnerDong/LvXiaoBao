@@ -42,9 +42,7 @@ Page({
 			self.setData({
 				web_mainData: self.data.mainData
 			})
-			console.log(self.data.bannerImg)
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.spreadDetail(postData, callback);
 	},

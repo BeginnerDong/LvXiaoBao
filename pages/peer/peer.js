@@ -97,22 +97,19 @@ Page({
 			} else {
 				self.data.isLoadAll = true
 			};
-			console.log('self.data.businessClassifys',self.data.businessClassifys)
 			self.setData({
 				web_businessClassifys:self.data.businessClassifys,
 				web_provinces:self.data.provinces,
 				web_mainData: self.data.mainData
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.suppliers(postData, callback);
 	},
 	
 	confirmSelect(){
 		const self = this;
-		self.data.show = false;
-		
+		self.data.show = false;	
 		self.setData({
 			web_show: self.data.show
 		})
@@ -137,16 +134,14 @@ Page({
 		var key = api.getDataSet(e,'key');
 		var position = self.data.selectBusinessData.indexOf(key);
 		if(position>=0){
-		  self.data.selectBusinessData.splice(position, 1);
-	
+		  self.data.selectBusinessData.splice(position, 1);	
 		}else{
 		  self.data.selectBusinessData.push(key);
 		  
 		};	
-		console.log(self.data.selectBusinessData)
 		self.setData({
 			web_businessClassifys:self.data.businessClassifys,
-		   web_selectBusinessData:self.data.selectBusinessData
+		    web_selectBusinessData:self.data.selectBusinessData
 		});
 	},
 	
@@ -159,7 +154,6 @@ Page({
 		}else{
 		  self.data.selectProvinceData.push(key);
 		};	
-		console.log(self.data.selectProvinceData)
 		self.setData({
 		   web_selectProvinceData:self.data.selectProvinceData
 		});
@@ -174,7 +168,6 @@ Page({
 		}else{
 		  self.data.selectSignData.push(key);
 		};	
-		console.log(self.data.selectSignData)
 		self.setData({
 		   web_selectSignData:self.data.selectSignData
 		});

@@ -14,15 +14,15 @@ const qrcodeWidth = rpx2px(300)
 Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
-		showPay:false,
-		orderInsurePeople:[],
-		orderContractsPeople:[],
-		show:false,
+		showPay: false,
+		orderInsurePeople: [],
+		orderContractsPeople: [],
+		show: false,
 		qrcodeWidth: qrcodeWidth,
-		showQr:false,
-		showHt:false,
-		showBx:false,
-		showYk:false
+		showQr: false,
+		showHt: false,
+		showBx: false,
+		showYk: false
 	},
 
 	onLoad(options) {
@@ -31,47 +31,44 @@ Page({
 		self.data.orderCode = options.orderCode;
 		self.getMainData();
 		self.setData({
-			web_showBx:self.data.showBx,
-			web_showHt:self.data.showHt,
-			web_showYk:self.data.showYk
+			web_showBx: self.data.showBx,
+			web_showHt: self.data.showHt,
+			web_showYk: self.data.showYk
 		})
 	},
-	
-	onShow(){
+
+	onShow() {
 		const self = this;
 		self.data.peopleData = api.getStorageArray('peopleData');
 		self.setData({
-			web_peopleData:self.data.peopleData
+			web_peopleData: self.data.peopleData
 		})
 	},
-	
-	showQr(e){
+
+	showQr(e) {
 		const self = this;
-		self.data.cIndex = api.getDataSet(e,'index');
-		console.log(self.data.cIndex)
+		self.data.cIndex = api.getDataSet(e, 'index');
 		for (var i = 0; i < self.data.mainData.contracts[self.data.cIndex].signs.length; i++) {
 			for (var j = 0; j < self.data.mainData.peoples.length; j++) {
-				if(self.data.mainData.contracts[self.data.cIndex].signs[i].touristId==self.data.mainData.peoples[j].id){
-					self.data.mainData.contracts[self.data.cIndex].signs[i].name=self.data.mainData.peoples[j].name
-					self.data.mainData.contracts[self.data.cIndex].signs[i].phone=self.data.mainData.peoples[j].phone
+				if (self.data.mainData.contracts[self.data.cIndex].signs[i].touristId == self.data.mainData.peoples[j].id) {
+					self.data.mainData.contracts[self.data.cIndex].signs[i].name = self.data.mainData.peoples[j].name
+					self.data.mainData.contracts[self.data.cIndex].signs[i].phone = self.data.mainData.peoples[j].phone
 				}
 			}
 		};
-		console.log(self.data.mainData.contracts[self.data.cIndex].signs)
 		self.setData({
-			web_mainData:self.data.mainData,
-			web_index:self.data.cIndex,
-			web_show:true
-		})	
+			web_mainData: self.data.mainData,
+			web_index: self.data.cIndex,
+			web_show: true
+		})
 	},
-	
-	cavans(e){
+
+	cavans(e) {
 		const self = this;
-		var pIndex = api.getDataSet(e,'index');
+		var pIndex = api.getDataSet(e, 'index');
 		qrcode = new QRCode('canvas', {
 			// usingIn: this,
 			text: self.data.mainData.contracts[self.data.cIndex].signs[pIndex].qrcode,
-			
 			width: qrcodeWidth,
 			height: qrcodeWidth,
 			colorDark: "#1CA4FC",
@@ -79,43 +76,43 @@ Page({
 			correctLevel: QRCode.CorrectLevel.H,
 		});
 		self.setData({
-			showQr:true
+			showQr: true
 		})
 	},
-	
-	closeQr(){
+
+	closeQr() {
 		const self = this;
 		self.setData({
-			showQr:false
+			showQr: false
 		})
 	},
-	
-	clickBx(){
+
+	clickBx() {
 		const self = this;
 		self.data.showBx = !self.data.showBx;
 		self.setData({
-			web_showBx:self.data.showBx
+			web_showBx: self.data.showBx
 		})
 	},
-	
-	clickHt(){
+
+	clickHt() {
 		const self = this;
 		self.data.showHt = !self.data.showHt;
 		self.setData({
-			web_showHt:self.data.showHt
+			web_showHt: self.data.showHt
 		})
 	},
-	
-	clickYk(){
+
+	clickYk() {
 		const self = this;
 		self.data.showYk = !self.data.showYk;
 		self.setData({
-			web_showYk:self.data.showYk
+			web_showYk: self.data.showYk
 		})
 	},
-	
-	
-	
+
+
+
 	/* previewImg(e) {
 		const self = this;
 		var pIndex = e.currentTarget.dataset.index;
@@ -129,62 +126,58 @@ Page({
 			complete: function(res) {},
 		})
 	}, */
-	
-	close(){
+
+	close() {
 		const self = this;
 		self.data.show = false;
 		self.setData({
-			web_show:self.data.show
+			web_show: self.data.show
 		})
 	},
-	
-	
+
+
 	getMainData(e) {
 		const self = this;
-		
 		const postData = {
-			header:{
-				'Authorization':wx.getStorageSync('token')
+			header: {
+				'Authorization': wx.getStorageSync('token')
 			},
-			url:'http://yapi.lxbtrip.cn/mock/19/odr/v1/order/'+self.data.orderCode
+			url: 'http://yapi.lxbtrip.cn/mock/19/odr/v1/order/' + self.data.orderCode
 		}
 		const callback = (res) => {
-			if(res.content){
+			if (res.content) {
 				self.data.mainData = res.content
 				self.data.planCode = self.data.mainData.plans[0].planCode
 				for (var i = 0; i < self.data.mainData.peoples.length; i++) {
-					api.setStorageArray('peopleData',self.data.mainData.peoples[i],'id',999);
+					api.setStorageArray('peopleData', self.data.mainData.peoples[i], 'id', 999);
 				};
-				
+
 				self.data.peopleData = api.getStorageArray('peopleData')
 			};
 			self.setData({
-				web_peopleData:self.data.peopleData,
-				web_planCode:self.data.planCode,
-				web_mainData:self.data.mainData
+				web_peopleData: self.data.peopleData,
+				web_planCode: self.data.planCode,
+				web_mainData: self.data.mainData
 			})
-			console.log(self.data.peopleData)
-			
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 		};
 		api.orderDetail(postData, callback);
 	},
-	
+
 	deletePeople(e) {
 		const self = this;
-		var index = api.getDataSet(e,'index');
-		console.log(index)
+		var index = api.getDataSet(e, 'index');
 		const postData = {};
 		postData.header = {
-			'Content-Type':'application/x-www-form-urlencoded',
-			'Authorization':wx.getStorageSync('token')
+			'Content-Type': 'application/x-www-form-urlencoded',
+			'Authorization': wx.getStorageSync('token')
 		};
-		postData.url = 'http://yapi.lxbtrip.cn/mock/19/odr/v1/people/'+self.data.peopleData[index].id
+		postData.url = 'http://yapi.lxbtrip.cn/mock/19/odr/v1/people/' + self.data.peopleData[index].id
 		const callback = (data) => {
 			if (data) {
-				if(data.code==200){
+				if (data.code == 200) {
 
-					api.delStorageArray('peopleData',self.data.peopleData[index],'id');
+					api.delStorageArray('peopleData', self.data.peopleData[index], 'id');
 					self.data.peopleData = api.getStorageArray('peopleData')
 				}
 				self.setData({
@@ -194,70 +187,69 @@ Page({
 		};
 		api.deletePeople(postData, callback);
 	},
-	
-	
-	checkInsurePeople(e){
+
+
+	checkInsurePeople(e) {
 		const self = this;
-		var index = api.getDataSet(e,'index');
+		var index = api.getDataSet(e, 'index');
 		for (var i = 0; i < self.data.mainData.insures[index].tourists.length; i++) {
 			for (var j = 0; j < self.data.mainData.peoples.length; j++) {
-				if(self.data.mainData.insures[index].tourists[i].touristId==self.data.mainData.peoples[j].id){
+				if (self.data.mainData.insures[index].tourists[i].touristId == self.data.mainData.peoples[j].id) {
 					self.data.orderInsurePeople.push(self.data.mainData.peoples[j]);
 				}
 			}
 		};
-		wx.setStorageSync('orderPeople',self.data.orderInsurePeople)
-		api.pathTo('/pages/orderPeople/orderPeople','nav')
+		wx.setStorageSync('orderPeople', self.data.orderInsurePeople)
+		api.pathTo('/pages/orderPeople/orderPeople', 'nav')
 	},
-	
-	
-	checkContractsPeople(e){
+
+
+	checkContractsPeople(e) {
 		const self = this;
-		var index = api.getDataSet(e,'index');
+		var index = api.getDataSet(e, 'index');
 		for (var i = 0; i < self.data.mainData.contracts[index].signs.length; i++) {
 			for (var j = 0; j < self.data.mainData.peoples.length; j++) {
-				if(self.data.mainData.contracts[index].signs[i].touristId==self.data.mainData.peoples[j].id){
+				if (self.data.mainData.contracts[index].signs[i].touristId == self.data.mainData.peoples[j].id) {
 					self.data.orderContractsPeople.push(self.data.mainData.peoples[j]);
 				}
 			}
 		};
-		wx.setStorageSync('orderPeople',self.data.orderContractsPeople)
-		api.pathTo('/pages/orderPeople/orderPeople','nav')
+		wx.setStorageSync('orderPeople', self.data.orderContractsPeople)
+		api.pathTo('/pages/orderPeople/orderPeople', 'nav')
 	},
-	
-	
-	
-	submit(){
+
+
+
+	submit() {
 		const self = this;
-		console.log(111)
-		if(self.data.mainData.plans.length>1){
+		if (self.data.mainData.plans.length > 1) {
 			self.data.showPay = !self.data.showPay
 			self.setData({
-				showPay:self.data.showPay
+				showPay: self.data.showPay
 			})
-		}else{
+		} else {
 			self.pay()
-		}	
+		}
 	},
-	
-	choose(e){
+
+	choose(e) {
 		const self = this;
-		var index = api.getDataSet(e,'index');
+		var index = api.getDataSet(e, 'index');
 		self.data.planCode = self.data.mainData.plans[index].planCode;
 		self.setData({
-			web_planCode:self.data.planCode
+			web_planCode: self.data.planCode
 		})
 	},
-	
+
 	pay(e) {
 		const self = this;
 		api.buttonCanClick(self);
 		const postData = {
-			header:{
-				'Authorization':wx.getStorageSync('token')
+			header: {
+				'Authorization': wx.getStorageSync('token')
 			},
-			orderCode:self.data.orderCode,
-			planCode:self.data.planCode	
+			orderCode: self.data.orderCode,
+			planCode: self.data.planCode
 		}
 		const callback = (res) => {
 			if (res.code == 200) {
@@ -265,9 +257,9 @@ Page({
 				if (res.content) {
 					const payCallback = (payData) => {
 						if (payData == 1) {
-							
+
 							api.buttonCanClick(self, true);
-						}else{
+						} else {
 							api.showToast(res.msg, 'none')
 						}
 					};
@@ -280,18 +272,18 @@ Page({
 		};
 		api.orderPay(postData, callback);
 	},
-	
-	goPdf(e){
+
+	goPdf(e) {
 		const self = this;
-		var index = api.getDataSet(e,'index');
-		var type = api.getDataSet(e,'type');
-		if(type=='bx'){
-			api.pathTo('/pages/electro/electro?url='+self.data.mainData.insures[index].pdfUrl, 'nav')
-		}else{
-			api.pathTo('/pages/electro/electro?url='+self.data.mainData.contracts[index].cddPdfurl, 'nav')
+		var index = api.getDataSet(e, 'index');
+		var type = api.getDataSet(e, 'type');
+		if (type == 'bx') {
+			api.pathTo('/pages/electro/electro?url=' + self.data.mainData.insures[index].pdfUrl, 'nav')
+		} else {
+			api.pathTo('/pages/electro/electro?url=' + self.data.mainData.contracts[index].cddPdfurl, 'nav')
 		}
 	},
-	
+
 	intoPath(e) {
 		const self = this;
 		api.pathTo(api.getDataSet(e, 'path'), 'nav');

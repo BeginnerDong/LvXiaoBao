@@ -11,11 +11,11 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
-		labelData:[],
-		submitData:{
-			name:''
+		labelData: [],
+		submitData: {
+			name: ''
 		}
-		
+
 	},
 
 	onLoad(options) {
@@ -23,15 +23,14 @@ Page({
 		api.commonInit(self);
 		self.getMainData()
 		self.data.mainData = api.getStorageArray('labelData');
-		console.log(self.data.mainData)
 		self.setData({
-			web_mainData:self.data.mainData
+			web_mainData: self.data.mainData
 		})
 	},
-	
 
-	
-	
+
+
+
 	inputChange(e) {
 		const self = this;
 		api.fillChange(e, self, 'submitData');
@@ -40,7 +39,7 @@ Page({
 		});
 	},
 
-	
+
 
 
 	getMainData() {
@@ -55,57 +54,57 @@ Page({
 				self.data.labelData = res.content.list
 			}
 			self.setData({
-				web_labelData:self.data.labelData
+				web_labelData: self.data.labelData
 			})
-			
+
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-		
+
 		};
 		api.labels(postData, callback);
 	},
-	
+
 	labelAdd() {
 		const self = this;
 		const postData = {
 			header: {
 				'Authorization': wx.getStorageSync('token'),
-				'Content-Type':'application/x-www-form-urlencoded'
+				'Content-Type': 'application/x-www-form-urlencoded'
 			},
-			name:self.data.submitData.name
+			name: self.data.submitData.name
 		};
 		const callback = (res) => {
 			if (res.code == 200) {
-				self.data.labelData.push({labelName:self.data.submitData.name});
+				self.data.labelData.push({
+					labelName: self.data.submitData.name
+				});
 				self.data.submitData.name = ''
 			}
 			self.setData({
-				web_submitData:self.data.submitData,
-				web_labelData:self.data.labelData
+				web_submitData: self.data.submitData,
+				web_labelData: self.data.labelData
 			})
-			console.log(self.data.labelData)
-			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);	
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 		};
 		api.labelAdd(postData, callback);
 	},
 
-	select(e){
+	select(e) {
 		const self = this;
-		var name = api.getDataSet(e,'name');
+		var name = api.getDataSet(e, 'name');
 		var position = self.data.mainData[0].indexOf(name);
-		if(position >= 0){			
-			self.data.mainData[0].splice(position, 1);					
-		}else{
-			self.data.mainData[0].push(name);		
+		if (position >= 0) {
+			self.data.mainData[0].splice(position, 1);
+		} else {
+			self.data.mainData[0].push(name);
 		}
-		console.log(self.data.mainData[0])
 		self.setData({
-			web_mainData:self.data.mainData
+			web_mainData: self.data.mainData
 		})
 	},
-	
-	confirm(){
+
+	confirm() {
 		const self = this;
-		
+
 		api.setStorageArray('labelData', self.data.mainData[0], 'id', 999);
 		api.getStorageArray('labelData')
 		wx.navigateBack({

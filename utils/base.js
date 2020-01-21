@@ -19,8 +19,6 @@ class Base {
 		var that = this;
 		getApp().globalData.buttonClick = true;
 		var baseRestUrl = 'http://yapi.lxbtrip.cn/mock/19';
-		
-		console.log(params)
 		if(params.data.url){
 			var url = params.data.url;
 			delete params.data.url
@@ -36,7 +34,6 @@ class Base {
 			that.request(params);
 		};
 		if (params.data.tokenFuncName) {
-			console.log('params.data.token');
 			if (params.data.refreshToken) {
 				token[params.data.tokenFuncName](callback, {
 					refreshToken: true
@@ -47,7 +44,6 @@ class Base {
 			if (!params.data.token) {
 				return;
 			};
-			console.log('params.data.token', params.data.token);
 		};		
 		
 		var header = params.data.header;
@@ -67,7 +63,6 @@ class Base {
 				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
 				var code = res.data.solely_code;
 				if (res.data.solely_code == '200000') {
-					console.log('params.data.tokenFuncName', params)
 					token[params.data.tokenFuncName](callback, {
 						refreshToken: true
 					});
@@ -95,7 +90,6 @@ class Base {
 	    const c_callback = (res)=>{
 	        that.uploadFile(filePath,name,formData,callback);
 	    };
-	    console.log('uploadFile',formData)
 	  /*  if(formData.tokenFuncName){
 	        if(formData.refreshTokn){
 	            token[formData.tokenFuncName](c_callback,{refreshToken:true});
@@ -189,10 +183,6 @@ class Base {
 					return;
 				};
 				if (type == 'reverseGeocoder') {
-					console.log('reverseGeocoder', {
-						latitude: latitude,
-						longitude: longitude
-					});
 					wxMap.reverseGeocoder({
 						location: {
 							latitude: latitude,
@@ -202,7 +192,6 @@ class Base {
 							callback && callback(res.result)
 						},
 						fail(res) {
-							console.log('fail', res)
 							wx.showToast({
 								title: '获取位置失败',
 								icon: 'none',

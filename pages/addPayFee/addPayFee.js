@@ -42,12 +42,12 @@ Page({
 		self.setData({
 			web_submitData:self.data.submitData
 		})
-		console.log(self.data.mainData)
+		
 	},
 
 	dateChange(e) {
 		const self = this;
-		console.log(e)
+		
 		self.data.submitData.repDate = e.detail.value;
 		self.setData({
 			web_submitData:self.data.submitData
@@ -96,7 +96,7 @@ Page({
 	submit() {
 		const self = this;
 		const pass = api.checkComplete(self.data.submitData);
-		console.log('self.data.submitData', self.data.submitData)
+		
 		if (pass) {
 			if(self.data.index){
 				self.updateShopping()

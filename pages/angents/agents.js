@@ -65,7 +65,7 @@ Page({
   handleTouchCancel() {
 
     const self = this;
-    console.log('handleTouchCancel')
+ 
     self.touchStatus = false;
 
   },
@@ -74,7 +74,7 @@ Page({
 
     const self = this;
     var alphbate = api.getDataSet(e, 'alp');
-    console.log(alphbate);
+    
     if (alphbate) {
       self.goToPoint(alphbate)
     };
@@ -88,7 +88,7 @@ Page({
 
     query.selectViewport().scrollOffset();
     query.exec((res) => {
-      console.log('res', res)
+      
       if (res[1] && res[0]) {
         wx.pageScrollTo({
           scrollTop: res[0].top + res[1].scrollTop,
@@ -156,8 +156,7 @@ Page({
             /* if(api.timeToTimestamp(res.content.list.birth)) */
           };
         };
-        console.log('self.data.birthMainData', self.data.birthMainData)
-        console.log(api.timeToTimestamp(res.content.list[0].birth))
+        
       } else {
         self.data.isLoadAll = true
       };

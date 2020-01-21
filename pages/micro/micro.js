@@ -11,21 +11,21 @@ const token = new Token();
 Page({
 	data: {
 		isFirstLoadAllStandard: ['getMainData'],
-		mainData:[],
-		search:{
-			keyword:''
+		mainData: [],
+		search: {
+			keyword: ''
 		}
-		
+
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
-	
+
 		self.getMainData();
 
 	},
-	
+
 	inputChange(e) {
 		const self = this;
 		api.fillChange(e, self, 'search');
@@ -33,13 +33,13 @@ Page({
 			web_search: self.data.search,
 		});
 	},
-	
-	goSearch(){
+
+	goSearch() {
 		const self = this;
-		if(self.data.search.keyword!=''){
+		if (self.data.search.keyword != '') {
 			self.getMainData(true)
-		}else{
-			api.showToast('请输入关键词搜索','none')
+		} else {
+			api.showToast('请输入关键词搜索', 'none')
 		}
 	},
 
@@ -49,53 +49,51 @@ Page({
 			api.clearPageIndex(self)
 		};
 		const postData = {
-			header:{
-				'Authorization':wx.getStorageSync('token')
+			header: {
+				'Authorization': wx.getStorageSync('token')
 			},
-			number:api.cloneForm(self.data.number),
-			size:api.cloneForm(self.data.size),
+			number: api.cloneForm(self.data.number),
+			size: api.cloneForm(self.data.size),
 			/* header:{
 				'Content-type':'application/json;charset=UTF-8'
 			} */
 		};
-		if(self.data.search.keyword!=''){
-			postData.keyword =self.data.search.keyword
+		if (self.data.search.keyword != '') {
+			postData.keyword = self.data.search.keyword
 		};
 		const callback = (res) => {
 			if (res.code == 200) {
-				self.data.mainData.push.apply(self.data.mainData,res.content.list.list)
+				self.data.mainData.push.apply(self.data.mainData, res.content.list.list)
 			}
 			self.setData({
 				web_mainData: self.data.mainData
 			})
-			console.log(self.data.bannerImg)
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.recommendProduct(postData, callback);
 	},
-	
-	
+
+
 	supplierProductLike(e) {
 		const self = this;
-		var id = self.data.mainData[api.getDataSet(e,'index')].id;
+		var id = self.data.mainData[api.getDataSet(e, 'index')].id;
 		const postData = {
-			header:{
-				'Content-Type':'application/x-www-form-urlencoded',
-				'Authorization':wx.getStorageSync('token')
+			header: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				'Authorization': wx.getStorageSync('token')
 			},
-			url:'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/'+id+'/like'
+			url: 'http://yapi.lxbtrip.cn/mock/19/pdt/v1/product/' + id + '/like'
 		};
-	
+
 		const callback = (res) => {
-			if(res.code==200){
+			if (res.code == 200) {
 				self.getMainData(true)
 			}
-		
+
 		};
 		api.supplierProductLike(postData, callback);
 	},
-	
+
 	onReachBottom() {
 		const self = this;
 		if (!self.data.isLoadAll && self.data.buttonCanClick) {
@@ -104,7 +102,7 @@ Page({
 		};
 	},
 
-	
+
 
 	intoPath(e) {
 		const self = this;

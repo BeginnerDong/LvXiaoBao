@@ -81,14 +81,11 @@ class Token {
 				}
 			});
 		};
-		console.log(wxUserInfo)
 	}
 
 
 	getTokenFromServer(wxUserInfo, params, callback) {
 		var self = this;
-		console.log('params', params);
-		console.log('wxUserInfo', params);
 		wx.login({
 			success: function(res) {
 				console.log(res)
@@ -111,13 +108,11 @@ class Token {
 				if (wx.getStorageSync('openidP')) {
 					postData.openid = wx.getStorageSync('openidP');
 				};
-				console.log('postData', postData)
 				wx.request({
 					url: 'https://gaokao.solelycloud.com/api/public/index.php/api/v1/Base/ProgramToken/get',
 					method: 'POST',
 					data: postData,
 					success: function(res) {
-						console.log(res)
 						if (res.data && res.data.solely_code == 100000) {
 							wx.setStorageSync(params.info_name, res.data.info);
 							wx.setStorageSync(params.token_name, res.data.token);
@@ -156,7 +151,6 @@ class Token {
 				method: 'POST',
 				data: postData,
 				success: function(res) {
-					console.log(res)
 					if (res.data && res.data.token) {
 						wx.setStorageSync('threeToken', res.data.token);
 						var login = wx.getStorageSync('login');

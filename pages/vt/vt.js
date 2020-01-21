@@ -67,7 +67,6 @@ Page({
 				web_mainData: self.data.mainData
 			})
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
-			console.log('getMainData', self.data.mainData)
 		};
 		api.vipList(postData, callback);
 	},
